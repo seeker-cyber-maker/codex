@@ -47,6 +47,12 @@ A source's contextual relationship to a claim, such as official, eyewitness,
 analyst, contractor, or model; it is not a truth status.
 _Avoid_: credibility score, claim verdict
 
+**Evidence Grade**:
+The explainable claim-specific assessment of how well one evidence item supports
+a Verification Requirement given its directness, access, competence, scope,
+and independent checkability.
+_Avoid_: source reputation score, author rank, universal confidence
+
 **Claim Status**:
 The current evidence-based assessment of a claim, kept separate from its source
 role and original wording.
