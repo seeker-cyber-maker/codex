@@ -216,6 +216,21 @@ A connected unit of claims and their necessary context that can be imported or
 pruned without leaving unsupported references, setup, or conclusions.
 _Avoid_: section heading, arbitrary excerpt, dangling teaser
 
+**Verification Dependency Graph**:
+The typed relationship structure declaring which claims or evidence predicates
+must be satisfied, separately or jointly, before another claim may be verified.
+_Avoid_: document outline, simple hierarchy, rhetorical flow
+
+**Verification Requirement**:
+The explicit dependency predicate that must be satisfied before a claim is
+eligible for a verified determination.
+_Avoid_: claim truth, confidence score, nearby citation
+
+**Self-Sufficient Claim**:
+A claim whose Verification Requirement can be satisfied directly from its own
+evidence without depending on another claim's determination.
+_Avoid_: axiom, unsupported assertion, isolated sentence
+
 **Analysis Stability Envelope**:
 The declared minimal acceptable semantic variation between comprehensive
 analyses of a source and its Summary Salience Variant.
