@@ -80,6 +80,16 @@ Two or more separately enrolled one-of-many authenticators, one of which is
 explicitly selected for a ceremony without requiring simultaneous key use.
 _Avoid_: dual control, poll every key, first responder wins
 
+**Capability Intersection**:
+The least-privilege effective grant containing only operations allowed by every
+applicable operating mode, task, skill, route, worker, and lease boundary.
+_Avoid_: permission union, scheduler authority, inherited service credential
+
+**Fleet Child Envelope**:
+A separately attributable Spark Fleet dispatch with its own context packet,
+sandbox, budget, Capability Lease, lifecycle events, and validated result.
+_Avoid_: shared worker identity, pooled permissions, unbounded subtask
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and

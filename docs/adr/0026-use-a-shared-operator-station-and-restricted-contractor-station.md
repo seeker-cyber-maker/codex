@@ -169,3 +169,33 @@ bounded, reversible, receipted work when the primary route is unavailable, but
 it cannot promote its own work, rewrite primary history, or expand the task's
 authority. The Operator Station remains available as the human dashboard and
 control point even when no primary model can run.
+
+While Gone Fishin' mode is active, workers may inspect scoped read-only context
+packets and authorized repositories, observe monitoring state, and perform
+reversible work inside per-task sandboxes. They have no direct Archive database
+access, secret material, external-write authority, approval-satisfaction
+authority, promotion authority, unrestricted task spawning, or unbounded worker
+delegation. A Task Manifest may narrow this ceiling but cannot widen it.
+
+Spark Fleet remains available to qualified Antimatter, Gemini, and other
+operator routes in Gone Fishin' mode. Fleet is a scheduler and receipt plane,
+not an authority amplifier. Each dispatched worker receives the intersection
+of the current operating mode, parent Task Manifest, selected Skill Contract,
+exact route qualification, worker profile, and per-task Capability Lease. A
+permission absent from any required input is absent from the effective worker
+grant; permissions are never unioned across workers or inherited from Fleet's
+service account.
+
+Every Fleet child receives its own bounded context packet, sandbox, budget,
+lease, actor identity, and result envelope. Fleet may coordinate declared
+parallel dependencies and collect proposals, but it may not lend credentials,
+disable Gone Fishin', satisfy a human approval, widen a child after dispatch,
+promote a result, or treat one worker's successful action as qualification for
+another. Any nested dispatch repeats the same intersection and remains within
+the parent worker's ceiling.
+
+Fleet events, provider calls, child lifecycle changes, tool attempts, resource
+use, and validator results flow to the independent monitoring plane. A denied
+capability remains a denial even when it prevents a child from completing; the
+worker returns a structured assistance request rather than asking Fleet to find
+a less restricted route.
