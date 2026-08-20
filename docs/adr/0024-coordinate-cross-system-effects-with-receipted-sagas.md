@@ -105,3 +105,27 @@ declared predicate, the system does not manufacture certainty: the step remains
 an incident, repeated irreversible execution stays blocked, and a human may
 resolve policy or accept the unresolved external state but may not relabel the
 original outcome as proved.
+
+An unresolved irreversible step installs an Uncertainty Fence rather than a
+global stop. Its minimum scope contains the exact target and effect equivalence
+class whose repetition could duplicate, conflict with, or conceal the unknown
+effect, plus every downstream step whose preconditions or correctness depend on
+that outcome. Equivalence is declared in the signed manifest using stable
+resource, audience, operation, and idempotency identities; it is not inferred
+only from user-facing labels.
+
+Within the fence, read-only reconciliation, evidence preservation, monitoring,
+and separately authorized risk-reducing safety actions may continue. State
+changes that could repeat the effect, destroy evidence, change its observable
+result, or assume either success or non-execution remain blocked. Unrelated
+operations, independent saga branches, and ordinary reads continue against
+their declared snapshots and retain a visible reference to the incident when
+it is relevant to interpretation.
+
+If the system cannot determine whether an operation belongs to the equivalence
+class, it expands the fence only to the smallest shared target or dependency
+boundary that contains the uncertainty and records why. The fence narrows or
+closes only through appended evidence satisfying the frozen Reconciliation
+Predicate or through an explicit human risk decision that changes future
+authority without rewriting the original `unknown` disposition. Every scope
+change is receipted and preserves the prior fence.

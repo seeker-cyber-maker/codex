@@ -129,6 +129,12 @@ visibility window, query bounds, and evidence combination required to resolve
 an ambiguous external effect as executed or not executed.
 _Avoid_: timeout inference, missing receipt, post-incident weakened proof
 
+**Uncertainty Fence**:
+A scoped barrier around an unresolved effect's duplicate-risk equivalence class
+and outcome-dependent descendants that blocks unsafe mutation while allowing
+unrelated work and read-only reconciliation to continue.
+_Avoid_: global stop, blind retry, hidden quarantine, presumed outcome
+
 **Record Disposition**:
 The declared lifecycle relationship of an admitted record to current knowledge:
 active, superseded, obsolete, invalidated, redacted, or removed.
