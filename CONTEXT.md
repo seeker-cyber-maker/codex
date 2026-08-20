@@ -590,6 +590,12 @@ consumer or objective, without claiming that its method, evidence, or blocker
 was resolved.
 _Avoid_: failure, resolved, forgotten task
 
+**Late Result**:
+Worker output received after its task was cancelled or superseded, retained
+with its original lineage and timing for independent merit review rather than
+treated as automatically bad, current, or authorized.
+_Avoid_: discarded pending work, automatic import, cancellation penalty
+
 **Continuation Signal**:
 An exact short response such as `.`, `continue`, `go on`, `go ahead`, or
 `do next step` that resumes the current bounded action without widening its

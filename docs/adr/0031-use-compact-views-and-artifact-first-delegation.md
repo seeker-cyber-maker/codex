@@ -154,6 +154,25 @@ a genuine Blocker stays paused with its Resolver Assignment, reminder, and any
 required retention hold. A newly relevant objective starts or reopens task work
 through a linked event rather than erasing the earlier disposition.
 
+Cancelling or superseding a task revokes its worker Capability Lease and asks
+the worker to stop, but it does not prejudge work already produced. Output
+received after that disposition is preserved in quarantine as a Late Result,
+tagged with the original task, worker and model identity, creation and receipt
+times, lease state, cancellation or supersession event, and whether the worker
+acknowledged the stop request. The tag is lineage and timing evidence, not a
+negative quality score.
+
+Each Late Result may receive an independent merit review against the current
+objective, evidence, freshness, security, and dependency state. Useful work may
+enter through a new Import Proposal linked both to its original task and the
+current or successor task, while retaining its Late Result tag and original
+authorship. A changed path therefore does not discard sound pending work or
+silently attach it to the new path. Production under a valid lease, delivery
+after disposition, and execution after revocation remain separate facts: work
+performed after revocation is an authority violation subject to incident rules,
+but that violation still does not decide the substantive merit of the captured
+content.
+
 Unimported content becomes garbage-collection eligible only after its owning
 work is moot, rejected, expired, cancelled, or otherwise finally dispositioned
 and at least thirty days old. Active tasks, Import Proposals, incidents,
