@@ -157,6 +157,28 @@ buffer through a separate untrusted-data view and never mixes those results into
 an ordinary result set. Only a successful import appends canonical content and
 provenance references that become eligible for normal retrieval.
 
+Quarantine inspection is available only to the lead Codex within its current
+grant or an explicitly assigned read-only reviewer through an expiring,
+non-delegable Quarantine View. Its signed manifest binds the actor, owning task,
+purpose, exact record and artifact identities, maximum bytes and media types,
+redaction profile, permitted deterministic scanners, start time, and expiry.
+Additional content or scope requires a new view rather than silent expansion.
+
+The view labels every body as untrusted data, provides bounded previews before
+larger expansion, disables execution and tool-call interpretation, and exposes
+no raw database credentials, import path, write capability, or unrelated
+buffer namespace. Each access receipt records the manifest, source hashes,
+redaction and scanner versions, bytes exposed, reviewer identity, and result.
+Redaction changes the view, never the sealed source.
+
+Inspection findings are attributable Review Proposals that remain in the
+quarantine lane until separately admitted. The reviewer may recommend import,
+rejection, amendment, escalation, or further inspection but cannot execute,
+write, delegate, authorize admission, or mix quarantined content into ordinary
+retrieval. A critical safety observation may raise a content-free
+Non-suppressible Alert with stable evidence references; the alert does not copy
+the quarantined body or establish the finding as true.
+
 Unimported, rejected, expired, or abandoned buffer entries remain visible as
 buffer dispositions with reasons and owning tasks. They never become hidden
 project truth or loose files requiring archaeology. Retention and later garbage

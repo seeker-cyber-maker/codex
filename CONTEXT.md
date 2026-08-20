@@ -216,6 +216,12 @@ report and artifact manifests without access to canonical journals, read models,
 or the Codex Archive.
 _Avoid_: shared scratch database, raw SQL credential, hidden source of truth
 
+**Quarantine View**:
+An expiring, non-delegable, read-only selection of explicitly authorized Worker
+Buffer content that remains labeled untrusted and isolated from ordinary
+retrieval, execution, import, and authority.
+_Avoid_: Archive query, reviewer workspace, unrestricted buffer browser
+
 **WIP Buffer Reference**:
 A canonical, metadata-only pointer showing a delegated task's worker, phase,
 heartbeat, buffer cursor, volume, seal, expiry, and disposition without copying
