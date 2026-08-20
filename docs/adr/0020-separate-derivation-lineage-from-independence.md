@@ -27,12 +27,13 @@ separate, or unknown. Copies and transformations do not become independent
 merely through new URLs, venues, authors, or record identifiers, while a common
 ancestor does not disqualify genuinely independent child experiments.
 
-Every relevant Independence Profile dimension is `shared`, `separate`, or
-`unknown`. Unknown neither proves dependence nor satisfies a mandatory
-independence constraint. The evidence remains available for exploratory and
-provisional use and for routes that do not require the unresolved dimension;
-only the affected route stays unsatisfied. The system records an Independence
-Gap naming the exact dimension, requirement, known shared ancestry, and evidence
+Every relevant Independence Profile dimension is `shared`, `separate`,
+`unknown`, or `contested`. Unknown neither proves dependence nor satisfies a
+mandatory independence constraint. The evidence remains available for
+exploratory and provisional use and for routes that do not require the
+unresolved dimension; only the affected route stays unsatisfied. The system
+records an Independence Gap naming the exact dimension, requirement, known
+shared ancestry, and evidence
 needed to resolve it, then creates a targeted verification task. Resolving the
 gap re-evaluates the affected routes without rewriting the original evidence.
 
@@ -43,6 +44,16 @@ deterministic trace or receipt, or by a signed human or qualified-expert decisio
 that cites its evidence and basis. The determination is scoped to the named
 dimension, evidence set, claim, route, and time; it does not alter provenance or
 decide whether the supported claim is true.
+
+Incompatible valid Independence Determinations over the same evidence,
+dimension, scope, and time create an Independence Conflict. Both signed
+determinations remain intact, and the current dimension becomes `contested`
+rather than being overwritten or collapsed to `unknown`. A contested value
+cannot satisfy a route requiring settled independence, although the evidence
+remains available to routes that do not require that dimension. Current queries
+surface a compact conflict marker, while timeline and as-of views retain each
+determination and the state it produced. Credential, source role, repetition,
+and vote count do not automatically select a winner.
 
 Eigenius provides a useful implementation reference for typed reasoning traces
 and content-addressed ancestry, but ancestry alone is not Dream House's

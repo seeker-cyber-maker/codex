@@ -56,8 +56,8 @@ _Avoid_: independence verdict, folder ancestry, publication count
 
 **Independence Profile**:
 The claim- and route-relative comparison of evidence items across shared,
-separate, or unknown inputs, observations, executions, methods, operators,
-environments, and failure modes.
+separate, unknown, or contested inputs, observations, executions, methods,
+operators, environments, and failure modes.
 _Avoid_: different URL, different author, separate lineage root
 
 **Independence Gap**:
@@ -66,10 +66,16 @@ leaving that route unsatisfied and identifying a targeted verification task.
 _Avoid_: dependence finding, claim refutation, missing citation
 
 **Independence Determination**:
-A signed, basis-citing decision that changes one Independence Profile dimension
-from unknown to shared or separate without changing the underlying evidence or
+A signed, basis-citing decision asserting that one Independence Profile
+dimension is shared or separate without changing the underlying evidence or
 deciding the supported Claim.
 _Avoid_: model inference, Claim Determination, source reputation
+
+**Independence Conflict**:
+The preserved coexistence of incompatible valid Independence Determinations for
+the same evidence, dimension, scope, and time, making the current dimension
+contested.
+_Avoid_: unknown value, majority vote, overwritten determination
 
 **Source Role**:
 A source's contextual relationship to a claim, such as official, eyewitness,

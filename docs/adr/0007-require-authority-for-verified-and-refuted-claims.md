@@ -32,3 +32,9 @@ dimension from `unknown` to `shared` or `separate` requires a deterministic
 trace or receipt or a signed, basis-citing Independence Determination. That
 determination resolves only the named evidence relationship and cannot itself
 verify or refute the Claim.
+
+Incompatible valid Independence Determinations create an Independence Conflict,
+preserve both signed records, and set the current dimension to `contested`.
+Neither determination silently revokes the other, and a route requiring a
+settled value remains unsatisfied until another accepted predicate or deliberate
+human resolution addresses the conflict while retaining its history.
