@@ -176,15 +176,35 @@ pre-earmarks a source passage for attention without supplying summary prose or
 directing the reader's conclusion.
 _Avoid_: embedded summary, model instruction, altered claim
 
-**Publication Artifact**:
-A venue-specific authored work derived from a common research record, such as a
-research paper, Hugging Face article, or technical walkthrough.
-_Avoid_: paper as an umbrella term, format-neutral manuscript
+**Research Core**:
+The self-contained claims, evidence, methods, limitations, and determinations
+that serve as the semantic ground truth for derived explanations and artifacts.
+_Avoid_: final prose, venue draft, model summary
 
-**Venue Frame**:
-The declared venue, provenance, audience, and format context through which a
-reader encounters a Publication Artifact and forms expectations about it.
-_Avoid_: neutral metadata, source truth, interchangeable format
+**Research Rendering**:
+An audience- and venue-specific expression or translation of a Research Core
+that preserves its supported meaning.
+_Avoid_: format-neutral paper, new research result, interchangeable copy
+
+**Provenance Frame**:
+The truthful declared authorship and source lineage through which a reader
+encounters a Research Core or Research Rendering.
+_Avoid_: source truth, reputation verdict, anonymous context
+
+**Venue Contract**:
+The publication surface's requirements for content scope and the rigor with
+which facts, methods, evidence, citations, and limitations are presented.
+_Avoid_: audience profile, file format, factual truth
+
+**Audience Profile**:
+The intended consumer's background, purpose, language, and desired technical
+depth for a Research Rendering.
+_Avoid_: venue contract, source role, reader stereotype
+
+**Rendering Brief**:
+The explicit combination of Research Core, Provenance Frame, Venue Contract,
+and Audience Profile that governs one Research Rendering.
+_Avoid_: generic rewrite prompt, paper request, style preset
 
 **Analysis Stability Envelope**:
 The declared minimal acceptable semantic variation between comprehensive
