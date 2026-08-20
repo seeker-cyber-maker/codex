@@ -140,6 +140,16 @@ An attributable actor identity whose permitted project, purpose, and validity
 scope is declared by the Trust Authority independently of content acceptance.
 _Avoid_: model name, truth certificate, shared contractor key
 
+**Contractor Lineage**:
+The stable ancestry connecting successive versions of one contractor model
+without treating those versions as the same attributable actor.
+_Avoid_: model family as signer, shared version identity
+
+**Qualified Contractor Build**:
+An exact contractor-model version that has passed its declared vetting boundary
+and may receive a distinct Signing Identity for attributable work.
+_Avoid_: latest model, provider alias, unversioned worker
+
 **Signature Incident Review**:
 A deliberate evidence-backed process that identifies an affected signing
 identity, establishes an incident timeline, and determines which historical

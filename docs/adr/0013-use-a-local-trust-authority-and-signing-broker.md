@@ -17,3 +17,9 @@ separate signed Signature Incident Review that names the affected identity,
 records the supporting evidence, establishes the incident or compromise
 timeline, and explicitly identifies any signatures whose status changes;
 revocation alone never causes silent retrospective invalidation.
+Contractor credentials are issued per Qualified Contractor Build after vetting,
+not per model family, project, or mutable provider alias. Successive builds keep
+a shared Contractor Lineage but receive distinct signing identities, allowing
+the Archive to attribute each contribution to the exact vetted version and to
+scope later trust changes without casting unrelated versions or projects into
+doubt.
