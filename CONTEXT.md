@@ -47,6 +47,12 @@ navigation state remain outside model context unless explicitly promoted as a
 scoped task input.
 _Avoid_: shared prompt stream, UI as source of truth, hidden task mutation
 
+**Workflow Recipe**:
+A reviewed, versioned push-button operation with an invariant action graph,
+minimal typed inputs, safe visible defaults, declared authority, effect preview,
+validators, and expected receipts.
+_Avoid_: arbitrary command box, mutable script, hidden default, argument puzzle
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and
