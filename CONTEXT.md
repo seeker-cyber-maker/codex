@@ -47,6 +47,12 @@ navigation state remain outside model context unless explicitly promoted as a
 scoped task input.
 _Avoid_: shared prompt stream, UI as source of truth, hidden task mutation
 
+**Attention Queue**:
+The dashboard's action-first view ranking incidents, blockers, authority gates,
+timed questions, assistance requests, approaching boundaries, and stale work
+ahead of informational status.
+_Avoid_: activity feed, project directory, model-ranked urgency, notification pile
+
 **Workflow Recipe**:
 A reviewed, versioned push-button operation with an invariant action graph,
 minimal typed inputs, safe visible defaults, declared authority, effect preview,

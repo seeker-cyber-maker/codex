@@ -83,3 +83,13 @@ Training data may be proposed from supervised mistakes and corrections, but no
 training, LoRA, model surgery, or promotion is authorized by this ADR. Until a
 candidate completes the relevant sealed evaluation, the restricted interim
 harness and current trust roster remain in force.
+
+Local interface installation and contender testing are deferred until the
+planned file and model-storage migration is verified complete and measured free
+storage, unified-memory headroom, and runtime isolation can support concurrent
+tests without disturbing active work. That trigger authorizes preparation and
+qualification, not training or promotion. The primary Codex role owns the
+end-to-end setup: exact artifact and runtime, Hermes-compatible harness or
+adapter, system and role prompts, context and memory contracts, provider aliases,
+tool dialect, sandbox, receipts, and frozen evaluation packet. Candidate defaults
+are not inherited unreviewed from a model package.
