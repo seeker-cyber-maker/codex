@@ -64,6 +64,19 @@ Archive scope needed to complete an admission after policy-bounded repeated
 staleness, without blocking snapshot reads or bypassing any gate.
 _Avoid_: global lock, authority override, indefinite reservation
 
+**Execution Batch**:
+A physical scheduling envelope that processes compatible proposals together for
+efficiency while preserving every proposal's identity, order, scope, results,
+receipts, and admission outcome.
+_Avoid_: merged proposal, shared verdict, atomic write set
+
+**Batch Compatibility Contract**:
+The exact shared runtime conditions required to place work in one Execution
+Batch, including operation and gate stage, model artifact and precision,
+tokenizer or encoder configuration, adapter identity, rulesets, and resource
+bounds.
+_Avoid_: same model name, approximate compatibility, scheduler guess
+
 **Trusted Writer**:
 The narrowly scoped component that alone holds Archive mutation capability and
 may atomically admit a proposal after all required gates pass.
