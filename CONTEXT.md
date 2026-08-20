@@ -17,6 +17,12 @@ records, returning provenance-bearing results without becoming acceptance
 authority.
 _Avoid_: Markdown library, vector database
 
+**Retrieval Contract**:
+The explicit query-purpose agreement declaring scope, time view, retrieval mode,
+relevant Verification Requirements, evidence-facet priorities, filters, and
+presentation constraints used to select and rank one result set.
+_Avoid_: global credibility score, search prompt, model preference
+
 **Trusted Local Boundary**:
 The initial Archive access scope limited to its human owner, the primary Codex
 harness, and explicitly approved local automation.
@@ -383,8 +389,8 @@ _Avoid_: current summary, hindsight reconstruction
 
 **Honest Search Receipt**:
 A durable account of a query's declared scope, searched and unavailable
-sources, corpus freshness, and result coverage that distinguishes no match from
-not searched.
+sources, corpus freshness, Retrieval Contract, ranking derivation, and result
+coverage that distinguishes no match from not searched.
 _Avoid_: empty-result proof, search success log
 
 **Session Branch**:
