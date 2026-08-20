@@ -286,6 +286,11 @@ An exact contribution from a Conditional Work Branch whose validity does not
 depend on that branch's contested premise and can be reviewed independently.
 _Avoid_: convenient cherry-pick, silent merge, inherited acceptance
 
+**Evidence Descendant**:
+A new branch that extends a sealed historical branch with later evidence while
+preserving the original base, premise, and disposition unchanged.
+_Avoid_: historical rebase, reopened mutable branch, rewritten reasoning
+
 **Route Defeater**:
 An evidence-backed condition that blocks one Verification Route without by
 itself refuting the claim or blocking its other declared routes.

@@ -19,3 +19,9 @@ non-promoted branch may enter the accepted line only as a separately reviewed
 and attested Premise-Independent Contribution that retains a reference to its
 origin. The losing branch is never silently merged merely because some of its
 output remains useful.
+Later evidence reopens a preserved line by creating an Evidence Descendant from
+its sealed original state, not by rebasing or rewriting the historical branch
+onto current mainline. The descendant records the new evidence and may interact
+with current projects through explicit adapters or reviewed merges, while the
+original premise, reasoning context, and resolution remain reconstructable as
+they were.
