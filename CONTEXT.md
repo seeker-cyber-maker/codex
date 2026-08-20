@@ -117,6 +117,12 @@ and therefore requires an exact effect preview and just-in-time authority at its
 execution boundary.
 _Avoid_: ordinary API call, assumed rollback, manifest-wide preapproval
 
+**Irreversible Effect Authorization**:
+A single-use, non-delegable grant bound to one exact irreversible effect, target
+state, named executor, time window, and attempt identity; ambiguity after
+consumption requires reconciliation rather than replay.
+_Avoid_: reusable approval, bearer capability, delegated consent, retry token
+
 **Record Disposition**:
 The declared lifecycle relationship of an admitted record to current knowledge:
 active, superseded, obsolete, invalidated, redacted, or removed.

@@ -59,3 +59,25 @@ references the verified result. Planning approval, batch membership, prior
 reversible success, or a broad standing capability cannot substitute for the
 boundary authorization, and failure after the effect must not be described as
 fully compensated when restoration is impossible.
+
+An Irreversible Effect Authorization is a single-use, non-delegable grant. It
+binds the saga and step identities, exact effect-preview digest, target and
+target-state digest, named executor identity, authorizer, issuance and expiry
+times, and one stable attempt identity. A broker may deliver the grant but may
+not exercise it, substitute an executor, retarget it, extend it, or derive a
+second grant. Any change to a bound value requires a new preview and a new
+authorization.
+
+The authorization is atomically marked `consumed` for its attempt immediately
+before the executor crosses the irreversible boundary. It cannot authorize a
+retry, replay, continuation, or compensating action. Revocation prevents an
+unconsumed grant from being exercised; expiry and consumption are permanent
+ledger events rather than deletion of the grant.
+
+If the executor loses contact or the result is otherwise ambiguous after
+consumption, the step becomes `unknown` and enters read-only reconciliation.
+The system does not issue a replacement authorization or repeat the effect
+while execution remains possible. A verified success closes the step with its
+effect receipt. Proof that the effect did not occur permits a newly previewed
+and separately authorized attempt; an outcome that cannot be resolved remains
+an incident and blocks dependent irreversible work.
