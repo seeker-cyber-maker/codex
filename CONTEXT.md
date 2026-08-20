@@ -53,6 +53,17 @@ minimal typed inputs, safe visible defaults, declared authority, effect preview,
 validators, and expected receipts.
 _Avoid_: arbitrary command box, mutable script, hidden default, argument puzzle
 
+**Hardware-presence Gate**:
+A WebAuthn ceremony that binds a fresh hardware-authenticator assertion to the
+exact human session or consequential action being authorized.
+_Avoid_: plugged-in key, password fallback, reusable browser token
+
+**Obscured Dashboard Mode**:
+An emoji-first human interface with a stable private legend, opaque recipe
+handles, and an automatic privacy veil that reduces accidental semantic
+exposure without pretending to provide authorization.
+_Avoid_: security by obscurity, randomized controls, semantic URL, hidden effect
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and

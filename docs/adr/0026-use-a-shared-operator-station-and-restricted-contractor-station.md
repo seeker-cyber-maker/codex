@@ -50,6 +50,43 @@ Manifest, or draft a new Workflow Recipe, but a new button becomes available
 only after its contract, authority, validation, and presentation are reviewed
 and versioned.
 
+The dashboard listens only on loopback and uses one fixed `localhost` origin;
+it rejects unexpected `Host`, `Origin`, embedding, and cross-origin requests.
+It has no LAN, wildcard, internet, or reverse-proxy listener by default. This
+origin can use WebAuthn because the WebAuthn specification explicitly permits
+`http://localhost` as a local relying-party origin
+([W3C WebAuthn Level 3](https://www.w3.org/TR/webauthn-3/#relying-party-identifier)).
+
+Human authentication uses a FIDO2/WebAuthn-capable YubiKey or equivalent
+hardware security key. The server verifies the exact origin and relying-party
+identifier, fresh single-use challenge, credential signature, user-presence and
+required user-verification flags, credential status, and applicable signature-
+counter evidence. YubiKey 5 and Security Key series devices support FIDO2 PIN
+user verification in addition to physical presence
+([Yubico documentation](https://docs.yubico.com/yesdk/users-manual/application-u2f/u2f-pin.html)).
+The private key remains on the authenticator.
+
+Authentication opens a short, inactivity-bounded human session. Sensitive
+controls and every irreversible or external effect require a fresh WebAuthn
+step-up whose server challenge is bound to the exact Workflow Recipe, arguments,
+effect-preview digest, and expiry. A model can request that ceremony but cannot
+satisfy the physical-presence requirement, substitute a credential, or convert
+one assertion into a reusable capability. No password-only fallback is enabled
+silently.
+
+The web projection defaults to an Obscured Dashboard Mode. Before
+authentication it reveals no project, task, skill, provider, or incident names.
+After authentication its ordinary controls use a stable human-selected emoji
+legend and session-opaque recipe handles; semantic labels are omitted from page
+metadata, URLs, background telemetry, and the idle view. Textual meaning and an
+effect preview appear only when the human deliberately reveals a control or
+begins an action. Loss of focus or inactivity restores the privacy veil.
+
+Emoji controls are defense in depth against accidental model or observer
+interpretation, not an authorization mechanism. They never replace WebAuthn,
+capability checks, effect previews, or receipts, and the mapping remains stable
+for the human rather than being randomized into a new source of operator error.
+
 A shared interface does not imply shared identity or authority. Every action
 names its human, Codex, automation, or contractor actor; resolves that actor's
 current capabilities; previews consequential effects; and preserves its
