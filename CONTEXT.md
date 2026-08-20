@@ -42,6 +42,12 @@ The smallest attributable assertion whose evidentiary assessment may change
 without rewriting its source, wording, or authorship.
 _Avoid_: document verdict, source reputation
 
+**Provenance**:
+The neutral trace of where a record came from, who authored or transmitted it,
+where it appeared, and how it reached the Archive; it does not rate the author,
+venue, or claim.
+_Avoid_: authorship quality, venue prestige, credibility score
+
 **Source Role**:
 A source's contextual relationship to a claim, such as official, eyewitness,
 analyst, contractor, or model; it is not a truth status.
