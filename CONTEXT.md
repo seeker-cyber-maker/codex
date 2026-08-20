@@ -129,6 +129,17 @@ An exact short response such as `.`, `continue`, `go on`, `go ahead`, or
 scope or authority.
 _Avoid_: blanket approval, decision answer
 
+**Trust Authority**:
+The locally controlled root of signing trust that binds scoped actor identities
+to signing credentials and records their issuance, validity, rotation, and
+revocation.
+_Avoid_: model-held key, universal signer, blockchain
+
+**Signing Identity**:
+An attributable actor identity whose permitted project, purpose, and validity
+scope is declared by the Trust Authority independently of content acceptance.
+_Avoid_: model name, truth certificate, shared contractor key
+
 **As-of View**:
 A reconstruction of the claims and evidence available to the Archive at a
 declared historical time without later knowledge.

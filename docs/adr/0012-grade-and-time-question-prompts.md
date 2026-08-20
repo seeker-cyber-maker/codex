@@ -17,3 +17,7 @@ brevity. Every question declares its recommended default, the fallback that
 will actually be selected after timeout, and whether that fallback is permitted
 at its severity. With an open question, `.` selects that permitted fallback;
 without one, it advances the ordinary workflow's current bounded next step.
+The literal `.` main-session shortcut follows the independently inspected
+[OMP input-controller behavior at revision `72000ac`](https://github.com/can1357/oh-my-pi/blob/72000acfeb902e21816252699482887f34d1a5a4/packages/coding-agent/src/modes/controllers/input-controller.ts#L664-L681),
+while recommended choices and timeout auto-selection are a separate Ask-tool
+behavior.
