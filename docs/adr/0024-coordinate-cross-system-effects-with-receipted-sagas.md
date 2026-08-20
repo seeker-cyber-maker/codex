@@ -81,3 +81,27 @@ while execution remains possible. A verified success closes the step with its
 effect receipt. Proof that the effect did not occur permits a newly previewed
 and separately authorized attempt; an outcome that cannot be resolved remains
 an incident and blocks dependent irreversible work.
+
+Every irreversible step declares a target-specific Reconciliation Predicate in
+its signed manifest before authorization. The predicate identifies the target's
+authoritative state interface, provider idempotency or audit record when one
+exists, expected identifiers and state transitions, declared consistency or
+visibility window, query bounds, and the evidence combination required to prove
+either execution or non-execution. The predicate cannot be weakened after an
+attempt becomes `unknown`.
+
+Non-execution may be established only after the visibility window has elapsed
+and every required authoritative check agrees that the bound effect did not
+occur. A timeout, transport error, missing local receipt, empty unbounded search,
+or absence from a non-authoritative cache is insufficient. An authoritative
+target-state observation alone is sufficient only when the manifest explains
+why the effect would necessarily and durably appear there; otherwise it must be
+combined with the provider's idempotency, request, or audit record.
+
+Reconciliation appends each observation, query boundary, target revision or
+cursor, collection time, and verifier identity. Conflicting observations keep
+the step `unknown`. If the target cannot provide the evidence required by the
+declared predicate, the system does not manufacture certainty: the step remains
+an incident, repeated irreversible execution stays blocked, and a human may
+resolve policy or accept the unresolved external state but may not relabel the
+original outcome as proved.

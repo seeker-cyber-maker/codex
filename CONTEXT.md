@@ -123,6 +123,12 @@ state, named executor, time window, and attempt identity; ambiguity after
 consumption requires reconciliation rather than replay.
 _Avoid_: reusable approval, bearer capability, delegated consent, retry token
 
+**Reconciliation Predicate**:
+A target-specific, predeclared rule naming the authoritative observations,
+visibility window, query bounds, and evidence combination required to resolve
+an ambiguous external effect as executed or not executed.
+_Avoid_: timeout inference, missing receipt, post-incident weakened proof
+
 **Record Disposition**:
 The declared lifecycle relationship of an admitted record to current knowledge:
 active, superseded, obsolete, invalidated, redacted, or removed.
