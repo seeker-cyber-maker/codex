@@ -27,6 +27,15 @@ separate, or unknown. Copies and transformations do not become independent
 merely through new URLs, venues, authors, or record identifiers, while a common
 ancestor does not disqualify genuinely independent child experiments.
 
+Every relevant Independence Profile dimension is `shared`, `separate`, or
+`unknown`. Unknown neither proves dependence nor satisfies a mandatory
+independence constraint. The evidence remains available for exploratory and
+provisional use and for routes that do not require the unresolved dimension;
+only the affected route stays unsatisfied. The system records an Independence
+Gap naming the exact dimension, requirement, known shared ancestry, and evidence
+needed to resolve it, then creates a targeted verification task. Resolving the
+gap re-evaluates the affected routes without rewriting the original evidence.
+
 Eigenius provides a useful implementation reference for typed reasoning traces
 and content-addressed ancestry, but ancestry alone is not Dream House's
 independence test. See its pinned

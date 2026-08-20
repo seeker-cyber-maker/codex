@@ -37,7 +37,10 @@ from publication count or separate URLs, or let strength on one facet compensate
 for an unmet mandatory facet. Missing or unknown mandatory values leave the
 route unsatisfied without thereby refuting the claim. The evaluation receipt
 names every satisfied and unsatisfied predicate, the evidence relationships
-used, and the relevant shared and separate dependencies.
+used, and the relevant shared, separate, and unknown dependencies. An unknown
+required independence dimension is recorded as an Independence Gap and emits a
+targeted verification task rather than being inferred from source count or
+presentation.
 
 One evidence item may satisfy more than one requirement when each Evidence
 Relationship is independently typed, graded, and justified against its exact

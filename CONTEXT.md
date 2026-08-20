@@ -55,10 +55,15 @@ two resulting items are evidentially independent.
 _Avoid_: independence verdict, folder ancestry, publication count
 
 **Independence Profile**:
-The claim- and route-relative comparison of evidence items across shared or
-separate inputs, observations, executions, methods, operators, environments,
-and failure modes.
+The claim- and route-relative comparison of evidence items across shared,
+separate, or unknown inputs, observations, executions, methods, operators,
+environments, and failure modes.
 _Avoid_: different URL, different author, separate lineage root
+
+**Independence Gap**:
+An unknown Independence Profile dimension required by a Verification Route,
+leaving that route unsatisfied and identifying a targeted verification task.
+_Avoid_: dependence finding, claim refutation, missing citation
 
 **Source Role**:
 A source's contextual relationship to a claim, such as official, eyewitness,
