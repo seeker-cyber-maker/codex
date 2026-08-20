@@ -20,3 +20,9 @@ Reader Preview may change which truthful samples it selects, ranks, or displays
 after synthesis. A cue fails even when it produces a more tempting summary if
 it changes the full analysis's claims, conclusions, scope, qualifications,
 authority, or evidentiary treatment beyond that minimal acceptable range.
+The desired output is a Truthful Teaser: presentation may make supported work
+more attractive, but it may not make the underlying subject appear to do
+anything the evidence does not support. Unrealistic, sensational, or
+cheap-clickbait framing—such as implying a “superoptimizer gone wild”—fails
+even if it improves attention, because the optimization belongs to the
+selection and presentation layer rather than the claims layer.

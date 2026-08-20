@@ -180,6 +180,12 @@ A measured change in which truthful source details are surfaced to the human in
 a Reader Preview after synthesis while full analysis remains stable.
 _Avoid_: changed conclusion, altered evidence, fabricated teaser
 
+**Truthful Teaser**:
+A Reader Preview whose selection and presentation increase human interest
+without inventing or exaggerating capability, certainty, novelty, scope, or
+evidentiary support.
+_Avoid_: clickbait, hype claim, synthetic fact
+
 **Signature Incident Review**:
 A deliberate evidence-backed process that identifies an affected signing
 identity, establishes an incident timeline, and determines which historical
