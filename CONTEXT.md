@@ -111,6 +111,12 @@ a prior saga effect without erasing its history or pretending the original step
 never occurred.
 _Avoid_: rollback fiction, record deletion, silent undo
 
+**Irreversible Step**:
+A saga effect that cannot be reliably undone or compensated to its prior state
+and therefore requires an exact effect preview and just-in-time authority at its
+execution boundary.
+_Avoid_: ordinary API call, assumed rollback, manifest-wide preapproval
+
 **Record Disposition**:
 The declared lifecycle relationship of an admitted record to current knowledge:
 active, superseded, obsolete, invalidated, redacted, or removed.

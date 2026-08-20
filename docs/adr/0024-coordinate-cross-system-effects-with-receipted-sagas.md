@@ -43,3 +43,19 @@ Archive admission therefore remain independently observable facts. A saga may
 coordinate them and present combined progress, but no summary may report
 completion from intent, queue acceptance, process exit, or an unverified API
 response alone.
+
+Irreversible Steps are placed after every reversible prerequisite whenever the
+dependency graph permits. Immediately before execution, the system presents an
+exact effect preview containing the target, scope, content or operation, cost or
+resource consequence, external audience, known inability to compensate, and
+current preconditions. Just-in-time authorization binds that preview and expires
+when its target state, policy, scope, or declared time window changes. The
+executor rechecks all bound values immediately before the effect.
+
+When an irreversible effect must occur before other work can proceed, the saga
+is split at that boundary. The first saga ends at a human decision gate for the
+exact irreversible effect; any continuation is a separately admitted saga that
+references the verified result. Planning approval, batch membership, prior
+reversible success, or a broad standing capability cannot substitute for the
+boundary authorization, and failure after the effect must not be described as
+fully compensated when restoration is impossible.
