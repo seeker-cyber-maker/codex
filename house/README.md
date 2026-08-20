@@ -18,12 +18,19 @@ small, tested upstream patch is necessary.
 - Training is out of scope until a separate, explicitly authorized manifest is
   sealed.
 
-## First implementation slice
+## Implementation slices
 
 The baseline slice builds the pinned source CLI and app-server, then compares
-their non-networked public surfaces with the installed release. It deliberately
-does not implement session trees, provider orchestration, model routes, or
-training.
+their non-networked public surfaces with the installed release.
 
 See `workflow/runs/20260820T061428Z-dream-house-baseline/` for the frozen plan,
 evidence, validation state, and handoff.
+
+The context-tree thin slice adds a downstream-only projector, append-only
+hash-chained event journal, and sealed reversible context views. It does not
+connect to a live app-server or modify native Codex state. See
+`context_tree/README.md` and
+`workflow/runs/20260820T134919Z-context-tree-thin-slice/`.
+
+Provider orchestration, Knowledge Dispensary projection, terminal companion,
+local model work, and training remain outside the implemented boundary.

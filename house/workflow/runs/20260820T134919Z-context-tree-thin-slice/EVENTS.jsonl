@@ -1,0 +1,5 @@
+{"seq":1,"at":"2026-08-20T13:49:19Z","event":"run_started","run_id":"20260820T134919Z-context-tree-thin-slice","baseline_commit":"2497214bc3f244de8ef51534dcb23a74d83f4bf1"}
+{"seq":2,"at":"2026-08-20T13:49:19Z","event":"source_trace_passed","findings":["forkedFromId and parentThreadId are distinct relations","fork request boundary is not exposed on child Thread","unloaded stored Thread sessionId falls back to thread id","paginated history supports reference-backed forks"]}
+{"seq":3,"at":"2026-08-20T13:54:00Z","event":"focused_test_failed","failure_class":"fixture_error","detail":"tamper fixture changed an external payload phrase that the reference-only journal does not embed","product_defect":false}
+{"seq":4,"at":"2026-08-20T13:54:30Z","event":"fixture_corrected","detail":"tamper fixture now changes a journal field; payload integrity remains a separate reference-digest check"}
+{"seq":5,"at":"2026-08-20T13:57:55Z","event":"focused_validation_passed","tests":8,"checks":["ruff","unittest","cli_smoke","json_parse","privacy_scan","house_only_scope","diff_check"]}

@@ -1,0 +1,18 @@
+{
+  "schema": "project-validation/1",
+  "state": "PASSED",
+  "checks": [
+    {"id":"python_compile","state":"PASSED","evidence":"python3 -m py_compile"},
+    {"id":"ruff","state":"PASSED","evidence":"ruff check and ruff format --check"},
+    {"id":"focused_tests","state":"PASSED","evidence":"8/8 unittest fixtures including CLI smoke"},
+    {"id":"json_parse","state":"PASSED","evidence":"all house JSON documents parsed"},
+    {"id":"privacy_scan","state":"PASSED","evidence":"no user path, token-shaped value, or private-key marker in new slice"},
+    {"id":"scope","state":"PASSED","evidence":"all changes are under house/**"},
+    {"id":"diff_check","state":"PASSED","evidence":"git diff --check exit 0"}
+  ],
+  "limitations": [
+    "The slice uses synthetic exported records and does not connect to a live app-server.",
+    "Payload bodies remain external to the journal and are represented by references plus hashes.",
+    "Git commit and remote branch identity are recorded after this candidate receipt."
+  ]
+}

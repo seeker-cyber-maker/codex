@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/seeker-cyber-maker/codex/house/schemas/codex-context-view.schema.json",
+  "title": "Codex Context View",
+  "type": "object",
+  "required": [
+    "schema", "view_id", "session_id", "branch_id", "task_id",
+    "parent_view_id", "created_at", "budget_tokens", "blocks",
+    "exclusions", "authority_hash"
+  ],
+  "properties": {
+    "schema": {"const": "codex-context-view/1"},
+    "view_id": {"type": "string", "pattern": "^cv_[0-9a-f]{24}$"},
+    "session_id": {"type": "string", "minLength": 1},
+    "branch_id": {"type": "string", "minLength": 1},
+    "task_id": {"type": "string", "minLength": 1},
+    "parent_view_id": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "minLength": 1},
+    "budget_tokens": {"type": "integer", "minimum": 0},
+    "authority_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["block_id", "mode", "state", "reason", "source_ref", "source_sha256"],
+        "properties": {
+          "block_id": {"type": "string", "minLength": 1},
+          "mode": {"enum": ["verbatim", "summary", "locator", "retrieved"]},
+          "state": {"enum": ["core", "pinned", "optional", "excluded"]},
+          "reason": {"type": "string", "minLength": 1},
+          "source_ref": {"type": "string", "minLength": 1},
+          "source_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_ref", "reason"],
+        "properties": {
+          "source_ref": {"type": "string", "minLength": 1},
+          "reason": {"enum": ["out_of_scope", "superseded", "attention_trap", "budget", "sensitive"]},
+          "block_id": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "operation": {"type": "string"},
+    "restored_from_view_id": {"type": "string"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "project-workflow-run/1",
+  "run_id": "20260820T134919Z-context-tree-thin-slice",
+  "state": "READY_FOR_COMMIT",
+  "objective": "Implement and verify a downstream conserved ancestry journal and reversible context-view thin slice.",
+  "claim_ceiling": "Offline fixture proof only; no live app-server integration, UI, provider, model-quality, or training claim.",
+  "authority": {
+    "downstream_files": ["house/**"],
+    "git_branch": "codex/dream-house-context-tree",
+    "git_push": ["origin/codex/dream-house-context-tree"],
+    "upstream_core_changes": false,
+    "native_codex_state_writes": false,
+    "live_model_requests": false,
+    "provider_activation": false,
+    "model_downloads": false,
+    "training": false,
+    "upstream_pull_request": false
+  },
+  "budgets": {
+    "active_implementation_lanes": 1,
+    "retries_per_check": 1,
+    "network_effects": []
+  },
+  "council": [],
+  "stop_rules": [
+    "stop before changing a non-house upstream source file",
+    "stop before reading or writing native Codex databases or rollout logs",
+    "stop before any live inference request",
+    "stop after a repeated focused-test failure and preserve the actionable error"
+  ]
+}

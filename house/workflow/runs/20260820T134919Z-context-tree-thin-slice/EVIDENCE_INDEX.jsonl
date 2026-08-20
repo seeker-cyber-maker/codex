@@ -1,0 +1,3 @@
+{"id":"official-app-server-docs","kind":"official_documentation","locator":"https://developers.openai.com/codex/app-server","use":"fork, read, list, turns, and items protocol semantics"}
+{"id":"pinned-source-trace","kind":"source","locator":"house/context_tree/SOURCE_TRACE.md","sha256":"2f30859e832dd2d2a380edbfc366089915915717d667a26ce0e512c147b86d31","use":"exact downstream seam decision"}
+{"id":"focused-tests","kind":"test_receipt","locator":"house/workflow/runs/20260820T134919Z-context-tree-thin-slice/TEST_RECEIPT.json","use":"offline conservation and identity-gate acceptance"}

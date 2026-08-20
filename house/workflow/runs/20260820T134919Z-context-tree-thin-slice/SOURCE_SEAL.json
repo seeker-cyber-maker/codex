@@ -1,0 +1,11 @@
+{
+  "schema": "project-source-seal/1",
+  "upstream_repository": "https://github.com/openai/codex",
+  "upstream_commit": "5c305eb50b3ebd12476c4bec6dc3de3c596b29a2",
+  "baseline_commit": "2497214bc3f244de8ef51534dcb23a74d83f4bf1",
+  "branch": "codex/dream-house-context-tree",
+  "worktree_clean_at_intake": true,
+  "cargo_lock_sha256": "6e85bfdd4d399a1aa0ec0922bdde76288f4a2451270114303b2b26a04e8c4883",
+  "repo_instructions_sha256": "c3f80e8386eb170b00af1e21de40d770c4941e464915687e728e2d14a7e79480",
+  "disposition": "PINNED_FOR_DOWNSTREAM_FIXTURE"
+}

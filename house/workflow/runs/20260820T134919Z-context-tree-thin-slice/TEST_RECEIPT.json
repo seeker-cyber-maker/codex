@@ -1,0 +1,32 @@
+{
+  "schema": "codex-house-test-receipt/1",
+  "observed_at": "2026-08-20T13:57:55Z",
+  "state": "PASSED",
+  "tests": {"passed": 8, "failed": 0},
+  "commands": [
+    "ruff format --check house/context_tree",
+    "ruff check house/context_tree",
+    "python3 -m unittest discover -s house/context_tree/tests -v",
+    "python3 -m py_compile house/context_tree/codex_house_context.py house/context_tree/tests/test_context_tree.py",
+    "git diff --check"
+  ],
+  "accepted_invariants": [
+    "fork and spawn ancestry remain distinguishable",
+    "historical fork point is required when strict projection is selected",
+    "unloaded self-session fallback is labeled and normalized",
+    "journal field tampering breaks verification",
+    "external source digest mismatch fails closed",
+    "context removal and restoration leave journal bytes unchanged",
+    "stale task, branch, or authority identity fails as STALE_CONTEXT_VIEW",
+    "CLI emits a sealed deterministic session-tree projection"
+  ],
+  "artifact_sha256": {
+    "house/context_tree/codex_house_context.py": "dbd24c3cfdb70aa271b82e5ec98c252d4a46143da6b6f26ef91381ff279ec5f4",
+    "house/context_tree/tests/test_context_tree.py": "03fe7c10abc01951ea9f7376a799091f30da412f95ab81c3f34c11c44228432c",
+    "house/schemas/codex-house-event.schema.json": "5072388e8723b85fb4aba399ff851e172c46a7ef7c3aa327a48d4e9a7815432d",
+    "house/schemas/codex-context-view.schema.json": "3d227718dfe11b522bb5c808525853529e701f4c27fc213c8590275e1e836cf2"
+  },
+  "network_requests": 0,
+  "inference_requests": 0,
+  "native_codex_state_writes": 0
+}

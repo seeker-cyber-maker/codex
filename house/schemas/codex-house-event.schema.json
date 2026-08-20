@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/seeker-cyber-maker/codex/house/schemas/codex-house-event.schema.json",
+  "title": "Codex House Event",
+  "type": "object",
+  "required": [
+    "schema", "event_id", "session_id", "branch_id", "sequence",
+    "occurred_at", "kind", "source", "payload_ref", "redaction",
+    "previous_event_sha256", "event_sha256"
+  ],
+  "properties": {
+    "schema": {"const": "codex-house-event/1"},
+    "event_id": {"type": "string", "minLength": 1},
+    "session_id": {"type": "string", "minLength": 1},
+    "branch_id": {"type": "string", "minLength": 1},
+    "parent_branch_id": {"type": ["string", "null"]},
+    "fork_turn_id": {"type": ["string", "null"]},
+    "turn_id": {"type": ["string", "null"]},
+    "item_id": {"type": ["string", "null"]},
+    "sequence": {"type": "integer", "minimum": 1},
+    "occurred_at": {"type": "string", "minLength": 1},
+    "kind": {"enum": ["thread", "turn", "message", "tool", "approval", "artifact", "context", "receipt", "error"]},
+    "source": {"enum": ["app_server", "rollout", "recovery_import", "house_adapter"]},
+    "payload_ref": {"type": "string", "minLength": 1},
+    "payload_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "redaction": {"enum": ["none", "view_redacted", "source_access_restricted"]},
+    "previous_event_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "event_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

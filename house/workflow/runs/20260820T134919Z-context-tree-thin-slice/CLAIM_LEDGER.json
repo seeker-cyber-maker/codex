@@ -1,0 +1,9 @@
+{
+  "schema": "project-claim-ledger/1",
+  "claims": [
+    {"id":"upstream-ancestry-seam","claim":"The pinned app-server exposes fork and spawn parents but not the historical fork boundary on the child Thread.","state":"VERIFIED","evidence":["house/context_tree/SOURCE_TRACE.md"]},
+    {"id":"conservation-proof","claim":"The downstream journal detects mutation and context removal/restoration does not rewrite it.","state":"VERIFIED","evidence":["TEST_RECEIPT.json"]},
+    {"id":"identity-gate","claim":"Stale context operations fail closed with a receipt.","state":"VERIFIED","evidence":["TEST_RECEIPT.json"]},
+    {"id":"live-integration","claim":"The harness mirrors a live app-server thread.","state":"OUT_OF_SCOPE","evidence":[]}
+  ]
+}
