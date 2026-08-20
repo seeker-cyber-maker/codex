@@ -56,10 +56,37 @@ namespace. It cannot modify, replace, or delete an earlier append.
 On handoff, the worker seals one Compact Result Envelope against its final
 buffer cursor. A narrow Trusted Importer verifies schema, task and actor scope,
 hashes, artifact existence, size limits, redaction policy, claimed validation
-receipts, and envelope completeness. It then appends canonical journal events
-that reference the admitted envelope and artifacts. Imported model text remains
-untrusted content and cannot act as instructions, authority, or an acceptance
-verdict merely because the importer preserved it.
+receipts, and envelope completeness. It has no admission authority. After an
+Import Proposal is authorized, it supplies validated references and receipts
+for the Trusted Writer to append canonical journal events that reference the
+admitted envelope and artifacts. Imported model text remains untrusted content
+and cannot act as instructions, authority, or an acceptance verdict merely
+because the importer preserved it.
+
+Sealing queues those structural, integrity, redaction, scope, and artifact
+checks automatically but does not merge or admit the envelope. Passing checks
+creates an Import Proposal bound to the sealed cursor, complete check receipts,
+current Admission Basis, proposed record dispositions, affected task and topic
+scopes, and expected canonical references. Failure creates a rejected or
+needs-repair buffer disposition without rewriting the sealed envelope.
+
+The worker, its parent contractor, a routing selector, and the Buffer Observer
+cannot authorize their own Import Proposal. Canonical admission requires the
+lead Codex acting within its current policy grant or a narrowly preauthorized
+deterministic policy whose exact artifact class, scope, predicates, and limits
+are declared in advance. The Trusted Writer rechecks the proposal, gates,
+authority, and Admission Basis immediately before its atomic append; a stale
+proposal returns for scoped revalidation rather than being merged
+optimistically.
+
+Import and acceptance are separate decisions. Admission preserves the worker
+report and artifacts with `candidate` or another declared unaccepted
+disposition; it does not validate substantive claims, approve a patch, merge a
+Git branch, publish an output, or mark the parent task complete. Those effects
+follow their own reviewer, verifier, integration, saga, and promotion
+boundaries. The same actor may perform more than one role only when policy
+explicitly permits it, but no worker may be the sole producer,
+importer-authorizer, and substantive acceptance authority for its own result.
 
 Until import authority admits an envelope, the boundary is one-way with respect
 to knowledge: ordinary task and Knowledge Dispensary views may reference the

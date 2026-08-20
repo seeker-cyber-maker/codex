@@ -228,10 +228,23 @@ to import content, establish success, or satisfy a task's acceptance boundary.
 _Avoid_: worker journal access, importer alias, model-status interpreter
 
 **Trusted Importer**:
-A narrow component that validates sealed Worker Buffer envelopes and appends
-canonical references and receipts without treating preserved model content as
-instructions, authority, or acceptance.
+A narrow component that validates sealed Worker Buffer envelopes and prepares
+Import Proposals and validated references without possessing admission
+authority or treating preserved model content as instructions, authority, or
+acceptance.
 _Avoid_: automatic model promotion, buffer copy job, parser-as-trust-boundary
+
+**Import Proposal**:
+A gate-checked request bound to one sealed buffer cursor, Admission Basis,
+receipts, scopes, dispositions, and expected canonical references that still
+requires proper admission authority.
+_Avoid_: sealed-is-merged, worker self-import, optimistic copy
+
+**Preservation Admission**:
+Canonical retention of a worker result with its provenance and unaccepted
+disposition, distinct from validating its claims, merging code, publishing, or
+completing the owning task.
+_Avoid_: acceptance by storage, imported-is-verified, automatic integration
 
 **Compact Result Envelope**:
 A bounded worker return containing disposition, attributable claims, artifact
