@@ -160,10 +160,15 @@ A signature binding an exact assembly to its attributed contributions while
 remaining distinct from each contributor's authorship.
 _Avoid_: co-author key, acceptance verdict
 
-**Narrative Variant**:
-A derived experimental rendering whose wording intentionally tests narrative
-steering while retaining its exact source relationship and synthetic status.
-_Avoid_: manuscript revision, corrected summary, canonical prose
+**Reader Preview**:
+A model-generated teaser or overview that a human encounters before deciding
+whether to read or deeply analyze the underlying work.
+_Avoid_: canonical abstract, substitute evidence, complete analysis
+
+**Summary Salience Variant**:
+A meaning-preserving rendering of the same claims that changes minimal framing
+cues to test which truthful details a summarizer selects for a Reader Preview.
+_Avoid_: synthetic narrative, altered meaning, adversarial claim insertion
 
 **Signature Incident Review**:
 A deliberate evidence-backed process that identifies an affected signing
