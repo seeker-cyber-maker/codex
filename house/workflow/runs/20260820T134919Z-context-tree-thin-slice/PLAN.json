@@ -2,11 +2,11 @@
   "schema": "project-plan/1",
   "version": 1,
   "run_id": "20260820T134919Z-context-tree-thin-slice",
-  "current_node": "commit",
+  "current_node": null,
   "nodes": [
     {"id":"source_trace","state":"PASSED","writes":[],"acceptance":"fork/session/storage seams identified at pinned source"},
     {"id":"implementation","state":"PASSED","writes":["house/context_tree","house/schemas"],"acceptance":"standalone conservation and context APIs implemented"},
     {"id":"focused_validation","state":"PASSED","writes":["house/workflow/runs/20260820T134919Z-context-tree-thin-slice"],"acceptance":"offline invariants pass"},
-    {"id":"commit","state":"IN_PROGRESS","writes":["codex/dream-house-context-tree"],"acceptance":"accepted downstream slice committed with clean diff"}
+    {"id":"commit","state":"PASSED","writes":["codex/dream-house-context-tree"],"acceptance":"accepted downstream slice committed with clean diff"}
   ]
 }

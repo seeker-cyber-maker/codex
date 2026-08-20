@@ -3,3 +3,6 @@
 {"seq":3,"at":"2026-08-20T13:54:00Z","event":"focused_test_failed","failure_class":"fixture_error","detail":"tamper fixture changed an external payload phrase that the reference-only journal does not embed","product_defect":false}
 {"seq":4,"at":"2026-08-20T13:54:30Z","event":"fixture_corrected","detail":"tamper fixture now changes a journal field; payload integrity remains a separate reference-digest check"}
 {"seq":5,"at":"2026-08-20T13:57:55Z","event":"focused_validation_passed","tests":8,"checks":["ruff","unittest","cli_smoke","json_parse","privacy_scan","house_only_scope","diff_check"]}
+{"seq":6,"at":"2026-08-20T14:00:12Z","event":"candidate_committed_and_pushed","commit":"27e209810580414943942026da5edbbdded8acbb","branch":"codex/dream-house-context-tree"}
+{"seq":7,"at":"2026-08-20T14:00:12Z","event":"remote_identity_verified","commit":"27e209810580414943942026da5edbbdded8acbb","verifiers":["git ls-remote","GitHub branches API"]}
+{"seq":8,"at":"2026-08-20T14:00:12Z","event":"run_completed","disposition":"DOWNSTREAM_CONTEXT_TREE_SLICE_ACCEPTED"}

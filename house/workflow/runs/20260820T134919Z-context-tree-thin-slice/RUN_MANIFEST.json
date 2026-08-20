@@ -1,7 +1,7 @@
 {
   "schema": "project-workflow-run/1",
   "run_id": "20260820T134919Z-context-tree-thin-slice",
-  "state": "READY_FOR_COMMIT",
+  "state": "COMPLETE",
   "objective": "Implement and verify a downstream conserved ancestry journal and reversible context-view thin slice.",
   "claim_ceiling": "Offline fixture proof only; no live app-server integration, UI, provider, model-quality, or training claim.",
   "authority": {
