@@ -441,7 +441,7 @@
         }
       ],
       "shell_type": "shell_command",
-      "visibility": "list",
+      "visibility": "hide",
       "minimal_client_version": "0.142.2",
       "supported_in_api": true,
       "availability_nux": null,
@@ -559,7 +559,7 @@
         }
       ],
       "shell_type": "shell_command",
-      "visibility": "list",
+      "visibility": "hide",
       "minimal_client_version": "0.142.2",
       "supported_in_api": true,
       "availability_nux": null,
@@ -779,13 +779,13 @@
         }
       ],
       "shell_type": "shell_command",
-      "visibility": "list",
+      "visibility": "hide",
       "minimal_client_version": "0.98.0",
       "supported_in_api": true,
       "availability_nux": null,
       "upgrade": {
         "model": "gpt-5.6-terra",
-        "migration_markdown": "GPT-5.4 will be deprecated soon\n\nCodex now uses GPT-5.6 Terra in place of GPT-5.4. Switch to GPT-5.6 Terra to continue.\n",
+        "migration_markdown": "GPT-5.4 is no longer available\n\nCodex now uses GPT-5.6 Terra in place of GPT-5.4. Switch to GPT-5.6 Terra to continue.\n",
         "retirement_at": "2026-08-31T19:00:00Z"
       },
       "priority": 16,
@@ -896,13 +896,13 @@
         }
       ],
       "shell_type": "shell_command",
-      "visibility": "list",
+      "visibility": "hide",
       "minimal_client_version": "0.98.0",
       "supported_in_api": true,
       "availability_nux": null,
       "upgrade": {
         "model": "gpt-5.6-luna",
-        "migration_markdown": "GPT-5.4 Mini will be deprecated soon\n\nCodex now uses GPT-5.6 Luna in place of GPT-5.4 Mini. Switch to GPT-5.6 Luna to continue.\n",
+        "migration_markdown": "GPT-5.4 Mini is no longer available\n\nCodex now uses GPT-5.6 Luna in place of GPT-5.4 Mini. Switch to GPT-5.6 Luna to continue.\n",
         "retirement_at": "2026-08-31T19:00:00Z"
       },
       "priority": 23,
