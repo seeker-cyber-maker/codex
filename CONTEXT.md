@@ -206,6 +206,16 @@ The explicit combination of Research Core, Provenance Frame, Venue Contract,
 and Audience Profile that governs one Research Rendering.
 _Avoid_: generic rewrite prompt, paper request, style preset
 
+**Rendering Import Manifest**:
+The positive declaration of Research Core branches and claims carried into one
+Research Rendering.
+_Avoid_: omission ledger, complete core index, topic wish list
+
+**Coherent Branch**:
+A connected unit of claims and their necessary context that can be imported or
+pruned without leaving unsupported references, setup, or conclusions.
+_Avoid_: section heading, arbitrary excerpt, dangling teaser
+
 **Analysis Stability Envelope**:
 The declared minimal acceptable semantic variation between comprehensive
 analyses of a source and its Summary Salience Variant.
