@@ -36,6 +36,14 @@ Gap naming the exact dimension, requirement, known shared ancestry, and evidence
 needed to resolve it, then creates a targeted verification task. Resolving the
 gap re-evaluates the affected routes without rewriting the original evidence.
 
+Models may propose an Independence Profile, identify gaps, and assemble candidate
+support, but they cannot promote an `unknown` dimension. Promotion to `shared`
+or `separate` requires an Independence Determination backed either by a
+deterministic trace or receipt, or by a signed human or qualified-expert decision
+that cites its evidence and basis. The determination is scoped to the named
+dimension, evidence set, claim, route, and time; it does not alter provenance or
+decide whether the supported claim is true.
+
 Eigenius provides a useful implementation reference for typed reasoning traces
 and content-addressed ancestry, but ancestry alone is not Dream House's
 independence test. See its pinned

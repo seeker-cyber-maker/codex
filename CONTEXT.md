@@ -65,6 +65,12 @@ An unknown Independence Profile dimension required by a Verification Route,
 leaving that route unsatisfied and identifying a targeted verification task.
 _Avoid_: dependence finding, claim refutation, missing citation
 
+**Independence Determination**:
+A signed, basis-citing decision that changes one Independence Profile dimension
+from unknown to shared or separate without changing the underlying evidence or
+deciding the supported Claim.
+_Avoid_: model inference, Claim Determination, source reputation
+
 **Source Role**:
 A source's contextual relationship to a claim, such as official, eyewitness,
 analyst, contractor, or model; it is not a truth status.

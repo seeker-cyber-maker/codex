@@ -25,3 +25,10 @@ records an Attestation Conflict and preserves both claims; credential, title,
 source role, repetition, and vote count do not automatically select a winner or
 revoke either signer. Resolution requires another accepted evidence predicate
 or a deliberate human determination that retains the conflicting record.
+
+The same authority boundary applies to evidence independence without confusing
+it with claim truth. A model may propose an Independence Profile, but changing a
+dimension from `unknown` to `shared` or `separate` requires a deterministic
+trace or receipt or a signed, basis-citing Independence Determination. That
+determination resolves only the named evidence relationship and cannot itself
+verify or refute the Claim.
