@@ -281,6 +281,11 @@ The scoped boundary that prevents an unresolved claim from authorizing
 publication, promotion, destructive action, or closure that depends on it.
 _Avoid_: global work stoppage, warning label, automatic rejection
 
+**Premise-Independent Contribution**:
+An exact contribution from a Conditional Work Branch whose validity does not
+depend on that branch's contested premise and can be reviewed independently.
+_Avoid_: convenient cherry-pick, silent merge, inherited acceptance
+
 **Route Defeater**:
 An evidence-backed condition that blocks one Verification Route without by
 itself refuting the claim or blocking its other declared routes.
