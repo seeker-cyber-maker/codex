@@ -12,3 +12,9 @@ records: source role informs assessment but never overwrites another claim or
 acts as a truth value. Later evidence changes claim status and relationships,
 not original wording, provenance, or authorship, so an initially unverified
 claim can later become supported or verified without retrospective relabeling.
+Ordinary current queries return the accepted current result first and attach a
+compact Conflict Marker whenever competing, superseded, or historically
+contested branches exist. The marker preserves stable links and disposition
+without expanding every dispute into the answer; explicit conflict, timeline,
+and as-of views expose the full parallel histories. A current-first view may
+compress history but may never hide that relevant competing history exists.

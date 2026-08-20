@@ -291,6 +291,11 @@ A new branch that extends a sealed historical branch with later evidence while
 preserving the original base, premise, and disposition unchanged.
 _Avoid_: historical rebase, reopened mutable branch, rewritten reasoning
 
+**Conflict Marker**:
+A compact current-view notice that a result has competing, superseded, or
+historically contested branches, with stable references to inspect them.
+_Avoid_: hidden dispute, full history dump, generic warning
+
 **Route Defeater**:
 An evidence-backed condition that blocks one Verification Route without by
 itself refuting the claim or blocking its other declared routes.
