@@ -113,6 +113,25 @@ disposition for every omitted member. It references original content in place;
 it never rewrites the envelope or copies selected prose into a new unsigned
 report.
 
+An author corrects sealed work only through a separately signed Envelope
+Amendment linked to the original envelope hash and affected record identities.
+The amendment declares one of three relationships: a `Correction` supplies
+replacement candidate content and identifies what was wrong; an `Addendum`
+supplements the original without displacing it; and a `Retraction` withdraws
+the author's own contribution without asserting that it has been refuted. It
+records the reason, scope, creation time, and any affected dependencies.
+
+An Envelope Amendment is itself immutable and passes ordinary import,
+admission, and acceptance boundaries. Before admission it remains quarantined;
+after admission, current retrieval composes the original with admitted
+amendments and follows applicable correction or retraction relationships while
+as-of and timeline views preserve every version. Admission advances only the
+affected freshness paths. An unavailable or revoked signer cannot be
+impersonated: another actor may submit an attributed contradiction, annotation,
+or successor proposal, but not an amendment in the original author's name.
+Security redaction remains a separate Record Disposition and may hide the
+original body while retaining its marker and amendment chain.
+
 The selected set passes the complete Admission Gate Stack against its own
 current Admission Basis. Selection may not break referential integrity, detach
 evidence from authorship or provenance, split an Atomic Proposal Set, or omit a

@@ -258,6 +258,12 @@ one sealed envelope, preserving the original seal and every omitted member's
 disposition without splitting an atomic set.
 _Avoid_: edited worker report, cherry-picked provenance, copied subset
 
+**Envelope Amendment**:
+A separately signed correction, addendum, or author retraction linked to exact
+members of an immutable sealed envelope without rewriting or impersonating the
+original contribution.
+_Avoid_: edited seal, replacement history, unsigned errata
+
 **Compact Result Envelope**:
 A bounded worker return containing disposition, attributable claims, artifact
 hashes and paths, validation, blockers, questions, risks, and the next action.
