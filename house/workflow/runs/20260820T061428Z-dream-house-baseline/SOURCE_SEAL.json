@@ -1,0 +1,13 @@
+{
+  "schema": "project-source-seal/1",
+  "repository":"https://github.com/openai/codex",
+  "commit":"5c305eb50b3ebd12476c4bec6dc3de3c596b29a2",
+  "commit_time":"2026-08-20T06:10:03Z",
+  "subject":"Harden skill installation against unsafe symlinks (#39608)",
+  "origin_upstream_ahead_behind":[0,0],
+  "worktree_clean_at_intake":true,
+  "cargo_lock_sha256":"6e85bfdd4d399a1aa0ec0922bdde76288f4a2451270114303b2b26a04e8c4883",
+  "repo_instructions_sha256":"c3f80e8386eb170b00af1e21de40d770c4941e464915687e728e2d14a7e79480",
+  "build_docs_sha256":"1126ec733921878a40720e139ba7be88e325ecf9fa5b113de2cc636bc71a1f5a",
+  "disposition":"PINNED_FOR_BASELINE_BUILD"
+}

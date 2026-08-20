@@ -1,0 +1,36 @@
+{
+  "schema": "project-workflow-run/1",
+  "run_id": "20260820T061428Z-dream-house-baseline",
+  "state": "ACTIVE",
+  "objective": "Build and validate a pinned source Codex CLI and app-server baseline without changing upstream core.",
+  "claim_ceiling": "Local source build and offline interface equivalence only; no behavioral, provider, model-quality, or training claim.",
+  "authority": {
+    "local_build": true,
+    "downstream_files": ["house/**"],
+    "git_push": ["origin/codex/dream-house-baseline"],
+    "live_model_requests": false,
+    "provider_activation": false,
+    "model_downloads": false,
+    "training": false,
+    "upstream_pull_request": false
+  },
+  "source": {
+    "repository": "https://github.com/openai/codex",
+    "commit": "5c305eb50b3ebd12476c4bec6dc3de3c596b29a2",
+    "cargo_lock_sha256": "6e85bfdd4d399a1aa0ec0922bdde76288f4a2451270114303b2b26a04e8c4883"
+  },
+  "budgets": {
+    "active_implementation_lanes": 1,
+    "retries_per_step": 1,
+    "build_wall_time_seconds": 7200,
+    "minimum_free_disk_gib": 20,
+    "network_effects": ["fetch Rust toolchain and Cargo dependencies", "push authorized baseline branch"]
+  },
+  "council": [],
+  "stop_rules": [
+    "stop before any live inference request",
+    "stop before modifying a non-house upstream source file",
+    "stop if free disk falls below 20 GiB",
+    "stop after a repeated build failure and preserve the first actionable error"
+  ]
+}

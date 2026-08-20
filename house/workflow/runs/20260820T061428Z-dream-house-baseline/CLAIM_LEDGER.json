@@ -1,0 +1,10 @@
+{
+  "schema": "project-claim-ledger/1",
+  "claims": [
+    {"id":"fork-lineage","claim":"The user repository is a GitHub fork of openai/codex.","state":"VERIFIED","evidence":["fork-relation"]},
+    {"id":"source-pin","claim":"Origin and upstream main matched the pinned commit at intake.","state":"VERIFIED","evidence":["upstream-commit"]},
+    {"id":"source-build","claim":"Pinned source builds locally.","state":"VERIFIED","evidence":["source-build"]},
+    {"id":"offline-equivalence","claim":"Installed and source public surfaces were compared without inference.","state":"VERIFIED","evidence":["offline-baseline"]},
+    {"id":"dream-house-architecture","claim":"The proposed session/context architecture is implemented.","state":"OUT_OF_SCOPE","evidence":[]}
+  ]
+}

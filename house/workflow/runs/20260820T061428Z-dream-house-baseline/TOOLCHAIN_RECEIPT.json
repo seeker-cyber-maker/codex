@@ -1,0 +1,18 @@
+{
+  "schema":"dream-house-toolchain-receipt/1",
+  "observed_at":"2026-08-20T06:27:00Z",
+  "host":"aarch64-apple-darwin",
+  "repository_pin":"codex-rs/rust-toolchain.toml",
+  "rustc":"rustc 1.95.0 (59807616e 2026-04-14)",
+  "cargo":"cargo 1.95.0 (f2d3ce0bd 2026-03-21)",
+  "components":["clippy","rustfmt","rust-src"],
+  "installer":{"source":"https://sh.rustup.rs","sha256":"6c30b75a75b28a96fd913a037c8581b580080b6ee9b8169a3c0feb1af7fe8caf","no_modify_path":true},
+  "helpers":[
+    {"name":"rustup","version":"1.29.0","sha256":"aeb4105778ca1bd3c6b0e75768f581c656633cd51368fa61289b6a71696ac7e1"},
+    {"name":"just","version":"1.58.0","sha256":"461e972227d75228de0cb90880162b2087cc8769383683d63edb8abeb1ac3c09"},
+    {"name":"dotslash","version":"0.5.7","sha256":"f0eb2e9a71c6721333f60f2b0137ce998ba3d74c43b65f390db73c542fa1bbb9"},
+    {"name":"cargo-nextest","version":"0.9.143","sha256":"7c2f54440419eae6077753ddd1beafd5a1482d74b2e66bf95b58582329f5b0ab"}
+  ],
+  "pre_build_free_disk_gib":44,
+  "disposition":"ADMITTED_FOR_PINNED_BASELINE_BUILD"
+}
