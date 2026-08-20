@@ -1,7 +1,7 @@
 {
   "schema": "project-workflow-run/1",
   "run_id": "20260820T061428Z-dream-house-baseline",
-  "state": "ACTIVE",
+  "state": "COMPLETE",
   "objective": "Build and validate a pinned source Codex CLI and app-server baseline without changing upstream core.",
   "claim_ceiling": "Local source build and offline interface equivalence only; no behavioral, provider, model-quality, or training claim.",
   "authority": {

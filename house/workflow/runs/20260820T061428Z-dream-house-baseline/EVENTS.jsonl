@@ -7,3 +7,5 @@
 {"seq":7,"at":"2026-08-20T06:33:00Z","event":"offline_probe_failed","failure_class":"receipt_harness","error":"Python NameError for JSON-style false literal","external_state_changed":false,"retry":1}
 {"seq":8,"at":"2026-08-20T06:33:30Z","event":"offline_equivalence_passed","probe_count":8,"failed_probes":0,"schema_files":291,"inference_requests":0}
 {"seq":9,"at":"2026-08-20T06:36:00Z","event":"local_validation_passed","checks":["fmt","python_compile","offline_replay","json","jsonl","privacy","source_pin","upstream_parity","diff"]}
+{"seq":10,"at":"2026-08-20T06:39:00Z","event":"baseline_branch_pushed_and_verified","branch":"codex/dream-house-baseline","commit":"87374d2d1a3e3cbeb698c957155215340695aa9b","verifiers":["git ls-remote","GitHub branches API"]}
+{"seq":11,"at":"2026-08-20T06:39:00Z","event":"run_completed","disposition":"SOURCE_BASELINE_ACCEPTED"}

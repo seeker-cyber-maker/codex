@@ -1,9 +1,9 @@
-# Active handoff
+# Completed baseline handoff
 
 Objective: establish the source-equivalence baseline before Dream House feature
 work.
 
-Current node: `push`.
+Current node: none; baseline run complete.
 
 Confirmed:
 
@@ -16,9 +16,12 @@ Confirmed:
 - All eight isolated offline probes passed and generated 291 schema files.
 - Local formatting, parsing, replay, privacy, source-pin, parity, and diff
   validation passed.
+- Git and GitHub API independently resolved the pushed baseline branch to the
+  validated commit.
 
-Next acceptance check: the pushed remote branch resolves to the locally
-validated commit.
+Next acceptance check: open a new bounded run for the conserved event/session
+tree and reversible context-view thin slice. Trace existing `thread-store`,
+`rollout`, `agent-graph-store`, and app-server protocol seams before editing.
 
 Parked: resolve canonical Pi, Atomic, and OMP repositories/licenses after the
 Codex baseline. They remain donor lanes, not merge targets.

@@ -1,6 +1,6 @@
 {
   "schema": "project-validation/1",
-  "state": "LOCAL_PASSED_REMOTE_PENDING",
+  "state": "PASSED",
   "checks": [
     {"id":"json_parse","state":"PASSED","evidence":"all run JSON and JSONL parsed"},
     {"id":"diff_check","state":"PASSED","evidence":"git diff --check exit 0"},
@@ -8,7 +8,7 @@
     {"id":"source_app_server_build","state":"PASSED","evidence":"BUILD_RECEIPT.json"},
     {"id":"offline_surface_capture","state":"PASSED","evidence":"observations/baseline.json: 8/8 probes, 291 schema files, zero inference"},
     {"id":"private_state_exclusion","state":"PASSED","evidence":"no absolute user path or token-shaped value in house tree"},
-    {"id":"remote_branch_identity","state":"PENDING"}
+    {"id":"remote_branch_identity","state":"PASSED","evidence":"git ls-remote and GitHub API matched local commit 87374d2d1a3e3cbeb698c957155215340695aa9b"}
   ],
   "limitations": ["No live inference or provider behavior is tested.", "Feature implementation is deferred to the next slice."]
 }

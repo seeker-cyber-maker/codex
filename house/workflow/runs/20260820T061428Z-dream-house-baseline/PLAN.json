@@ -2,13 +2,13 @@
   "schema": "project-plan/1",
   "version": 1,
   "run_id": "20260820T061428Z-dream-house-baseline",
-  "current_node": "push",
+  "current_node": null,
   "nodes": [
     {"id":"source_intake","state":"PASSED","writes":[],"acceptance":"fork and upstream main match pinned commit"},
     {"id":"toolchain_intake","state":"PASSED","writes":["$HOME/.cargo","$HOME/.rustup"],"acceptance":"pinned Rust toolchain and documented helpers report versions"},
     {"id":"source_build","state":"PASSED","writes":["codex-rs/target"],"acceptance":"CLI and app-server build exit zero"},
     {"id":"offline_equivalence","state":"PASSED","writes":["house/workflow/runs/20260820T061428Z-dream-house-baseline/observations"],"acceptance":"bounded probes complete without inference"},
     {"id":"validation","state":"PASSED","writes":["house/workflow/runs/20260820T061428Z-dream-house-baseline"],"acceptance":"declared validation predicates pass"},
-    {"id":"push","state":"READY","writes":["origin/codex/dream-house-baseline"],"acceptance":"remote branch resolves to validated commit"}
+    {"id":"push","state":"PASSED","writes":["origin/codex/dream-house-baseline"],"acceptance":"remote branch resolves to validated commit"}
   ]
 }
