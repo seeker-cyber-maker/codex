@@ -255,9 +255,10 @@ eligible for a verified determination.
 _Avoid_: claim truth, confidence score, nearby citation
 
 **Verification Route**:
-A named complete set of Verification Requirements that can independently make
+A named complete set of Verification Requirements, accepted Evidence Grade
+facets, and evidence-lineage diversity constraints that can independently make
 a claim eligible for a verified determination.
-_Avoid_: evidence buffet, partial proof, model-selected shortcut
+_Avoid_: evidence buffet, partial proof, model-selected shortcut, score average
 
 **Self-Sufficient Claim**:
 A claim whose Verification Requirement can be satisfied directly from its own

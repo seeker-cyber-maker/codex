@@ -27,6 +27,17 @@ auditable. Satisfying any one complete route makes the claim eligible for a
 determination; partial requirements from different routes cannot be mixed into
 an implicit proof unless that combination is explicitly accepted as another
 route in the Research Core.
+
+Each route declares which Evidence Grade facets are mandatory for each
+Verification Requirement and which categorical states or ranges it accepts. It
+also declares any evidence-lineage diversity requirement, such as independent
+replication or corroboration from separately derived sources. Route evaluation
+does not average facet values, count repeated descendants of one source as
+independent, or let strength on one facet compensate for an unmet mandatory
+facet. Missing or unknown mandatory values leave the route unsatisfied without
+thereby refuting the claim. The evaluation receipt names every satisfied and
+unsatisfied predicate and the evidence relationships used.
+
 A Verification Route may include a Route Defeater such as `B AND D AND NOT X`,
 but `NOT X` is never satisfied merely because an ordinary search did not find
 `X`; it requires direct evidence or a Bounded Absence Receipt over a declared
