@@ -82,10 +82,48 @@ metadata, URLs, background telemetry, and the idle view. Textual meaning and an
 effect preview appear only when the human deliberately reveals a control or
 begins an action. Loss of focus or inactivity restores the privacy veil.
 
+Obscuration applies to what lies behind the rendered page as well. While locked,
+the server delivers only a minimal generic client whose HTML, accessibility
+tree, JavaScript bundle, routes, request names, error strings, caches, and
+developer metadata contain opaque identifiers rather than project or capability
+semantics. Source maps and privileged API schemas are not served. Recipe labels,
+parameter schemas, and current state remain server-side and are released only
+for the selected, authorized interaction. There is never a broad SQL, shell,
+Archive, or unrestricted-access input whose placeholder or route advertises the
+capability to an accidental browser inspector.
+
 Emoji controls are defense in depth against accidental model or observer
 interpretation, not an authorization mechanism. They never replace WebAuthn,
 capability checks, effect previews, or receipts, and the mapping remains stable
 for the human rather than being randomized into a new source of operator error.
+
+Codex Gone Fishin' is a persistent fail-closed operating mode, not only a
+fallback program. It is active on first start, restart, session expiry, explicit
+lock, and other policy-declared loss-of-presence events. While active, every
+non-human model is limited to Contractor Station capabilities and the dashboard
+stays obscured. Models, task manifests, provider responses, browser automation,
+and ordinary API calls cannot disable or extend the mode.
+
+Only the human can leave Gone Fishin' mode through a fresh Hardware-presence
+Gate followed by an explicit privacy attestation that the screen and immediate
+workspace are not being observed. The attestation is a human-presence decision,
+not a claim the YubiKey can sense shoulder surfing. The unlocked interval is
+bounded and receipted; expiry returns to Gone Fishin' without waiting for a
+model. Locking never cancels evidence capture or monitoring.
+
+Two enrolled YubiKeys are alternative one-of-two authenticators, not a dual-key
+launch ceremony. They receive distinct opaque key-slot identities and either
+one can authenticate or recover the other. The dashboard never continuously
+polls every attached authenticator. A human gesture first selects one key slot,
+then starts one WebAuthn ceremony whose allowed credential is limited to that
+slot; the returned credential identity must match before acceptance.
+
+If the browser or platform cannot unambiguously route the ceremony while more
+than one key is connected, the operation fails closed and asks the human to
+leave only the selected key attached. It never accepts a response from an
+unexpected key merely because that key answered first. The backup key need not
+remain connected during ordinary use, and losing one enrolled key does not
+require the simultaneous presence of the other and a second operator.
 
 A shared interface does not imply shared identity or authority. Every action
 names its human, Codex, automation, or contractor actor; resolves that actor's

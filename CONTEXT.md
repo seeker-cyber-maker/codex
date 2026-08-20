@@ -64,6 +64,22 @@ handles, and an automatic privacy veil that reduces accidental semantic
 exposure without pretending to provide authorization.
 _Avoid_: security by obscurity, randomized controls, semantic URL, hidden effect
 
+**Gone Fishin' Mode**:
+The persistent fail-closed state that keeps all non-human models within
+Contractor Station capabilities and keeps the human dashboard semantically
+obscured until a hardware-present human explicitly unlocks a bounded interval.
+_Avoid_: provider fallback only, model-controlled unlock, cosmetic privacy mode
+
+**Privacy Attestation**:
+The human's explicit confirmation, following a Hardware-presence Gate, that the
+screen and immediate workspace are not currently being observed.
+_Avoid_: YubiKey sensor claim, permanent consent, automated shoulder check
+
+**Alternative Hardware Keys**:
+Two or more separately enrolled one-of-many authenticators, one of which is
+explicitly selected for a ceremony without requiring simultaneous key use.
+_Avoid_: dual control, poll every key, first responder wins
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and
