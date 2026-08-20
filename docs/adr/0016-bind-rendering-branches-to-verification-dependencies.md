@@ -21,3 +21,9 @@ Evidence Anchor. A cycle fails closed until independently checkable evidence
 breaks it and the accepted dependency relationships are reformulated; cycles
 may remain recorded as ordinary support, contradiction, or correlation
 relationships, but never as proof.
+A claim may declare multiple alternative Verification Routes, such as
+`(B AND D) OR F`, when each named route is independently sufficient and
+auditable. Satisfying any one complete route makes the claim eligible for a
+determination; partial requirements from different routes cannot be mixed into
+an implicit proof unless that combination is explicitly accepted as another
+route in the Research Core.

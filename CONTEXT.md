@@ -226,6 +226,11 @@ The explicit dependency predicate that must be satisfied before a claim is
 eligible for a verified determination.
 _Avoid_: claim truth, confidence score, nearby citation
 
+**Verification Route**:
+A named complete set of Verification Requirements that can independently make
+a claim eligible for a verified determination.
+_Avoid_: evidence buffet, partial proof, model-selected shortcut
+
 **Self-Sufficient Claim**:
 A claim whose Verification Requirement can be satisfied directly from its own
 evidence without depending on another claim's determination.
