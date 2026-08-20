@@ -36,3 +36,8 @@ verifier-confirmed LOC-4 QP2A solution would defeat the claim that a valid LOC-5
 solution is LOC-optimal while leaving the LOC-5 solution's verifier validity
 intact; an unverified record assertion or a miss in a restricted generated
 search universe does neither.
+When newly admitted evidence satisfies a Route Defeater, the affected route
+immediately becomes unsatisfied in the current view and its prior determination
+is retained in historical as-of views. The claim is not automatically refuted:
+its other routes are re-evaluated, and only the exact determination supported or
+defeated by the new evidence changes current status.

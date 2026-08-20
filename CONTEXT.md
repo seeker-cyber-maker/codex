@@ -57,6 +57,21 @@ A signed evidence-backed or deliberate human decision that changes a claim to
 verified or refuted.
 _Avoid_: model confidence, source popularity
 
+**Incumbent Result**:
+The highest-ranking verifier-confirmed result known for a declared objective at
+a stated time, without implying that no better result exists.
+_Avoid_: global optimum, permanent record, final answer
+
+**Closure Claim**:
+An evidence-backed assertion that no admissible result outranks an Incumbent
+Result within a declared universe, objective, and method contract.
+_Avoid_: best known, search exhaustion message, leaderboard position
+
+**Method Validity**:
+The evidence-based assessment that a method satisfies its declared behavioral
+and soundness contract, kept separate from the quality of any result it found.
+_Avoid_: result optimality, benchmark rank, method usefulness
+
 **Proposed Connection**:
 An attributed hypothesis that two project elements share a relationship or
 recurring structure without merging their identity or authority.
