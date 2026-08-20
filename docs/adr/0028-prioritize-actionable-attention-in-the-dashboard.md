@@ -46,3 +46,23 @@ authority state. Snoozing is allowed only when policy permits, records an expiry
 and reason, and guarantees deterministic resurfacing before the next
 consequence boundary. Completed and superseded items remain available through
 project history without occupying the action-first surface.
+
+The home page expands exactly one Primary Action. It contains the complete
+decision context and push-button choices while the next small, policy-bounded
+set of ranked items appears as compact cards; the initial presentation limit is
+four compact successors. The complete queue is one deliberate drill-down away,
+with the same ordering receipts and no hidden remainder count.
+
+An actionable critical incident is the Primary Action unless a deterministic
+emergency rule requires several incidents to remain co-visible. All active
+critical incidents also occupy a pinned incident rail that cannot be scrolled
+away, covered by informational content, or removed by changing the project
+filter. A pinned item may use an opaque emoji in Obscured Dashboard Mode, but
+its severity and need for human attention remain unambiguous.
+
+Resolving, explicitly deferring, or permissibly snoozing the Primary Action
+promotes the next eligible item. Merely opening, reading, or navigating away
+does not acknowledge it. Stable ordering is preserved until an item state,
+deadline, consequence, dependency, or governing rule changes; a model response
+alone cannot reshuffle the queue. Every promotion records the prior item and
+the deterministic reason the next item became primary.

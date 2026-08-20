@@ -53,6 +53,12 @@ timed questions, assistance requests, approaching boundaries, and stale work
 ahead of informational status.
 _Avoid_: activity feed, project directory, model-ranked urgency, notification pile
 
+**Primary Action**:
+The single expanded Attention Queue item currently requiring the human's next
+decision, accompanied by a bounded compact preview of subsequent items and a
+persistent critical-incident rail.
+_Avoid_: modal monopoly, first project item, model-selected focus, hidden queue
+
 **Workflow Recipe**:
 A reviewed, versioned push-button operation with an invariant action graph,
 minimal typed inputs, safe visible defaults, declared authority, effect preview,
