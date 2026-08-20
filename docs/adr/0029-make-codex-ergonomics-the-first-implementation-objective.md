@@ -53,6 +53,31 @@ a browser, inference provider, or visual snapshot and must not write native
 Codex state. The web Kanban consumes this proven contract rather than defining
 task semantics inside the interface.
 
+Version 0.1 is one offline authority-path vertical slice. It creates a Durable
+Work Item and Task Packet, accepts task-scoped Worker Buffer appends, projects a
+metadata-only WIP Buffer Reference, seals a Compact Result Envelope, constructs
+an Import Proposal, records explicit lead authorization, admits the selected
+content through the Trusted Writer with `candidate` disposition, and rebuilds
+the SQLite Task Read Model deterministically from the canonical journal. Typed
+local APIs and a compact CLI exercise the same commands and events.
+
+The acceptance suite uses isolated fixtures to prove the successful path and
+fail-closed handling of quarantined content, partial admission, stale Admission
+Basis, rejected and needs-repair envelopes, Late Results, Envelope Amendments,
+revoked Capability Leases, and interrupted read-model rebuilds. It proves that
+ordinary retrieval cannot expose unimported content, that only the Trusted
+Writer mutates canonical state, that every admitted reference is attributable
+and replayable, and that deleting and rebuilding the read model yields the same
+projected state.
+
+This slice runs in temporary local storage with networking and inference
+disabled. It does not read or write native Codex databases or live `CODEX_HOME`,
+connect a model or provider, choose the final Codex Archive or embedding model,
+build the web dashboard or terminal companion, perform YubiKey ceremonies,
+activate Spark Fleet, train a model, or create an upstream-core patch. Those
+remain later adapters over the accepted contract rather than prerequisites for
+proving it.
+
 Visual design is intentionally replaceable and highly iterative. Layout,
 styling, animation, card density, icon choice, and responsive arrangement do
 not block acceptance of a correct headless slice and may change without a data

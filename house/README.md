@@ -32,5 +32,15 @@ connect to a live app-server or modify native Codex state. See
 `context_tree/README.md` and
 `workflow/runs/20260820T134919Z-context-tree-thin-slice/`.
 
-Provider orchestration, Knowledge Dispensary projection, terminal companion,
-local model work, and training remain outside the implemented boundary.
+The next slice is the offline headless task-spine v0.1. Its one vertical path is
+Durable Work Item and Task Packet creation, task-scoped Worker Buffer append and
+seal, WIP metadata projection, Import Proposal and explicit lead authorization,
+Trusted Writer admission with `candidate` disposition, and deterministic Task
+Read Model rebuild. Negative fixtures cover quarantine, partial and stale
+admission, rejected envelopes, late results, amendments, lease revocation, and
+interrupted projection rebuilds.
+
+Live Codex state, models and providers, final Archive and embedding selection,
+the web dashboard, terminal companion, YubiKey ceremonies, Spark Fleet, local
+model work, training, networking, and upstream-core patches remain outside the
+v0.1 boundary.
