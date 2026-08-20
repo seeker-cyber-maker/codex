@@ -140,6 +140,12 @@ An attributable actor identity whose permitted project, purpose, and validity
 scope is declared by the Trust Authority independently of content acceptance.
 _Avoid_: model name, truth certificate, shared contractor key
 
+**Signature Incident Review**:
+A deliberate evidence-backed process that identifies an affected signing
+identity, establishes an incident timeline, and determines which historical
+signatures require changed treatment.
+_Avoid_: ordinary key revocation, automatic retroactive invalidation
+
 **As-of View**:
 A reconstruction of the claims and evidence available to the Archive at a
 declared historical time without later knowledge.
