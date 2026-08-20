@@ -34,6 +34,28 @@ The initial Archive access scope limited to its human owner, the primary Codex
 harness, and explicitly approved local automation.
 _Avoid_: multi-tenant service, contractor database access
 
+**Mutation Proposal**:
+A side-effect-free, attributable candidate change naming its intended Archive
+scope, basis, dependencies, and expected effects without possessing write
+authority.
+_Avoid_: agent write, database command, accepted change
+
+**Admission Gate Stack**:
+The mandatory separation of structural validation, semantic reasoning, and
+policy authorization through which a Mutation Proposal must pass before an
+Archive write is eligible.
+_Avoid_: ontology approval, model review, best-effort validation
+
+**Trusted Writer**:
+The narrowly scoped component that alone holds Archive mutation capability and
+may atomically admit a proposal after all required gates pass.
+_Avoid_: gatekeeper model, contractor key, database administrator agent
+
+**Atomic Admission**:
+The all-or-nothing commit of an accepted Mutation Proposal and its validation,
+authorization, provenance, and modification receipts.
+_Avoid_: partial write, post-hoc validation, direct index update
+
 **Record Disposition**:
 The declared lifecycle relationship of an admitted record to current knowledge:
 active, superseded, obsolete, invalidated, redacted, or removed.
