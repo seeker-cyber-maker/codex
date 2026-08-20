@@ -40,3 +40,25 @@ Batch execution does not combine writes. Each proposal still passes its own
 Admission Gate Stack and receives its own Atomic Admission. A genuinely
 all-or-nothing multi-proposal change requires an explicitly modeled atomic set;
 the scheduler may not infer one merely because proposals shared a batch.
+
+An Atomic Proposal Set is declared by a signed manifest containing each member's
+stable identifier and content hash, its dependency edges, the exact invariant
+that partial admission would violate, canonical member order, combined Archive
+scope, and one Admission Basis. Every member retains its own author, signature,
+provenance, and gate results. The manifest signature attests the set relationship
+and does not replace or inherit any member's authority.
+
+Members must pass their individual Admission Gate Stacks, and the set must pass
+additional structural, semantic, and policy checks over the combined scope and
+declared invariant. A failed or unresolved member or set-level requirement
+prevents the entire set transaction, but it does not by itself reject or
+invalidate otherwise reusable member proposals. The attempt and all findings
+remain receipted.
+
+The Trusted Writer commits all members and their individual and set receipts in
+one transaction against the unchanged combined Admission Basis. Any membership,
+content, dependency, ordering, scope, or invariant change produces a new
+manifest revision and requires new set-level gates and authorization. A lease
+for the set covers only its exact closed scope. The scheduler cannot promote a
+batch, common topic, shared author, or convenient bulk import into an Atomic
+Proposal Set.

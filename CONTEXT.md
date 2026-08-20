@@ -77,15 +77,21 @@ tokenizer or encoder configuration, adapter identity, rulesets, and resource
 bounds.
 _Avoid_: same model name, approximate compatibility, scheduler guess
 
+**Atomic Proposal Set**:
+A signed manifest of stable Mutation Proposal identities and dependencies whose
+declared invariant requires all members to be admitted together or none to be
+admitted.
+_Avoid_: Execution Batch, bulk import, umbrella signature
+
 **Trusted Writer**:
 The narrowly scoped component that alone holds Archive mutation capability and
 may atomically admit a proposal after all required gates pass.
 _Avoid_: gatekeeper model, contractor key, database administrator agent
 
 **Atomic Admission**:
-The all-or-nothing commit of an accepted Mutation Proposal and its validation,
-authorization, provenance, and modification receipts against one unchanged
-Admission Basis.
+The all-or-nothing commit of an accepted Mutation Proposal or Atomic Proposal
+Set and its validation, authorization, provenance, and modification receipts
+against one unchanged Admission Basis.
 _Avoid_: partial write, post-hoc validation, direct index update
 
 **Record Disposition**:
