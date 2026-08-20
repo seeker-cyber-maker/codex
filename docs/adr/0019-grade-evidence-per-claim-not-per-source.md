@@ -17,5 +17,27 @@ without the venue certifying the concept, methodology, or author quality.
 Provenance records authorship, transmission, venue, and lineage as neutral facts;
 it is not a reputation proxy. Source Role is likewise neutral, while directness,
 firsthand access, relevant expertise, declared scope, reproducibility, and
-independent evidence explain the grade used by each route. A high grade supports
-the named claim only and never substitutes for its required determination.
+independent evidence explain the grade used by each route. Favorable dimensions
+support the named claim only and never substitute for its required determination.
+
+Evidence Grade is stored as an explainable vector, not a single score. Its
+claim-relative dimensions are:
+
+- directness: whether the item observes, derives, attributes, or merely repeats
+  the exact claim;
+- access fit: whether the source had firsthand access to the relevant system,
+  event, artifact, or data;
+- competence fit: demonstrated competence relevant to this claim, not general
+  fame, job title, or author reputation;
+- scope fit: whether the evidence addresses the exact claim, only part of it,
+  or an adjacent matter;
+- reproducibility: how independently inspectable, replayable, or testable the
+  evidence is;
+- independent corroboration: whether supporting evidence has genuinely separate
+  lineage rather than repeating a common origin; and
+- temporal fit: whether the evidence applies to the claim's declared time.
+
+Each dimension may remain unknown. Dimensions are not averaged or collapsed
+into stored authority. A query interface may derive a purpose-specific badge or
+ordering, but it must expose the underlying vector and derivation and must not
+write the presentation result back as evidence or Claim Status.

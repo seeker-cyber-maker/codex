@@ -54,10 +54,11 @@ analyst, contractor, or model; it is not a truth status.
 _Avoid_: credibility score, claim verdict
 
 **Evidence Grade**:
-The explainable claim-specific assessment of how well one evidence item supports
-a Verification Requirement given its directness, access, competence, scope,
-and independent checkability.
-_Avoid_: source reputation score, author rank, universal confidence
+The explainable non-scalar vector describing how one evidence item supports one
+Verification Requirement across directness, access fit, competence fit, scope
+fit, reproducibility, independent corroboration, and temporal fit. Unknown
+dimensions remain unknown.
+_Avoid_: source reputation score, author rank, universal confidence, average
 
 **Claim Status**:
 The current evidence-based assessment of a claim, kept separate from its source
