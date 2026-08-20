@@ -15,3 +15,9 @@ transitive dependency context required to support it, otherwise it must
 downgrade or prune the conclusion instead of leaving it dangling. Models may
 propose dependency relationships, but only an accepted Research Core revision
 changes them.
+The verification subgraph is acyclic: claims inside a dependency cycle cannot
+verify one another, and repetition or mutual agreement never supplies an
+Evidence Anchor. A cycle fails closed until independently checkable evidence
+breaks it and the accepted dependency relationships are reformulated; cycles
+may remain recorded as ordinary support, contradiction, or correlation
+relationships, but never as proof.

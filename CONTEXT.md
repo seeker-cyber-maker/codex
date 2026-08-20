@@ -231,6 +231,11 @@ A claim whose Verification Requirement can be satisfied directly from its own
 evidence without depending on another claim's determination.
 _Avoid_: axiom, unsupported assertion, isolated sentence
 
+**Evidence Anchor**:
+An independently checkable evidence predicate that supports a Verification
+Requirement without depending on the claim chain it anchors.
+_Avoid_: repeated assertion, circular support, model agreement
+
 **Analysis Stability Envelope**:
 The declared minimal acceptable semantic variation between comprehensive
 analyses of a source and its Summary Salience Variant.
