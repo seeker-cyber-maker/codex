@@ -560,3 +560,19 @@ A signed, evidence-bound decision by the designated human or deterministic
 policy authority that records an incident's resolution, residual uncertainty,
 remediation, and follow-up without deleting its history.
 _Avoid_: model verdict, dismissed notification, rewritten incident
+
+**Efficiency Signal**:
+A non-incident observation of materially repeated work that preserves cache,
+freshness, dirty-path, latency, cost, cadence, caller, and result identity for
+gap analysis and deterministic promotion when a declared threshold is crossed.
+_Avoid_: duplicate deletion, automatic incident, unreceipted cache hit
+
+**Attention Burden**:
+Measured interruption, acknowledgement, recurrence, and context-switch cost
+imposed on a human or active agent by monitoring output.
+_Avoid_: subjective dismissal, mute request, alert-count proxy
+
+**Attention Budget**:
+A declared bound on Attention Burden whose breach creates an alert-quality
+investigation without suppressing the underlying safety signal.
+_Avoid_: notification quota, automatic silence, severity downgrade

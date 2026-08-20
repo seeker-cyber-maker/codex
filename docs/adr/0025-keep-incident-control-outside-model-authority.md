@@ -31,6 +31,31 @@ last observation, affected scopes, rule versions, and correlation rationale.
 A model-proposed correlation cannot merge incidents across authority or trust
 boundaries without deterministic validation or human acceptance.
 
+Every repeated event retains an individual occurrence under a stable Event
+Fingerprint. The fingerprint binds the emitting subsystem, rule and rule
+version, event class, affected scope, and normalized condition without erasing
+input or time differences. Deterministic policy escalates repeated safety
+events by declared rate, persistence, new-scope, and recurrence-after-closure
+thresholds. Grouping may reduce redundant presentation but never event capture,
+policy severity, or the ability to inspect each occurrence.
+
+Repeated ordinary work such as materially equivalent retrievals becomes an
+Efficiency Signal rather than a safety incident. It records the query or work
+fingerprint, cache and Freshness Epoch, relevant dirty-path state, result
+identity, latency, resource or provider cost, caller, cadence, and suspected
+upstream cause. It is promoted to an incident only when a deterministic loop,
+budget, availability, integrity, or provider-contract threshold is crossed.
+
+Operator annoyance and distraction are evidence of Attention Burden, not a
+reason to disable a detector. Monitoring records visible notifications,
+interruptions, acknowledgement load, recurrence cadence, and task context
+switches for both the human and active agent. Crossing a declared Attention
+Budget opens or updates an alert-quality incident linked to the underlying
+events. Remediation investigates the source condition, grouping fingerprint,
+routing, presentation, and threshold fitness; it may improve batching or fix a
+noisy rule, but it may not discard occurrences, silence a Non-suppressible
+Alert, or lower its policy floor merely because it is irritating.
+
 Only a designated human or deterministic policy authority may close an
 incident. Closure requires a signed Incident Disposition bound to the incident
 snapshot, cited evidence, established and unresolved facts, affected scope,
