@@ -96,6 +96,16 @@ under current restrictions and revocations but can never expand during that
 worker's lifetime.
 _Avoid_: unlock inheritance, live privilege upgrade, parent permission union
 
+**Delegation Ceiling**:
+The rule that an actor may grant a child only a policy-delegable subset of its
+own current effective capabilities, with all ancestor restrictions preserved.
+_Avoid_: supervisor privilege, permission laundering, replacement inheritance
+
+**Non-delegable Capability**:
+An authority usable only by its verified holder at its declared boundary and
+which cannot be transferred, proxied, wrapped, or inherited by another actor.
+_Avoid_: shared approval, bearer delegation, service-account escape
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and

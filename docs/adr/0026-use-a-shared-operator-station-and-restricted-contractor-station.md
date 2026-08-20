@@ -220,3 +220,33 @@ external or irreversible attempt whose outcome is no longer certain follows
 the Receipted Saga's `unknown` and reconciliation rules. Fleet records the last
 verified boundary and never reports a revoked child as safely stopped merely
 because its local process exited.
+
+Human dashboard authentication and model promotion are separate grants. A
+YubiKey-authenticated human session does not elevate every model that can reach
+the Operator Station. Leaving Gone Fishin' for model work names one exact model,
+harness and provider route, session identity, task or project scope, capability
+set, and bounded interval. A replacement, restarted, upgraded, or newly routed
+model begins in Gone Fishin' and requires its own explicit promotion.
+
+Delegation follows a strict subset rule. A model may delegate only capabilities
+present in its current effective grant, permitted by the parent Task Manifest,
+marked delegable by policy, and further narrowed for the child. It cannot grant
+an expired, revoked, conditionally unavailable, or merely proposed capability.
+The child's effective grant still passes through the full Capability
+Intersection; supervisor, router, or Fleet ownership creates no authority by
+itself.
+
+Capabilities declare a delegation class of `non_delegable`, `single_hop`, or a
+small policy-bounded depth. Human-presence assertions, Gone Fishin' unlock,
+approval satisfaction, irreversible-effect authorization, trust-root and key
+administration, policy modification, incident closure, unrestricted secret or
+egress access, authority expansion, and final promotion are non-delegable from
+a model. A holder may use such a capability only at its own verified boundary
+and may not wrap it in a broader task, proxy call, or service credential for a
+child.
+
+Every delegation records parent and child identities, capability subset,
+depth, purpose, scope, expiry, and derivation path. Redelegation decrements the
+remaining depth and repeats every gate. Capability laundering through multiple
+workers, aliases, replacement models, or shared service accounts is rejected;
+the most restrictive ancestor remains enforceable for the complete lineage.
