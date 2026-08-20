@@ -48,6 +48,18 @@ where it appeared, and how it reached the Archive; it does not rate the author,
 venue, or claim.
 _Avoid_: authorship quality, venue prestige, credibility score
 
+**Derivation Lineage**:
+The provenance graph connecting an evidence item to its source materials,
+transformations, observations, and execution events without deciding whether
+two resulting items are evidentially independent.
+_Avoid_: independence verdict, folder ancestry, publication count
+
+**Independence Profile**:
+The claim- and route-relative comparison of evidence items across shared or
+separate inputs, observations, executions, methods, operators, environments,
+and failure modes.
+_Avoid_: different URL, different author, separate lineage root
+
 **Source Role**:
 A source's contextual relationship to a claim, such as official, eyewitness,
 analyst, contractor, or model; it is not a truth status.
@@ -56,7 +68,7 @@ _Avoid_: credibility score, claim verdict
 **Evidence Grade**:
 The explainable non-scalar vector describing how one evidence item supports one
 Verification Requirement across directness, access fit, competence fit, scope
-fit, reproducibility, independent corroboration, and temporal fit. Unknown
+fit, reproducibility, corroboration independence, and temporal fit. Unknown
 dimensions remain unknown.
 _Avoid_: source reputation score, author rank, universal confidence, average
 
@@ -261,7 +273,7 @@ _Avoid_: citation presence, document-wide grade, duplicated source count
 
 **Verification Route**:
 A named complete set of Verification Requirements, accepted Evidence Grade
-facets, and evidence-lineage diversity constraints that can independently make
+facets, and Independence Profile constraints that can independently make
 a claim eligible for a verified determination.
 _Avoid_: evidence buffet, partial proof, model-selected shortcut, score average
 

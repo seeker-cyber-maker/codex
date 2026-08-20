@@ -33,8 +33,8 @@ claim-relative dimensions are:
   or an adjacent matter;
 - reproducibility: how independently inspectable, replayable, or testable the
   evidence is;
-- independent corroboration: whether supporting evidence has genuinely separate
-  lineage rather than repeating a common origin; and
+- corroboration independence: which inputs, observations, executions, methods,
+  environments, and failure modes are shared with supporting evidence;
 - temporal fit: whether the evidence applies to the claim's declared time.
 
 Each dimension may remain unknown. Dimensions are not averaged or collapsed

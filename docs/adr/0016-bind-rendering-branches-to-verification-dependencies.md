@@ -30,22 +30,23 @@ route in the Research Core.
 
 Each route declares which Evidence Grade facets are mandatory for each
 Verification Requirement and which categorical states or ranges it accepts. It
-also declares any evidence-lineage diversity requirement, such as independent
-replication or corroboration from separately derived sources. Route evaluation
-does not average facet values, count repeated descendants of one source as
-independent, or let strength on one facet compensate for an unmet mandatory
-facet. Missing or unknown mandatory values leave the route unsatisfied without
-thereby refuting the claim. The evaluation receipt names every satisfied and
-unsatisfied predicate and the evidence relationships used.
+also declares any Independence Profile requirement, such as independently
+collected observations, separate executions, or methodologically independent
+analysis. Route evaluation does not average facet values, infer independence
+from publication count or separate URLs, or let strength on one facet compensate
+for an unmet mandatory facet. Missing or unknown mandatory values leave the
+route unsatisfied without thereby refuting the claim. The evaluation receipt
+names every satisfied and unsatisfied predicate, the evidence relationships
+used, and the relevant shared and separate dependencies.
 
 One evidence item may satisfy more than one requirement when each Evidence
 Relationship is independently typed, graded, and justified against its exact
 claim or predicate. Reuse does not copy a grade from one relationship to another.
-The item retains one provenance lineage regardless of how many requirements it
-supports, so repeated use counts only once toward lineage diversity and can
-never corroborate itself. A route that requires separately derived evidence
-must therefore reference the required number and kind of genuinely distinct
-lineages.
+The same item cannot corroborate itself. Distinct child evidence items may,
+however, satisfy an independence constraint even when they share a Derivation
+Lineage, provided their Independence Profile meets the route's exact requirement.
+A shared source ancestor is always retained but neither proves nor disproves
+independence by itself.
 
 A Verification Route may include a Route Defeater such as `B AND D AND NOT X`,
 but `NOT X` is never satisfied merely because an ordinary search did not find

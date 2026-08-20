@@ -1,0 +1,34 @@
+---
+status: accepted
+---
+
+# Separate derivation lineage from evidentiary independence
+
+Derivation Lineage records how evidence descended from source materials,
+transformations, observations, and execution events. It is neutral ancestry,
+not an independence verdict. Independence is instead represented by a
+claim- and route-relative Independence Profile over the failure channels that
+matter to a Verification Requirement.
+
+Two child experiments may share a motivating source, protocol, or other ancestor
+while independently collecting observations and executing trials. Conversely,
+two publications, summaries, translations, or model renderings may have distinct
+record identities while adding no independent observation or analysis. Two
+analyses of one dataset can be methodologically independent while remaining
+dependent on the same inputs and observational failure modes. These distinctions
+must remain explicit rather than collapsing into “same lineage” or “different
+source.”
+
+A Verification Route states the kind of independence it requires: separate
+inputs or samples, observations, executions, implementations or methods,
+operators, environments, or other named failure channels. The evaluation
+receipt retains common ancestry and identifies which dependencies were shared,
+separate, or unknown. Copies and transformations do not become independent
+merely through new URLs, venues, authors, or record identifiers, while a common
+ancestor does not disqualify genuinely independent child experiments.
+
+Eigenius provides a useful implementation reference for typed reasoning traces
+and content-addressed ancestry, but ancestry alone is not Dream House's
+independence test. See its pinned
+[reasoning-trace design](https://github.com/eigenius/eigenius/blob/4bc3bb21181ef3736cbbc81f25ae97edf635e9e0/docs/design/d6b-reasoning-trace-schema.md)
+and [layer architecture](https://github.com/eigenius/eigenius/blob/4bc3bb21181ef3736cbbc81f25ae97edf635e9e0/docs/design/d23-out-of-core-layer-architecture.md).
