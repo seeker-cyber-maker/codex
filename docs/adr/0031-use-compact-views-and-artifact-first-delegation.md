@@ -79,6 +79,31 @@ authority, and Admission Basis immediately before its atomic append; a stale
 proposal returns for scoped revalidation rather than being merged
 optimistically.
 
+That policy exception is deny-by-default and limited to an Automatic
+Preservation Class. Each class fixes its schema and version, deterministic
+producer identity, allowed fields and media types, size and count bounds,
+target scopes, required receipts, and expiry. Eligible records are structured
+metadata or receipts from qualified deterministic components. They contain no
+model prose, free-form prompt material, executable content, code or patches,
+credentials or secrets, personal data beyond explicitly approved identifiers,
+unverified external claims, or instructions for a downstream model or tool.
+
+Automatic preservation cannot establish truth, raise confidence, approve a
+claim or artifact, satisfy an acceptance predicate, change task completion,
+alter authority or trust, delegate a capability, close or downgrade an
+incident, publish data, merge code, or initiate an external effect. Any record
+with one of those effects, and all model-generated prose, patches, incident
+material, or acceptance-affecting evidence, requires lead review under the
+current policy grant even when its syntax resembles an allowlisted record.
+Ambiguous classification fails closed to review rather than letting a model or
+content classifier select the automatic path.
+
+Only the authority that governs the admission policy may add, widen, suspend,
+or revoke an Automatic Preservation Class. Every decision binds the class and
+policy versions in its receipt. A class or producer revocation makes pending
+proposals stale and prevents new automatic admissions; it does not erase prior
+admissions or retroactively convert preservation into acceptance.
+
 Import and acceptance are separate decisions. Admission preserves the worker
 report and artifacts with `candidate` or another declared unaccepted
 disposition; it does not validate substantive claims, approve a patch, merge a

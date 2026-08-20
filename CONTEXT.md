@@ -246,6 +246,12 @@ disposition, distinct from validating its claims, merging code, publishing, or
 completing the owning task.
 _Avoid_: acceptance by storage, imported-is-verified, automatic integration
 
+**Automatic Preservation Class**:
+A deny-by-default, predeclared class of non-executable structured metadata or
+deterministic receipts that policy may admit without lead review while granting
+no truth, acceptance, authority, or external-effect consequence.
+_Avoid_: low-risk model judgment, metadata loophole, automatic acceptance
+
 **Compact Result Envelope**:
 A bounded worker return containing disposition, attributable claims, artifact
 hashes and paths, validation, blockers, questions, risks, and the next action.
