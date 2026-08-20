@@ -36,3 +36,18 @@ ranking derivation, and returned result identifiers. This makes two differently
 ranked answers comparable and keeps cached results auditable without pretending
 that one global ordering fits discovery, current status, conflict review, and
 verification equally well.
+
+An explicitly selected user mode is authoritative for the query. When no mode
+is supplied, Retrieval Mode Inference selects `current status` for ordinary
+factual and project-status questions and `exploratory discovery` for requests
+to find ideas, connections, candidates, or possibilities. The response exposes
+the selected mode, and the Honest Search Receipt records whether it was explicit
+or inferred, the inference rationale, and the available override. An override
+reruns the query under a new contract without modifying either contract's
+underlying evidence.
+
+When two plausible modes could materially change a consequential answer, the
+system issues a structured question with a recommended default and continues
+only safe, reversible retrieval work until the choice resolves. It does not stop
+for immaterial ranking differences or hide a consequential mode choice inside a
+model prompt.

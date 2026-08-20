@@ -18,10 +18,16 @@ authority.
 _Avoid_: Markdown library, vector database
 
 **Retrieval Contract**:
-The explicit query-purpose agreement declaring scope, time view, retrieval mode,
-relevant Verification Requirements, evidence-facet priorities, filters, and
-presentation constraints used to select and rank one result set.
+The transparent user-selected or inferred query-purpose agreement declaring
+scope, time view, retrieval mode, relevant Verification Requirements,
+evidence-facet priorities, filters, and presentation constraints used to select
+and rank one result set.
 _Avoid_: global credibility score, search prompt, model preference
+
+**Retrieval Mode Inference**:
+The receipted, user-overridable selection of a Retrieval Contract's mode when the
+query does not declare one.
+_Avoid_: hidden intent guess, permanent user preference, ranking authority
 
 **Trusted Local Boundary**:
 The initial Archive access scope limited to its human owner, the primary Codex
