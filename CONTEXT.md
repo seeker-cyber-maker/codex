@@ -34,6 +34,42 @@ The initial Archive access scope limited to its human owner, the primary Codex
 harness, and explicitly approved local automation.
 _Avoid_: multi-tenant service, contractor database access
 
+**Operator Station**:
+The shared human and primary-Codex control plane for projects, tasks, skills,
+knowledge, monitoring, approvals, resources, and receipts, exposed through
+separate human-dashboard and agent projections while preserving identity and
+authority.
+_Avoid_: agent-only harness, admin credential, passive dashboard
+
+**Human Dashboard Projection**:
+A local web interface over Operator Station APIs whose presentation and
+navigation state remain outside model context unless explicitly promoted as a
+scoped task input.
+_Avoid_: shared prompt stream, UI as source of truth, hidden task mutation
+
+**Skill Contract**:
+A versioned, model-neutral declaration of a skill's inputs, outputs, context,
+runtime assumptions, capabilities, effects, approvals, bounds, receipts, and
+deterministic acceptance checks.
+_Avoid_: prompt template, universally compatible skill, hidden tool grant
+
+**Task Manifest**:
+The immutable launch description binding a task to its skill revision, actor,
+model runtime, context view, capability and approval scope, resource bounds,
+expected artifacts, and validation rules.
+_Avoid_: chat request, mutable job settings, completion claim
+
+**Contractor Station**:
+A separately bounded fallback harness that gives non-primary workers curated
+context, allowlisted skills, and expiring task capabilities while returning
+proposal-only, receipted work for independent integration.
+_Avoid_: primary Codex impersonation, shared keys, unrestricted fallback
+
+**Capability Lease**:
+A task-scoped, expiring grant of explicitly enumerated operations and resources
+that cannot be delegated, widened, or converted into standing worker authority.
+_Avoid_: API key handoff, role inheritance, blanket tool access
+
 **Mutation Proposal**:
 A side-effect-free, attributable candidate change naming its intended Archive
 scope, basis, dependencies, and expected effects without possessing write
