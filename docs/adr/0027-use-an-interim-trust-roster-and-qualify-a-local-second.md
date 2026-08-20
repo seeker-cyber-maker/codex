@@ -26,15 +26,24 @@ identity, qualification, or rights of Codex Sol, Terra, ChatGPT, a prior local
 checkpoint, or a model with a similar marketing name. The interim harness stays
 restricted until an exact candidate earns a narrower role through evidence.
 
-The desired local architecture follows the recovered Hermes pattern without
-requiring Hermes Agent or one particular checkpoint. A small always-resident
-front desk maintains continuity, reads the task queue, classifies intake,
-retrieves bounded context, extracts typed fields, builds task packets, and
-decides only `mine`, `not_my_job`, or `uncertain`. A larger wake-on-demand local
-senior handles uncertainty, prepares expert packets, reviews bounded proposals,
-and may supervise restricted workers through Spark Fleet. Infrastructure owns
-economic and capability routing; deterministic checks and authorized humans own
-acceptance.
+The recovered Hermes proposal supplies candidate responsibilities without
+requiring Hermes Agent or one particular checkpoint. A resident interface
+maintains continuity, reads the task queue, classifies intake, retrieves bounded
+context, extracts typed fields, builds task packets, and decides only `mine`,
+`not_my_job`, or `uncertain`. A local senior responsibility handles uncertainty,
+prepares expert packets, reviews bounded proposals, and may supervise restricted
+workers through Spark Fleet. Infrastructure owns economic and capability
+routing; deterministic checks and authorized humans own acceptance.
+
+Whether the resident interface, local senior, trainer, and other local roles use
+separate models and contracts, one multi-role model, adapters over a shared
+base, or a mixed deployment is deferred. The recovered two-tier 4B--8B plus
+larger-model sketch is a contender, not an accepted topology. The decision
+reopens only after exact candidate models and runtimes have role-specific
+quality, latency, memory and KV-cache headroom, concurrency, interruption,
+training, and authority-isolation measurements. Until then, the harness keeps
+role labels and evidence distinct without requiring separate processes or
+checkpoints.
 
 Basic text-to-terminal translation is a low-authority workload and an audition
 rung, not evidence of trusted judgment. Any candidate may propose a typed

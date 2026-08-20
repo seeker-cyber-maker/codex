@@ -123,6 +123,12 @@ sealed role-specific operational and adversarial qualification and then received
 a bounded human promotion.
 _Avoid_: candidate model, Hermes label, successful demo, general trust badge
 
+**Local Role Topology**:
+The deferred mapping of resident interface, senior, trainer, and other local
+responsibilities onto one or more models, checkpoints, adapters, runtimes, and
+contracts after measured contender evaluation.
+_Avoid_: assumed two-tier deployment, premature model merge, role-name process
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and
