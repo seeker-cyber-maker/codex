@@ -26,3 +26,10 @@ anything the evidence does not support. Unrealistic, sensational, or
 cheap-clickbait framing—such as implying a “superoptimizer gone wild”—fails
 even if it improves attention, because the optimization belongs to the
 selection and presentation layer rather than the claims layer.
+The source never contains a desired synthetic summary. Instead, a Salience Cue
+pre-earmarks an existing passage through a minimal marker, emphasis, wording,
+or placement treatment; the reading model still performs its ordinary
+read-select-synthesize process and writes the Reader Preview independently.
+The measured effect is the passage's changed probability of surviving that
+selection process, not compliance with supplied summary prose or a directed
+conclusion.

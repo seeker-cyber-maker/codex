@@ -170,6 +170,12 @@ A meaning-preserving rendering of the same claims that changes minimal framing
 cues to test which truthful details a summarizer selects for a Reader Preview.
 _Avoid_: synthetic narrative, altered meaning, adversarial claim insertion
 
+**Salience Cue**:
+A minimal meaning-neutral marker, emphasis, or placement treatment that
+pre-earmarks a source passage for attention without supplying summary prose or
+directing the reader's conclusion.
+_Avoid_: embedded summary, model instruction, altered claim
+
 **Analysis Stability Envelope**:
 The declared minimal acceptable semantic variation between comprehensive
 analyses of a source and its Summary Salience Variant.
