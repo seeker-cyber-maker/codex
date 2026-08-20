@@ -241,6 +241,16 @@ An independently checkable evidence predicate that supports a Verification
 Requirement without depending on the claim chain it anchors.
 _Avoid_: repeated assertion, circular support, model agreement
 
+**Route Defeater**:
+An evidence-backed condition that blocks one Verification Route without by
+itself refuting the claim or blocking its other declared routes.
+_Avoid_: missing search result, contrary opinion, global claim rejection
+
+**Bounded Absence Receipt**:
+An Honest Search Receipt whose closed universe and complete coverage are strong
+enough to satisfy an explicitly scoped negative Verification Requirement.
+_Avoid_: not found, broad web search, presumed nonexistence
+
 **Analysis Stability Envelope**:
 The declared minimal acceptable semantic variation between comprehensive
 analyses of a source and its Summary Salience Variant.

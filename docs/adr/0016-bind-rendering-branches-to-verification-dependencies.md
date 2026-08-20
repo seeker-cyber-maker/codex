@@ -27,3 +27,12 @@ auditable. Satisfying any one complete route makes the claim eligible for a
 determination; partial requirements from different routes cannot be mixed into
 an implicit proof unless that combination is explicitly accepted as another
 route in the Research Core.
+A Verification Route may include a Route Defeater such as `B AND D AND NOT X`,
+but `NOT X` is never satisfied merely because an ordinary search did not find
+`X`; it requires direct evidence or a Bounded Absence Receipt over a declared
+closed universe. A confirmed defeater blocks only the affected route unless the
+Research Core separately says it refutes the claim. For example, a
+verifier-confirmed LOC-4 QP2A solution would defeat the claim that a valid LOC-5
+solution is LOC-optimal while leaving the LOC-5 solution's verifier validity
+intact; an unverified record assertion or a miss in a restricted generated
+search universe does neither.
