@@ -59,6 +59,24 @@ and promoted-signal cards whose lifecycle columns are projections of structured
 state rather than manually asserted truth.
 _Avoid_: duplicate task list, manual status authority, decorative project board
 
+**Durable Work Item**:
+A task, incident, actionable question, assistance request, or promoted signal
+with its own lifecycle, owner, attention need, or acceptance boundary; ordinary
+conversation events remain on its conserved timeline.
+_Avoid_: card per prompt, status-message task, duplicated conversation
+
+**Recipient Selector**:
+The assignment control listing qualified roles, exact model routes, the human,
+and `triage` with visible availability, authority, cost, context fit, and
+conflict information.
+_Avoid_: hidden router choice, silent substitution, model-name-only dropdown
+
+**Triage Proposal**:
+An attributable routing recommendation over a predeclared candidate set that
+names role, exact route, alternatives, evidence, costs, uncertainty, conflicts,
+and fallback without acquiring the assigned task's authority.
+_Avoid_: hidden dispatch, router self-assignment, standing delegation
+
 **Action Dock**:
 The separate, fixed set of reviewed emoji-first Workflow Recipe buttons used to
 launch or control work without becoming or directly mutating Kanban cards.
@@ -151,6 +169,12 @@ The deferred mapping of resident interface, senior, trainer, and other local
 responsibilities onto one or more models, checkpoints, adapters, runtimes, and
 contracts after measured contender evaluation.
 _Avoid_: assumed two-tier deployment, premature model merge, role-name process
+
+**Friction Receipt**:
+An evidence record binding one observed harness obstacle to its baseline,
+proposed interaction, acceptance fixture, merge surface, rollback, and measured
+effect on interruption, manual work, latency, tokens, failures, or recovery.
+_Avoid_: feature wish, aesthetic preference, unmeasured convenience
 
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,

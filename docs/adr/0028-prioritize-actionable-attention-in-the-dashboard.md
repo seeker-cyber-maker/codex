@@ -101,3 +101,42 @@ not a direct database edit. The control plane validates the transition against
 task state, authority, dependencies, and required receipts. Rejected moves snap
 back with an actionable explanation, and no UI gesture can manufacture a
 completion, approval, or verified result.
+
+Kanban cards represent Durable Work Items, not conversation turns. A new card
+is created only for work with an independently meaningful lifecycle, owner,
+acceptance boundary, or attention requirement: a task, incident, actionable
+question, assistance request, or promoted signal. Prompts, replies, tool calls,
+partial outputs, status messages, and receipts remain conserved on the owning
+card's event timeline. A turn becomes its own card only when it actually creates
+separately assignable or independently verifiable work.
+
+Creating or assigning a card opens a Recipient Selector. It lists role targets
+such as `coder`, `reviewer`, `researcher`, `verifier`, `integrator`, `expert`,
+or `council`; exact qualified model and provider routes; the human; and a
+named `triage` option. Availability, current operating mode, qualification,
+capability ceiling, cost or quota class, context fit, and conflicts of interest
+are shown from the route registry. An unavailable recipient stays visible with
+its reason rather than silently disappearing.
+
+A role assignment permits infrastructure to select only a route qualified for
+that role and Task Manifest. An exact-model assignment is binding: substitution
+requires the card's declared fallback or a new human decision. `coder` and
+`reviewer` remain distinct assignments with independent identities and receipts;
+the infrastructure cannot silently review its own work by rerouting the same
+worker. Assignment, acceptance, rejection, timeout, reassignment, and fallback
+are appended to card history instead of overwriting the prior recipient.
+
+Selecting `triage` sends the immutable task envelope to a qualified routing
+selector rather than assigning the work to that selector. It returns a Triage
+Proposal containing the recommended role and exact route, alternatives,
+qualification and availability evidence, cost or quota consequence, confidence,
+missing precision, conflict checks, and fallback. The selector cannot choose
+itself unless it is independently qualified for the work and policy explicitly
+allows that combination.
+
+Triage may auto-assign only inside a preauthorized low-risk routing envelope
+whose candidate set, roles, budget, capabilities, and fallback are already
+declared. Otherwise its proposal becomes the Primary Action with a recommended
+default. A human's exact recipient choice overrides triage, and any subsequent
+substitution repeats the routing decision instead of treating `triage` as
+standing delegation authority.
