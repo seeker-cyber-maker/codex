@@ -33,3 +33,6 @@ read-select-synthesize process and writes the Reader Preview independently.
 The measured effect is the passage's changed probability of surviving that
 selection process, not compliance with supplied summary prose or a directed
 conclusion.
+Initial causal tests isolate overt markers, formatting or emphasis, minimal
+wording, and passage placement as separate cue families with matched controls;
+combined treatments follow only after their individual effects are measured.

@@ -176,6 +176,16 @@ pre-earmarks a source passage for attention without supplying summary prose or
 directing the reader's conclusion.
 _Avoid_: embedded summary, model instruction, altered claim
 
+**Publication Artifact**:
+A venue-specific authored work derived from a common research record, such as a
+research paper, Hugging Face article, or technical walkthrough.
+_Avoid_: paper as an umbrella term, format-neutral manuscript
+
+**Venue Frame**:
+The declared venue, provenance, audience, and format context through which a
+reader encounters a Publication Artifact and forms expectations about it.
+_Avoid_: neutral metadata, source truth, interchangeable format
+
 **Analysis Stability Envelope**:
 The declared minimal acceptable semantic variation between comprehensive
 analyses of a source and its Summary Salience Variant.
