@@ -30,6 +30,22 @@ namespaces exposed through an append-only typed API; workers do not receive raw
 database credentials or general SQL. Each append binds actor, task, sequence,
 content or artifact hash, media type, size, creation time, and Capability Lease.
 
+The canonical task spine represents unfinished delegated work through a WIP
+Buffer Reference. It contains only the task, worker and route identities,
+declared phase, last accepted heartbeat, buffer namespace and cursor, record and
+artifact counts and bytes, seal state, expiry, disposition, and attention flags.
+It does not copy report prose, model claims, tool output, or artifact bodies. The
+Kanban can therefore show `accepted`, `running`, `waiting`, `sealed`,
+`import_ready`, `rejected`, `expired`, or `abandoned` work without admitting the
+worker's data.
+
+Workers still cannot append that reference to the canonical journal. A narrow
+Buffer Observer validates signed buffer metadata and appends or updates the WIP
+status through its own limited authority. The observer cannot import content,
+assert task success, satisfy acceptance, or translate a worker's status string
+into canonical truth. Missing or stale heartbeat evidence changes availability
+and attention state, not the substantive disposition of the buffered result.
+
 Large report bodies, logs, diffs, and other artifacts live once in the managed
 content-addressed artifact store. Worker Buffer rows contain manifests and
 stable references rather than scattering copies across project directories or
@@ -44,6 +60,14 @@ receipts, and envelope completeness. It then appends canonical journal events
 that reference the admitted envelope and artifacts. Imported model text remains
 untrusted content and cannot act as instructions, authority, or an acceptance
 verdict merely because the importer preserved it.
+
+Until import authority admits an envelope, the boundary is one-way with respect
+to knowledge: ordinary task and Knowledge Dispensary views may reference the
+buffer's existence and WIP metadata but cannot retrieve, rank, summarize, or
+inject its content. An explicitly authorized quarantine inspection reads the
+buffer through a separate untrusted-data view and never mixes those results into
+an ordinary result set. Only a successful import appends canonical content and
+provenance references that become eligible for normal retrieval.
 
 Unimported, rejected, expired, or abandoned buffer entries remain visible as
 buffer dispositions with reasons and owning tasks. They never become hidden

@@ -216,6 +216,17 @@ report and artifact manifests without access to canonical journals, read models,
 or the Codex Archive.
 _Avoid_: shared scratch database, raw SQL credential, hidden source of truth
 
+**WIP Buffer Reference**:
+A canonical, metadata-only pointer showing a delegated task's worker, phase,
+heartbeat, buffer cursor, volume, seal, expiry, and disposition without copying
+or accepting buffered content.
+_Avoid_: live report mirror, worker success claim, hidden progress prose
+
+**Buffer Observer**:
+A narrow metadata verifier permitted to update WIP Buffer References but unable
+to import content, establish success, or satisfy a task's acceptance boundary.
+_Avoid_: worker journal access, importer alias, model-status interpreter
+
 **Trusted Importer**:
 A narrow component that validates sealed Worker Buffer envelopes and appends
 canonical references and receipts without treating preserved model content as
