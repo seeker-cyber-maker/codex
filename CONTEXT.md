@@ -176,6 +176,18 @@ proposed interaction, acceptance fixture, merge surface, rollback, and measured
 effect on interruption, manual work, latency, tokens, failures, or recovery.
 _Avoid_: feature wish, aesthetic preference, unmeasured convenience
 
+**Headless Task Spine**:
+The provider- and browser-independent Durable Work Item, event, assignment,
+lifecycle, attention, and receipt contract exposed through typed APIs and CLI
+before any visual projection is treated as stable.
+_Avoid_: Kanban-owned state, UI-first schema, visual acceptance dependency
+
+**Projection Independence**:
+The rule that visual layout and styling may change without changing or blocking
+canonical task semantics, provided authority, safety, privacy, attention, and
+accessibility remain correct.
+_Avoid_: screenshot as truth, cosmetic blocker, hidden backend state
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and

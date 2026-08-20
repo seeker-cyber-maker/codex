@@ -44,3 +44,25 @@ high-frequency friction that can be improved without an upstream-core patch,
 proves the improvement offline, and records whether the seam remains mergeable.
 Later slices may cross into core only with the Patch Ledger evidence required by
 the existing upstream-first baseline.
+
+That first slice is the headless task and event spine: Durable Work Item
+identity, conserved timelines, lifecycle transitions, assignment and triage,
+attention ranking, and receipt projection over the existing downstream event
+layer, exposed first through typed APIs and a compact CLI. It must work without
+a browser, inference provider, or visual snapshot and must not write native
+Codex state. The web Kanban consumes this proven contract rather than defining
+task semantics inside the interface.
+
+Visual design is intentionally replaceable and highly iterative. Layout,
+styling, animation, card density, icon choice, and responsive arrangement do
+not block acceptance of a correct headless slice and may change without a data
+migration. Visual snapshots are regression aids, not canonical state or API
+contracts. The interface stores no lifecycle truth that cannot be reconstructed
+from events and receipts.
+
+A visual defect becomes blocking only when it hides or misstates authority,
+state, provenance, consequence, required attention, or verification; permits
+the wrong action; exposes protected semantics or data; makes a critical control
+unavailable; or violates a declared accessibility requirement. Other visual
+issues remain tracked, reversible projection work and cannot hold the task/event
+spine or unrelated backend slices hostage.
