@@ -271,6 +271,16 @@ The unresolved state in which valid first-party attestations make incompatible
 claims without either signer's identity or authority being automatically voided.
 _Avoid_: majority vote, credential ranking, signer revocation
 
+**Conditional Work Branch**:
+A reversible line of work whose conclusions and admissible actions are
+explicitly conditioned on one unresolved claim or premise.
+_Avoid_: hidden assumption, accepted mainline, speculative merge
+
+**Conflict Gate**:
+The scoped boundary that prevents an unresolved claim from authorizing
+publication, promotion, destructive action, or closure that depends on it.
+_Avoid_: global work stoppage, warning label, automatic rejection
+
 **Route Defeater**:
 An evidence-backed condition that blocks one Verification Route without by
 itself refuting the claim or blocking its other declared routes.
