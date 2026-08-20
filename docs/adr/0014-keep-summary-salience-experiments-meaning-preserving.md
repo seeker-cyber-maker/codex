@@ -14,3 +14,9 @@ on venues such as Hugging Face—not whether it can manufacture a synthetic
 narrative. Incorporating successful wording into published prose remains a
 separate attributed editorial change whose meaning-preservation invariants must
 pass review.
+Acceptance is differential: paired comprehensive analyses of the source and
+variant must remain inside a predeclared Analysis Stability Envelope, while the
+Reader Preview may change which truthful samples it selects, ranks, or displays
+after synthesis. A cue fails even when it produces a more tempting summary if
+it changes the full analysis's claims, conclusions, scope, qualifications,
+authority, or evidentiary treatment beyond that minimal acceptable range.

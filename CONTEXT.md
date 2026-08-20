@@ -170,6 +170,16 @@ A meaning-preserving rendering of the same claims that changes minimal framing
 cues to test which truthful details a summarizer selects for a Reader Preview.
 _Avoid_: synthetic narrative, altered meaning, adversarial claim insertion
 
+**Analysis Stability Envelope**:
+The declared minimal acceptable semantic variation between comprehensive
+analyses of a source and its Summary Salience Variant.
+_Avoid_: identical wording, unrestricted model variance, summary similarity
+
+**Preview Selection Effect**:
+A measured change in which truthful source details are surfaced to the human in
+a Reader Preview after synthesis while full analysis remains stable.
+_Avoid_: changed conclusion, altered evidence, fabricated teaser
+
 **Signature Incident Review**:
 A deliberate evidence-backed process that identifies an affected signing
 identity, establishes an incident timeline, and determines which historical
