@@ -94,6 +94,23 @@ Set and its validation, authorization, provenance, and modification receipts
 against one unchanged Admission Basis.
 _Avoid_: partial write, post-hoc validation, direct index update
 
+**Receipted Saga**:
+A manifest-governed multi-system operation whose independently committed,
+idempotent steps and compensations retain separate verified states and receipts.
+_Avoid_: distributed transaction, atomic workflow, best-effort script
+
+**Durable Outbox**:
+The admitted queue of authorized saga-step intents awaiting execution, carrying
+idempotency and reconciliation metadata but no external credentials or claim of
+completed effect.
+_Avoid_: job success log, credential store, direct side effect
+
+**Compensating Action**:
+A separately authorized and receipted forward action that mitigates or reverses
+a prior saga effect without erasing its history or pretending the original step
+never occurred.
+_Avoid_: rollback fiction, record deletion, silent undo
+
 **Record Disposition**:
 The declared lifecycle relationship of an admitted record to current knowledge:
 active, superseded, obsolete, invalidated, redacted, or removed.
