@@ -90,6 +90,12 @@ A separately attributable Spark Fleet dispatch with its own context packet,
 sandbox, budget, Capability Lease, lifecycle events, and validated result.
 _Avoid_: shared worker identity, pooled permissions, unbounded subtask
 
+**Monotonic Worker Grant**:
+A dispatched worker's effective authority, which may remain unchanged or shrink
+under current restrictions and revocations but can never expand during that
+worker's lifetime.
+_Avoid_: unlock inheritance, live privilege upgrade, parent permission union
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and

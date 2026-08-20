@@ -199,3 +199,24 @@ use, and validator results flow to the independent monitoring plane. A denied
 capability remains a denial even when it prevents a child from completing; the
 worker returns a structured assistance request rather than asking Fleet to find
 a less restricted route.
+
+A Fleet child's authority is monotonic for its lifetime: its effective grant
+may stay the same or shrink, but it never grows. Leaving Gone Fishin' mode,
+approving a broader human session, qualifying another route, or widening a
+parent task does not add permission to an already dispatched child. Broader
+work requires a new Task Manifest, context view, Capability Lease, and child
+identity so the authority change is deliberate and attributable.
+
+Each tool boundary and saga-step claim checks the child's dispatch grant against
+the current operating-mode, trust, incident, policy, and revocation epochs. A
+new restriction or revocation takes effect immediately for unclaimed work and
+future effects. The child receives a structured restriction event, releases
+unused leases, preserves partial artifacts, and may continue only computation
+that remains inside the reduced intersection.
+
+Revocation does not pretend to cancel an effect that may already have crossed
+an external boundary. Safely cancellable reversible work is stopped; an
+external or irreversible attempt whose outcome is no longer certain follows
+the Receipted Saga's `unknown` and reconciliation rules. Fleet records the last
+verified boundary and never reports a revoked child as safely stopped merely
+because its local process exited.
