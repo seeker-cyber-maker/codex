@@ -58,6 +58,12 @@ state, requiring scoped gate revalidation without rejecting or rewriting its
 Mutation Proposal.
 _Avoid_: invalid proposal, automatic retry, failed evidence
 
+**Scoped Admission Lease**:
+A short-lived, receipted exclusive write reservation over the smallest declared
+Archive scope needed to complete an admission after policy-bounded repeated
+staleness, without blocking snapshot reads or bypassing any gate.
+_Avoid_: global lock, authority override, indefinite reservation
+
 **Trusted Writer**:
 The narrowly scoped component that alone holds Archive mutation capability and
 may atomically admit a proposal after all required gates pass.

@@ -53,6 +53,28 @@ checks. All prior receipts remain available for timeline and incident review.
 The final compare-and-swap closes the race between the last check and Atomic
 Admission; stale validation is never committed.
 
+When a policy-declared number of consecutive compare-and-swap failures shows
+write starvation in the same scope, the Trusted Writer may acquire a Scoped
+Admission Lease. Acquisition is itself compare-and-swap protected and binds an
+explicit set of record identifiers, topic or branch heads, dependent indexes,
+owner, purpose, start time, and hard expiry. The scope is the smallest closed
+set needed for the proposal; an Archive-wide lease is forbidden.
+
+The lease serializes writes only. Snapshot-bound reads continue, while competing
+Mutation Proposals for the leased scope remain attributable and queued rather
+than being discarded or rewritten. The selected proposal must still pass every
+Admission Gate against state captured after lease acquisition and must complete
+Atomic Admission before expiry. A lease never waives validation, expands signer
+authority, or revives a stale receipt.
+
+Expiry releases the reservation with no grace-period write. An unfinished
+attempt becomes stale and must reacquire state and gates under ordinary policy.
+Renewal, scope expansion, acquisition, release, queue changes, and any attempted
+write outside the scope or after expiry are separately receipted; only the
+Trusted Writer may perform them. The policy bounds both retry count and lease
+duration so churn cannot turn a local stabilization mechanism into indefinite
+ownership.
+
 The boundary pattern was prompted by Frank Coyle's proposal to validate agent
 tool results before database side effects in
 [Why Agentic Systems Need Ontologies](https://www.youtube.com/watch?v=Sir59K8ZDPU&t=990s).
