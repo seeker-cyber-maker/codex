@@ -252,6 +252,12 @@ deterministic receipts that policy may admit without lead review while granting
 no truth, acceptance, authority, or external-effect consequence.
 _Avoid_: low-risk model judgment, metadata loophole, automatic acceptance
 
+**Import Selection Manifest**:
+A signed, dependency-closed selection of immutable records and artifacts from
+one sealed envelope, preserving the original seal and every omitted member's
+disposition without splitting an atomic set.
+_Avoid_: edited worker report, cherry-picked provenance, copied subset
+
 **Compact Result Envelope**:
 A bounded worker return containing disposition, attributable claims, artifact
 hashes and paths, validation, blockers, questions, risks, and the next action.

@@ -104,6 +104,23 @@ policy versions in its receipt. A class or producer revocation makes pending
 proposals stale and prevents new automatic admissions; it does not erase prior
 admissions or retroactively convert preservation into acceptance.
 
+A sealed Compact Result Envelope remains immutable but need not be admitted as
+one indivisible unit. The admission authority may authorize the whole envelope
+or a signed Import Selection Manifest derived from it. The manifest binds the
+original seal and cursor, selected record and artifact identities and hashes,
+their closed dependency set, the reason for selection, and an explicit
+disposition for every omitted member. It references original content in place;
+it never rewrites the envelope or copies selected prose into a new unsigned
+report.
+
+The selected set passes the complete Admission Gate Stack against its own
+current Admission Basis. Selection may not break referential integrity, detach
+evidence from authorship or provenance, split an Atomic Proposal Set, or omit a
+dependency required to interpret the admitted material. Omitted records remain
+attributable in the Worker Buffer with their disposition and may be reconsidered
+through a later manifest. Partial preservation never implies partial
+substantive acceptance.
+
 Import and acceptance are separate decisions. Admission preserves the worker
 report and artifacts with `candidate` or another declared unaccepted
 disposition; it does not validate substantive claims, approve a patch, merge a
