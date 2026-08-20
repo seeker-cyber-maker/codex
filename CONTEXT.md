@@ -46,6 +46,18 @@ policy authorization through which a Mutation Proposal must pass before an
 Archive write is eligible.
 _Avoid_: ontology approval, model review, best-effort validation
 
+**Admission Basis**:
+The hash-bound set of exact Archive state, relevant freshness epochs,
+schema and ontology versions, policy bundle, and trust state against which one
+admission attempt is evaluated.
+_Avoid_: validation timestamp, current database, mutable configuration
+
+**Stale Admission Attempt**:
+An uncommitted attempt whose Admission Basis no longer matches relevant current
+state, requiring scoped gate revalidation without rejecting or rewriting its
+Mutation Proposal.
+_Avoid_: invalid proposal, automatic retry, failed evidence
+
 **Trusted Writer**:
 The narrowly scoped component that alone holds Archive mutation capability and
 may atomically admit a proposal after all required gates pass.
@@ -53,7 +65,8 @@ _Avoid_: gatekeeper model, contractor key, database administrator agent
 
 **Atomic Admission**:
 The all-or-nothing commit of an accepted Mutation Proposal and its validation,
-authorization, provenance, and modification receipts.
+authorization, provenance, and modification receipts against one unchanged
+Admission Basis.
 _Avoid_: partial write, post-hoc validation, direct index update
 
 **Record Disposition**:

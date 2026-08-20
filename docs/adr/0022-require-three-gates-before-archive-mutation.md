@@ -35,6 +35,24 @@ commits the canonical content, provenance, relationships, dispositions, and
 receipts as one transaction; derived indexes are advanced consistently or not
 at all.
 
+Every admission attempt binds an Admission Basis containing the exact Archive
+snapshot, relevant topic freshness epochs, schema and ontology versions, policy
+bundle hash, trust state, and other declared gate dependencies. Immediately
+before commit, the Trusted Writer performs compare-and-swap against that basis.
+If any relevant value changed, no write occurs and the attempt is retained as a
+Stale Admission Attempt rather than treating the proposal as rejected.
+
+The original signed Mutation Proposal is never rewritten during recovery.
+Revalidation creates a linked admission attempt, computes which declared inputs
+changed, and reruns the affected gates. An earlier gate receipt may be reused
+only when its complete input and ruleset hashes are unchanged and its declared
+dependency set proves the changed state irrelevant. Policy or trust changes
+always rerun policy authorization; schema changes rerun affected structural and
+semantic checks; ontology or domain-invariant changes rerun affected semantic
+checks. All prior receipts remain available for timeline and incident review.
+The final compare-and-swap closes the race between the last check and Atomic
+Admission; stale validation is never committed.
+
 The boundary pattern was prompted by Frank Coyle's proposal to validate agent
 tool results before database side effects in
 [Why Agentic Systems Need Ontologies](https://www.youtube.com/watch?v=Sir59K8ZDPU&t=990s).
