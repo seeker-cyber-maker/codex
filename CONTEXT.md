@@ -549,3 +549,14 @@ _Avoid_: global outage, partial merged view
 An event in which a required safety layer was penetrated but a later independent
 layer prevented unauthorized effect.
 _Avoid_: safe pass, harmless rejection
+
+**Non-suppressible Alert**:
+A deterministic monitoring alert that advisory models cannot prevent, silence,
+downgrade below its policy floor, or close.
+_Avoid_: model-filtered telemetry, optional warning, chat-only notice
+
+**Incident Disposition**:
+A signed, evidence-bound decision by the designated human or deterministic
+policy authority that records an incident's resolution, residual uncertainty,
+remediation, and follow-up without deleting its history.
+_Avoid_: model verdict, dismissed notification, rewritten incident
