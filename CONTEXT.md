@@ -256,6 +256,16 @@ An independently checkable evidence predicate that supports a Verification
 Requirement without depending on the claim chain it anchors.
 _Avoid_: repeated assertion, circular support, model agreement
 
+**Expert Attestation**:
+A signed first-party statement binding an identified expert to an exact claim,
+scope, basis, and time for a Verification Route that accepts expert evidence.
+_Avoid_: reputation score, anonymous authority, secondhand report
+
+**Secondhand Attribution**:
+An attributable statement that another actor made a claim, preserving the
+reporter's identity without inheriting the named actor's authority.
+_Avoid_: Expert Attestation, verified quotation, delegated signature
+
 **Route Defeater**:
 An evidence-backed condition that blocks one Verification Route without by
 itself refuting the claim or blocking its other declared routes.
