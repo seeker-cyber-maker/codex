@@ -30,3 +30,7 @@ environment, and compatible runtime revisions are instead recorded in each
 signed execution receipt; they create a new build boundary only when
 compatibility evidence fails or an observed behavioral difference requires
 requalification.
+For multi-author work, every actor signs its own exact contribution or
+modification; no shared author key exists. A separate assembler signs a manifest
+that binds those contributions into an exact document, and later modifications
+add new attestations without replacing the original authorship record.

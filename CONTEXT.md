@@ -150,6 +150,21 @@ An exact contractor-model version that has passed its declared vetting boundary
 and may receive a distinct Signing Identity for attributable work.
 _Avoid_: latest model, provider alias, unversioned worker
 
+**Contribution Attestation**:
+A signature binding one actor to an exact contribution or modification without
+claiming authorship of the surrounding assembled work.
+_Avoid_: shared author signature, document-wide credit
+
+**Assembly Attestation**:
+A signature binding an exact assembly to its attributed contributions while
+remaining distinct from each contributor's authorship.
+_Avoid_: co-author key, acceptance verdict
+
+**Narrative Variant**:
+A derived experimental rendering whose wording intentionally tests narrative
+steering while retaining its exact source relationship and synthetic status.
+_Avoid_: manuscript revision, corrected summary, canonical prose
+
 **Signature Incident Review**:
 A deliberate evidence-backed process that identifies an affected signing
 identity, establishes an incident timeline, and determines which historical
