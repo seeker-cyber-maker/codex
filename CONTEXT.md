@@ -199,6 +199,39 @@ agent and Kanban queries and rebuilt deterministically rather than migrated as
 canonical truth.
 _Avoid_: source database, unique record, manual board state
 
+**Compact Working View**:
+The default token-bounded agent projection containing current state, authority,
+next action, blockers, boundaries, acceptance, freshness, and stable references
+without automatically loading the full timeline.
+_Avoid_: lossy summary, full-history prompt, stale handoff
+
+**Artifact-first Delegation**:
+The handoff pattern in which workers persist full reports and evidence durably
+and return only a compact structured result envelope with stable references.
+_Avoid_: report pasted into chat, prose status stream, unverifiable summary
+
+**Worker Buffer**:
+A separate managed database granting workers task-scoped append-only storage for
+report and artifact manifests without access to canonical journals, read models,
+or the Codex Archive.
+_Avoid_: shared scratch database, raw SQL credential, hidden source of truth
+
+**Trusted Importer**:
+A narrow component that validates sealed Worker Buffer envelopes and appends
+canonical references and receipts without treating preserved model content as
+instructions, authority, or acceptance.
+_Avoid_: automatic model promotion, buffer copy job, parser-as-trust-boundary
+
+**Compact Result Envelope**:
+A bounded worker return containing disposition, attributable claims, artifact
+hashes and paths, validation, blockers, questions, risks, and the next action.
+_Avoid_: full report, success-only message, pathless summary
+
+**Delegation Efficiency Receipt**:
+Evidence comparing lead-context and provider-token cost, artifact volume,
+expansions, repeated queries, latency, and outcome for one delegated task.
+_Avoid_: worker token count alone, assumed savings, cheap-model success claim
+
 **Projection Independence**:
 The rule that visual layout and styling may change without changing or blocking
 canonical task semantics, provided authority, safety, privacy, attention, and

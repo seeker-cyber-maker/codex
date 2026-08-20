@@ -23,6 +23,14 @@ its layout to work. They consume the underlying typed task, event, attention,
 assignment, and receipt interfaces directly. A visual failure may reduce the
 human's peephole without making canonical state unavailable to agents.
 
+Human-only does not mean read-only. Creating a ticket on the board submits a
+typed `create_work_item` command and, after validation, creates a real Durable
+Work Item with its own identity, initial event, owner or recipient choice,
+authority envelope, and acceptance boundary. Editing, assigning, answering, or
+dragging a card similarly proposes a typed command. The board is an interactive
+human control projection, while the event spine—not browser state—performs and
+records every accepted change.
+
 The Attention Queue is a deterministic projection over those cards, not a
 second task list. Notifications link to and emphasize the affected canonical
 card. The Primary Action opens that card's decision panel, while compact
