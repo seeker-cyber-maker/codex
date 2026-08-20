@@ -254,6 +254,11 @@ The explicit dependency predicate that must be satisfied before a claim is
 eligible for a verified determination.
 _Avoid_: claim truth, confidence score, nearby citation
 
+**Evidence Relationship**:
+The typed, individually graded link stating how one evidence item bears on one
+exact Claim or Verification Requirement.
+_Avoid_: citation presence, document-wide grade, duplicated source count
+
 **Verification Route**:
 A named complete set of Verification Requirements, accepted Evidence Grade
 facets, and evidence-lineage diversity constraints that can independently make

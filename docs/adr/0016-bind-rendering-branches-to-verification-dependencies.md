@@ -38,6 +38,15 @@ facet. Missing or unknown mandatory values leave the route unsatisfied without
 thereby refuting the claim. The evaluation receipt names every satisfied and
 unsatisfied predicate and the evidence relationships used.
 
+One evidence item may satisfy more than one requirement when each Evidence
+Relationship is independently typed, graded, and justified against its exact
+claim or predicate. Reuse does not copy a grade from one relationship to another.
+The item retains one provenance lineage regardless of how many requirements it
+supports, so repeated use counts only once toward lineage diversity and can
+never corroborate itself. A route that requires separately derived evidence
+must therefore reference the required number and kind of genuinely distinct
+lineages.
+
 A Verification Route may include a Route Defeater such as `B AND D AND NOT X`,
 but `NOT X` is never satisfied merely because an ordinary search did not find
 `X`; it requires direct evidence or a Bounded Absence Receipt over a declared
