@@ -9,6 +9,27 @@ project directory, activity feed, or completion report. Its ordering question
 is: what requires the human's attention now so safe work can continue? Project,
 worker, and chronology remain drill-down facets, not the primary rank.
 
+The dashboard's organizing surface is a receipt-derived Operational Kanban.
+Tasks, questions, incidents, assistance requests, and promoted Efficiency
+Signals have one canonical card and move through `ready`, `in_progress`,
+`waiting`, `blocked`, `needs_attention`, `verifying`, and `done` views according
+to structured lifecycle events. Failed, cancelled, superseded, and stale states
+remain visible through explicit filters and card history rather than being
+folded into `done`.
+
+The Attention Queue is a deterministic projection over those cards, not a
+second task list. Notifications link to and emphasize the affected canonical
+card. The Primary Action opens that card's decision panel, while compact
+successors appear in the `needs_attention` lane and preview strip. Project,
+owner, worker, role, and time can form filters or swimlanes without duplicating
+the card or changing its underlying state.
+
+Push-button Workflow Recipes live outside the Kanban in a fixed Action Dock.
+They launch or control work; they are not task cards, notifications, or draggable
+board objects. Pressing a button creates a typed command and receipt, then links
+to the created or affected canonical card. The dock remains small, reviewed,
+emoji-first, and independent of whichever project or board filter is open.
+
 Items are actionable only when a declared actor can make a decision, supply
 missing precision or authority, mitigate an incident, unblock work, or prevent
 a deadline or bounded resource consequence. Each actionable card states the
@@ -66,3 +87,17 @@ does not acknowledge it. Stable ordering is preserved until an item state,
 deadline, consequence, dependency, or governing rule changes; a model response
 alone cannot reshuffle the queue. Every promotion records the prior item and
 the deterministic reason the next item became primary.
+
+A human button press or answer records `decision_supplied`; it does not mark the
+card `done`. If execution can proceed, the card moves to `in_progress` and then
+`verifying` while the outcome remains visible without occupying Primary Action.
+Only the declared verifier and completion predicate produce `done`. Execution
+failure, verification disagreement, expiry, or a newly required human choice
+moves the same card back to `needs_attention` or `blocked` with the new reason;
+it never creates a duplicate notification card.
+
+Manual drag is a convenience for proposing an allowed lifecycle transition,
+not a direct database edit. The control plane validates the transition against
+task state, authority, dependencies, and required receipts. Rejected moves snap
+back with an actionable explanation, and no UI gesture can manufacture a
+completion, approval, or verified result.

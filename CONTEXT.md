@@ -53,6 +53,17 @@ timed questions, assistance requests, approaching boundaries, and stale work
 ahead of informational status.
 _Avoid_: activity feed, project directory, model-ranked urgency, notification pile
 
+**Operational Kanban**:
+The receipt-derived board of canonical task, question, incident, assistance,
+and promoted-signal cards whose lifecycle columns are projections of structured
+state rather than manually asserted truth.
+_Avoid_: duplicate task list, manual status authority, decorative project board
+
+**Action Dock**:
+The separate, fixed set of reviewed emoji-first Workflow Recipe buttons used to
+launch or control work without becoming or directly mutating Kanban cards.
+_Avoid_: draggable button, arbitrary command bar, status card
+
 **Primary Action**:
 The single expanded Attention Queue item currently requiring the human's next
 decision, accompanied by a bounded compact preview of subsequent items and a
