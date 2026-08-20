@@ -266,6 +266,11 @@ An attributable statement that another actor made a claim, preserving the
 reporter's identity without inheriting the named actor's authority.
 _Avoid_: Expert Attestation, verified quotation, delegated signature
 
+**Attestation Conflict**:
+The unresolved state in which valid first-party attestations make incompatible
+claims without either signer's identity or authority being automatically voided.
+_Avoid_: majority vote, credential ranking, signer revocation
+
 **Route Defeater**:
 An evidence-backed condition that blocks one Verification Route without by
 itself refuting the claim or blocking its other declared routes.
