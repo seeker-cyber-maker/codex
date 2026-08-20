@@ -23,3 +23,10 @@ a shared Contractor Lineage but receive distinct signing identities, allowing
 the Archive to attribute each contribution to the exact vetted version and to
 scope later trust changes without casting unrelated versions or projects into
 doubt.
+A change to base weights, adapters, tokenizer, governing system policy, or the
+tool-and-permission contract creates a new Qualified Contractor Build that must
+be vetted separately before receiving a signing identity. Hardware, operating
+environment, and compatible runtime revisions are instead recorded in each
+signed execution receipt; they create a new build boundary only when
+compatibility evidence fails or an observed behavioral difference requires
+requalification.
