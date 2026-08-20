@@ -568,6 +568,28 @@ An observed condition that prevents the current acceptance check and cannot be
 resolved by merely clarifying wording or intent.
 _Avoid_: open question, uncertainty
 
+**Paused Blocker**:
+A scoped task state that preserves a failed acceptance boundary, evidence,
+smallest remediation, resolver, and reminder while independent work may
+continue.
+_Avoid_: unanswered question, abandoned task, global stop
+
+**Resolver Assignment**:
+The explicit human, lead-agent, or external-dependency ownership of the next
+action capable of clearing a Blocker.
+_Avoid_: notification recipient, task assignee guess, everyone
+
+**Relevance Horizon**:
+The declared time or condition at which unresolved work must be reassessed for
+continued usefulness rather than silently retained or deleted.
+_Avoid_: deletion TTL, blocker timeout, arbitrary deadline
+
+**Moot Disposition**:
+The recorded conclusion that unfinished work no longer serves a current
+consumer or objective, without claiming that its method, evidence, or blocker
+was resolved.
+_Avoid_: failure, resolved, forgotten task
+
 **Continuation Signal**:
 An exact short response such as `.`, `continue`, `go on`, `go ahead`, or
 `do next step` that resumes the current bounded action without widening its

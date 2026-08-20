@@ -145,6 +145,23 @@ collection operate only through policy and tombstoned receipts after canonical
 references and active leases are checked; buffer cleanup never deletes a unique
 canonical event or admitted artifact.
 
+Every unresolved delegated task has an explicit Relevance Horizon, defaulting
+to thirty days when its Task Packet declares no earlier deadline or
+project-specific horizon. Reaching that horizon does not silently delete data
+or resolve a blocker. The task is reassessed: non-blocked work whose objective
+has expired, been superseded, or lost its consumer receives a Moot Disposition;
+a genuine Blocker stays paused with its Resolver Assignment, reminder, and any
+required retention hold. A newly relevant objective starts or reopens task work
+through a linked event rather than erasing the earlier disposition.
+
+Unimported content becomes garbage-collection eligible only after its owning
+work is moot, rejected, expired, cancelled, or otherwise finally dispositioned
+and at least thirty days old. Active tasks, Import Proposals, incidents,
+disputes, unique evidence, explicit holds, and canonical references prevent
+collection. Actual removal requires deterministic reference, lease, and hold
+checks, a durable content-hash and disposition tombstone, and a seven-day
+recoverable-trash interval. Collection eligibility is never deletion authority.
+
 The harness enforces inline size and event-rate bounds. Oversized model output,
 tool output, diffs, and repeated progress reports spill to immutable artifacts
 with hashes and bounded previews. Routine worker lifecycle is consumed as
