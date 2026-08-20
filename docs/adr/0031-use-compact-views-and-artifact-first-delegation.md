@@ -14,12 +14,14 @@ historical branches, large evidence, and ordinary status events remain paged
 and expand only when required for a decision or verification.
 
 Delegation is artifact-first. Each worker receives a bounded Task Packet and
-writes its full report, patches, logs, test output, and evidence into the
-declared worktree or artifact store. It returns a Compact Result Envelope
+writes its full report record, patches, logs, test output, and evidence into the
+declared Worker Buffer, worktree, or artifact store according to artifact type.
+It returns a Compact Result Envelope
 containing status, claims within its authority, changed-artifact paths and
 hashes, validation results, blockers, assistance or precision questions,
 unresolved risks, and the smallest recommended next action. The full prose
-report is referenced, not copied into the lead's active context.
+report is referenced, not copied into the lead's active context or emitted as a
+loose handoff document.
 
 Workers receive task-scoped append capability to a separate Worker Buffer, not
 the canonical task journal, Task Read Model, Trusted Writer, or Codex Archive.

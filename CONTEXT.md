@@ -232,6 +232,18 @@ Evidence comparing lead-context and provider-token cost, artifact volume,
 expansions, repeated queries, latency, and outcome for one delegated task.
 _Avoid_: worker token count alone, assumed savings, cheap-model success claim
 
+**Paper-free Operation**:
+The structured-record-first practice in which operational prose, status,
+handoffs, receipts, and logs stay in managed stores and human-readable files are
+generated only as intentional source documents or receipted projections.
+_Avoid_: loose Markdown report, status-file archaeology, invisible data loss
+
+**Export Projection**:
+A purpose- and audience-bound generated file with recorded source cursor,
+renderer, references, hashes, path, and disposition that does not become a new
+canonical source merely by being exported.
+_Avoid_: anonymous download, duplicated evidence, export re-ingestion
+
 **Projection Independence**:
 The rule that visual layout and styling may change without changing or blocking
 canonical task semantics, provided authority, safety, privacy, attention, and
