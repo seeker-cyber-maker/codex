@@ -106,6 +106,23 @@ An authority usable only by its verified holder at its declared boundary and
 which cannot be transferred, proxied, wrapped, or inherited by another actor.
 _Avoid_: shared approval, bearer delegation, service-account escape
 
+**Interim Trust Roster**:
+A time-bounded policy list binding exact model surfaces and routes to narrowly
+allowed roles and capability ceilings until a qualified local successor exists.
+_Avoid_: model-family reputation, permanent trust, inherited replacement rights
+
+**Resident Front Desk**:
+An always-available local interface restricted to continuity, intake,
+classification, bounded retrieval, packet construction, and `mine`,
+`not_my_job`, or `uncertain` routing proposals.
+_Avoid_: acceptance authority, autonomous shell, infrastructure router
+
+**Local Second in Command**:
+An exact local model, runtime, and harness route that has independently passed
+sealed role-specific operational and adversarial qualification and then received
+a bounded human promotion.
+_Avoid_: candidate model, Hermes label, successful demo, general trust badge
+
 **Skill Contract**:
 A versioned, model-neutral declaration of a skill's inputs, outputs, context,
 runtime assumptions, capabilities, effects, approvals, bounds, receipts, and
