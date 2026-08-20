@@ -182,6 +182,23 @@ lifecycle, attention, and receipt contract exposed through typed APIs and CLI
 before any visual projection is treated as stable.
 _Avoid_: Kanban-owned state, UI-first schema, visual acceptance dependency
 
+**Agent-first Control Surface**:
+Compact typed APIs, CLI commands, event streams, and Skill Contracts through
+which models operate without parsing or manipulating a human interface.
+_Avoid_: DOM automation, screenshot state, prose protocol, dashboard dependency
+
+**Human Peephole**:
+A bounded visual or interactive projection exposing the state, evidence, and
+decisions a human needs without becoming a second control plane or source of
+truth.
+_Avoid_: duplicated state, admin console authority, full internal data dump
+
+**Task Read Model**:
+A disposable SQLite projection of the hash-chained task journal used for fast
+agent and Kanban queries and rebuilt deterministically rather than migrated as
+canonical truth.
+_Avoid_: source database, unique record, manual board state
+
 **Projection Independence**:
 The rule that visual layout and styling may change without changing or blocking
 canonical task semantics, provided authority, safety, privacy, attention, and

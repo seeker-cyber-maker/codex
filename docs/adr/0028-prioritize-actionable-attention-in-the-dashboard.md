@@ -17,6 +17,12 @@ to structured lifecycle events. Failed, cancelled, superseded, and stale states
 remain visible through explicit filters and card history rather than being
 folded into `done`.
 
+The Kanban is exclusively a human visual projection. Agents do not inspect its
+DOM, infer state from card position, drag cards, read screenshots, or depend on
+its layout to work. They consume the underlying typed task, event, attention,
+assignment, and receipt interfaces directly. A visual failure may reduce the
+human's peephole without making canonical state unavailable to agents.
+
 The Attention Queue is a deterministic projection over those cards, not a
 second task list. Notifications link to and emphasize the affected canonical
 card. The Primary Action opens that card's decision panel, while compact
