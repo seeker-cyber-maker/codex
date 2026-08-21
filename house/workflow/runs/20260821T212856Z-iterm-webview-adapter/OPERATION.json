@@ -1,0 +1,26 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "iterm-webview-adapter-v1",
+  "record_revision": 1,
+  "run_id": "20260821T212856Z-iterm-webview-adapter",
+  "intent": "Render verified display batches as inert HTML and define an unbound iTerm WebView registration",
+  "target_identity": "house/terminal_companion",
+  "authority_scope": {
+    "read": ["verified iTerm display-batch chains", "installed iTerm Python API source"],
+    "write": ["additive house source, tests, and workflow evidence"],
+    "network": ["none during implementation and tests"],
+    "external_effect_class": "LOCAL_REVERSIBLE_SOURCE_EDIT"
+  },
+  "owner": "root",
+  "idempotency": {"key": "iterm-webview-adapter-v1"},
+  "retry_budget": 1,
+  "resource_budget": [
+    {"resource": "display_batches", "unit": "batches", "hard_cap": 64},
+    {"resource": "rendered_text", "unit": "characters", "hard_cap": 2000000},
+    {"resource": "rendered_document", "unit": "bytes", "hard_cap": 10485760}
+  ],
+  "cancellation": {"supported": true, "method": "revert additive house files"},
+  "expected_artifacts": ["webview.py", "focused tests", "validation receipt"],
+  "acceptance_verifier": "offline deterministic tests and static checks",
+  "reconciliation": {"required": true, "method": "confirm zero live transports and zero iTerm API calls"}
+}

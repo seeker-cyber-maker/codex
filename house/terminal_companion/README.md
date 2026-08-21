@@ -20,6 +20,18 @@ separate connection-scoped `command/exec/outputDelta` protocol.
 It does not connect to iTerm, sockets, running Codex, rollouts, or native
 databases. Capture and live subscription are separate future integrations.
 
+The offline WebView renderer turns a complete verified display-batch chain into
+a self-contained HTML document for a future iTerm2 toolbelt WebView. It has no
+scripts, links, forms, images, external resources, or network permissions; all
+card text is HTML-escaped and the content-security policy denies every source
+except the document's fixed inline style. The companion registration descriptor
+is deliberately unbound: it permits only a future capability-bearing loopback
+URL and records that iTerm registration and transport were not attempted.
+That policy is descriptive, not access control: URL and capability validation
+are explicitly unimplemented and required before the descriptor may be bound.
+`Session.async_send_text`, terminal-window command launch, and Buddy relay are
+not part of this surface.
+
 The optional display-batch wrapper adds an explicit protocol revision,
 compatibility floor, sequence, previous-batch link, deterministic batch id, and
 an offline full-chain verifier. It is one-way (`CODEX_TO_ITERM`), observe-only,

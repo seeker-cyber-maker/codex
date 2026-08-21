@@ -1,0 +1,35 @@
+{
+  "schema": "codex-house-validation/1",
+  "run_id": "20260821T212856Z-iterm-webview-adapter",
+  "status": "passed_offline_renderer",
+  "checks": {
+    "terminal_companion_tests": 22,
+    "webview_focused_tests": 4,
+    "house_regression_tests": 90,
+    "html_escaping": "passed",
+    "static_csp": "passed",
+    "complete_chain_verification": "passed",
+    "total_chain_bounds": "passed",
+    "registration_descriptor": "unbound",
+    "url_capability_validation": "not_implemented_blocks_binding",
+    "ruff_changed_scope": "passed",
+    "ruff_format_changed_scope": "passed",
+    "python_compile": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "independent_read_only_review": "passed_with_future_binding_caveat",
+    "repository_just_fmt": "passed_after_installing_required_just_and_dotslash_tools",
+    "repository_ruff_baseline": "pre_existing_failures_outside_changed_scope"
+  },
+  "observed_effects": {
+    "provider_requests": 0,
+    "network_requests_during_adapter_tests": 0,
+    "iterm_api_connections": 0,
+    "buddy_relay_connections": 0,
+    "loopback_servers": 0,
+    "terminal_input_events": 0,
+    "native_codex_state_writes": 0,
+    "application_updates": 0
+  },
+  "claim_ceiling": "offline verified-chain HTML rendering and unbound registration description only; no URL validator, server, live iTerm registration, or Codex transport"
+}
