@@ -1,8 +1,13 @@
 from __future__ import annotations
 
+import json
 import unittest
 
-from house.terminal_companion import CompanionProjectionError, project_notifications
+from house.terminal_companion import (
+    CompanionProjectionError,
+    project_jsonl,
+    project_notifications,
+)
 
 
 def command(status: str = "completed") -> dict[str, object]:
@@ -35,3 +40,11 @@ class ProjectorTests(unittest.TestCase):
     def test_incomplete_command_status_fails_closed(self) -> None:
         with self.assertRaisesRegex(CompanionProjectionError, "unsupported"):
             project_notifications([command("inProgress")])
+
+    def test_jsonl_capture_is_projected_without_opening_a_live_stream(self) -> None:
+        cards = project_jsonl('{"method":"item/started","params":{}}\n' + json.dumps(command()))
+        self.assertEqual(cards[0]["item_id"], "exec-1")
+
+    def test_bad_jsonl_line_fails_closed_with_its_line_number(self) -> None:
+        with self.assertRaisesRegex(CompanionProjectionError, "line 2"):
+            project_jsonl('{"method":"item/started"}\nnot-json')

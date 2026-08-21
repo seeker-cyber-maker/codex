@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from typing import Any
 
 
@@ -53,3 +54,16 @@ def project_notifications(notifications: list[object]) -> list[dict[str, Any]]:
             "dispatch": "NOT_ATTEMPTED",
         })
     return cards
+
+
+def project_jsonl(source: str) -> list[dict[str, Any]]:
+    """Project an append-only exported JSONL capture without opening it live."""
+    notifications: list[object] = []
+    for line_number, line in enumerate(source.splitlines(), start=1):
+        if not line.strip():
+            continue
+        try:
+            notifications.append(json.loads(line))
+        except json.JSONDecodeError as exc:
+            raise CompanionProjectionError(f"invalid JSONL notification at line {line_number}") from exc
+    return project_notifications(notifications)
