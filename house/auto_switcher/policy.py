@@ -66,6 +66,20 @@ OMP_PROFILE = {
     "general": ("default", "medium", "balanced"),
 }
 
+# Snapshot of the observed OMP control semantics.  A role selects a permitted
+# model class; ``defaultThinkingLevel: auto`` is a separate provider thinking
+# control.  This policy deliberately records both rather than conflating the
+# status-line ``auto`` suffix with cross-model routing.
+OMP_RUNTIME_BASELINE = {
+    "thinking_level": "auto",
+    "prewalk_enabled": False,
+    "retry_fallback_enabled": True,
+    "fallback_chain_configured": False,
+    "context_promotion_enabled": False,
+}
+OMP_ROLE_SET = frozenset({"smol", "task", "plan", "default"})
+OMP_THINKING_LEVELS = frozenset({"auto", "off", "low", "medium", "high", "xhigh"})
+
 CASE_TYPE_PROFILE = {
     "command_debug": ("smol", "low", "cheapest_acceptable"),
     "dependency_repair": ("task", "medium", "balanced"),
@@ -157,6 +171,45 @@ def select_profile(role: str, risk: str, context_tokens: int, case_type: str = "
     return {"model_class": model_class, "reasoning_effort": effort, "omp_policy": policy}
 
 
+def omp_compatibility(task: dict[str, Any], profile: dict[str, str]) -> dict[str, str]:
+    """Emit OMP-compatible controls without changing a live model session.
+
+    The default is the currently observed OMP behavior: automatic thinking,
+    no prewalk handoff, retry fallback enabled but no configured chain, and no
+    context-overflow promotion.  A future qualified adapter may supply its
+    observed ``omp_prewalk_enabled`` state; no task text can turn it on.
+    """
+    requested_role = profile["model_class"]
+    if requested_role not in OMP_ROLE_SET:
+        requested_role = "default"
+    thinking_level = _canonical(
+        task.get("omp_thinking_level"), set(OMP_THINKING_LEVELS), OMP_RUNTIME_BASELINE["thinking_level"]
+    )
+    prewalk_enabled = bool(task.get("omp_prewalk_enabled", OMP_RUNTIME_BASELINE["prewalk_enabled"]))
+    plan_sealed = bool(task.get("plan_sealed", False))
+    first_write_completed = bool(task.get("first_write_completed", False))
+    effective_role = requested_role
+    if not prewalk_enabled:
+        prewalk_state = "DISABLED"
+    elif not plan_sealed:
+        prewalk_state = "ARMED_WAITING_FOR_PLAN"
+    elif not first_write_completed:
+        prewalk_state = "ARMED_WAITING_FOR_FIRST_WRITE"
+    else:
+        effective_role = "smol"
+        prewalk_state = "HANDOFF_TO_SMOL_AFTER_FIRST_WRITE"
+    return {
+        "mode": "ADVISORY_NO_DISPATCH",
+        "native_thinking_level": thinking_level,
+        "effort_advisory": profile["reasoning_effort"],
+        "requested_model_role": requested_role,
+        "effective_model_role": effective_role,
+        "prewalk": prewalk_state,
+        "retry_fallback": "ENABLED_NO_CHAIN" if OMP_RUNTIME_BASELINE["retry_fallback_enabled"] else "DISABLED",
+        "context_promotion": "DISABLED" if not OMP_RUNTIME_BASELINE["context_promotion_enabled"] else "ENABLED",
+    }
+
+
 def route_task(task: dict[str, Any], routes: tuple[dict[str, Any], ...] = DEFAULT_ROUTES) -> dict[str, Any]:
     """Select the cheapest eligible route, with deterministic safe fallback.
 
@@ -208,6 +261,7 @@ def route_task(task: dict[str, Any], routes: tuple[dict[str, Any], ...] = DEFAUL
     profile = select_profile(
         requested["role"], requested["risk"], requested["context_tokens"], requested["case_type"]
     )
+    omp_compat = omp_compatibility(task, profile)
     return _receipt({
         "schema": "codex-house-auto-route/1",
         "state": state,
@@ -216,6 +270,7 @@ def route_task(task: dict[str, Any], routes: tuple[dict[str, Any], ...] = DEFAUL
         "detected_case_types": detected_case_types,
         "selected": {key: selected[key] for key in ("id", "provider", "quality", "cost", "privacy", "delivery")},
         "profile": profile,
+        "omp_compat": omp_compat,
         "rejected": rejected,
         "dispatch": "NOT_ATTEMPTED",
         "next_action": "DECOMPOSE_WITHOUT_BLOCKING" if case_type == "compound" else "CONTINUE",

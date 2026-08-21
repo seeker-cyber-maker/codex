@@ -18,6 +18,22 @@ applies hard filters for route health, route enablement, role,
 capabilities, privacy, context, quality, cost, and delivery. It emits a
 hash-bound decision receipt with `dispatch: NOT_ATTEMPTED`.
 
+## OMP compatibility
+
+OMP's model role and thinking controls are separate. This policy emits an
+`omp_compat` receipt that preserves that distinction: it recommends a role
+(`smol`, `task`, `plan`, or `default`) and records the native thinking setting
+separately, defaulting to `auto`. The receipt labels this `ADVISORY_NO_DISPATCH`:
+it neither changes the active OMP/Codex model nor presents a thinking-level
+recommendation as proof that a switch occurred.
+
+The observed OMP baseline is prewalk disabled, retry fallback enabled without
+a configured fallback chain, and context promotion disabled. A qualified future
+adapter can provide its observed prewalk state. Only after it reports prewalk
+enabled, a sealed plan, and completion of the first write does this policy
+recommend the OMP-style handoff to `smol`; it never infers that transition from
+prompt wording.
+
 Ambiguous multi-purpose prompts do not create a clarification loop. The policy
 records every matching case signal in `detected_case_types`, pins the packet to
 the `compound` case, selects `plan`/high, and emits

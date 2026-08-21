@@ -53,6 +53,37 @@ class AutoSwitcherTests(unittest.TestCase):
         self.assertEqual(receipt["profile"], {"model_class": "plan", "reasoning_effort": "high", "omp_policy": "quality_first"})
         self.assertEqual(receipt["next_action"], "DECOMPOSE_WITHOUT_BLOCKING")
 
+    def test_omp_native_auto_thinking_is_distinct_from_role_selection(self) -> None:
+        receipt = route_task({"summary": "design the architecture"})
+        self.assertEqual(receipt["profile"]["model_class"], "plan")
+        self.assertEqual(receipt["omp_compat"], {
+            "mode": "ADVISORY_NO_DISPATCH",
+            "native_thinking_level": "auto",
+            "effort_advisory": "high",
+            "requested_model_role": "plan",
+            "effective_model_role": "plan",
+            "prewalk": "DISABLED",
+            "retry_fallback": "ENABLED_NO_CHAIN",
+            "context_promotion": "DISABLED",
+        })
+
+    def test_qualified_omp_prewalk_hands_off_only_after_the_first_write(self) -> None:
+        pending = route_task({
+            "summary": "design the architecture",
+            "omp_prewalk_enabled": True,
+            "plan_sealed": True,
+        })
+        completed = route_task({
+            "summary": "design the architecture",
+            "omp_prewalk_enabled": True,
+            "plan_sealed": True,
+            "first_write_completed": True,
+        })
+        self.assertEqual(pending["omp_compat"]["effective_model_role"], "plan")
+        self.assertEqual(pending["omp_compat"]["prewalk"], "ARMED_WAITING_FOR_FIRST_WRITE")
+        self.assertEqual(completed["omp_compat"]["effective_model_role"], "smol")
+        self.assertEqual(completed["omp_compat"]["prewalk"], "HANDOFF_TO_SMOL_AFTER_FIRST_WRITE")
+
     def test_recurring_work_modes_are_conservative_and_deterministic(self) -> None:
         cases = (
             ("recover lost chats from the forensic records", "incident_recovery", "plan", "high"),
