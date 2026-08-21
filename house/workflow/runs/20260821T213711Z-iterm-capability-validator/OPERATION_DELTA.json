@@ -1,0 +1,16 @@
+{
+  "schema": "project-operation-delta/1",
+  "operation_id": "iterm-capability-validator-v1",
+  "record_revision": 2,
+  "prior_record_sha256": "30af5c8f7a689ff8af3bd6f47f2387911f6d56b375ddaba5e9017b6ccfe62f14",
+  "observed_variance": "Primary corroboration opened the public pv project page and online manual although the original network field named YouTube retrieval only",
+  "added_public_read_targets": [
+    "https://www.ivarch.com/programs/pv.shtml",
+    "https://www.ivarch.com/programs/quickref/pv.shtml"
+  ],
+  "external_effect_class": "PUBLIC_READ_ONLY",
+  "credentials_or_private_data": "NONE",
+  "recorded_timing": "POST_OBSERVATION",
+  "authority_effect": "NO_RETROACTIVE_AUTHORIZATION; VARIANCE PRESERVED FOR AACR",
+  "disposition": "BOUNDED_PROCESS_VARIANCE_NO_FURTHER_NETWORK"
+}

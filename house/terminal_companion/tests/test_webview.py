@@ -79,10 +79,8 @@ class WebViewTests(unittest.TestCase):
         self.assertEqual(descriptor["surface"], "ITERM_TOOLBELT_WEBVIEW")
         self.assertIsNone(descriptor["url"])
         self.assertEqual(descriptor["url_state"], "UNBOUND")
-        self.assertEqual(descriptor["url_validation"], "NOT_IMPLEMENTED")
-        self.assertEqual(
-            descriptor["binding_gate"], "VALIDATOR_REQUIRED_BEFORE_BINDING"
-        )
+        self.assertEqual(descriptor["url_validation"], "IMPLEMENTED_OFFLINE_UNBOUND")
+        self.assertEqual(descriptor["binding_gate"], "LIVE_BINDING_REVIEW_REQUIRED")
         self.assertEqual(descriptor["authority"], "OBSERVE_ONLY")
         self.assertEqual(descriptor["reverse_channel"], "PROHIBITED")
         self.assertEqual(descriptor["terminal_input"], "PROHIBITED")

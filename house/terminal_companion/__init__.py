@@ -1,5 +1,10 @@
 """Read-only projection of exported Codex command events for a terminal companion."""
 
+from .capability import (
+    CapabilityGrant,
+    CapabilityValidationError,
+    LoopbackCapabilityValidator,
+)
 from .display_batch import (
     build_display_batch,
     evaluate_compatibility,
@@ -12,7 +17,10 @@ from .webview import (
 )
 
 __all__ = [
+    "CapabilityGrant",
+    "CapabilityValidationError",
     "CompanionProjectionError",
+    "LoopbackCapabilityValidator",
     "build_display_batch",
     "build_webview_registration_descriptor",
     "evaluate_compatibility",

@@ -1,0 +1,835 @@
+[00:00:00.000] All right, so today I want to talk about
+[00:00:01.120] the PV command or the pipe viewer
+[00:00:03.840] command. It's super cool. We've used it
+[00:00:05.680] before on this channel. I think it is
+[00:00:07.279] amazing. At its core, it is a simple
+[00:00:09.360] Unix utility you can pipe programs into
+[00:00:11.519] or you can redirect output from. It
+[00:00:13.440] reads from standard in, it writes to
+[00:00:15.040] standard out just like cat, just like
+[00:00:16.640] you know DD or whatever. But you can get
+[00:00:18.880] statistics from it. You can get progress
+[00:00:21.279] bars. You can get all sorts of things.
+[00:00:22.800] It is a super cool thing to throw into
+[00:00:24.560] your shell pipelines and kind of get
+[00:00:26.240] some insight into what's going on. Not
+[00:00:27.920] going to waste time describing it. Let's
+[00:00:29.039] just jump right in. All right, so PV is
+[00:00:30.400] a really cool command and it has a ton
+[00:00:31.599] of usages. Okay, let's imagine I want to
+[00:00:33.600] cat a really big file. I have user share
+[00:00:35.840] dict words on my system. I run this.
+[00:00:38.160] There is a giant word list here. There's
+[00:00:39.840] a ton of different words. If I pipe this
+[00:00:41.600] to word count minus L, we can see there
+[00:00:43.040] are 235,000 words. Okay, that's a ton. I
+[00:00:46.320] can pipe this to PV. And now we get a
+[00:00:49.680] progress bar on how long it took to
+[00:00:51.600] actually write that to the screen. This
+[00:00:53.280] is a really stupid example because it
+[00:00:54.960] wrote it almost instantaneously. Look,
+[00:00:56.320] it took 0 seconds. It read it this fast
+[00:00:58.559] and this is how much data it had to
+[00:00:59.920] read. So at 38 megs a second it read 2
+[00:01:02.160] megs pretty fast in less than a second.
+[00:01:04.559] Well, okay, what do we do? We use cat.
+[00:01:06.320] What if we were to use slowcat? Slowcat
+[00:01:09.200] is a program as you can guess. It's like
+[00:01:11.119] cat but it's slow. So let's do this and
+[00:01:13.600] see what happens. Okay, we're printing
+[00:01:15.200] out the information and we have a nice
+[00:01:16.560] little progress bar there. That's pretty
+[00:01:18.400] cool. But the progress bar is kind of a
+[00:01:20.000] mess. So typically what you would do is
+[00:01:22.080] you would redirect this. Say we were
+[00:01:23.200] redirect this to like a file. We could
+[00:01:24.560] redirect this to a network source. We
+[00:01:25.840] could redirect this to dev null. So look
+[00:01:28.080] at this. Now we can see we can get an
+[00:01:30.479] idea of how fast slowcat is running.
+[00:01:33.280] Obviously this could be any command.
+[00:01:34.400] This could be any command you're running
+[00:01:35.600] that outputs data to standard out that
+[00:01:36.960] you want to do in your pipeline or
+[00:01:38.159] whatever. And you just want a progress
+[00:01:39.680] bar. This is a super fast way to get a
+[00:01:42.320] nice progress bar here. Look, you can
+[00:01:44.320] see it's read in 699 bytes. It's taken
+[00:01:47.759] 20 seconds so far. It's reading at
+[00:01:49.360] around 42 bytes a second. And this
+[00:01:51.439] progress bar, it doesn't know the size
+[00:01:53.119] of the file cuz think about it. Slowcat
+[00:01:55.200] is the one reading this file. PV doesn't
+[00:01:57.600] know the size of that file. So, it can't
+[00:01:59.439] actually estimate how long it's going to
+[00:02:01.520] take. We can give it to it as an
+[00:02:03.840] argument. PV would normally try and
+[00:02:05.280] detect it if it was given the name of
+[00:02:06.560] the file as an argument, but then PV
+[00:02:07.920] would just read from that file directly.
+[00:02:09.119] So, we can kind of we get we can help it
+[00:02:10.959] out a little bit. So, if we do an L-sher
+[00:02:13.760] share dict words, we can see that it's a
+[00:02:16.000] sim link. I always forget this to web
+[00:02:17.440] two. Let's go ahead and look at web two.
+[00:02:18.959] We can see that here. Here is the size
+[00:02:21.280] of the file in bytes. That's how big
+[00:02:23.040] this file is. So, we can help out PV. If
+[00:02:25.920] we know this information, we can do a
+[00:02:27.680] d-size and give it here. And this tells
+[00:02:30.720] PV basically when calculating the
+[00:02:32.800] progress. Here's the denominator. Okay,
+[00:02:34.959] we've read or 200 bytes out of this many
+[00:02:38.480] bytes. And you can see my ETA is this
+[00:02:40.480] will take 17 hours to run at the current
+[00:02:43.120] speed. We're not going to sit here for
+[00:02:44.480] that long. Oh, 16 hours. Look, it's even
+[00:02:45.920] going a little bit faster. So, now it
+[00:02:47.519] knows a percentage. It knows an ETA.
+[00:02:49.920] This is super cool. This is super
+[00:02:51.280] awesome. When you're piping into PV, it
+[00:02:53.519] can't know the name of the size unless
+[00:02:55.280] you give it some sort of hint. This is
+[00:02:56.640] your hint into PV. Here's something
+[00:02:58.400] cool. You're probably wondering, Dave,
+[00:02:59.920] what is slowcat? I don't have that on my
+[00:03:01.519] system. Is that just a version of cat
+[00:03:02.879] that's slow? Check this out. Are you
+[00:03:04.400] ready for this?
+[00:03:06.400] Look at this. Slowcat's an alias on my
+[00:03:08.640] system. What's it an alias to? PV. It's
+[00:03:10.879] an alias to PV. So, Slowcat ran this.
+[00:03:14.720] Let's go ahead and run that oursel
+[00:03:16.640] because this is exactly what's being
+[00:03:17.840] run, right? We run this and we get this.
+[00:03:22.080] So, how is it accomplishing it? There's
+[00:03:23.599] got to be something going on here. We're
+[00:03:24.640] passing it a L. We're passing it a dash
+[00:03:26.879] cap L5 and a dash q. Let's go figure out
+[00:03:29.680] what those are.
+[00:03:32.080] First thing we were passing was a dashl.
+[00:03:35.120] I think we pipe this to highlight for L.
+[00:03:39.680] And there you go. You can see it's
+[00:03:40.720] highlighted right here. Line mode. Count
+[00:03:42.720] lines instead of bytes. So, we put this
+[00:03:44.319] in line mode. So, PV is expecting lines
+[00:03:46.000] instead of bytes. This is relevant for
+[00:03:47.760] the next flag that we used which was -
+[00:03:49.920] capl. Go ahead and search for this.
+[00:03:51.599] We'll highlight it. And look right here.
+[00:03:53.360] Rate limit limit transfer to rate bytes
+[00:03:56.319] per second. So as you can see right
+[00:03:58.480] here, we were running -l5. This tells it
+[00:04:01.680] process five bytes a second. Now here's
+[00:04:04.400] the thing. We put in line mode. So now
+[00:04:06.000] it doesn't mean bytes, it means five
+[00:04:07.439] lines a second. Look at this. This is
+[00:04:09.840] outputting a line. This is outputting
+[00:04:11.439] five lines in a second or a line every 2
+[00:04:14.239] seconds. That's what's happening here.
+[00:04:16.000] If we were to get rid of that first -L,
+[00:04:18.479] we're going to put it into bite mode
+[00:04:19.519] instead of line mode. And now it's
+[00:04:21.359] processing five bytes a second. So as
+[00:04:23.440] you can see, it's one character every 2
+[00:04:26.000] seconds. So a little bit different. PV
+[00:04:28.160] is super nice just for having a line
+[00:04:30.000] mode, a line aware mode. It makes it
+[00:04:31.680] super useful for these kind of
+[00:04:33.360] situations where you're not dealing with
+[00:04:34.400] binary data, you're dealing with text
+[00:04:35.680] data. So by default, PV kind of works
+[00:04:37.199] with raw binary data. You can give it a
+[00:04:38.880] dash L to work in line mode. There is
+[00:04:40.960] also a - Q there. You could probably
+[00:04:43.600] guess what it is just based on the name.
+[00:04:44.960] I don't know why I called the man page.
+[00:04:46.080] There's also a really nice man page. Man
+[00:04:47.280] page is super nice. Let's do a PV minus
+[00:04:49.680] HL4
+[00:04:52.400] Q I believe it was. And -ash Q is quiet.
+[00:04:56.639] Do not output any transfer information
+[00:04:58.240] at all. So PV is super good because it
+[00:05:00.240] can be a rate limiter without actually
+[00:05:01.840] outputting a progress bar. So even
+[00:05:03.120] though it's called pipe viewer, it can
+[00:05:04.320] actually modify some of the behavior of
+[00:05:06.160] it or at least slow it down. So you
+[00:05:08.080] could like PV a file with a rate limit
+[00:05:11.039] of like 100 bytes and then you could
+[00:05:12.880] pipe that to SSH and write that out to a
+[00:05:14.800] file on a remote end. I just came up
+[00:05:17.199] with that example. Why why don't I just
+[00:05:18.639] show that example cuz that that example
+[00:05:20.400] seems super cool. Uh let's what actually
+[00:05:23.280] we have a file right here, don't we? We
+[00:05:24.639] have user share dict words. Let's change
+[00:05:26.479] this to do I don't know 5,000 lines a
+[00:05:28.880] second. Um no, that's still not going to
+[00:05:31.520] finish any sort of timely matter. Let's
+[00:05:32.880] change this to be
+[00:05:35.039] 10,000 lines
+[00:05:38.960] 50,000 lines a second. There we go.
+[00:05:41.600] That's significantly faster, but not
+[00:05:43.520] fast enough where if you blink, you miss
+[00:05:44.960] it. So now we have this PV command. We
+[00:05:47.280] could pipe that to SSH void, which is
+[00:05:49.759] the name of a system I have. You would
+[00:05:51.039] just put your system name here. And then
+[00:05:52.639] we could write it to cat read in from
+[00:05:54.960] standard in redirect to words.ext. And
+[00:05:58.800] if you run this, it will work. But we
+[00:06:01.520] have the -ashq flag because it's quiet.
+[00:06:03.280] Let's go ahead and get rid of that -ashq
+[00:06:05.759] flag. And look at what happens here. We
+[00:06:08.080] have a progress bar. We have a progress
+[00:06:10.240] bar. Obviously, you could just SCP the
+[00:06:12.400] file over. But this is super useful if
+[00:06:14.080] you're in some sort of pipeline. If I
+[00:06:16.240] were running like tar-c to create a tar
+[00:06:18.960] file instead of saying file.tar, I could
+[00:06:21.440] say a hyphen here. I could say let's tar
+[00:06:23.600] up um my bin directory. I could pipe
+[00:06:26.560] that to pv. And then I could pipe that
+[00:06:28.639] to sshvoid and then cat that into
+[00:06:33.280] bin.tar. You could do something like
+[00:06:35.120] that if you wanted that kind of a
+[00:06:36.400] progress bar. So it doesn't exist as a
+[00:06:38.319] file. It gets turned into a file in
+[00:06:39.919] remote. But PV will still give you that
+[00:06:41.360] progress bar. But yeah, look how nice
+[00:06:42.880] this is. That is super nice and it just
+[00:06:45.039] works. We can verify this. I'll verify
+[00:06:47.039] this is once it's done. We can just SSH
+[00:06:48.639] into void and we can do a word count-l
+[00:06:51.759] on words.ext. And we can see that we
+[00:06:53.440] have the whole file there. It's on this
+[00:06:55.199] remote machine. So that's super cool.
+[00:06:57.039] That's awesome. Also, if you noticed, I
+[00:06:58.800] kind of glossed over some things. I'll
+[00:07:00.000] help you out real quick. There's a ton
+[00:07:01.360] of stuff here, guys. I can't go over all
+[00:07:02.960] this in a video. I would say spend some
+[00:07:04.400] time looking through this. There's a ton
+[00:07:05.680] of things Pipe Viewer can do. It is
+[00:07:07.440] super cool software. Shout out Pipe
+[00:07:09.280] Viewer, dude. It's just awesome. Also,
+[00:07:10.800] people are going to ask, I always get
+[00:07:12.000] comments on this. HL to highlight text
+[00:07:14.080] is actually just rip GP with the
+[00:07:15.599] d-passrough flag. So, that's all that's
+[00:07:17.199] going on there. That's how I highlight
+[00:07:18.479] text. It's like GP, but it doesn't
+[00:07:19.520] actually do any filtering. Also, while
+[00:07:20.800] we're here, I kind of just mentioned it
+[00:07:22.240] in passing, but I think it would make a
+[00:07:23.599] good example. Let's say we're going to
+[00:07:25.120] tar something. Okay, we'll do tar cf to
+[00:07:27.520] create a tar. We'll call it file.tar and
+[00:07:29.599] we'll tar up our /bin directory. Okay,
+[00:07:32.080] we get a little warning, but it still
+[00:07:33.280] worked. We can look at this file with
+[00:07:35.039] ls-lh and we can see that as a 10
+[00:07:37.360] megabyte file. Okay, cool. That's
+[00:07:39.199] awesome. We can also gzip this file. So,
+[00:07:41.440] this will get rid of the original file
+[00:07:42.639] and it will compress it. Now, if we do
+[00:07:44.479] an ls-h, I'm going to tab complete.
+[00:07:46.639] Notice the original file is gone. We
+[00:07:47.759] just have the tar.gz 3.6 meg. So, we
+[00:07:50.319] compress it from 10 to 3.6. That's super
+[00:07:52.560] cool. Here's the thing. We could do that
+[00:07:54.240] all in a pipeline. Instead of having to
+[00:07:56.160] create the intermediate file on our file
+[00:07:58.000] system, we can do it all at once. We can
+[00:07:59.520] say cfen for the name of the file which
+[00:08:01.680] will be standard out. And we can tar up
+[00:08:04.639] /bin. This will just emit them to the
+[00:08:06.960] screen. This will just emit bytes to the
+[00:08:08.639] screen. You probably don't want this. I
+[00:08:09.759] can show it to you guys. If I pipe it to
+[00:08:10.960] a hex dump, you can see that like, wow,
+[00:08:13.199] that looks really cool. I look like a
+[00:08:14.560] hacker on like some Hollywood movie.
+[00:08:16.560] It's not actually useful. First of all,
+[00:08:18.080] we could pipe it to gzip. And now we
+[00:08:22.000] have the compressed data going to the
+[00:08:23.520] screen. So very much the same thing.
+[00:08:24.879] It's going to be just a lot of this but
+[00:08:26.160] with a lot less zeros. It's going to
+[00:08:27.759] look more like random data kind of. Now
+[00:08:30.560] we have the gzip version. We could write
+[00:08:32.560] this out to file.tar.gz.
+[00:08:35.599] Look at the file. And we can see that
+[00:08:37.440] it's 3.6 megs again. It's basically
+[00:08:39.279] going to be the same file. So why did I
+[00:08:40.719] do that? Because we have a pipeline.
+[00:08:42.560] Look at this. We have a pipeline. We
+[00:08:43.919] could just pipe PV here. You could pipe
+[00:08:47.279] cat here if you wanted. It would do
+[00:08:48.720] nothing. thing. Cat reads in from
+[00:08:49.760] standard in standard out. It's totally
+[00:08:50.959] fine to throw it here. Instead, let's
+[00:08:52.720] just throw PV here and let's see what
+[00:08:54.720] happens. Look at that. We got a progress
+[00:08:57.519] bar. Now, this run this ran way too
+[00:09:00.560] fast. Look, we processed 31 megs a
+[00:09:02.160] second. The input file is only 10 megs.
+[00:09:04.080] So, that's not super useful again. But
+[00:09:06.240] if we were to give it, let's give it a
+[00:09:08.080] bigger directory. I'm trying to think of
+[00:09:09.360] a big directory. I'm on my Mac, so I can
+[00:09:12.240] just give it the movies directory. We
+[00:09:13.760] can just give it the OBS movies. So, I'm
+[00:09:17.200] actually writing to that directory right
+[00:09:18.560] now. Maybe that'll be a bit much. Let's
+[00:09:20.000] just write the projects directory.
+[00:09:21.279] There's a lot of files in here. In fact,
+[00:09:22.959] I'm not even going to write to the file
+[00:09:23.920] system. Let's just go ahead and pipe
+[00:09:25.279] this to dev null. So, let's take a look
+[00:09:27.839] at what we're doing here. We are taring
+[00:09:30.240] this directory to standard out, piping
+[00:09:32.000] it to pv, piping it to jz gzip, and then
+[00:09:34.480] writing it to dev null. And look at
+[00:09:35.920] this. You can see here's the amount of
+[00:09:37.519] data we've processed. Here's how long
+[00:09:39.279] it's been. Here's how fast it's
+[00:09:40.959] currently processing data. Remember,
+[00:09:42.160] it's sitting here. So here's how fast
+[00:09:43.680] data is being written out of tar and
+[00:09:46.160] piped into gzip. And you can see that we
+[00:09:48.320] don't know how much data is here. It's
+[00:09:49.760] still taring the file. Like we have we
+[00:09:51.200] have no idea. So we're not going to get
+[00:09:52.560] a meaningful progress bar. We're just
+[00:09:53.760] going to get some sort of animated thing
+[00:09:54.959] here, which is fine. We don't know the
+[00:09:56.240] size of it. That makes perfect sense. So
+[00:09:58.240] this is super cool. This is awesome to
+[00:10:00.080] see this. Likewise, an alternative way
+[00:10:02.240] of doing this, um, I've seen people do
+[00:10:04.000] this in the past. I think someone even
+[00:10:05.200] commented on one of my videos that they
+[00:10:06.240] had done something like this. Uh, I had
+[00:10:08.480] written out a file. So let's say I want
+[00:10:10.720] to make a file of just zeros, just all
+[00:10:13.040] zeros in the file. Well, that's super
+[00:10:14.560] easy. I can dd the input file would be
+[00:10:17.279] dev zero. And if I run this right now,
+[00:10:19.920] we're just going to spew a whole bunch
+[00:10:21.600] of zeros to the screen. Not the asky
+[00:10:23.920] character zero, but like literal null
+[00:10:25.600] bytes. So if I pipe this, you can see
+[00:10:27.200] they're all null bytes. And it will just
+[00:10:28.880] go forever. It's a pseudo device that
+[00:10:30.880] your colonel gives you, and it's
+[00:10:32.959] beautiful. It's awesome. We can also
+[00:10:34.640] specify an output file. I'm just going
+[00:10:36.240] to say dev null. So we're not doing
+[00:10:38.880] anything. We're reading in a file and
+[00:10:40.480] we're writing it out to DevNull. That's
+[00:10:42.079] super great with DD. I know newer
+[00:10:44.800] versions of DD. I think all of the
+[00:10:47.040] versions I've encountered now have this.
+[00:10:48.560] This wasn't always the case in the past,
+[00:10:50.560] but you now have a status equals
+[00:10:52.560] progress, I believe. And you can get
+[00:10:54.959] this progress bar so you can see like
+[00:10:57.040] how fast it's going, how much it's
+[00:10:58.560] transferred and stuff. But you might be
+[00:11:00.720] in a situation where your output and
+[00:11:02.480] your input's a little bit different.
+[00:11:03.440] Maybe one's coming from a network
+[00:11:04.560] source, maybe you're writing to a
+[00:11:05.600] network source. Who knows? You could
+[00:11:07.519] simulate this with PV. So reading in
+[00:11:10.240] from dev zero, we could pipe it to PV.
+[00:11:12.560] We could pipe it to DD again to output
+[00:11:14.959] to dev null. So this is exactly the
+[00:11:18.000] same, but DD is not giving us the
+[00:11:19.519] status. Pipe viewer is giving us the
+[00:11:21.440] status. So super cool. You can toss that
+[00:11:23.600] in there because then you could do all
+[00:11:24.959] sorts of stuff. Like I could pipe this
+[00:11:26.399] to like netcat and I could just write it
+[00:11:29.839] to like a a server if I had something
+[00:11:31.440] else like listening on port like 50 uh
+[00:11:33.920] 5600 or something. I don't know. I'm
+[00:11:35.440] just making up stuff. But like you could
+[00:11:36.640] totally do something like that. It's
+[00:11:38.320] super cool. It's super useful. Real
+[00:11:40.240] quick, while researching for this video,
+[00:11:41.839] I found this really cool flag to PV I
+[00:11:43.760] did not know existed. PV minus T. Look
+[00:11:47.360] at this. It's just a timer. It's just a
+[00:11:49.920] timer. You could just run PV minus T and
+[00:11:51.680] it's just a timer. So, as long as
+[00:11:53.200] something's running, as long as the
+[00:11:55.200] input is open, if I control D, then I
+[00:11:56.959] can close the standard in, which causes
+[00:11:58.480] PV to be done. It will just emit a timer
+[00:12:00.640] to the screen. This is super useful
+[00:12:02.720] because if you're running a command,
+[00:12:04.480] some really long command, and you pipe
+[00:12:07.680] that to pv minus t, well, that I thought
+[00:12:09.680] I made an alias for that. That would
+[00:12:10.959] have been really cool for the video.
+[00:12:12.240] Just pretend that's an alias. Uh, well,
+[00:12:14.240] actually, I have movie magic.
+[00:12:19.680] So, if we're to take some really long
+[00:12:21.360] command and pipe that to pv minus t,
+[00:12:24.639] look at this. We have a timer. We can
+[00:12:26.880] see how long this command is taking to
+[00:12:28.959] run. As long as it exists somewhere in
+[00:12:30.639] the pipeline, we will get this nice
+[00:12:33.120] little clock here. And PV of course
+[00:12:35.519] reads in from standard in and writes to
+[00:12:36.800] standard out. So you can just toss this
+[00:12:38.160] in your pipeline and still redirect
+[00:12:40.240] right through it. It just silently
+[00:12:42.079] transfers data between the two. Super
+[00:12:44.079] nice. And so
+[00:12:47.200] this was always defined the whole time.
+[00:12:48.639] I didn't just define this for this part
+[00:12:50.399] of the video and cut it. Uh you can see
+[00:12:51.920] that some really long command just
+[00:12:52.880] sleeps for 10 seconds. So if you have a
+[00:12:54.160] command that does something that takes a
+[00:12:55.760] while, in this example, we're just
+[00:12:56.959] fabricating it. You can see that
+[00:12:58.399] sleeping for 10 seconds took 9 seconds.
+[00:13:01.279] So yeah, beautiful. That's awesome. So
+[00:13:03.600] for this example, I'm going to go back
+[00:13:04.800] to the tar command that we had. Tar
+[00:13:07.040] minus cf, right? Just standard out. And
+[00:13:09.600] let's tar up my movie projects just cuz
+[00:13:12.320] I know it's a big directory and there's
+[00:13:13.680] a lot to tar up there. We can pipe this
+[00:13:16.000] to PV. Then we can pipe this to gzip.
+[00:13:19.440] Then we can pipe it to PV again. And we
+[00:13:21.920] can write it to the output file. In this
+[00:13:23.200] example, I'm using dev null. I don't
+[00:13:24.320] want to save any of this data. But we
+[00:13:25.839] can have two PVs running. Okay. And if
+[00:13:28.240] we run this, you only see one thing of
+[00:13:31.920] output here, right? They're both kind of
+[00:13:34.079] trying to output there, and things can
+[00:13:35.760] get a little bit messed up. Luckily, PV
+[00:13:38.399] accounts for this, and you can do
+[00:13:40.320] something to help it. So, the flag that
+[00:13:43.760] it needs is minus C. This is short
+[00:13:45.920] for-cursor.
+[00:13:47.839] And this will allow multiple PVs to work
+[00:13:50.480] in the same pipeline. they will detect
+[00:13:52.320] they're on the same terminal and they
+[00:13:53.760] will format themselves nicely and they
+[00:13:55.200] will both take up one line. So you can
+[00:13:57.600] see that okay one of them's operating at
+[00:13:59.199] this speed and the other one's operating
+[00:14:00.320] at this speed. So they have different
+[00:14:02.079] bite counts now. Now as you can see the
+[00:14:04.079] bite count's a little bit different.
+[00:14:05.040] Look the one at the top is a little bit
+[00:14:06.320] bigger. So I'm willing to bet the one's
+[00:14:07.760] a little bit bigger is here and the
+[00:14:09.519] one's a little bit smaller is here
+[00:14:10.800] because this one's after compression and
+[00:14:12.480] this one's before compression. But
+[00:14:14.959] that's just a gamble. That's a bet
+[00:14:16.800] because the way pipelines are executed
+[00:14:18.480] in bash and other shells, at least the
+[00:14:20.399] ones that I'm aware of, there's no
+[00:14:21.760] guarantee of the order that these are
+[00:14:22.959] executed in. All these commands will be
+[00:14:24.399] executed pretty much at the same time.
+[00:14:25.920] You can think of it as the same time.
+[00:14:27.199] And they all get wired together like
+[00:14:29.199] this. So it's not like tar runs and then
+[00:14:31.120] PV runs and then gzip runs then PV runs.
+[00:14:33.360] This messes up a lot of people when they
+[00:14:34.800] deal with terminals when they first
+[00:14:36.240] learn the terminal or the shell. These
+[00:14:37.920] all start running at the same time
+[00:14:39.279] because this PV needs to be running
+[00:14:41.040] reading from gzip which needs to be
+[00:14:42.240] running reading from PV which needs to
+[00:14:43.600] be running reading from tar. They all
+[00:14:44.639] have to be able to write to some sort of
+[00:14:45.839] valid target. So, the processes have to
+[00:14:47.519] be in place before they even start
+[00:14:48.880] talking. They're not aware of which
+[00:14:50.320] one's running first and which one's
+[00:14:51.600] running second. They just take the first
+[00:14:53.920] slot that's available. I think we got
+[00:14:56.079] lucky here and we won the race and we
+[00:14:58.639] and it worked out like this, but it may
+[00:15:00.240] not in the future. So, what you can do
+[00:15:02.160] to account for this is there is another
+[00:15:04.320] flag-
+[00:15:05.839] name or dash capen. Um, if you do dash
+[00:15:09.519] capn, you could say tar here and we can
+[00:15:12.480] go over here and we can say dashcapen
+[00:15:14.800] gzzip. So we give them both names. Of
+[00:15:17.040] course you can condense these flags if
+[00:15:18.399] you wanted capen. I do this a lot. When
+[00:15:21.360] you run this, take a look at this. We
+[00:15:23.920] have the tar and we have the gzip. And
+[00:15:26.240] now you can clearly see which one is
+[00:15:28.720] running. So it makes sense. And we got
+[00:15:30.320] the same order again. The smaller value
+[00:15:32.160] is the gzip, which makes perfect sense
+[00:15:33.760] cuz we're compressing it. We should be
+[00:15:34.880] able to to shrink down some of these
+[00:15:37.040] bytes, you know. So, this is super cool.
+[00:15:39.360] You can give it the dash C and the D-
+[00:15:40.880] capital N flag. Now, I'm thinking about
+[00:15:42.240] it, you can totally just like contrive a
+[00:15:43.760] scenario, too. Let me think. You don't
+[00:15:45.040] actually have to give it any input. We
+[00:15:46.240] can just run PV on its own. If we just
+[00:15:47.680] run this, it should just run like it
+[00:15:49.839] doesn't have to do anything. No data is
+[00:15:51.360] being transferred between the two. Uh, I
+[00:15:54.320] kind of like seeing the data transfer.
+[00:15:55.519] Let's just pipe yes into PV. So, you
+[00:15:57.440] know, yes, just outputs wide to the
+[00:15:58.720] screen like that. We could pipe yes into
+[00:16:01.199] PV. And we can say line mode-cap
+[00:16:05.040] will allow five lines at a time. So this
+[00:16:07.360] is what we get. There's also a progress
+[00:16:10.160] bar there. So let's give it a minus C.
+[00:16:12.079] So we're in cursor mode and a dash capn
+[00:16:14.399] so we can give it a name. And we will
+[00:16:15.680] call this one. The name of it is one. So
+[00:16:19.040] we get that. And you can see well it's a
+[00:16:21.920] little bit tough with the actual command
+[00:16:23.920] outputting data, but let's do this
+[00:16:25.839] first. Pipe it to pv- CN2.
+[00:16:29.680] Pipe it to PV- CN3. Pipe it to PV- CN4.
+[00:16:35.839] Write this out to dev null. Now hold on
+[00:16:37.839] because I realized I wrote CV and not
+[00:16:39.519] PV. There we go. If we run this now, we
+[00:16:42.560] should have four different progress bar.
+[00:16:44.959] One, three, two, four. As you can see,
+[00:16:46.959] the order is not guaranteed. It's not
+[00:16:48.880] consistent. But you can see this is
+[00:16:50.720] super cool way of seeing like all the
+[00:16:52.399] progress bars at once. Oh, interesting
+[00:16:54.639] that this one doesn't have B's because
+[00:16:56.639] it's in line mode. Oh, that's cute. It's
+[00:16:59.040] showing you how many lines were read.
+[00:17:01.040] That's awesome. I like that. Um I like
+[00:17:03.440] that so much. I'm going to disable line
+[00:17:04.959] mode, but yeah. So, let's change that to
+[00:17:07.919] I don't know, 10 bytes at a time is good
+[00:17:09.280] enough. And now, okay, now they're all
+[00:17:11.919] aligned. You can see they're all reading
+[00:17:13.199] bytes like this. Oh, that's super cool
+[00:17:15.120] to see. That's really, really neat to
+[00:17:17.199] see. So, 1 3 42. We got a completely
+[00:17:20.079] different ordering this time. Like I
+[00:17:21.520] said, the order is not consistent, but
+[00:17:23.280] they at least can write to different
+[00:17:25.039] parts of the screen. 2134. You can't
+[00:17:27.439] rely on the orders. Always give it the
+[00:17:28.960] name flag if you're giving it the dash
+[00:17:30.320] C. There might be a hack. There might be
+[00:17:32.480] a hacky way to do this. Okay, we're in
+[00:17:35.120] bash. We can put these in subshells.
+[00:17:39.919] You just wrap parentheses around these
+[00:17:41.360] and these execute in a subshell.
+[00:17:44.240] And this won't do anything on its own.
+[00:17:49.360] Uh, was it four? There we go. So, if we
+[00:17:51.840] run this 1 32 4. Ah, we almost got
+[00:17:53.919] lucky. But because they're in subshells,
+[00:17:56.080] we might be able to do something fun
+[00:17:57.360] here. We might be able to
+[00:18:01.280] sleep for 1 second and then run PV. This
+[00:18:04.880] can sleep for two seconds because in our
+[00:18:06.880] subshell, this should already start
+[00:18:08.000] reading the data. It's just sleep won't
+[00:18:09.840] do anything with it. And this should
+[00:18:10.880] sleep for 3 seconds.
+[00:18:13.520] This is super hacky. I don't know if I
+[00:18:14.880] recommend you guys do this. I don't even
+[00:18:16.240] know if it's going to work. Let's find
+[00:18:17.200] out.
+[00:18:21.200] Okay, that's pretty cool. We had to
+[00:18:24.080] artificially put a delay in there. I
+[00:18:26.160] can't say that this is like the cleanest
+[00:18:28.400] way to do it, but like you guarantee the
+[00:18:31.280] order. Well, you don't guarantee the
+[00:18:32.400] ordering. You set yourself up to win the
+[00:18:35.679] race condition by in artificially
+[00:18:37.520] putting sleeps in there.
+[00:18:39.840] PSA to anyone watching, if you're
+[00:18:41.600] dealing with a race condition, don't fix
+[00:18:43.120] it with sleeps, okay? You're not
+[00:18:44.799] actually fixing the underlying
+[00:18:46.160] condition. But for this example, this is
+[00:18:49.679] pretty sick. This is pretty cool. You
+[00:18:50.720] got to admit, this is a pretty cool uh
+[00:18:52.160] this is a pretty cool hack. Okay?
+[00:18:54.473] [laughter]
+[00:18:55.760] And now I want to show you guys
+[00:18:57.120] something really cool because I actually
+[00:18:59.120] didn't know how this was being
+[00:19:00.559] accomplished because when I look at
+[00:19:01.760] this, I'm looking at this, right? I'm
+[00:19:03.440] like, "Okay, this one's running, this
+[00:19:05.120] one's running, this one's running, and
+[00:19:06.320] this one's running." And they know that
+[00:19:08.559] there's four running, so they know how
+[00:19:10.320] to order themselves. They don't know the
+[00:19:11.280] right order to put themselves in. That
+[00:19:12.799] makes sense. But they do know that
+[00:19:14.240] there's supposedly four running, so it
+[00:19:15.919] knows where to jump the cursor to to
+[00:19:18.400] redraw the progress bar. And in my
+[00:19:20.160] brain, I'm like, "How how are they
+[00:19:21.840] communicating with each other?" Like if
+[00:19:23.760] you know how pipelines work, they only
+[00:19:25.280] transfer data between standard in and
+[00:19:26.720] standard out and that's the raw bytes.
+[00:19:28.400] We're not modifying that data. So like
+[00:19:30.799] how are they talking to each other? How
+[00:19:32.240] are they aware they're for them? Are
+[00:19:33.919] they using temporary files with like
+[00:19:35.919] some known location? Have they all
+[00:19:37.520] synchronized on that? Like what were
+[00:19:38.799] they doing? Um so I'm going to show you
+[00:19:41.280] guys. We're going to dig into the pipe
+[00:19:42.880] viewer source code cuz that's the kind
+[00:19:44.480] of stuff we do on this channel. If you
+[00:19:45.919] guys like that content, you like getting
+[00:19:47.280] the nerdy nittygritty here, hit that
+[00:19:49.360] subscribe button, okay? I have 113,000
+[00:19:51.280] subscribers at the time of this
+[00:19:52.240] recording. Let's get that way up. Okay.
+[00:19:54.080] I want to get that million dollar
+[00:19:55.919] million dollar. I want to get that
+[00:19:57.600] million subscriber play button. That's
+[00:19:59.200] my new goal. I don't think that will
+[00:20:01.360] ever happen. I got the 100,000
+[00:20:03.200] subscriber plaque. I don't know if I'm
+[00:20:04.480] getting the gold one.
+[00:20:06.559] Yo, check it out. Check it out.
+[00:20:10.160] Um, but yeah, let's do it. Let's dive
+[00:20:11.600] into some code. Cool. So, I got the
+[00:20:13.039] website pulled up here. I will go ahead
+[00:20:14.880] and I will put this in the description
+[00:20:15.919] for anyone who wants to check it out.
+[00:20:17.600] Let's take a look what we got here. We
+[00:20:19.039] got the source code right here. So,
+[00:20:20.559] rightclick, copy link. Let's hop on over
+[00:20:23.120] to the terminal. Let's uh let's just go
+[00:20:25.200] to temp directory and let's uh make pv.
+[00:20:29.200] There we go. So, now I can curl- o this.
+[00:20:34.960] There we go. And now we can tar xf pv.
+[00:20:38.880] And now we have this pv directory with
+[00:20:40.720] 1.111.0.
+[00:20:43.280] Cool. Uh how do we compile it? There's a
+[00:20:45.440] readme.markdown. That's super nice. Look
+[00:20:47.360] at this. The typical process for a
+[00:20:48.559] systemwide install is configure make
+[00:20:51.440] pseudo make install. So it looks like
+[00:20:52.880] there's configure and there's make. That
+[00:20:54.400] seems simple enough. So let's just run
+[00:20:56.320] configure. Assume this works and we'll
+[00:20:58.400] just run make. Cool. So that didn't take
+[00:21:00.799] too long. Now we can run make.
+[00:21:03.520] Technically guys, we could run make and
+[00:21:05.679] we could pipe it to pv minus t and it
+[00:21:07.840] will print out a little uh timer. It'll
+[00:21:10.799] be interspersed with the output. So
+[00:21:12.640] it'll be super ugly, but you could
+[00:21:14.559] totally do this. And oh wow, we can see.
+[00:21:17.200] Look at that. 2 seconds. Beautiful.
+[00:21:19.120] Okay, so now we have do a nice little ls
+[00:21:21.679] here. Look at that. We have a PV
+[00:21:22.880] command. So we have a freshly compiled
+[00:21:24.640] PV command on this version on my system.
+[00:21:27.120] That's awesome. I don't even know why I
+[00:21:28.880] bothered compiling it. I was just going
+[00:21:30.000] to go to the source code. My brain just
+[00:21:31.280] went to autopilot there. So I was
+[00:21:32.960] browsing the source code on I think it
+[00:21:34.880] was codeberg is where it's stored. And I
+[00:21:38.159] found this file and I'll show you guys
+[00:21:39.679] in source. There's pavev there's cursor.
+[00:21:43.120] C. So I found on the website, but I'm
+[00:21:45.120] going to go ahead and pull it up here. I
+[00:21:46.640] was blown away at how they were
+[00:21:48.159] accomplishing the PV commands actually
+[00:21:50.080] talking to each other. It's really,
+[00:21:51.360] really cool. Cursor positioning
+[00:21:53.440] functions, all of it happens in cursor.
+[00:21:55.280] C. If IPC is available, then a shared
+[00:21:57.600] memory segment is used to coordinate
+[00:21:59.360] cursor positioning across multiple
+[00:22:00.799] instances of PV. The shared memory
+[00:22:02.880] segment contains an integer, which is
+[00:22:04.640] the original Y-coordinate of the first
+[00:22:06.720] PV process. So, it knows where to start
+[00:22:09.200] and then it knows the offset from there.
+[00:22:11.120] Super cool. However, some OSS, FreeBSD
+[00:22:13.760] and Mac OS so far, don't allow locking
+[00:22:15.600] of a terminal. So, if a terminal locking
+[00:22:17.120] doesn't work, a separate lock file is
+[00:22:18.720] used and cursor positioning is abandoned
+[00:22:20.799] if that also fails. So, that is super
+[00:22:23.520] cool to see. I don't actually know if
+[00:22:25.360] the locking mechanism is working on Mac
+[00:22:27.200] OS or not. I'm running on Mac OS. I
+[00:22:28.559] don't know when this comment was
+[00:22:29.679] written, but that is super cool. So, we
+[00:22:33.200] just do a nice little search for SHM.
+[00:22:34.640] Shared memory typically shows up like
+[00:22:36.080] this. SHM functions get the current
+[00:22:38.080] number of processes attached to our
+[00:22:39.360] shared memory segment. find out how many
+[00:22:41.440] PV processes in total are running in
+[00:22:43.360] cursor mode including this process and
+[00:22:46.000] store it in this so we can keep track of
+[00:22:48.240] the number running and the original
+[00:22:49.440] y-coordinate and then when you know
+[00:22:50.960] which number you are you can just draw
+[00:22:52.720] your cursor down there draw your status
+[00:22:54.880] bar and then let the other processes
+[00:22:56.320] take over and draw them really clever
+[00:22:58.640] really really clever solution now I'm
+[00:23:01.039] curious though cuz I talked about
+[00:23:02.159] locking the terminal to avoid a race
+[00:23:04.080] condition the function locks the
+[00:23:05.120] terminal with PVC CRS lock while
+[00:23:07.600] attaching and checking the race
+[00:23:09.039] condition is another process going
+[00:23:10.000] attached before this one shock such that
+[00:23:11.360] no process ends up getting the attach
+[00:23:12.640] count of one. Ah, okay. Yep, makes
+[00:23:14.240] sense. So, we lock the terminal and we
+[00:23:16.320] use this function that is defined here.
+[00:23:21.840] Lock the terminal in given file
+[00:23:23.039] descriptor falling back to using a lock
+[00:23:24.320] file. The terminal itself cannot be
+[00:23:25.679] locked. Interesting. Okay. So, we
+[00:23:27.600] actually so this actually will handle
+[00:23:29.200] the lock file logic too. Oh yeah. So if
+[00:23:32.880] there was a failure and it was not
+[00:23:34.720] interrupted then we do open lock file
+[00:23:39.440] otherwise you print an error here.
+[00:23:41.200] That's super cool. What is this debug
+[00:23:44.080] function? Can I make this debug output
+[00:23:46.720] show to the screen? Cuz that would be
+[00:23:48.559] really cool. Is there a verbose or a
+[00:23:50.720] debug or something to get this stuff to
+[00:23:52.640] show to the screen or do I have to
+[00:23:54.320] compile it with debug support? I'm
+[00:23:55.919] curious how this works.
+[00:24:06.559] You know, let's look at the options
+[00:24:08.000] file.
+[00:24:10.000] If defaf enable debugging, then it gives
+[00:24:12.480] you a debug flag. A d-debug
+[00:24:17.600] unrecognized option. Okay, so maybe in
+[00:24:20.559] the configure script there would be
+[00:24:21.760] something about debugging here. Enable
+[00:24:24.240] debugging. Compile with debugging
+[00:24:25.760] support. Okay, that's cool. Enable
+[00:24:29.039] debugging. Let's reconfigure it. Then we
+[00:24:31.520] will recompile it. And then we will get
+[00:24:33.440] that debug flag which will give us that
+[00:24:34.799] debug output. And then we can see if
+[00:24:36.320] we're able to actually lock the terminal
+[00:24:38.080] or not on my Mac OS installation right
+[00:24:40.720] here. Can I just rerun make? Okay, it
+[00:24:43.120] does know that the files need to be
+[00:24:44.159] remade. Okay, cool. Sometimes you have
+[00:24:45.919] to make clean before that, but this
+[00:24:47.039] seems like it works. So if I have this
+[00:24:48.159] now, look at this. We now have a dash
+[00:24:49.919] exclamation mark or a d-debug. Write
+[00:24:52.400] debug logs to file. Okay. PV- C-
+[00:24:58.080] N FU dash dash debug
+[00:25:02.880] I don't know debug.log. There we go.
+[00:25:05.039] We'll run this. Let it run for a little
+[00:25:07.039] bit. Cat debug.log. Oh wow, there's a
+[00:25:11.600] lot in there. Okay, cool.
+[00:25:14.480] Yeah, what do we have here? Okay, let's
+[00:25:16.480] cut this. Uh delimiter of space. We want
+[00:25:20.000] field, let's say, I don't know, seven
+[00:25:22.000] and over. Uh, maybe that's a little bit
+[00:25:24.400] too far. Uh, there we go. That looks
+[00:25:26.720] better. Maybe five and over. No, let's
+[00:25:29.039] do six and over. I guess we could look
+[00:25:30.640] for cursor. Yeah, let's do five and
+[00:25:32.159] over. GP for cursor C. There we go.
+[00:25:37.520] Terminal lock acquired. Okay. Well, in
+[00:25:40.400] this year, in our current year, we are
+[00:25:42.080] able to lock the terminal on Mac OS.
+[00:25:44.480] That is pretty neat. We can see that
+[00:25:46.240] there's one PV. Okay. Y position is 31.
+[00:25:50.080] We are the first to attach. Terminal
+[00:25:51.679] lock released. Okay. So you get the
+[00:25:53.279] lock, you attach, you figure that out,
+[00:25:55.279] you set up the shared memory page, and
+[00:25:56.799] then you release the lock. That makes
+[00:25:58.400] perfect sense. Terminal lock acquired.
+[00:26:00.559] Terminal lock, release, acquired,
+[00:26:02.080] release. Okay, that's that's clever
+[00:26:04.799] then. So every time you want to write an
+[00:26:06.480] update, you lock the terminal, you write
+[00:26:08.720] your update, which involves moving the
+[00:26:10.320] cursor and writing your progress bar.
+[00:26:11.679] That's super cool because you can't
+[00:26:12.640] guarantee the rights are going to be
+[00:26:13.919] atomic when you're writing both the, you
+[00:26:15.840] know, anti escape sequence to move the
+[00:26:17.440] cursor and then all the text that goes
+[00:26:18.960] with it. You can't really guarantee
+[00:26:20.159] that, but if you lock the terminal, you
+[00:26:21.760] can really guarantee that. So, that's
+[00:26:23.840] super cool. That's very clever.
+[00:26:27.279] I hope you guys enjoy this little debug
+[00:26:29.200] into the PV source code. Oh, this is
+[00:26:30.880] super cool. It's a great tool. I've been
+[00:26:32.799] using it for years, probably decades at
+[00:26:35.039] this point. In fact, yeah, now I think
+[00:26:36.720] about it. It's got a little donate link
+[00:26:38.880] and a buy me a coffee. I will I will
+[00:26:41.039] take care of that after this video.
+[00:26:42.559] Yeah. So, that's super cool. Hope you
+[00:26:44.080] guys enjoyed this uh deep dive into Pipe
+[00:26:46.000] Viewer. It's a super cool tool. I love
+[00:26:47.360] it. Super useful. And of course, I can't
+[00:26:49.520] end a video without giving a shout out
+[00:26:51.039] to my patrons over at Patreon. Thank you
+[00:26:52.720] so much for your continued support. If
+[00:26:53.760] you want to get your name at the end of
+[00:26:54.640] one of my videos, sign up for my
+[00:26:56.080] Patreon. It'll be linked in the
+[00:26:56.960] description. Check this out. You guys
+[00:26:58.000] ready? Look at how people hack the
+[00:26:59.760] names. Patreon doesn't do any filtering
+[00:27:02.320] of the names. Well, that's not true.
+[00:27:03.679] They do some filtering, but Patreon lets
+[00:27:05.120] you put in an Ansi escape character, the
+[00:27:07.840] antsy escape character, which can make
+[00:27:09.279] anti- escape sequences in your name. And
+[00:27:11.520] my script doesn't do any sort of
+[00:27:13.919] sanitization. And as long as you guys
+[00:27:15.679] are cool and you don't do anything super
+[00:27:17.919] weird, I'm leaving it in the video cuz I
+[00:27:19.840] think it's super awesome. As long as
+[00:27:21.120] everyone's being representative, you're
+[00:27:22.320] paying me, your money or your money,
+[00:27:24.159] your name should be up here. So, super
+[00:27:26.400] cool. I love that you guys mess with the
+[00:27:27.679] script. I think it's super fun. Check it
+[00:27:28.880] out. We have 123 active members. That's
+[00:27:30.640] super awesome. Look at that. It's our
+[00:27:32.080] subscriber count. And look at that. Even
+[00:27:33.360] the time stamp. Look at all the metadata
+[00:27:34.559] I put in my videos. How cool. And uh
+[00:27:36.240] yeah, that's all I got for you. Take
+[00:27:37.760] care, everyone. See you.

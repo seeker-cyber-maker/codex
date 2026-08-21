@@ -1,0 +1,5017 @@
+{
+  "schema": "youtube-transcript/1",
+  "video_id": "gwQH-db60WU",
+  "language": "en-orig",
+  "cues": [
+    {
+      "start_ms": 0,
+      "duration_ms": 3840,
+      "end_ms": 3840,
+      "text": "All right, so today I want to talk about"
+    },
+    {
+      "start_ms": 1120,
+      "duration_ms": 4560,
+      "end_ms": 5680,
+      "text": "the PV command or the pipe viewer"
+    },
+    {
+      "start_ms": 3840,
+      "duration_ms": 3439,
+      "end_ms": 7279,
+      "text": "command. It's super cool. We've used it"
+    },
+    {
+      "start_ms": 5680,
+      "duration_ms": 3680,
+      "end_ms": 9360,
+      "text": "before on this channel. I think it is"
+    },
+    {
+      "start_ms": 7279,
+      "duration_ms": 4240,
+      "end_ms": 11519,
+      "text": "amazing. At its core, it is a simple"
+    },
+    {
+      "start_ms": 9360,
+      "duration_ms": 4080,
+      "end_ms": 13440,
+      "text": "Unix utility you can pipe programs into"
+    },
+    {
+      "start_ms": 11519,
+      "duration_ms": 3521,
+      "end_ms": 15040,
+      "text": "or you can redirect output from. It"
+    },
+    {
+      "start_ms": 13440,
+      "duration_ms": 3200,
+      "end_ms": 16640,
+      "text": "reads from standard in, it writes to"
+    },
+    {
+      "start_ms": 15040,
+      "duration_ms": 3840,
+      "end_ms": 18880,
+      "text": "standard out just like cat, just like"
+    },
+    {
+      "start_ms": 16640,
+      "duration_ms": 4639,
+      "end_ms": 21279,
+      "text": "you know DD or whatever. But you can get"
+    },
+    {
+      "start_ms": 18880,
+      "duration_ms": 3920,
+      "end_ms": 22800,
+      "text": "statistics from it. You can get progress"
+    },
+    {
+      "start_ms": 21279,
+      "duration_ms": 3281,
+      "end_ms": 24560,
+      "text": "bars. You can get all sorts of things."
+    },
+    {
+      "start_ms": 22800,
+      "duration_ms": 3440,
+      "end_ms": 26240,
+      "text": "It is a super cool thing to throw into"
+    },
+    {
+      "start_ms": 24560,
+      "duration_ms": 3360,
+      "end_ms": 27920,
+      "text": "your shell pipelines and kind of get"
+    },
+    {
+      "start_ms": 26240,
+      "duration_ms": 2799,
+      "end_ms": 29039,
+      "text": "some insight into what's going on. Not"
+    },
+    {
+      "start_ms": 27920,
+      "duration_ms": 2480,
+      "end_ms": 30400,
+      "text": "going to waste time describing it. Let's"
+    },
+    {
+      "start_ms": 29039,
+      "duration_ms": 2560,
+      "end_ms": 31599,
+      "text": "just jump right in. All right, so PV is"
+    },
+    {
+      "start_ms": 30400,
+      "duration_ms": 3200,
+      "end_ms": 33600,
+      "text": "a really cool command and it has a ton"
+    },
+    {
+      "start_ms": 31599,
+      "duration_ms": 4241,
+      "end_ms": 35840,
+      "text": "of usages. Okay, let's imagine I want to"
+    },
+    {
+      "start_ms": 33600,
+      "duration_ms": 4560,
+      "end_ms": 38160,
+      "text": "cat a really big file. I have user share"
+    },
+    {
+      "start_ms": 35840,
+      "duration_ms": 4000,
+      "end_ms": 39840,
+      "text": "dict words on my system. I run this."
+    },
+    {
+      "start_ms": 38160,
+      "duration_ms": 3440,
+      "end_ms": 41600,
+      "text": "There is a giant word list here. There's"
+    },
+    {
+      "start_ms": 39840,
+      "duration_ms": 3200,
+      "end_ms": 43040,
+      "text": "a ton of different words. If I pipe this"
+    },
+    {
+      "start_ms": 41600,
+      "duration_ms": 4720,
+      "end_ms": 46320,
+      "text": "to word count minus L, we can see there"
+    },
+    {
+      "start_ms": 43040,
+      "duration_ms": 6640,
+      "end_ms": 49680,
+      "text": "are 235,000 words. Okay, that's a ton. I"
+    },
+    {
+      "start_ms": 46320,
+      "duration_ms": 5280,
+      "end_ms": 51600,
+      "text": "can pipe this to PV. And now we get a"
+    },
+    {
+      "start_ms": 49680,
+      "duration_ms": 3600,
+      "end_ms": 53280,
+      "text": "progress bar on how long it took to"
+    },
+    {
+      "start_ms": 51600,
+      "duration_ms": 3360,
+      "end_ms": 54960,
+      "text": "actually write that to the screen. This"
+    },
+    {
+      "start_ms": 53280,
+      "duration_ms": 3040,
+      "end_ms": 56320,
+      "text": "is a really stupid example because it"
+    },
+    {
+      "start_ms": 54960,
+      "duration_ms": 3599,
+      "end_ms": 58559,
+      "text": "wrote it almost instantaneously. Look,"
+    },
+    {
+      "start_ms": 56320,
+      "duration_ms": 3600,
+      "end_ms": 59920,
+      "text": "it took 0 seconds. It read it this fast"
+    },
+    {
+      "start_ms": 58559,
+      "duration_ms": 3601,
+      "end_ms": 62160,
+      "text": "and this is how much data it had to"
+    },
+    {
+      "start_ms": 59920,
+      "duration_ms": 4639,
+      "end_ms": 64559,
+      "text": "read. So at 38 megs a second it read 2"
+    },
+    {
+      "start_ms": 62160,
+      "duration_ms": 4160,
+      "end_ms": 66320,
+      "text": "megs pretty fast in less than a second."
+    },
+    {
+      "start_ms": 64559,
+      "duration_ms": 4641,
+      "end_ms": 69200,
+      "text": "Well, okay, what do we do? We use cat."
+    },
+    {
+      "start_ms": 66320,
+      "duration_ms": 4799,
+      "end_ms": 71119,
+      "text": "What if we were to use slowcat? Slowcat"
+    },
+    {
+      "start_ms": 69200,
+      "duration_ms": 4400,
+      "end_ms": 73600,
+      "text": "is a program as you can guess. It's like"
+    },
+    {
+      "start_ms": 71119,
+      "duration_ms": 4081,
+      "end_ms": 75200,
+      "text": "cat but it's slow. So let's do this and"
+    },
+    {
+      "start_ms": 73600,
+      "duration_ms": 2960,
+      "end_ms": 76560,
+      "text": "see what happens. Okay, we're printing"
+    },
+    {
+      "start_ms": 75200,
+      "duration_ms": 3200,
+      "end_ms": 78400,
+      "text": "out the information and we have a nice"
+    },
+    {
+      "start_ms": 76560,
+      "duration_ms": 3440,
+      "end_ms": 80000,
+      "text": "little progress bar there. That's pretty"
+    },
+    {
+      "start_ms": 78400,
+      "duration_ms": 3680,
+      "end_ms": 82080,
+      "text": "cool. But the progress bar is kind of a"
+    },
+    {
+      "start_ms": 80000,
+      "duration_ms": 3200,
+      "end_ms": 83200,
+      "text": "mess. So typically what you would do is"
+    },
+    {
+      "start_ms": 82080,
+      "duration_ms": 2480,
+      "end_ms": 84560,
+      "text": "you would redirect this. Say we were"
+    },
+    {
+      "start_ms": 83200,
+      "duration_ms": 2640,
+      "end_ms": 85840,
+      "text": "redirect this to like a file. We could"
+    },
+    {
+      "start_ms": 84560,
+      "duration_ms": 3520,
+      "end_ms": 88080,
+      "text": "redirect this to a network source. We"
+    },
+    {
+      "start_ms": 85840,
+      "duration_ms": 4639,
+      "end_ms": 90479,
+      "text": "could redirect this to dev null. So look"
+    },
+    {
+      "start_ms": 88080,
+      "duration_ms": 5200,
+      "end_ms": 93280,
+      "text": "at this. Now we can see we can get an"
+    },
+    {
+      "start_ms": 90479,
+      "duration_ms": 3921,
+      "end_ms": 94400,
+      "text": "idea of how fast slowcat is running."
+    },
+    {
+      "start_ms": 93280,
+      "duration_ms": 2320,
+      "end_ms": 95600,
+      "text": "Obviously this could be any command."
+    },
+    {
+      "start_ms": 94400,
+      "duration_ms": 2560,
+      "end_ms": 96960,
+      "text": "This could be any command you're running"
+    },
+    {
+      "start_ms": 95600,
+      "duration_ms": 2559,
+      "end_ms": 98159,
+      "text": "that outputs data to standard out that"
+    },
+    {
+      "start_ms": 96960,
+      "duration_ms": 2720,
+      "end_ms": 99680,
+      "text": "you want to do in your pipeline or"
+    },
+    {
+      "start_ms": 98159,
+      "duration_ms": 4161,
+      "end_ms": 102320,
+      "text": "whatever. And you just want a progress"
+    },
+    {
+      "start_ms": 99680,
+      "duration_ms": 4640,
+      "end_ms": 104320,
+      "text": "bar. This is a super fast way to get a"
+    },
+    {
+      "start_ms": 102320,
+      "duration_ms": 5439,
+      "end_ms": 107759,
+      "text": "nice progress bar here. Look, you can"
+    },
+    {
+      "start_ms": 104320,
+      "duration_ms": 5040,
+      "end_ms": 109360,
+      "text": "see it's read in 699 bytes. It's taken"
+    },
+    {
+      "start_ms": 107759,
+      "duration_ms": 3680,
+      "end_ms": 111439,
+      "text": "20 seconds so far. It's reading at"
+    },
+    {
+      "start_ms": 109360,
+      "duration_ms": 3759,
+      "end_ms": 113119,
+      "text": "around 42 bytes a second. And this"
+    },
+    {
+      "start_ms": 111439,
+      "duration_ms": 3761,
+      "end_ms": 115200,
+      "text": "progress bar, it doesn't know the size"
+    },
+    {
+      "start_ms": 113119,
+      "duration_ms": 4481,
+      "end_ms": 117600,
+      "text": "of the file cuz think about it. Slowcat"
+    },
+    {
+      "start_ms": 115200,
+      "duration_ms": 4239,
+      "end_ms": 119439,
+      "text": "is the one reading this file. PV doesn't"
+    },
+    {
+      "start_ms": 117600,
+      "duration_ms": 3920,
+      "end_ms": 121520,
+      "text": "know the size of that file. So, it can't"
+    },
+    {
+      "start_ms": 119439,
+      "duration_ms": 4401,
+      "end_ms": 123840,
+      "text": "actually estimate how long it's going to"
+    },
+    {
+      "start_ms": 121520,
+      "duration_ms": 3760,
+      "end_ms": 125280,
+      "text": "take. We can give it to it as an"
+    },
+    {
+      "start_ms": 123840,
+      "duration_ms": 2720,
+      "end_ms": 126560,
+      "text": "argument. PV would normally try and"
+    },
+    {
+      "start_ms": 125280,
+      "duration_ms": 2640,
+      "end_ms": 127920,
+      "text": "detect it if it was given the name of"
+    },
+    {
+      "start_ms": 126560,
+      "duration_ms": 2559,
+      "end_ms": 129119,
+      "text": "the file as an argument, but then PV"
+    },
+    {
+      "start_ms": 127920,
+      "duration_ms": 3039,
+      "end_ms": 130959,
+      "text": "would just read from that file directly."
+    },
+    {
+      "start_ms": 129119,
+      "duration_ms": 4641,
+      "end_ms": 133760,
+      "text": "So, we can kind of we get we can help it"
+    },
+    {
+      "start_ms": 130959,
+      "duration_ms": 5041,
+      "end_ms": 136000,
+      "text": "out a little bit. So, if we do an L-sher"
+    },
+    {
+      "start_ms": 133760,
+      "duration_ms": 3680,
+      "end_ms": 137440,
+      "text": "share dict words, we can see that it's a"
+    },
+    {
+      "start_ms": 136000,
+      "duration_ms": 2959,
+      "end_ms": 138959,
+      "text": "sim link. I always forget this to web"
+    },
+    {
+      "start_ms": 137440,
+      "duration_ms": 3840,
+      "end_ms": 141280,
+      "text": "two. Let's go ahead and look at web two."
+    },
+    {
+      "start_ms": 138959,
+      "duration_ms": 4081,
+      "end_ms": 143040,
+      "text": "We can see that here. Here is the size"
+    },
+    {
+      "start_ms": 141280,
+      "duration_ms": 4640,
+      "end_ms": 145920,
+      "text": "of the file in bytes. That's how big"
+    },
+    {
+      "start_ms": 143040,
+      "duration_ms": 4640,
+      "end_ms": 147680,
+      "text": "this file is. So, we can help out PV. If"
+    },
+    {
+      "start_ms": 145920,
+      "duration_ms": 4800,
+      "end_ms": 150720,
+      "text": "we know this information, we can do a"
+    },
+    {
+      "start_ms": 147680,
+      "duration_ms": 5120,
+      "end_ms": 152800,
+      "text": "d-size and give it here. And this tells"
+    },
+    {
+      "start_ms": 150720,
+      "duration_ms": 4239,
+      "end_ms": 154959,
+      "text": "PV basically when calculating the"
+    },
+    {
+      "start_ms": 152800,
+      "duration_ms": 5680,
+      "end_ms": 158480,
+      "text": "progress. Here's the denominator. Okay,"
+    },
+    {
+      "start_ms": 154959,
+      "duration_ms": 5521,
+      "end_ms": 160480,
+      "text": "we've read or 200 bytes out of this many"
+    },
+    {
+      "start_ms": 158480,
+      "duration_ms": 4640,
+      "end_ms": 163120,
+      "text": "bytes. And you can see my ETA is this"
+    },
+    {
+      "start_ms": 160480,
+      "duration_ms": 4000,
+      "end_ms": 164480,
+      "text": "will take 17 hours to run at the current"
+    },
+    {
+      "start_ms": 163120,
+      "duration_ms": 2800,
+      "end_ms": 165920,
+      "text": "speed. We're not going to sit here for"
+    },
+    {
+      "start_ms": 164480,
+      "duration_ms": 3039,
+      "end_ms": 167519,
+      "text": "that long. Oh, 16 hours. Look, it's even"
+    },
+    {
+      "start_ms": 165920,
+      "duration_ms": 4000,
+      "end_ms": 169920,
+      "text": "going a little bit faster. So, now it"
+    },
+    {
+      "start_ms": 167519,
+      "duration_ms": 3761,
+      "end_ms": 171280,
+      "text": "knows a percentage. It knows an ETA."
+    },
+    {
+      "start_ms": 169920,
+      "duration_ms": 3599,
+      "end_ms": 173519,
+      "text": "This is super cool. This is super"
+    },
+    {
+      "start_ms": 171280,
+      "duration_ms": 4000,
+      "end_ms": 175280,
+      "text": "awesome. When you're piping into PV, it"
+    },
+    {
+      "start_ms": 173519,
+      "duration_ms": 3121,
+      "end_ms": 176640,
+      "text": "can't know the name of the size unless"
+    },
+    {
+      "start_ms": 175280,
+      "duration_ms": 3120,
+      "end_ms": 178400,
+      "text": "you give it some sort of hint. This is"
+    },
+    {
+      "start_ms": 176640,
+      "duration_ms": 3280,
+      "end_ms": 179920,
+      "text": "your hint into PV. Here's something"
+    },
+    {
+      "start_ms": 178400,
+      "duration_ms": 3119,
+      "end_ms": 181519,
+      "text": "cool. You're probably wondering, Dave,"
+    },
+    {
+      "start_ms": 179920,
+      "duration_ms": 2959,
+      "end_ms": 182879,
+      "text": "what is slowcat? I don't have that on my"
+    },
+    {
+      "start_ms": 181519,
+      "duration_ms": 2881,
+      "end_ms": 184400,
+      "text": "system. Is that just a version of cat"
+    },
+    {
+      "start_ms": 182879,
+      "duration_ms": 3521,
+      "end_ms": 186400,
+      "text": "that's slow? Check this out. Are you"
+    },
+    {
+      "start_ms": 184400,
+      "duration_ms": 4240,
+      "end_ms": 188640,
+      "text": "ready for this?"
+    },
+    {
+      "start_ms": 186400,
+      "duration_ms": 4479,
+      "end_ms": 190879,
+      "text": "Look at this. Slowcat's an alias on my"
+    },
+    {
+      "start_ms": 188640,
+      "duration_ms": 6080,
+      "end_ms": 194720,
+      "text": "system. What's it an alias to? PV. It's"
+    },
+    {
+      "start_ms": 190879,
+      "duration_ms": 5761,
+      "end_ms": 196640,
+      "text": "an alias to PV. So, Slowcat ran this."
+    },
+    {
+      "start_ms": 194720,
+      "duration_ms": 3120,
+      "end_ms": 197840,
+      "text": "Let's go ahead and run that oursel"
+    },
+    {
+      "start_ms": 196640,
+      "duration_ms": 5440,
+      "end_ms": 202080,
+      "text": "because this is exactly what's being"
+    },
+    {
+      "start_ms": 197840,
+      "duration_ms": 5759,
+      "end_ms": 203599,
+      "text": "run, right? We run this and we get this."
+    },
+    {
+      "start_ms": 202080,
+      "duration_ms": 2560,
+      "end_ms": 204640,
+      "text": "So, how is it accomplishing it? There's"
+    },
+    {
+      "start_ms": 203599,
+      "duration_ms": 3280,
+      "end_ms": 206879,
+      "text": "got to be something going on here. We're"
+    },
+    {
+      "start_ms": 204640,
+      "duration_ms": 5040,
+      "end_ms": 209680,
+      "text": "passing it a L. We're passing it a dash"
+    },
+    {
+      "start_ms": 206879,
+      "duration_ms": 5201,
+      "end_ms": 212080,
+      "text": "cap L5 and a dash q. Let's go figure out"
+    },
+    {
+      "start_ms": 209680,
+      "duration_ms": 5440,
+      "end_ms": 215120,
+      "text": "what those are."
+    },
+    {
+      "start_ms": 212080,
+      "duration_ms": 7600,
+      "end_ms": 219680,
+      "text": "First thing we were passing was a dashl."
+    },
+    {
+      "start_ms": 215120,
+      "duration_ms": 5600,
+      "end_ms": 220720,
+      "text": "I think we pipe this to highlight for L."
+    },
+    {
+      "start_ms": 219680,
+      "duration_ms": 3040,
+      "end_ms": 222720,
+      "text": "And there you go. You can see it's"
+    },
+    {
+      "start_ms": 220720,
+      "duration_ms": 3599,
+      "end_ms": 224319,
+      "text": "highlighted right here. Line mode. Count"
+    },
+    {
+      "start_ms": 222720,
+      "duration_ms": 3280,
+      "end_ms": 226000,
+      "text": "lines instead of bytes. So, we put this"
+    },
+    {
+      "start_ms": 224319,
+      "duration_ms": 3441,
+      "end_ms": 227760,
+      "text": "in line mode. So, PV is expecting lines"
+    },
+    {
+      "start_ms": 226000,
+      "duration_ms": 3920,
+      "end_ms": 229920,
+      "text": "instead of bytes. This is relevant for"
+    },
+    {
+      "start_ms": 227760,
+      "duration_ms": 3839,
+      "end_ms": 231599,
+      "text": "the next flag that we used which was -"
+    },
+    {
+      "start_ms": 229920,
+      "duration_ms": 3440,
+      "end_ms": 233360,
+      "text": "capl. Go ahead and search for this."
+    },
+    {
+      "start_ms": 231599,
+      "duration_ms": 4720,
+      "end_ms": 236319,
+      "text": "We'll highlight it. And look right here."
+    },
+    {
+      "start_ms": 233360,
+      "duration_ms": 5120,
+      "end_ms": 238480,
+      "text": "Rate limit limit transfer to rate bytes"
+    },
+    {
+      "start_ms": 236319,
+      "duration_ms": 5361,
+      "end_ms": 241680,
+      "text": "per second. So as you can see right"
+    },
+    {
+      "start_ms": 238480,
+      "duration_ms": 5920,
+      "end_ms": 244400,
+      "text": "here, we were running -l5. This tells it"
+    },
+    {
+      "start_ms": 241680,
+      "duration_ms": 4320,
+      "end_ms": 246000,
+      "text": "process five bytes a second. Now here's"
+    },
+    {
+      "start_ms": 244400,
+      "duration_ms": 3039,
+      "end_ms": 247439,
+      "text": "the thing. We put in line mode. So now"
+    },
+    {
+      "start_ms": 246000,
+      "duration_ms": 3840,
+      "end_ms": 249840,
+      "text": "it doesn't mean bytes, it means five"
+    },
+    {
+      "start_ms": 247439,
+      "duration_ms": 4000,
+      "end_ms": 251439,
+      "text": "lines a second. Look at this. This is"
+    },
+    {
+      "start_ms": 249840,
+      "duration_ms": 4399,
+      "end_ms": 254239,
+      "text": "outputting a line. This is outputting"
+    },
+    {
+      "start_ms": 251439,
+      "duration_ms": 4561,
+      "end_ms": 256000,
+      "text": "five lines in a second or a line every 2"
+    },
+    {
+      "start_ms": 254239,
+      "duration_ms": 4240,
+      "end_ms": 258479,
+      "text": "seconds. That's what's happening here."
+    },
+    {
+      "start_ms": 256000,
+      "duration_ms": 3519,
+      "end_ms": 259519,
+      "text": "If we were to get rid of that first -L,"
+    },
+    {
+      "start_ms": 258479,
+      "duration_ms": 2880,
+      "end_ms": 261359,
+      "text": "we're going to put it into bite mode"
+    },
+    {
+      "start_ms": 259519,
+      "duration_ms": 3921,
+      "end_ms": 263440,
+      "text": "instead of line mode. And now it's"
+    },
+    {
+      "start_ms": 261359,
+      "duration_ms": 4641,
+      "end_ms": 266000,
+      "text": "processing five bytes a second. So as"
+    },
+    {
+      "start_ms": 263440,
+      "duration_ms": 4720,
+      "end_ms": 268160,
+      "text": "you can see, it's one character every 2"
+    },
+    {
+      "start_ms": 266000,
+      "duration_ms": 4000,
+      "end_ms": 270000,
+      "text": "seconds. So a little bit different. PV"
+    },
+    {
+      "start_ms": 268160,
+      "duration_ms": 3520,
+      "end_ms": 271680,
+      "text": "is super nice just for having a line"
+    },
+    {
+      "start_ms": 270000,
+      "duration_ms": 3360,
+      "end_ms": 273360,
+      "text": "mode, a line aware mode. It makes it"
+    },
+    {
+      "start_ms": 271680,
+      "duration_ms": 2720,
+      "end_ms": 274400,
+      "text": "super useful for these kind of"
+    },
+    {
+      "start_ms": 273360,
+      "duration_ms": 2320,
+      "end_ms": 275680,
+      "text": "situations where you're not dealing with"
+    },
+    {
+      "start_ms": 274400,
+      "duration_ms": 2799,
+      "end_ms": 277199,
+      "text": "binary data, you're dealing with text"
+    },
+    {
+      "start_ms": 275680,
+      "duration_ms": 3200,
+      "end_ms": 278880,
+      "text": "data. So by default, PV kind of works"
+    },
+    {
+      "start_ms": 277199,
+      "duration_ms": 3761,
+      "end_ms": 280960,
+      "text": "with raw binary data. You can give it a"
+    },
+    {
+      "start_ms": 278880,
+      "duration_ms": 4720,
+      "end_ms": 283600,
+      "text": "dash L to work in line mode. There is"
+    },
+    {
+      "start_ms": 280960,
+      "duration_ms": 4000,
+      "end_ms": 284960,
+      "text": "also a - Q there. You could probably"
+    },
+    {
+      "start_ms": 283600,
+      "duration_ms": 2480,
+      "end_ms": 286080,
+      "text": "guess what it is just based on the name."
+    },
+    {
+      "start_ms": 284960,
+      "duration_ms": 2320,
+      "end_ms": 287280,
+      "text": "I don't know why I called the man page."
+    },
+    {
+      "start_ms": 286080,
+      "duration_ms": 3600,
+      "end_ms": 289680,
+      "text": "There's also a really nice man page. Man"
+    },
+    {
+      "start_ms": 287280,
+      "duration_ms": 5120,
+      "end_ms": 292400,
+      "text": "page is super nice. Let's do a PV minus"
+    },
+    {
+      "start_ms": 289680,
+      "duration_ms": 6959,
+      "end_ms": 296639,
+      "text": "HL4"
+    },
+    {
+      "start_ms": 292400,
+      "duration_ms": 5840,
+      "end_ms": 298240,
+      "text": "Q I believe it was. And -ash Q is quiet."
+    },
+    {
+      "start_ms": 296639,
+      "duration_ms": 3601,
+      "end_ms": 300240,
+      "text": "Do not output any transfer information"
+    },
+    {
+      "start_ms": 298240,
+      "duration_ms": 3600,
+      "end_ms": 301840,
+      "text": "at all. So PV is super good because it"
+    },
+    {
+      "start_ms": 300240,
+      "duration_ms": 2880,
+      "end_ms": 303120,
+      "text": "can be a rate limiter without actually"
+    },
+    {
+      "start_ms": 301840,
+      "duration_ms": 2480,
+      "end_ms": 304320,
+      "text": "outputting a progress bar. So even"
+    },
+    {
+      "start_ms": 303120,
+      "duration_ms": 3040,
+      "end_ms": 306160,
+      "text": "though it's called pipe viewer, it can"
+    },
+    {
+      "start_ms": 304320,
+      "duration_ms": 3760,
+      "end_ms": 308080,
+      "text": "actually modify some of the behavior of"
+    },
+    {
+      "start_ms": 306160,
+      "duration_ms": 4879,
+      "end_ms": 311039,
+      "text": "it or at least slow it down. So you"
+    },
+    {
+      "start_ms": 308080,
+      "duration_ms": 4800,
+      "end_ms": 312880,
+      "text": "could like PV a file with a rate limit"
+    },
+    {
+      "start_ms": 311039,
+      "duration_ms": 3761,
+      "end_ms": 314800,
+      "text": "of like 100 bytes and then you could"
+    },
+    {
+      "start_ms": 312880,
+      "duration_ms": 4319,
+      "end_ms": 317199,
+      "text": "pipe that to SSH and write that out to a"
+    },
+    {
+      "start_ms": 314800,
+      "duration_ms": 3839,
+      "end_ms": 318639,
+      "text": "file on a remote end. I just came up"
+    },
+    {
+      "start_ms": 317199,
+      "duration_ms": 3201,
+      "end_ms": 320400,
+      "text": "with that example. Why why don't I just"
+    },
+    {
+      "start_ms": 318639,
+      "duration_ms": 4641,
+      "end_ms": 323280,
+      "text": "show that example cuz that that example"
+    },
+    {
+      "start_ms": 320400,
+      "duration_ms": 4239,
+      "end_ms": 324639,
+      "text": "seems super cool. Uh let's what actually"
+    },
+    {
+      "start_ms": 323280,
+      "duration_ms": 3199,
+      "end_ms": 326479,
+      "text": "we have a file right here, don't we? We"
+    },
+    {
+      "start_ms": 324639,
+      "duration_ms": 4241,
+      "end_ms": 328880,
+      "text": "have user share dict words. Let's change"
+    },
+    {
+      "start_ms": 326479,
+      "duration_ms": 5041,
+      "end_ms": 331520,
+      "text": "this to do I don't know 5,000 lines a"
+    },
+    {
+      "start_ms": 328880,
+      "duration_ms": 4000,
+      "end_ms": 332880,
+      "text": "second. Um no, that's still not going to"
+    },
+    {
+      "start_ms": 331520,
+      "duration_ms": 3519,
+      "end_ms": 335039,
+      "text": "finish any sort of timely matter. Let's"
+    },
+    {
+      "start_ms": 332880,
+      "duration_ms": 5800,
+      "end_ms": 338680,
+      "text": "change this to be"
+    },
+    {
+      "start_ms": 335039,
+      "duration_ms": 3641,
+      "end_ms": 338680,
+      "text": "10,000 lines"
+    },
+    {
+      "start_ms": 338960,
+      "duration_ms": 4560,
+      "end_ms": 343520,
+      "text": "50,000 lines a second. There we go."
+    },
+    {
+      "start_ms": 341600,
+      "duration_ms": 3360,
+      "end_ms": 344960,
+      "text": "That's significantly faster, but not"
+    },
+    {
+      "start_ms": 343520,
+      "duration_ms": 3760,
+      "end_ms": 347280,
+      "text": "fast enough where if you blink, you miss"
+    },
+    {
+      "start_ms": 344960,
+      "duration_ms": 4799,
+      "end_ms": 349759,
+      "text": "it. So now we have this PV command. We"
+    },
+    {
+      "start_ms": 347280,
+      "duration_ms": 3759,
+      "end_ms": 351039,
+      "text": "could pipe that to SSH void, which is"
+    },
+    {
+      "start_ms": 349759,
+      "duration_ms": 2880,
+      "end_ms": 352639,
+      "text": "the name of a system I have. You would"
+    },
+    {
+      "start_ms": 351039,
+      "duration_ms": 3921,
+      "end_ms": 354960,
+      "text": "just put your system name here. And then"
+    },
+    {
+      "start_ms": 352639,
+      "duration_ms": 6161,
+      "end_ms": 358800,
+      "text": "we could write it to cat read in from"
+    },
+    {
+      "start_ms": 354960,
+      "duration_ms": 6560,
+      "end_ms": 361520,
+      "text": "standard in redirect to words.ext. And"
+    },
+    {
+      "start_ms": 358800,
+      "duration_ms": 4480,
+      "end_ms": 363280,
+      "text": "if you run this, it will work. But we"
+    },
+    {
+      "start_ms": 361520,
+      "duration_ms": 4239,
+      "end_ms": 365759,
+      "text": "have the -ashq flag because it's quiet."
+    },
+    {
+      "start_ms": 363280,
+      "duration_ms": 4800,
+      "end_ms": 368080,
+      "text": "Let's go ahead and get rid of that -ashq"
+    },
+    {
+      "start_ms": 365759,
+      "duration_ms": 4481,
+      "end_ms": 370240,
+      "text": "flag. And look at what happens here. We"
+    },
+    {
+      "start_ms": 368080,
+      "duration_ms": 4320,
+      "end_ms": 372400,
+      "text": "have a progress bar. We have a progress"
+    },
+    {
+      "start_ms": 370240,
+      "duration_ms": 3840,
+      "end_ms": 374080,
+      "text": "bar. Obviously, you could just SCP the"
+    },
+    {
+      "start_ms": 372400,
+      "duration_ms": 3840,
+      "end_ms": 376240,
+      "text": "file over. But this is super useful if"
+    },
+    {
+      "start_ms": 374080,
+      "duration_ms": 4880,
+      "end_ms": 378960,
+      "text": "you're in some sort of pipeline. If I"
+    },
+    {
+      "start_ms": 376240,
+      "duration_ms": 5200,
+      "end_ms": 381440,
+      "text": "were running like tar-c to create a tar"
+    },
+    {
+      "start_ms": 378960,
+      "duration_ms": 4640,
+      "end_ms": 383600,
+      "text": "file instead of saying file.tar, I could"
+    },
+    {
+      "start_ms": 381440,
+      "duration_ms": 5120,
+      "end_ms": 386560,
+      "text": "say a hyphen here. I could say let's tar"
+    },
+    {
+      "start_ms": 383600,
+      "duration_ms": 5039,
+      "end_ms": 388639,
+      "text": "up um my bin directory. I could pipe"
+    },
+    {
+      "start_ms": 386560,
+      "duration_ms": 6720,
+      "end_ms": 393280,
+      "text": "that to pv. And then I could pipe that"
+    },
+    {
+      "start_ms": 388639,
+      "duration_ms": 6481,
+      "end_ms": 395120,
+      "text": "to sshvoid and then cat that into"
+    },
+    {
+      "start_ms": 393280,
+      "duration_ms": 3120,
+      "end_ms": 396400,
+      "text": "bin.tar. You could do something like"
+    },
+    {
+      "start_ms": 395120,
+      "duration_ms": 3199,
+      "end_ms": 398319,
+      "text": "that if you wanted that kind of a"
+    },
+    {
+      "start_ms": 396400,
+      "duration_ms": 3519,
+      "end_ms": 399919,
+      "text": "progress bar. So it doesn't exist as a"
+    },
+    {
+      "start_ms": 398319,
+      "duration_ms": 3041,
+      "end_ms": 401360,
+      "text": "file. It gets turned into a file in"
+    },
+    {
+      "start_ms": 399919,
+      "duration_ms": 2961,
+      "end_ms": 402880,
+      "text": "remote. But PV will still give you that"
+    },
+    {
+      "start_ms": 401360,
+      "duration_ms": 3679,
+      "end_ms": 405039,
+      "text": "progress bar. But yeah, look how nice"
+    },
+    {
+      "start_ms": 402880,
+      "duration_ms": 4159,
+      "end_ms": 407039,
+      "text": "this is. That is super nice and it just"
+    },
+    {
+      "start_ms": 405039,
+      "duration_ms": 3600,
+      "end_ms": 408639,
+      "text": "works. We can verify this. I'll verify"
+    },
+    {
+      "start_ms": 407039,
+      "duration_ms": 4720,
+      "end_ms": 411759,
+      "text": "this is once it's done. We can just SSH"
+    },
+    {
+      "start_ms": 408639,
+      "duration_ms": 4801,
+      "end_ms": 413440,
+      "text": "into void and we can do a word count-l"
+    },
+    {
+      "start_ms": 411759,
+      "duration_ms": 3440,
+      "end_ms": 415199,
+      "text": "on words.ext. And we can see that we"
+    },
+    {
+      "start_ms": 413440,
+      "duration_ms": 3599,
+      "end_ms": 417039,
+      "text": "have the whole file there. It's on this"
+    },
+    {
+      "start_ms": 415199,
+      "duration_ms": 3601,
+      "end_ms": 418800,
+      "text": "remote machine. So that's super cool."
+    },
+    {
+      "start_ms": 417039,
+      "duration_ms": 2961,
+      "end_ms": 420000,
+      "text": "That's awesome. Also, if you noticed, I"
+    },
+    {
+      "start_ms": 418800,
+      "duration_ms": 2560,
+      "end_ms": 421360,
+      "text": "kind of glossed over some things. I'll"
+    },
+    {
+      "start_ms": 420000,
+      "duration_ms": 2960,
+      "end_ms": 422960,
+      "text": "help you out real quick. There's a ton"
+    },
+    {
+      "start_ms": 421360,
+      "duration_ms": 3040,
+      "end_ms": 424400,
+      "text": "of stuff here, guys. I can't go over all"
+    },
+    {
+      "start_ms": 422960,
+      "duration_ms": 2720,
+      "end_ms": 425680,
+      "text": "this in a video. I would say spend some"
+    },
+    {
+      "start_ms": 424400,
+      "duration_ms": 3040,
+      "end_ms": 427440,
+      "text": "time looking through this. There's a ton"
+    },
+    {
+      "start_ms": 425680,
+      "duration_ms": 3600,
+      "end_ms": 429280,
+      "text": "of things Pipe Viewer can do. It is"
+    },
+    {
+      "start_ms": 427440,
+      "duration_ms": 3360,
+      "end_ms": 430800,
+      "text": "super cool software. Shout out Pipe"
+    },
+    {
+      "start_ms": 429280,
+      "duration_ms": 2720,
+      "end_ms": 432000,
+      "text": "Viewer, dude. It's just awesome. Also,"
+    },
+    {
+      "start_ms": 430800,
+      "duration_ms": 3280,
+      "end_ms": 434080,
+      "text": "people are going to ask, I always get"
+    },
+    {
+      "start_ms": 432000,
+      "duration_ms": 3599,
+      "end_ms": 435599,
+      "text": "comments on this. HL to highlight text"
+    },
+    {
+      "start_ms": 434080,
+      "duration_ms": 3119,
+      "end_ms": 437199,
+      "text": "is actually just rip GP with the"
+    },
+    {
+      "start_ms": 435599,
+      "duration_ms": 2880,
+      "end_ms": 438479,
+      "text": "d-passrough flag. So, that's all that's"
+    },
+    {
+      "start_ms": 437199,
+      "duration_ms": 2321,
+      "end_ms": 439520,
+      "text": "going on there. That's how I highlight"
+    },
+    {
+      "start_ms": 438479,
+      "duration_ms": 2321,
+      "end_ms": 440800,
+      "text": "text. It's like GP, but it doesn't"
+    },
+    {
+      "start_ms": 439520,
+      "duration_ms": 2720,
+      "end_ms": 442240,
+      "text": "actually do any filtering. Also, while"
+    },
+    {
+      "start_ms": 440800,
+      "duration_ms": 2799,
+      "end_ms": 443599,
+      "text": "we're here, I kind of just mentioned it"
+    },
+    {
+      "start_ms": 442240,
+      "duration_ms": 2880,
+      "end_ms": 445120,
+      "text": "in passing, but I think it would make a"
+    },
+    {
+      "start_ms": 443599,
+      "duration_ms": 3921,
+      "end_ms": 447520,
+      "text": "good example. Let's say we're going to"
+    },
+    {
+      "start_ms": 445120,
+      "duration_ms": 4479,
+      "end_ms": 449599,
+      "text": "tar something. Okay, we'll do tar cf to"
+    },
+    {
+      "start_ms": 447520,
+      "duration_ms": 4560,
+      "end_ms": 452080,
+      "text": "create a tar. We'll call it file.tar and"
+    },
+    {
+      "start_ms": 449599,
+      "duration_ms": 3681,
+      "end_ms": 453280,
+      "text": "we'll tar up our /bin directory. Okay,"
+    },
+    {
+      "start_ms": 452080,
+      "duration_ms": 2959,
+      "end_ms": 455039,
+      "text": "we get a little warning, but it still"
+    },
+    {
+      "start_ms": 453280,
+      "duration_ms": 4080,
+      "end_ms": 457360,
+      "text": "worked. We can look at this file with"
+    },
+    {
+      "start_ms": 455039,
+      "duration_ms": 4160,
+      "end_ms": 459199,
+      "text": "ls-lh and we can see that as a 10"
+    },
+    {
+      "start_ms": 457360,
+      "duration_ms": 4080,
+      "end_ms": 461440,
+      "text": "megabyte file. Okay, cool. That's"
+    },
+    {
+      "start_ms": 459199,
+      "duration_ms": 3440,
+      "end_ms": 462639,
+      "text": "awesome. We can also gzip this file. So,"
+    },
+    {
+      "start_ms": 461440,
+      "duration_ms": 3039,
+      "end_ms": 464479,
+      "text": "this will get rid of the original file"
+    },
+    {
+      "start_ms": 462639,
+      "duration_ms": 4000,
+      "end_ms": 466639,
+      "text": "and it will compress it. Now, if we do"
+    },
+    {
+      "start_ms": 464479,
+      "duration_ms": 3280,
+      "end_ms": 467759,
+      "text": "an ls-h, I'm going to tab complete."
+    },
+    {
+      "start_ms": 466639,
+      "duration_ms": 3680,
+      "end_ms": 470319,
+      "text": "Notice the original file is gone. We"
+    },
+    {
+      "start_ms": 467759,
+      "duration_ms": 4801,
+      "end_ms": 472560,
+      "text": "just have the tar.gz 3.6 meg. So, we"
+    },
+    {
+      "start_ms": 470319,
+      "duration_ms": 3921,
+      "end_ms": 474240,
+      "text": "compress it from 10 to 3.6. That's super"
+    },
+    {
+      "start_ms": 472560,
+      "duration_ms": 3600,
+      "end_ms": 476160,
+      "text": "cool. Here's the thing. We could do that"
+    },
+    {
+      "start_ms": 474240,
+      "duration_ms": 3760,
+      "end_ms": 478000,
+      "text": "all in a pipeline. Instead of having to"
+    },
+    {
+      "start_ms": 476160,
+      "duration_ms": 3360,
+      "end_ms": 479520,
+      "text": "create the intermediate file on our file"
+    },
+    {
+      "start_ms": 478000,
+      "duration_ms": 3680,
+      "end_ms": 481680,
+      "text": "system, we can do it all at once. We can"
+    },
+    {
+      "start_ms": 479520,
+      "duration_ms": 5119,
+      "end_ms": 484639,
+      "text": "say cfen for the name of the file which"
+    },
+    {
+      "start_ms": 481680,
+      "duration_ms": 5280,
+      "end_ms": 486960,
+      "text": "will be standard out. And we can tar up"
+    },
+    {
+      "start_ms": 484639,
+      "duration_ms": 4000,
+      "end_ms": 488639,
+      "text": "/bin. This will just emit them to the"
+    },
+    {
+      "start_ms": 486960,
+      "duration_ms": 2799,
+      "end_ms": 489759,
+      "text": "screen. This will just emit bytes to the"
+    },
+    {
+      "start_ms": 488639,
+      "duration_ms": 2321,
+      "end_ms": 490960,
+      "text": "screen. You probably don't want this. I"
+    },
+    {
+      "start_ms": 489759,
+      "duration_ms": 3440,
+      "end_ms": 493199,
+      "text": "can show it to you guys. If I pipe it to"
+    },
+    {
+      "start_ms": 490960,
+      "duration_ms": 3600,
+      "end_ms": 494560,
+      "text": "a hex dump, you can see that like, wow,"
+    },
+    {
+      "start_ms": 493199,
+      "duration_ms": 3361,
+      "end_ms": 496560,
+      "text": "that looks really cool. I look like a"
+    },
+    {
+      "start_ms": 494560,
+      "duration_ms": 3520,
+      "end_ms": 498080,
+      "text": "hacker on like some Hollywood movie."
+    },
+    {
+      "start_ms": 496560,
+      "duration_ms": 5440,
+      "end_ms": 502000,
+      "text": "It's not actually useful. First of all,"
+    },
+    {
+      "start_ms": 498080,
+      "duration_ms": 5440,
+      "end_ms": 503520,
+      "text": "we could pipe it to gzip. And now we"
+    },
+    {
+      "start_ms": 502000,
+      "duration_ms": 2879,
+      "end_ms": 504879,
+      "text": "have the compressed data going to the"
+    },
+    {
+      "start_ms": 503520,
+      "duration_ms": 2640,
+      "end_ms": 506160,
+      "text": "screen. So very much the same thing."
+    },
+    {
+      "start_ms": 504879,
+      "duration_ms": 2880,
+      "end_ms": 507759,
+      "text": "It's going to be just a lot of this but"
+    },
+    {
+      "start_ms": 506160,
+      "duration_ms": 4400,
+      "end_ms": 510560,
+      "text": "with a lot less zeros. It's going to"
+    },
+    {
+      "start_ms": 507759,
+      "duration_ms": 4801,
+      "end_ms": 512560,
+      "text": "look more like random data kind of. Now"
+    },
+    {
+      "start_ms": 510560,
+      "duration_ms": 5039,
+      "end_ms": 515599,
+      "text": "we have the gzip version. We could write"
+    },
+    {
+      "start_ms": 512560,
+      "duration_ms": 4880,
+      "end_ms": 517440,
+      "text": "this out to file.tar.gz."
+    },
+    {
+      "start_ms": 515599,
+      "duration_ms": 3680,
+      "end_ms": 519279,
+      "text": "Look at the file. And we can see that"
+    },
+    {
+      "start_ms": 517440,
+      "duration_ms": 3279,
+      "end_ms": 520719,
+      "text": "it's 3.6 megs again. It's basically"
+    },
+    {
+      "start_ms": 519279,
+      "duration_ms": 3281,
+      "end_ms": 522560,
+      "text": "going to be the same file. So why did I"
+    },
+    {
+      "start_ms": 520719,
+      "duration_ms": 3200,
+      "end_ms": 523919,
+      "text": "do that? Because we have a pipeline."
+    },
+    {
+      "start_ms": 522560,
+      "duration_ms": 4719,
+      "end_ms": 527279,
+      "text": "Look at this. We have a pipeline. We"
+    },
+    {
+      "start_ms": 523919,
+      "duration_ms": 4801,
+      "end_ms": 528720,
+      "text": "could just pipe PV here. You could pipe"
+    },
+    {
+      "start_ms": 527279,
+      "duration_ms": 2481,
+      "end_ms": 529760,
+      "text": "cat here if you wanted. It would do"
+    },
+    {
+      "start_ms": 528720,
+      "duration_ms": 2239,
+      "end_ms": 530959,
+      "text": "nothing. thing. Cat reads in from"
+    },
+    {
+      "start_ms": 529760,
+      "duration_ms": 2960,
+      "end_ms": 532720,
+      "text": "standard in standard out. It's totally"
+    },
+    {
+      "start_ms": 530959,
+      "duration_ms": 3761,
+      "end_ms": 534720,
+      "text": "fine to throw it here. Instead, let's"
+    },
+    {
+      "start_ms": 532720,
+      "duration_ms": 4799,
+      "end_ms": 537519,
+      "text": "just throw PV here and let's see what"
+    },
+    {
+      "start_ms": 534720,
+      "duration_ms": 5840,
+      "end_ms": 540560,
+      "text": "happens. Look at that. We got a progress"
+    },
+    {
+      "start_ms": 537519,
+      "duration_ms": 4641,
+      "end_ms": 542160,
+      "text": "bar. Now, this run this ran way too"
+    },
+    {
+      "start_ms": 540560,
+      "duration_ms": 3520,
+      "end_ms": 544080,
+      "text": "fast. Look, we processed 31 megs a"
+    },
+    {
+      "start_ms": 542160,
+      "duration_ms": 4080,
+      "end_ms": 546240,
+      "text": "second. The input file is only 10 megs."
+    },
+    {
+      "start_ms": 544080,
+      "duration_ms": 4000,
+      "end_ms": 548080,
+      "text": "So, that's not super useful again. But"
+    },
+    {
+      "start_ms": 546240,
+      "duration_ms": 3120,
+      "end_ms": 549360,
+      "text": "if we were to give it, let's give it a"
+    },
+    {
+      "start_ms": 548080,
+      "duration_ms": 4160,
+      "end_ms": 552240,
+      "text": "bigger directory. I'm trying to think of"
+    },
+    {
+      "start_ms": 549360,
+      "duration_ms": 4400,
+      "end_ms": 553760,
+      "text": "a big directory. I'm on my Mac, so I can"
+    },
+    {
+      "start_ms": 552240,
+      "duration_ms": 4960,
+      "end_ms": 557200,
+      "text": "just give it the movies directory. We"
+    },
+    {
+      "start_ms": 553760,
+      "duration_ms": 4800,
+      "end_ms": 558560,
+      "text": "can just give it the OBS movies. So, I'm"
+    },
+    {
+      "start_ms": 557200,
+      "duration_ms": 2800,
+      "end_ms": 560000,
+      "text": "actually writing to that directory right"
+    },
+    {
+      "start_ms": 558560,
+      "duration_ms": 2719,
+      "end_ms": 561279,
+      "text": "now. Maybe that'll be a bit much. Let's"
+    },
+    {
+      "start_ms": 560000,
+      "duration_ms": 2959,
+      "end_ms": 562959,
+      "text": "just write the projects directory."
+    },
+    {
+      "start_ms": 561279,
+      "duration_ms": 2641,
+      "end_ms": 563920,
+      "text": "There's a lot of files in here. In fact,"
+    },
+    {
+      "start_ms": 562959,
+      "duration_ms": 2320,
+      "end_ms": 565279,
+      "text": "I'm not even going to write to the file"
+    },
+    {
+      "start_ms": 563920,
+      "duration_ms": 3919,
+      "end_ms": 567839,
+      "text": "system. Let's just go ahead and pipe"
+    },
+    {
+      "start_ms": 565279,
+      "duration_ms": 4961,
+      "end_ms": 570240,
+      "text": "this to dev null. So, let's take a look"
+    },
+    {
+      "start_ms": 567839,
+      "duration_ms": 4161,
+      "end_ms": 572000,
+      "text": "at what we're doing here. We are taring"
+    },
+    {
+      "start_ms": 570240,
+      "duration_ms": 4240,
+      "end_ms": 574480,
+      "text": "this directory to standard out, piping"
+    },
+    {
+      "start_ms": 572000,
+      "duration_ms": 3920,
+      "end_ms": 575920,
+      "text": "it to pv, piping it to jz gzip, and then"
+    },
+    {
+      "start_ms": 574480,
+      "duration_ms": 3039,
+      "end_ms": 577519,
+      "text": "writing it to dev null. And look at"
+    },
+    {
+      "start_ms": 575920,
+      "duration_ms": 3359,
+      "end_ms": 579279,
+      "text": "this. You can see here's the amount of"
+    },
+    {
+      "start_ms": 577519,
+      "duration_ms": 3440,
+      "end_ms": 580959,
+      "text": "data we've processed. Here's how long"
+    },
+    {
+      "start_ms": 579279,
+      "duration_ms": 2881,
+      "end_ms": 582160,
+      "text": "it's been. Here's how fast it's"
+    },
+    {
+      "start_ms": 580959,
+      "duration_ms": 2721,
+      "end_ms": 583680,
+      "text": "currently processing data. Remember,"
+    },
+    {
+      "start_ms": 582160,
+      "duration_ms": 4000,
+      "end_ms": 586160,
+      "text": "it's sitting here. So here's how fast"
+    },
+    {
+      "start_ms": 583680,
+      "duration_ms": 4640,
+      "end_ms": 588320,
+      "text": "data is being written out of tar and"
+    },
+    {
+      "start_ms": 586160,
+      "duration_ms": 3600,
+      "end_ms": 589760,
+      "text": "piped into gzip. And you can see that we"
+    },
+    {
+      "start_ms": 588320,
+      "duration_ms": 2880,
+      "end_ms": 591200,
+      "text": "don't know how much data is here. It's"
+    },
+    {
+      "start_ms": 589760,
+      "duration_ms": 2800,
+      "end_ms": 592560,
+      "text": "still taring the file. Like we have we"
+    },
+    {
+      "start_ms": 591200,
+      "duration_ms": 2560,
+      "end_ms": 593760,
+      "text": "have no idea. So we're not going to get"
+    },
+    {
+      "start_ms": 592560,
+      "duration_ms": 2399,
+      "end_ms": 594959,
+      "text": "a meaningful progress bar. We're just"
+    },
+    {
+      "start_ms": 593760,
+      "duration_ms": 2480,
+      "end_ms": 596240,
+      "text": "going to get some sort of animated thing"
+    },
+    {
+      "start_ms": 594959,
+      "duration_ms": 3281,
+      "end_ms": 598240,
+      "text": "here, which is fine. We don't know the"
+    },
+    {
+      "start_ms": 596240,
+      "duration_ms": 3840,
+      "end_ms": 600080,
+      "text": "size of it. That makes perfect sense. So"
+    },
+    {
+      "start_ms": 598240,
+      "duration_ms": 4000,
+      "end_ms": 602240,
+      "text": "this is super cool. This is awesome to"
+    },
+    {
+      "start_ms": 600080,
+      "duration_ms": 3920,
+      "end_ms": 604000,
+      "text": "see this. Likewise, an alternative way"
+    },
+    {
+      "start_ms": 602240,
+      "duration_ms": 2960,
+      "end_ms": 605200,
+      "text": "of doing this, um, I've seen people do"
+    },
+    {
+      "start_ms": 604000,
+      "duration_ms": 2240,
+      "end_ms": 606240,
+      "text": "this in the past. I think someone even"
+    },
+    {
+      "start_ms": 605200,
+      "duration_ms": 3280,
+      "end_ms": 608480,
+      "text": "commented on one of my videos that they"
+    },
+    {
+      "start_ms": 606240,
+      "duration_ms": 4480,
+      "end_ms": 610720,
+      "text": "had done something like this. Uh, I had"
+    },
+    {
+      "start_ms": 608480,
+      "duration_ms": 4560,
+      "end_ms": 613040,
+      "text": "written out a file. So let's say I want"
+    },
+    {
+      "start_ms": 610720,
+      "duration_ms": 3840,
+      "end_ms": 614560,
+      "text": "to make a file of just zeros, just all"
+    },
+    {
+      "start_ms": 613040,
+      "duration_ms": 4239,
+      "end_ms": 617279,
+      "text": "zeros in the file. Well, that's super"
+    },
+    {
+      "start_ms": 614560,
+      "duration_ms": 5360,
+      "end_ms": 619920,
+      "text": "easy. I can dd the input file would be"
+    },
+    {
+      "start_ms": 617279,
+      "duration_ms": 4321,
+      "end_ms": 621600,
+      "text": "dev zero. And if I run this right now,"
+    },
+    {
+      "start_ms": 619920,
+      "duration_ms": 4000,
+      "end_ms": 623920,
+      "text": "we're just going to spew a whole bunch"
+    },
+    {
+      "start_ms": 621600,
+      "duration_ms": 4000,
+      "end_ms": 625600,
+      "text": "of zeros to the screen. Not the asky"
+    },
+    {
+      "start_ms": 623920,
+      "duration_ms": 3280,
+      "end_ms": 627200,
+      "text": "character zero, but like literal null"
+    },
+    {
+      "start_ms": 625600,
+      "duration_ms": 3280,
+      "end_ms": 628880,
+      "text": "bytes. So if I pipe this, you can see"
+    },
+    {
+      "start_ms": 627200,
+      "duration_ms": 3680,
+      "end_ms": 630880,
+      "text": "they're all null bytes. And it will just"
+    },
+    {
+      "start_ms": 628880,
+      "duration_ms": 4079,
+      "end_ms": 632959,
+      "text": "go forever. It's a pseudo device that"
+    },
+    {
+      "start_ms": 630880,
+      "duration_ms": 3760,
+      "end_ms": 634640,
+      "text": "your colonel gives you, and it's"
+    },
+    {
+      "start_ms": 632959,
+      "duration_ms": 3281,
+      "end_ms": 636240,
+      "text": "beautiful. It's awesome. We can also"
+    },
+    {
+      "start_ms": 634640,
+      "duration_ms": 4240,
+      "end_ms": 638880,
+      "text": "specify an output file. I'm just going"
+    },
+    {
+      "start_ms": 636240,
+      "duration_ms": 4240,
+      "end_ms": 640480,
+      "text": "to say dev null. So we're not doing"
+    },
+    {
+      "start_ms": 638880,
+      "duration_ms": 3199,
+      "end_ms": 642079,
+      "text": "anything. We're reading in a file and"
+    },
+    {
+      "start_ms": 640480,
+      "duration_ms": 4320,
+      "end_ms": 644800,
+      "text": "we're writing it out to DevNull. That's"
+    },
+    {
+      "start_ms": 642079,
+      "duration_ms": 4961,
+      "end_ms": 647040,
+      "text": "super great with DD. I know newer"
+    },
+    {
+      "start_ms": 644800,
+      "duration_ms": 3760,
+      "end_ms": 648560,
+      "text": "versions of DD. I think all of the"
+    },
+    {
+      "start_ms": 647040,
+      "duration_ms": 3520,
+      "end_ms": 650560,
+      "text": "versions I've encountered now have this."
+    },
+    {
+      "start_ms": 648560,
+      "duration_ms": 4000,
+      "end_ms": 652560,
+      "text": "This wasn't always the case in the past,"
+    },
+    {
+      "start_ms": 650560,
+      "duration_ms": 4399,
+      "end_ms": 654959,
+      "text": "but you now have a status equals"
+    },
+    {
+      "start_ms": 652560,
+      "duration_ms": 4480,
+      "end_ms": 657040,
+      "text": "progress, I believe. And you can get"
+    },
+    {
+      "start_ms": 654959,
+      "duration_ms": 3601,
+      "end_ms": 658560,
+      "text": "this progress bar so you can see like"
+    },
+    {
+      "start_ms": 657040,
+      "duration_ms": 3680,
+      "end_ms": 660720,
+      "text": "how fast it's going, how much it's"
+    },
+    {
+      "start_ms": 658560,
+      "duration_ms": 3920,
+      "end_ms": 662480,
+      "text": "transferred and stuff. But you might be"
+    },
+    {
+      "start_ms": 660720,
+      "duration_ms": 2720,
+      "end_ms": 663440,
+      "text": "in a situation where your output and"
+    },
+    {
+      "start_ms": 662480,
+      "duration_ms": 2080,
+      "end_ms": 664560,
+      "text": "your input's a little bit different."
+    },
+    {
+      "start_ms": 663440,
+      "duration_ms": 2160,
+      "end_ms": 665600,
+      "text": "Maybe one's coming from a network"
+    },
+    {
+      "start_ms": 664560,
+      "duration_ms": 2959,
+      "end_ms": 667519,
+      "text": "source, maybe you're writing to a"
+    },
+    {
+      "start_ms": 665600,
+      "duration_ms": 4640,
+      "end_ms": 670240,
+      "text": "network source. Who knows? You could"
+    },
+    {
+      "start_ms": 667519,
+      "duration_ms": 5041,
+      "end_ms": 672560,
+      "text": "simulate this with PV. So reading in"
+    },
+    {
+      "start_ms": 670240,
+      "duration_ms": 4719,
+      "end_ms": 674959,
+      "text": "from dev zero, we could pipe it to PV."
+    },
+    {
+      "start_ms": 672560,
+      "duration_ms": 5440,
+      "end_ms": 678000,
+      "text": "We could pipe it to DD again to output"
+    },
+    {
+      "start_ms": 674959,
+      "duration_ms": 4560,
+      "end_ms": 679519,
+      "text": "to dev null. So this is exactly the"
+    },
+    {
+      "start_ms": 678000,
+      "duration_ms": 3440,
+      "end_ms": 681440,
+      "text": "same, but DD is not giving us the"
+    },
+    {
+      "start_ms": 679519,
+      "duration_ms": 4081,
+      "end_ms": 683600,
+      "text": "status. Pipe viewer is giving us the"
+    },
+    {
+      "start_ms": 681440,
+      "duration_ms": 3519,
+      "end_ms": 684959,
+      "text": "status. So super cool. You can toss that"
+    },
+    {
+      "start_ms": 683600,
+      "duration_ms": 2799,
+      "end_ms": 686399,
+      "text": "in there because then you could do all"
+    },
+    {
+      "start_ms": 684959,
+      "duration_ms": 4880,
+      "end_ms": 689839,
+      "text": "sorts of stuff. Like I could pipe this"
+    },
+    {
+      "start_ms": 686399,
+      "duration_ms": 5041,
+      "end_ms": 691440,
+      "text": "to like netcat and I could just write it"
+    },
+    {
+      "start_ms": 689839,
+      "duration_ms": 4081,
+      "end_ms": 693920,
+      "text": "to like a a server if I had something"
+    },
+    {
+      "start_ms": 691440,
+      "duration_ms": 4000,
+      "end_ms": 695440,
+      "text": "else like listening on port like 50 uh"
+    },
+    {
+      "start_ms": 693920,
+      "duration_ms": 2720,
+      "end_ms": 696640,
+      "text": "5600 or something. I don't know. I'm"
+    },
+    {
+      "start_ms": 695440,
+      "duration_ms": 2880,
+      "end_ms": 698320,
+      "text": "just making up stuff. But like you could"
+    },
+    {
+      "start_ms": 696640,
+      "duration_ms": 3600,
+      "end_ms": 700240,
+      "text": "totally do something like that. It's"
+    },
+    {
+      "start_ms": 698320,
+      "duration_ms": 3519,
+      "end_ms": 701839,
+      "text": "super cool. It's super useful. Real"
+    },
+    {
+      "start_ms": 700240,
+      "duration_ms": 3520,
+      "end_ms": 703760,
+      "text": "quick, while researching for this video,"
+    },
+    {
+      "start_ms": 701839,
+      "duration_ms": 5521,
+      "end_ms": 707360,
+      "text": "I found this really cool flag to PV I"
+    },
+    {
+      "start_ms": 703760,
+      "duration_ms": 6160,
+      "end_ms": 709920,
+      "text": "did not know existed. PV minus T. Look"
+    },
+    {
+      "start_ms": 707360,
+      "duration_ms": 4320,
+      "end_ms": 711680,
+      "text": "at this. It's just a timer. It's just a"
+    },
+    {
+      "start_ms": 709920,
+      "duration_ms": 3280,
+      "end_ms": 713200,
+      "text": "timer. You could just run PV minus T and"
+    },
+    {
+      "start_ms": 711680,
+      "duration_ms": 3520,
+      "end_ms": 715200,
+      "text": "it's just a timer. So, as long as"
+    },
+    {
+      "start_ms": 713200,
+      "duration_ms": 3759,
+      "end_ms": 716959,
+      "text": "something's running, as long as the"
+    },
+    {
+      "start_ms": 715200,
+      "duration_ms": 3280,
+      "end_ms": 718480,
+      "text": "input is open, if I control D, then I"
+    },
+    {
+      "start_ms": 716959,
+      "duration_ms": 3681,
+      "end_ms": 720640,
+      "text": "can close the standard in, which causes"
+    },
+    {
+      "start_ms": 718480,
+      "duration_ms": 4240,
+      "end_ms": 722720,
+      "text": "PV to be done. It will just emit a timer"
+    },
+    {
+      "start_ms": 720640,
+      "duration_ms": 3840,
+      "end_ms": 724480,
+      "text": "to the screen. This is super useful"
+    },
+    {
+      "start_ms": 722720,
+      "duration_ms": 4960,
+      "end_ms": 727680,
+      "text": "because if you're running a command,"
+    },
+    {
+      "start_ms": 724480,
+      "duration_ms": 5200,
+      "end_ms": 729680,
+      "text": "some really long command, and you pipe"
+    },
+    {
+      "start_ms": 727680,
+      "duration_ms": 3279,
+      "end_ms": 730959,
+      "text": "that to pv minus t, well, that I thought"
+    },
+    {
+      "start_ms": 729680,
+      "duration_ms": 2560,
+      "end_ms": 732240,
+      "text": "I made an alias for that. That would"
+    },
+    {
+      "start_ms": 730959,
+      "duration_ms": 3281,
+      "end_ms": 734240,
+      "text": "have been really cool for the video."
+    },
+    {
+      "start_ms": 732240,
+      "duration_ms": 5719,
+      "end_ms": 737959,
+      "text": "Just pretend that's an alias. Uh, well,"
+    },
+    {
+      "start_ms": 734240,
+      "duration_ms": 3719,
+      "end_ms": 737959,
+      "text": "actually, I have movie magic."
+    },
+    {
+      "start_ms": 739680,
+      "duration_ms": 4959,
+      "end_ms": 744639,
+      "text": "So, if we're to take some really long"
+    },
+    {
+      "start_ms": 741360,
+      "duration_ms": 5520,
+      "end_ms": 746880,
+      "text": "command and pipe that to pv minus t,"
+    },
+    {
+      "start_ms": 744639,
+      "duration_ms": 4320,
+      "end_ms": 748959,
+      "text": "look at this. We have a timer. We can"
+    },
+    {
+      "start_ms": 746880,
+      "duration_ms": 3759,
+      "end_ms": 750639,
+      "text": "see how long this command is taking to"
+    },
+    {
+      "start_ms": 748959,
+      "duration_ms": 4161,
+      "end_ms": 753120,
+      "text": "run. As long as it exists somewhere in"
+    },
+    {
+      "start_ms": 750639,
+      "duration_ms": 4880,
+      "end_ms": 755519,
+      "text": "the pipeline, we will get this nice"
+    },
+    {
+      "start_ms": 753120,
+      "duration_ms": 3680,
+      "end_ms": 756800,
+      "text": "little clock here. And PV of course"
+    },
+    {
+      "start_ms": 755519,
+      "duration_ms": 2641,
+      "end_ms": 758160,
+      "text": "reads in from standard in and writes to"
+    },
+    {
+      "start_ms": 756800,
+      "duration_ms": 3440,
+      "end_ms": 760240,
+      "text": "standard out. So you can just toss this"
+    },
+    {
+      "start_ms": 758160,
+      "duration_ms": 3919,
+      "end_ms": 762079,
+      "text": "in your pipeline and still redirect"
+    },
+    {
+      "start_ms": 760240,
+      "duration_ms": 3839,
+      "end_ms": 764079,
+      "text": "right through it. It just silently"
+    },
+    {
+      "start_ms": 762079,
+      "duration_ms": 5121,
+      "end_ms": 767200,
+      "text": "transfers data between the two. Super"
+    },
+    {
+      "start_ms": 764079,
+      "duration_ms": 4560,
+      "end_ms": 768639,
+      "text": "nice. And so"
+    },
+    {
+      "start_ms": 767200,
+      "duration_ms": 3199,
+      "end_ms": 770399,
+      "text": "this was always defined the whole time."
+    },
+    {
+      "start_ms": 768639,
+      "duration_ms": 3281,
+      "end_ms": 771920,
+      "text": "I didn't just define this for this part"
+    },
+    {
+      "start_ms": 770399,
+      "duration_ms": 2481,
+      "end_ms": 772880,
+      "text": "of the video and cut it. Uh you can see"
+    },
+    {
+      "start_ms": 771920,
+      "duration_ms": 2240,
+      "end_ms": 774160,
+      "text": "that some really long command just"
+    },
+    {
+      "start_ms": 772880,
+      "duration_ms": 2880,
+      "end_ms": 775760,
+      "text": "sleeps for 10 seconds. So if you have a"
+    },
+    {
+      "start_ms": 774160,
+      "duration_ms": 2799,
+      "end_ms": 776959,
+      "text": "command that does something that takes a"
+    },
+    {
+      "start_ms": 775760,
+      "duration_ms": 2639,
+      "end_ms": 778399,
+      "text": "while, in this example, we're just"
+    },
+    {
+      "start_ms": 776959,
+      "duration_ms": 4320,
+      "end_ms": 781279,
+      "text": "fabricating it. You can see that"
+    },
+    {
+      "start_ms": 778399,
+      "duration_ms": 5201,
+      "end_ms": 783600,
+      "text": "sleeping for 10 seconds took 9 seconds."
+    },
+    {
+      "start_ms": 781279,
+      "duration_ms": 3521,
+      "end_ms": 784800,
+      "text": "So yeah, beautiful. That's awesome. So"
+    },
+    {
+      "start_ms": 783600,
+      "duration_ms": 3440,
+      "end_ms": 787040,
+      "text": "for this example, I'm going to go back"
+    },
+    {
+      "start_ms": 784800,
+      "duration_ms": 4800,
+      "end_ms": 789600,
+      "text": "to the tar command that we had. Tar"
+    },
+    {
+      "start_ms": 787040,
+      "duration_ms": 5280,
+      "end_ms": 792320,
+      "text": "minus cf, right? Just standard out. And"
+    },
+    {
+      "start_ms": 789600,
+      "duration_ms": 4080,
+      "end_ms": 793680,
+      "text": "let's tar up my movie projects just cuz"
+    },
+    {
+      "start_ms": 792320,
+      "duration_ms": 3680,
+      "end_ms": 796000,
+      "text": "I know it's a big directory and there's"
+    },
+    {
+      "start_ms": 793680,
+      "duration_ms": 5760,
+      "end_ms": 799440,
+      "text": "a lot to tar up there. We can pipe this"
+    },
+    {
+      "start_ms": 796000,
+      "duration_ms": 5920,
+      "end_ms": 801920,
+      "text": "to PV. Then we can pipe this to gzip."
+    },
+    {
+      "start_ms": 799440,
+      "duration_ms": 3760,
+      "end_ms": 803200,
+      "text": "Then we can pipe it to PV again. And we"
+    },
+    {
+      "start_ms": 801920,
+      "duration_ms": 2400,
+      "end_ms": 804320,
+      "text": "can write it to the output file. In this"
+    },
+    {
+      "start_ms": 803200,
+      "duration_ms": 2639,
+      "end_ms": 805839,
+      "text": "example, I'm using dev null. I don't"
+    },
+    {
+      "start_ms": 804320,
+      "duration_ms": 3920,
+      "end_ms": 808240,
+      "text": "want to save any of this data. But we"
+    },
+    {
+      "start_ms": 805839,
+      "duration_ms": 6081,
+      "end_ms": 811920,
+      "text": "can have two PVs running. Okay. And if"
+    },
+    {
+      "start_ms": 808240,
+      "duration_ms": 5839,
+      "end_ms": 814079,
+      "text": "we run this, you only see one thing of"
+    },
+    {
+      "start_ms": 811920,
+      "duration_ms": 3840,
+      "end_ms": 815760,
+      "text": "output here, right? They're both kind of"
+    },
+    {
+      "start_ms": 814079,
+      "duration_ms": 4320,
+      "end_ms": 818399,
+      "text": "trying to output there, and things can"
+    },
+    {
+      "start_ms": 815760,
+      "duration_ms": 4560,
+      "end_ms": 820320,
+      "text": "get a little bit messed up. Luckily, PV"
+    },
+    {
+      "start_ms": 818399,
+      "duration_ms": 5361,
+      "end_ms": 823760,
+      "text": "accounts for this, and you can do"
+    },
+    {
+      "start_ms": 820320,
+      "duration_ms": 5600,
+      "end_ms": 825920,
+      "text": "something to help it. So, the flag that"
+    },
+    {
+      "start_ms": 823760,
+      "duration_ms": 4079,
+      "end_ms": 827839,
+      "text": "it needs is minus C. This is short"
+    },
+    {
+      "start_ms": 825920,
+      "duration_ms": 4560,
+      "end_ms": 830480,
+      "text": "for-cursor."
+    },
+    {
+      "start_ms": 827839,
+      "duration_ms": 4481,
+      "end_ms": 832320,
+      "text": "And this will allow multiple PVs to work"
+    },
+    {
+      "start_ms": 830480,
+      "duration_ms": 3280,
+      "end_ms": 833760,
+      "text": "in the same pipeline. they will detect"
+    },
+    {
+      "start_ms": 832320,
+      "duration_ms": 2880,
+      "end_ms": 835200,
+      "text": "they're on the same terminal and they"
+    },
+    {
+      "start_ms": 833760,
+      "duration_ms": 3840,
+      "end_ms": 837600,
+      "text": "will format themselves nicely and they"
+    },
+    {
+      "start_ms": 835200,
+      "duration_ms": 3999,
+      "end_ms": 839199,
+      "text": "will both take up one line. So you can"
+    },
+    {
+      "start_ms": 837600,
+      "duration_ms": 2720,
+      "end_ms": 840320,
+      "text": "see that okay one of them's operating at"
+    },
+    {
+      "start_ms": 839199,
+      "duration_ms": 2880,
+      "end_ms": 842079,
+      "text": "this speed and the other one's operating"
+    },
+    {
+      "start_ms": 840320,
+      "duration_ms": 3759,
+      "end_ms": 844079,
+      "text": "at this speed. So they have different"
+    },
+    {
+      "start_ms": 842079,
+      "duration_ms": 2961,
+      "end_ms": 845040,
+      "text": "bite counts now. Now as you can see the"
+    },
+    {
+      "start_ms": 844079,
+      "duration_ms": 2241,
+      "end_ms": 846320,
+      "text": "bite count's a little bit different."
+    },
+    {
+      "start_ms": 845040,
+      "duration_ms": 2720,
+      "end_ms": 847760,
+      "text": "Look the one at the top is a little bit"
+    },
+    {
+      "start_ms": 846320,
+      "duration_ms": 3199,
+      "end_ms": 849519,
+      "text": "bigger. So I'm willing to bet the one's"
+    },
+    {
+      "start_ms": 847760,
+      "duration_ms": 3040,
+      "end_ms": 850800,
+      "text": "a little bit bigger is here and the"
+    },
+    {
+      "start_ms": 849519,
+      "duration_ms": 2961,
+      "end_ms": 852480,
+      "text": "one's a little bit smaller is here"
+    },
+    {
+      "start_ms": 850800,
+      "duration_ms": 4159,
+      "end_ms": 854959,
+      "text": "because this one's after compression and"
+    },
+    {
+      "start_ms": 852480,
+      "duration_ms": 4320,
+      "end_ms": 856800,
+      "text": "this one's before compression. But"
+    },
+    {
+      "start_ms": 854959,
+      "duration_ms": 3521,
+      "end_ms": 858480,
+      "text": "that's just a gamble. That's a bet"
+    },
+    {
+      "start_ms": 856800,
+      "duration_ms": 3599,
+      "end_ms": 860399,
+      "text": "because the way pipelines are executed"
+    },
+    {
+      "start_ms": 858480,
+      "duration_ms": 3280,
+      "end_ms": 861760,
+      "text": "in bash and other shells, at least the"
+    },
+    {
+      "start_ms": 860399,
+      "duration_ms": 2560,
+      "end_ms": 862959,
+      "text": "ones that I'm aware of, there's no"
+    },
+    {
+      "start_ms": 861760,
+      "duration_ms": 2639,
+      "end_ms": 864399,
+      "text": "guarantee of the order that these are"
+    },
+    {
+      "start_ms": 862959,
+      "duration_ms": 2961,
+      "end_ms": 865920,
+      "text": "executed in. All these commands will be"
+    },
+    {
+      "start_ms": 864399,
+      "duration_ms": 2800,
+      "end_ms": 867199,
+      "text": "executed pretty much at the same time."
+    },
+    {
+      "start_ms": 865920,
+      "duration_ms": 3279,
+      "end_ms": 869199,
+      "text": "You can think of it as the same time."
+    },
+    {
+      "start_ms": 867199,
+      "duration_ms": 3921,
+      "end_ms": 871120,
+      "text": "And they all get wired together like"
+    },
+    {
+      "start_ms": 869199,
+      "duration_ms": 4161,
+      "end_ms": 873360,
+      "text": "this. So it's not like tar runs and then"
+    },
+    {
+      "start_ms": 871120,
+      "duration_ms": 3680,
+      "end_ms": 874800,
+      "text": "PV runs and then gzip runs then PV runs."
+    },
+    {
+      "start_ms": 873360,
+      "duration_ms": 2880,
+      "end_ms": 876240,
+      "text": "This messes up a lot of people when they"
+    },
+    {
+      "start_ms": 874800,
+      "duration_ms": 3120,
+      "end_ms": 877920,
+      "text": "deal with terminals when they first"
+    },
+    {
+      "start_ms": 876240,
+      "duration_ms": 3039,
+      "end_ms": 879279,
+      "text": "learn the terminal or the shell. These"
+    },
+    {
+      "start_ms": 877920,
+      "duration_ms": 3120,
+      "end_ms": 881040,
+      "text": "all start running at the same time"
+    },
+    {
+      "start_ms": 879279,
+      "duration_ms": 2961,
+      "end_ms": 882240,
+      "text": "because this PV needs to be running"
+    },
+    {
+      "start_ms": 881040,
+      "duration_ms": 2560,
+      "end_ms": 883600,
+      "text": "reading from gzip which needs to be"
+    },
+    {
+      "start_ms": 882240,
+      "duration_ms": 2399,
+      "end_ms": 884639,
+      "text": "running reading from PV which needs to"
+    },
+    {
+      "start_ms": 883600,
+      "duration_ms": 2239,
+      "end_ms": 885839,
+      "text": "be running reading from tar. They all"
+    },
+    {
+      "start_ms": 884639,
+      "duration_ms": 2880,
+      "end_ms": 887519,
+      "text": "have to be able to write to some sort of"
+    },
+    {
+      "start_ms": 885839,
+      "duration_ms": 3041,
+      "end_ms": 888880,
+      "text": "valid target. So, the processes have to"
+    },
+    {
+      "start_ms": 887519,
+      "duration_ms": 2801,
+      "end_ms": 890320,
+      "text": "be in place before they even start"
+    },
+    {
+      "start_ms": 888880,
+      "duration_ms": 2720,
+      "end_ms": 891600,
+      "text": "talking. They're not aware of which"
+    },
+    {
+      "start_ms": 890320,
+      "duration_ms": 3600,
+      "end_ms": 893920,
+      "text": "one's running first and which one's"
+    },
+    {
+      "start_ms": 891600,
+      "duration_ms": 4479,
+      "end_ms": 896079,
+      "text": "running second. They just take the first"
+    },
+    {
+      "start_ms": 893920,
+      "duration_ms": 4719,
+      "end_ms": 898639,
+      "text": "slot that's available. I think we got"
+    },
+    {
+      "start_ms": 896079,
+      "duration_ms": 4161,
+      "end_ms": 900240,
+      "text": "lucky here and we won the race and we"
+    },
+    {
+      "start_ms": 898639,
+      "duration_ms": 3521,
+      "end_ms": 902160,
+      "text": "and it worked out like this, but it may"
+    },
+    {
+      "start_ms": 900240,
+      "duration_ms": 4080,
+      "end_ms": 904320,
+      "text": "not in the future. So, what you can do"
+    },
+    {
+      "start_ms": 902160,
+      "duration_ms": 3679,
+      "end_ms": 905839,
+      "text": "to account for this is there is another"
+    },
+    {
+      "start_ms": 904320,
+      "duration_ms": 5199,
+      "end_ms": 909519,
+      "text": "flag-"
+    },
+    {
+      "start_ms": 905839,
+      "duration_ms": 6641,
+      "end_ms": 912480,
+      "text": "name or dash capen. Um, if you do dash"
+    },
+    {
+      "start_ms": 909519,
+      "duration_ms": 5281,
+      "end_ms": 914800,
+      "text": "capn, you could say tar here and we can"
+    },
+    {
+      "start_ms": 912480,
+      "duration_ms": 4560,
+      "end_ms": 917040,
+      "text": "go over here and we can say dashcapen"
+    },
+    {
+      "start_ms": 914800,
+      "duration_ms": 3599,
+      "end_ms": 918399,
+      "text": "gzzip. So we give them both names. Of"
+    },
+    {
+      "start_ms": 917040,
+      "duration_ms": 4320,
+      "end_ms": 921360,
+      "text": "course you can condense these flags if"
+    },
+    {
+      "start_ms": 918399,
+      "duration_ms": 5521,
+      "end_ms": 923920,
+      "text": "you wanted capen. I do this a lot. When"
+    },
+    {
+      "start_ms": 921360,
+      "duration_ms": 4880,
+      "end_ms": 926240,
+      "text": "you run this, take a look at this. We"
+    },
+    {
+      "start_ms": 923920,
+      "duration_ms": 4800,
+      "end_ms": 928720,
+      "text": "have the tar and we have the gzip. And"
+    },
+    {
+      "start_ms": 926240,
+      "duration_ms": 4080,
+      "end_ms": 930320,
+      "text": "now you can clearly see which one is"
+    },
+    {
+      "start_ms": 928720,
+      "duration_ms": 3440,
+      "end_ms": 932160,
+      "text": "running. So it makes sense. And we got"
+    },
+    {
+      "start_ms": 930320,
+      "duration_ms": 3440,
+      "end_ms": 933760,
+      "text": "the same order again. The smaller value"
+    },
+    {
+      "start_ms": 932160,
+      "duration_ms": 2720,
+      "end_ms": 934880,
+      "text": "is the gzip, which makes perfect sense"
+    },
+    {
+      "start_ms": 933760,
+      "duration_ms": 3280,
+      "end_ms": 937040,
+      "text": "cuz we're compressing it. We should be"
+    },
+    {
+      "start_ms": 934880,
+      "duration_ms": 4480,
+      "end_ms": 939360,
+      "text": "able to to shrink down some of these"
+    },
+    {
+      "start_ms": 937040,
+      "duration_ms": 3840,
+      "end_ms": 940880,
+      "text": "bytes, you know. So, this is super cool."
+    },
+    {
+      "start_ms": 939360,
+      "duration_ms": 2880,
+      "end_ms": 942240,
+      "text": "You can give it the dash C and the D-"
+    },
+    {
+      "start_ms": 940880,
+      "duration_ms": 2880,
+      "end_ms": 943760,
+      "text": "capital N flag. Now, I'm thinking about"
+    },
+    {
+      "start_ms": 942240,
+      "duration_ms": 2800,
+      "end_ms": 945040,
+      "text": "it, you can totally just like contrive a"
+    },
+    {
+      "start_ms": 943760,
+      "duration_ms": 2480,
+      "end_ms": 946240,
+      "text": "scenario, too. Let me think. You don't"
+    },
+    {
+      "start_ms": 945040,
+      "duration_ms": 2640,
+      "end_ms": 947680,
+      "text": "actually have to give it any input. We"
+    },
+    {
+      "start_ms": 946240,
+      "duration_ms": 3599,
+      "end_ms": 949839,
+      "text": "can just run PV on its own. If we just"
+    },
+    {
+      "start_ms": 947680,
+      "duration_ms": 3680,
+      "end_ms": 951360,
+      "text": "run this, it should just run like it"
+    },
+    {
+      "start_ms": 949839,
+      "duration_ms": 4481,
+      "end_ms": 954320,
+      "text": "doesn't have to do anything. No data is"
+    },
+    {
+      "start_ms": 951360,
+      "duration_ms": 4159,
+      "end_ms": 955519,
+      "text": "being transferred between the two. Uh, I"
+    },
+    {
+      "start_ms": 954320,
+      "duration_ms": 3120,
+      "end_ms": 957440,
+      "text": "kind of like seeing the data transfer."
+    },
+    {
+      "start_ms": 955519,
+      "duration_ms": 3201,
+      "end_ms": 958720,
+      "text": "Let's just pipe yes into PV. So, you"
+    },
+    {
+      "start_ms": 957440,
+      "duration_ms": 3759,
+      "end_ms": 961199,
+      "text": "know, yes, just outputs wide to the"
+    },
+    {
+      "start_ms": 958720,
+      "duration_ms": 6320,
+      "end_ms": 965040,
+      "text": "screen like that. We could pipe yes into"
+    },
+    {
+      "start_ms": 961199,
+      "duration_ms": 6161,
+      "end_ms": 967360,
+      "text": "PV. And we can say line mode-cap"
+    },
+    {
+      "start_ms": 965040,
+      "duration_ms": 5120,
+      "end_ms": 970160,
+      "text": "will allow five lines at a time. So this"
+    },
+    {
+      "start_ms": 967360,
+      "duration_ms": 4719,
+      "end_ms": 972079,
+      "text": "is what we get. There's also a progress"
+    },
+    {
+      "start_ms": 970160,
+      "duration_ms": 4239,
+      "end_ms": 974399,
+      "text": "bar there. So let's give it a minus C."
+    },
+    {
+      "start_ms": 972079,
+      "duration_ms": 3601,
+      "end_ms": 975680,
+      "text": "So we're in cursor mode and a dash capn"
+    },
+    {
+      "start_ms": 974399,
+      "duration_ms": 4641,
+      "end_ms": 979040,
+      "text": "so we can give it a name. And we will"
+    },
+    {
+      "start_ms": 975680,
+      "duration_ms": 6240,
+      "end_ms": 981920,
+      "text": "call this one. The name of it is one. So"
+    },
+    {
+      "start_ms": 979040,
+      "duration_ms": 4880,
+      "end_ms": 983920,
+      "text": "we get that. And you can see well it's a"
+    },
+    {
+      "start_ms": 981920,
+      "duration_ms": 3919,
+      "end_ms": 985839,
+      "text": "little bit tough with the actual command"
+    },
+    {
+      "start_ms": 983920,
+      "duration_ms": 5760,
+      "end_ms": 989680,
+      "text": "outputting data, but let's do this"
+    },
+    {
+      "start_ms": 985839,
+      "duration_ms": 10000,
+      "end_ms": 995839,
+      "text": "first. Pipe it to pv- CN2."
+    },
+    {
+      "start_ms": 989680,
+      "duration_ms": 8159,
+      "end_ms": 997839,
+      "text": "Pipe it to PV- CN3. Pipe it to PV- CN4."
+    },
+    {
+      "start_ms": 995839,
+      "duration_ms": 3680,
+      "end_ms": 999519,
+      "text": "Write this out to dev null. Now hold on"
+    },
+    {
+      "start_ms": 997839,
+      "duration_ms": 4721,
+      "end_ms": 1002560,
+      "text": "because I realized I wrote CV and not"
+    },
+    {
+      "start_ms": 999519,
+      "duration_ms": 5440,
+      "end_ms": 1004959,
+      "text": "PV. There we go. If we run this now, we"
+    },
+    {
+      "start_ms": 1002560,
+      "duration_ms": 4399,
+      "end_ms": 1006959,
+      "text": "should have four different progress bar."
+    },
+    {
+      "start_ms": 1004959,
+      "duration_ms": 3921,
+      "end_ms": 1008880,
+      "text": "One, three, two, four. As you can see,"
+    },
+    {
+      "start_ms": 1006959,
+      "duration_ms": 3761,
+      "end_ms": 1010720,
+      "text": "the order is not guaranteed. It's not"
+    },
+    {
+      "start_ms": 1008880,
+      "duration_ms": 3519,
+      "end_ms": 1012399,
+      "text": "consistent. But you can see this is"
+    },
+    {
+      "start_ms": 1010720,
+      "duration_ms": 3919,
+      "end_ms": 1014639,
+      "text": "super cool way of seeing like all the"
+    },
+    {
+      "start_ms": 1012399,
+      "duration_ms": 4240,
+      "end_ms": 1016639,
+      "text": "progress bars at once. Oh, interesting"
+    },
+    {
+      "start_ms": 1014639,
+      "duration_ms": 4401,
+      "end_ms": 1019040,
+      "text": "that this one doesn't have B's because"
+    },
+    {
+      "start_ms": 1016639,
+      "duration_ms": 4401,
+      "end_ms": 1021040,
+      "text": "it's in line mode. Oh, that's cute. It's"
+    },
+    {
+      "start_ms": 1019040,
+      "duration_ms": 4400,
+      "end_ms": 1023440,
+      "text": "showing you how many lines were read."
+    },
+    {
+      "start_ms": 1021040,
+      "duration_ms": 3919,
+      "end_ms": 1024959,
+      "text": "That's awesome. I like that. Um I like"
+    },
+    {
+      "start_ms": 1023440,
+      "duration_ms": 4479,
+      "end_ms": 1027919,
+      "text": "that so much. I'm going to disable line"
+    },
+    {
+      "start_ms": 1024959,
+      "duration_ms": 4321,
+      "end_ms": 1029280,
+      "text": "mode, but yeah. So, let's change that to"
+    },
+    {
+      "start_ms": 1027919,
+      "duration_ms": 4000,
+      "end_ms": 1031919,
+      "text": "I don't know, 10 bytes at a time is good"
+    },
+    {
+      "start_ms": 1029280,
+      "duration_ms": 3919,
+      "end_ms": 1033199,
+      "text": "enough. And now, okay, now they're all"
+    },
+    {
+      "start_ms": 1031919,
+      "duration_ms": 3201,
+      "end_ms": 1035120,
+      "text": "aligned. You can see they're all reading"
+    },
+    {
+      "start_ms": 1033199,
+      "duration_ms": 4000,
+      "end_ms": 1037199,
+      "text": "bytes like this. Oh, that's super cool"
+    },
+    {
+      "start_ms": 1035120,
+      "duration_ms": 4959,
+      "end_ms": 1040079,
+      "text": "to see. That's really, really neat to"
+    },
+    {
+      "start_ms": 1037199,
+      "duration_ms": 4321,
+      "end_ms": 1041520,
+      "text": "see. So, 1 3 42. We got a completely"
+    },
+    {
+      "start_ms": 1040079,
+      "duration_ms": 3201,
+      "end_ms": 1043280,
+      "text": "different ordering this time. Like I"
+    },
+    {
+      "start_ms": 1041520,
+      "duration_ms": 3519,
+      "end_ms": 1045039,
+      "text": "said, the order is not consistent, but"
+    },
+    {
+      "start_ms": 1043280,
+      "duration_ms": 4159,
+      "end_ms": 1047439,
+      "text": "they at least can write to different"
+    },
+    {
+      "start_ms": 1045039,
+      "duration_ms": 3921,
+      "end_ms": 1048960,
+      "text": "parts of the screen. 2134. You can't"
+    },
+    {
+      "start_ms": 1047439,
+      "duration_ms": 2881,
+      "end_ms": 1050320,
+      "text": "rely on the orders. Always give it the"
+    },
+    {
+      "start_ms": 1048960,
+      "duration_ms": 3520,
+      "end_ms": 1052480,
+      "text": "name flag if you're giving it the dash"
+    },
+    {
+      "start_ms": 1050320,
+      "duration_ms": 4800,
+      "end_ms": 1055120,
+      "text": "C. There might be a hack. There might be"
+    },
+    {
+      "start_ms": 1052480,
+      "duration_ms": 7439,
+      "end_ms": 1059919,
+      "text": "a hacky way to do this. Okay, we're in"
+    },
+    {
+      "start_ms": 1055120,
+      "duration_ms": 6240,
+      "end_ms": 1061360,
+      "text": "bash. We can put these in subshells."
+    },
+    {
+      "start_ms": 1059919,
+      "duration_ms": 4321,
+      "end_ms": 1064240,
+      "text": "You just wrap parentheses around these"
+    },
+    {
+      "start_ms": 1061360,
+      "duration_ms": 7319,
+      "end_ms": 1068679,
+      "text": "and these execute in a subshell."
+    },
+    {
+      "start_ms": 1064240,
+      "duration_ms": 4439,
+      "end_ms": 1068679,
+      "text": "And this won't do anything on its own."
+    },
+    {
+      "start_ms": 1069360,
+      "duration_ms": 4559,
+      "end_ms": 1073919,
+      "text": "Uh, was it four? There we go. So, if we"
+    },
+    {
+      "start_ms": 1071840,
+      "duration_ms": 4240,
+      "end_ms": 1076080,
+      "text": "run this 1 32 4. Ah, we almost got"
+    },
+    {
+      "start_ms": 1073919,
+      "duration_ms": 3441,
+      "end_ms": 1077360,
+      "text": "lucky. But because they're in subshells,"
+    },
+    {
+      "start_ms": 1076080,
+      "duration_ms": 5200,
+      "end_ms": 1081280,
+      "text": "we might be able to do something fun"
+    },
+    {
+      "start_ms": 1077360,
+      "duration_ms": 7520,
+      "end_ms": 1084880,
+      "text": "here. We might be able to"
+    },
+    {
+      "start_ms": 1081280,
+      "duration_ms": 5600,
+      "end_ms": 1086880,
+      "text": "sleep for 1 second and then run PV. This"
+    },
+    {
+      "start_ms": 1084880,
+      "duration_ms": 3120,
+      "end_ms": 1088000,
+      "text": "can sleep for two seconds because in our"
+    },
+    {
+      "start_ms": 1086880,
+      "duration_ms": 2960,
+      "end_ms": 1089840,
+      "text": "subshell, this should already start"
+    },
+    {
+      "start_ms": 1088000,
+      "duration_ms": 2880,
+      "end_ms": 1090880,
+      "text": "reading the data. It's just sleep won't"
+    },
+    {
+      "start_ms": 1089840,
+      "duration_ms": 3680,
+      "end_ms": 1093520,
+      "text": "do anything with it. And this should"
+    },
+    {
+      "start_ms": 1090880,
+      "duration_ms": 4000,
+      "end_ms": 1094880,
+      "text": "sleep for 3 seconds."
+    },
+    {
+      "start_ms": 1093520,
+      "duration_ms": 2720,
+      "end_ms": 1096240,
+      "text": "This is super hacky. I don't know if I"
+    },
+    {
+      "start_ms": 1094880,
+      "duration_ms": 2320,
+      "end_ms": 1097200,
+      "text": "recommend you guys do this. I don't even"
+    },
+    {
+      "start_ms": 1096240,
+      "duration_ms": 3960,
+      "end_ms": 1100200,
+      "text": "know if it's going to work. Let's find"
+    },
+    {
+      "start_ms": 1097200,
+      "duration_ms": 3000,
+      "end_ms": 1100200,
+      "text": "out."
+    },
+    {
+      "start_ms": 1101200,
+      "duration_ms": 4960,
+      "end_ms": 1106160,
+      "text": "Okay, that's pretty cool. We had to"
+    },
+    {
+      "start_ms": 1104080,
+      "duration_ms": 4320,
+      "end_ms": 1108400,
+      "text": "artificially put a delay in there. I"
+    },
+    {
+      "start_ms": 1106160,
+      "duration_ms": 5120,
+      "end_ms": 1111280,
+      "text": "can't say that this is like the cleanest"
+    },
+    {
+      "start_ms": 1108400,
+      "duration_ms": 4000,
+      "end_ms": 1112400,
+      "text": "way to do it, but like you guarantee the"
+    },
+    {
+      "start_ms": 1111280,
+      "duration_ms": 4399,
+      "end_ms": 1115679,
+      "text": "order. Well, you don't guarantee the"
+    },
+    {
+      "start_ms": 1112400,
+      "duration_ms": 5120,
+      "end_ms": 1117520,
+      "text": "ordering. You set yourself up to win the"
+    },
+    {
+      "start_ms": 1115679,
+      "duration_ms": 4161,
+      "end_ms": 1119840,
+      "text": "race condition by in artificially"
+    },
+    {
+      "start_ms": 1117520,
+      "duration_ms": 4080,
+      "end_ms": 1121600,
+      "text": "putting sleeps in there."
+    },
+    {
+      "start_ms": 1119840,
+      "duration_ms": 3280,
+      "end_ms": 1123120,
+      "text": "PSA to anyone watching, if you're"
+    },
+    {
+      "start_ms": 1121600,
+      "duration_ms": 3199,
+      "end_ms": 1124799,
+      "text": "dealing with a race condition, don't fix"
+    },
+    {
+      "start_ms": 1123120,
+      "duration_ms": 3040,
+      "end_ms": 1126160,
+      "text": "it with sleeps, okay? You're not"
+    },
+    {
+      "start_ms": 1124799,
+      "duration_ms": 4880,
+      "end_ms": 1129679,
+      "text": "actually fixing the underlying"
+    },
+    {
+      "start_ms": 1126160,
+      "duration_ms": 4560,
+      "end_ms": 1130720,
+      "text": "condition. But for this example, this is"
+    },
+    {
+      "start_ms": 1129679,
+      "duration_ms": 2481,
+      "end_ms": 1132160,
+      "text": "pretty sick. This is pretty cool. You"
+    },
+    {
+      "start_ms": 1130720,
+      "duration_ms": 3753,
+      "end_ms": 1134473,
+      "text": "got to admit, this is a pretty cool uh"
+    },
+    {
+      "start_ms": 1132160,
+      "duration_ms": 3600,
+      "end_ms": 1135760,
+      "text": "this is a pretty cool hack. Okay?"
+    },
+    {
+      "start_ms": 1134473,
+      "duration_ms": 2647,
+      "end_ms": 1137120,
+      "text": "[laughter]"
+    },
+    {
+      "start_ms": 1135760,
+      "duration_ms": 3360,
+      "end_ms": 1139120,
+      "text": "And now I want to show you guys"
+    },
+    {
+      "start_ms": 1137120,
+      "duration_ms": 3439,
+      "end_ms": 1140559,
+      "text": "something really cool because I actually"
+    },
+    {
+      "start_ms": 1139120,
+      "duration_ms": 2640,
+      "end_ms": 1141760,
+      "text": "didn't know how this was being"
+    },
+    {
+      "start_ms": 1140559,
+      "duration_ms": 2881,
+      "end_ms": 1143440,
+      "text": "accomplished because when I look at"
+    },
+    {
+      "start_ms": 1141760,
+      "duration_ms": 3360,
+      "end_ms": 1145120,
+      "text": "this, I'm looking at this, right? I'm"
+    },
+    {
+      "start_ms": 1143440,
+      "duration_ms": 2880,
+      "end_ms": 1146320,
+      "text": "like, \"Okay, this one's running, this"
+    },
+    {
+      "start_ms": 1145120,
+      "duration_ms": 3439,
+      "end_ms": 1148559,
+      "text": "one's running, this one's running, and"
+    },
+    {
+      "start_ms": 1146320,
+      "duration_ms": 4000,
+      "end_ms": 1150320,
+      "text": "this one's running.\" And they know that"
+    },
+    {
+      "start_ms": 1148559,
+      "duration_ms": 2721,
+      "end_ms": 1151280,
+      "text": "there's four running, so they know how"
+    },
+    {
+      "start_ms": 1150320,
+      "duration_ms": 2479,
+      "end_ms": 1152799,
+      "text": "to order themselves. They don't know the"
+    },
+    {
+      "start_ms": 1151280,
+      "duration_ms": 2960,
+      "end_ms": 1154240,
+      "text": "right order to put themselves in. That"
+    },
+    {
+      "start_ms": 1152799,
+      "duration_ms": 3120,
+      "end_ms": 1155919,
+      "text": "makes sense. But they do know that"
+    },
+    {
+      "start_ms": 1154240,
+      "duration_ms": 4160,
+      "end_ms": 1158400,
+      "text": "there's supposedly four running, so it"
+    },
+    {
+      "start_ms": 1155919,
+      "duration_ms": 4241,
+      "end_ms": 1160160,
+      "text": "knows where to jump the cursor to to"
+    },
+    {
+      "start_ms": 1158400,
+      "duration_ms": 3440,
+      "end_ms": 1161840,
+      "text": "redraw the progress bar. And in my"
+    },
+    {
+      "start_ms": 1160160,
+      "duration_ms": 3600,
+      "end_ms": 1163760,
+      "text": "brain, I'm like, \"How how are they"
+    },
+    {
+      "start_ms": 1161840,
+      "duration_ms": 3440,
+      "end_ms": 1165280,
+      "text": "communicating with each other?\" Like if"
+    },
+    {
+      "start_ms": 1163760,
+      "duration_ms": 2960,
+      "end_ms": 1166720,
+      "text": "you know how pipelines work, they only"
+    },
+    {
+      "start_ms": 1165280,
+      "duration_ms": 3120,
+      "end_ms": 1168400,
+      "text": "transfer data between standard in and"
+    },
+    {
+      "start_ms": 1166720,
+      "duration_ms": 4079,
+      "end_ms": 1170799,
+      "text": "standard out and that's the raw bytes."
+    },
+    {
+      "start_ms": 1168400,
+      "duration_ms": 3840,
+      "end_ms": 1172240,
+      "text": "We're not modifying that data. So like"
+    },
+    {
+      "start_ms": 1170799,
+      "duration_ms": 3120,
+      "end_ms": 1173919,
+      "text": "how are they talking to each other? How"
+    },
+    {
+      "start_ms": 1172240,
+      "duration_ms": 3679,
+      "end_ms": 1175919,
+      "text": "are they aware they're for them? Are"
+    },
+    {
+      "start_ms": 1173919,
+      "duration_ms": 3601,
+      "end_ms": 1177520,
+      "text": "they using temporary files with like"
+    },
+    {
+      "start_ms": 1175919,
+      "duration_ms": 2880,
+      "end_ms": 1178799,
+      "text": "some known location? Have they all"
+    },
+    {
+      "start_ms": 1177520,
+      "duration_ms": 3760,
+      "end_ms": 1181280,
+      "text": "synchronized on that? Like what were"
+    },
+    {
+      "start_ms": 1178799,
+      "duration_ms": 4081,
+      "end_ms": 1182880,
+      "text": "they doing? Um so I'm going to show you"
+    },
+    {
+      "start_ms": 1181280,
+      "duration_ms": 3200,
+      "end_ms": 1184480,
+      "text": "guys. We're going to dig into the pipe"
+    },
+    {
+      "start_ms": 1182880,
+      "duration_ms": 3039,
+      "end_ms": 1185919,
+      "text": "viewer source code cuz that's the kind"
+    },
+    {
+      "start_ms": 1184480,
+      "duration_ms": 2800,
+      "end_ms": 1187280,
+      "text": "of stuff we do on this channel. If you"
+    },
+    {
+      "start_ms": 1185919,
+      "duration_ms": 3441,
+      "end_ms": 1189360,
+      "text": "guys like that content, you like getting"
+    },
+    {
+      "start_ms": 1187280,
+      "duration_ms": 4000,
+      "end_ms": 1191280,
+      "text": "the nerdy nittygritty here, hit that"
+    },
+    {
+      "start_ms": 1189360,
+      "duration_ms": 2880,
+      "end_ms": 1192240,
+      "text": "subscribe button, okay? I have 113,000"
+    },
+    {
+      "start_ms": 1191280,
+      "duration_ms": 2800,
+      "end_ms": 1194080,
+      "text": "subscribers at the time of this"
+    },
+    {
+      "start_ms": 1192240,
+      "duration_ms": 3679,
+      "end_ms": 1195919,
+      "text": "recording. Let's get that way up. Okay."
+    },
+    {
+      "start_ms": 1194080,
+      "duration_ms": 3520,
+      "end_ms": 1197600,
+      "text": "I want to get that million dollar"
+    },
+    {
+      "start_ms": 1195919,
+      "duration_ms": 3281,
+      "end_ms": 1199200,
+      "text": "million dollar. I want to get that"
+    },
+    {
+      "start_ms": 1197600,
+      "duration_ms": 3760,
+      "end_ms": 1201360,
+      "text": "million subscriber play button. That's"
+    },
+    {
+      "start_ms": 1199200,
+      "duration_ms": 4000,
+      "end_ms": 1203200,
+      "text": "my new goal. I don't think that will"
+    },
+    {
+      "start_ms": 1201360,
+      "duration_ms": 3120,
+      "end_ms": 1204480,
+      "text": "ever happen. I got the 100,000"
+    },
+    {
+      "start_ms": 1203200,
+      "duration_ms": 3359,
+      "end_ms": 1206559,
+      "text": "subscriber plaque. I don't know if I'm"
+    },
+    {
+      "start_ms": 1204480,
+      "duration_ms": 5680,
+      "end_ms": 1210160,
+      "text": "getting the gold one."
+    },
+    {
+      "start_ms": 1206559,
+      "duration_ms": 5041,
+      "end_ms": 1211600,
+      "text": "Yo, check it out. Check it out."
+    },
+    {
+      "start_ms": 1210160,
+      "duration_ms": 2879,
+      "end_ms": 1213039,
+      "text": "Um, but yeah, let's do it. Let's dive"
+    },
+    {
+      "start_ms": 1211600,
+      "duration_ms": 3280,
+      "end_ms": 1214880,
+      "text": "into some code. Cool. So, I got the"
+    },
+    {
+      "start_ms": 1213039,
+      "duration_ms": 2880,
+      "end_ms": 1215919,
+      "text": "website pulled up here. I will go ahead"
+    },
+    {
+      "start_ms": 1214880,
+      "duration_ms": 2720,
+      "end_ms": 1217600,
+      "text": "and I will put this in the description"
+    },
+    {
+      "start_ms": 1215919,
+      "duration_ms": 3120,
+      "end_ms": 1219039,
+      "text": "for anyone who wants to check it out."
+    },
+    {
+      "start_ms": 1217600,
+      "duration_ms": 2959,
+      "end_ms": 1220559,
+      "text": "Let's take a look what we got here. We"
+    },
+    {
+      "start_ms": 1219039,
+      "duration_ms": 4081,
+      "end_ms": 1223120,
+      "text": "got the source code right here. So,"
+    },
+    {
+      "start_ms": 1220559,
+      "duration_ms": 4641,
+      "end_ms": 1225200,
+      "text": "rightclick, copy link. Let's hop on over"
+    },
+    {
+      "start_ms": 1223120,
+      "duration_ms": 6080,
+      "end_ms": 1229200,
+      "text": "to the terminal. Let's uh let's just go"
+    },
+    {
+      "start_ms": 1225200,
+      "duration_ms": 9760,
+      "end_ms": 1234960,
+      "text": "to temp directory and let's uh make pv."
+    },
+    {
+      "start_ms": 1229200,
+      "duration_ms": 9680,
+      "end_ms": 1238880,
+      "text": "There we go. So, now I can curl- o this."
+    },
+    {
+      "start_ms": 1234960,
+      "duration_ms": 5760,
+      "end_ms": 1240720,
+      "text": "There we go. And now we can tar xf pv."
+    },
+    {
+      "start_ms": 1238880,
+      "duration_ms": 4400,
+      "end_ms": 1243280,
+      "text": "And now we have this pv directory with"
+    },
+    {
+      "start_ms": 1240720,
+      "duration_ms": 4720,
+      "end_ms": 1245440,
+      "text": "1.111.0."
+    },
+    {
+      "start_ms": 1243280,
+      "duration_ms": 4080,
+      "end_ms": 1247360,
+      "text": "Cool. Uh how do we compile it? There's a"
+    },
+    {
+      "start_ms": 1245440,
+      "duration_ms": 3119,
+      "end_ms": 1248559,
+      "text": "readme.markdown. That's super nice. Look"
+    },
+    {
+      "start_ms": 1247360,
+      "duration_ms": 4080,
+      "end_ms": 1251440,
+      "text": "at this. The typical process for a"
+    },
+    {
+      "start_ms": 1248559,
+      "duration_ms": 4321,
+      "end_ms": 1252880,
+      "text": "systemwide install is configure make"
+    },
+    {
+      "start_ms": 1251440,
+      "duration_ms": 2960,
+      "end_ms": 1254400,
+      "text": "pseudo make install. So it looks like"
+    },
+    {
+      "start_ms": 1252880,
+      "duration_ms": 3440,
+      "end_ms": 1256320,
+      "text": "there's configure and there's make. That"
+    },
+    {
+      "start_ms": 1254400,
+      "duration_ms": 4000,
+      "end_ms": 1258400,
+      "text": "seems simple enough. So let's just run"
+    },
+    {
+      "start_ms": 1256320,
+      "duration_ms": 4479,
+      "end_ms": 1260799,
+      "text": "configure. Assume this works and we'll"
+    },
+    {
+      "start_ms": 1258400,
+      "duration_ms": 5120,
+      "end_ms": 1263520,
+      "text": "just run make. Cool. So that didn't take"
+    },
+    {
+      "start_ms": 1260799,
+      "duration_ms": 4880,
+      "end_ms": 1265679,
+      "text": "too long. Now we can run make."
+    },
+    {
+      "start_ms": 1263520,
+      "duration_ms": 4320,
+      "end_ms": 1267840,
+      "text": "Technically guys, we could run make and"
+    },
+    {
+      "start_ms": 1265679,
+      "duration_ms": 5120,
+      "end_ms": 1270799,
+      "text": "we could pipe it to pv minus t and it"
+    },
+    {
+      "start_ms": 1267840,
+      "duration_ms": 4800,
+      "end_ms": 1272640,
+      "text": "will print out a little uh timer. It'll"
+    },
+    {
+      "start_ms": 1270799,
+      "duration_ms": 3760,
+      "end_ms": 1274559,
+      "text": "be interspersed with the output. So"
+    },
+    {
+      "start_ms": 1272640,
+      "duration_ms": 4560,
+      "end_ms": 1277200,
+      "text": "it'll be super ugly, but you could"
+    },
+    {
+      "start_ms": 1274559,
+      "duration_ms": 4561,
+      "end_ms": 1279120,
+      "text": "totally do this. And oh wow, we can see."
+    },
+    {
+      "start_ms": 1277200,
+      "duration_ms": 4479,
+      "end_ms": 1281679,
+      "text": "Look at that. 2 seconds. Beautiful."
+    },
+    {
+      "start_ms": 1279120,
+      "duration_ms": 3760,
+      "end_ms": 1282880,
+      "text": "Okay, so now we have do a nice little ls"
+    },
+    {
+      "start_ms": 1281679,
+      "duration_ms": 2961,
+      "end_ms": 1284640,
+      "text": "here. Look at that. We have a PV"
+    },
+    {
+      "start_ms": 1282880,
+      "duration_ms": 4240,
+      "end_ms": 1287120,
+      "text": "command. So we have a freshly compiled"
+    },
+    {
+      "start_ms": 1284640,
+      "duration_ms": 4240,
+      "end_ms": 1288880,
+      "text": "PV command on this version on my system."
+    },
+    {
+      "start_ms": 1287120,
+      "duration_ms": 2880,
+      "end_ms": 1290000,
+      "text": "That's awesome. I don't even know why I"
+    },
+    {
+      "start_ms": 1288880,
+      "duration_ms": 2400,
+      "end_ms": 1291280,
+      "text": "bothered compiling it. I was just going"
+    },
+    {
+      "start_ms": 1290000,
+      "duration_ms": 2960,
+      "end_ms": 1292960,
+      "text": "to go to the source code. My brain just"
+    },
+    {
+      "start_ms": 1291280,
+      "duration_ms": 3600,
+      "end_ms": 1294880,
+      "text": "went to autopilot there. So I was"
+    },
+    {
+      "start_ms": 1292960,
+      "duration_ms": 5199,
+      "end_ms": 1298159,
+      "text": "browsing the source code on I think it"
+    },
+    {
+      "start_ms": 1294880,
+      "duration_ms": 4799,
+      "end_ms": 1299679,
+      "text": "was codeberg is where it's stored. And I"
+    },
+    {
+      "start_ms": 1298159,
+      "duration_ms": 4961,
+      "end_ms": 1303120,
+      "text": "found this file and I'll show you guys"
+    },
+    {
+      "start_ms": 1299679,
+      "duration_ms": 5441,
+      "end_ms": 1305120,
+      "text": "in source. There's pavev there's cursor."
+    },
+    {
+      "start_ms": 1303120,
+      "duration_ms": 3520,
+      "end_ms": 1306640,
+      "text": "C. So I found on the website, but I'm"
+    },
+    {
+      "start_ms": 1305120,
+      "duration_ms": 3039,
+      "end_ms": 1308159,
+      "text": "going to go ahead and pull it up here. I"
+    },
+    {
+      "start_ms": 1306640,
+      "duration_ms": 3440,
+      "end_ms": 1310080,
+      "text": "was blown away at how they were"
+    },
+    {
+      "start_ms": 1308159,
+      "duration_ms": 3201,
+      "end_ms": 1311360,
+      "text": "accomplishing the PV commands actually"
+    },
+    {
+      "start_ms": 1310080,
+      "duration_ms": 3360,
+      "end_ms": 1313440,
+      "text": "talking to each other. It's really,"
+    },
+    {
+      "start_ms": 1311360,
+      "duration_ms": 3920,
+      "end_ms": 1315280,
+      "text": "really cool. Cursor positioning"
+    },
+    {
+      "start_ms": 1313440,
+      "duration_ms": 4160,
+      "end_ms": 1317600,
+      "text": "functions, all of it happens in cursor."
+    },
+    {
+      "start_ms": 1315280,
+      "duration_ms": 4080,
+      "end_ms": 1319360,
+      "text": "C. If IPC is available, then a shared"
+    },
+    {
+      "start_ms": 1317600,
+      "duration_ms": 3199,
+      "end_ms": 1320799,
+      "text": "memory segment is used to coordinate"
+    },
+    {
+      "start_ms": 1319360,
+      "duration_ms": 3520,
+      "end_ms": 1322880,
+      "text": "cursor positioning across multiple"
+    },
+    {
+      "start_ms": 1320799,
+      "duration_ms": 3841,
+      "end_ms": 1324640,
+      "text": "instances of PV. The shared memory"
+    },
+    {
+      "start_ms": 1322880,
+      "duration_ms": 3840,
+      "end_ms": 1326720,
+      "text": "segment contains an integer, which is"
+    },
+    {
+      "start_ms": 1324640,
+      "duration_ms": 4560,
+      "end_ms": 1329200,
+      "text": "the original Y-coordinate of the first"
+    },
+    {
+      "start_ms": 1326720,
+      "duration_ms": 4400,
+      "end_ms": 1331120,
+      "text": "PV process. So, it knows where to start"
+    },
+    {
+      "start_ms": 1329200,
+      "duration_ms": 4560,
+      "end_ms": 1333760,
+      "text": "and then it knows the offset from there."
+    },
+    {
+      "start_ms": 1331120,
+      "duration_ms": 4480,
+      "end_ms": 1335600,
+      "text": "Super cool. However, some OSS, FreeBSD"
+    },
+    {
+      "start_ms": 1333760,
+      "duration_ms": 3360,
+      "end_ms": 1337120,
+      "text": "and Mac OS so far, don't allow locking"
+    },
+    {
+      "start_ms": 1335600,
+      "duration_ms": 3120,
+      "end_ms": 1338720,
+      "text": "of a terminal. So, if a terminal locking"
+    },
+    {
+      "start_ms": 1337120,
+      "duration_ms": 3679,
+      "end_ms": 1340799,
+      "text": "doesn't work, a separate lock file is"
+    },
+    {
+      "start_ms": 1338720,
+      "duration_ms": 4800,
+      "end_ms": 1343520,
+      "text": "used and cursor positioning is abandoned"
+    },
+    {
+      "start_ms": 1340799,
+      "duration_ms": 4561,
+      "end_ms": 1345360,
+      "text": "if that also fails. So, that is super"
+    },
+    {
+      "start_ms": 1343520,
+      "duration_ms": 3680,
+      "end_ms": 1347200,
+      "text": "cool to see. I don't actually know if"
+    },
+    {
+      "start_ms": 1345360,
+      "duration_ms": 3199,
+      "end_ms": 1348559,
+      "text": "the locking mechanism is working on Mac"
+    },
+    {
+      "start_ms": 1347200,
+      "duration_ms": 2479,
+      "end_ms": 1349679,
+      "text": "OS or not. I'm running on Mac OS. I"
+    },
+    {
+      "start_ms": 1348559,
+      "duration_ms": 4641,
+      "end_ms": 1353200,
+      "text": "don't know when this comment was"
+    },
+    {
+      "start_ms": 1349679,
+      "duration_ms": 4961,
+      "end_ms": 1354640,
+      "text": "written, but that is super cool. So, we"
+    },
+    {
+      "start_ms": 1353200,
+      "duration_ms": 2880,
+      "end_ms": 1356080,
+      "text": "just do a nice little search for SHM."
+    },
+    {
+      "start_ms": 1354640,
+      "duration_ms": 3440,
+      "end_ms": 1358080,
+      "text": "Shared memory typically shows up like"
+    },
+    {
+      "start_ms": 1356080,
+      "duration_ms": 3280,
+      "end_ms": 1359360,
+      "text": "this. SHM functions get the current"
+    },
+    {
+      "start_ms": 1358080,
+      "duration_ms": 3360,
+      "end_ms": 1361440,
+      "text": "number of processes attached to our"
+    },
+    {
+      "start_ms": 1359360,
+      "duration_ms": 4000,
+      "end_ms": 1363360,
+      "text": "shared memory segment. find out how many"
+    },
+    {
+      "start_ms": 1361440,
+      "duration_ms": 4560,
+      "end_ms": 1366000,
+      "text": "PV processes in total are running in"
+    },
+    {
+      "start_ms": 1363360,
+      "duration_ms": 4880,
+      "end_ms": 1368240,
+      "text": "cursor mode including this process and"
+    },
+    {
+      "start_ms": 1366000,
+      "duration_ms": 3440,
+      "end_ms": 1369440,
+      "text": "store it in this so we can keep track of"
+    },
+    {
+      "start_ms": 1368240,
+      "duration_ms": 2720,
+      "end_ms": 1370960,
+      "text": "the number running and the original"
+    },
+    {
+      "start_ms": 1369440,
+      "duration_ms": 3280,
+      "end_ms": 1372720,
+      "text": "y-coordinate and then when you know"
+    },
+    {
+      "start_ms": 1370960,
+      "duration_ms": 3920,
+      "end_ms": 1374880,
+      "text": "which number you are you can just draw"
+    },
+    {
+      "start_ms": 1372720,
+      "duration_ms": 3600,
+      "end_ms": 1376320,
+      "text": "your cursor down there draw your status"
+    },
+    {
+      "start_ms": 1374880,
+      "duration_ms": 3760,
+      "end_ms": 1378640,
+      "text": "bar and then let the other processes"
+    },
+    {
+      "start_ms": 1376320,
+      "duration_ms": 4719,
+      "end_ms": 1381039,
+      "text": "take over and draw them really clever"
+    },
+    {
+      "start_ms": 1378640,
+      "duration_ms": 3519,
+      "end_ms": 1382159,
+      "text": "really really clever solution now I'm"
+    },
+    {
+      "start_ms": 1381039,
+      "duration_ms": 3041,
+      "end_ms": 1384080,
+      "text": "curious though cuz I talked about"
+    },
+    {
+      "start_ms": 1382159,
+      "duration_ms": 2961,
+      "end_ms": 1385120,
+      "text": "locking the terminal to avoid a race"
+    },
+    {
+      "start_ms": 1384080,
+      "duration_ms": 3520,
+      "end_ms": 1387600,
+      "text": "condition the function locks the"
+    },
+    {
+      "start_ms": 1385120,
+      "duration_ms": 3919,
+      "end_ms": 1389039,
+      "text": "terminal with PVC CRS lock while"
+    },
+    {
+      "start_ms": 1387600,
+      "duration_ms": 2400,
+      "end_ms": 1390000,
+      "text": "attaching and checking the race"
+    },
+    {
+      "start_ms": 1389039,
+      "duration_ms": 2321,
+      "end_ms": 1391360,
+      "text": "condition is another process going"
+    },
+    {
+      "start_ms": 1390000,
+      "duration_ms": 2640,
+      "end_ms": 1392640,
+      "text": "attached before this one shock such that"
+    },
+    {
+      "start_ms": 1391360,
+      "duration_ms": 2880,
+      "end_ms": 1394240,
+      "text": "no process ends up getting the attach"
+    },
+    {
+      "start_ms": 1392640,
+      "duration_ms": 3680,
+      "end_ms": 1396320,
+      "text": "count of one. Ah, okay. Yep, makes"
+    },
+    {
+      "start_ms": 1394240,
+      "duration_ms": 7559,
+      "end_ms": 1401799,
+      "text": "sense. So, we lock the terminal and we"
+    },
+    {
+      "start_ms": 1396320,
+      "duration_ms": 5479,
+      "end_ms": 1401799,
+      "text": "use this function that is defined here."
+    },
+    {
+      "start_ms": 1401840,
+      "duration_ms": 2480,
+      "end_ms": 1404320,
+      "text": "Lock the terminal in given file"
+    },
+    {
+      "start_ms": 1403039,
+      "duration_ms": 2640,
+      "end_ms": 1405679,
+      "text": "descriptor falling back to using a lock"
+    },
+    {
+      "start_ms": 1404320,
+      "duration_ms": 3280,
+      "end_ms": 1407600,
+      "text": "file. The terminal itself cannot be"
+    },
+    {
+      "start_ms": 1405679,
+      "duration_ms": 3521,
+      "end_ms": 1409200,
+      "text": "locked. Interesting. Okay. So, we"
+    },
+    {
+      "start_ms": 1407600,
+      "duration_ms": 5280,
+      "end_ms": 1412880,
+      "text": "actually so this actually will handle"
+    },
+    {
+      "start_ms": 1409200,
+      "duration_ms": 5520,
+      "end_ms": 1414720,
+      "text": "the lock file logic too. Oh yeah. So if"
+    },
+    {
+      "start_ms": 1412880,
+      "duration_ms": 6560,
+      "end_ms": 1419440,
+      "text": "there was a failure and it was not"
+    },
+    {
+      "start_ms": 1414720,
+      "duration_ms": 6480,
+      "end_ms": 1421200,
+      "text": "interrupted then we do open lock file"
+    },
+    {
+      "start_ms": 1419440,
+      "duration_ms": 4640,
+      "end_ms": 1424080,
+      "text": "otherwise you print an error here."
+    },
+    {
+      "start_ms": 1421200,
+      "duration_ms": 5520,
+      "end_ms": 1426720,
+      "text": "That's super cool. What is this debug"
+    },
+    {
+      "start_ms": 1424080,
+      "duration_ms": 4479,
+      "end_ms": 1428559,
+      "text": "function? Can I make this debug output"
+    },
+    {
+      "start_ms": 1426720,
+      "duration_ms": 4000,
+      "end_ms": 1430720,
+      "text": "show to the screen? Cuz that would be"
+    },
+    {
+      "start_ms": 1428559,
+      "duration_ms": 4081,
+      "end_ms": 1432640,
+      "text": "really cool. Is there a verbose or a"
+    },
+    {
+      "start_ms": 1430720,
+      "duration_ms": 3600,
+      "end_ms": 1434320,
+      "text": "debug or something to get this stuff to"
+    },
+    {
+      "start_ms": 1432640,
+      "duration_ms": 3279,
+      "end_ms": 1435919,
+      "text": "show to the screen or do I have to"
+    },
+    {
+      "start_ms": 1434320,
+      "duration_ms": 5320,
+      "end_ms": 1439640,
+      "text": "compile it with debug support? I'm"
+    },
+    {
+      "start_ms": 1435919,
+      "duration_ms": 3721,
+      "end_ms": 1439640,
+      "text": "curious how this works."
+    },
+    {
+      "start_ms": 1446559,
+      "duration_ms": 3441,
+      "end_ms": 1450000,
+      "text": "You know, let's look at the options"
+    },
+    {
+      "start_ms": 1448000,
+      "duration_ms": 4480,
+      "end_ms": 1452480,
+      "text": "file."
+    },
+    {
+      "start_ms": 1450000,
+      "duration_ms": 7480,
+      "end_ms": 1457480,
+      "text": "If defaf enable debugging, then it gives"
+    },
+    {
+      "start_ms": 1452480,
+      "duration_ms": 5000,
+      "end_ms": 1457480,
+      "text": "you a debug flag. A d-debug"
+    },
+    {
+      "start_ms": 1457600,
+      "duration_ms": 4160,
+      "end_ms": 1461760,
+      "text": "unrecognized option. Okay, so maybe in"
+    },
+    {
+      "start_ms": 1460559,
+      "duration_ms": 3681,
+      "end_ms": 1464240,
+      "text": "the configure script there would be"
+    },
+    {
+      "start_ms": 1461760,
+      "duration_ms": 4000,
+      "end_ms": 1465760,
+      "text": "something about debugging here. Enable"
+    },
+    {
+      "start_ms": 1464240,
+      "duration_ms": 4799,
+      "end_ms": 1469039,
+      "text": "debugging. Compile with debugging"
+    },
+    {
+      "start_ms": 1465760,
+      "duration_ms": 5760,
+      "end_ms": 1471520,
+      "text": "support. Okay, that's cool. Enable"
+    },
+    {
+      "start_ms": 1469039,
+      "duration_ms": 4401,
+      "end_ms": 1473440,
+      "text": "debugging. Let's reconfigure it. Then we"
+    },
+    {
+      "start_ms": 1471520,
+      "duration_ms": 3279,
+      "end_ms": 1474799,
+      "text": "will recompile it. And then we will get"
+    },
+    {
+      "start_ms": 1473440,
+      "duration_ms": 2880,
+      "end_ms": 1476320,
+      "text": "that debug flag which will give us that"
+    },
+    {
+      "start_ms": 1474799,
+      "duration_ms": 3281,
+      "end_ms": 1478080,
+      "text": "debug output. And then we can see if"
+    },
+    {
+      "start_ms": 1476320,
+      "duration_ms": 4400,
+      "end_ms": 1480720,
+      "text": "we're able to actually lock the terminal"
+    },
+    {
+      "start_ms": 1478080,
+      "duration_ms": 5040,
+      "end_ms": 1483120,
+      "text": "or not on my Mac OS installation right"
+    },
+    {
+      "start_ms": 1480720,
+      "duration_ms": 3439,
+      "end_ms": 1484159,
+      "text": "here. Can I just rerun make? Okay, it"
+    },
+    {
+      "start_ms": 1483120,
+      "duration_ms": 2799,
+      "end_ms": 1485919,
+      "text": "does know that the files need to be"
+    },
+    {
+      "start_ms": 1484159,
+      "duration_ms": 2880,
+      "end_ms": 1487039,
+      "text": "remade. Okay, cool. Sometimes you have"
+    },
+    {
+      "start_ms": 1485919,
+      "duration_ms": 2240,
+      "end_ms": 1488159,
+      "text": "to make clean before that, but this"
+    },
+    {
+      "start_ms": 1487039,
+      "duration_ms": 2880,
+      "end_ms": 1489919,
+      "text": "seems like it works. So if I have this"
+    },
+    {
+      "start_ms": 1488159,
+      "duration_ms": 4241,
+      "end_ms": 1492400,
+      "text": "now, look at this. We now have a dash"
+    },
+    {
+      "start_ms": 1489919,
+      "duration_ms": 8161,
+      "end_ms": 1498080,
+      "text": "exclamation mark or a d-debug. Write"
+    },
+    {
+      "start_ms": 1492400,
+      "duration_ms": 10480,
+      "end_ms": 1502880,
+      "text": "debug logs to file. Okay. PV- C-"
+    },
+    {
+      "start_ms": 1498080,
+      "duration_ms": 6959,
+      "end_ms": 1505039,
+      "text": "N FU dash dash debug"
+    },
+    {
+      "start_ms": 1502880,
+      "duration_ms": 4159,
+      "end_ms": 1507039,
+      "text": "I don't know debug.log. There we go."
+    },
+    {
+      "start_ms": 1505039,
+      "duration_ms": 6561,
+      "end_ms": 1511600,
+      "text": "We'll run this. Let it run for a little"
+    },
+    {
+      "start_ms": 1507039,
+      "duration_ms": 7441,
+      "end_ms": 1514480,
+      "text": "bit. Cat debug.log. Oh wow, there's a"
+    },
+    {
+      "start_ms": 1511600,
+      "duration_ms": 4880,
+      "end_ms": 1516480,
+      "text": "lot in there. Okay, cool."
+    },
+    {
+      "start_ms": 1514480,
+      "duration_ms": 5520,
+      "end_ms": 1520000,
+      "text": "Yeah, what do we have here? Okay, let's"
+    },
+    {
+      "start_ms": 1516480,
+      "duration_ms": 5520,
+      "end_ms": 1522000,
+      "text": "cut this. Uh delimiter of space. We want"
+    },
+    {
+      "start_ms": 1520000,
+      "duration_ms": 4400,
+      "end_ms": 1524400,
+      "text": "field, let's say, I don't know, seven"
+    },
+    {
+      "start_ms": 1522000,
+      "duration_ms": 4720,
+      "end_ms": 1526720,
+      "text": "and over. Uh, maybe that's a little bit"
+    },
+    {
+      "start_ms": 1524400,
+      "duration_ms": 4639,
+      "end_ms": 1529039,
+      "text": "too far. Uh, there we go. That looks"
+    },
+    {
+      "start_ms": 1526720,
+      "duration_ms": 3920,
+      "end_ms": 1530640,
+      "text": "better. Maybe five and over. No, let's"
+    },
+    {
+      "start_ms": 1529039,
+      "duration_ms": 3120,
+      "end_ms": 1532159,
+      "text": "do six and over. I guess we could look"
+    },
+    {
+      "start_ms": 1530640,
+      "duration_ms": 6880,
+      "end_ms": 1537520,
+      "text": "for cursor. Yeah, let's do five and"
+    },
+    {
+      "start_ms": 1532159,
+      "duration_ms": 8241,
+      "end_ms": 1540400,
+      "text": "over. GP for cursor C. There we go."
+    },
+    {
+      "start_ms": 1537520,
+      "duration_ms": 4560,
+      "end_ms": 1542080,
+      "text": "Terminal lock acquired. Okay. Well, in"
+    },
+    {
+      "start_ms": 1540400,
+      "duration_ms": 4080,
+      "end_ms": 1544480,
+      "text": "this year, in our current year, we are"
+    },
+    {
+      "start_ms": 1542080,
+      "duration_ms": 4160,
+      "end_ms": 1546240,
+      "text": "able to lock the terminal on Mac OS."
+    },
+    {
+      "start_ms": 1544480,
+      "duration_ms": 5600,
+      "end_ms": 1550080,
+      "text": "That is pretty neat. We can see that"
+    },
+    {
+      "start_ms": 1546240,
+      "duration_ms": 5439,
+      "end_ms": 1551679,
+      "text": "there's one PV. Okay. Y position is 31."
+    },
+    {
+      "start_ms": 1550080,
+      "duration_ms": 3199,
+      "end_ms": 1553279,
+      "text": "We are the first to attach. Terminal"
+    },
+    {
+      "start_ms": 1551679,
+      "duration_ms": 3600,
+      "end_ms": 1555279,
+      "text": "lock released. Okay. So you get the"
+    },
+    {
+      "start_ms": 1553279,
+      "duration_ms": 3520,
+      "end_ms": 1556799,
+      "text": "lock, you attach, you figure that out,"
+    },
+    {
+      "start_ms": 1555279,
+      "duration_ms": 3121,
+      "end_ms": 1558400,
+      "text": "you set up the shared memory page, and"
+    },
+    {
+      "start_ms": 1556799,
+      "duration_ms": 3760,
+      "end_ms": 1560559,
+      "text": "then you release the lock. That makes"
+    },
+    {
+      "start_ms": 1558400,
+      "duration_ms": 3680,
+      "end_ms": 1562080,
+      "text": "perfect sense. Terminal lock acquired."
+    },
+    {
+      "start_ms": 1560559,
+      "duration_ms": 4240,
+      "end_ms": 1564799,
+      "text": "Terminal lock, release, acquired,"
+    },
+    {
+      "start_ms": 1562080,
+      "duration_ms": 4400,
+      "end_ms": 1566480,
+      "text": "release. Okay, that's that's clever"
+    },
+    {
+      "start_ms": 1564799,
+      "duration_ms": 3921,
+      "end_ms": 1568720,
+      "text": "then. So every time you want to write an"
+    },
+    {
+      "start_ms": 1566480,
+      "duration_ms": 3840,
+      "end_ms": 1570320,
+      "text": "update, you lock the terminal, you write"
+    },
+    {
+      "start_ms": 1568720,
+      "duration_ms": 2959,
+      "end_ms": 1571679,
+      "text": "your update, which involves moving the"
+    },
+    {
+      "start_ms": 1570320,
+      "duration_ms": 2320,
+      "end_ms": 1572640,
+      "text": "cursor and writing your progress bar."
+    },
+    {
+      "start_ms": 1571679,
+      "duration_ms": 2240,
+      "end_ms": 1573919,
+      "text": "That's super cool because you can't"
+    },
+    {
+      "start_ms": 1572640,
+      "duration_ms": 3200,
+      "end_ms": 1575840,
+      "text": "guarantee the rights are going to be"
+    },
+    {
+      "start_ms": 1573919,
+      "duration_ms": 3521,
+      "end_ms": 1577440,
+      "text": "atomic when you're writing both the, you"
+    },
+    {
+      "start_ms": 1575840,
+      "duration_ms": 3120,
+      "end_ms": 1578960,
+      "text": "know, anti escape sequence to move the"
+    },
+    {
+      "start_ms": 1577440,
+      "duration_ms": 2719,
+      "end_ms": 1580159,
+      "text": "cursor and then all the text that goes"
+    },
+    {
+      "start_ms": 1578960,
+      "duration_ms": 2800,
+      "end_ms": 1581760,
+      "text": "with it. You can't really guarantee"
+    },
+    {
+      "start_ms": 1580159,
+      "duration_ms": 3681,
+      "end_ms": 1583840,
+      "text": "that, but if you lock the terminal, you"
+    },
+    {
+      "start_ms": 1581760,
+      "duration_ms": 5519,
+      "end_ms": 1587279,
+      "text": "can really guarantee that. So, that's"
+    },
+    {
+      "start_ms": 1583840,
+      "duration_ms": 5360,
+      "end_ms": 1589200,
+      "text": "super cool. That's very clever."
+    },
+    {
+      "start_ms": 1587279,
+      "duration_ms": 3601,
+      "end_ms": 1590880,
+      "text": "I hope you guys enjoy this little debug"
+    },
+    {
+      "start_ms": 1589200,
+      "duration_ms": 3599,
+      "end_ms": 1592799,
+      "text": "into the PV source code. Oh, this is"
+    },
+    {
+      "start_ms": 1590880,
+      "duration_ms": 4159,
+      "end_ms": 1595039,
+      "text": "super cool. It's a great tool. I've been"
+    },
+    {
+      "start_ms": 1592799,
+      "duration_ms": 3921,
+      "end_ms": 1596720,
+      "text": "using it for years, probably decades at"
+    },
+    {
+      "start_ms": 1595039,
+      "duration_ms": 3841,
+      "end_ms": 1598880,
+      "text": "this point. In fact, yeah, now I think"
+    },
+    {
+      "start_ms": 1596720,
+      "duration_ms": 4319,
+      "end_ms": 1601039,
+      "text": "about it. It's got a little donate link"
+    },
+    {
+      "start_ms": 1598880,
+      "duration_ms": 3679,
+      "end_ms": 1602559,
+      "text": "and a buy me a coffee. I will I will"
+    },
+    {
+      "start_ms": 1601039,
+      "duration_ms": 3041,
+      "end_ms": 1604080,
+      "text": "take care of that after this video."
+    },
+    {
+      "start_ms": 1602559,
+      "duration_ms": 3441,
+      "end_ms": 1606000,
+      "text": "Yeah. So, that's super cool. Hope you"
+    },
+    {
+      "start_ms": 1604080,
+      "duration_ms": 3280,
+      "end_ms": 1607360,
+      "text": "guys enjoyed this uh deep dive into Pipe"
+    },
+    {
+      "start_ms": 1606000,
+      "duration_ms": 3520,
+      "end_ms": 1609520,
+      "text": "Viewer. It's a super cool tool. I love"
+    },
+    {
+      "start_ms": 1607360,
+      "duration_ms": 3679,
+      "end_ms": 1611039,
+      "text": "it. Super useful. And of course, I can't"
+    },
+    {
+      "start_ms": 1609520,
+      "duration_ms": 3200,
+      "end_ms": 1612720,
+      "text": "end a video without giving a shout out"
+    },
+    {
+      "start_ms": 1611039,
+      "duration_ms": 2721,
+      "end_ms": 1613760,
+      "text": "to my patrons over at Patreon. Thank you"
+    },
+    {
+      "start_ms": 1612720,
+      "duration_ms": 1920,
+      "end_ms": 1614640,
+      "text": "so much for your continued support. If"
+    },
+    {
+      "start_ms": 1613760,
+      "duration_ms": 2320,
+      "end_ms": 1616080,
+      "text": "you want to get your name at the end of"
+    },
+    {
+      "start_ms": 1614640,
+      "duration_ms": 2320,
+      "end_ms": 1616960,
+      "text": "one of my videos, sign up for my"
+    },
+    {
+      "start_ms": 1616080,
+      "duration_ms": 1920,
+      "end_ms": 1618000,
+      "text": "Patreon. It'll be linked in the"
+    },
+    {
+      "start_ms": 1616960,
+      "duration_ms": 2800,
+      "end_ms": 1619760,
+      "text": "description. Check this out. You guys"
+    },
+    {
+      "start_ms": 1618000,
+      "duration_ms": 4320,
+      "end_ms": 1622320,
+      "text": "ready? Look at how people hack the"
+    },
+    {
+      "start_ms": 1619760,
+      "duration_ms": 3919,
+      "end_ms": 1623679,
+      "text": "names. Patreon doesn't do any filtering"
+    },
+    {
+      "start_ms": 1622320,
+      "duration_ms": 2800,
+      "end_ms": 1625120,
+      "text": "of the names. Well, that's not true."
+    },
+    {
+      "start_ms": 1623679,
+      "duration_ms": 4161,
+      "end_ms": 1627840,
+      "text": "They do some filtering, but Patreon lets"
+    },
+    {
+      "start_ms": 1625120,
+      "duration_ms": 4159,
+      "end_ms": 1629279,
+      "text": "you put in an Ansi escape character, the"
+    },
+    {
+      "start_ms": 1627840,
+      "duration_ms": 3680,
+      "end_ms": 1631520,
+      "text": "antsy escape character, which can make"
+    },
+    {
+      "start_ms": 1629279,
+      "duration_ms": 4640,
+      "end_ms": 1633919,
+      "text": "anti- escape sequences in your name. And"
+    },
+    {
+      "start_ms": 1631520,
+      "duration_ms": 4159,
+      "end_ms": 1635679,
+      "text": "my script doesn't do any sort of"
+    },
+    {
+      "start_ms": 1633919,
+      "duration_ms": 4000,
+      "end_ms": 1637919,
+      "text": "sanitization. And as long as you guys"
+    },
+    {
+      "start_ms": 1635679,
+      "duration_ms": 4161,
+      "end_ms": 1639840,
+      "text": "are cool and you don't do anything super"
+    },
+    {
+      "start_ms": 1637919,
+      "duration_ms": 3201,
+      "end_ms": 1641120,
+      "text": "weird, I'm leaving it in the video cuz I"
+    },
+    {
+      "start_ms": 1639840,
+      "duration_ms": 2480,
+      "end_ms": 1642320,
+      "text": "think it's super awesome. As long as"
+    },
+    {
+      "start_ms": 1641120,
+      "duration_ms": 3039,
+      "end_ms": 1644159,
+      "text": "everyone's being representative, you're"
+    },
+    {
+      "start_ms": 1642320,
+      "duration_ms": 4080,
+      "end_ms": 1646400,
+      "text": "paying me, your money or your money,"
+    },
+    {
+      "start_ms": 1644159,
+      "duration_ms": 3520,
+      "end_ms": 1647679,
+      "text": "your name should be up here. So, super"
+    },
+    {
+      "start_ms": 1646400,
+      "duration_ms": 2480,
+      "end_ms": 1648880,
+      "text": "cool. I love that you guys mess with the"
+    },
+    {
+      "start_ms": 1647679,
+      "duration_ms": 2961,
+      "end_ms": 1650640,
+      "text": "script. I think it's super fun. Check it"
+    },
+    {
+      "start_ms": 1648880,
+      "duration_ms": 3200,
+      "end_ms": 1652080,
+      "text": "out. We have 123 active members. That's"
+    },
+    {
+      "start_ms": 1650640,
+      "duration_ms": 2720,
+      "end_ms": 1653360,
+      "text": "super awesome. Look at that. It's our"
+    },
+    {
+      "start_ms": 1652080,
+      "duration_ms": 2479,
+      "end_ms": 1654559,
+      "text": "subscriber count. And look at that. Even"
+    },
+    {
+      "start_ms": 1653360,
+      "duration_ms": 2880,
+      "end_ms": 1656240,
+      "text": "the time stamp. Look at all the metadata"
+    },
+    {
+      "start_ms": 1654559,
+      "duration_ms": 3201,
+      "end_ms": 1657760,
+      "text": "I put in my videos. How cool. And uh"
+    },
+    {
+      "start_ms": 1656240,
+      "duration_ms": 4640,
+      "end_ms": 1660880,
+      "text": "yeah, that's all I got for you. Take"
+    },
+    {
+      "start_ms": 1657760,
+      "duration_ms": 3120,
+      "end_ms": 1660880,
+      "text": "care, everyone. See you."
+    }
+  ]
+}

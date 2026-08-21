@@ -1,0 +1,16 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "run_id": "20260821T213711Z-iterm-capability-validator",
+  "base_commit": "ff559f7c46e20a4ebe7e1e057ef21ccbedd61361",
+  "scope": "changed terminal companion source and tests",
+  "files": {
+    "house/terminal_companion/capability.py": "9f7adcc9f04fd459c9b42753812540ecd2e32610b36d9a4214318399473aabb6",
+    "house/terminal_companion/tests/test_capability.py": "7239f4acdbe6c31fb62682b46e035c053a3cf1f95064f84742eca17965aa1810",
+    "house/terminal_companion/webview.py": "b07e10696e209bf00717764b1a7b33fccad964bdccee4bec7c0a06fc83bc20d8",
+    "house/terminal_companion/tests/test_webview.py": "e32239229aeeeb729f072a596c07613487f5abe43e6f68abb19628dd3f4037e0",
+    "house/terminal_companion/__init__.py": "7540b797d3d226dcb2babb8cc2c7c4b91fd812c8f7cea482f268f41dba859a4a",
+    "house/terminal_companion/README.md": "668235c14f1b7748447a4449aa55f451bdfc8bf8a7f47f4e46cb42f60d8a64f1"
+  },
+  "disposition": "LOCAL_COMMIT_REQUIRED",
+  "remote_push": "NOT_AUTHORIZED"
+}

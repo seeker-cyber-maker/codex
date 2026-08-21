@@ -1,0 +1,26 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "iterm-capability-validator-v1",
+  "record_revision": 1,
+  "run_id": "20260821T213711Z-iterm-capability-validator",
+  "intent": "Review one YouTube evidence packet and implement an offline loopback capability validator if compatible",
+  "target_identity": "house/terminal_companion",
+  "authority_scope": {
+    "read": ["public YouTube metadata and captions", "accepted terminal companion source and handoff"],
+    "write": ["additive house source, tests, and workflow evidence"],
+    "network": ["YouTube metadata and caption retrieval only"],
+    "external_effect_class": "PUBLIC_READ_AND_LOCAL_REVERSIBLE_SOURCE_EDIT"
+  },
+  "owner": "root",
+  "idempotency": {"key": "iterm-capability-validator-v1"},
+  "retry_budget": 1,
+  "resource_budget": [
+    {"resource": "youtube_video", "unit": "video", "hard_cap": 1},
+    {"resource": "capability_records", "unit": "records", "hard_cap": 256},
+    {"resource": "capability_lifetime", "unit": "seconds", "hard_cap": 300}
+  ],
+  "cancellation": {"supported": true, "method": "stop fetch or revert additive house files"},
+  "expected_artifacts": ["hash-bound video evidence", "capability.py", "security fixtures", "validation receipt"],
+  "acceptance_verifier": "deterministic offline tests plus independent read-only review",
+  "reconciliation": {"required": true, "method": "confirm evidence hashes and zero live listener or iTerm effects"}
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "youtube-evidence/1",
+  "acquired_at": "2026-08-21T21:37:42.428330+00:00",
+  "source_url": "https://www.youtube.com/watch?v=gwQH-db60WU",
+  "video_id": "gwQH-db60WU",
+  "title": "This Linux command is Really Useful! `pv` aka Pipe Viewer",
+  "channel": "You Suck at Programming",
+  "upload_date": "20260816",
+  "duration_seconds": 1659,
+  "extractor": "yt-dlp",
+  "authenticated_session_used": false,
+  "authentication_material_preserved": false,
+  "selected_caption": {
+    "language": "en-orig",
+    "kind": "automatic",
+    "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt",
+    "cue_count": 835
+  },
+  "automatic_captions_are_noisy_evidence": true,
+  "warnings": [],
+  "artifacts": [
+    {
+      "path": "gwQH-db60WU.metadata.json",
+      "sha256": "e4759fb534976cec65188fc18de80a0c5533cb1c0c4ff3f6e1a456a704298d47"
+    },
+    {
+      "path": "gwQH-db60WU.en-orig.json3",
+      "sha256": "5ea84379c380ea2e55ac7ca6226fcf60c4e6296f5dbd768afc6333ae619a23a7"
+    },
+    {
+      "path": "gwQH-db60WU.en-orig.transcript.json",
+      "sha256": "0eb8535969efa9bc2ad627f6f35bb59fae895dc07398dff02c23ec75450152f7"
+    },
+    {
+      "path": "gwQH-db60WU.en-orig.transcript.txt",
+      "sha256": "8b09ed7d1d852e65527e503772884cb5cfa023266c6e22d28640c7546315a58d"
+    }
+  ]
+}

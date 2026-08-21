@@ -27,8 +27,14 @@ card text is HTML-escaped and the content-security policy denies every source
 except the document's fixed inline style. The companion registration descriptor
 is deliberately unbound: it permits only a future capability-bearing loopback
 URL and records that iTerm registration and transport were not attempted.
-That policy is descriptive, not access control: URL and capability validation
-are explicitly unimplemented and required before the descriptor may be bound.
+The pure in-memory validator enforces exact IPv4 or IPv6 loopback authorities,
+an explicit high port, one canonical path, a 256-bit random bearer, five-minute
+maximum lifetime, exact GET/no-Origin policy, audience binding, atomic
+single-use consumption, and bounded storage. Only the token digest is retained;
+the bearer is omitted from object representations and receipts. The validator
+is accepted offline but remains unbound: trusted monotonic-clock wiring, an
+actual listener, request/error mapping, and iTerm registration require a new
+live-binding review.
 `Session.async_send_text`, terminal-window command launch, and Buddy relay are
 not part of this surface.
 
