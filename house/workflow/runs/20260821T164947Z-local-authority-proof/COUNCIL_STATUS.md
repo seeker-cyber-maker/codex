@@ -1,12 +1,14 @@
 # Independent-review status
 
-The sealed plan requires an independent security review before production
-wording, real-key enrollment, YubiKey integration, or use as the sole writer
-authority. No council was run in this lane because the operation authorized no
-provider requests and did not authorize delegation. The candidate may be
-committed and inspected locally, but it is not promoted.
+The local-only council `20260821T170643Z-authority-security` completed with
+three of three packet hashes confirmed and three of three reviewers accepting
+progression to a separately authorized ceremony-design stage. No reviewer
+approved production, real-key enrollment, YubiKey integration, sole-writer
+authority, or live Codex/worker use.
 
-The immutable review packet is this run directory plus the two implementation
-commits named in `SOURCE_SEAL.json`. Review should challenge proof canonicality,
-bootstrap, replay scope, revocation atomicity, journal recovery, SQLite
-concurrency, rejection-log exhaustion, and bypass of the cooperative API.
+The council preserved five mandatory design inputs: complete key lifecycle and
+last-key recovery; durable authority/inbox saga causality; protected journal
+anchoring or permanently narrowed consistency claims; independent signing
+vectors plus multi-process/crash tests; and bounded rejection storage. The
+candidate therefore remains unpromoted. Full synthesis and provenance are in
+`council-runs/20260821T170643Z-authority-security/`.

@@ -1,0 +1,16 @@
+{
+  "schema": "expert-council-result-seal/1",
+  "council_id": "20260821T170643Z-authority-security",
+  "evidence_packet_sha256": "0436e658830ee87e754aa3508bb6ee1f624e6672bc0b5fa036e6ede88b0782ca",
+  "artifacts": {
+    "manifest.json": "4736fb7bd254ca51ab6474e3d2c0395faa5370a6427552bee0f91ab532c432b0",
+    "reviewers/evidence-auditor.md": "e571c5c5c2a83dd044ef7767cab83ae5cf3e25821cf6153dc274edc566f5c136",
+    "reviewers/constructive-theorist.md": "e01eab612bfb6d02cf3fede3ba7d1ff4677c02c41957497bc15e86dfaaf58608",
+    "reviewers/adversarial-methodologist.md": "539a0dbcce767ffcab7c73700c4d8cf4616da36cda9ffb1eff902c63dab2edee",
+    "claim-ledger.json": "142e1e109a95bcf8c8c10fdb0f4a952876a9a78373bbfc52939626e6f6b4a161",
+    "synthesis.md": "de55d083110b6fe11a3d6ff6a3390452897426d4a44e83b2520496da2e4ab17b"
+  },
+  "decision": "ACCEPT_DESIGN_STAGE_ONLY",
+  "promotion_status": "BLOCKED",
+  "raw_response_location": "Codex task transcript; normalized durable reports are sealed here"
+}

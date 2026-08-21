@@ -1,0 +1,94 @@
+{
+  "schema": "expert-council-claim-ledger/1",
+  "council_id": "20260821T170643Z-authority-security",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "The cooperative API strictly verifies short-lived action-bound P-256 proofs before authorized enqueue.",
+      "status": "corroborated",
+      "evidence": ["authority_crypto.py", "authority.py", "test_authority.py"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet", "static-review"],
+      "decision_impact": "high",
+      "next_test": "none for permission to begin ceremony design"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "Bootstrap is single-event and serialized but remains an externally asserted setup ceremony rather than an authenticated enrollment path.",
+      "status": "corroborated",
+      "evidence": ["authority.py", "PLAN.md"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet"],
+      "decision_impact": "high",
+      "next_test": "define and later test bootstrap, rotation, recovery, and last-key policy"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "Nonce consumption and revocation are atomic within the authority database.",
+      "status": "corroborated",
+      "evidence": ["authority.py", "test_authority.py"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet", "static-review"],
+      "decision_impact": "high",
+      "next_test": "bounded multi-process ordering test before implementation promotion"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "Fresh-proof idempotent recovery preserves the tested enqueue behavior, but the two databases do not durably establish proof-to-inbox causality across the full crash matrix.",
+      "status": "corroborated",
+      "evidence": ["authority.py", "inbox.py", "test_authority.py", "AACR.md"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet", "static-review"],
+      "decision_impact": "high",
+      "next_test": "crash-injection matrix at authorization commit, inbox commit, and response-loss boundaries"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "The journal hash chain proves internal consistency but not authenticity, truncation resistance, or tamper evidence against a coherent writer.",
+      "status": "corroborated",
+      "evidence": ["authority.py", "HANDOFF.md", "AACR.md"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet"],
+      "decision_impact": "high",
+      "next_test": "design a protected head anchor or permanently narrow the claim"
+    },
+    {
+      "claim_id": "C-006",
+      "claim": "The generated P-256 fixture is a same-library round-trip rather than an independent fixed known-answer interoperability vector.",
+      "status": "corroborated",
+      "evidence": ["test_authority_crypto.py", "EVALUATION_CARD.json"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet"],
+      "decision_impact": "medium",
+      "next_test": "fixed independent software/PIV vector with exact canonical bytes"
+    },
+    {
+      "claim_id": "C-007",
+      "claim": "Rejection bodies are bounded, but rejection count and storage growth are unbounded.",
+      "status": "corroborated",
+      "evidence": ["authority.py", "AACR.md"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet"],
+      "decision_impact": "medium",
+      "next_test": "specify quota, rate, retention, and alert behavior"
+    },
+    {
+      "claim_id": "C-008",
+      "claim": "The sealed candidate may advance to ceremony design but is not approved for production, real keys, hardware, or sole-writer authority.",
+      "status": "corroborated",
+      "evidence": ["evidence-packet.md", "reviewers/evidence-auditor.md", "reviewers/constructive-theorist.md", "reviewers/adversarial-methodologist.md"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-model-family", "same-source-packet"],
+      "decision_impact": "high",
+      "next_test": "none; requires a new authority grant for the design operation"
+    }
+  ]
+}

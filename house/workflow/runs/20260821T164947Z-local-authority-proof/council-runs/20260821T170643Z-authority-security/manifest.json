@@ -1,0 +1,61 @@
+{
+  "council_id": "20260821T170643Z-authority-security",
+  "question": "Does the sealed offline P-256 trust-registry candidate correctly bound signature verification, bootstrap, replay, revocation, journal integrity, and split-database enqueue failure modes well enough to permit a later separately authorized real-key ceremony design?",
+  "mode": "independent-review",
+  "packet_sha256": "0436e658830ee87e754aa3508bb6ee1f624e6672bc0b5fa036e6ede88b0782ca",
+  "privacy": "local-only",
+  "cost_ceiling": "zero provider requests",
+  "chair": {
+    "model": "current Codex model; exact dispatch identifier not exposed",
+    "provider": "Codex local harness",
+    "harness": "Codex desktop multi-agent"
+  },
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "requested_model": "inherited current Codex model",
+      "candidate_models": [],
+      "selected_model": "not exposed by dispatch",
+      "self_reported_model": "unknown",
+      "provider": "Codex local subagent harness",
+      "harness": "Codex multi-agent",
+      "memory": "unknown",
+      "system_prompt_profile": "council worker plus evidence-auditor role",
+      "packet_hash_confirmed_in_response": true,
+      "status": "completed",
+      "attempts": [{"attempt": 1, "status": "completed", "transport": "local subagent"}]
+    },
+    {
+      "id": "constructive-theorist",
+      "requested_model": "inherited current Codex model",
+      "candidate_models": [],
+      "selected_model": "not exposed by dispatch",
+      "self_reported_model": "OpenAI GPT-5-based Codex agent",
+      "provider": "Codex local subagent harness",
+      "harness": "Codex multi-agent; version unknown",
+      "memory": "enabled but not used as evidence",
+      "system_prompt_profile": "council worker plus constructive-theorist role",
+      "packet_hash_confirmed_in_response": true,
+      "status": "completed",
+      "attempts": [{"attempt": 1, "status": "completed", "transport": "local subagent"}]
+    },
+    {
+      "id": "adversarial-methodologist",
+      "requested_model": "inherited current Codex model",
+      "candidate_models": [],
+      "selected_model": "not exposed by dispatch",
+      "self_reported_model": "unknown",
+      "provider": "Codex local subagent harness",
+      "harness": "Codex multi-agent",
+      "memory": "unknown",
+      "system_prompt_profile": "council worker plus adversarial-methodologist role",
+      "packet_hash_confirmed_in_response": true,
+      "status": "completed",
+      "attempts": [{"attempt": 1, "status": "completed", "transport": "local subagent"}]
+    }
+  ],
+  "started_at": "2026-08-21T17:06:43Z",
+  "completed_at": "2026-08-21T17:11:11Z",
+  "independence_limit": "multi-agent, same-model family, shared packet and system-prompt lineage",
+  "round_two": "not_run_no_decision_bearing_disagreement"
+}
