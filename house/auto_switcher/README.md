@@ -55,3 +55,16 @@ available.
 
 Expansion to local, LiteLLM, or third-party routes requires a separately
 accepted route catalog and fixtures; it is not a configuration toggle.
+
+## CLI
+
+The policy is directly usable without a provider bridge:
+
+```bash
+PYTHONPATH=/absolute/path/to/codex-dream-house \
+  python3 -m house.auto_switcher --task-json '{"summary":"review this claim"}'
+```
+
+It reads one JSON task packet and writes one sorted, hash-bound decision receipt
+to stdout. It makes no network, credential, provider, model, or filesystem
+mutation beyond reading an optional `--task-file` packet.

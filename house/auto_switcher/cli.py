@@ -1,0 +1,41 @@
+"""Small no-dispatch command line interface for the route policy."""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+from typing import Sequence
+
+from .policy import route_task
+
+
+def _task_from_args(args: argparse.Namespace, parser: argparse.ArgumentParser) -> dict[str, object]:
+    raw = args.task_json
+    if args.task_file:
+        try:
+            raw = Path(args.task_file).read_text(encoding="utf-8")
+        except OSError as exc:
+            parser.error(f"cannot read --task-file: {exc}")
+    try:
+        task = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        parser.error(f"task packet is not JSON: {exc.msg}")
+    if not isinstance(task, dict):
+        parser.error("task packet must be a JSON object")
+    return task
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Emit a deterministic Dream House routing receipt.")
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--task-json", help="task packet as one JSON object")
+    source.add_argument("--task-file", help="UTF-8 JSON task packet path")
+    args = parser.parse_args(argv)
+    receipt = route_task(_task_from_args(args, parser))
+    print(json.dumps(receipt, indent=2, sort_keys=True))
+    return 0
+
+
+if __name__ == "__main__":  # pragma: no cover - exercised through module invocation
+    raise SystemExit(main())

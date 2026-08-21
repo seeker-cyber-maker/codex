@@ -1,8 +1,12 @@
 from __future__ import annotations
 
+import contextlib
+import io
+import json
 import unittest
 
 from house.auto_switcher import DEFAULT_ROUTES, route_task
+from house.auto_switcher.cli import main
 
 
 class AutoSwitcherTests(unittest.TestCase):
@@ -83,6 +87,16 @@ class AutoSwitcherTests(unittest.TestCase):
         self.assertEqual(pending["omp_compat"]["prewalk"], "ARMED_WAITING_FOR_FIRST_WRITE")
         self.assertEqual(completed["omp_compat"]["effective_model_role"], "smol")
         self.assertEqual(completed["omp_compat"]["prewalk"], "HANDOFF_TO_SMOL_AFTER_FIRST_WRITE")
+
+    def test_cli_emits_a_hash_bound_no_dispatch_receipt(self) -> None:
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            exit_code = main(["--task-json", '{"summary":"design the architecture"}'])
+        receipt = json.loads(output.getvalue())
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(receipt["dispatch"], "NOT_ATTEMPTED")
+        self.assertEqual(receipt["omp_compat"]["native_thinking_level"], "auto")
+        self.assertIn("decision_sha256", receipt)
 
     def test_recurring_work_modes_are_conservative_and_deterministic(self) -> None:
         cases = (
