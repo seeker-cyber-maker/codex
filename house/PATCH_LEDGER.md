@@ -6,6 +6,7 @@
 | Source-built CLI/app-server equivalence | planned | build outputs only | none | bounded offline comparison |
 | Conserved event/session-tree thin slice | accepted | none; additive `house/context_tree` and schemas | no upstream merge conflict | 8 offline tests, Ruff, JSON, privacy, scope, diff, and remote identity checks |
 | Live app-server ancestry adapter | parked | app-server notifications and fork-request receipts | exact seam follows fixture acceptance | restart, pagination, and historical-fork fixture |
+| ChatGPT-family auto switcher v0.1 | accepted offline policy | additive `house/auto_switcher` only | no upstream merge conflict | 5 deterministic no-dispatch tests, compilation, and diff check |
 
 Core modifications are not admitted without an entry naming the exact upstream
 files, incompatibility, rollback, rebase risk, and independent acceptance test.
