@@ -87,3 +87,55 @@ class TaskSpineTests(unittest.TestCase):
             self.assertEqual(main(["--db", database, "rebuild"]), 0)
         self.assertEqual(demo_rows, json.loads(output.getvalue()))
         self.assertEqual(demo_rows[0]["disposition"], "candidate")
+
+    def test_late_result_is_preserved_but_does_not_change_sealed_wip(self) -> None:
+        self.spine.append_worker_buffer("buffer-1", "task-1", "record-1", "on-time")
+        seal = self.spine.seal_worker_buffer("buffer-1")
+        late = self.spine.append_worker_buffer("buffer-1", "task-1", "record-2", "late")
+        self.assertEqual(late["kind"], "worker_buffer.late_result")
+        self.assertEqual(late["payload"]["disposition"], "late_result")
+        self.assertEqual(self.spine.rebuild_read_model()[0]["wip_buffer_sha256"], seal["payload"]["buffer_sha256"])
+
+    def test_rejected_and_needs_repair_envelopes_cannot_be_proposed(self) -> None:
+        self.spine.append_worker_buffer("buffer-1", "task-1", "record-1", "report")
+        self.spine.seal_worker_buffer("buffer-1")
+        for status in ("rejected", "needs_repair"):
+            envelope_id = f"envelope-{status}"
+            self.spine.seal_result_envelope(envelope_id, "task-1", "buffer-1", "artifact:report", status)
+            with self.assertRaisesRegex(TaskSpineError, "only a complete"):
+                self.spine.create_import_proposal(f"proposal-{status}", "task-1", envelope_id)
+
+    def test_envelope_amendment_preserves_original_and_can_be_admitted(self) -> None:
+        self.spine.append_worker_buffer("buffer-1", "task-1", "record-1", "report")
+        self.spine.seal_worker_buffer("buffer-1")
+        self.spine.seal_result_envelope("envelope-1", "task-1", "buffer-1", "artifact:report-v1", "needs_repair")
+        amended = self.spine.amend_result_envelope("envelope-1", "envelope-2", "artifact:report-v2", "repaired")
+        self.assertEqual(amended["payload"]["amends_envelope_id"], "envelope-1")
+        self.spine.create_import_proposal("proposal-1", "task-1", "envelope-2")
+        authorization = self.spine.authorize_import("proposal-1", "lead-1")
+        self.spine.admit_candidate("proposal-1", actor="trusted_writer", admission_basis_sha256=authorization["event_sha256"])
+        self.assertEqual(self.spine.rebuild_read_model()[0]["candidate_envelope_id"], "envelope-2")
+
+    def test_revoked_and_expired_admission_leases_fail_closed(self) -> None:
+        self._sealed_path()
+        lease = self.spine.acquire_admission_lease("lease-1", "proposal-1", "lead-1", event_ttl=4)
+        revoked = self.spine.revoke_admission_lease("lease-1", actor="trusted_writer")
+        with self.assertRaisesRegex(TaskSpineError, "revoked admission lease"):
+            self.spine.admit_candidate("proposal-1", actor="trusted_writer",
+                                       admission_basis_sha256=revoked["event_sha256"], lease_id="lease-1")
+        self.assertEqual(lease["payload"]["proposal_id"], "proposal-1")
+        self.spine.acquire_admission_lease("lease-2", "proposal-1", "lead-1", event_ttl=1)
+        intervening = self.spine.create_work_item("work-2", "Advance the logical event clock")
+        with self.assertRaisesRegex(TaskSpineError, "expired admission lease"):
+            self.spine.admit_candidate("proposal-1", actor="trusted_writer",
+                                       admission_basis_sha256=intervening["event_sha256"], lease_id="lease-2")
+
+    def test_interrupted_rebuild_keeps_previous_projection(self) -> None:
+        before = self.spine.rebuild_read_model()
+        self.spine.append_worker_buffer("buffer-1", "task-1", "record-1", "report")
+        self.spine.seal_worker_buffer("buffer-1")
+        with self.assertRaisesRegex(TaskSpineError, "simulated interruption"):
+            self.spine.rebuild_read_model(interrupt_before_swap=True)
+        self.assertEqual(self.spine.read_model(), before)
+        after = self.spine.rebuild_read_model()
+        self.assertNotEqual(after, before)

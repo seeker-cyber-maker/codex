@@ -10,6 +10,13 @@ buffer, complete result envelope, import proposal, explicit lead authorization,
 a fresh journal-head basis, and the `trusted_writer` actor. The derived WIP view
 contains only the buffer hash, never the report body.
 
+Late buffer records are retained with `late_result` disposition without changing
+the sealed WIP hash. Rejected and needs-repair envelopes remain journal evidence
+but cannot become import proposals; a linked amendment receives a new envelope
+identity. Optional admission leases are proposal-scoped, event-count bounded,
+and fail closed after revocation or expiry. Read-model rebuild uses a transactional
+shadow table, so an interruption before swap leaves the prior projection intact.
+
 It is intentionally offline and local. It does not start a worker, read or
 write native Codex state, contact a provider, or mutate the Archive.
 

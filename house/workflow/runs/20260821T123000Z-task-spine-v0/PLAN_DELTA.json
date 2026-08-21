@@ -1,0 +1,14 @@
+{
+  "schema": "codex-house-plan-delta/1",
+  "run_id": "20260821T123000Z-task-spine-v0",
+  "delta_id": "negative-fixtures-1",
+  "authority": "user neutral-continuation after accepted core",
+  "added_scope": [
+    "late-result disposition after worker-buffer seal",
+    "rejected and needs-repair result envelopes",
+    "linked result-envelope amendment",
+    "bounded optional admission lease revocation and expiry",
+    "transactional interrupted read-model rebuild"
+  ],
+  "unchanged_non_goals": true
+}

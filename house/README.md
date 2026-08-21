@@ -36,8 +36,10 @@ The offline headless task-spine v0 core is now implemented as a narrow vertical
 path: Durable Work Item and Task Packet creation, task-scoped Worker Buffer
 append and seal, metadata-only WIP projection, Import Proposal and explicit
 lead authorization, Trusted Writer `candidate` admission, and deterministic
-Task Read Model rebuild. It is an isolated SQLite fixture with a compact CLI;
-lease, amendment, and interrupted-rebuild fixtures remain a later extension.
+Task Read Model rebuild. It is an isolated SQLite fixture with a compact CLI.
+Bounded admission leases, linked envelope amendments, late-result disposition,
+rejected/needs-repair envelopes, journal verification, and transactional
+interrupted-rebuild recovery are covered by isolated fixtures.
 See `task_spine/README.md` and
 `workflow/runs/20260821T123000Z-task-spine-v0/`.
 
