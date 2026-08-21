@@ -1,0 +1,18 @@
+{
+  "schema": "project-operation-reconciliation/1",
+  "operation_id": "task-submission-adapter-v0",
+  "terminal_state": "RECONCILED",
+  "observed": {
+    "network_requests": 0,
+    "provider_dispatches": 0,
+    "native_codex_state_writes": 0,
+    "adapter_tests": 6,
+    "total_focused_tests": 30
+  },
+  "discrepancies": [],
+  "remaining_boundaries": [
+    "single-writer controller",
+    "cryptographic requester identity",
+    "real worker dispatch"
+  ]
+}

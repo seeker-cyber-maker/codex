@@ -73,6 +73,11 @@ class TaskSpine:
             previous = event["event_sha256"]
         return True
 
+    def journal_events(self, kind: str = "") -> list[dict[str, Any]]:
+        """Return detached journal records for typed downstream adapters."""
+        events = self._events()
+        return [event for event in events if not kind or event["kind"] == kind]
+
     def _append(self, kind: str, payload: dict[str, Any]) -> dict[str, Any]:
         previous = self._head()
         sequence = int(self.db.execute("SELECT COALESCE(MAX(sequence), 0) + 1 FROM journal").fetchone()[0])
@@ -180,6 +185,11 @@ class TaskSpine:
         if proposal_id not in known_proposals:
             raise TaskSpineError("cannot authorize an unknown import proposal")
         return self._append("import_authorized", {"proposal_id": proposal_id, "lead_id": lead_id})
+
+    def record_submission_receipt(self, receipt: dict[str, Any]) -> dict[str, Any]:
+        if receipt.get("schema") != "codex-house-task-submission-receipt/1":
+            raise TaskSpineError("invalid task-submission receipt schema")
+        return self._append("task_submission.accepted", {"receipt": receipt})
 
     def acquire_admission_lease(self, lease_id: str, proposal_id: str, owner: str, *, event_ttl: int = 4) -> dict[str, Any]:
         if not 1 <= event_ttl <= 8:

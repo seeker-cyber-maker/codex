@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Sequence
 
 from .core import TaskSpine
+from .submission import submit_task
 
 
 def _emit(value: object) -> None:
@@ -20,12 +21,21 @@ def main(argv: Sequence[str] | None = None) -> int:
     commands = parser.add_subparsers(dest="command", required=True)
     demo = commands.add_parser("demo", help="create and admit one offline candidate fixture")
     demo.add_argument("--summary", default="review this provenance claim")
+    submit = commands.add_parser("submit", help="idempotently submit one strict JSON task packet")
+    submit.add_argument("--input", required=True, help="UTF-8 task-submission JSON path")
     commands.add_parser("rebuild", help="rebuild and print the read model from the canonical journal")
     args = parser.parse_args(argv)
     spine = TaskSpine(Path(args.db))
     try:
         if args.command == "rebuild":
             _emit(spine.rebuild_read_model())
+            return 0
+        if args.command == "submit":
+            try:
+                submission = json.loads(Path(args.input).read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                parser.error(f"cannot load task submission: {exc}")
+            _emit(submit_task(spine, submission))
             return 0
         spine.create_work_item("demo-work", "Offline task-spine demonstration")
         spine.create_task_packet("demo-task", "demo-work", args.summary)

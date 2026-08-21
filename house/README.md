@@ -43,6 +43,11 @@ interrupted-rebuild recovery are covered by isolated fixtures.
 See `task_spine/README.md` and
 `workflow/runs/20260821T123000Z-task-spine-v0/`.
 
+The typed task-submission adapter adds strict JSON intake, content-bound
+idempotency, deterministic work/task identity, exact receipt replay, and
+matching partial-journal recovery. It remains single-writer and no-dispatch;
+requester identity is retained but unverified until a later signing service.
+
 The ChatGPT-family auto switcher v0.1 is a separate offline policy module. It
 emits deterministic route receipts through a small JSON CLI, but cannot dispatch
 or alter the current Codex model. Its OMP-compatible receipt keeps role

@@ -20,9 +20,24 @@ shadow table, so an interruption before swap leaves the prior projection intact.
 It is intentionally offline and local. It does not start a worker, read or
 write native Codex state, contact a provider, or mutate the Archive.
 
+The typed submission adapter accepts only schema-declared fields, binds a
+caller idempotency key to canonical requester/title/summary/case-type content,
+derives stable work and task identities, resumes matching partial creation, and
+returns the exact stored receipt on retry. Reusing a key with different content
+fails closed. `requested_by` is conserved as `ASSERTED_UNVERIFIED`; signature
+verification remains a later trust-service boundary.
+
 ```bash
 PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.task_spine --db /tmp/task-spine.sqlite demo
 PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.task_spine --db /tmp/task-spine.sqlite rebuild
+```
+
+Typed submission uses a JSON file with schema
+`codex-house-task-submission/1`:
+
+```bash
+PYTHONPATH=/absolute/path/to/codex-dream-house \
+  python3 -m house.task_spine --db /tmp/task-spine.sqlite submit --input task.json
 ```
