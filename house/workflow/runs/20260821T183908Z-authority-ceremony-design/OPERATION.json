@@ -1,0 +1,37 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "authority-ceremony-design-v0",
+  "record_revision": 1,
+  "record_sha256": "973a198d32123a7956c89785cd182fc33c0df42a3b7307bf7bd558543104c31b",
+  "run_id": "20260821T183908Z-authority-ceremony-design",
+  "intent": "Produce and validate one design-only authority ceremony specification",
+  "target_identity": "house/workflow/runs/20260821T183908Z-authority-ceremony-design",
+  "input_hashes": {
+    "source_head": "7609fd5a8c12758b99a16cbbcfbd6f435596b1e9",
+    "local_council": "de55d083110b6fe11a3d6ff6a3390452897426d4a44e83b2520496da2e4ab17b",
+    "outside_council": "6e08e3565f4fed6387ddd58fcbd95662f2a11c084a03b55387387e567c6b8e3e"
+  },
+  "authority_scope": {
+    "read": ["house/task_spine", "house/workflow/runs/20260821T164947Z-local-authority-proof"],
+    "write": ["house/workflow/runs/20260821T183908Z-authority-ceremony-design", "house documentation pointers"],
+    "network": [],
+    "external_effect_class": "NONE"
+  },
+  "owner": "single-root-lane",
+  "lease": {"holder": null, "expires_at": null, "epoch": 0, "fencing_token": null},
+  "idempotency": {"key": "authority-ceremony-design-v0", "binding_sha256": "7609fd5a8c12758b99a16cbbcfbd6f435596b1e9"},
+  "start_state": {"git_head": "7609fd5a8c12758b99a16cbbcfbd6f435596b1e9", "worktree_clean": true},
+  "checkpoint_policy": {"after": ["contract-seal", "design-set", "cross-check"]},
+  "resume_pointer": null,
+  "deadline": null,
+  "retry_budget": 1,
+  "resource_budget": [
+    {"resource": "provider_requests", "unit": "requests", "hard_cap": 0},
+    {"resource": "real_key_operations", "unit": "operations", "hard_cap": 0},
+    {"resource": "source_implementation_changes", "unit": "files", "hard_cap": 0}
+  ],
+  "cancellation": {"supported": true, "method": "retain sealed partial design and stop"},
+  "expected_artifacts": ["threat model", "lifecycle state machine", "saga and anchoring contract", "recovery matrix", "signing-vector specification", "monitoring contract", "failure-test plan"],
+  "acceptance_verifier": "deterministic cross-document checklist and hash seal",
+  "reconciliation": {"required": true, "method": "confirm zero external effects and map every council requirement to a design rule and test"}
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "authority-ceremony-design-v0",
+  "claim_ids": ["CEREMONY-DESIGN-COMPLETE", "CEREMONY-REQUIREMENTS-TRACED", "CEREMONY-NO-EFFECTS"],
+  "task_distribution": {
+    "scope": "design rules for local owner, Codex operator, restricted local gatekeeper, and untrusted contractors",
+    "temporal_cutoff": null,
+    "new_vs_legacy_slices": ["new lifecycle and recovery design", "existing authority candidate compatibility"],
+    "out_of_distribution_slices": ["real YubiKey firmware", "hostile kernel", "remote multi-host federation", "production load"]
+  },
+  "fixtures": {
+    "public": ["council requirements", "existing candidate schemas"],
+    "private": [],
+    "adversarial": ["last-key revocation", "ambiguous devices", "coherent journal rewrite", "clock rollback", "disk full", "concurrent nonce", "cross-database response loss"],
+    "known_answer": ["each requirement maps to a rule and preregistered test"]
+  },
+  "contamination": {
+    "sources_checked": ["sealed candidate", "local council", "outside council"],
+    "tool_access_restrictions": ["local reads and documentation writes only"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "claim-bearing design", "gate": "PASS", "evidence_refs": ["design cross-check"]},
+    "execution_trace": {"applicability": "required", "reason": "repository documentation operation", "gate": "PASS", "evidence_refs": ["EVENTS.jsonl"]},
+    "side_effects": {"applicability": "required", "reason": "zero-effect authority boundary", "gate": "PASS", "evidence_refs": ["RECONCILIATION.json"]},
+    "cost": {"applicability": "required", "reason": "zero provider budget", "gate": "PASS", "evidence_refs": ["RECONCILIATION.json"]},
+    "latency": {"applicability": "not_applicable", "reason": "no performance claim", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "required", "reason": "recovery is a primary design surface", "gate": "PASS", "evidence_refs": ["RECOVERY_MATRIX.md"]},
+    "long_horizon": {"applicability": "not_applicable", "reason": "bounded design slice", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["requirements traceability matrix", "state transition completeness", "JSON and link validation", "hash seal"],
+  "semantic_reviewers": ["prior local council", "prior outside council"],
+  "metrics": ["requirements mapped", "states covered", "recovery scenarios covered", "unresolved contradictions"],
+  "thresholds": ["all six council inputs mapped", "zero real-key operations", "zero unresolved safety contradictions"],
+  "uncertainty_method": "exclude implementation and operational claims; retain explicit future falsification gates",
+  "failure_taxonomy": ["authority", "identity", "delegation", "canonicalization", "concurrency", "crash", "storage", "clock", "recovery", "monitoring", "claim drift"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new design revision"
+}

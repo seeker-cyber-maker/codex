@@ -1,0 +1,2 @@
+{"sequence":1,"kind":"design.operation.authorized","source_head":"7609fd5a8c12758b99a16cbbcfbd6f435596b1e9","authority":"user dot continuation after outside council","effects":{"provider_requests":0,"real_key_operations":0,"implementation_changes":0}}
+{"sequence":2,"kind":"design.plan.sealed","nodes":7,"claim_ceiling":"design proposal only","prior_councils":2}
