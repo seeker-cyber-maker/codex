@@ -25,7 +25,9 @@ def _optional_text(value: object, field: str, maximum: int) -> str | None:
     if value is None:
         return None
     if not isinstance(value, str) or len(value) > maximum:
-        raise CompanionProjectionError(f"{field} must be text of at most {maximum} characters")
+        raise CompanionProjectionError(
+            f"{field} must be text of at most {maximum} characters"
+        )
     return value
 
 
@@ -46,7 +48,9 @@ def project_notifications(notifications: list[object]) -> list[dict[str, Any]]:
     if not isinstance(notifications, list):
         raise CompanionProjectionError("notifications must be a JSON array")
     if len(notifications) > MAX_NOTIFICATIONS:
-        raise CompanionProjectionError(f"notification count exceeds {MAX_NOTIFICATIONS}")
+        raise CompanionProjectionError(
+            f"notification count exceeds {MAX_NOTIFICATIONS}"
+        )
     cards: list[dict[str, Any]] = []
     for index, notification in enumerate(notifications):
         if not isinstance(notification, dict):
@@ -55,30 +59,38 @@ def project_notifications(notifications: list[object]) -> list[dict[str, Any]]:
             continue
         params = notification.get("params")
         if not isinstance(params, dict) or not isinstance(params.get("item"), dict):
-            raise CompanionProjectionError(f"notification {index} has no completed item")
+            raise CompanionProjectionError(
+                f"notification {index} has no completed item"
+            )
         item = params["item"]
         if item.get("type") != "commandExecution":
             continue
         status = _text(item.get("status"), "command status")
         if status not in {"completed", "failed", "declined"}:
-            raise CompanionProjectionError(f"unsupported completed command status: {status}")
-        cards.append({
-            "schema": "codex-house-terminal-command-card/1",
-            "thread_id": _text(params.get("threadId"), "threadId"),
-            "turn_id": _text(params.get("turnId"), "turnId"),
-            "item_id": _text(item.get("id"), "command id"),
-            "command": _text(item.get("command"), "command"),
-            "cwd": _text(item.get("cwd"), "cwd"),
-            "status": status,
-            "exit_code": _optional_int(item.get("exitCode"), "exitCode"),
-            "duration_ms": _optional_int(item.get("durationMs"), "durationMs"),
-            "output": _optional_text(item.get("aggregatedOutput"), "aggregatedOutput", MAX_OUTPUT_CHARS),
-            "source": "exported_app_server_notification",
-            "redaction_state": "UPSTREAM_ASSERTED",
-            "output_redaction_state": "NOT_ATTESTED",
-            "content_trust": "DISPLAY_ONLY",
-            "dispatch": "NOT_ATTEMPTED",
-        })
+            raise CompanionProjectionError(
+                f"unsupported completed command status: {status}"
+            )
+        cards.append(
+            {
+                "schema": "codex-house-terminal-command-card/1",
+                "thread_id": _text(params.get("threadId"), "threadId"),
+                "turn_id": _text(params.get("turnId"), "turnId"),
+                "item_id": _text(item.get("id"), "command id"),
+                "command": _text(item.get("command"), "command"),
+                "cwd": _text(item.get("cwd"), "cwd"),
+                "status": status,
+                "exit_code": _optional_int(item.get("exitCode"), "exitCode"),
+                "duration_ms": _optional_int(item.get("durationMs"), "durationMs"),
+                "output": _optional_text(
+                    item.get("aggregatedOutput"), "aggregatedOutput", MAX_OUTPUT_CHARS
+                ),
+                "source": "exported_app_server_notification",
+                "redaction_state": "UPSTREAM_ASSERTED",
+                "output_redaction_state": "NOT_ATTESTED",
+                "content_trust": "DISPLAY_ONLY",
+                "dispatch": "NOT_ATTEMPTED",
+            }
+        )
     return cards
 
 
@@ -93,7 +105,11 @@ def project_jsonl(source: str) -> list[dict[str, Any]]:
         try:
             notifications.append(json.loads(line))
         except json.JSONDecodeError as exc:
-            raise CompanionProjectionError(f"invalid JSONL notification at line {line_number}") from exc
+            raise CompanionProjectionError(
+                f"invalid JSONL notification at line {line_number}"
+            ) from exc
         if len(notifications) > MAX_NOTIFICATIONS:
-            raise CompanionProjectionError(f"notification count exceeds {MAX_NOTIFICATIONS}")
+            raise CompanionProjectionError(
+                f"notification count exceeds {MAX_NOTIFICATIONS}"
+            )
     return project_notifications(notifications)

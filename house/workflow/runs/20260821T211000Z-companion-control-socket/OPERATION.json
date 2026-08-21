@@ -1,0 +1,22 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "companion-control-socket-smoke-v1",
+  "record_revision": 1,
+  "run_id": "20260821T211000Z-companion-control-socket",
+  "intent": "Prove isolated source app-server Unix socket and proxy initialization without starting work",
+  "target_identity": "codex-rs/target/debug/codex pinned source build",
+  "authority_scope": {
+    "read": ["pinned source binary"],
+    "write": ["one mktemp directory only"],
+    "network": ["none; Unix loopback socket only"],
+    "external_effect_class": "TEMPORARY_LOCAL_PROCESS"
+  },
+  "owner": "root",
+  "idempotency": {"key": "companion-control-socket-smoke-v1"},
+  "retry_budget": 1,
+  "resource_budget": [{"resource": "wall_time", "unit": "seconds", "hard_cap": 30}],
+  "cancellation": {"supported": true, "method": "terminate isolated child process"},
+  "expected_artifacts": ["handshake response", "process exit status"],
+  "acceptance_verifier": "exact JSON-RPC response and process reconciliation",
+  "reconciliation": {"required": true, "method": "confirm child exit and temporary-only paths"}
+}

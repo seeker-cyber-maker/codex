@@ -1,0 +1,22 @@
+{
+  "schema": "codex-house-validation/1",
+  "run_id": "20260821T211000Z-companion-control-socket",
+  "status": "pruned_failed_assumption",
+  "checks": {
+    "isolated_unix_listener_start": "passed",
+    "proxy_connection": "passed",
+    "jsonl_handshake": "not_applicable_proxy_is_raw_websocket",
+    "desktop_transport": "observed_stdio_only",
+    "isolated_children_reconciled": "passed",
+    "temporary_state_trashed": "passed",
+    "live_app_untouched": "passed"
+  },
+  "observed_effects": {
+    "provider_requests": 0,
+    "threads_started": 0,
+    "turns_started": 0,
+    "iterm_mutations": 0,
+    "native_codex_state_writes": 0
+  },
+  "claim_ceiling": "negative transport qualification only; no live capture client or shared desktop socket"
+}

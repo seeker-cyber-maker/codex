@@ -14,16 +14,27 @@ def command(status: str = "completed") -> dict[str, object]:
     return {
         "method": "item/completed",
         "params": {
-            "threadId": "thread-1", "turnId": "turn-1",
-            "item": {"type": "commandExecution", "id": "exec-1", "command": "pytest -q", "cwd": "/work", "status": status,
-                     "aggregatedOutput": "1 passed\n", "exitCode": 0, "durationMs": 33},
+            "threadId": "thread-1",
+            "turnId": "turn-1",
+            "item": {
+                "type": "commandExecution",
+                "id": "exec-1",
+                "command": "pytest -q",
+                "cwd": "/work",
+                "status": status,
+                "aggregatedOutput": "1 passed\n",
+                "exitCode": 0,
+                "durationMs": 33,
+            },
         },
     }
 
 
 class ProjectorTests(unittest.TestCase):
     def test_completed_command_becomes_a_read_only_card(self) -> None:
-        card = project_notifications([{"method": "item/started", "params": {}}, command()])[0]
+        card = project_notifications(
+            [{"method": "item/started", "params": {}}, command()]
+        )[0]
         self.assertEqual(card["command"], "pytest -q")
         self.assertEqual(card["output"], "1 passed\n")
         self.assertEqual(card["redaction_state"], "UPSTREAM_ASSERTED")
@@ -32,7 +43,17 @@ class ProjectorTests(unittest.TestCase):
         self.assertEqual(card["dispatch"], "NOT_ATTEMPTED")
 
     def test_unrelated_items_are_ignored(self) -> None:
-        self.assertEqual(project_notifications([{"method": "item/completed", "params": {"item": {"type": "agentMessage"}}}]), [])
+        self.assertEqual(
+            project_notifications(
+                [
+                    {
+                        "method": "item/completed",
+                        "params": {"item": {"type": "agentMessage"}},
+                    }
+                ]
+            ),
+            [],
+        )
 
     def test_malformed_command_fails_closed(self) -> None:
         broken = command()
@@ -49,7 +70,9 @@ class ProjectorTests(unittest.TestCase):
             project_notifications([command("interrupted")])
 
     def test_jsonl_capture_is_projected_without_opening_a_live_stream(self) -> None:
-        cards = project_jsonl('{"method":"item/started","params":{}}\n' + json.dumps(command()))
+        cards = project_jsonl(
+            '{"method":"item/started","params":{}}\n' + json.dumps(command())
+        )
         self.assertEqual(cards[0]["item_id"], "exec-1")
 
     def test_bad_jsonl_line_fails_closed_with_its_line_number(self) -> None:
@@ -67,10 +90,22 @@ class ProjectorTests(unittest.TestCase):
             project_notifications([malformed_exit])
 
     def test_output_delta_is_not_misread_as_a_completed_command(self) -> None:
-        self.assertEqual(project_notifications([{
-            "method": "item/commandExecution/outputDelta",
-            "params": {"threadId": "thread-1", "turnId": "turn-1", "itemId": "exec-1", "delta": "partial"},
-        }]), [])
+        self.assertEqual(
+            project_notifications(
+                [
+                    {
+                        "method": "item/commandExecution/outputDelta",
+                        "params": {
+                            "threadId": "thread-1",
+                            "turnId": "turn-1",
+                            "itemId": "exec-1",
+                            "delta": "partial",
+                        },
+                    }
+                ]
+            ),
+            [],
+        )
 
     def test_null_aggregate_output_is_preserved(self) -> None:
         no_output = command()

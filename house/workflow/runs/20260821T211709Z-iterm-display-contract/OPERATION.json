@@ -1,0 +1,22 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "iterm-display-contract-v1",
+  "record_revision": 1,
+  "run_id": "20260821T211709Z-iterm-display-contract",
+  "intent": "Create an offline one-way versioned display-batch contract",
+  "target_identity": "house/terminal_companion",
+  "authority_scope": {
+    "read": ["projected terminal command cards"],
+    "write": ["additive house source, tests, and workflow evidence"],
+    "network": ["none"],
+    "external_effect_class": "LOCAL_REVERSIBLE_SOURCE_EDIT"
+  },
+  "owner": "root",
+  "idempotency": {"key": "iterm-display-contract-v1"},
+  "retry_budget": 1,
+  "resource_budget": [{"resource": "display_cards", "unit": "cards", "hard_cap": 128}],
+  "cancellation": {"supported": true, "method": "revert additive house files"},
+  "expected_artifacts": ["display_batch.py", "focused tests", "validation receipt"],
+  "acceptance_verifier": "offline deterministic tests and static checks",
+  "reconciliation": {"required": true, "method": "confirm zero live transports and clean test processes"}
+}
