@@ -1,0 +1,15 @@
+schema=terminal-benchmark-result/1
+started_at=2026-08-21T22:45:13Z
+term=xterm-256color
+term_program=iTerm.app
+term_program_version=3.7.0beta9
+benchmark=ascii,unicode,csi
+repetitions=5
+render=true
+]\cThese results measure the time it takes the terminal to fully parse all the data sent to it.
+Note that not all data transmitted will be displayed as input parsing is typically asynchronous with rendering in high performance terminals.
+
+Results:
+  Only ASCII chars         : 2.24s      @ [32m4.5    [m MB/s
+  Unicode chars            : 1.41s      @ [32m6.4    [m MB/s
+  CSI codes with few chars : 5.34s      @ [32m0.9    [m MB/s

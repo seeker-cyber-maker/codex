@@ -1,0 +1,14 @@
+schema=terminal-benchmark-result/1
+started_at=2026-08-21T22:40:17Z
+term=xterm-ghostty
+term_program=ghostty
+term_program_version=1.3.1
+benchmark=ascii,unicode,csi
+repetitions=5
+]\cThese results measure the time it takes the terminal to fully parse all the data sent to it.
+Note that [31mrendering is suppressed[m (if the terminal supports the synchronized output escape code) to better benchmark parser performance. Use the --render flag to enable rendering.
+
+Results:
+  Only ASCII chars         : 167.38ms   @ [32m59.7   [m MB/s
+  Unicode chars            : 123.88ms   @ [32m73.0   [m MB/s
+  CSI codes with few chars : 144.19ms   @ [32m34.7   [m MB/s

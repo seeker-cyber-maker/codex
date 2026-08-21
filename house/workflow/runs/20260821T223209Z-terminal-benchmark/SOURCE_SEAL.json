@@ -1,0 +1,30 @@
+{
+  "schema": "source-seal/1",
+  "run_id": "20260821T223209Z-terminal-benchmark",
+  "algorithm": "sha256",
+  "status": "SEALED_PARTIAL_EVIDENCE_PACKET",
+  "files": {
+    "AACR.md": "9e16b934bd7a9cf36beedcb502cdd557524b74b5feb27db6f6dcda6c253a5475",
+    "HANDOFF.md": "6271d42723ac28a263a352c726d3d8772c005c3a31babe8468cd0ce4fa79d372",
+    "OPERATION.json": "20dda1b6a4e67a359c4c78f8bafa912a5d7aeaa1dfc5e78b8cf7da5575a8e4fa",
+    "OUTSIDE_REVIEW.md": "9364a313c54918913f641f3f8b75e929df10f32815aa39796cf19361e80906fa",
+    "PLAN.md": "d0529d2d079b29e59a789ee90872637627d0a87b4864a44f29c4e9b66bc137c2",
+    "PRE_RUN_INVENTORY.md": "a4f22cbe4dba6f7576b70b635e86a507c03b856c226ab72bc4fc8501d74a0122",
+    "QUALIFICATION.md": "5bb324e110ceb4348de3d2187445d042b0030b7adac2365fd60d09231c7fbf59",
+    "RECONCILIATION.json": "8528606c3967cd3216a3e1e6fb902ddbc3982ffbfb66cfc85de9e1803872c297",
+    "RESULTS.md": "4b36d008402db72a4984f8a058f29e82604c71e1ecad49f2f023f754fd2fd309",
+    "SOURCE_REVIEW.md": "373c1ad447f81a23d449b4c3ea7ef095879f97d810d72efa904e285265643d82",
+    "VALIDATION.json": "c2bd2bb332aab1286f72429c563cff0c4988c434f29fa0f75f4f1da196357d46",
+    "ghostty-common-clean.txt": "8e07abd3c63d1fa4d87e47f4b8ea0ead5dc42267ef6aeca566b687803a829c6b",
+    "ghostty-common.txt": "599472e34980b8508a2ac69d7726ba8e912efd79d2b782b68caa81512dc0090a",
+    "ghostty-render-clean.txt": "10f46287c4df3d601ef03e2ab9a26cc720102a7bb6ba90a3228809348b0ebdd4",
+    "ghostty-render.txt": "07764a4286f74450e9839a50ed6196f39e3f049966ef0d4b8c84fc9e90bb7301",
+    "iterm-common.txt": "64f3ee484b34a38ba5bc38a368aaf618273f63abc4f186a1f885e2681d0b9bc8",
+    "iterm-render.txt": "69a68a5b5c176b71333f8976dc25a5222e5ffe85d39e2a30cffbfd12d98967f4",
+    "kitty-common.txt": "ccc281b0793fb984a08e6a4c57f0973be3538ccb186d02cd06b533eba34973b4",
+    "kitty-render.txt": "2ada857e5723644f911741cb028e17a7e8d8646a5a185bfa46d29e6eb5e7b558",
+    "run_common_benchmark.sh": "0a9bcd575790f29c69e480c09bd64a302b5e533299819a34ee155c722d8a9c3a",
+    "run_iterm_benchmark.py": "c2cd718777d6d7bf32a2063828c5769b9b717aefc287eab35294f33b21c6a0cb",
+    "run_render_benchmark.sh": "2c7a03b0bd3e6f559651afb373a08640aeafbfe08ee8347ae0e413340580c22f"
+  }
+}

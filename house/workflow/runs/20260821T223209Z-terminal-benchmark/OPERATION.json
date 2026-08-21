@@ -1,0 +1,85 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "local-terminal-benchmark-v1",
+  "record_revision": 1,
+  "run_id": "20260821T223209Z-terminal-benchmark",
+  "intent": "Run a bounded local comparison of installed terminal applications without changing user configuration or existing sessions",
+  "target_identity": "installed iTerm2, Warp, Wave, Kitty, and Ghostty applications",
+  "authority_scope": {
+    "read": [
+      "installed application metadata and binaries",
+      "non-secret effective terminal configuration metadata",
+      "benchmark process and resource observations"
+    ],
+    "write": [
+      "house/workflow/runs/20260821T223209Z-terminal-benchmark only"
+    ],
+    "network": [],
+    "external_effect_class": "LOCAL_REVERSIBLE_ISOLATED_GUI_AND_BENCHMARK_PROCESSES"
+  },
+  "owner": "root",
+  "lease": {
+    "holder": "root",
+    "expires_at": null,
+    "epoch": 1,
+    "fencing_token": "local-single-lane-20260821T223209Z"
+  },
+  "idempotency": {
+    "key": "local-terminal-benchmark-v1"
+  },
+  "start_state": {
+    "repository": "clean",
+    "existing_iterm_sessions": "PRESENT_AND_OUT_OF_SCOPE",
+    "other_target_terminals": "NOT_RUNNING_AT_INITIAL_INVENTORY"
+  },
+  "checkpoint_policy": {
+    "after": [
+      "interface qualification",
+      "common parser lane",
+      "visual fixture review",
+      "process reconciliation"
+    ]
+  },
+  "resume_pointer": "PLAN.md",
+  "deadline": null,
+  "retry_budget": 1,
+  "resource_budget": [
+    {
+      "resource": "isolated_instances_per_terminal",
+      "unit": "instances",
+      "hard_cap": 1
+    },
+    {
+      "resource": "qualification_time_per_terminal",
+      "unit": "seconds",
+      "hard_cap": 300
+    },
+    {
+      "resource": "benchmark_case_time",
+      "unit": "seconds",
+      "hard_cap": 60
+    },
+    {
+      "resource": "common_repetitions",
+      "unit": "repetitions_per_case",
+      "hard_cap": 5
+    }
+  ],
+  "cancellation": {
+    "supported": true,
+    "method": "close exact isolated benchmark surface or terminate exact newly recorded process"
+  },
+  "expected_artifacts": [
+    "pre and post process inventories",
+    "interface qualification matrix",
+    "raw benchmark outputs",
+    "visual fixture evidence where safe",
+    "comparison report and limitations",
+    "reconciliation and source seal"
+  ],
+  "acceptance_verifier": "bounded local receipts plus exact process-state reconciliation",
+  "reconciliation": {
+    "required": true,
+    "method": "compare pre/post process inventories and confirm no benchmark-created terminal instance or configuration mutation remains"
+  }
+}

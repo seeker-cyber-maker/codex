@@ -1,0 +1,15 @@
+schema=terminal-benchmark-result/1
+started_at=2026-08-21T22:47:51Z
+term=xterm-kitty
+term_program=unset
+term_program_version=unset
+benchmark=ascii,unicode,csi
+repetitions=5
+render=true
+]\cThese results measure the time it takes the terminal to fully parse all the data sent to it.
+Note that not all data transmitted will be displayed as input parsing is typically asynchronous with rendering in high performance terminals.
+
+Results:
+  Only ASCII chars         : 139.98ms   @ [32m71.4   [m MB/s
+  Unicode chars            : 293.9ms    @ [32m30.8   [m MB/s
+  CSI codes with few chars : 135.3ms    @ [32m37.0   [m MB/s

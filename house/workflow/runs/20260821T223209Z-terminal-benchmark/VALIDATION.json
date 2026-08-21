@@ -1,0 +1,20 @@
+{
+  "schema": "terminal-benchmark-validation/1",
+  "run_id": "20260821T223209Z-terminal-benchmark",
+  "status": "PARTIAL",
+  "checks": [
+    {"name": "installed version inventory", "status": "PASS"},
+    {"name": "official source interface review", "status": "PASS"},
+    {"name": "exact iTerm window creation and close", "status": "PASS"},
+    {"name": "pre-existing iTerm sessions preserved", "status": "PASS"},
+    {"name": "Kitty common and render proxy receipts", "status": "PASS"},
+    {"name": "Ghostty bounded common and render proxy receipts", "status": "PASS_WITH_LIFECYCLE_CAVEAT"},
+    {"name": "Warp safe arbitrary-command lane", "status": "UNQUALIFIED"},
+    {"name": "Wave safe arbitrary-command lane", "status": "UNQUALIFIED"},
+    {"name": "launch-to-prompt or time-to-first-token", "status": "EXCLUDED_HUMAN_GATED"},
+    {"name": "visual screenshot comparison", "status": "BLOCKED_BY_COMPUTER_USE_POLICY"},
+    {"name": "zero terminal configuration mutation", "status": "FAIL_GHOSTTY_PREFERENCES_MTIME_CHANGED"},
+    {"name": "no benchmark terminal processes remain", "status": "PASS"}
+  ],
+  "publication_claim": "No terminal winner; local three-terminal response-loop samples only."
+}

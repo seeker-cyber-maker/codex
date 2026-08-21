@@ -1,0 +1,14 @@
+schema=terminal-benchmark-result/1
+started_at=2026-08-21T22:43:43Z
+term=xterm-256color
+term_program=iTerm.app
+term_program_version=3.7.0beta9
+benchmark=ascii,unicode,csi
+repetitions=5
+]\cThese results measure the time it takes the terminal to fully parse all the data sent to it.
+Note that [31mrendering is suppressed[m (if the terminal supports the synchronized output escape code) to better benchmark parser performance. Use the --render flag to enable rendering.
+
+Results:
+  Only ASCII chars         : 2.34s      @ [32m4.3    [m MB/s
+  Unicode chars            : 1.4s       @ [32m6.5    [m MB/s
+  CSI codes with few chars : 5.21s      @ [32m1.0    [m MB/s

@@ -1,0 +1,26 @@
+{
+  "schema": "terminal-benchmark-reconciliation/1",
+  "run_id": "20260821T223209Z-terminal-benchmark",
+  "status": "PARTIAL_WITH_DISCLOSED_SIDE_EFFECT",
+  "process_state": {
+    "iterm_pid_5572_preserved": true,
+    "iterm_shell_pids_preserved": [5580, 19299, 31362],
+    "benchmark_terminal_processes_remaining": [],
+    "warp_launched": false,
+    "wave_launched": false
+  },
+  "configuration_state": {
+    "kitty_config_sha256_before": "4826157b81a1c6a1d1e7e286376a5f279427d9aefdd7a6e20865386c9b34f19f",
+    "kitty_config_sha256_after": "4826157b81a1c6a1d1e7e286376a5f279427d9aefdd7a6e20865386c9b34f19f",
+    "ghostty_text_config_loaded": false,
+    "ghostty_text_config_modified": false,
+    "ghostty_preferences_plist_observed_mtime": "2026-08-21T18:46:25-0400",
+    "ghostty_preferences_plist_changed_during_run": true,
+    "ghostty_preferences_rollback_attempted": false,
+    "ghostty_preferences_rollback_reason": "No pre-run byte snapshot existed; overwriting user preferences without a preimage would be destructive."
+  },
+  "human_interventions": [
+    "User focused and then closed two initial Kitty qualification windows; those attempts are excluded."
+  ],
+  "acceptance_ceiling": "Bounded parser/render-proxy evidence and interface qualification only; zero-preference-mutation acceptance did not pass."
+}
