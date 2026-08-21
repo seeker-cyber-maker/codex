@@ -8,6 +8,7 @@ from collections.abc import Mapping, Sequence
 from typing import Any
 
 from .registry import RegistryError, builtin_registry
+from .task_enqueue import OperatorTaskEnqueueError, enqueue_task
 
 SURFACES = ("agent", "dashboard", "iterm")
 
@@ -82,6 +83,38 @@ def _parser() -> argparse.ArgumentParser:
     prepare_parser.add_argument(
         "--arg", action="append", default=[], metavar="NAME=VALUE"
     )
+
+    submit_parser = subparsers.add_parser(
+        "enqueue-task",
+        help="validate and queue one task for later controller admission",
+    )
+    submit_parser.add_argument(
+        "--inbox-db", required=True, help="explicit local inbox SQLite path"
+    )
+    submit_parser.add_argument(
+        "--enqueue-id", required=True, help="caller-selected idempotency key"
+    )
+    submit_parser.add_argument(
+        "--requested-by", required=True, help="asserted requester identity"
+    )
+    submit_parser.add_argument("--title", required=True, help="short task title")
+    submit_parser.add_argument(
+        "--summary", required=True, help="concrete bounded task objective"
+    )
+    submit_parser.add_argument(
+        "--recipient",
+        default="triage",
+        choices=("triage", "coder", "reviewer", "specific_model"),
+        help="requested task lane; this does not launch a worker",
+    )
+    submit_parser.add_argument(
+        "--recipient-id",
+        default="",
+        help="required only with --recipient specific_model",
+    )
+    submit_parser.add_argument(
+        "--case-type", default="", help="optional routing-advisory case type"
+    )
     return parser
 
 
@@ -116,6 +149,23 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(json.dumps(commands, indent=2, sort_keys=True))
         else:
             _print_commands(commands)
+        return 0
+
+    if args.operation == "enqueue-task":
+        try:
+            receipt = enqueue_task(
+                args.inbox_db,
+                enqueue_id=args.enqueue_id,
+                requested_by=args.requested_by,
+                title=args.title,
+                summary=args.summary,
+                recipient=args.recipient,
+                recipient_id=args.recipient_id,
+                case_type=args.case_type,
+            )
+        except OperatorTaskEnqueueError as exc:
+            parser.error(str(exc))
+        print(json.dumps(receipt, indent=2, sort_keys=True))
         return 0
 
     try:

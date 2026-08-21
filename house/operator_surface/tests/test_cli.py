@@ -59,6 +59,8 @@ class OperatorCliTests(unittest.TestCase):
                 "prepare",
                 "codex.house.task.submit",
                 "--arg",
+                "title=Review CLI",
+                "--arg",
                 "summary=Review the CLI",
                 "--arg",
                 "recipient=reviewer",
@@ -90,7 +92,15 @@ class OperatorCliTests(unittest.TestCase):
         ):
             with self.subTest(arguments=arguments):
                 with self.assertRaises(SystemExit) as raised:
-                    self.run_cli(["prepare", "codex.house.task.submit", *arguments])
+                    self.run_cli(
+                        [
+                            "prepare",
+                            "codex.house.task.submit",
+                            "--arg",
+                            "title=x",
+                            *arguments,
+                        ]
+                    )
                 self.assertEqual(raised.exception.code, 2)
 
     def test_prepare_reuses_registry_target_validation(self) -> None:

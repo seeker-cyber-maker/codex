@@ -85,8 +85,14 @@ The operator command registry is an offline shared inventory for future agent,
 dashboard, and iTerm surfaces. It produces searchable manifests and
 `PREPARED_UNAUTHORIZED` request envelopes, requires explicit stable targets for
 stateful actions, reserves the first-party namespace, and rejects collisions.
-Its dependency-free keyboard CLI lists, searches, shows bindings, and prepares
-requests from that same inventory. It contains no dispatcher or authority path.
+Its dependency-free keyboard CLI lists, searches, shows bindings, prepares
+requests, and can turn the declared Create Task request into one idempotent
+record in an explicit local inbox. Requested triage/coder/reviewer/specific
+model assignment is conserved in the canonical Task Packet but does not start
+a worker, acquire a controller lease, select a provider, or grant authority.
+The future dashboard must use this exact same adapter rather than add a second
+task-creation path. See `operator_surface/README.md` and
+`workflow/runs/20260821T234101Z-operator-task-enqueue/`.
 See `operator_surface/README.md`.
 
 The integration-health gate is a dependency-free, read-only evaluator for

@@ -104,6 +104,8 @@ class TaskSpine:
         *,
         case_type: str = "",
         manual_route_id: str = "",
+        requested_recipient: str = "triage",
+        requested_recipient_id: str = "",
     ) -> dict[str, Any]:
         if not task_id or not work_id or not summary:
             raise TaskSpineError("task_id, work_id, and summary are required")
@@ -125,6 +127,8 @@ class TaskSpine:
             "task_id": task_id, "work_id": work_id, "summary": summary,
             "routing_receipt": route_receipt,
             "manual_selection": manual_selection,
+            "requested_recipient": requested_recipient,
+            "requested_recipient_id": requested_recipient_id or None,
         })
 
     def append_worker_buffer(self, buffer_id: str, task_id: str, record_id: str, body: str) -> dict[str, Any]:
@@ -352,6 +356,8 @@ class TaskSpine:
                     "routing_decision_sha256": routing["decision_sha256"],
                     "manual_route_id": None if manual is None else manual["selected"]["id"],
                     "manual_selection_sha256": None if manual is None else manual["decision_sha256"],
+                    "requested_recipient": payload.get("requested_recipient", "triage"),
+                    "requested_recipient_id": payload.get("requested_recipient_id"),
                     "wip_buffer_sha256": None,
                     "candidate_envelope_id": None,
                     "disposition": "open",

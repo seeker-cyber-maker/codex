@@ -1,0 +1,28 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "typed operator CLI/API task enqueue to local inbox",
+  "checks": [
+    {
+      "name": "focused operator and task-spine suites",
+      "command": "python3 -m unittest discover -s house/operator_surface/tests -v && python3 -m unittest discover -s house/task_spine/tests -v",
+      "result": "29 operator tests and 46 task-spine tests passed"
+    },
+    {
+      "name": "complete House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "143 tests passed"
+    },
+    {
+      "name": "static checks",
+      "command": "ruff check house/operator_surface house/task_spine && ruff format --check house/operator_surface house/task_spine/submission.py && python3 -m compileall -q house/operator_surface house/task_spine && git diff --check",
+      "result": "pass; known pre-existing formatting outside this delta was not rewritten"
+    },
+    {
+      "name": "CLI smoke",
+      "command": "python3 -m house.operator_surface enqueue-task --inbox-db <temporary>/inbox.sqlite --enqueue-id smoke-1 --requested-by human:tiga --title 'Queue a review' --summary 'review the bounded local task queue gateway' --recipient reviewer --case-type app_delivery",
+      "result": "state QUEUED, requested_recipient reviewer, controller NOT_ATTEMPTED, dispatch NOT_ATTEMPTED"
+    }
+  ],
+  "claim_ceiling": "The CLI/API creates an idempotent local inbox record and preserves a requested recipient through later local task-spine admission. It is not a dashboard server, controller, worker launcher, provider selector, authority service, or iTerm reverse channel."
+}

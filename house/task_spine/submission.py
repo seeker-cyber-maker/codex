@@ -13,7 +13,13 @@ from .core import TaskSpine, TaskSpineError
 SUBMISSION_SCHEMA = "codex-house-task-submission/1"
 RECEIPT_SCHEMA = "codex-house-task-submission-receipt/1"
 _REQUIRED = {"schema", "idempotency_key", "requested_by", "title", "summary"}
-_OPTIONAL = {"case_type", "manual_route_id"}
+_OPTIONAL = {
+    "case_type",
+    "manual_route_id",
+    "requested_recipient",
+    "requested_recipient_id",
+}
+_RECIPIENTS = {"triage", "coder", "reviewer", "specific_model"}
 
 
 def _canonical(value: Any) -> str:
@@ -50,9 +56,13 @@ def prepare_submission(submission: dict[str, Any]) -> dict[str, Any]:
     unknown = set(submission) - _REQUIRED - _OPTIONAL
     missing = _REQUIRED - set(submission)
     if unknown:
-        raise TaskSpineError("unknown task-submission fields: " + ",".join(sorted(unknown)))
+        raise TaskSpineError(
+            "unknown task-submission fields: " + ",".join(sorted(unknown))
+        )
     if missing:
-        raise TaskSpineError("missing task-submission fields: " + ",".join(sorted(missing)))
+        raise TaskSpineError(
+            "missing task-submission fields: " + ",".join(sorted(missing))
+        )
     if submission["schema"] != SUBMISSION_SCHEMA:
         raise TaskSpineError("invalid task-submission schema")
     normalized = {
@@ -63,6 +73,11 @@ def prepare_submission(submission: dict[str, Any]) -> dict[str, Any]:
         "summary": _required_text(submission, "summary", 100_000),
         "case_type": _optional_text(submission, "case_type", 128),
         "manual_route_id": _optional_text(submission, "manual_route_id", 256),
+        "requested_recipient": _optional_text(submission, "requested_recipient", 64)
+        or "triage",
+        "requested_recipient_id": _optional_text(
+            submission, "requested_recipient_id", 256
+        ),
     }
     if normalized["case_type"] and normalized["case_type"] not in CASE_TYPE_PROFILE:
         raise TaskSpineError("unknown case_type")
@@ -71,13 +86,35 @@ def prepare_submission(submission: dict[str, Any]) -> dict[str, Any]:
             select_manual_route(normalized["manual_route_id"])
         except ValueError as exc:
             raise TaskSpineError(str(exc)) from exc
+    if normalized["requested_recipient"] not in _RECIPIENTS:
+        raise TaskSpineError("unknown requested_recipient")
+    if (
+        normalized["requested_recipient"] == "specific_model"
+        and not normalized["requested_recipient_id"]
+    ):
+        raise TaskSpineError("specific_model requires requested_recipient_id")
+    if (
+        normalized["requested_recipient"] != "specific_model"
+        and normalized["requested_recipient_id"]
+    ):
+        raise TaskSpineError(
+            "requested_recipient_id requires requested_recipient=specific_model"
+        )
     binding_payload = {
         key: normalized[key]
-        for key in ("requested_by", "title", "summary", "case_type", "manual_route_id")
+        for key in (
+            "requested_by",
+            "title",
+            "summary",
+            "case_type",
+            "manual_route_id",
+            "requested_recipient",
+            "requested_recipient_id",
+        )
     }
     binding_sha256 = _sha256(binding_payload)
     identity_sha256 = hashlib.sha256(
-        f'{normalized["idempotency_key"]}:{binding_sha256}'.encode()
+        f"{normalized['idempotency_key']}:{binding_sha256}".encode()
     ).hexdigest()
     return {
         **normalized,
@@ -97,11 +134,21 @@ def submit_task(spine: TaskSpine, submission: dict[str, Any]) -> dict[str, Any]:
         if receipt["idempotency_key"] != prepared["idempotency_key"]:
             continue
         if receipt["binding_sha256"] != prepared["binding_sha256"]:
-            raise TaskSpineError("idempotency key is already bound to different content")
+            raise TaskSpineError(
+                "idempotency key is already bound to different content"
+            )
         return receipt
 
-    work_events = {event["payload"]["work_id"]: event for event in events if event["kind"] == "work_item.created"}
-    task_events = {event["payload"]["task_id"]: event for event in events if event["kind"] == "task_packet.created"}
+    work_events = {
+        event["payload"]["work_id"]: event
+        for event in events
+        if event["kind"] == "work_item.created"
+    }
+    task_events = {
+        event["payload"]["task_id"]: event
+        for event in events
+        if event["kind"] == "task_packet.created"
+    }
     resumed = prepared["work_id"] in work_events or prepared["task_id"] in task_events
     work_event = work_events.get(prepared["work_id"])
     if work_event is not None and work_event["payload"]["title"] != prepared["title"]:
@@ -111,17 +158,28 @@ def submit_task(spine: TaskSpine, submission: dict[str, Any]) -> dict[str, Any]:
     task_event = task_events.get(prepared["task_id"])
     if task_event is not None:
         payload = task_event["payload"]
-        existing_manual_route = (payload.get("manual_selection") or {}).get("selected", {}).get("id", "")
+        existing_manual_route = (
+            (payload.get("manual_selection") or {}).get("selected", {}).get("id", "")
+        )
         if (
             payload["work_id"] != prepared["work_id"]
             or payload["summary"] != prepared["summary"]
             or existing_manual_route != prepared["manual_route_id"]
+            or payload.get("requested_recipient", "triage")
+            != prepared["requested_recipient"]
+            or (payload.get("requested_recipient_id") or "")
+            != prepared["requested_recipient_id"]
         ):
             raise TaskSpineError("derived task identity conflicts with journal content")
     else:
         task_event = spine.create_task_packet(
-            prepared["task_id"], prepared["work_id"], prepared["summary"],
-            case_type=prepared["case_type"], manual_route_id=prepared["manual_route_id"],
+            prepared["task_id"],
+            prepared["work_id"],
+            prepared["summary"],
+            case_type=prepared["case_type"],
+            manual_route_id=prepared["manual_route_id"],
+            requested_recipient=prepared["requested_recipient"],
+            requested_recipient_id=prepared["requested_recipient_id"],
         )
     routing = task_event["payload"]["routing_receipt"]
     manual_selection = task_event["payload"].get("manual_selection")
@@ -131,13 +189,17 @@ def submit_task(spine: TaskSpine, submission: dict[str, Any]) -> dict[str, Any]:
         "idempotency_key": prepared["idempotency_key"],
         "binding_sha256": prepared["binding_sha256"],
         "requested_by": prepared["requested_by"],
+        "requested_recipient": prepared["requested_recipient"],
+        "requested_recipient_id": prepared["requested_recipient_id"] or None,
         "requester_identity_state": "ASSERTED_UNVERIFIED",
         "work_id": prepared["work_id"],
         "task_id": prepared["task_id"],
         "case_type": routing["request"]["case_type"],
         "routing_decision_sha256": routing["decision_sha256"],
         "model_advisory": routing["model_advisory"],
-        "manual_selection_sha256": None if manual_selection is None else manual_selection["decision_sha256"],
+        "manual_selection_sha256": None
+        if manual_selection is None
+        else manual_selection["decision_sha256"],
         "dispatch": "NOT_ATTEMPTED",
     }
     receipt = {**unsigned_receipt, "receipt_sha256": _sha256(unsigned_receipt)}

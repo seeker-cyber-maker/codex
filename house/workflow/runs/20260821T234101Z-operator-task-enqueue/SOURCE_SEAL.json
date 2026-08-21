@@ -1,0 +1,14 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "state": "PENDING_COMMIT",
+  "base_revision": "9b0c13af78",
+  "sealed_files": {
+    "house/operator_surface/registry.py": "9bef446a6d6144659f15813a9ec2f9aabed29e635b8b4bad8b390378c7e573d3",
+    "house/operator_surface/task_enqueue.py": "f2a43ab7c82026732106e869289d4c90552b3eb79ae99d46e5e5a3be3b848b3f",
+    "house/operator_surface/cli.py": "f2ca210422c9ac8244740a869d00bbe775944a1f97b011a59564ea40eb232f46",
+    "house/task_spine/submission.py": "36efa2a1d31af5e80c21b37f68d6443aa6ac73ca2638ecb4965590ecdd5d7682",
+    "house/task_spine/core.py": "a36ef84a436bfcb209a7a67bb609236a3dfd8cf1f740f0c010a4b30149b56e0e",
+    "house/operator_surface/tests/test_task_enqueue.py": "b2471d9b362d83d495c29f817751d1d75090a8533415a13beb78d32b5e157b14"
+  },
+  "disposition": "The additive downstream delta is ready for a local commit. Its parent/source baseline remains untouched."
+}

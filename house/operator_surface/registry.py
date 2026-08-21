@@ -294,12 +294,21 @@ def builtin_registry() -> CommandRegistry:
                 category="tasks",
                 authority="TASK_SUBMISSION_REQUIRED",
                 parameters=(
+                    Parameter("title", "Short task title.", required=True),
                     Parameter("summary", "Concrete task objective.", required=True),
                     Parameter(
                         "recipient",
                         "Requested recipient or triage lane.",
                         default="triage",
                         choices=("triage", "coder", "reviewer", "specific_model"),
+                    ),
+                    Parameter(
+                        "recipient_id",
+                        "Explicit model identifier when recipient is specific_model.",
+                    ),
+                    Parameter(
+                        "case_type",
+                        "Optional bounded-phase classification for routing advice.",
                     ),
                 ),
                 hotkey="cmd+shift+t",

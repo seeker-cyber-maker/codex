@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-workflow-plan/1",
+  "run_id": "20260821T234101Z-operator-task-enqueue",
+  "profile": "core",
+  "case_type": "app_delivery",
+  "objective": "Create a typed operator-to-inbox task queue gateway without worker dispatch.",
+  "authority": "local offline implementation only",
+  "dispatch": "NOT_IMPLEMENTED",
+  "acceptance_gate": "focused tests, full House regression, static checks, source seal"
+}

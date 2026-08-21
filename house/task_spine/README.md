@@ -23,11 +23,13 @@ It is intentionally offline and local. It does not start a worker, read or
 write native Codex state, contact a provider, or mutate the Archive.
 
 The typed submission adapter accepts only schema-declared fields, binds a
-caller idempotency key to canonical requester/title/summary/case-type content,
-derives stable work and task identities, resumes matching partial creation, and
-returns the exact stored receipt on retry. Reusing a key with different content
-fails closed. `requested_by` is conserved as `ASSERTED_UNVERIFIED`; signature
-verification remains a later trust-service boundary.
+caller idempotency key to canonical requester/title/summary/case-type/recipient
+content, derives stable work and task identities, resumes matching partial
+creation, and returns the exact stored receipt on retry. Reusing a key with
+different content fails closed. `requested_by` is conserved as
+`ASSERTED_UNVERIFIED`; signature verification remains a later trust-service
+boundary. `requested_recipient` records a triage/coder/reviewer lane or an
+explicit `specific_model` identifier; it is a request, never worker authority.
 
 Submission receipts retain the router's advisory model/effort recommendation.
 That is operational advice only: Terra is the normal implementation class, Sol

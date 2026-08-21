@@ -69,13 +69,20 @@ class CommandRegistryTests(unittest.TestCase):
         registry = builtin_registry()
         receipt = registry.prepare_request(
             "codex.house.task.submit",
-            arguments={"summary": "Review the operator registry"},
+            arguments={
+                "title": "Review registry",
+                "summary": "Review the operator registry",
+            },
         )
         self.assertEqual(receipt["arguments"]["recipient"], "triage")
         with self.assertRaisesRegex(RegistryError, "invalid choice"):
             registry.prepare_request(
                 "codex.house.task.submit",
-                arguments={"summary": "x", "recipient": "unrestricted"},
+                arguments={
+                    "title": "x",
+                    "summary": "x",
+                    "recipient": "unrestricted",
+                },
             )
 
     def test_missing_and_unknown_arguments_fail_closed(self) -> None:
@@ -85,7 +92,7 @@ class CommandRegistryTests(unittest.TestCase):
         with self.assertRaisesRegex(RegistryError, "unknown arguments"):
             registry.prepare_request(
                 "codex.house.task.submit",
-                arguments={"summary": "x", "shell": "rm"},
+                arguments={"title": "x", "summary": "x", "shell": "rm"},
             )
 
     def test_reserved_core_namespace_rejects_plugins(self) -> None:
