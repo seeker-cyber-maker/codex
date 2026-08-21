@@ -1,0 +1,35 @@
+{
+  "schema": "project-claim-ledger/1",
+  "claims": [
+    {
+      "id": "AUTH-P256-VERIFY",
+      "claim": "The candidate verifies strict short-lived action-bound ECDSA P-256 proofs against directly enrolled public keys.",
+      "state": "VERIFIED_CANDIDATE",
+      "evidence": ["VALIDATION.json", "house/task_spine/tests/test_authority_crypto.py"]
+    },
+    {
+      "id": "AUTH-REPLAY-REVOKE",
+      "claim": "Accepted nonces are one-use and a valid revocation proof atomically consumes its nonce and revokes the target key.",
+      "state": "VERIFIED_CANDIDATE",
+      "evidence": ["VALIDATION.json", "house/task_spine/tests/test_authority.py"]
+    },
+    {
+      "id": "AUTH-ENQUEUE-GATE",
+      "claim": "Invalid proofs leave the inbox unchanged, while valid proofs bind the signer to the enqueue receipt and permit idempotent recovery under a fresh proof.",
+      "state": "VERIFIED_CANDIDATE",
+      "evidence": ["VALIDATION.json", "RECONCILIATION.json", "house/task_spine/tests/test_authority.py"]
+    },
+    {
+      "id": "AUTH-PRODUCTION-BOUNDARY",
+      "claim": "The candidate is a production security boundary or prevents hostile local processes from writing its SQLite files directly.",
+      "state": "NOT_CLAIMED",
+      "evidence": []
+    },
+    {
+      "id": "AUTH-HARDWARE-KEY",
+      "claim": "The candidate manages private keys or has verified YubiKey PIV behavior.",
+      "state": "OUT_OF_SCOPE",
+      "evidence": []
+    }
+  ]
+}

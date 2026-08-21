@@ -1,0 +1,35 @@
+{
+  "schema": "codex-house-validation/1",
+  "run_id": "20260821T164947Z-local-authority-proof",
+  "status": "passed_candidate",
+  "checks": {
+    "authority_registry_tests": 10,
+    "authority_crypto_tests": 3,
+    "legacy_task_spine_regression_tests": 26,
+    "task_spine_total_tests": 39,
+    "auto_switcher_regression_tests": 12,
+    "total_behavioral_tests": 51,
+    "python_compile": "passed",
+    "changed_file_ruff": "passed",
+    "changed_file_ruff_format": "passed",
+    "git_diff_check": "passed",
+    "operation_record_hash": "passed"
+  },
+  "security_cases": {
+    "valid_signed_enqueue": "passed",
+    "payload_action_and_unknown_field_tamper": "failed_closed",
+    "invalid_signature_unknown_key_and_principal_mismatch": "failed_closed",
+    "expired_future_and_overlong_proofs": "failed_closed",
+    "nonce_replay": "failed_closed",
+    "atomic_revocation": "passed",
+    "permission_enforcement": "passed",
+    "post_authorization_enqueue_recovery": "passed_with_new_proof",
+    "corrupt_journal": "failed_closed"
+  },
+  "non_blocking_environment_limits": [
+    "repository formatter wrapper was not rerun because just and dotslash were already confirmed unavailable in the prior harness slice",
+    "repository-wide Ruff has pre-existing style findings outside this slice"
+  ],
+  "promotion_gate": "blocked_pending_independent_security_review",
+  "claim_ceiling": "offline candidate with directly enrolled P-256 public keys; no certificate authority, private-key custody, YubiKey, OS-enforced isolation, live provider, worker, Archive, or native Codex integration"
+}

@@ -36,6 +36,19 @@ task acceptance but before the inbox commit, a later controller replays the
 stored task receipt and records the terminal inbox state without duplicating
 task history. This is cooperative process control, not OS-enforced isolation.
 
+The optional local-authority candidate adds a directly enrolled P-256 public-key
+trust registry and an `AuthorizedTaskInbox` producer surface. Short-lived
+proofs bind principal, key, action, enqueue identity, canonical submission
+digest, nonce, and validity window. Accepted/rejected proof fingerprints,
+permissions, and revocations are retained in a separate append-only journal;
+private keys are never persisted by this module. Install its isolated runtime
+dependency from `requirements-authority.txt`.
+
+This is not a certificate authority or a finished YubiKey integration. The
+first-key bootstrap remains an external setup ceremony, direct access to the
+underlying SQLite files is not OS-blocked, and independent security review is
+required before real-key or production use.
+
 ```bash
 PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.task_spine --db /tmp/task-spine.sqlite demo

@@ -55,6 +55,12 @@ reconciles through the submission adapter's exact stored receipt. This is a
 cooperative local control fixture, not authenticated identity or OS-enforced
 writer isolation. See `workflow/runs/20260821T163359Z-task-inbox-controller/`.
 
+The offline local-authority candidate verifies action-bound P-256 signatures
+against a directly enrolled public-key registry before producer enqueue. It
+retains append-only proof and revocation evidence while keeping private keys
+outside the harness. It remains candidate-only pending independent security
+review and does not claim a CA, YubiKey ceremony, or hostile-process boundary.
+
 The ChatGPT-family auto switcher v0.1 is a separate offline policy module. It
 emits deterministic route receipts through a small JSON CLI, but cannot dispatch
 or alter the current Codex model. Its OMP-compatible receipt keeps role

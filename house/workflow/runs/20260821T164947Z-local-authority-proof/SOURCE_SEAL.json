@@ -1,0 +1,17 @@
+{
+  "schema": "project-source-seal/1",
+  "repository": "/Users/tiga/Documents/Codex_Projects/codex-dream-house",
+  "branch": "codex/dream-house-auto-switcher",
+  "source_head": "76a4fb7a9221389e7baee37188bfb9592f9cbbe2",
+  "proof_primitives_commit": "56ef14fe3847157f4ece5efedb8984a2eca9f234",
+  "registry_commit": "835e66e4a1deac7b840a8b30c54321ebfdf2ed2d",
+  "source_sha256": {
+    "house/task_spine/authority.py": "cd060824577ba6eaa618d493b4f003476c3d4fcf7f1590a6f774f4af36dc5072",
+    "house/task_spine/authority_crypto.py": "634f89697d13d998ee454b45346677700f9b593bd057303238f14b5d1dbac257",
+    "house/task_spine/tests/test_authority.py": "aad8e79e81f26c20de7245fd29637131d9ab262d223e94a2e6e753f6eb4c7187",
+    "house/task_spine/tests/test_authority_crypto.py": "b8f69f0c404a85f300beb82ce9ab4846cd5aa96f7974cce66bba0cde8f4de6c6"
+  },
+  "operation_record_sha256": "1cfb444cc2c6371178098fbeb5a3549a3e8eba110a313efb5903c1637d976c8d",
+  "cryptography_version": "45.0.7",
+  "disposition": "CANDIDATE_SEALED_PENDING_INDEPENDENT_SECURITY_REVIEW"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "project-operation-reconciliation/1",
+  "operation_id": "local-authority-proof-v0",
+  "terminal_state": "RECONCILED_CANDIDATE",
+  "observed": {
+    "network_requests": 0,
+    "provider_dispatches": 0,
+    "real_key_enrollments": 0,
+    "private_keys_persisted": 0,
+    "native_codex_state_writes": 0,
+    "invalid_proof_inbox_effects": 0,
+    "replayed_nonce_acceptances": 0,
+    "authority_tests": 13,
+    "total_behavioral_tests": 51,
+    "post_authorization_failure_recovered_with_new_proof": true
+  },
+  "discrepancies": [],
+  "remaining_boundaries": [
+    "independent security review",
+    "rate limiting or bounded retention for rejection telemetry",
+    "OS-enforced sole-writer isolation",
+    "real key enrollment and recovery ceremony",
+    "YubiKey PIV integration",
+    "native Codex task and worker integration"
+  ]
+}
