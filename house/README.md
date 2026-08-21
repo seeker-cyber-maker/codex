@@ -32,13 +32,14 @@ connect to a live app-server or modify native Codex state. See
 `context_tree/README.md` and
 `workflow/runs/20260820T134919Z-context-tree-thin-slice/`.
 
-The next slice is the offline headless task-spine v0.1. Its one vertical path is
-Durable Work Item and Task Packet creation, task-scoped Worker Buffer append and
-seal, WIP metadata projection, Import Proposal and explicit lead authorization,
-Trusted Writer admission with `candidate` disposition, and deterministic Task
-Read Model rebuild. Negative fixtures cover quarantine, partial and stale
-admission, rejected envelopes, late results, amendments, lease revocation, and
-interrupted projection rebuilds.
+The offline headless task-spine v0 core is now implemented as a narrow vertical
+path: Durable Work Item and Task Packet creation, task-scoped Worker Buffer
+append and seal, metadata-only WIP projection, Import Proposal and explicit
+lead authorization, Trusted Writer `candidate` admission, and deterministic
+Task Read Model rebuild. It is an isolated SQLite fixture with a compact CLI;
+lease, amendment, and interrupted-rebuild fixtures remain a later extension.
+See `task_spine/README.md` and
+`workflow/runs/20260821T123000Z-task-spine-v0/`.
 
 The ChatGPT-family auto switcher v0.1 is a separate offline policy module. It
 emits deterministic route receipts through a small JSON CLI, but cannot dispatch
