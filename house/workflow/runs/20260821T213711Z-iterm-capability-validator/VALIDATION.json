@@ -22,7 +22,7 @@
     "repository_just_fmt": "passed",
     "python_compile": "passed",
     "json_parse": "passed",
-    "git_diff_check": "passed",
+    "git_diff_check": "changed source passed; raw hash-bound YouTube json3 preserves upstream trailing whitespace on lines 4, 7, and 14",
     "independent_read_only_review": "passed"
   },
   "observed_effects": {
@@ -39,5 +39,6 @@
     "native_codex_state_writes": 0
   },
   "operation_variance": "The original operation named YouTube retrieval only; two public primary pv pages were also read and are preserved in OPERATION_DELTA.json and AACR.md",
+  "evidence_format_warning": "The committed raw json3 caption artifact intentionally retains three upstream whitespace-only lines so its manifest hash remains valid",
   "claim_ceiling": "pure in-memory issuance and consumption validation only; no trusted-clock adapter, HTTP listener, request mapper, secret persistence, iTerm registration, or live Codex transport"
 }

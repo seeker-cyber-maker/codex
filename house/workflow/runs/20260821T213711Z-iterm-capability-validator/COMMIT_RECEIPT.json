@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-commit-receipt/1",
+  "run_id": "20260821T213711Z-iterm-capability-validator",
+  "implementation_commit": "cf15afedf03408d8dfc623eb3b56a42bffbfcb78",
+  "branch": "codex/dream-house-auto-switcher",
+  "remote_push": "NOT_ATTEMPTED",
+  "working_tree_after_implementation_commit": "CLEAN",
+  "raw_evidence_whitespace_warning": "PRESERVED_HASH_BOUND_JSON3",
+  "receipt_scope": "implementation commit identity only; this receipt is added by a later documentation-only commit"
+}

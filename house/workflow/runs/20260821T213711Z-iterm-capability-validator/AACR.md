@@ -18,6 +18,11 @@ workflow also performed two public primary-source reads. This was low-risk and
 consistent with the plan's cross-check requirement, but the immutable operation
 record should have listed `public primary corroboration` before dispatch.
 
+The staged whole-diff check also reported three whitespace-only lines in the
+raw YouTube JSON3 caption capture. They are retained deliberately because the
+artifact is immutable evidence and its exact hash is recorded in the manifest;
+source-code and authored-document diff checks are clean.
+
 ## Later process action
 
 Future video-review operations should declare both source acquisition and
