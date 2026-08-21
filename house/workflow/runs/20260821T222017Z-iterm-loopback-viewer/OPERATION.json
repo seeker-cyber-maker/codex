@@ -1,0 +1,106 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "iterm-loopback-viewer-v1",
+  "record_revision": 1,
+  "record_sha256": "023d6f5d56e0168cfee4ad0d62a8184fabd8b3b06a738b5b1bff1bdfae53254d",
+  "run_id": "20260821T222017Z-iterm-loopback-viewer",
+  "intent": "Implement and locally test one bounded single-use loopback HTML viewer without iTerm registration",
+  "target_identity": "house/terminal_companion",
+  "input_hashes": {
+    "base_commit": "5036b0b107be1ff18eedd31b4c9ee7f5d3f7effa",
+    "accepted_capability_source": "9f7adcc9f04fd459c9b42753812540ecd2e32610b36d9a4214318399473aabb6"
+  },
+  "authority_scope": {
+    "read": [
+      "accepted terminal companion source and workflow receipts",
+      "installed iTerm2 Python API source"
+    ],
+    "write": [
+      "additive house terminal-companion source, tests, and workflow receipts"
+    ],
+    "network": [
+      "ephemeral exact-loopback test sockets only"
+    ],
+    "external_effect_class": "LOCAL_EPHEMERAL_LOOPBACK_AND_REVERSIBLE_SOURCE_EDIT"
+  },
+  "owner": "root",
+  "lease": {
+    "holder": "root",
+    "expires_at": null,
+    "epoch": 1,
+    "fencing_token": "local-single-lane-20260821T222017Z"
+  },
+  "idempotency": {
+    "key": "iterm-loopback-viewer-v1",
+    "binding_sha256": "f78389d4d1186517f5d1a86528255049186a2efbef9668d8f1a7913bc94d6efe"
+  },
+  "start_state": {
+    "repository": "clean",
+    "iterm_registration": "NOT_ATTEMPTED",
+    "loopback_listener": "ABSENT"
+  },
+  "checkpoint_policy": {
+    "after": [
+      "plan review",
+      "focused tests",
+      "complete House tests",
+      "independent implementation review"
+    ]
+  },
+  "resume_pointer": "PLAN.md",
+  "deadline": null,
+  "retry_budget": 1,
+  "resource_budget": [
+    {
+      "resource": "listener_lifetime",
+      "unit": "seconds",
+      "hard_cap": 300
+    },
+    {
+      "resource": "successful_responses_per_capability",
+      "unit": "responses",
+      "hard_cap": 1
+    },
+    {
+      "resource": "background_threads_per_viewer",
+      "unit": "threads",
+      "hard_cap": 1
+    },
+    {
+      "resource": "rejected_requests_per_viewer",
+      "unit": "requests",
+      "hard_cap": 32
+    },
+    {
+      "resource": "request_line_bytes",
+      "unit": "bytes",
+      "hard_cap": 2048
+    },
+    {
+      "resource": "request_header_bytes",
+      "unit": "bytes",
+      "hard_cap": 8192
+    },
+    {
+      "resource": "request_header_count",
+      "unit": "headers",
+      "hard_cap": 32
+    }
+  ],
+  "cancellation": {
+    "supported": true,
+    "method": "explicit close plus bounded request-loop timeout"
+  },
+  "expected_artifacts": [
+    "loopback viewer source",
+    "security tests",
+    "validation and reconciliation receipts",
+    "source seal",
+    "handoff and AACR"
+  ],
+  "acceptance_verifier": "deterministic local tests plus independent read-only review",
+  "reconciliation": {
+    "required": true,
+    "method": "confirm every test listener closed, no iTerm registration, no terminal input, and no persistent bearer"
+  }
+}

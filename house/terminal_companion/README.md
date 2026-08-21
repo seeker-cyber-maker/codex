@@ -35,6 +35,15 @@ the bearer is omitted from object representations and receipts. The validator
 is accepted offline but remains unbound: trusted monotonic-clock wiring, an
 actual listener, request/error mapping, and iTerm registration require a new
 live-binding review.
+
+The one-shot loopback viewer is the first accepted transport beneath that
+validator. It binds an exact loopback IP, measures its assigned authority,
+issues one capability, strictly bounds and parses raw HTTP, serves one already
+rendered inert document, suppresses access logging, emits no-store and
+no-referrer headers, and stops after success, expiry, explicit close, or a
+finite rejection budget. Its terminal receipts omit the bearer. This component
+has no CLI activation path and has not been registered with iTerm2; persistent
+viewing, refresh, and WKWebView behavior remain separate acceptance gates.
 `Session.async_send_text`, terminal-window command launch, and Buddy relay are
 not part of this surface.
 

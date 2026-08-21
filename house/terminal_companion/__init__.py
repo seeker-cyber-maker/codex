@@ -10,6 +10,10 @@ from .display_batch import (
     evaluate_compatibility,
     verify_display_chain,
 )
+from .loopback import (
+    LoopbackViewerError,
+    OneShotLoopbackViewer,
+)
 from .projector import CompanionProjectionError, project_jsonl, project_notifications
 from .webview import (
     build_webview_registration_descriptor,
@@ -21,6 +25,8 @@ __all__ = [
     "CapabilityValidationError",
     "CompanionProjectionError",
     "LoopbackCapabilityValidator",
+    "LoopbackViewerError",
+    "OneShotLoopbackViewer",
     "build_display_batch",
     "build_webview_registration_descriptor",
     "evaluate_compatibility",
