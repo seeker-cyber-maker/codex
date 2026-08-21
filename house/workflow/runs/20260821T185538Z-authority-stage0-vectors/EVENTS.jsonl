@@ -1,0 +1,2 @@
+{"sequence":1,"kind":"stage0.authorized","source_head":"df43dba0a3c8cd68ccd8582116a88aac8bcd4136","scope":"isolated canonicalization and software vectors only"}
+{"sequence":2,"kind":"stage0.plan.sealed","acceptance":["FV-01","FV-02","FV-03"],"external_effect_budget":0}

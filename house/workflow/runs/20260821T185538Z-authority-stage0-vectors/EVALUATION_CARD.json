@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "authority-stage0-vectors-v0",
+  "claim_ids": ["FV-01", "FV-02", "FV-03"],
+  "task_distribution": {
+    "scope": "restricted JSON canonicalization and fixed software P-256 proof vectors",
+    "temporal_cutoff": null,
+    "new_vs_legacy_slices": ["new Stage 0 fixtures", "existing authority regressions"],
+    "out_of_distribution_slices": ["floating-point JCS", "PIV hardware", "service/database behavior", "hostile OS"]
+  },
+  "fixtures": {
+    "public": ["one published test-only scalar/positive vector", "explicit negative vectors"],
+    "private": [],
+    "adversarial": ["duplicate key", "float", "surrogate", "unknown field", "high-S", "trailing DER", "padded base64url", "binding/domain/action/key mutation"],
+    "known_answer": ["exact canonical bytes", "SHA-256", "SPKI/key ID", "RFC 6979 r/s and DER signature"]
+  },
+  "contamination": {
+    "sources_checked": ["sealed design only; no external vector imported"],
+    "tool_access_restrictions": ["offline local tools", "no candidate signing helper"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability":"required","reason":"fixed-vector claim","gate":"PASS","evidence_refs":["VALIDATION.json"]},
+    "execution_trace": {"applicability":"required","reason":"fixture generation and verification","gate":"PASS","evidence_refs":["TEST_RECEIPT.json"]},
+    "side_effects": {"applicability":"required","reason":"zero-effect boundary","gate":"PASS","evidence_refs":["RECONCILIATION.json"]},
+    "cost": {"applicability":"required","reason":"zero provider/network budget","gate":"PASS","evidence_refs":["RECONCILIATION.json"]},
+    "latency": {"applicability":"not_applicable","reason":"no performance claim","gate":null,"evidence_refs":[]},
+    "recovery": {"applicability":"not_applicable","reason":"pure deterministic fixture generation","gate":null,"evidence_refs":[]},
+    "long_horizon": {"applicability":"not_applicable","reason":"bounded Stage 0","gate":null,"evidence_refs":[]}
+  },
+  "oracles": ["exact committed bytes", "pure-Python ECDSA verification", "cryptography verification", "OpenSSL CLI verification"],
+  "semantic_reviewers": [],
+  "metrics": ["exact field equality", "accepted positive vectors", "rejected negative vectors", "regression count"],
+  "thresholds": ["all exact gates pass", "all negative cases reject", "all existing regressions pass"],
+  "uncertainty_method": "claim only the recorded restricted profile and local tool versions",
+  "failure_taxonomy": ["parse", "canonicalization", "schema", "encoding", "curve", "signature", "malleability", "binding", "independent-verifier", "regression"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "new vector/version and run; never rewrite accepted fixture"
+}
