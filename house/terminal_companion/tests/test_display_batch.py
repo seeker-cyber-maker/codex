@@ -9,6 +9,7 @@ from pathlib import Path
 
 from house.terminal_companion import (
     CompanionProjectionError,
+    DisplayBatchReconciler,
     build_display_batch,
     evaluate_compatibility,
     project_notifications,
@@ -159,3 +160,69 @@ class DisplayBatchTests(unittest.TestCase):
         result = json.loads(completed.stdout)
         self.assertEqual(result["direction"], "CODEX_TO_ITERM")
         self.assertEqual(result["transport"], "NOT_ATTEMPTED")
+
+    def test_reconciler_buffers_then_applies_only_the_contiguous_tail(self) -> None:
+        first = build_display_batch([card()], sequence=0)
+        second = build_display_batch(
+            [card()], sequence=1, previous_batch_id=first["batch_id"]
+        )
+        third = build_display_batch(
+            [card()], sequence=2, previous_batch_id=second["batch_id"]
+        )
+        reconciler = DisplayBatchReconciler()
+        self.assertEqual(reconciler.accept(third)["state"], "BUFFERED")
+        self.assertEqual(reconciler.snapshot()["buffered_sequences"], [2])
+        first_receipt = reconciler.accept(first)
+        self.assertEqual(first_receipt["state"], "APPLIED")
+        self.assertEqual([item["sequence"] for item in first_receipt["applied"]], [0])
+        tail_receipt = reconciler.accept(second)
+        self.assertEqual([item["sequence"] for item in tail_receipt["applied"]], [1, 2])
+        self.assertEqual(reconciler.snapshot()["next_sequence"], 3)
+        self.assertEqual(reconciler.snapshot()["buffered_sequences"], [])
+
+    def test_reconciler_ignores_identical_replay_and_rejects_conflicts(self) -> None:
+        first = build_display_batch([card()], sequence=0)
+        second = build_display_batch(
+            [card()], sequence=1, previous_batch_id=first["batch_id"]
+        )
+        conflicting_card = card()
+        conflicting_card["command"] = "different command"
+        conflict = build_display_batch(
+            [conflicting_card], sequence=1, previous_batch_id=first["batch_id"]
+        )
+        reconciler = DisplayBatchReconciler()
+        reconciler.accept(first)
+        reconciler.accept(second)
+        self.assertEqual(reconciler.accept(second)["state"], "DUPLICATE_IGNORED")
+        with self.assertRaisesRegex(CompanionProjectionError, "stale or conflicting"):
+            reconciler.accept(conflict)
+
+    def test_reconciler_keeps_only_a_bounded_duplicate_window(self) -> None:
+        first = build_display_batch([card()], sequence=0)
+        second = build_display_batch(
+            [card()], sequence=1, previous_batch_id=first["batch_id"]
+        )
+        reconciler = DisplayBatchReconciler(max_reordered_batches=1)
+        reconciler.accept(first)
+        reconciler.accept(second)
+        self.assertEqual(reconciler.snapshot()["replay_history_sequences"], [1])
+        with self.assertRaisesRegex(CompanionProjectionError, "stale or conflicting"):
+            reconciler.accept(first)
+
+    def test_reconciler_rejects_bad_predecessors_and_excessive_reordering(self) -> None:
+        first = build_display_batch([card()], sequence=0)
+        bad_second = build_display_batch(
+            [card()], sequence=1, previous_batch_id="0" * 64
+        )
+        far_future = build_display_batch(
+            [card()], sequence=52, previous_batch_id=first["batch_id"]
+        )
+        reconciler = DisplayBatchReconciler()
+        reconciler.accept(first)
+        with self.assertRaisesRegex(CompanionProjectionError, "current predecessor"):
+            reconciler.accept(bad_second)
+        self.assertEqual(reconciler.snapshot()["next_sequence"], 1)
+        with self.assertRaisesRegex(CompanionProjectionError, "reorder distance"):
+            reconciler.accept(far_future)
+        with self.assertRaisesRegex(CompanionProjectionError, "max_reordered_batches"):
+            DisplayBatchReconciler(max_reordered_batches=51)

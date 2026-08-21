@@ -1,0 +1,14 @@
+{
+  "schema": "display-batch-reconciler-validation/1",
+  "run_id": "20260821T232931Z-display-batch-reconciler",
+  "status": "PASS",
+  "checks": [
+    {"name": "focused display-batch tests", "status": "PASS", "detail": "12 tests"},
+    {"name": "static checks", "status": "PASS", "detail": "ruff, compileall, and git diff --check"},
+    {"name": "complete House suite", "status": "PASS", "detail": "139 tests"},
+    {"name": "live iTerm transport or registration", "status": "NOT_ATTEMPTED"},
+    {"name": "persistence or source capture", "status": "NOT_ATTEMPTED"},
+    {"name": "reverse channel or dispatch", "status": "NOT_ATTEMPTED"}
+  ],
+  "claim_ceiling": "Offline in-memory receiver state machine for the existing display-batch contract only."
+}

@@ -58,6 +58,14 @@ prove deterministic byte identity only; they are not signatures or authority
 receipts. This adopts iTerm2 Buddy's useful compatibility and flow-boundary
 patterns without using or impersonating Buddy's relay protocol.
 
+The accompanying in-memory `DisplayBatchReconciler` is the first bounded
+receiver-side state machine for that display contract. It applies only the next
+contiguous batch, buffers at most 50 future batches, ignores only identical
+recent replays, and rejects conflicting, stale, or broken-predecessor batches.
+It retains only a bounded duplicate window; the complete conserved history
+remains the separately verified display chain. The reconciler has no transport,
+storage, rendering, iTerm, or reverse-channel capability.
+
 ```sh
 PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.terminal_companion --input exported-notifications.json

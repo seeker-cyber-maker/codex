@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 import re
 import unicodedata
+from collections import OrderedDict
 from typing import Any
 
 from .projector import CompanionProjectionError
@@ -15,6 +17,7 @@ MINIMUM_PEER = 1
 MAX_DISPLAY_CARDS = 128
 MAX_DISPLAY_OUTPUT_CHARS = 2_000_000
 MAX_DISPLAY_BATCH_BYTES = 8 * 1024 * 1024
+MAX_REORDERED_DISPLAY_BATCHES = 50
 
 _HEX_DIGEST = re.compile(r"^[0-9a-f]{64}$")
 _UNSAFE_TEXT_CATEGORIES = {"Cc", "Cf", "Cs"}
@@ -301,3 +304,135 @@ def verify_display_chain(batches: list[object]) -> None:
                 f"display batch {expected_sequence} has invalid identity"
             )
         previous = batch_id
+
+
+def _validate_display_batch(batch: object) -> dict[str, Any]:
+    """Validate one batch without assuming its predecessor is locally present."""
+    if not isinstance(batch, dict) or set(batch) != _BATCH_FIELDS:
+        raise CompanionProjectionError("display batch has schema drift")
+    expected = {
+        "schema": "codex-house-iterm-display-batch/1",
+        "protocol_revision": CURRENT_REVISION,
+        "minimum_peer": MINIMUM_PEER,
+        "direction": "CODEX_TO_ITERM",
+        "source": "codex_house_terminal_companion",
+        "target": "iterm_local_display_adapter",
+        "authority": "OBSERVE_ONLY",
+        "reverse_channel": "PROHIBITED",
+        "transport": "NOT_ATTEMPTED",
+        "presentation_format": "PLAIN_TEXT_ONLY",
+    }
+    for field, value in expected.items():
+        if batch.get(field) != value:
+            raise CompanionProjectionError(f"display batch has unsafe {field}")
+    sequence = batch.get("sequence")
+    if not isinstance(sequence, int) or isinstance(sequence, bool) or sequence < 0:
+        raise CompanionProjectionError("display batch has invalid sequence")
+    predecessor = batch.get("previous_batch_id")
+    if sequence == 0:
+        if predecessor is not None:
+            raise CompanionProjectionError("display batch zero has a predecessor")
+    elif not isinstance(predecessor, str) or not _HEX_DIGEST.fullmatch(predecessor):
+        raise CompanionProjectionError("display batch has invalid predecessor")
+    cards = batch.get("cards")
+    if not isinstance(cards, list) or len(cards) > MAX_DISPLAY_CARDS:
+        raise CompanionProjectionError("display batch has invalid cards")
+    for card_index, card in enumerate(cards):
+        _validate_display_card(card, card_index)
+    batch_id = batch.get("batch_id")
+    if not isinstance(batch_id, str) or not _HEX_DIGEST.fullmatch(batch_id):
+        raise CompanionProjectionError("display batch has invalid id")
+    body = {field: value for field, value in batch.items() if field != "batch_id"}
+    encoded = _canonical_bytes(body)
+    if len(encoded) > MAX_DISPLAY_BATCH_BYTES:
+        raise CompanionProjectionError("display batch exceeds the encoded byte limit")
+    if hashlib.sha256(encoded).hexdigest() != batch_id:
+        raise CompanionProjectionError("display batch has invalid identity")
+    return copy.deepcopy(batch)
+
+
+class DisplayBatchReconciler:
+    """In-memory bounded reorder buffer for a future display-only receiver."""
+
+    def __init__(self, *, max_reordered_batches: int = MAX_REORDERED_DISPLAY_BATCHES) -> None:
+        if (
+            not isinstance(max_reordered_batches, int)
+            or isinstance(max_reordered_batches, bool)
+            or not 1 <= max_reordered_batches <= MAX_REORDERED_DISPLAY_BATCHES
+        ):
+            raise CompanionProjectionError(
+                f"max_reordered_batches must be between 1 and {MAX_REORDERED_DISPLAY_BATCHES}"
+            )
+        self._max_reordered_batches = max_reordered_batches
+        self._next_sequence = 0
+        self._previous_batch_id: str | None = None
+        self._buffer: dict[int, dict[str, Any]] = {}
+        self._applied: OrderedDict[int, str] = OrderedDict()
+
+    def accept(self, batch: object) -> dict[str, Any]:
+        """Accept one valid batch and return only newly contiguous batches.
+
+        This is a pure state-machine step. Applying the returned batches to a
+        future WebView is intentionally outside this component.
+        """
+        candidate = _validate_display_batch(batch)
+        sequence = candidate["sequence"]
+        batch_id = candidate["batch_id"]
+        if sequence < self._next_sequence:
+            if self._applied.get(sequence) == batch_id:
+                return self._receipt("DUPLICATE_IGNORED", [])
+            raise CompanionProjectionError("stale or conflicting display batch")
+        if sequence - self._next_sequence > self._max_reordered_batches:
+            raise CompanionProjectionError("display batch exceeds reorder distance")
+        buffered = self._buffer.get(sequence)
+        if buffered is not None:
+            if buffered["batch_id"] == batch_id:
+                return self._receipt("DUPLICATE_IGNORED", [])
+            raise CompanionProjectionError("conflicting buffered display batch")
+        if sequence != self._next_sequence and len(self._buffer) >= self._max_reordered_batches:
+            raise CompanionProjectionError("display batch reorder buffer is full")
+
+        tentative = {**self._buffer, sequence: candidate}
+        next_sequence = self._next_sequence
+        previous_batch_id = self._previous_batch_id
+        newly_applied: list[dict[str, Any]] = []
+        while (pending := tentative.get(next_sequence)) is not None:
+            if pending["previous_batch_id"] != previous_batch_id:
+                raise CompanionProjectionError("display batch does not link to current predecessor")
+            newly_applied.append(pending)
+            previous_batch_id = pending["batch_id"]
+            del tentative[next_sequence]
+            next_sequence += 1
+
+        self._buffer = tentative
+        self._next_sequence = next_sequence
+        self._previous_batch_id = previous_batch_id
+        for applied in newly_applied:
+            self._applied[applied["sequence"]] = applied["batch_id"]
+            if len(self._applied) > self._max_reordered_batches:
+                self._applied.popitem(last=False)
+        return self._receipt("APPLIED" if newly_applied else "BUFFERED", newly_applied)
+
+    def snapshot(self) -> dict[str, Any]:
+        """Return bounded metadata only; no card content is exposed here."""
+        return {
+            "next_sequence": self._next_sequence,
+            "previous_batch_id": self._previous_batch_id,
+            "buffered_sequences": sorted(self._buffer),
+            "replay_history_sequences": list(self._applied),
+            "max_reordered_batches": self._max_reordered_batches,
+            "direction": "CODEX_TO_ITERM",
+            "authority": "OBSERVE_ONLY",
+            "reverse_channel": "PROHIBITED",
+        }
+
+    def _receipt(self, state: str, applied: list[dict[str, Any]]) -> dict[str, Any]:
+        return {
+            "state": state,
+            "applied": copy.deepcopy(applied),
+            "next_sequence": self._next_sequence,
+            "buffered_count": len(self._buffer),
+            "direction": "CODEX_TO_ITERM",
+            "authority": "OBSERVE_ONLY",
+            "reverse_channel": "PROHIBITED",
+        }

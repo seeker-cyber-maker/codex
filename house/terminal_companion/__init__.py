@@ -6,6 +6,7 @@ from .capability import (
     LoopbackCapabilityValidator,
 )
 from .display_batch import (
+    DisplayBatchReconciler,
     build_display_batch,
     evaluate_compatibility,
     verify_display_chain,
@@ -24,6 +25,7 @@ __all__ = [
     "CapabilityGrant",
     "CapabilityValidationError",
     "CompanionProjectionError",
+    "DisplayBatchReconciler",
     "LoopbackCapabilityValidator",
     "LoopbackViewerError",
     "OneShotLoopbackViewer",

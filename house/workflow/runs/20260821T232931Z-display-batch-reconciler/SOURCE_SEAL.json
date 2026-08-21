@@ -1,0 +1,25 @@
+{
+  "schema": "display-batch-reconciler-source-seal/1",
+  "run_id": "20260821T232931Z-display-batch-reconciler",
+  "source_disposition": "ACCEPTED_DOWNSTREAM_ONLY",
+  "donor_evidence": [
+    {
+      "source": "Warp shared-session viewer event loop",
+      "url": "https://github.com/warpdotdev/warp/blob/master/app/src/terminal/shared_session/viewer/event_loop.rs",
+      "freshness": "LIVE_VERIFIED",
+      "use": "bounded out-of-order buffer and contiguous ordered application"
+    },
+    {
+      "source": "Terminal source donor review",
+      "path": "house/workflow/runs/20260821T225639Z-terminal-source-donor-review/SOURCE_FINDINGS.md",
+      "sha256": "5ef4fe70711b5d930881fb0eb143ee6d55a3fe42fe95e362e048f96a64b264ff"
+    }
+  ],
+  "artifacts": {
+    "house/terminal_companion/display_batch.py": "2a3ac381b0f5ac250d3652db36d760a9b0a67e920ff155458bd09dc8a177e7b4",
+    "house/terminal_companion/__init__.py": "1aa8c8ae1a79f634bc21a4d12dc2b6f946fb4e288db35cede169b2bf742a88ed",
+    "house/terminal_companion/tests/test_display_batch.py": "4dc7f89ff28ca1f8a9c248d99fea874eaba3974c2f42450d39175aa10af68303"
+  },
+  "upstream_effect": "none; additive downstream-only receiver primitive",
+  "rollback": "revert the additive reconciler and its ledger entry"
+}
