@@ -1,0 +1,30 @@
+{
+  "schema": "codex-house-run-manifest/1",
+  "run_id": "20260821T164947Z-local-authority-proof",
+  "source_head": "76a4fb7a9221389e7baee37188bfb9592f9cbbe2",
+  "owner": "single-root-lane",
+  "privacy": "local-only",
+  "network": "denied",
+  "task_graph": [
+    "seal-contract",
+    "implement-authority-registry",
+    "integrate-authorized-enqueue",
+    "deterministic-verification",
+    "candidate-checkpoint"
+  ],
+  "council_checkpoints": [
+    {
+      "checkpoint_id": "pre-promotion-security-review",
+      "trigger": "before any production or real-key promotion",
+      "blocking": true,
+      "decision_question": "Does the candidate correctly bound signatures, replay, revocation, bootstrap, and integration failure modes?",
+      "packet_contents": ["plan", "source diff", "tests", "validation", "threat-model gaps"],
+      "privacy": "local-only unless user explicitly changes it",
+      "provider_model_lanes": [],
+      "cost_ceiling": 0,
+      "response_deadline": null,
+      "required_root_disposition": "accept, reject, schedule one test, or needs review",
+      "maximum_staleness": "candidate source revision"
+    }
+  ]
+}

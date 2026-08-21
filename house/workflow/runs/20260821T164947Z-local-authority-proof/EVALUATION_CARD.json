@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "local-authority-proof-v0",
+  "claim_ids": ["AUTH-P256-VERIFY", "AUTH-REPLAY-REVOKE", "AUTH-ENQUEUE-GATE"],
+  "task_distribution": {
+    "scope": "offline directly enrolled P-256 keys and inbox.enqueue proofs",
+    "temporal_cutoff": null,
+    "new_vs_legacy_slices": ["new authority fixtures", "existing inbox/task-spine regressions"],
+    "out_of_distribution_slices": ["YubiKey hardware", "multi-process hostile bypass", "certificate chains"]
+  },
+  "fixtures": {
+    "public": ["known-answer generated P-256 signature"],
+    "private": [],
+    "adversarial": ["tamper", "wrong action", "wrong binding", "replay", "expiry", "future issuance", "revoked key", "unknown fields", "journal corruption"],
+    "known_answer": ["valid proof admits exactly one enqueue", "invalid proof admits zero enqueue"]
+  },
+  "contamination": {
+    "sources_checked": ["current source and sealed plan only"],
+    "tool_access_restrictions": ["offline", "no private key persistence", "no provider"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "claim surface", "gate": "PASS", "evidence_refs": ["authority tests"]},
+    "execution_trace": {"applicability": "required", "reason": "persistent authorization journal", "gate": "PASS", "evidence_refs": ["journal verification fixtures"]},
+    "side_effects": {"applicability": "required", "reason": "enqueue and revocation are local mutations", "gate": "PASS", "evidence_refs": ["negative mutation-count fixtures"]},
+    "cost": {"applicability": "required", "reason": "zero network/provider budget", "gate": "PASS", "evidence_refs": ["operation reconciliation"]},
+    "latency": {"applicability": "not_applicable", "reason": "no performance claim", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "required", "reason": "proof consumption and revocation must be atomic", "gate": "PASS", "evidence_refs": ["transaction fixtures"]},
+    "long_horizon": {"applicability": "not_applicable", "reason": "bounded offline fixture", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["cryptography ECDSA verification", "SQLite journal replay", "unittest assertions"],
+  "semantic_reviewers": [],
+  "metrics": ["accepted effects", "rejected effects", "duplicate nonce acceptances", "journal validity"],
+  "thresholds": ["all deterministic gates pass", "zero invalid-proof enqueues", "zero replay acceptances"],
+  "uncertainty_method": "claim ceiling excludes untested hardware and hostile-process isolation",
+  "failure_taxonomy": ["schema", "key", "permission", "time", "binding", "signature", "replay", "revocation", "journal", "integration"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision"
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "local-authority-proof-v0",
+  "record_revision": 1,
+  "record_sha256": "1cfb444cc2c6371178098fbeb5a3549a3e8eba110a313efb5903c1637d976c8d",
+  "run_id": "20260821T164947Z-local-authority-proof",
+  "intent": "Implement and verify one offline P-256 signed enqueue authority candidate",
+  "target_identity": "house/task_spine",
+  "input_hashes": {
+    "inbox.py": "caaf83e1a6edd6d32fcda19b02fc6c8223e6cd0217ae0d20de5d432ef208d001",
+    "submission.py": "f47587c363431909edc06dc485fe0eb13e92627fb08a2ce92089c6cf884b5259",
+    "core.py": "41a7a96a69df1832575da26bb5848c1e0eb521fc72aa501d729a524d12f068f5",
+    "cryptography_version": "45.0.7"
+  },
+  "authority_scope": {
+    "read": ["house/task_spine", "house/auto_switcher"],
+    "write": ["house/task_spine", "house/workflow/runs/20260821T164947Z-local-authority-proof"],
+    "network": [],
+    "external_effect_class": "LOCAL_REPOSITORY_ONLY"
+  },
+  "owner": "single-root-lane",
+  "lease": {"holder": null, "expires_at": null, "epoch": 0, "fencing_token": null},
+  "idempotency": {"key": "local-authority-proof-v0", "binding_sha256": "76a4fb7a9221389e7baee37188bfb9592f9cbbe2"},
+  "start_state": {"git_head": "76a4fb7a9221389e7baee37188bfb9592f9cbbe2", "worktree_clean": true},
+  "checkpoint_policy": {"after": ["authority-tests", "integration-tests", "regressions"]},
+  "resume_pointer": null,
+  "deadline": null,
+  "retry_budget": 2,
+  "resource_budget": [
+    {"resource": "provider_requests", "unit": "requests", "hard_cap": 0},
+    {"resource": "real_key_enrollments", "unit": "keys", "hard_cap": 0}
+  ],
+  "cancellation": {"supported": true, "method": "stop before commit and retain candidate state"},
+  "expected_artifacts": ["authority.py", "authority tests", "authorized enqueue gate", "validation receipt"],
+  "acceptance_verifier": "deterministic known-answer and adversarial unittest fixtures",
+  "reconciliation": {"required": true, "method": "compare accepted/rejected proof journal with observed inbox effects"}
+}
