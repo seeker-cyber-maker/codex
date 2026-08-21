@@ -76,6 +76,16 @@ CASE_TYPE_PROFILE = {
     "training_governance": ("plan", "high", "quality_first"),
     "hosted_app_ops": ("task", "medium", "balanced"),
     "model_conversion": ("task", "medium", "balanced"),
+    "incident_recovery": ("plan", "high", "quality_first"),
+    "verifier_benchmark": ("plan", "high", "quality_first"),
+    "artifact_intake": ("task", "medium", "balanced"),
+    "storage_lifecycle": ("task", "medium", "balanced"),
+    "provider_bridge_debug": ("plan", "high", "quality_first"),
+    "service_operations": ("smol", "low", "cheapest_acceptable"),
+    "evidence_review": ("plan", "high", "quality_first"),
+    "model_evaluation": ("task", "medium", "balanced"),
+    "knowledge_integration": ("plan", "high", "quality_first"),
+    "security_containment": ("plan", "xhigh", "quality_first"),
     "compound": ("plan", "high", "quality_first"),
 }
 
@@ -87,6 +97,16 @@ CASE_TYPE_HINTS = (
     ("model_conversion", ("convert model", "quantize", "conversion")),
     ("dependency_repair", ("dependency", "dependencies", "package conflict")),
     ("command_debug", ("faulty command", "command failed", "shell error")),
+    ("incident_recovery", ("recover lost", "recover chat", "forensic", "lost logs", "db scrape")),
+    ("verifier_benchmark", ("exact oracle", "reproduce result", "ablation", "verifier benchmark")),
+    ("artifact_intake", ("inspect archive", "untrusted file", "inspect pickle", "inspect safetensors")),
+    ("storage_lifecycle", ("migrate files", "disk migration", "deduplicate files", "junkyard")),
+    ("provider_bridge_debug", ("provider bridge", "api route", "oauth route", "litellm")),
+    ("service_operations", ("health check", "service status", "quota status", "babysit process")),
+    ("evidence_review", ("claim review", "evidence gap", "review provenance", "contradictory evidence")),
+    ("model_evaluation", ("model qualification", "router qualification", "evaluate local worker")),
+    ("knowledge_integration", ("ingest archive", "knowledge dispensary", "reclassify sources", "merge research")),
+    ("security_containment", ("prompt injection", "sql injection", "sandbox escape", "revoke key")),
 )
 
 

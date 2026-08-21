@@ -26,6 +26,13 @@ research, delivery, and training sub-tasks while the original request remains
 the parent record. An explicit `case_type` still wins when a caller has already
 classified the phase.
 
+The initial spine also recognizes recurring operational work without using a
+model name as a decision signal: recovery, verifier-led benchmarks, safe
+artifact intake, storage lifecycle, provider-bridge diagnosis, routine service
+operations, evidence review, model qualification, knowledge integration, and
+security containment. These are conservative hints, not authority to execute
+an untrusted artifact, mutate storage, route to a provider, or change weights.
+
 `delivery: chat-packet` is required to select the packet lane. This prevents a
 short task from silently leaving Codex merely because a bridge happens to be
 available.

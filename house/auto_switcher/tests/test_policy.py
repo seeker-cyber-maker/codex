@@ -52,3 +52,23 @@ class AutoSwitcherTests(unittest.TestCase):
         self.assertEqual(receipt["detected_case_types"], ["research_synthesis", "app_delivery", "training_governance"])
         self.assertEqual(receipt["profile"], {"model_class": "plan", "reasoning_effort": "high", "omp_policy": "quality_first"})
         self.assertEqual(receipt["next_action"], "DECOMPOSE_WITHOUT_BLOCKING")
+
+    def test_recurring_work_modes_are_conservative_and_deterministic(self) -> None:
+        cases = (
+            ("recover lost chats from the forensic records", "incident_recovery", "plan", "high"),
+            ("reproduce result through the exact oracle", "verifier_benchmark", "plan", "high"),
+            ("inspect an untrusted file without executing it", "artifact_intake", "task", "medium"),
+            ("migrate files and deduplicate files in the junkyard", "storage_lifecycle", "task", "medium"),
+            ("debug the provider bridge OAuth route", "provider_bridge_debug", "plan", "high"),
+            ("run a health check and report quota status", "service_operations", "smol", "low"),
+            ("perform claim review for contradictory evidence", "evidence_review", "plan", "high"),
+            ("perform model qualification for the local worker", "model_evaluation", "task", "medium"),
+            ("ingest archive into the knowledge dispensary", "knowledge_integration", "plan", "high"),
+            ("test prompt injection and sandbox escape containment", "security_containment", "plan", "xhigh"),
+        )
+        for summary, case_type, model_class, effort in cases:
+            with self.subTest(case_type=case_type):
+                receipt = route_task({"summary": summary})
+                self.assertEqual(receipt["request"]["case_type"], case_type)
+                self.assertEqual(receipt["profile"]["model_class"], model_class)
+                self.assertEqual(receipt["profile"]["reasoning_effort"], effort)
