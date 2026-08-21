@@ -94,6 +94,21 @@ class TaskSubmissionTests(unittest.TestCase):
         with self.assertRaisesRegex(TaskSpineError, "different content"):
             submit_task(self.spine, submission(manual_route_id="daybreak-blue-personal"))
 
+    def test_cli_status_reports_advisory_without_rebuilding_or_mutating(self) -> None:
+        submit_task(self.spine, submission(
+            summary="implement a bounded Python feature with tests",
+            case_type="app_delivery",
+        ))
+        before = self.spine.journal_events()
+        self.spine.close()
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertEqual(main(["--db", str(self.database), "status"]), 0)
+        cards = json.loads(output.getvalue())
+        self.spine = TaskSpine(self.database)
+        self.assertEqual(cards[0]["model_advisory"]["recommended_model"], "gpt-5.6-terra")
+        self.assertEqual(self.spine.journal_events(), before)
+
     def test_cli_submit_replays_the_exact_receipt(self) -> None:
         packet_path = Path(self.tempdir.name) / "submission.json"
         packet_path.write_text(json.dumps(submission()), encoding="utf-8")

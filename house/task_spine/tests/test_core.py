@@ -95,6 +95,17 @@ class TaskSpineTests(unittest.TestCase):
             self.spine.create_task_packet("task-invalid", "work-1", "do work", manual_route_id="missing-route")
         self.assertEqual(len(self.spine.journal_events()), before)
 
+    def test_task_cards_are_read_only_and_include_routing_advice(self) -> None:
+        before = self.spine.journal_events()
+        card = self.spine.task_cards()[0]
+        self.assertEqual(card["task_id"], "task-1")
+        self.assertEqual(card["title"], "Offline task spine")
+        self.assertEqual(card["model_advisory"]["recommended_model"], "gpt-5.6-sol")
+        self.assertEqual(card["automatic_route_id"], "chatgpt-codex-direct")
+        self.assertIsNone(card["manual_route_id"])
+        self.assertEqual(card["dispatch"], "NOT_ATTEMPTED")
+        self.assertEqual(self.spine.journal_events(), before)
+
     def test_cli_demo_and_rebuild_use_the_same_journal(self) -> None:
         database = str(Path(self.tempdir.name) / "cli.sqlite")
         output = io.StringIO()

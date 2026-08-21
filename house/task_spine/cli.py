@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
 from .core import TaskSpine
 from .submission import submit_task
@@ -24,11 +24,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     submit = commands.add_parser("submit", help="idempotently submit one strict JSON task packet")
     submit.add_argument("--input", required=True, help="UTF-8 task-submission JSON path")
     commands.add_parser("rebuild", help="rebuild and print the read model from the canonical journal")
+    commands.add_parser("status", help="print read-only task cards from the canonical journal")
     args = parser.parse_args(argv)
     spine = TaskSpine(Path(args.db))
     try:
         if args.command == "rebuild":
             _emit(spine.rebuild_read_model())
+            return 0
+        if args.command == "status":
+            _emit(spine.task_cards())
             return 0
         if args.command == "submit":
             try:

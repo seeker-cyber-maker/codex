@@ -323,3 +323,43 @@ class TaskSpine:
         except sqlite3.OperationalError:
             return []
         return [dict(row) for row in rows]
+
+    def task_cards(self) -> list[dict[str, Any]]:
+        """Project no-dispatch operator cards directly from the canonical journal.
+
+        This compact view is intentionally read-only: it does not rebuild the
+        disposable projection, dispatch a worker, or infer a model switch.
+        """
+        work_titles: dict[str, str] = {}
+        cards: dict[str, dict[str, Any]] = {}
+        for event in self._events():
+            payload = event["payload"]
+            if event["kind"] == "work_item.created":
+                work_titles[payload["work_id"]] = payload["title"]
+            elif event["kind"] == "task_packet.created":
+                routing = payload["routing_receipt"]
+                manual = payload.get("manual_selection")
+                cards[payload["task_id"]] = {
+                    "schema": "codex-house-task-card/1",
+                    "task_id": payload["task_id"],
+                    "work_id": payload["work_id"],
+                    "title": work_titles.get(payload["work_id"], ""),
+                    "summary": payload["summary"],
+                    "case_type": routing["request"]["case_type"],
+                    "profile": routing["profile"],
+                    "model_advisory": routing["model_advisory"],
+                    "automatic_route_id": routing["selected"]["id"],
+                    "routing_decision_sha256": routing["decision_sha256"],
+                    "manual_route_id": None if manual is None else manual["selected"]["id"],
+                    "manual_selection_sha256": None if manual is None else manual["decision_sha256"],
+                    "wip_buffer_sha256": None,
+                    "candidate_envelope_id": None,
+                    "disposition": "open",
+                    "dispatch": "NOT_ATTEMPTED",
+                }
+            elif event["kind"] == "worker_buffer.sealed" and payload["task_id"] in cards:
+                cards[payload["task_id"]]["wip_buffer_sha256"] = payload["buffer_sha256"]
+            elif event["kind"] == "candidate.admitted" and payload["task_id"] in cards:
+                cards[payload["task_id"]]["candidate_envelope_id"] = payload["envelope_id"]
+                cards[payload["task_id"]]["disposition"] = payload["disposition"]
+        return [cards[task_id] for task_id in sorted(cards)]

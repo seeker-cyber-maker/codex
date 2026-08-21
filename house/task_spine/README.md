@@ -62,7 +62,14 @@ PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.task_spine --db /tmp/task-spine.sqlite demo
 PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.task_spine --db /tmp/task-spine.sqlite rebuild
+PYTHONPATH=/absolute/path/to/codex-dream-house \
+  python3 -m house.task_spine --db /tmp/task-spine.sqlite status
 ```
+
+`status` emits compact read-only Task Cards straight from the canonical journal.
+They show the stored model/effort advisory, automatic route, optional manual
+choice, WIP and candidate metadata, but do not rebuild state, switch a model,
+or dispatch work. They are the CLI-facing backend for a later human dashboard.
 
 Typed submission uses a JSON file with schema
 `codex-house-task-submission/1`:
