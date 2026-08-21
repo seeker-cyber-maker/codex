@@ -50,12 +50,19 @@ MANUAL_ONLY_ROUTES: tuple[dict[str, Any], ...] = (
         "id": "daybreak-blue-personal",
         "provider": "openai-daybreak-blue",
         "display_name": "Daybreak Blue",
-        "endpoint": "http://127.0.0.1:4018/v1",
+        "transport": "codex-native",
+        "model_id": "gpt-daybreak-blue-latest",
+        "native_status": "verified_bounded_control",
+        "native_evidence_ref": (
+            "provider-orchestration-codex-claude-3p/benchmarks/authorized-pentest/"
+            "runs/20260821T195700Z-daybreak-meow-quanta-001/run-record.json"
+        ),
+        "api_sidecar_endpoint": "http://127.0.0.1:4022/v1",
+        "api_sidecar_status": "configured_unverified",
         "selection_mode": "manual_only",
         "manual_selectable": True,
         "auto_eligible": False,
         "auto_exclusion_reason": "usage_pool_boundary_unknown",
-        "health": "unverified",
     },
 )
 
@@ -181,6 +188,25 @@ def _receipt(payload: dict[str, Any]) -> dict[str, Any]:
 def list_routes() -> tuple[dict[str, Any], ...]:
     """Return a detached catalog suitable for a manual route picker."""
     return copy.deepcopy(ROUTE_CATALOG)
+
+
+def select_manual_route(route_id: str) -> dict[str, Any]:
+    """Resolve one explicit operator choice without dispatching or falling back."""
+    route = next((item for item in ROUTE_CATALOG if item["id"] == route_id), None)
+    if route is None:
+        raise ValueError(f"unknown route: {route_id}")
+    if not route.get("manual_selectable"):
+        raise ValueError(f"route is not manually selectable: {route_id}")
+    return _receipt(
+        {
+            "schema": "codex-house-manual-route/1",
+            "state": "MANUAL_SELECTED",
+            "selected": copy.deepcopy(route),
+            "dispatch": "NOT_ATTEMPTED",
+            "fallback": "PROHIBITED",
+            "next_action": "SELECT_MODEL_IN_CODEX_UI",
+        }
+    )
 
 
 def select_profile(role: str, risk: str, context_tokens: int, case_type: str = "") -> dict[str, str]:

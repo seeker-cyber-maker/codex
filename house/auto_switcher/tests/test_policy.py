@@ -5,7 +5,12 @@ import io
 import json
 import unittest
 
-from house.auto_switcher import DEFAULT_ROUTES, list_routes, route_task
+from house.auto_switcher import (
+    DEFAULT_ROUTES,
+    list_routes,
+    route_task,
+    select_manual_route,
+)
 from house.auto_switcher.cli import main
 
 
@@ -39,11 +44,14 @@ class AutoSwitcherTests(unittest.TestCase):
     def test_daybreak_is_visible_but_never_auto_eligible(self) -> None:
         catalog = {route["id"]: route for route in list_routes()}
         daybreak = catalog["daybreak-blue-personal"]
-        self.assertEqual(daybreak["endpoint"], "http://127.0.0.1:4018/v1")
+        self.assertEqual(daybreak["transport"], "codex-native")
+        self.assertEqual(daybreak["model_id"], "gpt-daybreak-blue-latest")
+        self.assertEqual(daybreak["native_status"], "verified_bounded_control")
+        self.assertEqual(daybreak["api_sidecar_endpoint"], "http://127.0.0.1:4022/v1")
+        self.assertEqual(daybreak["api_sidecar_status"], "configured_unverified")
         self.assertEqual(daybreak["selection_mode"], "manual_only")
         self.assertTrue(daybreak["manual_selectable"])
         self.assertFalse(daybreak["auto_eligible"])
-        self.assertEqual(daybreak["health"], "unverified")
 
         receipt = route_task({"summary": "perform a defensive security review"})
         self.assertNotEqual(receipt["selected"]["id"], "daybreak-blue-personal")
@@ -56,6 +64,21 @@ class AutoSwitcherTests(unittest.TestCase):
         catalog = list_routes()
         catalog[-1]["auto_eligible"] = True
         self.assertFalse(list_routes()[-1]["auto_eligible"])
+
+    def test_explicit_daybreak_selection_resolves_native_lane_without_dispatch(self) -> None:
+        receipt = select_manual_route("daybreak-blue-personal")
+        self.assertEqual(receipt["state"], "MANUAL_SELECTED")
+        self.assertEqual(receipt["selected"]["model_id"], "gpt-daybreak-blue-latest")
+        self.assertEqual(receipt["selected"]["transport"], "codex-native")
+        self.assertEqual(receipt["dispatch"], "NOT_ATTEMPTED")
+        self.assertEqual(receipt["fallback"], "PROHIBITED")
+        self.assertEqual(receipt["next_action"], "SELECT_MODEL_IN_CODEX_UI")
+
+    def test_manual_selection_rejects_automatic_and_unknown_routes(self) -> None:
+        with self.assertRaisesRegex(ValueError, "not manually selectable"):
+            select_manual_route("chatgpt-codex-direct")
+        with self.assertRaisesRegex(ValueError, "unknown route"):
+            select_manual_route("missing-route")
 
     def test_same_input_has_same_hash(self) -> None:
         task = {"summary": "implement a test", "capabilities": ["code"]}
@@ -126,6 +149,17 @@ class AutoSwitcherTests(unittest.TestCase):
         catalog = {route["id"]: route for route in json.loads(output.getvalue())}
         self.assertEqual(exit_code, 0)
         self.assertEqual(catalog["daybreak-blue-personal"]["selection_mode"], "manual_only")
+        self.assertEqual(catalog["daybreak-blue-personal"]["transport"], "codex-native")
+
+    def test_cli_resolves_explicit_daybreak_selection_without_dispatch(self) -> None:
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            exit_code = main(["--manual-route", "daybreak-blue-personal"])
+        receipt = json.loads(output.getvalue())
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(receipt["state"], "MANUAL_SELECTED")
+        self.assertEqual(receipt["selected"]["model_id"], "gpt-daybreak-blue-latest")
+        self.assertEqual(receipt["dispatch"], "NOT_ATTEMPTED")
 
     def test_recurring_work_modes_are_conservative_and_deterministic(self) -> None:
         cases = (

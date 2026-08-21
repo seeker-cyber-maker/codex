@@ -7,7 +7,7 @@ import json
 from collections.abc import Sequence
 from pathlib import Path
 
-from .policy import list_routes, route_task
+from .policy import list_routes, route_task, select_manual_route
 
 
 def _task_from_args(args: argparse.Namespace, parser: argparse.ArgumentParser) -> dict[str, object]:
@@ -32,9 +32,17 @@ def main(argv: Sequence[str] | None = None) -> int:
     source.add_argument("--task-json", help="task packet as one JSON object")
     source.add_argument("--task-file", help="UTF-8 JSON task packet path")
     source.add_argument("--list-routes", action="store_true", help="list automatic and manual-only routes")
+    source.add_argument("--manual-route", help="resolve one explicit manual route without dispatch")
     args = parser.parse_args(argv)
     if args.list_routes:
         print(json.dumps(list_routes(), indent=2, sort_keys=True))
+        return 0
+    if args.manual_route:
+        try:
+            receipt = select_manual_route(args.manual_route)
+        except ValueError as exc:
+            parser.error(str(exc))
+        print(json.dumps(receipt, indent=2, sort_keys=True))
         return 0
     receipt = route_task(_task_from_args(args, parser))
     print(json.dumps(receipt, indent=2, sort_keys=True))

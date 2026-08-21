@@ -9,10 +9,11 @@ Routes:
 - `chatgpt-codex-direct`: the current Codex session lane.
 - `chatgpt-work-packet`: a future ChatGPT app/Drive packet lane. It remains
   disabled and unhealthy until its explicit bridge contract passes.
-- `daybreak-blue-personal`: the isolated loopback 4018 contractor lane. It is
-  visible to manual route pickers but is always rejected by automatic routing
-  with `manual_only:usage_pool_boundary_unknown`. Its catalog entry records
-  health as unverified and does not authorize a probe or dispatch.
+- `daybreak-blue-personal`: native `gpt-daybreak-blue-latest` manual selection
+  in Codex. A bounded contained-fixture control is verified, but it remains
+  rejected by automatic routing with
+  `manual_only:usage_pool_boundary_unknown`. The optional, separately billed
+  LiteLLM API sidecar is recorded at loopback 4022 as configured but unverified.
 
 The policy resolves an explicit task role first, otherwise a fixed keyword map;
 then maps OMP-comparable role policy to a `model_class` and `reasoning_effort`:
@@ -76,3 +77,9 @@ mutation beyond reading an optional `--task-file` packet.
 
 `--list-routes` emits the detached catalog for a manual picker. Catalog
 visibility is not health, quota, authorization, or automatic-routing evidence.
+The native bounded-control receipt is not evidence that the API sidecar works
+or that Daybreak differs from ordinary Sol on refusal behavior.
+
+`--manual-route daybreak-blue-personal` emits a hash-bound
+`MANUAL_SELECTED` receipt pointing to native Codex model selection. It performs
+no dispatch, prohibits fallback, and never substitutes the API sidecar.
