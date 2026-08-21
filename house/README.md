@@ -41,8 +41,9 @@ admission, rejected envelopes, late results, amendments, lease revocation, and
 interrupted projection rebuilds.
 
 The ChatGPT-family auto switcher v0.1 is a separate offline policy module. It
-emits deterministic route receipts but cannot dispatch or alter the current
-Codex model. See `auto_switcher/README.md`.
+emits deterministic route receipts through a small JSON CLI, but cannot dispatch
+or alter the current Codex model. Its OMP-compatible receipt keeps role
+selection distinct from native automatic thinking. See `auto_switcher/README.md`.
 
 Live Codex state, models and providers, final Archive and embedding selection,
 the web dashboard, terminal companion, YubiKey ceremonies, Spark Fleet, local
