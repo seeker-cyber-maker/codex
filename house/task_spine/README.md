@@ -27,6 +27,15 @@ returns the exact stored receipt on retry. Reusing a key with different content
 fails closed. `requested_by` is conserved as `ASSERTED_UNVERIFIED`; signature
 verification remains a later trust-service boundary.
 
+The local inbox/controller is a separate SQLite queue in front of that
+adapter. Producers can enqueue raw JSON, while one finite leased controller
+calls the task spine. Its wall-clock lease carries a monotonic epoch and opaque
+fencing token; stale tokens cannot claim or finish inbox records. Each
+`drain-once` processes at most one record. If the process is interrupted after
+task acceptance but before the inbox commit, a later controller replays the
+stored task receipt and records the terminal inbox state without duplicating
+task history. This is cooperative process control, not OS-enforced isolation.
+
 ```bash
 PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.task_spine --db /tmp/task-spine.sqlite demo
@@ -40,4 +49,19 @@ Typed submission uses a JSON file with schema
 ```bash
 PYTHONPATH=/absolute/path/to/codex-dream-house \
   python3 -m house.task_spine --db /tmp/task-spine.sqlite submit --input task.json
+```
+
+Finite controller usage keeps the inbox and task journal separate:
+
+```bash
+PYTHONPATH=/absolute/path/to/codex-dream-house \
+  python3 -m house.task_spine.controller_cli --inbox-db /tmp/inbox.sqlite \
+  enqueue --enqueue-id request-1 --input task.json
+PYTHONPATH=/absolute/path/to/codex-dream-house \
+  python3 -m house.task_spine.controller_cli --inbox-db /tmp/inbox.sqlite \
+  lease --holder local-controller --ttl 30
+PYTHONPATH=/absolute/path/to/codex-dream-house \
+  python3 -m house.task_spine.controller_cli --inbox-db /tmp/inbox.sqlite \
+  drain-once --spine-db /tmp/task-spine.sqlite \
+  --holder local-controller --token TOKEN_FROM_LEASE_RECEIPT
 ```

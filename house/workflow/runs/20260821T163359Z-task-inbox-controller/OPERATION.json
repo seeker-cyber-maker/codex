@@ -1,0 +1,44 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "task-inbox-controller-v0",
+  "record_revision": 1,
+  "record_sha256": "9fa8c1ef06472f4e7d14e63648852c2e16f1a0fc77f9b8550caac026d2d92a82",
+  "run_id": "20260821T163359Z-task-inbox-controller",
+  "intent": "Implement and verify one finite local task inbox/controller",
+  "target_identity": "house/task_spine",
+  "input_hashes": {
+    "submission.py": "f47587c363431909edc06dc485fe0eb13e92627fb08a2ce92089c6cf884b5259",
+    "core.py": "41a7a96a69df1832575da26bb5848c1e0eb521fc72aa501d729a524d12f068f5"
+  },
+  "authority_scope": {
+    "read": ["house/task_spine", "house/auto_switcher"],
+    "write": ["house/task_spine", "house/workflow/runs/20260821T163359Z-task-inbox-controller"],
+    "network": [],
+    "external_effect_class": "LOCAL_REPOSITORY_ONLY"
+  },
+  "owner": "single-root-lane",
+  "lease": {"holder": null, "expires_at": null, "epoch": 0, "fencing_token": null},
+  "idempotency": {
+    "key": "task-inbox-controller-v0",
+    "binding_sha256": "fc6829785f58b2b7606922d5a3ec6b4bf79e281f"
+  },
+  "start_state": {
+    "git_head": "fc6829785f58b2b7606922d5a3ec6b4bf79e281f",
+    "worktree_clean": true
+  },
+  "checkpoint_policy": {"after": ["controller-tests", "cli-smoke", "regression-tests"]},
+  "resume_pointer": null,
+  "deadline": null,
+  "retry_budget": 2,
+  "resource_budget": [
+    {"resource": "records_per_drain_once", "unit": "records", "hard_cap": 1},
+    {"resource": "provider_requests", "unit": "requests", "hard_cap": 0}
+  ],
+  "cancellation": {"supported": true, "method": "stop between finite drain calls and retain inbox state"},
+  "expected_artifacts": ["inbox.py", "controller tests", "CLI commands", "validation receipt"],
+  "acceptance_verifier": "offline unittest plus crash/reconciliation and CLI fixtures",
+  "reconciliation": {
+    "required": true,
+    "method": "compare inbox terminal receipt and task-spine journal across interrupted replay"
+  }
+}

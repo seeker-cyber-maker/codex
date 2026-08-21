@@ -1,0 +1,9 @@
+{
+  "schema": "codex-house-plan/1",
+  "run_id": "20260821T163359Z-task-inbox-controller",
+  "status": "sealed",
+  "profile": "core",
+  "objective": "Finite local single-writer task inbox/controller",
+  "case_type": "app_delivery",
+  "dispatch": "NOT_AUTHORIZED"
+}

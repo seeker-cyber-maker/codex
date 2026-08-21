@@ -48,6 +48,13 @@ idempotency, deterministic work/task identity, exact receipt replay, and
 matching partial-journal recovery. It remains single-writer and no-dispatch;
 requester identity is retained but unverified until a later signing service.
 
+The local task inbox/controller serializes producer submissions through one
+finite leased controller. Epoch and token fencing protect inbox transitions,
+each drain call handles at most one record, and a split-database interruption
+reconciles through the submission adapter's exact stored receipt. This is a
+cooperative local control fixture, not authenticated identity or OS-enforced
+writer isolation. See `workflow/runs/20260821T163359Z-task-inbox-controller/`.
+
 The ChatGPT-family auto switcher v0.1 is a separate offline policy module. It
 emits deterministic route receipts through a small JSON CLI, but cannot dispatch
 or alter the current Codex model. Its OMP-compatible receipt keeps role
