@@ -1,0 +1,26 @@
+{
+  "schema": "integration-health-gate-source-seal/1",
+  "run_id": "20260821T232046Z-integration-health-gate",
+  "source_disposition": "ACCEPTED_DOWNSTREAM_ONLY",
+  "donor_evidence": [
+    {
+      "source": "iTerm2 Claude integration health monitor",
+      "url": "https://github.com/gnachman/iTerm2/blob/master/sources/ClaudeCode/ClaudeIntegrationHealthMonitor.swift",
+      "freshness": "LIVE_VERIFIED",
+      "use": "strict on-disk check, event-triggered repair prompt, no silent repair"
+    },
+    {
+      "source": "Terminal source donor review",
+      "path": "house/workflow/runs/20260821T225639Z-terminal-source-donor-review/SOURCE_FINDINGS.md",
+      "sha256": "5ef4fe70711b5d930881fb0eb143ee6d55a3fe42fe95e362e048f96a64b264ff"
+    }
+  ],
+  "artifacts": {
+    "house/integration_health/__init__.py": "b6d03fdf4d7870662cee10a9d9e8ed789b8ebdd9010108021211107ed1172d14",
+    "house/integration_health/contract.py": "69e03b47db8e73a7c90441be3a2cfe95853d39e3c7ae16b2ab2a9a053dddf3d3",
+    "house/integration_health/README.md": "a6d65ea1f45da1103734cdd3c1bb39e2e977feb0866965adfa9286cbbfbaa8d7",
+    "house/integration_health/tests/test_contract.py": "38fab54ed4e75957c0b905a00192bf91244d2e654c93e690b52361e2cf055956"
+  },
+  "upstream_effect": "none; additive downstream-only module",
+  "rollback": "remove the additive module and its ledger entry in one local revert"
+}

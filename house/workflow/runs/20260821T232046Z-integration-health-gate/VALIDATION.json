@@ -1,0 +1,15 @@
+{
+  "schema": "integration-health-gate-validation/1",
+  "run_id": "20260821T232046Z-integration-health-gate",
+  "status": "PASS",
+  "checks": [
+    {"name": "focused health-contract tests", "status": "PASS", "detail": "6 tests"},
+    {"name": "static checks", "status": "PASS", "detail": "ruff and compileall"},
+    {"name": "complete House suite", "status": "PASS", "detail": "135 tests"},
+    {"name": "scope and diff checks", "status": "PASS", "detail": "additive downstream-only; git diff --check"},
+    {"name": "live configuration inspection", "status": "NOT_ATTEMPTED"},
+    {"name": "repair or mutation", "status": "NOT_ATTEMPTED"},
+    {"name": "iTerm/provider/model integration", "status": "NOT_ATTEMPTED"}
+  ],
+  "claim_ceiling": "Offline read-only integration-health contract evaluator only."
+}

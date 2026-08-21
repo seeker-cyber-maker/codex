@@ -89,6 +89,14 @@ Its dependency-free keyboard CLI lists, searches, shows bindings, and prepares
 requests from that same inventory. It contains no dispatcher or authority path.
 See `operator_surface/README.md`.
 
+The integration-health gate is a dependency-free, read-only evaluator for
+future iTerm, provider, cache-path, and hook bindings. A strict trusted
+contract declares root-confined artifacts, optional digests, executable
+requirements, and JSON expectations. The evaluator returns `HEALTHY` or
+`REPAIR_REQUIRED` with stable defect codes; it never runs a target, changes a
+configuration, or repairs anything. See `integration_health/` and
+`workflow/runs/20260821T232046Z-integration-health-gate/`.
+
 Live Codex state, models and providers, final Archive and embedding selection,
 the web dashboard, terminal companion, YubiKey ceremonies, Spark Fleet, local
 model work, training, networking, and upstream-core patches remain outside the
