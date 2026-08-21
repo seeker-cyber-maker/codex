@@ -5,7 +5,7 @@ import io
 import json
 import unittest
 
-from house.auto_switcher import DEFAULT_ROUTES, route_task
+from house.auto_switcher import DEFAULT_ROUTES, list_routes, route_task
 from house.auto_switcher.cli import main
 
 
@@ -35,6 +35,27 @@ class AutoSwitcherTests(unittest.TestCase):
         receipt = route_task({"summary": "summarize this log", "delivery": "chat-packet"}, routes)
         self.assertEqual(receipt["selected"]["id"], "chatgpt-work-packet")
         self.assertEqual(receipt["state"], "SELECTED")
+
+    def test_daybreak_is_visible_but_never_auto_eligible(self) -> None:
+        catalog = {route["id"]: route for route in list_routes()}
+        daybreak = catalog["daybreak-blue-personal"]
+        self.assertEqual(daybreak["endpoint"], "http://127.0.0.1:4018/v1")
+        self.assertEqual(daybreak["selection_mode"], "manual_only")
+        self.assertTrue(daybreak["manual_selectable"])
+        self.assertFalse(daybreak["auto_eligible"])
+        self.assertEqual(daybreak["health"], "unverified")
+
+        receipt = route_task({"summary": "perform a defensive security review"})
+        self.assertNotEqual(receipt["selected"]["id"], "daybreak-blue-personal")
+        self.assertEqual(
+            receipt["rejected"]["daybreak-blue-personal"],
+            ["manual_only:usage_pool_boundary_unknown"],
+        )
+
+    def test_route_catalog_is_detached_from_policy_state(self) -> None:
+        catalog = list_routes()
+        catalog[-1]["auto_eligible"] = True
+        self.assertFalse(list_routes()[-1]["auto_eligible"])
 
     def test_same_input_has_same_hash(self) -> None:
         task = {"summary": "implement a test", "capabilities": ["code"]}
@@ -97,6 +118,14 @@ class AutoSwitcherTests(unittest.TestCase):
         self.assertEqual(receipt["dispatch"], "NOT_ATTEMPTED")
         self.assertEqual(receipt["omp_compat"]["native_thinking_level"], "auto")
         self.assertIn("decision_sha256", receipt)
+
+    def test_cli_lists_manual_only_routes_without_dispatch(self) -> None:
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            exit_code = main(["--list-routes"])
+        catalog = {route["id"]: route for route in json.loads(output.getvalue())}
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(catalog["daybreak-blue-personal"]["selection_mode"], "manual_only")
 
     def test_recurring_work_modes_are_conservative_and_deterministic(self) -> None:
         cases = (

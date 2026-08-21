@@ -1,0 +1,36 @@
+{
+  "schema": "codex-house-test-receipt/1",
+  "run_id": "20260821T193440Z-daybreak-manual-only",
+  "status": "PASS",
+  "dispatch": "NOT_ATTEMPTED",
+  "network": "NOT_ACCESSED",
+  "checks": [
+    {
+      "name": "focused_auto_switcher_tests",
+      "result": "PASS",
+      "tests": 15
+    },
+    {
+      "name": "full_house_tests",
+      "result": "PASS",
+      "tests": 61
+    },
+    {
+      "name": "ruff_auto_switcher",
+      "result": "PASS"
+    },
+    {
+      "name": "python_compileall_auto_switcher",
+      "result": "PASS"
+    },
+    {
+      "name": "manual_route_list_smoke",
+      "result": "PASS"
+    },
+    {
+      "name": "git_diff_check",
+      "result": "PASS"
+    }
+  ],
+  "claim_ceiling": "Offline catalog visibility and automatic exclusion only; provider health and usage-pool boundaries remain unverified."
+}

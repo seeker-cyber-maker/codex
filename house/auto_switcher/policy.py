@@ -7,15 +7,15 @@ when its bridge is explicitly enabled and healthy in the supplied catalog.
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 from typing import Any
 
-
 QUALITY = {"utility": 0, "good": 1, "strong": 2, "frontier": 3}
 COST = {"local": 0, "free": 1, "subscription": 2, "paid": 3}
 
-DEFAULT_ROUTES: tuple[dict[str, Any], ...] = (
+AUTO_ROUTES: tuple[dict[str, Any], ...] = (
     {
         "id": "chatgpt-codex-direct",
         "provider": "openai-chatgpt",
@@ -44,6 +44,27 @@ DEFAULT_ROUTES: tuple[dict[str, Any], ...] = (
         "requires_bridge": "chatgpt-work-packet-v1",
     },
 )
+
+MANUAL_ONLY_ROUTES: tuple[dict[str, Any], ...] = (
+    {
+        "id": "daybreak-blue-personal",
+        "provider": "openai-daybreak-blue",
+        "display_name": "Daybreak Blue",
+        "endpoint": "http://127.0.0.1:4018/v1",
+        "selection_mode": "manual_only",
+        "manual_selectable": True,
+        "auto_eligible": False,
+        "auto_exclusion_reason": "usage_pool_boundary_unknown",
+        "health": "unverified",
+    },
+)
+
+# Manual-only entries belong in the discoverable catalog so operator surfaces
+# can display them, but route_task() rejects them before evaluating ordinary
+# automatic-routing criteria. DEFAULT_ROUTES remains the compatibility name
+# for callers that already provide or inspect the complete built-in catalog.
+ROUTE_CATALOG = AUTO_ROUTES + MANUAL_ONLY_ROUTES
+DEFAULT_ROUTES = ROUTE_CATALOG
 
 KEYWORD_ROLES = (
     ("review", ("review", "audit", "verify", "critique")),
@@ -157,6 +178,11 @@ def _receipt(payload: dict[str, Any]) -> dict[str, Any]:
     return {**payload, "decision_sha256": hashlib.sha256(canonical).hexdigest()}
 
 
+def list_routes() -> tuple[dict[str, Any], ...]:
+    """Return a detached catalog suitable for a manual route picker."""
+    return copy.deepcopy(ROUTE_CATALOG)
+
+
 def select_profile(role: str, risk: str, context_tokens: int, case_type: str = "") -> dict[str, str]:
     """Choose a ChatGPT-family class/effort from OMP-comparable criteria."""
     model_class, effort, policy = CASE_TYPE_PROFILE.get(
@@ -243,6 +269,10 @@ def route_task(task: dict[str, Any], routes: tuple[dict[str, Any], ...] = DEFAUL
     rejected: dict[str, list[str]] = {}
     for route in routes:
         reasons: list[str] = []
+        if route.get("selection_mode") == "manual_only" or not route.get("auto_eligible", True):
+            reason = str(route.get("auto_exclusion_reason", "policy"))
+            rejected[route["id"]] = ["manual_only:" + reason]
+            continue
         if not route.get("enabled"): reasons.append("disabled")
         if not route.get("healthy"): reasons.append("unhealthy")
         if requested["role"] not in route.get("roles", []): reasons.append("role")

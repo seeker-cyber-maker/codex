@@ -9,6 +9,10 @@ Routes:
 - `chatgpt-codex-direct`: the current Codex session lane.
 - `chatgpt-work-packet`: a future ChatGPT app/Drive packet lane. It remains
   disabled and unhealthy until its explicit bridge contract passes.
+- `daybreak-blue-personal`: the isolated loopback 4018 contractor lane. It is
+  visible to manual route pickers but is always rejected by automatic routing
+  with `manual_only:usage_pool_boundary_unknown`. Its catalog entry records
+  health as unverified and does not authorize a probe or dispatch.
 
 The policy resolves an explicit task role first, otherwise a fixed keyword map;
 then maps OMP-comparable role policy to a `model_class` and `reasoning_effort`:
@@ -53,8 +57,9 @@ an untrusted artifact, mutate storage, route to a provider, or change weights.
 short task from silently leaving Codex merely because a bridge happens to be
 available.
 
-Expansion to local, LiteLLM, or third-party routes requires a separately
-accepted route catalog and fixtures; it is not a configuration toggle.
+Expansion of *automatic selection* to local, LiteLLM, or third-party routes
+requires a separately accepted route catalog and fixtures; discoverable
+manual-only entries are not automatic-routing candidates.
 
 ## CLI
 
@@ -68,3 +73,6 @@ PYTHONPATH=/absolute/path/to/codex-dream-house \
 It reads one JSON task packet and writes one sorted, hash-bound decision receipt
 to stdout. It makes no network, credential, provider, model, or filesystem
 mutation beyond reading an optional `--task-file` packet.
+
+`--list-routes` emits the detached catalog for a manual picker. Catalog
+visibility is not health, quota, authorization, or automatic-routing evidence.
