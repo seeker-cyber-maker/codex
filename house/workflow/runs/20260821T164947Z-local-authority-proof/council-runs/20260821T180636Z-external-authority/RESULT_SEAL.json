@@ -1,0 +1,29 @@
+{
+  "schema": "expert-council-result-seal/1",
+  "council_id": "20260821T180636Z-external-authority",
+  "input_packet_sha256": "fae721b32b8e1c301603263df0eda0657b294b0af1daecd5f8a70d9ff7cc8be0",
+  "transport_packet_sha256": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa",
+  "artifacts": {
+    "council-inputs/20260821T180636Z-external-authority/evidence-packet.md": "fae721b32b8e1c301603263df0eda0657b294b0af1daecd5f8a70d9ff7cc8be0",
+    "council-runs/20260821T180636Z-external-authority-dry-run/manifest.json": "055dc66c2d6705ca56e29178c4de1d4380b85f30e13594d0e1ba8cb718c8b070",
+    "council-runs/20260821T180636Z-external-authority-dry-run/reviewers/adversarial-red-teamer.md": "43de4871411d52e495ef71f5ece15ea546bbb6863b78c9971e16d716a3e34d82",
+    "council-runs/20260821T180636Z-external-authority-dry-run/reviewers/assurance-human-factors.md": "3f2bf62d6c2eb000fa6f56b50c4908d45edfeebda6f8360b3a122a0ce6967fa4",
+    "council-runs/20260821T180636Z-external-authority-dry-run/reviewers/security-architect.md": "e387ef5e12fe5fd3d2f1416e9c692cd8948f37660673015db14bfa0abb14979b",
+    "council-runs/20260821T180636Z-external-authority-dry-run/transport-packet.md": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa",
+    "council-runs/20260821T180636Z-external-authority/claim-ledger.json": "f4265de6b1b96c3dd1f41687129e49a789c1b72b9c01b852a8b15442198b1b4a",
+    "council-runs/20260821T180636Z-external-authority/manifest.json": "7f918354d9a43940964b56819e615791699f59cdd658252a01f4f4e14d2cd4a3",
+    "council-runs/20260821T180636Z-external-authority/reviewers/adversarial-red-teamer.md": "91ddbd553cf6e09230208eb5ef8520c8f9dd1d5120af1631d2a0422d0310160f",
+    "council-runs/20260821T180636Z-external-authority/reviewers/assurance-human-factors.md": "9cc6680cbf180d0868ac31364604f6611eadeb5ae3adf9caf22c4a9f0c0a4cf6",
+    "council-runs/20260821T180636Z-external-authority/reviewers/security-architect.md": "da5cabe07ab6ef206fa1d4e0bac8c3041a0d5665d90144e0fffb9ab8d7774636",
+    "council-runs/20260821T180636Z-external-authority/synthesis.md": "6e08e3565f4fed6387ddd58fcbd95662f2a11c084a03b55387387e567c6b8e3e",
+    "council-runs/20260821T180636Z-external-authority/transport-packet.md": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa",
+    "council-runs/20260821T180636Z-external-authority-security-retry/manifest.json": "605a3325d80fe54b6d3f3584a64019bb9561fa25bd41d6e321b74305bcf18765",
+    "council-runs/20260821T180636Z-external-authority-security-retry/reviewers/security-architect.md": "c5fec344c6daa56eb2d57265cbaea2b69291f7513ac2986c029a3133c04d183e",
+    "council-runs/20260821T180636Z-external-authority-security-retry/transport-packet.md": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa"
+  },
+  "attempted_roles": 3,
+  "substantive_completed_roles_after_retry": 2,
+  "failed_roles": 1,
+  "decision": "ACCEPT_DESIGN_STAGE_ONLY",
+  "promotion_status": "BLOCKED"
+}

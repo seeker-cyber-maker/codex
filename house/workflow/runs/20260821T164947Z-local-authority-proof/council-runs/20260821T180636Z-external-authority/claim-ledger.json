@@ -1,0 +1,72 @@
+{
+  "schema": "expert-council-claim-ledger/1",
+  "council_id": "20260821T180636Z-external-authority",
+  "claims": [
+    {
+      "claim_id": "X-001",
+      "claim": "The sealed cooperative API candidate is sufficient to begin a separately authorized real-key ceremony design, but not implementation or operation.",
+      "status": "corroborated",
+      "evidence": ["reviewers/security-architect.md", "../20260821T180636Z-external-authority-security-retry/reviewers/security-architect.md", "reviewers/assurance-human-factors.md"],
+      "supporters": ["security-architect"],
+      "objectors": [],
+      "shared_dependencies": ["same-transport-packet", "sealed-execution-reports-not-rerun"],
+      "decision_impact": "high",
+      "next_test": "none before design; assurance review's requested corruption check is already covered by the sealed payload-mutation fixture"
+    },
+    {
+      "claim_id": "X-002",
+      "claim": "The candidate detects direct inconsistency introduced into an existing journal event.",
+      "status": "observed",
+      "evidence": ["attached test_authority.py#test_second_bootstrap_and_corrupted_journal_fail_closed"],
+      "supporters": ["assurance-human-factors"],
+      "objectors": [],
+      "shared_dependencies": ["test-source-inspection", "sealed-execution-report"],
+      "decision_impact": "medium",
+      "next_test": "none for design-stage decision; coherent rewrite and truncation remain outside this claim"
+    },
+    {
+      "claim_id": "X-003",
+      "claim": "Hash-chain validation does not protect against a hostile writer that can coherently rewrite SQLite history.",
+      "status": "corroborated",
+      "evidence": ["security-architect completed retry", "local council synthesis"],
+      "supporters": ["security-architect"],
+      "objectors": [],
+      "shared_dependencies": ["source inspection"],
+      "decision_impact": "high",
+      "next_test": "design protected anchoring or permanently retain the consistency-only claim"
+    },
+    {
+      "claim_id": "X-004",
+      "claim": "Multi-process replay ordering and split-database crash behavior remain unverified beyond sequential fixtures.",
+      "status": "corroborated",
+      "evidence": ["security-architect completed retry", "sealed evaluation exclusions"],
+      "supporters": ["security-architect"],
+      "objectors": [],
+      "shared_dependencies": ["source inspection", "sealed execution reports"],
+      "decision_impact": "high",
+      "next_test": "preregister a bounded concurrency and crash-boundary matrix during design"
+    },
+    {
+      "claim_id": "X-005",
+      "claim": "The external council produced three completed independent reviews.",
+      "status": "contradicted",
+      "evidence": ["manifest.json", "../20260821T180636Z-external-authority-security-retry/manifest.json"],
+      "supporters": [],
+      "objectors": ["chair"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "none; retain the failed OpenCode role in the denominator"
+    },
+    {
+      "claim_id": "X-006",
+      "claim": "The outside review had zero provider-reported accounting cost.",
+      "status": "contradicted",
+      "evidence": ["manifest.json", "../20260821T180636Z-external-authority-security-retry/manifest.json"],
+      "supporters": [],
+      "objectors": ["chair"],
+      "shared_dependencies": [],
+      "decision_impact": "medium",
+      "next_test": "none; report the ClinePass accounting total and distinguish it from direct API billing"
+    }
+  ]
+}

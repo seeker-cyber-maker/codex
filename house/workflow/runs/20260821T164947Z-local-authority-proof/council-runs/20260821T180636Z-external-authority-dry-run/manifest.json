@@ -1,0 +1,112 @@
+{
+  "council_id": "20260821T180636Z-external-authority-dry-run",
+  "mode": "independent-review",
+  "profile": "authority-boundary-council",
+  "task_mode": "review",
+  "transport_packet_sha256": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "house/workflow/runs/20260821T164947Z-local-authority-proof/council-inputs/20260821T180636Z-external-authority/evidence-packet.md",
+      "sha256": "fae721b32b8e1c301603263df0eda0657b294b0af1daecd5f8a70d9ff7cc8be0"
+    },
+    {
+      "path": "house/task_spine/authority_crypto.py",
+      "sha256": "634f89697d13d998ee454b45346677700f9b593bd057303238f14b5d1dbac257"
+    },
+    {
+      "path": "house/task_spine/authority.py",
+      "sha256": "cd060824577ba6eaa618d493b4f003476c3d4fcf7f1590a6f774f4af36dc5072"
+    },
+    {
+      "path": "house/task_spine/tests/test_authority_crypto.py",
+      "sha256": "b8f69f0c404a85f300beb82ce9ab4846cd5aa96f7974cce66bba0cde8f4de6c6"
+    },
+    {
+      "path": "house/task_spine/tests/test_authority.py",
+      "sha256": "aad8e79e81f26c20de7245fd29637131d9ab262d223e94a2e6e753f6eb4c7187"
+    },
+    {
+      "path": "house/workflow/runs/20260821T164947Z-local-authority-proof/PLAN.md",
+      "sha256": "14587e3ba667675a9f34b02d667c64d77b4aa57ace3feb5c16f2975dc35324ba"
+    },
+    {
+      "path": "house/workflow/runs/20260821T164947Z-local-authority-proof/EVALUATION_CARD.json",
+      "sha256": "adcdab328a446a56b8a62fc53dfa53f0f1ee09f84e40a22d2d111e86a41ec69c"
+    },
+    {
+      "path": "house/workflow/runs/20260821T164947Z-local-authority-proof/VALIDATION.json",
+      "sha256": "e3f88c7a00e33ef7eee20c90c0f2f39c4e58fc4d76c6a9c758101529582d4fe2"
+    },
+    {
+      "path": "house/workflow/runs/20260821T164947Z-local-authority-proof/RECONCILIATION.json",
+      "sha256": "55f97864e24caad930a124f431a08b44ec478c2af8e86debc2cdc8745884f6f3"
+    },
+    {
+      "path": "house/workflow/runs/20260821T164947Z-local-authority-proof/CLAIM_LEDGER.json",
+      "sha256": "0c393bfc226256a0fc877092687edb2f6bb31fe9a508a945fe8a194193425967"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "security-architect",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa",
+      "started_at": "2026-08-21T18:07:12+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-21T18:07:12+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-red-teamer",
+      "lane": "opencode-go",
+      "requested_model": "deepseek-v4-flash",
+      "provider": "OpenCode Go",
+      "harness": "provider-orchestration OpenCode Go catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4017/v1",
+      "candidate_models": [
+        "deepseek-v4-flash",
+        "qwen3.8-max"
+      ],
+      "packet_sha256": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa",
+      "started_at": "2026-08-21T18:07:12+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-21T18:07:12+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "assurance-human-factors",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "0fc395cee0c76271e405624dc32ae02ae663e12f3150a18d3285c7bf0d2283fa",
+      "started_at": "2026-08-21T18:07:12+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-21T18:07:12+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-21T18:07:12+00:00",
+  "completed_at": "2026-08-21T18:07:12+00:00"
+}
