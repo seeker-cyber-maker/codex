@@ -1,0 +1,38 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "keyboard-first no-dispatch operator CLI",
+  "checks": [
+    {
+      "name": "focused operator-surface tests",
+      "command": "python3 -m unittest discover -s house/operator_surface/tests -v",
+      "result": "25 passed"
+    },
+    {
+      "name": "complete House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "123 passed"
+    },
+    {
+      "name": "static checks",
+      "command": "ruff check house/operator_surface && ruff format --check house/operator_surface && python3 -m compileall -q house/operator_surface && git diff --check",
+      "result": "pass"
+    },
+    {
+      "name": "CLI smoke",
+      "command": "python3 -m house.operator_surface search terminal preview && python3 -m house.operator_surface keys",
+      "result": "pass"
+    },
+    {
+      "name": "independent read-only review",
+      "reviewer": "routing_integration_audit",
+      "result": "implementation and terminal-donor delta PASS; no consequential correction"
+    },
+    {
+      "name": "terminal donor and aesthetics review",
+      "evidence": "TERMINAL_DONOR_SWEEP.md",
+      "result": "iTerm-first donor map; five requirements admitted; local comparative rendering remains explicitly unmeasured"
+    }
+  ],
+  "claim_ceiling": "The CLI is a deterministic offline projection and request-preparation interface. It is not a palette, dispatcher, controller, authority service, hotkey daemon, plugin loader, or live iTerm integration."
+}

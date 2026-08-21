@@ -85,7 +85,9 @@ The operator command registry is an offline shared inventory for future agent,
 dashboard, and iTerm surfaces. It produces searchable manifests and
 `PREPARED_UNAUTHORIZED` request envelopes, requires explicit stable targets for
 stateful actions, reserves the first-party namespace, and rejects collisions.
-It contains no dispatcher or authority path. See `operator_surface/README.md`.
+Its dependency-free keyboard CLI lists, searches, shows bindings, and prepares
+requests from that same inventory. It contains no dispatcher or authority path.
+See `operator_surface/README.md`.
 
 Live Codex state, models and providers, final Archive and embedding selection,
 the web dashboard, terminal companion, YubiKey ceremonies, Spark Fleet, local

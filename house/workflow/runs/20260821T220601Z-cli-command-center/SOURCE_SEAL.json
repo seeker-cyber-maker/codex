@@ -1,0 +1,22 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "algorithm": "sha256",
+  "files": {
+    "house/README.md": "42a966d11ab38b7c41387a7f818add61f2acc382f9e020bed190cb6795eab190",
+    "house/operator_surface/README.md": "4244f10def3d5a4673c21b56ced48417cfa00641145dcfb86fb0f51e57430755",
+    "house/operator_surface/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "house/operator_surface/cli.py": "9c8a1853e55ca51aa6e7350103bbb498e67d1863bd3a4be7084a4ee0893741cf",
+    "house/operator_surface/tests/test_cli.py": "fba627404180208deca9b051f327b5c88db8f807f213fb09e402a37335f5d4c4",
+    "house/workflow/runs/20260821T220601Z-cli-command-center/PLAN.md": "6923b5fbbb2566e2216001f3f1baf1f9d807ee7832be00b5c447837379b74453",
+    "house/workflow/runs/20260821T220601Z-cli-command-center/PLAN_DELTA.md": "1cbfbf55338627f8d33d83a3132b5437f1c7d836bb907620a513824d8d1eda33",
+    "house/workflow/runs/20260821T220601Z-cli-command-center/TERMINAL_DONOR_SWEEP.md": "ab0383a2a72c1ae6f1b1688543e56374ad060386750eae651c2070ecd7ce96d9",
+    "house/workflow/runs/20260821T220601Z-cli-command-center/VIDEO_REVIEW.md": "30fb15c3e138722d6340ee926e2dc3df3e693fc3e316b4b46026468a7d9f89d9"
+  },
+  "external_evidence": {
+    "/Users/tiga/Documents/Codex_Projects/recovery-2026-08-20/youtube-evidence/qBKMe8AatY0/qBKMe8AatY0.evidence.json": "71a1ab215f5c1b5ed7e87a6dbdd7a02f44fdfd090256716830e77b25e2cc8dd6",
+    "/Users/tiga/Documents/Codex_Projects/recovery-2026-08-20/youtube-evidence/qBKMe8AatY0/REVIEW.md": "2af5a4db086819b37f5bf9600947b04fa3259d3ae11406a8c4e22a8ccf191a60",
+    "/Users/tiga/Documents/Codex_Projects/recovery-2026-08-20/youtube-evidence/yaG1fBNxjdE/yaG1fBNxjdE.evidence.json": "97df0fe50f3c3ccd4050d873df4a724ec7cf5f941f7ba669a8a24f34a01960e5",
+    "/Users/tiga/Documents/Codex_Projects/recovery-2026-08-20/youtube-evidence/yaG1fBNxjdE/REVIEW.md": "a88de8be949c011e58accf5569db4ec5642c010fa4dd0b81b3f26ea7981d5b3e"
+  },
+  "note": "The seal excludes itself, validation, handoff, and AACR. Hashes establish byte identity only."
+}

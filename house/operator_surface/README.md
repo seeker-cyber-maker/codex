@@ -20,4 +20,15 @@ whatever task, thread, window, or session happens to be focused when it runs.
 
 ```sh
 python3 -m unittest discover -s house/operator_surface/tests -v
+
+python3 -m house.operator_surface list
+python3 -m house.operator_surface search terminal preview
+python3 -m house.operator_surface keys
+python3 -m house.operator_surface prepare codex.house.task.inspect \
+  --target-kind task --target-id task-123
 ```
+
+The CLI is the first operator surface. It is intentionally non-interactive and
+dependency-free: shell history, ordinary terminal navigation, and exact command
+arguments remain visible and scriptable. A future palette or dashboard must
+consume this same manifest instead of introducing another action catalog.
