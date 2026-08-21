@@ -1,0 +1,38 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "offline operator command registry",
+  "checks": [
+    {
+      "name": "focused unit tests",
+      "command": "python3 -m unittest discover -s house/operator_surface/tests -v",
+      "result": "16 passed"
+    },
+    {
+      "name": "full House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "114 passed"
+    },
+    {
+      "name": "static checks",
+      "command": "python3 -m compileall -q house/operator_surface && ruff check house/operator_surface && ruff format --check house/operator_surface && git diff --check",
+      "result": "pass"
+    },
+    {
+      "name": "independent read-only review",
+      "reviewer": "routing_integration_audit",
+      "result": "PASS; no remaining blocker"
+    },
+    {
+      "name": "Spark Omarchy scout",
+      "job_id": "a5fa39c1-1ce1-4d91-8978-56e0f4522a68",
+      "result": "succeeded; read-only; may_have_written=false"
+    },
+    {
+      "name": "Spark CachyOS delta scout",
+      "job_id": "fd5610b0-3819-4e5a-a820-af6f14948d87",
+      "result": "succeeded; read-only; may_have_written=false"
+    }
+  ],
+  "claim_ceiling": "The registry is a deterministic offline declaration and request-preparation layer. It is not a dispatcher, authority service, plugin security boundary, dashboard, iTerm integration, or live controller."
+}

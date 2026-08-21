@@ -1,0 +1,19 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "algorithm": "sha256",
+  "files": {
+    "house/README.md": "f65f9b5b9bd190929f1ea479545783ad4f8fd4f8142582eee8379da9c678c3fe",
+    "house/operator_surface/README.md": "154a9005719b6e27ca72075c26e2abf2a295989857bc23818f843412cef81065",
+    "house/operator_surface/__init__.py": "c87bcbd3c4e4275e462281bafbaf7caaa75dfd7efef9a815736058a1929b9cca",
+    "house/operator_surface/registry.py": "65269c9dd9353bd06aee0b9897274c0f358aaac51784d4ca45ce88fc1e44f415",
+    "house/operator_surface/tests/test_registry.py": "134bcf049d581f3934b3e471c2754a39e05e6ae3d3782c1597daf6877bde2d29",
+    "house/workflow/runs/20260821T215137Z-operator-command-registry/PLAN.md": "e52ef6b20fa07b8abba47237e71563f237632bb26b6a11a03a677659721c9081",
+    "house/workflow/runs/20260821T215137Z-operator-command-registry/RESEARCH_REVIEW.md": "94c84a435d80f374953afec36fd115c710817a6c03136f52249dcdf33a833f61",
+    "house/workflow/runs/20260821T215137Z-operator-command-registry/SPARK_CACHYOS_TASK.json": "062d298da788ca174fda992c2f433e73b1cdcf8beb4b21109e51b87fc47b41eb"
+  },
+  "external_evidence": {
+    "/Users/tiga/Documents/Codex_Projects/recovery-2026-08-20/youtube-evidence/8C5i1JFCLTI/8C5i1JFCLTI.evidence.json": "58ea38adb22d115d255d6f02de71db2f1e9508adcf5c389ef523fb0ccd737e46",
+    "/Users/tiga/Documents/Codex_Projects/recovery-2026-08-20/youtube-evidence/8C5i1JFCLTI/REVIEW.md": "6acf9a2d123de73b52125b1d6d5d3f09651f357af5d76036da0517073bc19db4"
+  },
+  "note": "This seal excludes itself, validation, AACR, and handoff files. Hashes prove byte identity, not authorship or authority."
+}
