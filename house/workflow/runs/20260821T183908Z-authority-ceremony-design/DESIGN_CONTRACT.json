@@ -1,0 +1,57 @@
+{
+  "schema": "codex-house-authority-ceremony-design/1",
+  "version": 1,
+  "status": "design_candidate",
+  "claim_ceiling": "reviewable future implementation and test contract only",
+  "registry_states": ["UNINITIALIZED", "BOOTSTRAP_PENDING", "ACTIVE", "ROTATION_PENDING", "RECOVERY_PENDING", "LOCKDOWN", "RETIRED"],
+  "key_states": ["PROPOSED", "DEVICE_SELECTED", "CHALLENGE_VERIFIED", "ACTIVE", "SUSPENDED", "REVOKED", "ABORTED"],
+  "ceremony_states": ["PREPARED", "PREVIEWED", "DEVICE_SELECTED", "CHALLENGE_VERIFIED", "AUTHORIZED", "COMMITTED", "CHECKPOINT_VERIFIED", "CONFIRMED", "ABORTED", "RECOVERY_PENDING"],
+  "intent_states": ["RECEIVED", "REJECTED", "AUTHORIZED_PENDING", "DELIVERY_LEASED", "INBOX_COMMITTED", "RECONCILED", "QUARANTINED", "CANCELLED"],
+  "roles": {
+    "owner-primary": {
+      "actions": ["authority.key.enroll", "authority.key.rotate", "authority.key.suspend", "authority.key.revoke", "authority.lockdown.enter", "authority.lockdown.exit", "authority.generation.retire", "authority.checkpoint.admin.sign", "capability.operator.issue", "task.intent.cancel", "task.intent.reauthorize"],
+      "delegable_actions": []
+    },
+    "owner-recovery": {
+      "actions": ["authority.key.recover-primary", "authority.key.suspend", "authority.key.revoke", "authority.lockdown.enter", "authority.lockdown.exit", "authority.generation.retire", "authority.checkpoint.admin.sign"],
+      "delegable_actions": []
+    },
+    "codex-operator": {
+      "actions": ["task.intent.authorize", "task.intent.cancel", "status.read"],
+      "delegable_actions": ["status.read"]
+    },
+    "local-gatekeeper": {
+      "actions": ["task.intent.authorize.low-risk", "status.read"],
+      "delegable_actions": []
+    },
+    "authority-service": {
+      "actions": ["verified-transition.execute", "intent.reconcile", "checkpoint.operational.write", "status.read"],
+      "delegable_actions": []
+    },
+    "auditor-monitor": {
+      "actions": ["status.read", "journal.verify", "checkpoint.verify", "alert.emit"],
+      "delegable_actions": []
+    },
+    "contractor-worker": {
+      "actions": ["worker-buffer.append"],
+      "delegable_actions": []
+    }
+  },
+  "non_delegable_prefixes": ["owner.", "authority.key.", "authority.lockdown.", "authority.generation.", "authority.checkpoint.admin.", "capability.operator."],
+  "hard_invariants": [
+    "one explicitly selected device and slot per ceremony step",
+    "last recovery-capable key cannot be ordinarily revoked",
+    "lockdown exit requires owner or recovery hardware proof",
+    "proof authorizes one durable intent",
+    "models and contractors have no direct database write access",
+    "child capability is a strict subset of its parent",
+    "both-owner-key loss creates a new registry generation",
+    "internal hash chain is not described as tamper evidence without protected checkpoints",
+    "every failed safety layer emits or increments a bounded near-miss record"
+  ],
+  "frozen_test_ids": ["FV-01", "FV-02", "FV-03", "BS-01", "RP-01", "RV-01", "DG-01", "SG-01", "SG-02", "SG-03", "JR-01", "JR-02", "JR-03", "LK-01", "DV-01", "CK-01", "ST-01", "TM-01", "OS-01", "OS-02", "BK-01", "KY-01", "KY-02", "GF-01"],
+  "external_effects_authorized": false,
+  "implementation_authorized": false,
+  "hardware_authorized": false,
+  "promotion_authorized": false
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "project-source-seal/1",
+  "repository": "/Users/tiga/Documents/Codex_Projects/codex-dream-house",
+  "branch": "codex/dream-house-auto-switcher",
+  "source_head": "7609fd5a8c12758b99a16cbbcfbd6f435596b1e9",
+  "plan_commit": "362a01b61f28ce4590366783cd612f8f7fec62c9",
+  "design_commit": "e27582c833fa8f0545d5a71d79da6c825532f562",
+  "design_sha256": {
+    "AUTHORITY_LIFECYCLE.md": "e1908334bb942c4561df0a2c393bf58a37ab05ed5fa406af184aba6d631302af",
+    "CEREMONY_SPEC.md": "5371bd3ca852f2a5587a73b13399ef26075c8b905882611a88cdb776f74cf299",
+    "DESIGN_CONTRACT.json": "63d445d57a66cec148e62fd93615c206435750571d46215342da310e4acae18d",
+    "FAILURE_TEST_PLAN.md": "0f191b15ffff86e36d75449524c59d317679f8ae3cbb37e994f290c784cd5930",
+    "MONITORING_AND_QUOTAS.md": "db79d5a68f5336322b865d2f823405b8b948963ead91f3b134d0e5eb73375cff",
+    "RECOVERY_MATRIX.md": "e7be8c1bbf9e523e4e1e8e899de5adfa6e31fd814fb94bf67719c61941dba559",
+    "REQUIREMENTS_TRACEABILITY.md": "12712e3265f7500a0b77b38fe13ecfc339278d66b2e751ae300861d5edb8ddfc",
+    "SAGA_AND_ANCHORING.md": "63644adc5a185c4e4aa4b3fcdd760b4e8eff187baabdfa22349b0e076f98fd01",
+    "SIGNING_VECTOR_SPEC.md": "408ea59230c3ceac4edbe75bc6a15fb072e71e4183434c4d9946c2c61ae0095a",
+    "THREAT_MODEL.md": "a3f17b61bf9bda71128295fa08a67ae76975cb52715fbb125d2aa62cf569984c"
+  },
+  "operation_record_sha256": "973a198d32123a7956c89785cd182fc33c0df42a3b7307bf7bd558543104c31b",
+  "disposition": "SEALED_DESIGN_CANDIDATE_NO_IMPLEMENTATION_AUTHORITY"
+}

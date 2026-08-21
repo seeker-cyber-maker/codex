@@ -1,0 +1,41 @@
+{
+  "schema": "project-claim-ledger/1",
+  "claims": [
+    {
+      "id": "CEREMONY-DESIGN-COMPLETE",
+      "claim": "The design specifies principals, delegation ceilings, lifecycle states, ceremony steps, durable intent reconciliation, checkpoints, recovery, monitoring, and portable vector requirements.",
+      "state": "VERIFIED_DESIGN_CANDIDATE",
+      "evidence": ["DESIGN_CONTRACT.json", "AUTHORITY_LIFECYCLE.md", "CEREMONY_SPEC.md", "SAGA_AND_ANCHORING.md", "SIGNING_VECTOR_SPEC.md", "RECOVERY_MATRIX.md", "MONITORING_AND_QUOTAS.md"]
+    },
+    {
+      "id": "CEREMONY-REQUIREMENTS-TRACED",
+      "claim": "Every local/outside council requirement is mapped to a normative design surface and at least one frozen future test.",
+      "state": "VERIFIED_DESIGN_CANDIDATE",
+      "evidence": ["REQUIREMENTS_TRACEABILITY.md", "FAILURE_TEST_PLAN.md"]
+    },
+    {
+      "id": "CEREMONY-NO-EFFECTS",
+      "claim": "The design run performed no provider, network, key, hardware, service, or source-implementation operation.",
+      "state": "VERIFIED",
+      "evidence": ["OPERATION.json", "RECONCILIATION.json"]
+    },
+    {
+      "id": "CEREMONY-SECURE",
+      "claim": "The proposed ceremony is securely implemented or production-ready.",
+      "state": "NOT_CLAIMED",
+      "evidence": []
+    },
+    {
+      "id": "CEREMONY-PIV-INTEROPERABLE",
+      "claim": "A physical YubiKey/PIV implementation has passed portable vector and device-selection tests.",
+      "state": "OUT_OF_SCOPE",
+      "evidence": []
+    },
+    {
+      "id": "CEREMONY-OS-SOLE-WRITER",
+      "claim": "OS permissions currently prevent models or contractors from writing the authority stores.",
+      "state": "UNVERIFIED_FUTURE_GATE",
+      "evidence": ["FAILURE_TEST_PLAN.md#OS-01"]
+    }
+  ]
+}

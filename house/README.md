@@ -61,6 +61,13 @@ retains append-only proof and revocation evidence while keeping private keys
 outside the harness. It remains candidate-only pending independent security
 review and does not claim a CA, YubiKey ceremony, or hostile-process boundary.
 
+The follow-on authority ceremony design is sealed under
+`workflow/runs/20260821T183908Z-authority-ceremony-design/`. It specifies owner
+and recovery roles, non-delegable capability ceilings, one-device-at-a-time
+hardware selection, durable intent reconciliation, protected checkpoints,
+bounded near-miss monitoring, 26 recovery scenarios, and 24 preregistered
+future tests. It authorizes no implementation or key operation.
+
 The ChatGPT-family auto switcher v0.1 is a separate offline policy module. It
 emits deterministic route receipts through a small JSON CLI, but cannot dispatch
 or alter the current Codex model. Its OMP-compatible receipt keeps role

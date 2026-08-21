@@ -1,2 +1,5 @@
 {"sequence":1,"kind":"design.operation.authorized","source_head":"7609fd5a8c12758b99a16cbbcfbd6f435596b1e9","authority":"user dot continuation after outside council","effects":{"provider_requests":0,"real_key_operations":0,"implementation_changes":0}}
 {"sequence":2,"kind":"design.plan.sealed","nodes":7,"claim_ceiling":"design proposal only","prior_councils":2}
+{"sequence":3,"kind":"design.documents.completed","documents":10,"recovery_scenarios":26,"frozen_test_ids":24}
+{"sequence":4,"kind":"design.crosscheck.passed","requirements_mapped":10,"unresolved_safety_contradictions":0,"external_effects":0}
+{"sequence":5,"kind":"design.operation.closed","disposition":"SEALED_DESIGN_CANDIDATE_NO_IMPLEMENTATION_AUTHORITY"}

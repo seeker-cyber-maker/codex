@@ -1,0 +1,29 @@
+{
+  "schema": "project-operation-reconciliation/1",
+  "operation_id": "authority-ceremony-design-v0",
+  "terminal_state": "RECONCILED_DESIGN_CANDIDATE",
+  "observed": {
+    "provider_requests": 0,
+    "network_requests": 0,
+    "real_key_operations": 0,
+    "hardware_operations": 0,
+    "private_keys_generated_or_persisted": 0,
+    "service_changes": 0,
+    "database_changes": 0,
+    "source_implementation_changes": 0,
+    "design_documents": 10,
+    "machine_readable_contracts": 1,
+    "frozen_future_tests": 24,
+    "council_requirements_unmapped": 0
+  },
+  "discrepancies": [],
+  "remaining_boundaries": [
+    "Stage 0 pure canonicalization and fixed-vector implementation",
+    "Stage 1 candidate/service implementation",
+    "Stage 2 multi-process and crash testing",
+    "Stage 3 OS sole-writer and protected-anchor testing",
+    "Stage 4 software PIV interoperability",
+    "Stage 5 separately authorized physical YubiKey qualification",
+    "Stage 6 disposable disaster-recovery drill"
+  ]
+}
