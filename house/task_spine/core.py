@@ -13,7 +13,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from house.auto_switcher import route_task
+from house.auto_switcher import route_task, select_manual_route
 
 
 class TaskSpineError(RuntimeError):
@@ -96,7 +96,15 @@ class TaskSpine:
             raise TaskSpineError("work_id and title are required")
         return self._append("work_item.created", {"work_id": work_id, "title": title})
 
-    def create_task_packet(self, task_id: str, work_id: str, summary: str, *, case_type: str = "") -> dict[str, Any]:
+    def create_task_packet(
+        self,
+        task_id: str,
+        work_id: str,
+        summary: str,
+        *,
+        case_type: str = "",
+        manual_route_id: str = "",
+    ) -> dict[str, Any]:
         if not task_id or not work_id or not summary:
             raise TaskSpineError("task_id, work_id, and summary are required")
         known_work_ids = {event["payload"]["work_id"] for event in self._events() if event["kind"] == "work_item.created"}
@@ -106,9 +114,17 @@ class TaskSpine:
         if case_type:
             routing_input["case_type"] = case_type
         route_receipt = route_task(routing_input)
+        if manual_route_id:
+            try:
+                manual_selection = select_manual_route(manual_route_id)
+            except ValueError as exc:
+                raise TaskSpineError(str(exc)) from exc
+        else:
+            manual_selection = None
         return self._append("task_packet.created", {
             "task_id": task_id, "work_id": work_id, "summary": summary,
             "routing_receipt": route_receipt,
+            "manual_selection": manual_selection,
         })
 
     def append_worker_buffer(self, buffer_id: str, task_id: str, record_id: str, body: str) -> dict[str, Any]:
@@ -267,7 +283,7 @@ class TaskSpine:
             self.db.execute(
                 """CREATE TABLE task_read_model_next (
                 task_id TEXT PRIMARY KEY, work_id TEXT NOT NULL, summary TEXT NOT NULL,
-                routing_decision_sha256 TEXT NOT NULL, wip_buffer_sha256 TEXT,
+                routing_decision_sha256 TEXT NOT NULL, manual_selection_sha256 TEXT, wip_buffer_sha256 TEXT,
                 candidate_envelope_id TEXT, disposition TEXT NOT NULL
             )"""
             )
@@ -275,8 +291,10 @@ class TaskSpine:
             for event in self._events():
                 payload = event["payload"]
                 if event["kind"] == "task_packet.created":
+                    manual_selection = payload.get("manual_selection")
                     tasks[payload["task_id"]] = {"work_id": payload["work_id"], "summary": payload["summary"],
                                                    "routing_decision_sha256": payload["routing_receipt"]["decision_sha256"],
+                                                   "manual_selection_sha256": None if manual_selection is None else manual_selection["decision_sha256"],
                                                    "wip_buffer_sha256": None, "candidate_envelope_id": None, "disposition": "open"}
                 elif event["kind"] == "worker_buffer.sealed" and payload["task_id"] in tasks:
                     tasks[payload["task_id"]]["wip_buffer_sha256"] = payload["buffer_sha256"]
@@ -285,8 +303,8 @@ class TaskSpine:
                     tasks[payload["task_id"]]["disposition"] = payload["disposition"]
             for task_id, task in tasks.items():
                 self.db.execute(
-                    "INSERT INTO task_read_model_next VALUES (?, ?, ?, ?, ?, ?, ?)",
-                    (task_id, task["work_id"], task["summary"], task["routing_decision_sha256"],
+                    "INSERT INTO task_read_model_next VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                    (task_id, task["work_id"], task["summary"], task["routing_decision_sha256"], task["manual_selection_sha256"],
                      task["wip_buffer_sha256"], task["candidate_envelope_id"], task["disposition"]),
                 )
             if interrupt_before_swap:

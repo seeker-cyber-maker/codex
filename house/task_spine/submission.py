@@ -6,15 +6,14 @@ import hashlib
 import json
 from typing import Any
 
-from house.auto_switcher.policy import CASE_TYPE_PROFILE
+from house.auto_switcher.policy import CASE_TYPE_PROFILE, select_manual_route
 
 from .core import TaskSpine, TaskSpineError
-
 
 SUBMISSION_SCHEMA = "codex-house-task-submission/1"
 RECEIPT_SCHEMA = "codex-house-task-submission-receipt/1"
 _REQUIRED = {"schema", "idempotency_key", "requested_by", "title", "summary"}
-_OPTIONAL = {"case_type"}
+_OPTIONAL = {"case_type", "manual_route_id"}
 
 
 def _canonical(value: Any) -> str:
@@ -29,6 +28,16 @@ def _required_text(submission: dict[str, Any], field: str, maximum: int) -> str:
     value = submission.get(field)
     if not isinstance(value, str) or not value.strip():
         raise TaskSpineError(f"{field} must be non-empty text")
+    value = value.strip()
+    if len(value) > maximum:
+        raise TaskSpineError(f"{field} exceeds {maximum} characters")
+    return value
+
+
+def _optional_text(submission: dict[str, Any], field: str, maximum: int) -> str:
+    value = submission.get(field, "")
+    if not isinstance(value, str):
+        raise TaskSpineError(f"{field} must be text")
     value = value.strip()
     if len(value) > maximum:
         raise TaskSpineError(f"{field} exceeds {maximum} characters")
@@ -52,14 +61,23 @@ def prepare_submission(submission: dict[str, Any]) -> dict[str, Any]:
         "requested_by": _required_text(submission, "requested_by", 256),
         "title": _required_text(submission, "title", 512),
         "summary": _required_text(submission, "summary", 100_000),
-        "case_type": str(submission.get("case_type", "")).strip(),
+        "case_type": _optional_text(submission, "case_type", 128),
+        "manual_route_id": _optional_text(submission, "manual_route_id", 256),
     }
     if normalized["case_type"] and normalized["case_type"] not in CASE_TYPE_PROFILE:
         raise TaskSpineError("unknown case_type")
-    binding_payload = {key: normalized[key] for key in ("requested_by", "title", "summary", "case_type")}
+    if normalized["manual_route_id"]:
+        try:
+            select_manual_route(normalized["manual_route_id"])
+        except ValueError as exc:
+            raise TaskSpineError(str(exc)) from exc
+    binding_payload = {
+        key: normalized[key]
+        for key in ("requested_by", "title", "summary", "case_type", "manual_route_id")
+    }
     binding_sha256 = _sha256(binding_payload)
     identity_sha256 = hashlib.sha256(
-        f'{normalized["idempotency_key"]}:{binding_sha256}'.encode("utf-8")
+        f'{normalized["idempotency_key"]}:{binding_sha256}'.encode()
     ).hexdigest()
     return {
         **normalized,
@@ -93,13 +111,20 @@ def submit_task(spine: TaskSpine, submission: dict[str, Any]) -> dict[str, Any]:
     task_event = task_events.get(prepared["task_id"])
     if task_event is not None:
         payload = task_event["payload"]
-        if payload["work_id"] != prepared["work_id"] or payload["summary"] != prepared["summary"]:
+        existing_manual_route = (payload.get("manual_selection") or {}).get("selected", {}).get("id", "")
+        if (
+            payload["work_id"] != prepared["work_id"]
+            or payload["summary"] != prepared["summary"]
+            or existing_manual_route != prepared["manual_route_id"]
+        ):
             raise TaskSpineError("derived task identity conflicts with journal content")
     else:
         task_event = spine.create_task_packet(
-            prepared["task_id"], prepared["work_id"], prepared["summary"], case_type=prepared["case_type"]
+            prepared["task_id"], prepared["work_id"], prepared["summary"],
+            case_type=prepared["case_type"], manual_route_id=prepared["manual_route_id"],
         )
     routing = task_event["payload"]["routing_receipt"]
+    manual_selection = task_event["payload"].get("manual_selection")
     unsigned_receipt = {
         "schema": RECEIPT_SCHEMA,
         "state": "RESUMED_PARTIAL" if resumed else "CREATED",
@@ -111,6 +136,8 @@ def submit_task(spine: TaskSpine, submission: dict[str, Any]) -> dict[str, Any]:
         "task_id": prepared["task_id"],
         "case_type": routing["request"]["case_type"],
         "routing_decision_sha256": routing["decision_sha256"],
+        "model_advisory": routing["model_advisory"],
+        "manual_selection_sha256": None if manual_selection is None else manual_selection["decision_sha256"],
         "dispatch": "NOT_ATTEMPTED",
     }
     receipt = {**unsigned_receipt, "receipt_sha256": _sha256(unsigned_receipt)}

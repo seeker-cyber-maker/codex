@@ -3,7 +3,9 @@
 `house.task_spine` is the first headless Dream House authority-path fixture.
 Its canonical record is an append-only SQLite journal; its task read model is
 derived and disposable. A Task Packet stores the no-dispatch routing receipt
-from `house.auto_switcher`.
+from `house.auto_switcher`. It may also preserve a separately hash-bound manual
+route selection; that operator choice never replaces the automatic receipt or
+causes a dispatch.
 
 Candidate admission requires all of the following: a sealed task-scoped worker
 buffer, complete result envelope, import proposal, explicit lead authorization,
@@ -26,6 +28,12 @@ derives stable work and task identities, resumes matching partial creation, and
 returns the exact stored receipt on retry. Reusing a key with different content
 fails closed. `requested_by` is conserved as `ASSERTED_UNVERIFIED`; signature
 verification remains a later trust-service boundary.
+
+Submission receipts retain the router's advisory model/effort recommendation.
+That is operational advice only: Terra is the normal implementation class, Sol
+is reserved for consequential planning/review, and Luna/Spark are constrained
+to routine bounded leaves. No receipt switches a client model or starts a
+worker.
 
 The local inbox/controller is a separate SQLite queue in front of that
 adapter. Producers can enqueue raw JSON, while one finite leased controller

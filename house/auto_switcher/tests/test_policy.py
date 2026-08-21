@@ -90,6 +90,28 @@ class AutoSwitcherTests(unittest.TestCase):
         self.assertEqual(review["profile"], {"model_class": "plan", "reasoning_effort": "high", "omp_policy": "quality_first"})
         self.assertEqual(critical["profile"], {"model_class": "plan", "reasoning_effort": "xhigh", "omp_policy": "quality_first"})
 
+    def test_advisory_recommends_terra_for_implementation_and_sol_for_review(self) -> None:
+        implementation = route_task({"summary": "implement a Python feature with tests"})
+        review = route_task({"summary": "review this evidence-backed architecture"})
+        self.assertEqual(implementation["model_advisory"], {
+            "mode": "ADVISORY_NO_SWITCH",
+            "recommended_model": "gpt-5.6-terra",
+            "reasoning_effort": "medium",
+            "eligible_leaf_worker": None,
+            "reason": "implementation or synthesis needs reliable multi-step work",
+            "reassess_trigger": "architecture, security, or repeated verification failure",
+        })
+        self.assertEqual(review["model_advisory"]["recommended_model"], "gpt-5.6-sol")
+        self.assertEqual(review["model_advisory"]["reasoning_effort"], "high")
+
+    def test_advisory_allows_luna_spark_only_for_bounded_routine_work(self) -> None:
+        routine = route_task({"summary": "summarize this short service status"})
+        long_context = route_task({"summary": "summarize this short service status", "context_tokens": 24_001})
+        self.assertEqual(routine["model_advisory"]["recommended_model"], "gpt-5.6-luna")
+        self.assertEqual(routine["model_advisory"]["eligible_leaf_worker"], "gpt-5.3-codex-spark")
+        self.assertEqual(long_context["model_advisory"]["recommended_model"], "gpt-5.6-terra")
+        self.assertIsNone(long_context["model_advisory"]["eligible_leaf_worker"])
+
     def test_pinned_case_type_overrides_keyword_role(self) -> None:
         receipt = route_task({"summary": "summarize a kernel fault", "case_type": "systems_critical"})
         self.assertEqual(receipt["profile"], {"model_class": "plan", "reasoning_effort": "xhigh", "omp_policy": "quality_first"})

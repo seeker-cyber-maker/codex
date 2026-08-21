@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-import tempfile
-import unittest
-from pathlib import Path
 import contextlib
 import io
 import json
+import tempfile
+import unittest
+from pathlib import Path
 
 from house.task_spine import TaskSpine, TaskSpineError
 from house.task_spine.cli import main
@@ -75,6 +75,25 @@ class TaskSpineTests(unittest.TestCase):
             self.spine.create_task_packet("task-x", "missing-work", "do work")
         with self.assertRaisesRegex(TaskSpineError, "unknown task"):
             self.spine.append_worker_buffer("buffer-x", "missing-task", "record-x", "report")
+
+    def test_manual_selection_is_projected_without_replacing_auto_route(self) -> None:
+        self.spine.create_work_item("work-manual", "Manual route test")
+        event = self.spine.create_task_packet(
+            "task-manual", "work-manual", "implement a bounded feature", manual_route_id="daybreak-blue-personal"
+        )
+        payload = event["payload"]
+        self.assertEqual(payload["routing_receipt"]["selected"]["id"], "chatgpt-codex-direct")
+        self.assertEqual(payload["routing_receipt"]["model_advisory"]["recommended_model"], "gpt-5.6-terra")
+        self.assertEqual(payload["manual_selection"]["selected"]["id"], "daybreak-blue-personal")
+        rows = self.spine.rebuild_read_model()
+        manual = next(row for row in rows if row["task_id"] == "task-manual")
+        self.assertEqual(manual["manual_selection_sha256"], payload["manual_selection"]["decision_sha256"])
+
+    def test_invalid_manual_selection_does_not_append_task_event(self) -> None:
+        before = len(self.spine.journal_events())
+        with self.assertRaisesRegex(TaskSpineError, "unknown route"):
+            self.spine.create_task_packet("task-invalid", "work-1", "do work", manual_route_id="missing-route")
+        self.assertEqual(len(self.spine.journal_events()), before)
 
     def test_cli_demo_and_rebuild_use_the_same_journal(self) -> None:
         database = str(Path(self.tempdir.name) / "cli.sqlite")

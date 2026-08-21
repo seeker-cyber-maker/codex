@@ -69,6 +69,31 @@ class TaskSubmissionTests(unittest.TestCase):
         with self.assertRaisesRegex(TaskSpineError, "unknown case_type"):
             submit_task(self.spine, submission(case_type="make_it_magic"))
 
+    def test_manual_daybreak_selection_is_separate_from_auto_advisory(self) -> None:
+        receipt = submit_task(self.spine, submission(
+            summary="implement a bounded Python feature with tests",
+            case_type="app_delivery",
+            manual_route_id="daybreak-blue-personal",
+        ))
+        task_event = self.spine.journal_events("task_packet.created")[0]
+        payload = task_event["payload"]
+        self.assertEqual(payload["routing_receipt"]["selected"]["id"], "chatgpt-codex-direct")
+        self.assertEqual(receipt["model_advisory"]["recommended_model"], "gpt-5.6-terra")
+        self.assertEqual(payload["manual_selection"]["state"], "MANUAL_SELECTED")
+        self.assertEqual(payload["manual_selection"]["selected"]["id"], "daybreak-blue-personal")
+        self.assertEqual(payload["manual_selection"]["dispatch"], "NOT_ATTEMPTED")
+        self.assertTrue(receipt["manual_selection_sha256"])
+
+    def test_invalid_manual_route_fails_before_journal_mutation(self) -> None:
+        with self.assertRaisesRegex(TaskSpineError, "not manually selectable"):
+            submit_task(self.spine, submission(manual_route_id="chatgpt-codex-direct"))
+        self.assertEqual(self.spine.journal_events(), [])
+
+    def test_manual_route_is_bound_into_idempotency(self) -> None:
+        submit_task(self.spine, submission())
+        with self.assertRaisesRegex(TaskSpineError, "different content"):
+            submit_task(self.spine, submission(manual_route_id="daybreak-blue-personal"))
+
     def test_cli_submit_replays_the_exact_receipt(self) -> None:
         packet_path = Path(self.tempdir.name) / "submission.json"
         packet_path.write_text(json.dumps(submission()), encoding="utf-8")

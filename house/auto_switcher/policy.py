@@ -94,6 +94,37 @@ OMP_PROFILE = {
     "general": ("default", "medium", "balanced"),
 }
 
+# These are visible, deterministic deployment advisories for the current
+# ChatGPT/Codex family. They do not operate a client switch or dispatch a
+# worker. Spark is a bounded leaf-worker alternative only; the task spine and
+# its lead remain responsible for scope, authority, and acceptance.
+MODEL_CLASS_ADVISORIES = {
+    "smol": {
+        "recommended_model": "gpt-5.6-luna",
+        "eligible_leaf_worker": "gpt-5.3-codex-spark",
+        "reason": "routine, bounded, low-consequence work",
+        "reassess_trigger": "anomaly, mutation, or evidence conflict",
+    },
+    "task": {
+        "recommended_model": "gpt-5.6-terra",
+        "eligible_leaf_worker": None,
+        "reason": "implementation or synthesis needs reliable multi-step work",
+        "reassess_trigger": "architecture, security, or repeated verification failure",
+    },
+    "plan": {
+        "recommended_model": "gpt-5.6-sol",
+        "eligible_leaf_worker": None,
+        "reason": "high-consequence planning, review, or exact verification",
+        "reassess_trigger": "after the consequential gate completes",
+    },
+    "default": {
+        "recommended_model": "gpt-5.6-terra",
+        "eligible_leaf_worker": None,
+        "reason": "ordinary mixed-scope work",
+        "reassess_trigger": "case type becomes clear or scope changes",
+    },
+}
+
 # Snapshot of the observed OMP control semantics.  A role selects a permitted
 # model class; ``defaultThinkingLevel: auto`` is a separate provider thinking
 # control.  This policy deliberately records both rather than conflating the
@@ -223,6 +254,19 @@ def select_profile(role: str, risk: str, context_tokens: int, case_type: str = "
     return {"model_class": model_class, "reasoning_effort": effort, "omp_policy": policy}
 
 
+def model_advisory(profile: dict[str, str]) -> dict[str, str | None]:
+    """Map a profile class to a visible, no-dispatch current-family advisory."""
+    advisory = MODEL_CLASS_ADVISORIES[profile["model_class"]]
+    return {
+        "mode": "ADVISORY_NO_SWITCH",
+        "recommended_model": advisory["recommended_model"],
+        "reasoning_effort": profile["reasoning_effort"],
+        "eligible_leaf_worker": advisory["eligible_leaf_worker"],
+        "reason": advisory["reason"],
+        "reassess_trigger": advisory["reassess_trigger"],
+    }
+
+
 def omp_compatibility(task: dict[str, Any], profile: dict[str, str]) -> dict[str, str]:
     """Emit OMP-compatible controls without changing a live model session.
 
@@ -317,6 +361,7 @@ def route_task(task: dict[str, Any], routes: tuple[dict[str, Any], ...] = DEFAUL
     profile = select_profile(
         requested["role"], requested["risk"], requested["context_tokens"], requested["case_type"]
     )
+    advisory = model_advisory(profile)
     omp_compat = omp_compatibility(task, profile)
     return _receipt({
         "schema": "codex-house-auto-route/1",
@@ -326,6 +371,7 @@ def route_task(task: dict[str, Any], routes: tuple[dict[str, Any], ...] = DEFAUL
         "detected_case_types": detected_case_types,
         "selected": {key: selected[key] for key in ("id", "provider", "quality", "cost", "privacy", "delivery")},
         "profile": profile,
+        "model_advisory": advisory,
         "omp_compat": omp_compat,
         "rejected": rejected,
         "dispatch": "NOT_ATTEMPTED",

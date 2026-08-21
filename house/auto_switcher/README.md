@@ -23,6 +23,14 @@ applies hard filters for route health, route enablement, role,
 capabilities, privacy, context, quality, cost, and delivery. It emits a
 hash-bound decision receipt with `dispatch: NOT_ATTEMPTED`.
 
+Each receipt also contains a `model_advisory`, which remains separate from the
+route selection: `task` recommends Terra/medium for implementation and bounded
+synthesis; `plan` recommends Sol/high (or xhigh for critical work); and
+`smol` recommends Luna/low. Spark is recorded only as an eligible bounded leaf
+worker for `smol` work, never as a task-spine dispatch target. The advisory is
+`ADVISORY_NO_SWITCH`: it tells the operator when to switch or escalate, but
+does not change the active model.
+
 ## OMP compatibility
 
 OMP's model role and thinking controls are separate. This policy emits an
@@ -83,3 +91,8 @@ or that Daybreak differs from ordinary Sol on refusal behavior.
 `--manual-route daybreak-blue-personal` emits a hash-bound
 `MANUAL_SELECTED` receipt pointing to native Codex model selection. It performs
 no dispatch, prohibits fallback, and never substitutes the API sidecar.
+
+Task submission may carry that explicit `manual_route_id`. The journal preserves
+the automatic routing receipt and manual-selection receipt independently, binds
+the manual selection into idempotency, and rejects invalid or auto-eligible
+route IDs before it creates journal evidence.

@@ -4,8 +4,16 @@ from .policy import (
     DEFAULT_ROUTES,
     ROUTE_CATALOG,
     list_routes,
+    model_advisory,
     route_task,
     select_manual_route,
 )
 
-__all__ = ["DEFAULT_ROUTES", "ROUTE_CATALOG", "list_routes", "route_task", "select_manual_route"]
+__all__ = [
+    "DEFAULT_ROUTES",
+    "ROUTE_CATALOG",
+    "list_routes",
+    "model_advisory",
+    "route_task",
+    "select_manual_route",
+]
