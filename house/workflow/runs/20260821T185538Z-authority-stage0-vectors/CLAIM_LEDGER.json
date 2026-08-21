@@ -1,0 +1,35 @@
+{
+  "schema": "project-claim-ledger/1",
+  "claims": [
+    {
+      "id": "STAGE0-FV-01",
+      "claim": "The committed software vector regenerates exactly and is accepted by pure-Python P-256 math, cryptography 45.0.7, and OpenSSL 3.5.6.",
+      "state": "VERIFIED_SOFTWARE_FIXTURE",
+      "evidence": ["TEST_RECEIPT.json", "VALIDATION.json", "house/authority_stage0/fixtures/software_positive.json"]
+    },
+    {
+      "id": "STAGE0-FV-02",
+      "claim": "The restricted verifier rejects all preregistered Stage 0 encoding, DER, malleability, schema, and binding negative classes represented by the committed fixtures and tests.",
+      "state": "VERIFIED_SOFTWARE_FIXTURE",
+      "evidence": ["TEST_RECEIPT.json", "house/authority_stage0/fixtures/software_negative.json"]
+    },
+    {
+      "id": "STAGE0-FV-03",
+      "claim": "Changing any tested domain or binding field changes the digest and invalidates the original signature.",
+      "state": "VERIFIED_SOFTWARE_FIXTURE",
+      "evidence": ["TEST_RECEIPT.json", "house/authority_stage0/tests/test_vectors.py"]
+    },
+    {
+      "id": "STAGE0-RFC8785-GENERAL",
+      "claim": "The canonicalizer is a complete general-number RFC 8785 implementation.",
+      "state": "NOT_CLAIMED",
+      "evidence": []
+    },
+    {
+      "id": "STAGE0-PRODUCTION-AUTHORITY",
+      "claim": "The authority path, service isolation, key custody, PIV interoperability, concurrency, crash safety, or production readiness is established.",
+      "state": "NOT_CLAIMED",
+      "evidence": []
+    }
+  ]
+}

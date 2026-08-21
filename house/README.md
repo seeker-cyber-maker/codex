@@ -68,6 +68,14 @@ hardware selection, durable intent reconciliation, protected checkpoints,
 bounded near-miss monitoring, 26 recovery scenarios, and 24 preregistered
 future tests. It authorizes no implementation or key operation.
 
+Authority Stage 0 is sealed under
+`workflow/runs/20260821T185538Z-authority-stage0-vectors/`. The isolated
+`authority_stage0/` module fixes a restricted canonical JSON profile and public
+deterministic software P-256 vectors. Exact regeneration, strict negative
+cases, three verifier paths, and 51 existing regressions pass. This does not
+activate live authority or establish service, hardware, key-custody, crash, or
+production behavior.
+
 The ChatGPT-family auto switcher v0.1 is a separate offline policy module. It
 emits deterministic route receipts through a small JSON CLI, but cannot dispatch
 or alter the current Codex model. Its OMP-compatible receipt keeps role

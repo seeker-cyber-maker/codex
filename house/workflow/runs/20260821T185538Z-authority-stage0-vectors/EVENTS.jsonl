@@ -1,2 +1,6 @@
 {"sequence":1,"kind":"stage0.authorized","source_head":"df43dba0a3c8cd68ccd8582116a88aac8bcd4136","scope":"isolated canonicalization and software vectors only"}
 {"sequence":2,"kind":"stage0.plan.sealed","acceptance":["FV-01","FV-02","FV-03"],"external_effect_budget":0}
+{"sequence":3,"kind":"stage0.implementation.committed","commit":"466d6510c5152772cf74f6e03b744de001850a25","positive_vectors":1,"negative_vectors":11}
+{"sequence":4,"kind":"stage0.verification.passed","verifiers":["pure-python","cryptography-45.0.7","OpenSSL-3.5.6"],"stage0_tests":14}
+{"sequence":5,"kind":"stage0.regression.passed","task_spine_tests":39,"auto_switcher_tests":12,"external_effects":0}
+{"sequence":6,"kind":"stage0.operation.closed","disposition":"SEALED_STAGE0_SOFTWARE_FIXTURE_NO_LIVE_AUTHORITY"}

@@ -1,0 +1,27 @@
+{
+  "schema": "project-operation-reconciliation/1",
+  "operation_id": "authority-stage0-vectors-v0",
+  "terminal_state": "RECONCILED_SOFTWARE_FIXTURE",
+  "observed": {
+    "positive_vectors": 1,
+    "explicit_negative_vectors": 11,
+    "stage0_tests_passed": 14,
+    "legacy_tests_passed": 51,
+    "independent_verifier_paths": 3,
+    "provider_requests": 0,
+    "network_requests": 0,
+    "real_key_operations": 0,
+    "hardware_operations": 0,
+    "service_changes": 0,
+    "database_changes": 0
+  },
+  "discrepancies": [
+    "Repository-wide Ruff is not claimed: six pre-existing findings remain in task_spine/auto_switcher files outside this slice."
+  ],
+  "remaining_boundaries": [
+    "Stage 1 single-process temporary authority and inbox databases requires a new implementation grant",
+    "Stage 2 concurrency, kill-point, disk, and clock tests remain unimplemented",
+    "Stage 3 OS sole-writer and service isolation remain untested",
+    "Stages 4 through 6 emulator, physical hardware, and recovery drills remain separately gated"
+  ]
+}

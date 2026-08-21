@@ -1,0 +1,23 @@
+{
+  "schema": "project-source-seal/1",
+  "repository": "/Users/tiga/Documents/Codex_Projects/codex-dream-house",
+  "branch": "codex/dream-house-auto-switcher",
+  "source_head": "df43dba0a3c8cd68ccd8582116a88aac8bcd4136",
+  "plan_commit": "eec180ccdc",
+  "implementation_commit": "466d6510c5152772cf74f6e03b744de001850a25",
+  "source_sha256": {
+    "README.md": "2e14a48600a80d9a1e90f81fd0b1355f50f92b787c579842a66d94597eb6f36d",
+    "__init__.py": "9e73f4eac0288f66814ad8482c0d63929435fcffa9cf47bfd3e48dc4e8202906",
+    "canonical.py": "cce7998a421445e356b0d8d8996c4cdcc2c19900e7ced407fc56488e0551d757",
+    "p256.py": "feccb2eb8f41d169726145d384fd3357068b1fe3ed6b7b34008e2bcfc6509631",
+    "profile.py": "3161bd77f685420050858a6a59b70cb5220ad86c3ad2ac1412f7ce42c5ea579a",
+    "vector_tool.py": "790951365681eced1322287b33c14b377e9504192ba203fbc0b6b9923ac77935",
+    "verify.py": "672323359b40d791a3c9cdb61188d725b78aecb6b1feb4fd3363884f952588a7",
+    "tests/test_canonical.py": "dd11f25607a66814109b141b884c21acb5471909320110daeb95a5fe262d74cf",
+    "tests/test_vectors.py": "42ca982b15232ac9e6c2507b3dd36754405d253308f7b1b4dd8fc71ff4270256",
+    "fixtures/software_positive.json": "c976f369efd0c7647d63ea18584dc428e37f2f553b0370815c36cbaedf1e2ea1",
+    "fixtures/software_negative.json": "ded1bb5367dec17a08c381b578bd7f9460a665cf274277b212c57e71a93e12ce"
+  },
+  "test_receipt_sha256": "9d29ba78f53ccd00027fd2a75061f3c980a5b6259509e1f64801fd46d45f2d0e",
+  "disposition": "SEALED_STAGE0_SOFTWARE_FIXTURE_NO_LIVE_AUTHORITY"
+}

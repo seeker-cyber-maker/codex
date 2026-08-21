@@ -1,0 +1,53 @@
+{
+  "schema": "codex-house-test-receipt/1",
+  "run_id": "20260821T185538Z-authority-stage0-vectors",
+  "completed_at": "2026-08-21T19:04:22Z",
+  "implementation_commit": "466d6510c5152772cf74f6e03b744de001850a25",
+  "environment": {
+    "python": "3.13.13",
+    "cryptography": "45.0.7",
+    "openssl": "3.5.6"
+  },
+  "checks": [
+    {
+      "command": "python3 -m house.authority_stage0.vector_tool check",
+      "status": "passed",
+      "observation": "fixtures: exact"
+    },
+    {
+      "command": "python3 -m house.authority_stage0.verify",
+      "status": "passed",
+      "observation": "cryptography, pure-Python, and OpenSSL accepted"
+    },
+    {
+      "command": "python3 -m unittest discover -s house/authority_stage0/tests -p 'test_*.py'",
+      "status": "passed",
+      "tests": 14
+    },
+    {
+      "command": "python3 -m unittest discover -s house/task_spine/tests -p 'test_*.py'",
+      "status": "passed",
+      "tests": 39
+    },
+    {
+      "command": "python3 -m unittest discover -s house/auto_switcher/tests -p 'test_*.py'",
+      "status": "passed",
+      "tests": 12
+    },
+    {
+      "command": "ruff format --check house/authority_stage0 && ruff check house/authority_stage0",
+      "status": "passed",
+      "files": 10
+    },
+    {
+      "command": "python3 -m compileall -q house/authority_stage0 house/task_spine house/auto_switcher",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m json.tool fixture files; git diff --check",
+      "status": "passed"
+    }
+  ],
+  "known_preexisting_observation": "A broad Ruff check over task_spine and auto_switcher reports six pre-existing style findings outside the Stage 0 slice; their 51 behavioral regressions pass and they were not modified.",
+  "result": "passed"
+}
