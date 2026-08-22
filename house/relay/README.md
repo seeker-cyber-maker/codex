@@ -26,6 +26,11 @@ envelope-status views, while each write-like route returns `418` with an
 explicit pending-integration receipt. A listener, browser session, and human
 authority gate remain separate future work.
 
+`render_dashboard_html()` turns one exact, already-frozen adapter response into
+an inert, self-contained dashboard document. It does not call the adapter or
+bind a viewer; any later one-shot viewer binding must preserve the established
+loopback capability and observe-only gates.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

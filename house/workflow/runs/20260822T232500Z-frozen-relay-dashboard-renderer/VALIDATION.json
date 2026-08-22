@@ -1,0 +1,23 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "frozen relay dashboard renderer",
+  "checks": [
+    {
+      "name": "focused relay tests",
+      "command": "python3 -m unittest house.relay.tests.test_relay house.relay.tests.test_directory house.relay.tests.test_cli house.relay.tests.test_dashboard house.relay.tests.test_dashboard_view",
+      "result": "14 passed"
+    },
+    {
+      "name": "full House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "168 passed"
+    },
+    {
+      "name": "static checks",
+      "command": "python3 -m compileall -q house/relay && ruff check house/relay && ruff format --check house/relay && git diff --check",
+      "result": "pass"
+    }
+  ],
+  "claim_ceiling": "The renderer formats one already-frozen response. It does not call the adapter, relay, worker, provider, browser, listener, or authority path."
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "a40a13e135736fe1dcf3297d1424dac68ce91f71",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/dashboard_view.py": "b810a68a34a7bf94d377b26d2230727ab3ad5bd203ccd2d7f2cfcfdf1f047c4f",
+    "house/relay/tests/test_dashboard_view.py": "dd25c50ae3a4b62e8884a4906deb8b86c4e6ce6eef92483686f9c9c268d4a380"
+  },
+  "disposition": "Static offline renderer accepted by deterministic tests. Listener, write, and authority integration remain blocked."
+}
