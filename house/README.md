@@ -94,13 +94,16 @@ The future dashboard must use this exact same adapter rather than add a second
 task-creation path. See `operator_surface/README.md` and
 `workflow/runs/20260821T234101Z-operator-task-enqueue/`.
 
-`worker_exec/` is the next guarded boundary: it can freeze one canonical task
-card, workspace, executable hash, output reservation, fixed read-only argv,
-and wall-time cap into an immutable operation record. Its only executable
-surface is an injected fake runner for deterministic tests. Live `codex exec`
-remains blocked until the separately sealed runtime-qualification guard matrix
-adds controller state, cancellation/reconciliation, and a pinned CLI contract.
-See `operator_surface/README.md`.
+`worker_exec/` is the guarded runtime-qualification boundary: it can freeze one
+canonical task card, workspace, executable hash, output reservation, fixed
+read-only argv, and wall-time cap into an immutable operation record. Its
+persisted controller supplies finite lease fencing and a blocked reconciliation
+state. A pinned `codex-cli 0.147.0` argument contract requires the admitted
+`exec` flags and rejects the unadmitted `--ask-for-approval` flag; a local
+fixture supervisor proves process-group timeout, termination, and reaping.
+These are offline safety primitives only. No module starts `codex`, contacts a
+provider, imports worker output, or admits a task result. See
+`workflow/runs/20260822T002448Z-codex-exec-worker-launch/`.
 
 The integration-health gate is a dependency-free, read-only evaluator for
 future iTerm, provider, cache-path, and hook bindings. A strict trusted

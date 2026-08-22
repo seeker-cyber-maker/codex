@@ -11,7 +11,11 @@ reconciliation state. This avoids misrepresenting a prepared
 command, an advisory model route, or a subprocess exit as an assigned/accepted
 agent result.
 
-The next slice must add controller-owned lifecycle state, process-group
-cancellation/reaping, reconciliation, and a version-pinned CLI argument
-contract. It must not use this design review or the fake runner as authority to
-consume provider quota or write a task workspace.
+The required controller-owned lifecycle state, process-group
+cancellation/reaping fixture, and version-pinned CLI argument contract are now
+implemented as offline safety primitives. The captured installed grammar
+confirms that `--ask-for-approval` is not admitted by `codex exec`, so it is
+omitted from the fixed argv. This does not use the design review, the fixture,
+or the fake runner as authority to consume provider quota or write a task
+workspace. The next boundary is a fresh full-profile review of any proposed
+live-launch interface and its pre-spawn/reconciliation behavior.

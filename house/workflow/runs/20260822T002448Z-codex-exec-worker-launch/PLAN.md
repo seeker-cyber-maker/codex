@@ -17,7 +17,8 @@ subprocess/provider effect; it uses argv, never a shell.
 ## Safe defaults
 
 - sandbox: `read-only`
-- approval: `untrusted`
+- approval: omitted; installed `codex exec` does not accept
+  `--ask-for-approval`, and no automatic approval mode is admitted
 - wall cap: 600 seconds
 - model: configured Codex default unless the task explicitly requested a
   specific model
@@ -42,4 +43,5 @@ accepted task result.
 - Tampering, unknown task, non-directory workspace, unsafe sandbox, stale
   executable identity, and missing explicit execution consent fail closed.
 - Fake-runner tests cover successful and failed subprocess observations without
-  contacting a provider.
+  contacting a provider. A local fixture-only supervisor separately proves
+  bounded process-group cancellation and reaping.

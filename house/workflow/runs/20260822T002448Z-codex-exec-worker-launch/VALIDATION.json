@@ -6,12 +6,12 @@
     {
       "name": "focused worker-exec guard matrix",
       "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
-      "result": "5 tests passed: generic model omission, explicit model-only path, record/executable/output drift rejection, explicit fake-runner gating, and persistent controller lease/block reconciliation"
+      "result": "10 tests passed: generic model omission, explicit model-only path, record/executable/output drift rejection, explicit fake-runner gating, persistent controller lease/block reconciliation, pinned CLI grammar validation, and fixture-only normal/timeout process-group reaping"
     },
     {
       "name": "full House regression",
       "command": "python3 -m unittest discover -s house -p 'test_*.py'",
-      "result": "148 tests passed"
+      "result": "153 tests passed"
     },
     {
       "name": "static checks",
@@ -22,7 +22,12 @@
       "name": "independent plan review",
       "evidence": "council/synthesis.md",
       "result": "three local-only same-family reviewers narrowly accepted the offline controller and blocked live dispatch"
+    },
+    {
+      "name": "installed CLI grammar capture",
+      "command": "codex --version; codex exec --help; validate_cli_contract(...)",
+      "result": "codex-cli 0.147.0 matched the pinned argument contract with contract SHA-256 bb8c05c1d59f57cc906f155fd1b55aca5376a3cea566253baff7848ff0a0cccc; direct help probe rejects --ask-for-approval; no task prompt or provider call was made"
     }
   ],
-  "claim_ceiling": "This module prepares and verifies records and can call an injected fake runner only. It does not start codex, contact a provider, consume quota, cancel a process, ingest a result, or dispatch an agent."
+  "claim_ceiling": "This module prepares and verifies records, validates a captured CLI grammar, and can call an injected fake runner or a local disposable fixture supervisor only. It does not start Codex for a task, contact a provider, consume quota, ingest a result, or dispatch an agent."
 }
