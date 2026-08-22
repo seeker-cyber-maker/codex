@@ -16,6 +16,10 @@ keeps static directory lookup distinct from relay database operations and
 requires explicit artifact/database paths for every operation. It has no
 socket, worker, provider, or automatic-routing path.
 
-The next smallest authorized step is a separately reviewed loopback API design
-or dashboard adapter. It must call this exact CLI/core contract rather than
-constructing a competing relay state path.
+`house.relay.dashboard.RelayDashboardAdapter` now defines the dashboard request
+contract without opening a port. It can prepare read-only directory/capability
+or status views; all write-like routes return 418 `integration_pending`.
+
+The next smallest authorized step is a separately reviewed one-shot dashboard
+renderer over a frozen adapter response. A persistent listener, browser write
+surface, and authority-gated mutation endpoint remain blocked.

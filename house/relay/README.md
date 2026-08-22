@@ -20,6 +20,12 @@ receipt path; `submit`, `receive`, `acknowledge`, `status`, and
 `verify-journal` require an explicit local relay database. It opens no socket
 and reads no provider configuration.
 
+`RelayDashboardAdapter` is the corresponding pure request contract for a future
+loopback dashboard. It binds no port: `GET` can prepare directory/capability or
+envelope-status views, while each write-like route returns `418` with an
+explicit pending-integration receipt. A listener, browser session, and human
+authority gate remain separate future work.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

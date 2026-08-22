@@ -1,6 +1,6 @@
 # Validation receipt
 
-- `python3 -m unittest house.relay.tests.test_relay house.relay.tests.test_directory house.relay.tests.test_cli`: 8 passed.
+- `python3 -m unittest house.relay.tests.test_relay house.relay.tests.test_directory house.relay.tests.test_cli house.relay.tests.test_dashboard`: 11 passed.
 - `python3 -m compileall -q house/relay`: passed.
 - `ruff check house/relay`: passed.
 - `ruff format --check house/relay`: passed.
@@ -11,6 +11,8 @@
   `248e1b48291ae596bfa609eb5b5970112fc871cd7bd2f613082f3c9ec32ecb42`.
 - The relay CLI returned the sealed Qwen3-VL recipient metadata and a static
   `vision` capability query with `NOT_ATTEMPTED`/`NO_AUTHORITY_GRANTED`.
+- The pure dashboard adapter permits only read-view preparation and returns 418
+  for submit/receive/acknowledgment routes; no listener was created.
 
 The full-suite command prints expected argument-validation errors from existing
 negative CLI fixtures; its exit status is successful.
