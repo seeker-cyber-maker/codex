@@ -1,0 +1,11 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "3289ff3452f5d053676e8536c46e962dcadad963",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/operator_preview.py": "a309302a7062d93be6dc3b0f420b26109be622e3e1842d653d6e8c0fa70b9b34",
+    "house/relay/tests/test_operator_preview.py": "b0ae761aa1aeccfb367bcbce11ee137c43084f9415b25871e17b8d52a7abad78",
+    "house/relay/__init__.py": "e4e9a8a9ffc4f2e179d1ff32f93538365b9b2e532743480574f7d3a11ca78eb2"
+  },
+  "disposition": "Core-profile local acceptance pending scoped commit; live operator action remains out of scope."
+}

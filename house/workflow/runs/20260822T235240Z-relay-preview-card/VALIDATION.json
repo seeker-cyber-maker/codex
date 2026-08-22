@@ -1,0 +1,26 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "static relay preview card",
+  "checks": [
+    {
+      "name": "relay and operator presentation tests",
+      "command": "python3 -m unittest house.relay.tests.test_operator_preview house.relay.tests.test_operator_registration house.relay.tests.test_dashboard_view house.relay.tests.test_dashboard_viewer house.operator_surface.tests.test_registry house.operator_surface.tests.test_cli",
+      "result": "43 passed",
+      "exit_code": 0
+    },
+    {
+      "name": "full House discovery suite",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "168 passed",
+      "exit_code": 0
+    },
+    {
+      "name": "static checks",
+      "command": "python3 -m compileall -q house/relay && ruff check changed files && ruff format --check changed files && git diff --check",
+      "result": "pass",
+      "exit_code": 0
+    }
+  ],
+  "claim_ceiling": "Static descriptor-only HTML. It does not retain dashboard content or capability material, construct/start a viewer, bind a listener, launch a browser, call iTerm, grant authority, mutate the relay, contact a worker/provider, accept terminal input, or open a reverse channel."
+}

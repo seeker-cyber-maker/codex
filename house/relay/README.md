@@ -41,6 +41,11 @@ contract: it hashes the inert document and prepares an exact display-only
 operator request. The descriptor contains neither the document nor a capability
 URL, and it does not construct/start a viewer or contact a browser or iTerm.
 
+`render_relay_preview_card_html()` is the descriptor-only presentation layer.
+It verifies both descriptor and command hashes, displays fixed control-plane
+fields and hashes, and deliberately omits dashboard content and all capability
+material. It has no interactive or transport behavior.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
