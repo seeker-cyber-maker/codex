@@ -1,0 +1,23 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "post-authority-interface parking check",
+  "checks": [
+    {
+      "name": "human-authority focused tests",
+      "command": "python3 -m unittest discover -s house/worker_exec/tests -p 'test_human_authority.py' -v",
+      "result": "2 passed"
+    },
+    {
+      "name": "USB helper syntax",
+      "command": "bash -n house/scripts/capture_usb_snapshot.sh house/scripts/diff_usb_snapshots.sh",
+      "result": "pass"
+    },
+    {
+      "name": "source diff consistency",
+      "command": "git diff --check 9aaba6752154763e9d7f5ba03953d854de03c0c6..31cc8e88bba75f02b4ba2190ec22cf82781f5533",
+      "result": "pass"
+    }
+  ],
+  "limitations": "This parking validation is scoped to the seven committed paths after the prior mock-only seal. The earlier full-House 166-test receipt remains historical evidence, not a fresh full-suite result for this parking action."
+}

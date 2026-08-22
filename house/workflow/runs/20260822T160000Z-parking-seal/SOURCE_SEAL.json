@@ -1,0 +1,17 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "state": "PARKED",
+  "source_commit": "31cc8e88bba75f02b4ba2190ec22cf82781f5533",
+  "source_tree": "ce7cee9166372249aa586b76ffd8e099634ddb3f",
+  "branch": "codex/dream-house-auto-switcher",
+  "base_commit": "9aaba6752154763e9d7f5ba03953d854de03c0c6",
+  "changed_path_count": 7,
+  "changed_paths_sha256": "4705927e13170e8dfe10a0420296ac4b035997a533260a217a0801dcfd35a832",
+  "backup": {
+    "remote": "git@github.com:seeker-cyber-maker/codex-dream-house.git",
+    "ref": "refs/heads/codex/dream-house-auto-switcher",
+    "expected_commit": "31cc8e88bba75f02b4ba2190ec22cf82781f5533",
+    "visibility": "PRIVATE"
+  },
+  "claim_ceiling": "This seals the parked Git source snapshot and its declared verification receipts. It does not authorize a configured runtime, provider access, task dispatch, model selection, or result admission."
+}
