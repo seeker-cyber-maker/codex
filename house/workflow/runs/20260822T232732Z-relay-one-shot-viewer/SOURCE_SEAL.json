@@ -1,0 +1,12 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "737440ebfb7f972952a98e448af3855c56889b85",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/dashboard_viewer.py": "62dc39fce30dcbe36764fa20b43eb4ebb5cee1c079def956894001220f9dfff6",
+    "house/relay/tests/test_dashboard_viewer.py": "0d18f1c7650ea2756b526e3293a7afd502ea814fa2d1cdf304152e8d8cdeda9f",
+    "house/relay/__init__.py": "a636425290377b7a97d0f9545a701ba01ccc3c8e5236161de9bb989fae313437",
+    "house/relay/README.md": "4fbf3475c7de6dd3c9c9df7f0d5c33b979bc7d582fb9028cc652c9777937f1c1"
+  },
+  "disposition": "Accepted by two final independent delta reviewers; operator/browser/iTerm binding remains outside this source seal."
+}

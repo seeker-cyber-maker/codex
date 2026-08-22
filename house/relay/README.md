@@ -31,6 +31,11 @@ an inert, self-contained dashboard document. It does not call the adapter or
 bind a viewer; any later one-shot viewer binding must preserve the established
 loopback capability and observe-only gates.
 
+`prepare_relay_dashboard_viewer()` is that explicit preparation seam. It
+constructs the existing capability-bound `OneShotLoopbackViewer` from a frozen
+response but does not call `start()`, launch a browser, register with iTerm, or
+open any worker, provider, write, terminal-input, or authority path.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
