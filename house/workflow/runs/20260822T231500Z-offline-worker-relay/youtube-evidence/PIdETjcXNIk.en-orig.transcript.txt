@@ -1,0 +1,1012 @@
+[00:00:00.000] What's up engineers? Indie Dev Dan here.
+[00:00:02.360] I have a simple question for you. What's
+[00:00:04.800] better than one GPT 5.5 Pi coding agent?
+[00:00:09.960] You guessed it, two GPT 5.5 Pi coding
+[00:00:13.640] agents. Let's push it further. What's
+[00:00:15.480] better than two isolated side-by-side
+[00:00:17.960] GPT 5.5 agents? Sure, you could add
+[00:00:20.680] another agent. Sure, you could change
+[00:00:22.320] the model, but we can do much better
+[00:00:24.680] than this. What about two GPT 5.5 agents
+[00:00:28.520] that actually work together?
+[00:00:31.560] What about three agents that work
+[00:00:33.240] together with unique models? What about
+[00:00:36.200] four models? So, here we have four Pi
+[00:00:39.240] coding agents and none of them is the
+[00:00:41.720] orchestrator. Instead, they're equals.
+[00:00:44.360] They're co-workers pinging every agent.
+[00:00:47.840] In this video, we'll understand what
+[00:00:50.320] type of agentic engineering we can
+[00:00:52.120] achieve if we gave our agents a true
+[00:00:55.560] two-way communication channel. By the
+[00:00:58.440] end of this video, you'll have a simple
+[00:01:00.400] yet powerful way to coordinate your
+[00:01:03.080] multi-agent systems. This gives us a
+[00:01:05.920] powerful flat agent hierarchy where the
+[00:01:09.200] best information wins, where the best
+[00:01:11.360] ideas win, and where your agents can
+[00:01:13.120] truly coordinate together to outperform
+[00:01:16.520] each other alone. Let's talk about
+[00:01:18.400] Pi-to-Pi two-way agent communication.
+[00:01:27.240] So, let's go ahead and reset here. Let's
+[00:01:29.480] de-hype this a little bit. Let's close
+[00:01:31.360] our agents. As you can see, one by one
+[00:01:33.200] as we close them, they leave the chat
+[00:01:35.680] room. They leave the communication pool.
+[00:01:38.200] We've got a production database on my
+[00:01:40.120] Mac mini. And this production database
+[00:01:42.640] has an issue. Some ProTier users are
+[00:01:44.680] getting locked out of pro features. So,
+[00:01:47.240] in order to fix this issue, I need to
+[00:01:48.640] reproduce it on my local developer
+[00:01:50.920] environment. This is a common
+[00:01:52.480] engineering workflow. You don't fix
+[00:01:54.240] things in production, and fix things on
+[00:01:55.880] your developer environment, and then you
+[00:01:57.200] deploy through staging, and then
+[00:01:59.120] eventually it hits production. The trick
+[00:02:01.000] here is there is sensitive information
+[00:02:03.720] on my Mac mini production environment
+[00:02:06.240] here, and I can't leak any PII while I'm
+[00:02:10.039] fixing this issue. We're not live coding
+[00:02:11.959] here, we're doing real engineering work
+[00:02:13.720] in production systems. Our pie-to-pie
+[00:02:16.400] agent-to-agent communication system is
+[00:02:18.600] perfect for this. So, I'll boot up two
+[00:02:20.280] agents here, one on my Mac mini, the
+[00:02:22.200] production server, and one on my M5
+[00:02:24.280] MacBook Pro, my dev machine. We'll do J
+[00:02:26.440] coms two, and we'll give this a name.
+[00:02:28.240] This is going to be production. J coms
+[00:02:30.280] one, name dev. We'll run some basic
+[00:02:32.800] pings to make sure both agents are up
+[00:02:34.480] and online. And then we're going to
+[00:02:35.640] paste in a production prompt here. This
+[00:02:38.040] is a prod gatekeeper agent. It has a
+[00:02:40.840] production database it's working with
+[00:02:42.760] that's been seeded. We're not going to
+[00:02:43.920] recreate it or anything. And you have a
+[00:02:46.080] team name. And then key piece here, we
+[00:02:48.120] have PII inside of this production code
+[00:02:51.040] base that we're not going to break. This
+[00:02:52.720] is personal identifiable information.
+[00:02:56.120] So, our production agent understands the
+[00:02:57.840] system, it understands what's available,
+[00:02:59.800] and it knows that it's not going to
+[00:03:01.400] expose any information to any other
+[00:03:04.560] agent on the network, okay? And now our
+[00:03:07.000] developer agent is going to get to work.
+[00:03:08.600] We need to reproduce this issue locally.
+[00:03:11.040] Here's our developer prompt. The key
+[00:03:12.680] here is this. Bring the affected slice
+[00:03:15.120] from production over with PII stripped
+[00:03:17.760] into your local dev DB so an engineer
+[00:03:20.120] can reproduce the issue locally. First,
+[00:03:22.800] in order to reproduce a production
+[00:03:24.440] database issue, you need the production
+[00:03:26.400] data. Here's where the magic happens.
+[00:03:28.640] Our agent sees the peer on the network,
+[00:03:31.200] right? It knows that it has connection
+[00:03:32.480] to a prod agent, and now it's going to
+[00:03:34.200] start working through things. So, it's
+[00:03:36.239] going to send a message, it's going to
+[00:03:37.320] send a prompt, and it's going to get
+[00:03:38.760] returned an ID, a message ID. Our agent
+[00:03:41.680] can now await this message, and our
+[00:03:43.840] production agent, as you can see here,
+[00:03:46.120] is getting to work on the production
+[00:03:48.440] side. But it's getting to work with all
+[00:03:50.640] redactions applied, right? It's not
+[00:03:52.960] going to expose any personal
+[00:03:54.680] identifiable information. Our agent is
+[00:03:56.960] going to work back and forth here, not
+[00:03:58.560] as individual agents, not as a sub
+[00:04:01.000] agent, not as workers, right? They're
+[00:04:03.200] going to work together as a team. It's a
+[00:04:06.280] simple, beautiful pattern, and it really
+[00:04:08.680] reflects how great work is done. And so,
+[00:04:11.720] our agent is learning about the local
+[00:04:13.600] DB. It's making sure that it's clean,
+[00:04:15.800] and it's starting to sync things while
+[00:04:17.959] keeping everything PII safe, right? So,
+[00:04:20.280] this is yet another place where if you
+[00:04:22.880] engineer things properly, if you prompt
+[00:04:25.320] things properly, you can do
+[00:04:26.520] extraordinary things in your agentic
+[00:04:29.200] systems. There are endless use cases for
+[00:04:32.040] agents that actually communicate and
+[00:04:34.320] work together. You can see there we got
+[00:04:35.840] another message back, and this process
+[00:04:38.560] is going to continue. So, we're going to
+[00:04:40.480] let our agents cook here. I want to take
+[00:04:42.040] the time to like highlight why
+[00:04:44.200] agent-to-agent communication is so
+[00:04:45.680] important, and highlight, of course,
+[00:04:47.400] once again, why the Pi Coding Agent is
+[00:04:49.760] really the only way that you get this
+[00:04:51.520] level of control out of your agents
+[00:04:53.760] here.
+[00:04:59.280] I think the most important thing to
+[00:05:00.400] start with here is understanding the
+[00:05:02.600] current problem, right? Agents can't
+[00:05:04.720] talk to each other. We know that there
+[00:05:06.240] is sub agent delegation and sub agent
+[00:05:09.200] prompting, right? And this is a great
+[00:05:10.840] pattern. It's a great start. Like if you
+[00:05:12.919] agree with this statement, we are just
+[00:05:14.440] scratching the surface of what the true
+[00:05:17.040] developer experience looks like for
+[00:05:19.600] agentic engineering, right? We don't
+[00:05:22.000] really even know what that form factor
+[00:05:23.680] is. I think very clearly in terminal
+[00:05:27.440] agents
+[00:05:29.280] the center point, but everything around
+[00:05:31.320] that from the agent harness to how we
+[00:05:33.440] manage contexts, models, agent scale,
+[00:05:35.919] tools, this is all a work in progress.
+[00:05:38.280] So, if we're not exploring the state
+[00:05:39.840] space of what's possible with our agent
+[00:05:41.919] communication and other agentic
+[00:05:44.680] workflows and patterns, uh we're going
+[00:05:46.480] to be stuck in the normal distribution,
+[00:05:48.360] the very beginning of what's possible.
+[00:05:50.320] So, sub agents, very important, very
+[00:05:52.200] cool, but this is just the beginning,
+[00:05:53.800] right? When you push further, you can
+[00:05:55.280] find a message queue, and this is what
+[00:05:57.520] the Cloud Code agent teams uses. So, you
+[00:05:59.720] have one agent that kind of sets up all
+[00:06:01.360] the message queue, and then it serves as
+[00:06:03.080] a message broker between agents. Another
+[00:06:05.520] great powerful pattern. You then have
+[00:06:07.080] things like agent chains, where you have
+[00:06:08.960] a deterministic set up workflow that
+[00:06:11.160] have individual nodes of agents. When
+[00:06:13.400] you combine this with code, you get
+[00:06:14.800] powerful AI developer workflows or
+[00:06:17.080] blueprints or representations of agents
+[00:06:20.440] plus code. This is a very, very powerful
+[00:06:22.600] framework, because it adds determinism
+[00:06:25.000] into the process, right? At any one of
+[00:06:26.680] these steps, you can insert code, and
+[00:06:28.440] it'll enhance what your agents can do.
+[00:06:30.080] So, very powerful stuff here, right?
+[00:06:31.520] But, um there's a problem with this. As
+[00:06:33.280] you can see, in every one of these
+[00:06:34.520] workflows, it is traveling information
+[00:06:37.160] in basically one direction, and it's
+[00:06:39.360] always a top-down way. Even if the
+[00:06:41.240] information comes back, it's a one-way
+[00:06:43.480] stream, right? It's never bidirectional.
+[00:06:45.640] So, what's the solution?
+[00:06:47.800] It's quite simple. Let your agents talk
+[00:06:50.240] to each other, right? Prompt response,
+[00:06:52.720] and then prompt response, okay?
+[00:06:55.680] Peer-to-peer, not
+[00:06:57.440] orchestrator-to-worker,
+[00:06:59.120] changes things. Here, agents are equals.
+[00:07:02.400] They're not parent and child, and this
+[00:07:04.040] unlocks, of course, bidirectional flows
+[00:07:06.520] of information, okay? Just two agents
+[00:07:08.640] communicating to each other. As you can
+[00:07:10.040] see here, our agents are still working
+[00:07:12.000] together to figure out these issues, to
+[00:07:14.520] really work through how to perfectly
+[00:07:16.880] reproduce the production slice. But, you
+[00:07:19.680] can push this across devices and across
+[00:07:22.200] multiple agents, right? And this looks
+[00:07:23.919] like exactly what you'd imagine, right?
+[00:07:25.640] Now, we have three agents in the
+[00:07:27.320] network. You might have a researcher,
+[00:07:28.800] coder, planner. These can be anything
+[00:07:30.880] under the sun. In our case, we have a
+[00:07:33.120] prod agent, and we have a developer
+[00:07:35.680] agent talking to each other across the
+[00:07:38.120] network, okay? But, you can just keep
+[00:07:39.919] scaling this up, right? And at some
+[00:07:41.600] point, it's going to be uh harmful,
+[00:07:44.080] right? Like there is a limit to how
+[00:07:45.400] useful this is. Um I'm not just trying
+[00:07:47.680] to sell you the upside here. There's
+[00:07:49.080] downsides to every approach. Great
+[00:07:50.920] engineering is all about managing
+[00:07:52.480] tradeoffs. At some level, you're not
+[00:07:54.400] going to want to use this pattern
+[00:07:55.520] anymore. And at some level, adding
+[00:07:57.440] agents doesn't help anything. But, there
+[00:08:00.040] is certainly a useful level to this
+[00:08:02.680] where you want to have bidirectional
+[00:08:04.880] agent-to-agent communication, where it's
+[00:08:06.840] very, very useful to have every agent
+[00:08:08.920] have access to every other agent, okay?
+[00:08:11.440] And so, why is this useful, right? Let's
+[00:08:13.919] let's really hit on this. Like I think
+[00:08:15.919] at the core of this, it comes down to
+[00:08:18.200] information hierarchies. If you have a
+[00:08:20.080] traditional software engineering job,
+[00:08:21.480] you work at a company that has a
+[00:08:23.520] hierarchy, right? For one reason or
+[00:08:25.840] another, there is someone at the top,
+[00:08:27.600] okay? And information usually travels
+[00:08:29.720] downstream, commands travel downstream,
+[00:08:31.680] objectives travel downstream, and then
+[00:08:34.120] it hits the person, usually the
+[00:08:36.000] engineers, who are actually building the
+[00:08:37.599] thing, right? And oftentimes, the best
+[00:08:40.000] information, the best decisions, the
+[00:08:42.159] best awareness about the system is all
+[00:08:44.600] the way down here, right? It's on the
+[00:08:46.440] worker level, right? It's It's you and
+[00:08:48.320] I, the engineers with their boots on the
+[00:08:49.680] ground every single day, putting in the
+[00:08:51.240] work to understand the system,
+[00:08:52.400] understand the objectives, and then
+[00:08:53.600] actually building it, right? The best
+[00:08:55.600] information is often times down here.
+[00:08:58.040] When you have these hierarchical
+[00:08:59.760] information systems, and I'm speaking in
+[00:09:02.040] a generic way, it doesn't just need to
+[00:09:03.560] be about the job. It doesn't just need
+[00:09:05.120] to be in a career setting. But, just
+[00:09:07.400] information structures like this, often
+[00:09:09.400] times the best ideas are down here. They
+[00:09:11.040] get stuck down here because they don't
+[00:09:12.560] have the right title, they don't have
+[00:09:14.400] the right authority, they don't have the
+[00:09:16.360] right say, right? And you've, you know,
+[00:09:18.400] you've probably heard this, right? But,
+[00:09:19.640] the best companies, the best structures
+[00:09:21.640] are flat, where there's communication
+[00:09:24.160] happening on every single level, where
+[00:09:26.200] everyone can just talk to the other to
+[00:09:28.280] get the job done, right? Nvidia is
+[00:09:30.200] really famous for this, very flat
+[00:09:31.960] reporting structures. Of course, Jensen
+[00:09:33.600] at the top, commanding that insane
+[00:09:36.640] company. But, then he has uh very few
+[00:09:38.280] direct reports, and then it spans from
+[00:09:40.360] there, right? But, startups are famous
+[00:09:41.920] for this, right? You have very, very
+[00:09:43.280] flat structures. All the best
+[00:09:45.520] information systems are flat. Why is
+[00:09:48.200] that? It's because you get valuable
+[00:09:50.160] information wins always over titles and
+[00:09:53.480] politics, okay? Ideas die in
+[00:09:55.800] hierarchies. So, that's why this is so
+[00:09:58.360] important. And And, you know, maybe you
+[00:10:00.280] think I'm anthropomorphizing this too
+[00:10:01.720] much. Maybe you think I am trying to
+[00:10:03.400] apply something where it doesn't belong.
+[00:10:05.320] I completely disagree. I think when you
+[00:10:07.120] really boil things down, everything is a
+[00:10:08.920] system. And a key part about every
+[00:10:11.840] system is that there is flows of
+[00:10:14.000] information inside of systems, and how
+[00:10:16.720] things flow, how the structures, the
+[00:10:19.040] nodes, and the actors in the system
+[00:10:21.320] communicate information matters, right?
+[00:10:23.800] This matters because oftentimes the best
+[00:10:26.440] ideas are down here. They're at the
+[00:10:28.880] bottom level. And so, this means that as
+[00:10:30.960] much as you can, you want to have flat
+[00:10:32.680] hierarchy structures, okay? But, on a
+[00:10:34.640] functional level, we can see that this
+[00:10:36.680] is uh useful for other reasons as well.
+[00:10:39.120] We have cross-device agent-to-agent
+[00:10:41.280] communication, right? We have a
+[00:10:42.800] production service. Say this is in the
+[00:10:45.120] EU,
+[00:10:46.440] right? Where everything has to be
+[00:10:47.839] redacted, everything has to be perfect,
+[00:10:50.160] and nothing can escape the device. But,
+[00:10:51.760] you still need to fix things, right? We
+[00:10:53.360] still need to do real engineering work.
+[00:10:55.040] So, this is a great system. We have
+[00:10:56.960] redacted information properly,
+[00:10:58.640] transferred it to our developer machine.
+[00:11:00.920] And as you can see here, the repro is
+[00:11:02.760] ready, the bug has been imported, okay?
+[00:11:04.920] PII is clean, okay? So, legitimate
+[00:11:07.600] engineering work happening here.
+[00:11:09.320] Obviously, this is not a real production
+[00:11:11.600] server. I'm using this as an example.
+[00:11:13.600] And now I can go ahead, debug, look at
+[00:11:15.520] my code, look at this slice of the
+[00:11:18.200] production database that has been
+[00:11:19.480] reproduced from production. And now I
+[00:11:21.280] can actually resolve the bug. And our
+[00:11:23.200] agents are really great at communicating
+[00:11:25.240] information like this. And that's
+[00:11:26.520] exactly what they've done, okay? So, we
+[00:11:27.880] have very simple two-way bidirectional
+[00:11:31.240] agent-to-agent communication. If I
+[00:11:32.720] needed to, I could come in here and
+[00:11:35.000] validate that everything looks good on
+[00:11:36.960] the production agent side, right? Do one
+[00:11:39.880] final check with the dev agent PRI safe.
+[00:11:43.240] The issue has been repro'd. We can talk
+[00:11:45.840] to any side that we need to, and they
+[00:11:48.040] can then communicate together to get the
+[00:11:50.160] job done. So, I hope you can see the
+[00:11:51.440] value proposition of this. I hope you
+[00:11:52.800] can see why agent-to-agent communication
+[00:11:54.360] is useful, even if you don't think that
+[00:11:55.880] the flat information hierarchies are
+[00:11:57.920] more performant for making sure that the
+[00:11:59.680] best ideas are the ones that always win.
+[00:12:02.080] This is great because now we have simple
+[00:12:04.560] multi-agent communication on different
+[00:12:06.800] devices, okay? And whenever we need to,
+[00:12:08.880] you know, let me just be clear about
+[00:12:09.880] this. Whenever we need to, I can add an
+[00:12:11.320] agent to the pool. So, if I type J
+[00:12:12.880] Comms, let's use four, I think that's
+[00:12:15.120] the GLM agent. You can see GLM added
+[00:12:17.240] here, and now it is part of the pool,
+[00:12:19.640] right? So, fantastic. How else can we
+[00:12:21.520] use this? Agent-to-agent communication,
+[00:12:23.200] it seems very powerful. We're not just
+[00:12:24.840] delegating work, which is in its own
+[00:12:26.600] right a very powerful communication
+[00:12:28.640] pattern, right? This isn't a
+[00:12:29.600] replacement. This is another option for
+[00:12:31.880] your agentic engineering. We can solve
+[00:12:33.800] other problems with it, right? Let let
+[00:12:35.040] let's walk through another example.
+[00:12:41.440] So, let's fire up a E2B agent. And in
+[00:12:45.120] fact, let's open up a new project here,
+[00:12:47.800] sandbox. Same deal, J Comms 2, and name
+[00:12:51.720] EXC dev agent project sandbox. So, we're
+[00:12:55.320] just getting our agents off this
+[00:12:57.120] network. This is a different pool to
+[00:12:59.160] communicate in, right? So, we still
+[00:13:00.320] still have our previous set there. And
+[00:13:01.839] you can actually see that this work here
+[00:13:03.720] was done. PII is safe. All the findings
+[00:13:06.040] are there. So, we verified by having our
+[00:13:08.120] production agent prompt our developer
+[00:13:10.000] agent. Fantastic. There we got the pass.
+[00:13:11.880] Everything looks great. Both context
+[00:13:13.440] windows are sharp and focused. There's
+[00:13:15.839] no spillover between issues. This system
+[00:13:18.480] has completed successfully. So, I've
+[00:13:20.600] been using the E2B agent sandbox tool
+[00:13:23.520] for quite some time now. It's been a
+[00:13:24.680] great tool. It's also expensive, and it
+[00:13:26.720] has some downsides like there's a limit
+[00:13:28.840] to the total duration that you can have
+[00:13:30.920] your agents up in a sandbox. You have to
+[00:13:32.840] pause them to manage that. So, I've been
+[00:13:34.720] looking at exe.dev as a new agent
+[00:13:37.600] sandbox tool to replace or use
+[00:13:40.560] additionally right next to e2b. And so,
+[00:13:43.080] this is another agent sandbox tool. It's
+[00:13:44.920] got a couple of different benefits. I'll
+[00:13:46.560] link both of these in the description
+[00:13:48.120] for you. But, the idea here is I already
+[00:13:50.360] have my e2b agent in this sandbox skill,
+[00:13:53.200] right? So, I have agent sandboxes and
+[00:13:54.960] this is my e2b skill where I can just
+[00:13:56.880] quickly spin up an agent sandbox that my
+[00:13:59.200] agent can fully own and operate on my
+[00:14:01.080] behalf. We've talked about agent
+[00:14:02.480] sandboxes on the channel in the past.
+[00:14:04.200] I'll link those in the description for
+[00:14:05.640] you as well. But, what I want to do here
+[00:14:07.120] is spin up a brand new skill for exe.dev
+[00:14:11.360] that mirrors and matches and has feature
+[00:14:14.200] parity to my e2b agent skill. And
+[00:14:16.640] anything that doesn't match, I want to
+[00:14:18.800] know about it, right? I want to
+[00:14:20.320] understand the feature differences, but
+[00:14:22.120] I want my agent to fail forward. the
+[00:14:24.680] skill to be built so that I can
+[00:14:26.040] prototype and experiment with it right
+[00:14:27.880] away, okay? So, I don't just want a
+[00:14:29.280] simple research comparison. I want a new
+[00:14:31.240] skill I can use that has feature parity
+[00:14:34.000] with my existing skill. That's exactly
+[00:14:35.640] what I'm going to prompt here. In my e2b
+[00:14:37.240] agent, I'm going to fire this off.
+[00:14:38.520] You're the e2b agent. Your teammate is
+[00:14:41.200] exe.dev. They'll be building this skill
+[00:14:44.600] against exe.dev's persistent VM
+[00:14:47.240] platform. Your job is to answer their
+[00:14:48.960] questions, okay? So, we have a teammate
+[00:14:51.000] set up specifically to understand this
+[00:14:53.280] feature set. It's putting up a sandbox.
+[00:14:55.200] It's reminding itself of all the
+[00:14:56.839] features. And when this completes, I'm
+[00:14:58.480] going to kick off the exe.dev agent to
+[00:15:01.440] communicate, work with, and sync up a
+[00:15:04.120] brand new skill. You know, a lot of the
+[00:15:06.120] agent-to-agent communication and
+[00:15:07.320] multi-agent orchestration comes down to
+[00:15:09.880] expanding your context window in a
+[00:15:11.960] useful way such that your agents can
+[00:15:14.400] specialize what they're focused on,
+[00:15:16.400] okay? A lot of engineers do think that
+[00:15:18.320] you just throw everything in one agent,
+[00:15:19.760] wait for for models to get better, wait
+[00:15:21.160] for that 5 million contacts window, and
+[00:15:23.280] then all your problems will be solved. I
+[00:15:25.040] don't agree with this approach at all. I
+[00:15:27.640] think you should lean on the models, you
+[00:15:29.200] should expect them to get better, you
+[00:15:30.560] should plan for that in your products
+[00:15:32.200] and services, but at the same time you
+[00:15:33.760] should be learning how to focus your
+[00:15:35.520] agents on one problem so that the chance
+[00:15:38.560] that they cause an issue, so that the
+[00:15:39.800] chance something goes wrong drops down
+[00:15:42.200] to near zero. And how can you do that?
+[00:15:44.400] You can do that by having focused
+[00:15:46.120] context windows, okay? And by
+[00:15:48.360] effectively specializing your agent to
+[00:15:50.680] focus on one problem and one problem
+[00:15:53.360] only. Spinning up and comparing two
+[00:15:55.360] different tools with likely very similar
+[00:15:57.640] APIs is going to get the context window
+[00:15:59.840] pretty big. You can see here this agent
+[00:16:01.320] is loading, refreshing itself on all of
+[00:16:04.080] the E2B agent skill functionality,
+[00:16:06.880] right? You can see sandbox remove,
+[00:16:08.560] download dir, so on and so forth. We're
+[00:16:10.040] almost at 10% context already. That's
+[00:16:11.720] 100k tokens, okay? If you're using
+[00:16:14.080] agents on a daily basis, you understand
+[00:16:16.240] this fact, right? A focused agent is a
+[00:16:18.800] performant agent. you add to that
+[00:16:20.840] context window, the higher the chance
+[00:16:23.200] something goes wrong is. Specifically,
+[00:16:25.800] when you start muddying unrelated
+[00:16:27.960] context together, okay? This is the art
+[00:16:30.839] of context engineering. It's not just
+[00:16:32.320] getting all the right things, it's
+[00:16:33.760] getting just the right things. This
+[00:16:36.200] agent's booting up, it should be
+[00:16:37.160] complete pretty soon here, and then we
+[00:16:39.040] can prompt our exe.dev to create this
+[00:16:42.680] new skill so that we can boot up brand
+[00:16:45.240] new sandboxes for exe.dev, and we can
+[00:16:48.280] really see what this is all about.
+[00:16:50.000] Moving forward, it's not just about
+[00:16:51.400] these two sandbox tools, right? It's
+[00:16:52.960] about every sandbox tool moving forward
+[00:16:55.120] and our ability to deploy agents to
+[00:16:57.640] understand the tools, to understand the
+[00:16:59.120] technology, and then deploy them into
+[00:17:01.240] valuable use cases on our behalf. So, we
+[00:17:04.199] can use this system over and over and
+[00:17:05.760] over, we can compare the features
+[00:17:07.160] between every specialized agent. I hope
+[00:17:09.600] you get the point, right? If this is all
+[00:17:11.079] making sense, you know, make sure you
+[00:17:12.160] drop a like. This is like really our
+[00:17:13.920] bread and butter on the channel. We're
+[00:17:15.800] scaling our compute to scale our impact.
+[00:17:18.360] It's all about scaling up what our
+[00:17:20.199] agents can do and focusing our agents to
+[00:17:22.560] solve real business problems on our
+[00:17:24.880] behalf via agentic engineering, not vibe
+[00:17:27.920] coding. We're not shooting prompts and
+[00:17:29.720] not looking. We know what our agents are
+[00:17:31.680] doing, okay? And this just stacks up on
+[00:17:34.720] previous videos we've had on the channel
+[00:17:36.440] where we're making our agents secure.
+[00:17:38.520] We're not letting them crush production
+[00:17:40.600] assets when they should not be able to.
+[00:17:42.680] We're adding security to our bash tool
+[00:17:44.800] when they need it. Just like in last
+[00:17:47.080] week's video, we're preventing
+[00:17:48.400] catastrophic commands from running. And
+[00:17:50.560] then, you know, we're letting our agents
+[00:17:52.320] rip on all the tools, all the skills,
+[00:17:54.600] all the commands that we actually want
+[00:17:56.200] our agents to execute, right? As you can
+[00:17:58.200] see here, a lot of that sandbox tool
+[00:18:00.040] running, our agent is understanding what
+[00:18:02.320] it can do here. And soon it's going to
+[00:18:03.840] write this uh presentation file for us.
+[00:18:06.240] And this is one of the great things and
+[00:18:07.680] one of the annoying things about GPT
+[00:18:09.400] 5.5. This model really chews up tokens
+[00:18:12.000] and it just goes and goes and goes to
+[00:18:13.720] really get you the most comprehensive
+[00:18:16.200] result possible. Whereas, I found that
+[00:18:18.560] Opus 4.7 will do that as well, but it
+[00:18:20.920] also will really just focus on the goal,
+[00:18:23.920] right? I think Opus is more
+[00:18:25.040] goal-oriented and really focuses on
+[00:18:27.200] accomplishing the goal. If you prompt it
+[00:18:29.040] wide enough to capture more of that
+[00:18:31.040] state, more of that scope, it'll
+[00:18:32.160] certainly capture that as well, okay?
+[00:18:34.040] But here we go. We're getting that
+[00:18:35.080] inventory file that really compresses
+[00:18:37.200] all the observations. Now, we should be
+[00:18:39.160] able to kick off our exe.dev agent
+[00:18:41.480] pretty soon here. There we go. Nice
+[00:18:43.840] write-up. Look at that detailed write-up
+[00:18:45.200] of all the features, inputs, and
+[00:18:47.200] outputs, the commands, E2B quirks,
+[00:18:49.640] right? This is great. And this was part
+[00:18:50.880] of the prompt, right? We wanted at the
+[00:18:52.400] end a feature inventory. And this is
+[00:18:54.480] going to allow our exe.dev agent to
+[00:18:57.000] really map everything out one-to-one.
+[00:18:59.280] And again, like focus context is so
+[00:19:01.600] important here, right? In tactically
+[00:19:03.400] agentic coding, it's so important. This
+[00:19:05.040] is an entire tactic. We talk about this
+[00:19:06.720] for an entire lesson. A focused agent is
+[00:19:09.280] a performant agent. We have 20% context
+[00:19:12.320] of the 1 million context window GPT 5.5
+[00:19:15.440] focus on just understanding this tool
+[00:19:17.800] and understanding this skill and this
+[00:19:19.680] whole sandbox system. Okay, so there you
+[00:19:22.120] go. Validating its work, making sure
+[00:19:23.560] that that file exists and now we're
+[00:19:25.800] going to boot up our exe.dev agent.
+[00:19:27.400] There we go, perfect. So, it's all
+[00:19:29.200] primed, it's all good to go. Now we're
+[00:19:30.920] going to fire off this prompt inside of
+[00:19:32.760] our exe.dev agent. I actually haven't
+[00:19:34.520] run this before so I'm really curious to
+[00:19:36.040] see how how this executes and how well
+[00:19:38.000] this mirrors. So, you're the exe.dev
+[00:19:40.040] agent. There is no agent sandbox exe.dev
+[00:19:42.480] skill yet. Your job is to build one.
+[00:19:44.520] Okay, so there's the purpose and then
+[00:19:46.040] your reference target is this existing
+[00:19:48.320] skill here which your teammate
+[00:19:50.080] understands is already standing by to
+[00:19:52.200] answer questions about. You're the
+[00:19:53.480] driver of this collaboration. E2B will
+[00:19:55.360] not initiate, you reach out. So, I'm
+[00:19:57.040] setting this up so that in this specific
+[00:19:58.720] scenario, I want my exe.dev agent to be
+[00:20:01.000] the one driving this. I'm giving it a
+[00:20:02.480] couple skills, fire crawl, meta skill to
+[00:20:04.920] really build on this and then we have
+[00:20:06.560] our clear deliverable. So, I want that
+[00:20:09.240] new skill, right? And I'm making it
+[00:20:10.680] super clear here, a new working skill
+[00:20:12.440] that mirrors the {slash} agent sandbox
+[00:20:14.400] is against exe.dev primitives and I also
+[00:20:17.080] want a feature parity document just like
+[00:20:20.000] the E2B agent has as well for us, okay?
+[00:20:22.480] And so, it's starting to get to work
+[00:20:23.520] here. Grabbing all the docs, it's going
+[00:20:25.040] to start building this skill and this is
+[00:20:26.320] the Opus 4.7 running in the Pi agent
+[00:20:28.400] harness. This is going to be some pretty
+[00:20:30.200] fantastic results as this gets to work
+[00:20:32.480] here. So, right now it's gobbling up all
+[00:20:34.560] the documentation, starting to stack up
+[00:20:36.600] that proper context and at some point
+[00:20:38.880] here it's going to begin again, it's
+[00:20:40.560] communicating with our exe.dev agent
+[00:20:43.600] here. So, there it is, we have live
+[00:20:44.920] access confirmed, SSH exe.dev. It's now
+[00:20:48.160] checking out all my VMs, no current VMs
+[00:20:50.720] set up yet but my agent is going to go
+[00:20:52.600] through this process, figure everything
+[00:20:54.200] out and it has all the documentation and
+[00:20:56.560] it has the feature parity it's trying to
+[00:20:58.040] get equal to, okay? So, this is a really
+[00:21:00.200] great way to in general, you know, it
+[00:21:02.040] doesn't really matter what agent agent
+[00:21:03.240] communication system you're using, this
+[00:21:05.120] is a great way to mirror systems
+[00:21:07.480] together, right? In the age of agents,
+[00:21:09.320] we're going to have a hundred different
+[00:21:10.520] services available to us for agent
+[00:21:12.440] sandboxing and frankly, you know, for
+[00:21:14.280] agent harnessing, cloud databases,
+[00:21:16.080] Turso, things like Neon DB, and a lot of
+[00:21:18.560] them are going to be swappable, right?
+[00:21:20.560] Composable. And so, this is a great
+[00:21:22.280] pattern. Once you have one skill against
+[00:21:24.520] one specific service, you can quickly
+[00:21:26.680] create a feature parity document and
+[00:21:28.680] then build directly against another
+[00:21:30.680] service. Asian agent communication is a
+[00:21:32.800] great way to do that because you get
+[00:21:33.920] that focused agent context window and
+[00:21:35.920] then your agent can just quickly
+[00:21:37.000] communicate when they need to. But let's
+[00:21:38.720] go ahead and dig a little bit deeper
+[00:21:40.280] into this system, right? Like how does
+[00:21:41.560] this system really work? There's four
+[00:21:42.960] tools here. There's basically no magic.
+[00:21:44.840] It's really simple.
+[00:21:50.960] You list all the agents on the network,
+[00:21:53.440] send command, or you send the prompt,
+[00:21:55.680] and then optionally, you can await a
+[00:21:58.000] response, right? Sometimes you send off
+[00:22:00.080] a Slack message and you're just sending
+[00:22:02.080] useful information to someone or a
+[00:22:03.880] confirmation or something, and that's
+[00:22:05.720] it. But if you need to, you can await
+[00:22:07.320] the response. You can check in on the
+[00:22:09.280] message. You can do a block wait or you
+[00:22:11.120] can do a non-blocking poll. I have two
+[00:22:13.200] versions of this. It's going to be
+[00:22:14.640] available to you. You can see our agents
+[00:22:16.160] are starting to chat together here. I'll
+[00:22:18.240] have two versions of this available to
+[00:22:19.680] you. Both are going to be available in
+[00:22:21.440] the Pi versus Cloud Code code base.
+[00:22:25.520] This is a code base that has been live
+[00:22:27.800] for quite some time and it's where I
+[00:22:29.400] posted and shared a lot of extensions
+[00:22:32.000] from simple to complex cross multiple
+[00:22:34.680] different agent harness use cases for
+[00:22:36.880] the Pi agent harness, all right? And so,
+[00:22:39.040] the whole idea here is just to hedge
+[00:22:40.720] against Cloud Code, the agentic coding
+[00:22:43.000] market leader, and get control of the
+[00:22:45.120] agent harness. This code base builds on
+[00:22:47.320] that very idea and I'm going to add
+[00:22:49.000] these two extensions for you into this
+[00:22:52.080] code base. And so, you know, what are
+[00:22:53.240] these two extensions? We can just go
+[00:22:54.480] ahead and crack these open here. Coms
+[00:22:56.640] version, so this is the non-network
+[00:22:58.280] version. This operates on a single
+[00:23:00.000] device. But then we have a coms net
+[00:23:01.880] where we basically boot up a simple
+[00:23:04.520] simple simple lightweight bun server
+[00:23:06.440] here that accepts requests over the
+[00:23:09.240] network. And you can imagine we have a
+[00:23:10.400] simple set that let the agent connect,
+[00:23:13.720] get messages, list agents, process
+[00:23:16.160] events, so on and so forth here, right?
+[00:23:17.960] This is a very simple implementation.
+[00:23:19.680] Secure it, make it more legitimate for
+[00:23:21.480] your specific use case. Every piece of
+[00:23:23.400] code you see now, I really think it's
+[00:23:25.400] really about read and adapt, right?
+[00:23:27.560] Through your agents add it and have them
+[00:23:29.160] transform it for your specific use case.
+[00:23:31.680] And always understand the code. 25% here
+[00:23:34.600] on our E2B agent. See, it just responded
+[00:23:37.000] directly here. Kind of looks good.
+[00:23:39.280] Browser. Okay, SBX tool. Nice. So, it
+[00:23:42.560] looks like exi.dev agent was asking
+[00:23:44.800] about the browser tool. All three
+[00:23:46.640] questions cleanly answered. Quick recap.
+[00:23:49.400] Templates versus images. Okay, so
+[00:23:51.800] confirm partial support. Let's see.
+[00:23:53.840] Captured artifacts, arbitrary container
+[00:23:56.240] images. Okay. Browser, two primary
+[00:23:58.560] files, zero E2B import fix, drop in
+[00:24:01.600] portability. Great. Snapshot, no E2B
+[00:24:03.760] equivalent. CP is unique to exi.dev.
+[00:24:07.440] Okay. So, there we go. Here he's writing
+[00:24:09.120] that feature parity doc. This is looking
+[00:24:11.080] great. Yeah, nice. Looks like we had a
+[00:24:12.600] couple chats here to showcase
+[00:24:15.280] everything. Sent this to E2B. Why now?
+[00:24:17.640] The parity has their claims is to flag
+[00:24:20.080] as many E2B claims that's wrong before I
+[00:24:21.880] bake them into the new skill. Very cool.
+[00:24:23.600] Okay. Very nice. So, our agents here are
+[00:24:25.600] doing the work that I would do myself,
+[00:24:28.200] which is validate the claims, right?
+[00:24:31.000] This is something we talked about in the
+[00:24:32.320] verifier agent video we did a couple
+[00:24:33.880] weeks ago where you have an agent
+[00:24:35.840] basically double-checking all the claims
+[00:24:38.200] and all the statements that the primary
+[00:24:40.440] agent is making to make sure that
+[00:24:42.120] they're right. This is a really powerful
+[00:24:43.400] pattern. I like to run my Pi agents, my
+[00:24:45.480] primary Pi agent with a validator on top
+[00:24:48.240] of it, which basically, you know,
+[00:24:49.520] increases the tokens used, but in
+[00:24:51.280] exchange it saves me time because the
+[00:24:53.560] validator is validating everything my
+[00:24:55.680] agent just said, right? It makes sure
+[00:24:57.200] that everything it said is actually
+[00:24:59.000] true. And then it also makes sure that
+[00:25:00.600] the work it said it did is exactly what
+[00:25:02.760] was done. I'll link that in the
+[00:25:03.880] description as well. There we go.
+[00:25:05.280] There's a nice write back to our
+[00:25:07.760] eexi.dev agent. It's like it's asking
+[00:25:09.440] for a recursive flag there, too. Wow, so
+[00:25:12.160] much detail here. Like in the side here,
+[00:25:14.200] this is a great way to just watch these
+[00:25:15.600] models work together, right? GPT-5.5,
+[00:25:18.200] Claude 4.7, gave them a decent size
+[00:25:20.720] prompt, maybe 80 lines each, and a
+[00:25:23.440] skill, and now they're just like hashing
+[00:25:25.680] it out, recreating this new skill. And
+[00:25:28.360] this is again just one of millions and
+[00:25:30.920] millions of different ways to coordinate
+[00:25:33.600] agents to work toward a goal, to work
+[00:25:36.040] toward something, right? So, okay, so we
+[00:25:37.600] got 10 corrections from that exchange,
+[00:25:39.640] right? This is a valuable exchange of
+[00:25:41.280] information. 10 corrections. There's a
+[00:25:43.160] couple comments in my videos recently,
+[00:25:44.960] especially when I talk about multi-agent
+[00:25:46.320] orchestration, some engineers, probably
+[00:25:48.280] a decent amount of vibe coders as well,
+[00:25:49.960] asking, "Why can't you just do all this
+[00:25:51.440] in one agent?" You certainly can. You
+[00:25:54.160] certainly can. But you have to remember
+[00:25:56.040] that couple things. There is a limit to
+[00:25:57.600] the context window. The more problems,
+[00:25:59.760] the more different problems, APIs,
+[00:26:02.080] systems you put into that context
+[00:26:03.600] window, your error rate will go up.
+[00:26:05.720] Okay, this is just a fact. If you don't
+[00:26:07.360] believe that, you don't understand that,
+[00:26:08.800] do more research on the context window,
+[00:26:10.320] okay? And then second, with every unique
+[00:26:13.120] model that you add to your system,
+[00:26:15.280] right? I'm running Claude right next to
+[00:26:17.160] GPT-5.5. These models are trained in a
+[00:26:19.280] completely different way. They have
+[00:26:20.520] different RL loops running on top of
+[00:26:22.760] them. Putting these agents together
+[00:26:24.400] creates something greater. It creates a
+[00:26:26.960] system that outperforms either of them
+[00:26:29.400] alone. Just like code plus agent beats
+[00:26:31.720] either alone, unique agent one plus
+[00:26:33.520] unique agent two communicating beats
+[00:26:35.960] either alone, right? And and that's like
+[00:26:39.000] really the gift and really the value
+[00:26:40.800] proposition of multi-agent
+[00:26:42.360] orchestration. It's not just the 10
+[00:26:44.800] parallel agents you boot up to like
+[00:26:46.600] write all those files or generate all
+[00:26:48.520] those images at the same time. It's
+[00:26:50.080] doing serious engineering work where
+[00:26:51.720] your agents are checking in on each
+[00:26:53.200] other, double checking the work,
+[00:26:54.200] coordinating on a solution, so on and so
+[00:26:56.720] forth, okay? So, that's the idea. And
+[00:26:58.440] so, we got one more message coming back
+[00:26:59.840] here. Hopefully, this wraps it up. And
+[00:27:01.840] yeah, look at this like Opus is just
+[00:27:03.360] being really, really great here with the
+[00:27:05.160] verification. So, please reread the doc
+[00:27:07.720] and either send review complete or flag
+[00:27:10.200] remaining issues. All right, so this is
+[00:27:11.880] just like, you know, it's teamwork,
+[00:27:14.240] right? This is teamwork, okay? Sign off
+[00:27:16.560] one non-blocking knit, okay? And then
+[00:27:19.520] after this, we can proceed with uh
+[00:27:21.640] scaffolding. So, there we go. So, yeah,
+[00:27:23.320] it's loading that meta skill. This is my
+[00:27:25.400] skill that helps me create skills. I'm
+[00:27:27.400] going to let this cook. Comment down
+[00:27:28.960] below if you're interested in my agent
+[00:27:31.360] sandbox skills, the E2B skill, or this
+[00:27:33.520] new exa.dev skill, and I'll add it to
+[00:27:35.960] this codebase. But, that's the idea,
+[00:27:38.040] right? It's it's it's simple, yet it's
+[00:27:40.080] very, very important, okay? Now, you
+[00:27:42.760] know, quickly just talking about pros
+[00:27:44.440] and cons of this system. Every system
+[00:27:46.080] has pros and cons. If you don't address
+[00:27:48.040] them, you'll be exposed to them.
+[00:27:55.640] What are the pros here? It's just an
+[00:27:57.360] agent, right? I just can at any time now
+[00:27:59.840] boot up two agents, three agents, five
+[00:28:02.120] agents on my device, my Mac mini, my M4,
+[00:28:05.480] right? My cloud VMs, all my services,
+[00:28:07.920] all my servers. I can just boot up an
+[00:28:09.760] agent now with the extension, have them
+[00:28:11.600] connect, have them talk to each other.
+[00:28:13.640] It's just an agent. It's that simple. As
+[00:28:15.480] you say, it's just an agent and
+[00:28:17.040] extension. It's permanent, okay? There's
+[00:28:19.480] no you know, no subagent delegation, no
+[00:28:22.000] spin-up or spin-down, no resume. Claude
+[00:28:25.640] has this resume flag where you can
+[00:28:27.120] reboot the agent. These are just agents
+[00:28:29.160] in the terminal. That's it, right? Uh
+[00:28:30.840] customizable, right? End-to-end.
+[00:28:32.400] Obviously, this is like a key value prop
+[00:28:34.560] of why I keep talking about the Python
+[00:28:36.360] coding agent and why I keep bringing it
+[00:28:38.040] up. The the state space of agentic
+[00:28:40.280] engineering is unknown. You know, the
+[00:28:42.440] way I see this is only uh 1% of it has
+[00:28:45.720] been discovered and understood and
+[00:28:47.800] deployed into production, right? I
+[00:28:49.320] talking like really, really low numbers
+[00:28:50.760] here. Customization and extensibility is
+[00:28:52.960] core to the future of agentic engineers.
+[00:28:56.040] And so, this tool becomes more and more
+[00:28:58.120] important to me every single day. The
+[00:28:59.560] tool you use limits what you believe is
+[00:29:01.760] possible. And with the pie agent
+[00:29:03.840] harness, I see no limits. You know, all
+[00:29:07.480] the limitations of of how things work,
+[00:29:10.480] they're just falling away. I don't see
+[00:29:12.120] the same workflows. I don't see the same
+[00:29:14.280] implementations anymore. And I think if
+[00:29:16.080] you're stuck using one agentic coding
+[00:29:17.760] tool, especially one that tells you how
+[00:29:19.280] to do everything, hint hint Claude code,
+[00:29:21.160] hint hint Codex, hint hint, you know,
+[00:29:22.760] Gemini C alive if anyone's using that,
+[00:29:24.480] open code, like whatever it is, right?
+[00:29:26.040] You are not getting, you know, you're
+[00:29:27.760] not pushing into that 99% the rest of
+[00:29:30.320] the value that we can unlock with
+[00:29:32.400] agents, with the right agentic
+[00:29:34.080] technology, okay? So, um that's a big
+[00:29:36.320] one, obviously, right? Uh bidirectional
+[00:29:38.680] comms are flat. No hierarchy, right? No
+[00:29:41.600] information loss. No one agent to rule
+[00:29:45.120] them all, which is a con in another way,
+[00:29:48.800] right? We've talked about the one agent
+[00:29:49.960] to rule them all, the orchestrator.
+[00:29:51.680] Let's be super clear about this. This is
+[00:29:52.800] the orchestrator. Um
+[00:29:54.400] and this is like the current wave of
+[00:29:56.280] multi-agent orchestration. This is super
+[00:29:57.720] powerful. It's a great pattern. I'm
+[00:29:59.640] going to continue to use it, but um
+[00:30:01.240] bidirectional is great cuz it's flat,
+[00:30:03.160] it's two-way, no information gets lost,
+[00:30:05.720] right? Um another great part about this
+[00:30:07.200] is that uh this is a primitive over
+[00:30:09.320] composition approach, right? Once again,
+[00:30:11.400] this kind of ties back into that first
+[00:30:12.800] idea. This is just an agent. It's just a
+[00:30:15.600] pie coding agent, right? Or just
+[00:30:17.480] simplify it, right? Let's not hyper
+[00:30:19.120] fixate on pie, right? This is just an
+[00:30:21.080] agent. I just open up an agent, and then
+[00:30:22.880] I can compose as many agents as I want
+[00:30:25.000] to, okay? So, once again, we're
+[00:30:26.480] engineering. Composition is an
+[00:30:28.440] engineering pattern. We're creating
+[00:30:29.920] slices of things we can combine to make
+[00:30:32.040] something bigger, right? Primitives into
+[00:30:34.000] compositions. But you want the primitive
+[00:30:35.960] first so that you can compose it. That's
+[00:30:38.160] enough glaze. Uh let's go to cons. Uh
+[00:30:40.720] you have to build this yourself or get
+[00:30:42.480] it from any dev Dan for free. Link in
+[00:30:45.280] the description.
+[00:30:47.320] But, you know, you know what I mean,
+[00:30:48.280] right? You have to build this, you have
+[00:30:49.440] to vet this, you have to control the way
+[00:30:51.840] your agents communicate. You need to
+[00:30:52.920] prompt engineer everything, contact
+[00:30:54.440] engineer thing everything, and you need
+[00:30:55.960] to deal with the the cases, right? The
+[00:30:57.840] edge cases is where really where great
+[00:31:00.160] agentic engineering patterns are made,
+[00:31:02.200] and great products in general, right?
+[00:31:03.960] Another con here, loops are possible if
+[00:31:06.520] prompts are sloppy, right? So, you can
+[00:31:08.480] you can really generate some bad loops
+[00:31:10.440] that that are going to really chew up
+[00:31:11.680] your token usage if your prompts are
+[00:31:13.440] sloppy, right? You need an end state,
+[00:31:14.960] right? Let's see if our agents have hit
+[00:31:16.120] their end state yet. Okay, great. So,
+[00:31:17.480] yeah, so we are approaching the end
+[00:31:19.040] state, right? My agent is making
+[00:31:21.000] progress. It is creating this agent
+[00:31:23.520] sandbox EXE dev skill. Okay, so that's
+[00:31:25.720] great. So, this prompt obviously was not
+[00:31:27.600] sloppy. I don't write very a ton of
+[00:31:29.480] sloppy prompts anymore, but this is a
+[00:31:31.080] risk of this strategy, right? And then
+[00:31:32.760] there's just like general costs, right?
+[00:31:34.280] Cost scales linearly with agent count
+[00:31:37.200] plus communication bounce. And so, there
+[00:31:40.200] a bunch of laws around the perfect
+[00:31:42.120] number of actors to have in a team,
+[00:31:44.560] right? Inside of your communication
+[00:31:45.720] channel. That's kind of what this, you
+[00:31:46.960] know, showcases, right? There's some
+[00:31:48.680] magical number, Dunbar's number, or
+[00:31:50.480] something. I wouldn't worry about that
+[00:31:51.800] too much. I would just worry about like,
+[00:31:53.200] what's useful? How can I deploy
+[00:31:54.800] bidirectional agents, bidirectional
+[00:31:56.840] peer-to-peer agents that it's actually
+[00:31:58.560] useful across devices, or on the same
+[00:32:01.200] device, right? The key here is
+[00:32:02.520] peer-to-peer. And just make it as useful
+[00:32:04.080] as possible. If you find that three
+[00:32:05.800] agents, 10 agents, whatever is too much,
+[00:32:07.760] then just trim them. So, it's not a huge
+[00:32:09.160] con, but it's important to uh take into
+[00:32:11.160] account, right? And I think the last con
+[00:32:13.280] is, be careful not to just fall back
+[00:32:16.400] into the orchestration pattern. Unless
+[00:32:18.400] you need it, right? If you need
+[00:32:19.400] orchestration pattern, just build that.
+[00:32:20.920] This is kind of nice though still cuz
+[00:32:22.960] you can compose peer-to-peer agent
+[00:32:24.840] communication back into a orchestration
+[00:32:27.520] pattern where you have more of a
+[00:32:28.440] top-down format where one agent's
+[00:32:30.200] leading the rest. That's fine, too,
+[00:32:32.320] right? As I mentioned, you know, we're
+[00:32:34.000] exploring the state space of what's
+[00:32:35.480] possible. This is equally as valuable,
+[00:32:37.880] but peer-to-peer's advantage is that it
+[00:32:40.800] is flat and there's no hierarchy, right?
+[00:32:43.280] That's the advantage, right? Your agents
+[00:32:44.920] are working together. It's not a
+[00:32:46.240] delegation stream. So, these are some of
+[00:32:48.080] the pros and the cons of this system. I
+[00:32:49.400] think it's important to address the
+[00:32:50.680] upside and the downside, right? Again,
+[00:32:52.120] if you're doing engineering, you need to
+[00:32:53.200] address both of them. So, this is yet
+[00:32:54.920] another multi-agent orchestration system
+[00:32:57.280] that you can use to push what you can do
+[00:32:59.760] with your agents in the age of agents,
+[00:33:01.600] right? And the goal is the same. We're
+[00:33:02.960] not really changing We're not doing
+[00:33:04.320] anything new here on the channel. What
+[00:33:06.200] we are doing week after week is we're
+[00:33:07.680] increasing trust and scale of our
+[00:33:10.680] agentic systems. All right? You can see
+[00:33:12.920] this final reviews coming in. This is
+[00:33:14.680] coordinated agents working together,
+[00:33:16.520] double-checking their work. And you can
+[00:33:17.840] see here our tokens are starting to
+[00:33:19.680] stack up. We have 2 million available,
+[00:33:22.400] but it's split in half. One is focused
+[00:33:24.640] on exe.dev, one is focused on e2b, but
+[00:33:27.600] our agents are still coordinating on the
+[00:33:29.600] same information. We're making sure that
+[00:33:31.120] we're hitting feature parity. We're
+[00:33:32.200] making sure that everything looks good.
+[00:33:33.720] Of course, I'm going to run more tests
+[00:33:35.360] on this and make sure that this looks
+[00:33:36.400] good, but I can almost guarantee you
+[00:33:37.880] this is going to work out of the box
+[00:33:39.240] because I had two agents two
+[00:33:40.800] state-of-the-art agents working together
+[00:33:42.560] to get this shipped out. Enabling
+[00:33:44.360] specialized agents that chat together on
+[00:33:46.440] device and across devices is a unique
+[00:33:48.680] advantage you can add to your agentic
+[00:33:51.440] systems, specifically to your agent
+[00:33:53.400] harness. This pattern and patterns like
+[00:33:55.520] this more and more of these patterns are
+[00:33:56.920] going to emerge. They're impossible if
+[00:33:59.400] you're using, you know, the
+[00:34:00.880] out-of-the-box agents from Anthropic,
+[00:34:03.040] from OpenAI, from Google. It's
+[00:34:04.560] impossible when you're renting your
+[00:34:06.520] agent harness, okay? To be clear, I
+[00:34:08.600] still use Claude Code all the time. It's
+[00:34:10.159] a great tool. I'm going to continue to
+[00:34:11.560] use it, but more and more I'm reaching
+[00:34:13.120] for the Pi agent harness to build the
+[00:34:14.879] exact experience and products that I'm
+[00:34:17.480] looking for, right? And this pattern
+[00:34:19.159] adds to that bag of tricks that you and
+[00:34:21.600] I can now deploy in our agent harness if
+[00:34:24.440] you own your agent harness. I'm going to
+[00:34:26.159] be adding these two extensions to the Pi
+[00:34:28.879] versus Claude Code codebase here
+[00:34:30.679] available to you, link in the
+[00:34:32.200] description. I'm really excited for some
+[00:34:34.080] of the big ideas I have to share with
+[00:34:35.399] you here on the channel coming up. I'm
+[00:34:37.440] waiting for that next Gemini model
+[00:34:39.040] launch to really showcase one of these
+[00:34:40.800] next-gen patterns. So, make sure you
+[00:34:42.280] like, make sure you subscribe, join the
+[00:34:43.560] journey so you don't miss that. You know
+[00:34:45.440] where to find me every single Monday.
+[00:34:47.399] Stay focused and keep building.

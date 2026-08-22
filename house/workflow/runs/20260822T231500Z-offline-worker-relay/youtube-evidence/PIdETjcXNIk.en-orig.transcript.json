@@ -1,0 +1,6079 @@
+{
+  "schema": "youtube-transcript/1",
+  "video_id": "PIdETjcXNIk",
+  "language": "en-orig",
+  "cues": [
+    {
+      "start_ms": 0,
+      "duration_ms": 4800,
+      "end_ms": 4800,
+      "text": "What's up engineers? Indie Dev Dan here."
+    },
+    {
+      "start_ms": 2360,
+      "duration_ms": 7600,
+      "end_ms": 9960,
+      "text": "I have a simple question for you. What's"
+    },
+    {
+      "start_ms": 4800,
+      "duration_ms": 8840,
+      "end_ms": 13640,
+      "text": "better than one GPT 5.5 Pi coding agent?"
+    },
+    {
+      "start_ms": 9960,
+      "duration_ms": 5520,
+      "end_ms": 15480,
+      "text": "You guessed it, two GPT 5.5 Pi coding"
+    },
+    {
+      "start_ms": 13640,
+      "duration_ms": 4320,
+      "end_ms": 17960,
+      "text": "agents. Let's push it further. What's"
+    },
+    {
+      "start_ms": 15480,
+      "duration_ms": 5200,
+      "end_ms": 20680,
+      "text": "better than two isolated side-by-side"
+    },
+    {
+      "start_ms": 17960,
+      "duration_ms": 4360,
+      "end_ms": 22320,
+      "text": "GPT 5.5 agents? Sure, you could add"
+    },
+    {
+      "start_ms": 20680,
+      "duration_ms": 4000,
+      "end_ms": 24680,
+      "text": "another agent. Sure, you could change"
+    },
+    {
+      "start_ms": 22320,
+      "duration_ms": 6200,
+      "end_ms": 28520,
+      "text": "the model, but we can do much better"
+    },
+    {
+      "start_ms": 24680,
+      "duration_ms": 6880,
+      "end_ms": 31560,
+      "text": "than this. What about two GPT 5.5 agents"
+    },
+    {
+      "start_ms": 28520,
+      "duration_ms": 4720,
+      "end_ms": 33240,
+      "text": "that actually work together?"
+    },
+    {
+      "start_ms": 31560,
+      "duration_ms": 4640,
+      "end_ms": 36200,
+      "text": "What about three agents that work"
+    },
+    {
+      "start_ms": 33240,
+      "duration_ms": 6000,
+      "end_ms": 39240,
+      "text": "together with unique models? What about"
+    },
+    {
+      "start_ms": 36200,
+      "duration_ms": 5520,
+      "end_ms": 41720,
+      "text": "four models? So, here we have four Pi"
+    },
+    {
+      "start_ms": 39240,
+      "duration_ms": 5120,
+      "end_ms": 44360,
+      "text": "coding agents and none of them is the"
+    },
+    {
+      "start_ms": 41720,
+      "duration_ms": 6120,
+      "end_ms": 47840,
+      "text": "orchestrator. Instead, they're equals."
+    },
+    {
+      "start_ms": 44360,
+      "duration_ms": 5960,
+      "end_ms": 50320,
+      "text": "They're co-workers pinging every agent."
+    },
+    {
+      "start_ms": 47840,
+      "duration_ms": 4280,
+      "end_ms": 52120,
+      "text": "In this video, we'll understand what"
+    },
+    {
+      "start_ms": 50320,
+      "duration_ms": 5240,
+      "end_ms": 55560,
+      "text": "type of agentic engineering we can"
+    },
+    {
+      "start_ms": 52120,
+      "duration_ms": 6320,
+      "end_ms": 58440,
+      "text": "achieve if we gave our agents a true"
+    },
+    {
+      "start_ms": 55560,
+      "duration_ms": 4840,
+      "end_ms": 60400,
+      "text": "two-way communication channel. By the"
+    },
+    {
+      "start_ms": 58440,
+      "duration_ms": 4640,
+      "end_ms": 63080,
+      "text": "end of this video, you'll have a simple"
+    },
+    {
+      "start_ms": 60400,
+      "duration_ms": 5520,
+      "end_ms": 65920,
+      "text": "yet powerful way to coordinate your"
+    },
+    {
+      "start_ms": 63080,
+      "duration_ms": 6120,
+      "end_ms": 69200,
+      "text": "multi-agent systems. This gives us a"
+    },
+    {
+      "start_ms": 65920,
+      "duration_ms": 5440,
+      "end_ms": 71360,
+      "text": "powerful flat agent hierarchy where the"
+    },
+    {
+      "start_ms": 69200,
+      "duration_ms": 3920,
+      "end_ms": 73120,
+      "text": "best information wins, where the best"
+    },
+    {
+      "start_ms": 71360,
+      "duration_ms": 5160,
+      "end_ms": 76520,
+      "text": "ideas win, and where your agents can"
+    },
+    {
+      "start_ms": 73120,
+      "duration_ms": 5280,
+      "end_ms": 78400,
+      "text": "truly coordinate together to outperform"
+    },
+    {
+      "start_ms": 76520,
+      "duration_ms": 7320,
+      "end_ms": 83840,
+      "text": "each other alone. Let's talk about"
+    },
+    {
+      "start_ms": 78400,
+      "duration_ms": 5440,
+      "end_ms": 83840,
+      "text": "Pi-to-Pi two-way agent communication."
+    },
+    {
+      "start_ms": 87240,
+      "duration_ms": 4120,
+      "end_ms": 91360,
+      "text": "So, let's go ahead and reset here. Let's"
+    },
+    {
+      "start_ms": 89480,
+      "duration_ms": 3720,
+      "end_ms": 93200,
+      "text": "de-hype this a little bit. Let's close"
+    },
+    {
+      "start_ms": 91360,
+      "duration_ms": 4320,
+      "end_ms": 95680,
+      "text": "our agents. As you can see, one by one"
+    },
+    {
+      "start_ms": 93200,
+      "duration_ms": 5000,
+      "end_ms": 98200,
+      "text": "as we close them, they leave the chat"
+    },
+    {
+      "start_ms": 95680,
+      "duration_ms": 4440,
+      "end_ms": 100120,
+      "text": "room. They leave the communication pool."
+    },
+    {
+      "start_ms": 98200,
+      "duration_ms": 4440,
+      "end_ms": 102640,
+      "text": "We've got a production database on my"
+    },
+    {
+      "start_ms": 100120,
+      "duration_ms": 4560,
+      "end_ms": 104680,
+      "text": "Mac mini. And this production database"
+    },
+    {
+      "start_ms": 102640,
+      "duration_ms": 4600,
+      "end_ms": 107240,
+      "text": "has an issue. Some ProTier users are"
+    },
+    {
+      "start_ms": 104680,
+      "duration_ms": 3960,
+      "end_ms": 108640,
+      "text": "getting locked out of pro features. So,"
+    },
+    {
+      "start_ms": 107240,
+      "duration_ms": 3680,
+      "end_ms": 110920,
+      "text": "in order to fix this issue, I need to"
+    },
+    {
+      "start_ms": 108640,
+      "duration_ms": 3840,
+      "end_ms": 112480,
+      "text": "reproduce it on my local developer"
+    },
+    {
+      "start_ms": 110920,
+      "duration_ms": 3320,
+      "end_ms": 114240,
+      "text": "environment. This is a common"
+    },
+    {
+      "start_ms": 112480,
+      "duration_ms": 3400,
+      "end_ms": 115880,
+      "text": "engineering workflow. You don't fix"
+    },
+    {
+      "start_ms": 114240,
+      "duration_ms": 2960,
+      "end_ms": 117200,
+      "text": "things in production, and fix things on"
+    },
+    {
+      "start_ms": 115880,
+      "duration_ms": 3240,
+      "end_ms": 119120,
+      "text": "your developer environment, and then you"
+    },
+    {
+      "start_ms": 117200,
+      "duration_ms": 3800,
+      "end_ms": 121000,
+      "text": "deploy through staging, and then"
+    },
+    {
+      "start_ms": 119120,
+      "duration_ms": 4600,
+      "end_ms": 123720,
+      "text": "eventually it hits production. The trick"
+    },
+    {
+      "start_ms": 121000,
+      "duration_ms": 5240,
+      "end_ms": 126240,
+      "text": "here is there is sensitive information"
+    },
+    {
+      "start_ms": 123720,
+      "duration_ms": 6319,
+      "end_ms": 130039,
+      "text": "on my Mac mini production environment"
+    },
+    {
+      "start_ms": 126240,
+      "duration_ms": 5719,
+      "end_ms": 131959,
+      "text": "here, and I can't leak any PII while I'm"
+    },
+    {
+      "start_ms": 130039,
+      "duration_ms": 3681,
+      "end_ms": 133720,
+      "text": "fixing this issue. We're not live coding"
+    },
+    {
+      "start_ms": 131959,
+      "duration_ms": 4441,
+      "end_ms": 136400,
+      "text": "here, we're doing real engineering work"
+    },
+    {
+      "start_ms": 133720,
+      "duration_ms": 4880,
+      "end_ms": 138600,
+      "text": "in production systems. Our pie-to-pie"
+    },
+    {
+      "start_ms": 136400,
+      "duration_ms": 3880,
+      "end_ms": 140280,
+      "text": "agent-to-agent communication system is"
+    },
+    {
+      "start_ms": 138600,
+      "duration_ms": 3600,
+      "end_ms": 142200,
+      "text": "perfect for this. So, I'll boot up two"
+    },
+    {
+      "start_ms": 140280,
+      "duration_ms": 4000,
+      "end_ms": 144280,
+      "text": "agents here, one on my Mac mini, the"
+    },
+    {
+      "start_ms": 142200,
+      "duration_ms": 4240,
+      "end_ms": 146440,
+      "text": "production server, and one on my M5"
+    },
+    {
+      "start_ms": 144280,
+      "duration_ms": 3960,
+      "end_ms": 148240,
+      "text": "MacBook Pro, my dev machine. We'll do J"
+    },
+    {
+      "start_ms": 146440,
+      "duration_ms": 3840,
+      "end_ms": 150280,
+      "text": "coms two, and we'll give this a name."
+    },
+    {
+      "start_ms": 148240,
+      "duration_ms": 4560,
+      "end_ms": 152800,
+      "text": "This is going to be production. J coms"
+    },
+    {
+      "start_ms": 150280,
+      "duration_ms": 4200,
+      "end_ms": 154480,
+      "text": "one, name dev. We'll run some basic"
+    },
+    {
+      "start_ms": 152800,
+      "duration_ms": 2840,
+      "end_ms": 155640,
+      "text": "pings to make sure both agents are up"
+    },
+    {
+      "start_ms": 154480,
+      "duration_ms": 3560,
+      "end_ms": 158040,
+      "text": "and online. And then we're going to"
+    },
+    {
+      "start_ms": 155640,
+      "duration_ms": 5200,
+      "end_ms": 160840,
+      "text": "paste in a production prompt here. This"
+    },
+    {
+      "start_ms": 158040,
+      "duration_ms": 4720,
+      "end_ms": 162760,
+      "text": "is a prod gatekeeper agent. It has a"
+    },
+    {
+      "start_ms": 160840,
+      "duration_ms": 3080,
+      "end_ms": 163920,
+      "text": "production database it's working with"
+    },
+    {
+      "start_ms": 162760,
+      "duration_ms": 3320,
+      "end_ms": 166080,
+      "text": "that's been seeded. We're not going to"
+    },
+    {
+      "start_ms": 163920,
+      "duration_ms": 4200,
+      "end_ms": 168120,
+      "text": "recreate it or anything. And you have a"
+    },
+    {
+      "start_ms": 166080,
+      "duration_ms": 4960,
+      "end_ms": 171040,
+      "text": "team name. And then key piece here, we"
+    },
+    {
+      "start_ms": 168120,
+      "duration_ms": 4600,
+      "end_ms": 172720,
+      "text": "have PII inside of this production code"
+    },
+    {
+      "start_ms": 171040,
+      "duration_ms": 5080,
+      "end_ms": 176120,
+      "text": "base that we're not going to break. This"
+    },
+    {
+      "start_ms": 172720,
+      "duration_ms": 5120,
+      "end_ms": 177840,
+      "text": "is personal identifiable information."
+    },
+    {
+      "start_ms": 176120,
+      "duration_ms": 3680,
+      "end_ms": 179800,
+      "text": "So, our production agent understands the"
+    },
+    {
+      "start_ms": 177840,
+      "duration_ms": 3560,
+      "end_ms": 181400,
+      "text": "system, it understands what's available,"
+    },
+    {
+      "start_ms": 179800,
+      "duration_ms": 4760,
+      "end_ms": 184560,
+      "text": "and it knows that it's not going to"
+    },
+    {
+      "start_ms": 181400,
+      "duration_ms": 5600,
+      "end_ms": 187000,
+      "text": "expose any information to any other"
+    },
+    {
+      "start_ms": 184560,
+      "duration_ms": 4040,
+      "end_ms": 188600,
+      "text": "agent on the network, okay? And now our"
+    },
+    {
+      "start_ms": 187000,
+      "duration_ms": 4040,
+      "end_ms": 191040,
+      "text": "developer agent is going to get to work."
+    },
+    {
+      "start_ms": 188600,
+      "duration_ms": 4080,
+      "end_ms": 192680,
+      "text": "We need to reproduce this issue locally."
+    },
+    {
+      "start_ms": 191040,
+      "duration_ms": 4080,
+      "end_ms": 195120,
+      "text": "Here's our developer prompt. The key"
+    },
+    {
+      "start_ms": 192680,
+      "duration_ms": 5080,
+      "end_ms": 197760,
+      "text": "here is this. Bring the affected slice"
+    },
+    {
+      "start_ms": 195120,
+      "duration_ms": 5000,
+      "end_ms": 200120,
+      "text": "from production over with PII stripped"
+    },
+    {
+      "start_ms": 197760,
+      "duration_ms": 5040,
+      "end_ms": 202800,
+      "text": "into your local dev DB so an engineer"
+    },
+    {
+      "start_ms": 200120,
+      "duration_ms": 4320,
+      "end_ms": 204440,
+      "text": "can reproduce the issue locally. First,"
+    },
+    {
+      "start_ms": 202800,
+      "duration_ms": 3600,
+      "end_ms": 206400,
+      "text": "in order to reproduce a production"
+    },
+    {
+      "start_ms": 204440,
+      "duration_ms": 4200,
+      "end_ms": 208640,
+      "text": "database issue, you need the production"
+    },
+    {
+      "start_ms": 206400,
+      "duration_ms": 4800,
+      "end_ms": 211200,
+      "text": "data. Here's where the magic happens."
+    },
+    {
+      "start_ms": 208640,
+      "duration_ms": 3840,
+      "end_ms": 212480,
+      "text": "Our agent sees the peer on the network,"
+    },
+    {
+      "start_ms": 211200,
+      "duration_ms": 3000,
+      "end_ms": 214200,
+      "text": "right? It knows that it has connection"
+    },
+    {
+      "start_ms": 212480,
+      "duration_ms": 3759,
+      "end_ms": 216239,
+      "text": "to a prod agent, and now it's going to"
+    },
+    {
+      "start_ms": 214200,
+      "duration_ms": 3120,
+      "end_ms": 217320,
+      "text": "start working through things. So, it's"
+    },
+    {
+      "start_ms": 216239,
+      "duration_ms": 2521,
+      "end_ms": 218760,
+      "text": "going to send a message, it's going to"
+    },
+    {
+      "start_ms": 217320,
+      "duration_ms": 4360,
+      "end_ms": 221680,
+      "text": "send a prompt, and it's going to get"
+    },
+    {
+      "start_ms": 218760,
+      "duration_ms": 5080,
+      "end_ms": 223840,
+      "text": "returned an ID, a message ID. Our agent"
+    },
+    {
+      "start_ms": 221680,
+      "duration_ms": 4440,
+      "end_ms": 226120,
+      "text": "can now await this message, and our"
+    },
+    {
+      "start_ms": 223840,
+      "duration_ms": 4600,
+      "end_ms": 228440,
+      "text": "production agent, as you can see here,"
+    },
+    {
+      "start_ms": 226120,
+      "duration_ms": 4520,
+      "end_ms": 230640,
+      "text": "is getting to work on the production"
+    },
+    {
+      "start_ms": 228440,
+      "duration_ms": 4520,
+      "end_ms": 232960,
+      "text": "side. But it's getting to work with all"
+    },
+    {
+      "start_ms": 230640,
+      "duration_ms": 4040,
+      "end_ms": 234680,
+      "text": "redactions applied, right? It's not"
+    },
+    {
+      "start_ms": 232960,
+      "duration_ms": 4000,
+      "end_ms": 236960,
+      "text": "going to expose any personal"
+    },
+    {
+      "start_ms": 234680,
+      "duration_ms": 3880,
+      "end_ms": 238560,
+      "text": "identifiable information. Our agent is"
+    },
+    {
+      "start_ms": 236960,
+      "duration_ms": 4040,
+      "end_ms": 241000,
+      "text": "going to work back and forth here, not"
+    },
+    {
+      "start_ms": 238560,
+      "duration_ms": 4640,
+      "end_ms": 243200,
+      "text": "as individual agents, not as a sub"
+    },
+    {
+      "start_ms": 241000,
+      "duration_ms": 5280,
+      "end_ms": 246280,
+      "text": "agent, not as workers, right? They're"
+    },
+    {
+      "start_ms": 243200,
+      "duration_ms": 5480,
+      "end_ms": 248680,
+      "text": "going to work together as a team. It's a"
+    },
+    {
+      "start_ms": 246280,
+      "duration_ms": 5440,
+      "end_ms": 251720,
+      "text": "simple, beautiful pattern, and it really"
+    },
+    {
+      "start_ms": 248680,
+      "duration_ms": 4920,
+      "end_ms": 253600,
+      "text": "reflects how great work is done. And so,"
+    },
+    {
+      "start_ms": 251720,
+      "duration_ms": 4080,
+      "end_ms": 255800,
+      "text": "our agent is learning about the local"
+    },
+    {
+      "start_ms": 253600,
+      "duration_ms": 4359,
+      "end_ms": 257959,
+      "text": "DB. It's making sure that it's clean,"
+    },
+    {
+      "start_ms": 255800,
+      "duration_ms": 4480,
+      "end_ms": 260280,
+      "text": "and it's starting to sync things while"
+    },
+    {
+      "start_ms": 257959,
+      "duration_ms": 4921,
+      "end_ms": 262880,
+      "text": "keeping everything PII safe, right? So,"
+    },
+    {
+      "start_ms": 260280,
+      "duration_ms": 5040,
+      "end_ms": 265320,
+      "text": "this is yet another place where if you"
+    },
+    {
+      "start_ms": 262880,
+      "duration_ms": 3640,
+      "end_ms": 266520,
+      "text": "engineer things properly, if you prompt"
+    },
+    {
+      "start_ms": 265320,
+      "duration_ms": 3880,
+      "end_ms": 269200,
+      "text": "things properly, you can do"
+    },
+    {
+      "start_ms": 266520,
+      "duration_ms": 5520,
+      "end_ms": 272040,
+      "text": "extraordinary things in your agentic"
+    },
+    {
+      "start_ms": 269200,
+      "duration_ms": 5120,
+      "end_ms": 274320,
+      "text": "systems. There are endless use cases for"
+    },
+    {
+      "start_ms": 272040,
+      "duration_ms": 3800,
+      "end_ms": 275840,
+      "text": "agents that actually communicate and"
+    },
+    {
+      "start_ms": 274320,
+      "duration_ms": 4240,
+      "end_ms": 278560,
+      "text": "work together. You can see there we got"
+    },
+    {
+      "start_ms": 275840,
+      "duration_ms": 4640,
+      "end_ms": 280480,
+      "text": "another message back, and this process"
+    },
+    {
+      "start_ms": 278560,
+      "duration_ms": 3480,
+      "end_ms": 282040,
+      "text": "is going to continue. So, we're going to"
+    },
+    {
+      "start_ms": 280480,
+      "duration_ms": 3720,
+      "end_ms": 284200,
+      "text": "let our agents cook here. I want to take"
+    },
+    {
+      "start_ms": 282040,
+      "duration_ms": 3640,
+      "end_ms": 285680,
+      "text": "the time to like highlight why"
+    },
+    {
+      "start_ms": 284200,
+      "duration_ms": 3200,
+      "end_ms": 287400,
+      "text": "agent-to-agent communication is so"
+    },
+    {
+      "start_ms": 285680,
+      "duration_ms": 4080,
+      "end_ms": 289760,
+      "text": "important, and highlight, of course,"
+    },
+    {
+      "start_ms": 287400,
+      "duration_ms": 4120,
+      "end_ms": 291520,
+      "text": "once again, why the Pi Coding Agent is"
+    },
+    {
+      "start_ms": 289760,
+      "duration_ms": 4000,
+      "end_ms": 293760,
+      "text": "really the only way that you get this"
+    },
+    {
+      "start_ms": 291520,
+      "duration_ms": 4640,
+      "end_ms": 296160,
+      "text": "level of control out of your agents"
+    },
+    {
+      "start_ms": 293760,
+      "duration_ms": 2400,
+      "end_ms": 296160,
+      "text": "here."
+    },
+    {
+      "start_ms": 299280,
+      "duration_ms": 3320,
+      "end_ms": 302600,
+      "text": "I think the most important thing to"
+    },
+    {
+      "start_ms": 300400,
+      "duration_ms": 4320,
+      "end_ms": 304720,
+      "text": "start with here is understanding the"
+    },
+    {
+      "start_ms": 302600,
+      "duration_ms": 3640,
+      "end_ms": 306240,
+      "text": "current problem, right? Agents can't"
+    },
+    {
+      "start_ms": 304720,
+      "duration_ms": 4480,
+      "end_ms": 309200,
+      "text": "talk to each other. We know that there"
+    },
+    {
+      "start_ms": 306240,
+      "duration_ms": 4600,
+      "end_ms": 310840,
+      "text": "is sub agent delegation and sub agent"
+    },
+    {
+      "start_ms": 309200,
+      "duration_ms": 3719,
+      "end_ms": 312919,
+      "text": "prompting, right? And this is a great"
+    },
+    {
+      "start_ms": 310840,
+      "duration_ms": 3600,
+      "end_ms": 314440,
+      "text": "pattern. It's a great start. Like if you"
+    },
+    {
+      "start_ms": 312919,
+      "duration_ms": 4121,
+      "end_ms": 317040,
+      "text": "agree with this statement, we are just"
+    },
+    {
+      "start_ms": 314440,
+      "duration_ms": 5160,
+      "end_ms": 319600,
+      "text": "scratching the surface of what the true"
+    },
+    {
+      "start_ms": 317040,
+      "duration_ms": 4960,
+      "end_ms": 322000,
+      "text": "developer experience looks like for"
+    },
+    {
+      "start_ms": 319600,
+      "duration_ms": 4080,
+      "end_ms": 323680,
+      "text": "agentic engineering, right? We don't"
+    },
+    {
+      "start_ms": 322000,
+      "duration_ms": 5440,
+      "end_ms": 327440,
+      "text": "really even know what that form factor"
+    },
+    {
+      "start_ms": 323680,
+      "duration_ms": 5600,
+      "end_ms": 329280,
+      "text": "is. I think very clearly in terminal"
+    },
+    {
+      "start_ms": 327440,
+      "duration_ms": 3880,
+      "end_ms": 331320,
+      "text": "agents"
+    },
+    {
+      "start_ms": 329280,
+      "duration_ms": 4160,
+      "end_ms": 333440,
+      "text": "the center point, but everything around"
+    },
+    {
+      "start_ms": 331320,
+      "duration_ms": 4599,
+      "end_ms": 335919,
+      "text": "that from the agent harness to how we"
+    },
+    {
+      "start_ms": 333440,
+      "duration_ms": 4840,
+      "end_ms": 338280,
+      "text": "manage contexts, models, agent scale,"
+    },
+    {
+      "start_ms": 335919,
+      "duration_ms": 3921,
+      "end_ms": 339840,
+      "text": "tools, this is all a work in progress."
+    },
+    {
+      "start_ms": 338280,
+      "duration_ms": 3639,
+      "end_ms": 341919,
+      "text": "So, if we're not exploring the state"
+    },
+    {
+      "start_ms": 339840,
+      "duration_ms": 4840,
+      "end_ms": 344680,
+      "text": "space of what's possible with our agent"
+    },
+    {
+      "start_ms": 341919,
+      "duration_ms": 4561,
+      "end_ms": 346480,
+      "text": "communication and other agentic"
+    },
+    {
+      "start_ms": 344680,
+      "duration_ms": 3680,
+      "end_ms": 348360,
+      "text": "workflows and patterns, uh we're going"
+    },
+    {
+      "start_ms": 346480,
+      "duration_ms": 3840,
+      "end_ms": 350320,
+      "text": "to be stuck in the normal distribution,"
+    },
+    {
+      "start_ms": 348360,
+      "duration_ms": 3840,
+      "end_ms": 352200,
+      "text": "the very beginning of what's possible."
+    },
+    {
+      "start_ms": 350320,
+      "duration_ms": 3480,
+      "end_ms": 353800,
+      "text": "So, sub agents, very important, very"
+    },
+    {
+      "start_ms": 352200,
+      "duration_ms": 3080,
+      "end_ms": 355280,
+      "text": "cool, but this is just the beginning,"
+    },
+    {
+      "start_ms": 353800,
+      "duration_ms": 3720,
+      "end_ms": 357520,
+      "text": "right? When you push further, you can"
+    },
+    {
+      "start_ms": 355280,
+      "duration_ms": 4440,
+      "end_ms": 359720,
+      "text": "find a message queue, and this is what"
+    },
+    {
+      "start_ms": 357520,
+      "duration_ms": 3840,
+      "end_ms": 361360,
+      "text": "the Cloud Code agent teams uses. So, you"
+    },
+    {
+      "start_ms": 359720,
+      "duration_ms": 3360,
+      "end_ms": 363080,
+      "text": "have one agent that kind of sets up all"
+    },
+    {
+      "start_ms": 361360,
+      "duration_ms": 4160,
+      "end_ms": 365520,
+      "text": "the message queue, and then it serves as"
+    },
+    {
+      "start_ms": 363080,
+      "duration_ms": 4000,
+      "end_ms": 367080,
+      "text": "a message broker between agents. Another"
+    },
+    {
+      "start_ms": 365520,
+      "duration_ms": 3440,
+      "end_ms": 368960,
+      "text": "great powerful pattern. You then have"
+    },
+    {
+      "start_ms": 367080,
+      "duration_ms": 4080,
+      "end_ms": 371160,
+      "text": "things like agent chains, where you have"
+    },
+    {
+      "start_ms": 368960,
+      "duration_ms": 4440,
+      "end_ms": 373400,
+      "text": "a deterministic set up workflow that"
+    },
+    {
+      "start_ms": 371160,
+      "duration_ms": 3640,
+      "end_ms": 374800,
+      "text": "have individual nodes of agents. When"
+    },
+    {
+      "start_ms": 373400,
+      "duration_ms": 3680,
+      "end_ms": 377080,
+      "text": "you combine this with code, you get"
+    },
+    {
+      "start_ms": 374800,
+      "duration_ms": 5640,
+      "end_ms": 380440,
+      "text": "powerful AI developer workflows or"
+    },
+    {
+      "start_ms": 377080,
+      "duration_ms": 5520,
+      "end_ms": 382600,
+      "text": "blueprints or representations of agents"
+    },
+    {
+      "start_ms": 380440,
+      "duration_ms": 4560,
+      "end_ms": 385000,
+      "text": "plus code. This is a very, very powerful"
+    },
+    {
+      "start_ms": 382600,
+      "duration_ms": 4080,
+      "end_ms": 386680,
+      "text": "framework, because it adds determinism"
+    },
+    {
+      "start_ms": 385000,
+      "duration_ms": 3440,
+      "end_ms": 388440,
+      "text": "into the process, right? At any one of"
+    },
+    {
+      "start_ms": 386680,
+      "duration_ms": 3400,
+      "end_ms": 390080,
+      "text": "these steps, you can insert code, and"
+    },
+    {
+      "start_ms": 388440,
+      "duration_ms": 3080,
+      "end_ms": 391520,
+      "text": "it'll enhance what your agents can do."
+    },
+    {
+      "start_ms": 390080,
+      "duration_ms": 3200,
+      "end_ms": 393280,
+      "text": "So, very powerful stuff here, right?"
+    },
+    {
+      "start_ms": 391520,
+      "duration_ms": 3000,
+      "end_ms": 394520,
+      "text": "But, um there's a problem with this. As"
+    },
+    {
+      "start_ms": 393280,
+      "duration_ms": 3880,
+      "end_ms": 397160,
+      "text": "you can see, in every one of these"
+    },
+    {
+      "start_ms": 394520,
+      "duration_ms": 4840,
+      "end_ms": 399360,
+      "text": "workflows, it is traveling information"
+    },
+    {
+      "start_ms": 397160,
+      "duration_ms": 4080,
+      "end_ms": 401240,
+      "text": "in basically one direction, and it's"
+    },
+    {
+      "start_ms": 399360,
+      "duration_ms": 4120,
+      "end_ms": 403480,
+      "text": "always a top-down way. Even if the"
+    },
+    {
+      "start_ms": 401240,
+      "duration_ms": 4400,
+      "end_ms": 405640,
+      "text": "information comes back, it's a one-way"
+    },
+    {
+      "start_ms": 403480,
+      "duration_ms": 4320,
+      "end_ms": 407800,
+      "text": "stream, right? It's never bidirectional."
+    },
+    {
+      "start_ms": 405640,
+      "duration_ms": 4600,
+      "end_ms": 410240,
+      "text": "So, what's the solution?"
+    },
+    {
+      "start_ms": 407800,
+      "duration_ms": 4920,
+      "end_ms": 412720,
+      "text": "It's quite simple. Let your agents talk"
+    },
+    {
+      "start_ms": 410240,
+      "duration_ms": 5440,
+      "end_ms": 415680,
+      "text": "to each other, right? Prompt response,"
+    },
+    {
+      "start_ms": 412720,
+      "duration_ms": 4720,
+      "end_ms": 417440,
+      "text": "and then prompt response, okay?"
+    },
+    {
+      "start_ms": 415680,
+      "duration_ms": 3440,
+      "end_ms": 419120,
+      "text": "Peer-to-peer, not"
+    },
+    {
+      "start_ms": 417440,
+      "duration_ms": 4960,
+      "end_ms": 422400,
+      "text": "orchestrator-to-worker,"
+    },
+    {
+      "start_ms": 419120,
+      "duration_ms": 4920,
+      "end_ms": 424040,
+      "text": "changes things. Here, agents are equals."
+    },
+    {
+      "start_ms": 422400,
+      "duration_ms": 4120,
+      "end_ms": 426520,
+      "text": "They're not parent and child, and this"
+    },
+    {
+      "start_ms": 424040,
+      "duration_ms": 4600,
+      "end_ms": 428640,
+      "text": "unlocks, of course, bidirectional flows"
+    },
+    {
+      "start_ms": 426520,
+      "duration_ms": 3520,
+      "end_ms": 430040,
+      "text": "of information, okay? Just two agents"
+    },
+    {
+      "start_ms": 428640,
+      "duration_ms": 3360,
+      "end_ms": 432000,
+      "text": "communicating to each other. As you can"
+    },
+    {
+      "start_ms": 430040,
+      "duration_ms": 4480,
+      "end_ms": 434520,
+      "text": "see here, our agents are still working"
+    },
+    {
+      "start_ms": 432000,
+      "duration_ms": 4880,
+      "end_ms": 436880,
+      "text": "together to figure out these issues, to"
+    },
+    {
+      "start_ms": 434520,
+      "duration_ms": 5160,
+      "end_ms": 439680,
+      "text": "really work through how to perfectly"
+    },
+    {
+      "start_ms": 436880,
+      "duration_ms": 5320,
+      "end_ms": 442200,
+      "text": "reproduce the production slice. But, you"
+    },
+    {
+      "start_ms": 439680,
+      "duration_ms": 4239,
+      "end_ms": 443919,
+      "text": "can push this across devices and across"
+    },
+    {
+      "start_ms": 442200,
+      "duration_ms": 3440,
+      "end_ms": 445640,
+      "text": "multiple agents, right? And this looks"
+    },
+    {
+      "start_ms": 443919,
+      "duration_ms": 3401,
+      "end_ms": 447320,
+      "text": "like exactly what you'd imagine, right?"
+    },
+    {
+      "start_ms": 445640,
+      "duration_ms": 3160,
+      "end_ms": 448800,
+      "text": "Now, we have three agents in the"
+    },
+    {
+      "start_ms": 447320,
+      "duration_ms": 3560,
+      "end_ms": 450880,
+      "text": "network. You might have a researcher,"
+    },
+    {
+      "start_ms": 448800,
+      "duration_ms": 4320,
+      "end_ms": 453120,
+      "text": "coder, planner. These can be anything"
+    },
+    {
+      "start_ms": 450880,
+      "duration_ms": 4800,
+      "end_ms": 455680,
+      "text": "under the sun. In our case, we have a"
+    },
+    {
+      "start_ms": 453120,
+      "duration_ms": 5000,
+      "end_ms": 458120,
+      "text": "prod agent, and we have a developer"
+    },
+    {
+      "start_ms": 455680,
+      "duration_ms": 4239,
+      "end_ms": 459919,
+      "text": "agent talking to each other across the"
+    },
+    {
+      "start_ms": 458120,
+      "duration_ms": 3480,
+      "end_ms": 461600,
+      "text": "network, okay? But, you can just keep"
+    },
+    {
+      "start_ms": 459919,
+      "duration_ms": 4161,
+      "end_ms": 464080,
+      "text": "scaling this up, right? And at some"
+    },
+    {
+      "start_ms": 461600,
+      "duration_ms": 3800,
+      "end_ms": 465400,
+      "text": "point, it's going to be uh harmful,"
+    },
+    {
+      "start_ms": 464080,
+      "duration_ms": 3600,
+      "end_ms": 467680,
+      "text": "right? Like there is a limit to how"
+    },
+    {
+      "start_ms": 465400,
+      "duration_ms": 3680,
+      "end_ms": 469080,
+      "text": "useful this is. Um I'm not just trying"
+    },
+    {
+      "start_ms": 467680,
+      "duration_ms": 3240,
+      "end_ms": 470920,
+      "text": "to sell you the upside here. There's"
+    },
+    {
+      "start_ms": 469080,
+      "duration_ms": 3400,
+      "end_ms": 472480,
+      "text": "downsides to every approach. Great"
+    },
+    {
+      "start_ms": 470920,
+      "duration_ms": 3480,
+      "end_ms": 474400,
+      "text": "engineering is all about managing"
+    },
+    {
+      "start_ms": 472480,
+      "duration_ms": 3040,
+      "end_ms": 475520,
+      "text": "tradeoffs. At some level, you're not"
+    },
+    {
+      "start_ms": 474400,
+      "duration_ms": 3040,
+      "end_ms": 477440,
+      "text": "going to want to use this pattern"
+    },
+    {
+      "start_ms": 475520,
+      "duration_ms": 4520,
+      "end_ms": 480040,
+      "text": "anymore. And at some level, adding"
+    },
+    {
+      "start_ms": 477440,
+      "duration_ms": 5240,
+      "end_ms": 482680,
+      "text": "agents doesn't help anything. But, there"
+    },
+    {
+      "start_ms": 480040,
+      "duration_ms": 4840,
+      "end_ms": 484880,
+      "text": "is certainly a useful level to this"
+    },
+    {
+      "start_ms": 482680,
+      "duration_ms": 4160,
+      "end_ms": 486840,
+      "text": "where you want to have bidirectional"
+    },
+    {
+      "start_ms": 484880,
+      "duration_ms": 4040,
+      "end_ms": 488920,
+      "text": "agent-to-agent communication, where it's"
+    },
+    {
+      "start_ms": 486840,
+      "duration_ms": 4600,
+      "end_ms": 491440,
+      "text": "very, very useful to have every agent"
+    },
+    {
+      "start_ms": 488920,
+      "duration_ms": 4999,
+      "end_ms": 493919,
+      "text": "have access to every other agent, okay?"
+    },
+    {
+      "start_ms": 491440,
+      "duration_ms": 4479,
+      "end_ms": 495919,
+      "text": "And so, why is this useful, right? Let's"
+    },
+    {
+      "start_ms": 493919,
+      "duration_ms": 4281,
+      "end_ms": 498200,
+      "text": "let's really hit on this. Like I think"
+    },
+    {
+      "start_ms": 495919,
+      "duration_ms": 4161,
+      "end_ms": 500080,
+      "text": "at the core of this, it comes down to"
+    },
+    {
+      "start_ms": 498200,
+      "duration_ms": 3280,
+      "end_ms": 501480,
+      "text": "information hierarchies. If you have a"
+    },
+    {
+      "start_ms": 500080,
+      "duration_ms": 3440,
+      "end_ms": 503520,
+      "text": "traditional software engineering job,"
+    },
+    {
+      "start_ms": 501480,
+      "duration_ms": 4360,
+      "end_ms": 505840,
+      "text": "you work at a company that has a"
+    },
+    {
+      "start_ms": 503520,
+      "duration_ms": 4080,
+      "end_ms": 507600,
+      "text": "hierarchy, right? For one reason or"
+    },
+    {
+      "start_ms": 505840,
+      "duration_ms": 3880,
+      "end_ms": 509720,
+      "text": "another, there is someone at the top,"
+    },
+    {
+      "start_ms": 507600,
+      "duration_ms": 4080,
+      "end_ms": 511680,
+      "text": "okay? And information usually travels"
+    },
+    {
+      "start_ms": 509720,
+      "duration_ms": 4400,
+      "end_ms": 514120,
+      "text": "downstream, commands travel downstream,"
+    },
+    {
+      "start_ms": 511680,
+      "duration_ms": 4320,
+      "end_ms": 516000,
+      "text": "objectives travel downstream, and then"
+    },
+    {
+      "start_ms": 514120,
+      "duration_ms": 3479,
+      "end_ms": 517599,
+      "text": "it hits the person, usually the"
+    },
+    {
+      "start_ms": 516000,
+      "duration_ms": 4000,
+      "end_ms": 520000,
+      "text": "engineers, who are actually building the"
+    },
+    {
+      "start_ms": 517599,
+      "duration_ms": 4560,
+      "end_ms": 522159,
+      "text": "thing, right? And oftentimes, the best"
+    },
+    {
+      "start_ms": 520000,
+      "duration_ms": 4600,
+      "end_ms": 524600,
+      "text": "information, the best decisions, the"
+    },
+    {
+      "start_ms": 522159,
+      "duration_ms": 4281,
+      "end_ms": 526440,
+      "text": "best awareness about the system is all"
+    },
+    {
+      "start_ms": 524600,
+      "duration_ms": 3720,
+      "end_ms": 528320,
+      "text": "the way down here, right? It's on the"
+    },
+    {
+      "start_ms": 526440,
+      "duration_ms": 3240,
+      "end_ms": 529680,
+      "text": "worker level, right? It's It's you and"
+    },
+    {
+      "start_ms": 528320,
+      "duration_ms": 2920,
+      "end_ms": 531240,
+      "text": "I, the engineers with their boots on the"
+    },
+    {
+      "start_ms": 529680,
+      "duration_ms": 2720,
+      "end_ms": 532400,
+      "text": "ground every single day, putting in the"
+    },
+    {
+      "start_ms": 531240,
+      "duration_ms": 2360,
+      "end_ms": 533600,
+      "text": "work to understand the system,"
+    },
+    {
+      "start_ms": 532400,
+      "duration_ms": 3200,
+      "end_ms": 535600,
+      "text": "understand the objectives, and then"
+    },
+    {
+      "start_ms": 533600,
+      "duration_ms": 4440,
+      "end_ms": 538040,
+      "text": "actually building it, right? The best"
+    },
+    {
+      "start_ms": 535600,
+      "duration_ms": 4160,
+      "end_ms": 539760,
+      "text": "information is often times down here."
+    },
+    {
+      "start_ms": 538040,
+      "duration_ms": 4000,
+      "end_ms": 542040,
+      "text": "When you have these hierarchical"
+    },
+    {
+      "start_ms": 539760,
+      "duration_ms": 3800,
+      "end_ms": 543560,
+      "text": "information systems, and I'm speaking in"
+    },
+    {
+      "start_ms": 542040,
+      "duration_ms": 3080,
+      "end_ms": 545120,
+      "text": "a generic way, it doesn't just need to"
+    },
+    {
+      "start_ms": 543560,
+      "duration_ms": 3840,
+      "end_ms": 547400,
+      "text": "be about the job. It doesn't just need"
+    },
+    {
+      "start_ms": 545120,
+      "duration_ms": 4280,
+      "end_ms": 549400,
+      "text": "to be in a career setting. But, just"
+    },
+    {
+      "start_ms": 547400,
+      "duration_ms": 3640,
+      "end_ms": 551040,
+      "text": "information structures like this, often"
+    },
+    {
+      "start_ms": 549400,
+      "duration_ms": 3160,
+      "end_ms": 552560,
+      "text": "times the best ideas are down here. They"
+    },
+    {
+      "start_ms": 551040,
+      "duration_ms": 3360,
+      "end_ms": 554400,
+      "text": "get stuck down here because they don't"
+    },
+    {
+      "start_ms": 552560,
+      "duration_ms": 3800,
+      "end_ms": 556360,
+      "text": "have the right title, they don't have"
+    },
+    {
+      "start_ms": 554400,
+      "duration_ms": 4000,
+      "end_ms": 558400,
+      "text": "the right authority, they don't have the"
+    },
+    {
+      "start_ms": 556360,
+      "duration_ms": 3280,
+      "end_ms": 559640,
+      "text": "right say, right? And you've, you know,"
+    },
+    {
+      "start_ms": 558400,
+      "duration_ms": 3240,
+      "end_ms": 561640,
+      "text": "you've probably heard this, right? But,"
+    },
+    {
+      "start_ms": 559640,
+      "duration_ms": 4520,
+      "end_ms": 564160,
+      "text": "the best companies, the best structures"
+    },
+    {
+      "start_ms": 561640,
+      "duration_ms": 4560,
+      "end_ms": 566200,
+      "text": "are flat, where there's communication"
+    },
+    {
+      "start_ms": 564160,
+      "duration_ms": 4120,
+      "end_ms": 568280,
+      "text": "happening on every single level, where"
+    },
+    {
+      "start_ms": 566200,
+      "duration_ms": 4000,
+      "end_ms": 570200,
+      "text": "everyone can just talk to the other to"
+    },
+    {
+      "start_ms": 568280,
+      "duration_ms": 3680,
+      "end_ms": 571960,
+      "text": "get the job done, right? Nvidia is"
+    },
+    {
+      "start_ms": 570200,
+      "duration_ms": 3400,
+      "end_ms": 573600,
+      "text": "really famous for this, very flat"
+    },
+    {
+      "start_ms": 571960,
+      "duration_ms": 4680,
+      "end_ms": 576640,
+      "text": "reporting structures. Of course, Jensen"
+    },
+    {
+      "start_ms": 573600,
+      "duration_ms": 4680,
+      "end_ms": 578280,
+      "text": "at the top, commanding that insane"
+    },
+    {
+      "start_ms": 576640,
+      "duration_ms": 3720,
+      "end_ms": 580360,
+      "text": "company. But, then he has uh very few"
+    },
+    {
+      "start_ms": 578280,
+      "duration_ms": 3640,
+      "end_ms": 581920,
+      "text": "direct reports, and then it spans from"
+    },
+    {
+      "start_ms": 580360,
+      "duration_ms": 2920,
+      "end_ms": 583280,
+      "text": "there, right? But, startups are famous"
+    },
+    {
+      "start_ms": 581920,
+      "duration_ms": 3600,
+      "end_ms": 585520,
+      "text": "for this, right? You have very, very"
+    },
+    {
+      "start_ms": 583280,
+      "duration_ms": 4920,
+      "end_ms": 588200,
+      "text": "flat structures. All the best"
+    },
+    {
+      "start_ms": 585520,
+      "duration_ms": 4640,
+      "end_ms": 590160,
+      "text": "information systems are flat. Why is"
+    },
+    {
+      "start_ms": 588200,
+      "duration_ms": 5280,
+      "end_ms": 593480,
+      "text": "that? It's because you get valuable"
+    },
+    {
+      "start_ms": 590160,
+      "duration_ms": 5640,
+      "end_ms": 595800,
+      "text": "information wins always over titles and"
+    },
+    {
+      "start_ms": 593480,
+      "duration_ms": 4880,
+      "end_ms": 598360,
+      "text": "politics, okay? Ideas die in"
+    },
+    {
+      "start_ms": 595800,
+      "duration_ms": 4480,
+      "end_ms": 600280,
+      "text": "hierarchies. So, that's why this is so"
+    },
+    {
+      "start_ms": 598360,
+      "duration_ms": 3360,
+      "end_ms": 601720,
+      "text": "important. And And, you know, maybe you"
+    },
+    {
+      "start_ms": 600280,
+      "duration_ms": 3120,
+      "end_ms": 603400,
+      "text": "think I'm anthropomorphizing this too"
+    },
+    {
+      "start_ms": 601720,
+      "duration_ms": 3600,
+      "end_ms": 605320,
+      "text": "much. Maybe you think I am trying to"
+    },
+    {
+      "start_ms": 603400,
+      "duration_ms": 3720,
+      "end_ms": 607120,
+      "text": "apply something where it doesn't belong."
+    },
+    {
+      "start_ms": 605320,
+      "duration_ms": 3600,
+      "end_ms": 608920,
+      "text": "I completely disagree. I think when you"
+    },
+    {
+      "start_ms": 607120,
+      "duration_ms": 4720,
+      "end_ms": 611840,
+      "text": "really boil things down, everything is a"
+    },
+    {
+      "start_ms": 608920,
+      "duration_ms": 5080,
+      "end_ms": 614000,
+      "text": "system. And a key part about every"
+    },
+    {
+      "start_ms": 611840,
+      "duration_ms": 4880,
+      "end_ms": 616720,
+      "text": "system is that there is flows of"
+    },
+    {
+      "start_ms": 614000,
+      "duration_ms": 5040,
+      "end_ms": 619040,
+      "text": "information inside of systems, and how"
+    },
+    {
+      "start_ms": 616720,
+      "duration_ms": 4600,
+      "end_ms": 621320,
+      "text": "things flow, how the structures, the"
+    },
+    {
+      "start_ms": 619040,
+      "duration_ms": 4760,
+      "end_ms": 623800,
+      "text": "nodes, and the actors in the system"
+    },
+    {
+      "start_ms": 621320,
+      "duration_ms": 5120,
+      "end_ms": 626440,
+      "text": "communicate information matters, right?"
+    },
+    {
+      "start_ms": 623800,
+      "duration_ms": 5080,
+      "end_ms": 628880,
+      "text": "This matters because oftentimes the best"
+    },
+    {
+      "start_ms": 626440,
+      "duration_ms": 4520,
+      "end_ms": 630960,
+      "text": "ideas are down here. They're at the"
+    },
+    {
+      "start_ms": 628880,
+      "duration_ms": 3800,
+      "end_ms": 632680,
+      "text": "bottom level. And so, this means that as"
+    },
+    {
+      "start_ms": 630960,
+      "duration_ms": 3680,
+      "end_ms": 634640,
+      "text": "much as you can, you want to have flat"
+    },
+    {
+      "start_ms": 632680,
+      "duration_ms": 4000,
+      "end_ms": 636680,
+      "text": "hierarchy structures, okay? But, on a"
+    },
+    {
+      "start_ms": 634640,
+      "duration_ms": 4480,
+      "end_ms": 639120,
+      "text": "functional level, we can see that this"
+    },
+    {
+      "start_ms": 636680,
+      "duration_ms": 4600,
+      "end_ms": 641280,
+      "text": "is uh useful for other reasons as well."
+    },
+    {
+      "start_ms": 639120,
+      "duration_ms": 3680,
+      "end_ms": 642800,
+      "text": "We have cross-device agent-to-agent"
+    },
+    {
+      "start_ms": 641280,
+      "duration_ms": 3840,
+      "end_ms": 645120,
+      "text": "communication, right? We have a"
+    },
+    {
+      "start_ms": 642800,
+      "duration_ms": 3640,
+      "end_ms": 646440,
+      "text": "production service. Say this is in the"
+    },
+    {
+      "start_ms": 645120,
+      "duration_ms": 2719,
+      "end_ms": 647839,
+      "text": "EU,"
+    },
+    {
+      "start_ms": 646440,
+      "duration_ms": 3720,
+      "end_ms": 650160,
+      "text": "right? Where everything has to be"
+    },
+    {
+      "start_ms": 647839,
+      "duration_ms": 3921,
+      "end_ms": 651760,
+      "text": "redacted, everything has to be perfect,"
+    },
+    {
+      "start_ms": 650160,
+      "duration_ms": 3200,
+      "end_ms": 653360,
+      "text": "and nothing can escape the device. But,"
+    },
+    {
+      "start_ms": 651760,
+      "duration_ms": 3280,
+      "end_ms": 655040,
+      "text": "you still need to fix things, right? We"
+    },
+    {
+      "start_ms": 653360,
+      "duration_ms": 3600,
+      "end_ms": 656960,
+      "text": "still need to do real engineering work."
+    },
+    {
+      "start_ms": 655040,
+      "duration_ms": 3600,
+      "end_ms": 658640,
+      "text": "So, this is a great system. We have"
+    },
+    {
+      "start_ms": 656960,
+      "duration_ms": 3960,
+      "end_ms": 660920,
+      "text": "redacted information properly,"
+    },
+    {
+      "start_ms": 658640,
+      "duration_ms": 4120,
+      "end_ms": 662760,
+      "text": "transferred it to our developer machine."
+    },
+    {
+      "start_ms": 660920,
+      "duration_ms": 4000,
+      "end_ms": 664920,
+      "text": "And as you can see here, the repro is"
+    },
+    {
+      "start_ms": 662760,
+      "duration_ms": 4840,
+      "end_ms": 667600,
+      "text": "ready, the bug has been imported, okay?"
+    },
+    {
+      "start_ms": 664920,
+      "duration_ms": 4400,
+      "end_ms": 669320,
+      "text": "PII is clean, okay? So, legitimate"
+    },
+    {
+      "start_ms": 667600,
+      "duration_ms": 4000,
+      "end_ms": 671600,
+      "text": "engineering work happening here."
+    },
+    {
+      "start_ms": 669320,
+      "duration_ms": 4280,
+      "end_ms": 673600,
+      "text": "Obviously, this is not a real production"
+    },
+    {
+      "start_ms": 671600,
+      "duration_ms": 3920,
+      "end_ms": 675520,
+      "text": "server. I'm using this as an example."
+    },
+    {
+      "start_ms": 673600,
+      "duration_ms": 4600,
+      "end_ms": 678200,
+      "text": "And now I can go ahead, debug, look at"
+    },
+    {
+      "start_ms": 675520,
+      "duration_ms": 3960,
+      "end_ms": 679480,
+      "text": "my code, look at this slice of the"
+    },
+    {
+      "start_ms": 678200,
+      "duration_ms": 3080,
+      "end_ms": 681280,
+      "text": "production database that has been"
+    },
+    {
+      "start_ms": 679480,
+      "duration_ms": 3720,
+      "end_ms": 683200,
+      "text": "reproduced from production. And now I"
+    },
+    {
+      "start_ms": 681280,
+      "duration_ms": 3960,
+      "end_ms": 685240,
+      "text": "can actually resolve the bug. And our"
+    },
+    {
+      "start_ms": 683200,
+      "duration_ms": 3320,
+      "end_ms": 686520,
+      "text": "agents are really great at communicating"
+    },
+    {
+      "start_ms": 685240,
+      "duration_ms": 2640,
+      "end_ms": 687880,
+      "text": "information like this. And that's"
+    },
+    {
+      "start_ms": 686520,
+      "duration_ms": 4720,
+      "end_ms": 691240,
+      "text": "exactly what they've done, okay? So, we"
+    },
+    {
+      "start_ms": 687880,
+      "duration_ms": 4840,
+      "end_ms": 692720,
+      "text": "have very simple two-way bidirectional"
+    },
+    {
+      "start_ms": 691240,
+      "duration_ms": 3760,
+      "end_ms": 695000,
+      "text": "agent-to-agent communication. If I"
+    },
+    {
+      "start_ms": 692720,
+      "duration_ms": 4240,
+      "end_ms": 696960,
+      "text": "needed to, I could come in here and"
+    },
+    {
+      "start_ms": 695000,
+      "duration_ms": 4880,
+      "end_ms": 699880,
+      "text": "validate that everything looks good on"
+    },
+    {
+      "start_ms": 696960,
+      "duration_ms": 6280,
+      "end_ms": 703240,
+      "text": "the production agent side, right? Do one"
+    },
+    {
+      "start_ms": 699880,
+      "duration_ms": 5960,
+      "end_ms": 705840,
+      "text": "final check with the dev agent PRI safe."
+    },
+    {
+      "start_ms": 703240,
+      "duration_ms": 4800,
+      "end_ms": 708040,
+      "text": "The issue has been repro'd. We can talk"
+    },
+    {
+      "start_ms": 705840,
+      "duration_ms": 4320,
+      "end_ms": 710160,
+      "text": "to any side that we need to, and they"
+    },
+    {
+      "start_ms": 708040,
+      "duration_ms": 3400,
+      "end_ms": 711440,
+      "text": "can then communicate together to get the"
+    },
+    {
+      "start_ms": 710160,
+      "duration_ms": 2640,
+      "end_ms": 712800,
+      "text": "job done. So, I hope you can see the"
+    },
+    {
+      "start_ms": 711440,
+      "duration_ms": 2920,
+      "end_ms": 714360,
+      "text": "value proposition of this. I hope you"
+    },
+    {
+      "start_ms": 712800,
+      "duration_ms": 3080,
+      "end_ms": 715880,
+      "text": "can see why agent-to-agent communication"
+    },
+    {
+      "start_ms": 714360,
+      "duration_ms": 3560,
+      "end_ms": 717920,
+      "text": "is useful, even if you don't think that"
+    },
+    {
+      "start_ms": 715880,
+      "duration_ms": 3800,
+      "end_ms": 719680,
+      "text": "the flat information hierarchies are"
+    },
+    {
+      "start_ms": 717920,
+      "duration_ms": 4160,
+      "end_ms": 722080,
+      "text": "more performant for making sure that the"
+    },
+    {
+      "start_ms": 719680,
+      "duration_ms": 4880,
+      "end_ms": 724560,
+      "text": "best ideas are the ones that always win."
+    },
+    {
+      "start_ms": 722080,
+      "duration_ms": 4720,
+      "end_ms": 726800,
+      "text": "This is great because now we have simple"
+    },
+    {
+      "start_ms": 724560,
+      "duration_ms": 4320,
+      "end_ms": 728880,
+      "text": "multi-agent communication on different"
+    },
+    {
+      "start_ms": 726800,
+      "duration_ms": 3080,
+      "end_ms": 729880,
+      "text": "devices, okay? And whenever we need to,"
+    },
+    {
+      "start_ms": 728880,
+      "duration_ms": 2440,
+      "end_ms": 731320,
+      "text": "you know, let me just be clear about"
+    },
+    {
+      "start_ms": 729880,
+      "duration_ms": 3000,
+      "end_ms": 732880,
+      "text": "this. Whenever we need to, I can add an"
+    },
+    {
+      "start_ms": 731320,
+      "duration_ms": 3800,
+      "end_ms": 735120,
+      "text": "agent to the pool. So, if I type J"
+    },
+    {
+      "start_ms": 732880,
+      "duration_ms": 4360,
+      "end_ms": 737240,
+      "text": "Comms, let's use four, I think that's"
+    },
+    {
+      "start_ms": 735120,
+      "duration_ms": 4520,
+      "end_ms": 739640,
+      "text": "the GLM agent. You can see GLM added"
+    },
+    {
+      "start_ms": 737240,
+      "duration_ms": 4280,
+      "end_ms": 741520,
+      "text": "here, and now it is part of the pool,"
+    },
+    {
+      "start_ms": 739640,
+      "duration_ms": 3560,
+      "end_ms": 743200,
+      "text": "right? So, fantastic. How else can we"
+    },
+    {
+      "start_ms": 741520,
+      "duration_ms": 3320,
+      "end_ms": 744840,
+      "text": "use this? Agent-to-agent communication,"
+    },
+    {
+      "start_ms": 743200,
+      "duration_ms": 3400,
+      "end_ms": 746600,
+      "text": "it seems very powerful. We're not just"
+    },
+    {
+      "start_ms": 744840,
+      "duration_ms": 3800,
+      "end_ms": 748640,
+      "text": "delegating work, which is in its own"
+    },
+    {
+      "start_ms": 746600,
+      "duration_ms": 3000,
+      "end_ms": 749600,
+      "text": "right a very powerful communication"
+    },
+    {
+      "start_ms": 748640,
+      "duration_ms": 3240,
+      "end_ms": 751880,
+      "text": "pattern, right? This isn't a"
+    },
+    {
+      "start_ms": 749600,
+      "duration_ms": 4200,
+      "end_ms": 753800,
+      "text": "replacement. This is another option for"
+    },
+    {
+      "start_ms": 751880,
+      "duration_ms": 3160,
+      "end_ms": 755040,
+      "text": "your agentic engineering. We can solve"
+    },
+    {
+      "start_ms": 753800,
+      "duration_ms": 4600,
+      "end_ms": 758400,
+      "text": "other problems with it, right? Let let"
+    },
+    {
+      "start_ms": 755040,
+      "duration_ms": 3360,
+      "end_ms": 758400,
+      "text": "let's walk through another example."
+    },
+    {
+      "start_ms": 761440,
+      "duration_ms": 6360,
+      "end_ms": 767800,
+      "text": "So, let's fire up a E2B agent. And in"
+    },
+    {
+      "start_ms": 765120,
+      "duration_ms": 6600,
+      "end_ms": 771720,
+      "text": "fact, let's open up a new project here,"
+    },
+    {
+      "start_ms": 767800,
+      "duration_ms": 7520,
+      "end_ms": 775320,
+      "text": "sandbox. Same deal, J Comms 2, and name"
+    },
+    {
+      "start_ms": 771720,
+      "duration_ms": 5400,
+      "end_ms": 777120,
+      "text": "EXC dev agent project sandbox. So, we're"
+    },
+    {
+      "start_ms": 775320,
+      "duration_ms": 3840,
+      "end_ms": 779160,
+      "text": "just getting our agents off this"
+    },
+    {
+      "start_ms": 777120,
+      "duration_ms": 3200,
+      "end_ms": 780320,
+      "text": "network. This is a different pool to"
+    },
+    {
+      "start_ms": 779160,
+      "duration_ms": 2679,
+      "end_ms": 781839,
+      "text": "communicate in, right? So, we still"
+    },
+    {
+      "start_ms": 780320,
+      "duration_ms": 3400,
+      "end_ms": 783720,
+      "text": "still have our previous set there. And"
+    },
+    {
+      "start_ms": 781839,
+      "duration_ms": 4201,
+      "end_ms": 786040,
+      "text": "you can actually see that this work here"
+    },
+    {
+      "start_ms": 783720,
+      "duration_ms": 4400,
+      "end_ms": 788120,
+      "text": "was done. PII is safe. All the findings"
+    },
+    {
+      "start_ms": 786040,
+      "duration_ms": 3960,
+      "end_ms": 790000,
+      "text": "are there. So, we verified by having our"
+    },
+    {
+      "start_ms": 788120,
+      "duration_ms": 3760,
+      "end_ms": 791880,
+      "text": "production agent prompt our developer"
+    },
+    {
+      "start_ms": 790000,
+      "duration_ms": 3440,
+      "end_ms": 793440,
+      "text": "agent. Fantastic. There we got the pass."
+    },
+    {
+      "start_ms": 791880,
+      "duration_ms": 3959,
+      "end_ms": 795839,
+      "text": "Everything looks great. Both context"
+    },
+    {
+      "start_ms": 793440,
+      "duration_ms": 5040,
+      "end_ms": 798480,
+      "text": "windows are sharp and focused. There's"
+    },
+    {
+      "start_ms": 795839,
+      "duration_ms": 4761,
+      "end_ms": 800600,
+      "text": "no spillover between issues. This system"
+    },
+    {
+      "start_ms": 798480,
+      "duration_ms": 5040,
+      "end_ms": 803520,
+      "text": "has completed successfully. So, I've"
+    },
+    {
+      "start_ms": 800600,
+      "duration_ms": 4080,
+      "end_ms": 804680,
+      "text": "been using the E2B agent sandbox tool"
+    },
+    {
+      "start_ms": 803520,
+      "duration_ms": 3200,
+      "end_ms": 806720,
+      "text": "for quite some time now. It's been a"
+    },
+    {
+      "start_ms": 804680,
+      "duration_ms": 4160,
+      "end_ms": 808840,
+      "text": "great tool. It's also expensive, and it"
+    },
+    {
+      "start_ms": 806720,
+      "duration_ms": 4200,
+      "end_ms": 810920,
+      "text": "has some downsides like there's a limit"
+    },
+    {
+      "start_ms": 808840,
+      "duration_ms": 4000,
+      "end_ms": 812840,
+      "text": "to the total duration that you can have"
+    },
+    {
+      "start_ms": 810920,
+      "duration_ms": 3800,
+      "end_ms": 814720,
+      "text": "your agents up in a sandbox. You have to"
+    },
+    {
+      "start_ms": 812840,
+      "duration_ms": 4760,
+      "end_ms": 817600,
+      "text": "pause them to manage that. So, I've been"
+    },
+    {
+      "start_ms": 814720,
+      "duration_ms": 5840,
+      "end_ms": 820560,
+      "text": "looking at exe.dev as a new agent"
+    },
+    {
+      "start_ms": 817600,
+      "duration_ms": 5480,
+      "end_ms": 823080,
+      "text": "sandbox tool to replace or use"
+    },
+    {
+      "start_ms": 820560,
+      "duration_ms": 4360,
+      "end_ms": 824920,
+      "text": "additionally right next to e2b. And so,"
+    },
+    {
+      "start_ms": 823080,
+      "duration_ms": 3480,
+      "end_ms": 826560,
+      "text": "this is another agent sandbox tool. It's"
+    },
+    {
+      "start_ms": 824920,
+      "duration_ms": 3200,
+      "end_ms": 828120,
+      "text": "got a couple of different benefits. I'll"
+    },
+    {
+      "start_ms": 826560,
+      "duration_ms": 3800,
+      "end_ms": 830360,
+      "text": "link both of these in the description"
+    },
+    {
+      "start_ms": 828120,
+      "duration_ms": 5080,
+      "end_ms": 833200,
+      "text": "for you. But, the idea here is I already"
+    },
+    {
+      "start_ms": 830360,
+      "duration_ms": 4600,
+      "end_ms": 834960,
+      "text": "have my e2b agent in this sandbox skill,"
+    },
+    {
+      "start_ms": 833200,
+      "duration_ms": 3680,
+      "end_ms": 836880,
+      "text": "right? So, I have agent sandboxes and"
+    },
+    {
+      "start_ms": 834960,
+      "duration_ms": 4240,
+      "end_ms": 839200,
+      "text": "this is my e2b skill where I can just"
+    },
+    {
+      "start_ms": 836880,
+      "duration_ms": 4200,
+      "end_ms": 841080,
+      "text": "quickly spin up an agent sandbox that my"
+    },
+    {
+      "start_ms": 839200,
+      "duration_ms": 3280,
+      "end_ms": 842480,
+      "text": "agent can fully own and operate on my"
+    },
+    {
+      "start_ms": 841080,
+      "duration_ms": 3120,
+      "end_ms": 844200,
+      "text": "behalf. We've talked about agent"
+    },
+    {
+      "start_ms": 842480,
+      "duration_ms": 3160,
+      "end_ms": 845640,
+      "text": "sandboxes on the channel in the past."
+    },
+    {
+      "start_ms": 844200,
+      "duration_ms": 2920,
+      "end_ms": 847120,
+      "text": "I'll link those in the description for"
+    },
+    {
+      "start_ms": 845640,
+      "duration_ms": 5720,
+      "end_ms": 851360,
+      "text": "you as well. But, what I want to do here"
+    },
+    {
+      "start_ms": 847120,
+      "duration_ms": 7080,
+      "end_ms": 854200,
+      "text": "is spin up a brand new skill for exe.dev"
+    },
+    {
+      "start_ms": 851360,
+      "duration_ms": 5280,
+      "end_ms": 856640,
+      "text": "that mirrors and matches and has feature"
+    },
+    {
+      "start_ms": 854200,
+      "duration_ms": 4600,
+      "end_ms": 858800,
+      "text": "parity to my e2b agent skill. And"
+    },
+    {
+      "start_ms": 856640,
+      "duration_ms": 3680,
+      "end_ms": 860320,
+      "text": "anything that doesn't match, I want to"
+    },
+    {
+      "start_ms": 858800,
+      "duration_ms": 3320,
+      "end_ms": 862120,
+      "text": "know about it, right? I want to"
+    },
+    {
+      "start_ms": 860320,
+      "duration_ms": 4360,
+      "end_ms": 864680,
+      "text": "understand the feature differences, but"
+    },
+    {
+      "start_ms": 862120,
+      "duration_ms": 3920,
+      "end_ms": 866040,
+      "text": "I want my agent to fail forward. the"
+    },
+    {
+      "start_ms": 864680,
+      "duration_ms": 3200,
+      "end_ms": 867880,
+      "text": "skill to be built so that I can"
+    },
+    {
+      "start_ms": 866040,
+      "duration_ms": 3240,
+      "end_ms": 869280,
+      "text": "prototype and experiment with it right"
+    },
+    {
+      "start_ms": 867880,
+      "duration_ms": 3360,
+      "end_ms": 871240,
+      "text": "away, okay? So, I don't just want a"
+    },
+    {
+      "start_ms": 869280,
+      "duration_ms": 4720,
+      "end_ms": 874000,
+      "text": "simple research comparison. I want a new"
+    },
+    {
+      "start_ms": 871240,
+      "duration_ms": 4400,
+      "end_ms": 875640,
+      "text": "skill I can use that has feature parity"
+    },
+    {
+      "start_ms": 874000,
+      "duration_ms": 3240,
+      "end_ms": 877240,
+      "text": "with my existing skill. That's exactly"
+    },
+    {
+      "start_ms": 875640,
+      "duration_ms": 2880,
+      "end_ms": 878520,
+      "text": "what I'm going to prompt here. In my e2b"
+    },
+    {
+      "start_ms": 877240,
+      "duration_ms": 3960,
+      "end_ms": 881200,
+      "text": "agent, I'm going to fire this off."
+    },
+    {
+      "start_ms": 878520,
+      "duration_ms": 6080,
+      "end_ms": 884600,
+      "text": "You're the e2b agent. Your teammate is"
+    },
+    {
+      "start_ms": 881200,
+      "duration_ms": 6040,
+      "end_ms": 887240,
+      "text": "exe.dev. They'll be building this skill"
+    },
+    {
+      "start_ms": 884600,
+      "duration_ms": 4360,
+      "end_ms": 888960,
+      "text": "against exe.dev's persistent VM"
+    },
+    {
+      "start_ms": 887240,
+      "duration_ms": 3760,
+      "end_ms": 891000,
+      "text": "platform. Your job is to answer their"
+    },
+    {
+      "start_ms": 888960,
+      "duration_ms": 4320,
+      "end_ms": 893280,
+      "text": "questions, okay? So, we have a teammate"
+    },
+    {
+      "start_ms": 891000,
+      "duration_ms": 4200,
+      "end_ms": 895200,
+      "text": "set up specifically to understand this"
+    },
+    {
+      "start_ms": 893280,
+      "duration_ms": 3559,
+      "end_ms": 896839,
+      "text": "feature set. It's putting up a sandbox."
+    },
+    {
+      "start_ms": 895200,
+      "duration_ms": 3280,
+      "end_ms": 898480,
+      "text": "It's reminding itself of all the"
+    },
+    {
+      "start_ms": 896839,
+      "duration_ms": 4601,
+      "end_ms": 901440,
+      "text": "features. And when this completes, I'm"
+    },
+    {
+      "start_ms": 898480,
+      "duration_ms": 5640,
+      "end_ms": 904120,
+      "text": "going to kick off the exe.dev agent to"
+    },
+    {
+      "start_ms": 901440,
+      "duration_ms": 4680,
+      "end_ms": 906120,
+      "text": "communicate, work with, and sync up a"
+    },
+    {
+      "start_ms": 904120,
+      "duration_ms": 3200,
+      "end_ms": 907320,
+      "text": "brand new skill. You know, a lot of the"
+    },
+    {
+      "start_ms": 906120,
+      "duration_ms": 3760,
+      "end_ms": 909880,
+      "text": "agent-to-agent communication and"
+    },
+    {
+      "start_ms": 907320,
+      "duration_ms": 4640,
+      "end_ms": 911960,
+      "text": "multi-agent orchestration comes down to"
+    },
+    {
+      "start_ms": 909880,
+      "duration_ms": 4520,
+      "end_ms": 914400,
+      "text": "expanding your context window in a"
+    },
+    {
+      "start_ms": 911960,
+      "duration_ms": 4440,
+      "end_ms": 916400,
+      "text": "useful way such that your agents can"
+    },
+    {
+      "start_ms": 914400,
+      "duration_ms": 3920,
+      "end_ms": 918320,
+      "text": "specialize what they're focused on,"
+    },
+    {
+      "start_ms": 916400,
+      "duration_ms": 3360,
+      "end_ms": 919760,
+      "text": "okay? A lot of engineers do think that"
+    },
+    {
+      "start_ms": 918320,
+      "duration_ms": 2840,
+      "end_ms": 921160,
+      "text": "you just throw everything in one agent,"
+    },
+    {
+      "start_ms": 919760,
+      "duration_ms": 3520,
+      "end_ms": 923280,
+      "text": "wait for for models to get better, wait"
+    },
+    {
+      "start_ms": 921160,
+      "duration_ms": 3880,
+      "end_ms": 925040,
+      "text": "for that 5 million contacts window, and"
+    },
+    {
+      "start_ms": 923280,
+      "duration_ms": 4360,
+      "end_ms": 927640,
+      "text": "then all your problems will be solved. I"
+    },
+    {
+      "start_ms": 925040,
+      "duration_ms": 4160,
+      "end_ms": 929200,
+      "text": "don't agree with this approach at all. I"
+    },
+    {
+      "start_ms": 927640,
+      "duration_ms": 2920,
+      "end_ms": 930560,
+      "text": "think you should lean on the models, you"
+    },
+    {
+      "start_ms": 929200,
+      "duration_ms": 3000,
+      "end_ms": 932200,
+      "text": "should expect them to get better, you"
+    },
+    {
+      "start_ms": 930560,
+      "duration_ms": 3200,
+      "end_ms": 933760,
+      "text": "should plan for that in your products"
+    },
+    {
+      "start_ms": 932200,
+      "duration_ms": 3320,
+      "end_ms": 935520,
+      "text": "and services, but at the same time you"
+    },
+    {
+      "start_ms": 933760,
+      "duration_ms": 4800,
+      "end_ms": 938560,
+      "text": "should be learning how to focus your"
+    },
+    {
+      "start_ms": 935520,
+      "duration_ms": 4280,
+      "end_ms": 939800,
+      "text": "agents on one problem so that the chance"
+    },
+    {
+      "start_ms": 938560,
+      "duration_ms": 3640,
+      "end_ms": 942200,
+      "text": "that they cause an issue, so that the"
+    },
+    {
+      "start_ms": 939800,
+      "duration_ms": 4600,
+      "end_ms": 944400,
+      "text": "chance something goes wrong drops down"
+    },
+    {
+      "start_ms": 942200,
+      "duration_ms": 3920,
+      "end_ms": 946120,
+      "text": "to near zero. And how can you do that?"
+    },
+    {
+      "start_ms": 944400,
+      "duration_ms": 3960,
+      "end_ms": 948360,
+      "text": "You can do that by having focused"
+    },
+    {
+      "start_ms": 946120,
+      "duration_ms": 4560,
+      "end_ms": 950680,
+      "text": "context windows, okay? And by"
+    },
+    {
+      "start_ms": 948360,
+      "duration_ms": 5000,
+      "end_ms": 953360,
+      "text": "effectively specializing your agent to"
+    },
+    {
+      "start_ms": 950680,
+      "duration_ms": 4680,
+      "end_ms": 955360,
+      "text": "focus on one problem and one problem"
+    },
+    {
+      "start_ms": 953360,
+      "duration_ms": 4280,
+      "end_ms": 957640,
+      "text": "only. Spinning up and comparing two"
+    },
+    {
+      "start_ms": 955360,
+      "duration_ms": 4480,
+      "end_ms": 959840,
+      "text": "different tools with likely very similar"
+    },
+    {
+      "start_ms": 957640,
+      "duration_ms": 3680,
+      "end_ms": 961320,
+      "text": "APIs is going to get the context window"
+    },
+    {
+      "start_ms": 959840,
+      "duration_ms": 4240,
+      "end_ms": 964080,
+      "text": "pretty big. You can see here this agent"
+    },
+    {
+      "start_ms": 961320,
+      "duration_ms": 5560,
+      "end_ms": 966880,
+      "text": "is loading, refreshing itself on all of"
+    },
+    {
+      "start_ms": 964080,
+      "duration_ms": 4480,
+      "end_ms": 968560,
+      "text": "the E2B agent skill functionality,"
+    },
+    {
+      "start_ms": 966880,
+      "duration_ms": 3160,
+      "end_ms": 970040,
+      "text": "right? You can see sandbox remove,"
+    },
+    {
+      "start_ms": 968560,
+      "duration_ms": 3160,
+      "end_ms": 971720,
+      "text": "download dir, so on and so forth. We're"
+    },
+    {
+      "start_ms": 970040,
+      "duration_ms": 4040,
+      "end_ms": 974080,
+      "text": "almost at 10% context already. That's"
+    },
+    {
+      "start_ms": 971720,
+      "duration_ms": 4520,
+      "end_ms": 976240,
+      "text": "100k tokens, okay? If you're using"
+    },
+    {
+      "start_ms": 974080,
+      "duration_ms": 4720,
+      "end_ms": 978800,
+      "text": "agents on a daily basis, you understand"
+    },
+    {
+      "start_ms": 976240,
+      "duration_ms": 4600,
+      "end_ms": 980840,
+      "text": "this fact, right? A focused agent is a"
+    },
+    {
+      "start_ms": 978800,
+      "duration_ms": 4400,
+      "end_ms": 983200,
+      "text": "performant agent. you add to that"
+    },
+    {
+      "start_ms": 980840,
+      "duration_ms": 4960,
+      "end_ms": 985800,
+      "text": "context window, the higher the chance"
+    },
+    {
+      "start_ms": 983200,
+      "duration_ms": 4760,
+      "end_ms": 987960,
+      "text": "something goes wrong is. Specifically,"
+    },
+    {
+      "start_ms": 985800,
+      "duration_ms": 5039,
+      "end_ms": 990839,
+      "text": "when you start muddying unrelated"
+    },
+    {
+      "start_ms": 987960,
+      "duration_ms": 4360,
+      "end_ms": 992320,
+      "text": "context together, okay? This is the art"
+    },
+    {
+      "start_ms": 990839,
+      "duration_ms": 2921,
+      "end_ms": 993760,
+      "text": "of context engineering. It's not just"
+    },
+    {
+      "start_ms": 992320,
+      "duration_ms": 3880,
+      "end_ms": 996200,
+      "text": "getting all the right things, it's"
+    },
+    {
+      "start_ms": 993760,
+      "duration_ms": 3400,
+      "end_ms": 997160,
+      "text": "getting just the right things. This"
+    },
+    {
+      "start_ms": 996200,
+      "duration_ms": 2840,
+      "end_ms": 999040,
+      "text": "agent's booting up, it should be"
+    },
+    {
+      "start_ms": 997160,
+      "duration_ms": 5520,
+      "end_ms": 1002680,
+      "text": "complete pretty soon here, and then we"
+    },
+    {
+      "start_ms": 999040,
+      "duration_ms": 6200,
+      "end_ms": 1005240,
+      "text": "can prompt our exe.dev to create this"
+    },
+    {
+      "start_ms": 1002680,
+      "duration_ms": 5600,
+      "end_ms": 1008280,
+      "text": "new skill so that we can boot up brand"
+    },
+    {
+      "start_ms": 1005240,
+      "duration_ms": 4760,
+      "end_ms": 1010000,
+      "text": "new sandboxes for exe.dev, and we can"
+    },
+    {
+      "start_ms": 1008280,
+      "duration_ms": 3120,
+      "end_ms": 1011400,
+      "text": "really see what this is all about."
+    },
+    {
+      "start_ms": 1010000,
+      "duration_ms": 2960,
+      "end_ms": 1012960,
+      "text": "Moving forward, it's not just about"
+    },
+    {
+      "start_ms": 1011400,
+      "duration_ms": 3720,
+      "end_ms": 1015120,
+      "text": "these two sandbox tools, right? It's"
+    },
+    {
+      "start_ms": 1012960,
+      "duration_ms": 4680,
+      "end_ms": 1017640,
+      "text": "about every sandbox tool moving forward"
+    },
+    {
+      "start_ms": 1015120,
+      "duration_ms": 4000,
+      "end_ms": 1019120,
+      "text": "and our ability to deploy agents to"
+    },
+    {
+      "start_ms": 1017640,
+      "duration_ms": 3600,
+      "end_ms": 1021240,
+      "text": "understand the tools, to understand the"
+    },
+    {
+      "start_ms": 1019120,
+      "duration_ms": 5079,
+      "end_ms": 1024199,
+      "text": "technology, and then deploy them into"
+    },
+    {
+      "start_ms": 1021240,
+      "duration_ms": 4520,
+      "end_ms": 1025760,
+      "text": "valuable use cases on our behalf. So, we"
+    },
+    {
+      "start_ms": 1024199,
+      "duration_ms": 2961,
+      "end_ms": 1027160,
+      "text": "can use this system over and over and"
+    },
+    {
+      "start_ms": 1025760,
+      "duration_ms": 3840,
+      "end_ms": 1029600,
+      "text": "over, we can compare the features"
+    },
+    {
+      "start_ms": 1027160,
+      "duration_ms": 3919,
+      "end_ms": 1031079,
+      "text": "between every specialized agent. I hope"
+    },
+    {
+      "start_ms": 1029600,
+      "duration_ms": 2560,
+      "end_ms": 1032160,
+      "text": "you get the point, right? If this is all"
+    },
+    {
+      "start_ms": 1031079,
+      "duration_ms": 2841,
+      "end_ms": 1033920,
+      "text": "making sense, you know, make sure you"
+    },
+    {
+      "start_ms": 1032160,
+      "duration_ms": 3640,
+      "end_ms": 1035800,
+      "text": "drop a like. This is like really our"
+    },
+    {
+      "start_ms": 1033920,
+      "duration_ms": 4440,
+      "end_ms": 1038360,
+      "text": "bread and butter on the channel. We're"
+    },
+    {
+      "start_ms": 1035800,
+      "duration_ms": 4399,
+      "end_ms": 1040199,
+      "text": "scaling our compute to scale our impact."
+    },
+    {
+      "start_ms": 1038360,
+      "duration_ms": 4200,
+      "end_ms": 1042560,
+      "text": "It's all about scaling up what our"
+    },
+    {
+      "start_ms": 1040199,
+      "duration_ms": 4681,
+      "end_ms": 1044880,
+      "text": "agents can do and focusing our agents to"
+    },
+    {
+      "start_ms": 1042560,
+      "duration_ms": 5360,
+      "end_ms": 1047920,
+      "text": "solve real business problems on our"
+    },
+    {
+      "start_ms": 1044880,
+      "duration_ms": 4840,
+      "end_ms": 1049720,
+      "text": "behalf via agentic engineering, not vibe"
+    },
+    {
+      "start_ms": 1047920,
+      "duration_ms": 3760,
+      "end_ms": 1051680,
+      "text": "coding. We're not shooting prompts and"
+    },
+    {
+      "start_ms": 1049720,
+      "duration_ms": 5000,
+      "end_ms": 1054720,
+      "text": "not looking. We know what our agents are"
+    },
+    {
+      "start_ms": 1051680,
+      "duration_ms": 4760,
+      "end_ms": 1056440,
+      "text": "doing, okay? And this just stacks up on"
+    },
+    {
+      "start_ms": 1054720,
+      "duration_ms": 3800,
+      "end_ms": 1058520,
+      "text": "previous videos we've had on the channel"
+    },
+    {
+      "start_ms": 1056440,
+      "duration_ms": 4160,
+      "end_ms": 1060600,
+      "text": "where we're making our agents secure."
+    },
+    {
+      "start_ms": 1058520,
+      "duration_ms": 4160,
+      "end_ms": 1062680,
+      "text": "We're not letting them crush production"
+    },
+    {
+      "start_ms": 1060600,
+      "duration_ms": 4200,
+      "end_ms": 1064800,
+      "text": "assets when they should not be able to."
+    },
+    {
+      "start_ms": 1062680,
+      "duration_ms": 4400,
+      "end_ms": 1067080,
+      "text": "We're adding security to our bash tool"
+    },
+    {
+      "start_ms": 1064800,
+      "duration_ms": 3600,
+      "end_ms": 1068400,
+      "text": "when they need it. Just like in last"
+    },
+    {
+      "start_ms": 1067080,
+      "duration_ms": 3480,
+      "end_ms": 1070560,
+      "text": "week's video, we're preventing"
+    },
+    {
+      "start_ms": 1068400,
+      "duration_ms": 3920,
+      "end_ms": 1072320,
+      "text": "catastrophic commands from running. And"
+    },
+    {
+      "start_ms": 1070560,
+      "duration_ms": 4040,
+      "end_ms": 1074600,
+      "text": "then, you know, we're letting our agents"
+    },
+    {
+      "start_ms": 1072320,
+      "duration_ms": 3880,
+      "end_ms": 1076200,
+      "text": "rip on all the tools, all the skills,"
+    },
+    {
+      "start_ms": 1074600,
+      "duration_ms": 3600,
+      "end_ms": 1078200,
+      "text": "all the commands that we actually want"
+    },
+    {
+      "start_ms": 1076200,
+      "duration_ms": 3840,
+      "end_ms": 1080040,
+      "text": "our agents to execute, right? As you can"
+    },
+    {
+      "start_ms": 1078200,
+      "duration_ms": 4120,
+      "end_ms": 1082320,
+      "text": "see here, a lot of that sandbox tool"
+    },
+    {
+      "start_ms": 1080040,
+      "duration_ms": 3800,
+      "end_ms": 1083840,
+      "text": "running, our agent is understanding what"
+    },
+    {
+      "start_ms": 1082320,
+      "duration_ms": 3920,
+      "end_ms": 1086240,
+      "text": "it can do here. And soon it's going to"
+    },
+    {
+      "start_ms": 1083840,
+      "duration_ms": 3840,
+      "end_ms": 1087680,
+      "text": "write this uh presentation file for us."
+    },
+    {
+      "start_ms": 1086240,
+      "duration_ms": 3160,
+      "end_ms": 1089400,
+      "text": "And this is one of the great things and"
+    },
+    {
+      "start_ms": 1087680,
+      "duration_ms": 4320,
+      "end_ms": 1092000,
+      "text": "one of the annoying things about GPT"
+    },
+    {
+      "start_ms": 1089400,
+      "duration_ms": 4320,
+      "end_ms": 1093720,
+      "text": "5.5. This model really chews up tokens"
+    },
+    {
+      "start_ms": 1092000,
+      "duration_ms": 4200,
+      "end_ms": 1096200,
+      "text": "and it just goes and goes and goes to"
+    },
+    {
+      "start_ms": 1093720,
+      "duration_ms": 4840,
+      "end_ms": 1098560,
+      "text": "really get you the most comprehensive"
+    },
+    {
+      "start_ms": 1096200,
+      "duration_ms": 4720,
+      "end_ms": 1100920,
+      "text": "result possible. Whereas, I found that"
+    },
+    {
+      "start_ms": 1098560,
+      "duration_ms": 5360,
+      "end_ms": 1103920,
+      "text": "Opus 4.7 will do that as well, but it"
+    },
+    {
+      "start_ms": 1100920,
+      "duration_ms": 4120,
+      "end_ms": 1105040,
+      "text": "also will really just focus on the goal,"
+    },
+    {
+      "start_ms": 1103920,
+      "duration_ms": 3280,
+      "end_ms": 1107200,
+      "text": "right? I think Opus is more"
+    },
+    {
+      "start_ms": 1105040,
+      "duration_ms": 4000,
+      "end_ms": 1109040,
+      "text": "goal-oriented and really focuses on"
+    },
+    {
+      "start_ms": 1107200,
+      "duration_ms": 3840,
+      "end_ms": 1111040,
+      "text": "accomplishing the goal. If you prompt it"
+    },
+    {
+      "start_ms": 1109040,
+      "duration_ms": 3120,
+      "end_ms": 1112160,
+      "text": "wide enough to capture more of that"
+    },
+    {
+      "start_ms": 1111040,
+      "duration_ms": 3000,
+      "end_ms": 1114040,
+      "text": "state, more of that scope, it'll"
+    },
+    {
+      "start_ms": 1112160,
+      "duration_ms": 2920,
+      "end_ms": 1115080,
+      "text": "certainly capture that as well, okay?"
+    },
+    {
+      "start_ms": 1114040,
+      "duration_ms": 3160,
+      "end_ms": 1117200,
+      "text": "But here we go. We're getting that"
+    },
+    {
+      "start_ms": 1115080,
+      "duration_ms": 4080,
+      "end_ms": 1119160,
+      "text": "inventory file that really compresses"
+    },
+    {
+      "start_ms": 1117200,
+      "duration_ms": 4280,
+      "end_ms": 1121480,
+      "text": "all the observations. Now, we should be"
+    },
+    {
+      "start_ms": 1119160,
+      "duration_ms": 4680,
+      "end_ms": 1123840,
+      "text": "able to kick off our exe.dev agent"
+    },
+    {
+      "start_ms": 1121480,
+      "duration_ms": 3720,
+      "end_ms": 1125200,
+      "text": "pretty soon here. There we go. Nice"
+    },
+    {
+      "start_ms": 1123840,
+      "duration_ms": 3360,
+      "end_ms": 1127200,
+      "text": "write-up. Look at that detailed write-up"
+    },
+    {
+      "start_ms": 1125200,
+      "duration_ms": 4440,
+      "end_ms": 1129640,
+      "text": "of all the features, inputs, and"
+    },
+    {
+      "start_ms": 1127200,
+      "duration_ms": 3680,
+      "end_ms": 1130880,
+      "text": "outputs, the commands, E2B quirks,"
+    },
+    {
+      "start_ms": 1129640,
+      "duration_ms": 2760,
+      "end_ms": 1132400,
+      "text": "right? This is great. And this was part"
+    },
+    {
+      "start_ms": 1130880,
+      "duration_ms": 3600,
+      "end_ms": 1134480,
+      "text": "of the prompt, right? We wanted at the"
+    },
+    {
+      "start_ms": 1132400,
+      "duration_ms": 4600,
+      "end_ms": 1137000,
+      "text": "end a feature inventory. And this is"
+    },
+    {
+      "start_ms": 1134480,
+      "duration_ms": 4800,
+      "end_ms": 1139280,
+      "text": "going to allow our exe.dev agent to"
+    },
+    {
+      "start_ms": 1137000,
+      "duration_ms": 4600,
+      "end_ms": 1141600,
+      "text": "really map everything out one-to-one."
+    },
+    {
+      "start_ms": 1139280,
+      "duration_ms": 4120,
+      "end_ms": 1143400,
+      "text": "And again, like focus context is so"
+    },
+    {
+      "start_ms": 1141600,
+      "duration_ms": 3440,
+      "end_ms": 1145040,
+      "text": "important here, right? In tactically"
+    },
+    {
+      "start_ms": 1143400,
+      "duration_ms": 3320,
+      "end_ms": 1146720,
+      "text": "agentic coding, it's so important. This"
+    },
+    {
+      "start_ms": 1145040,
+      "duration_ms": 4240,
+      "end_ms": 1149280,
+      "text": "is an entire tactic. We talk about this"
+    },
+    {
+      "start_ms": 1146720,
+      "duration_ms": 5600,
+      "end_ms": 1152320,
+      "text": "for an entire lesson. A focused agent is"
+    },
+    {
+      "start_ms": 1149280,
+      "duration_ms": 6160,
+      "end_ms": 1155440,
+      "text": "a performant agent. We have 20% context"
+    },
+    {
+      "start_ms": 1152320,
+      "duration_ms": 5480,
+      "end_ms": 1157800,
+      "text": "of the 1 million context window GPT 5.5"
+    },
+    {
+      "start_ms": 1155440,
+      "duration_ms": 4240,
+      "end_ms": 1159680,
+      "text": "focus on just understanding this tool"
+    },
+    {
+      "start_ms": 1157800,
+      "duration_ms": 4320,
+      "end_ms": 1162120,
+      "text": "and understanding this skill and this"
+    },
+    {
+      "start_ms": 1159680,
+      "duration_ms": 3880,
+      "end_ms": 1163560,
+      "text": "whole sandbox system. Okay, so there you"
+    },
+    {
+      "start_ms": 1162120,
+      "duration_ms": 3680,
+      "end_ms": 1165800,
+      "text": "go. Validating its work, making sure"
+    },
+    {
+      "start_ms": 1163560,
+      "duration_ms": 3840,
+      "end_ms": 1167400,
+      "text": "that that file exists and now we're"
+    },
+    {
+      "start_ms": 1165800,
+      "duration_ms": 3400,
+      "end_ms": 1169200,
+      "text": "going to boot up our exe.dev agent."
+    },
+    {
+      "start_ms": 1167400,
+      "duration_ms": 3520,
+      "end_ms": 1170920,
+      "text": "There we go, perfect. So, it's all"
+    },
+    {
+      "start_ms": 1169200,
+      "duration_ms": 3560,
+      "end_ms": 1172760,
+      "text": "primed, it's all good to go. Now we're"
+    },
+    {
+      "start_ms": 1170920,
+      "duration_ms": 3600,
+      "end_ms": 1174520,
+      "text": "going to fire off this prompt inside of"
+    },
+    {
+      "start_ms": 1172760,
+      "duration_ms": 3280,
+      "end_ms": 1176040,
+      "text": "our exe.dev agent. I actually haven't"
+    },
+    {
+      "start_ms": 1174520,
+      "duration_ms": 3480,
+      "end_ms": 1178000,
+      "text": "run this before so I'm really curious to"
+    },
+    {
+      "start_ms": 1176040,
+      "duration_ms": 4000,
+      "end_ms": 1180040,
+      "text": "see how how this executes and how well"
+    },
+    {
+      "start_ms": 1178000,
+      "duration_ms": 4480,
+      "end_ms": 1182480,
+      "text": "this mirrors. So, you're the exe.dev"
+    },
+    {
+      "start_ms": 1180040,
+      "duration_ms": 4480,
+      "end_ms": 1184520,
+      "text": "agent. There is no agent sandbox exe.dev"
+    },
+    {
+      "start_ms": 1182480,
+      "duration_ms": 3560,
+      "end_ms": 1186040,
+      "text": "skill yet. Your job is to build one."
+    },
+    {
+      "start_ms": 1184520,
+      "duration_ms": 3800,
+      "end_ms": 1188320,
+      "text": "Okay, so there's the purpose and then"
+    },
+    {
+      "start_ms": 1186040,
+      "duration_ms": 4040,
+      "end_ms": 1190080,
+      "text": "your reference target is this existing"
+    },
+    {
+      "start_ms": 1188320,
+      "duration_ms": 3880,
+      "end_ms": 1192200,
+      "text": "skill here which your teammate"
+    },
+    {
+      "start_ms": 1190080,
+      "duration_ms": 3400,
+      "end_ms": 1193480,
+      "text": "understands is already standing by to"
+    },
+    {
+      "start_ms": 1192200,
+      "duration_ms": 3160,
+      "end_ms": 1195360,
+      "text": "answer questions about. You're the"
+    },
+    {
+      "start_ms": 1193480,
+      "duration_ms": 3560,
+      "end_ms": 1197040,
+      "text": "driver of this collaboration. E2B will"
+    },
+    {
+      "start_ms": 1195360,
+      "duration_ms": 3360,
+      "end_ms": 1198720,
+      "text": "not initiate, you reach out. So, I'm"
+    },
+    {
+      "start_ms": 1197040,
+      "duration_ms": 3960,
+      "end_ms": 1201000,
+      "text": "setting this up so that in this specific"
+    },
+    {
+      "start_ms": 1198720,
+      "duration_ms": 3760,
+      "end_ms": 1202480,
+      "text": "scenario, I want my exe.dev agent to be"
+    },
+    {
+      "start_ms": 1201000,
+      "duration_ms": 3920,
+      "end_ms": 1204920,
+      "text": "the one driving this. I'm giving it a"
+    },
+    {
+      "start_ms": 1202480,
+      "duration_ms": 4080,
+      "end_ms": 1206560,
+      "text": "couple skills, fire crawl, meta skill to"
+    },
+    {
+      "start_ms": 1204920,
+      "duration_ms": 4320,
+      "end_ms": 1209240,
+      "text": "really build on this and then we have"
+    },
+    {
+      "start_ms": 1206560,
+      "duration_ms": 4120,
+      "end_ms": 1210680,
+      "text": "our clear deliverable. So, I want that"
+    },
+    {
+      "start_ms": 1209240,
+      "duration_ms": 3200,
+      "end_ms": 1212440,
+      "text": "new skill, right? And I'm making it"
+    },
+    {
+      "start_ms": 1210680,
+      "duration_ms": 3720,
+      "end_ms": 1214400,
+      "text": "super clear here, a new working skill"
+    },
+    {
+      "start_ms": 1212440,
+      "duration_ms": 4640,
+      "end_ms": 1217080,
+      "text": "that mirrors the {slash} agent sandbox"
+    },
+    {
+      "start_ms": 1214400,
+      "duration_ms": 5600,
+      "end_ms": 1220000,
+      "text": "is against exe.dev primitives and I also"
+    },
+    {
+      "start_ms": 1217080,
+      "duration_ms": 5400,
+      "end_ms": 1222480,
+      "text": "want a feature parity document just like"
+    },
+    {
+      "start_ms": 1220000,
+      "duration_ms": 3520,
+      "end_ms": 1223520,
+      "text": "the E2B agent has as well for us, okay?"
+    },
+    {
+      "start_ms": 1222480,
+      "duration_ms": 2560,
+      "end_ms": 1225040,
+      "text": "And so, it's starting to get to work"
+    },
+    {
+      "start_ms": 1223520,
+      "duration_ms": 2800,
+      "end_ms": 1226320,
+      "text": "here. Grabbing all the docs, it's going"
+    },
+    {
+      "start_ms": 1225040,
+      "duration_ms": 3360,
+      "end_ms": 1228400,
+      "text": "to start building this skill and this is"
+    },
+    {
+      "start_ms": 1226320,
+      "duration_ms": 3880,
+      "end_ms": 1230200,
+      "text": "the Opus 4.7 running in the Pi agent"
+    },
+    {
+      "start_ms": 1228400,
+      "duration_ms": 4080,
+      "end_ms": 1232480,
+      "text": "harness. This is going to be some pretty"
+    },
+    {
+      "start_ms": 1230200,
+      "duration_ms": 4360,
+      "end_ms": 1234560,
+      "text": "fantastic results as this gets to work"
+    },
+    {
+      "start_ms": 1232480,
+      "duration_ms": 4120,
+      "end_ms": 1236600,
+      "text": "here. So, right now it's gobbling up all"
+    },
+    {
+      "start_ms": 1234560,
+      "duration_ms": 4320,
+      "end_ms": 1238880,
+      "text": "the documentation, starting to stack up"
+    },
+    {
+      "start_ms": 1236600,
+      "duration_ms": 3960,
+      "end_ms": 1240560,
+      "text": "that proper context and at some point"
+    },
+    {
+      "start_ms": 1238880,
+      "duration_ms": 4720,
+      "end_ms": 1243600,
+      "text": "here it's going to begin again, it's"
+    },
+    {
+      "start_ms": 1240560,
+      "duration_ms": 4360,
+      "end_ms": 1244920,
+      "text": "communicating with our exe.dev agent"
+    },
+    {
+      "start_ms": 1243600,
+      "duration_ms": 4560,
+      "end_ms": 1248160,
+      "text": "here. So, there it is, we have live"
+    },
+    {
+      "start_ms": 1244920,
+      "duration_ms": 5800,
+      "end_ms": 1250720,
+      "text": "access confirmed, SSH exe.dev. It's now"
+    },
+    {
+      "start_ms": 1248160,
+      "duration_ms": 4440,
+      "end_ms": 1252600,
+      "text": "checking out all my VMs, no current VMs"
+    },
+    {
+      "start_ms": 1250720,
+      "duration_ms": 3480,
+      "end_ms": 1254200,
+      "text": "set up yet but my agent is going to go"
+    },
+    {
+      "start_ms": 1252600,
+      "duration_ms": 3960,
+      "end_ms": 1256560,
+      "text": "through this process, figure everything"
+    },
+    {
+      "start_ms": 1254200,
+      "duration_ms": 3840,
+      "end_ms": 1258040,
+      "text": "out and it has all the documentation and"
+    },
+    {
+      "start_ms": 1256560,
+      "duration_ms": 3640,
+      "end_ms": 1260200,
+      "text": "it has the feature parity it's trying to"
+    },
+    {
+      "start_ms": 1258040,
+      "duration_ms": 4000,
+      "end_ms": 1262040,
+      "text": "get equal to, okay? So, this is a really"
+    },
+    {
+      "start_ms": 1260200,
+      "duration_ms": 3040,
+      "end_ms": 1263240,
+      "text": "great way to in general, you know, it"
+    },
+    {
+      "start_ms": 1262040,
+      "duration_ms": 3080,
+      "end_ms": 1265120,
+      "text": "doesn't really matter what agent agent"
+    },
+    {
+      "start_ms": 1263240,
+      "duration_ms": 4240,
+      "end_ms": 1267480,
+      "text": "communication system you're using, this"
+    },
+    {
+      "start_ms": 1265120,
+      "duration_ms": 4200,
+      "end_ms": 1269320,
+      "text": "is a great way to mirror systems"
+    },
+    {
+      "start_ms": 1267480,
+      "duration_ms": 3040,
+      "end_ms": 1270520,
+      "text": "together, right? In the age of agents,"
+    },
+    {
+      "start_ms": 1269320,
+      "duration_ms": 3120,
+      "end_ms": 1272440,
+      "text": "we're going to have a hundred different"
+    },
+    {
+      "start_ms": 1270520,
+      "duration_ms": 3760,
+      "end_ms": 1274280,
+      "text": "services available to us for agent"
+    },
+    {
+      "start_ms": 1272440,
+      "duration_ms": 3640,
+      "end_ms": 1276080,
+      "text": "sandboxing and frankly, you know, for"
+    },
+    {
+      "start_ms": 1274280,
+      "duration_ms": 4280,
+      "end_ms": 1278560,
+      "text": "agent harnessing, cloud databases,"
+    },
+    {
+      "start_ms": 1276080,
+      "duration_ms": 4480,
+      "end_ms": 1280560,
+      "text": "Turso, things like Neon DB, and a lot of"
+    },
+    {
+      "start_ms": 1278560,
+      "duration_ms": 3720,
+      "end_ms": 1282280,
+      "text": "them are going to be swappable, right?"
+    },
+    {
+      "start_ms": 1280560,
+      "duration_ms": 3960,
+      "end_ms": 1284520,
+      "text": "Composable. And so, this is a great"
+    },
+    {
+      "start_ms": 1282280,
+      "duration_ms": 4400,
+      "end_ms": 1286680,
+      "text": "pattern. Once you have one skill against"
+    },
+    {
+      "start_ms": 1284520,
+      "duration_ms": 4160,
+      "end_ms": 1288680,
+      "text": "one specific service, you can quickly"
+    },
+    {
+      "start_ms": 1286680,
+      "duration_ms": 4000,
+      "end_ms": 1290680,
+      "text": "create a feature parity document and"
+    },
+    {
+      "start_ms": 1288680,
+      "duration_ms": 4120,
+      "end_ms": 1292800,
+      "text": "then build directly against another"
+    },
+    {
+      "start_ms": 1290680,
+      "duration_ms": 3240,
+      "end_ms": 1293920,
+      "text": "service. Asian agent communication is a"
+    },
+    {
+      "start_ms": 1292800,
+      "duration_ms": 3120,
+      "end_ms": 1295920,
+      "text": "great way to do that because you get"
+    },
+    {
+      "start_ms": 1293920,
+      "duration_ms": 3080,
+      "end_ms": 1297000,
+      "text": "that focused agent context window and"
+    },
+    {
+      "start_ms": 1295920,
+      "duration_ms": 2800,
+      "end_ms": 1298720,
+      "text": "then your agent can just quickly"
+    },
+    {
+      "start_ms": 1297000,
+      "duration_ms": 3280,
+      "end_ms": 1300280,
+      "text": "communicate when they need to. But let's"
+    },
+    {
+      "start_ms": 1298720,
+      "duration_ms": 2840,
+      "end_ms": 1301560,
+      "text": "go ahead and dig a little bit deeper"
+    },
+    {
+      "start_ms": 1300280,
+      "duration_ms": 2680,
+      "end_ms": 1302960,
+      "text": "into this system, right? Like how does"
+    },
+    {
+      "start_ms": 1301560,
+      "duration_ms": 3280,
+      "end_ms": 1304840,
+      "text": "this system really work? There's four"
+    },
+    {
+      "start_ms": 1302960,
+      "duration_ms": 5000,
+      "end_ms": 1307960,
+      "text": "tools here. There's basically no magic."
+    },
+    {
+      "start_ms": 1304840,
+      "duration_ms": 3120,
+      "end_ms": 1307960,
+      "text": "It's really simple."
+    },
+    {
+      "start_ms": 1310960,
+      "duration_ms": 4720,
+      "end_ms": 1315680,
+      "text": "You list all the agents on the network,"
+    },
+    {
+      "start_ms": 1313440,
+      "duration_ms": 4560,
+      "end_ms": 1318000,
+      "text": "send command, or you send the prompt,"
+    },
+    {
+      "start_ms": 1315680,
+      "duration_ms": 4400,
+      "end_ms": 1320080,
+      "text": "and then optionally, you can await a"
+    },
+    {
+      "start_ms": 1318000,
+      "duration_ms": 4080,
+      "end_ms": 1322080,
+      "text": "response, right? Sometimes you send off"
+    },
+    {
+      "start_ms": 1320080,
+      "duration_ms": 3800,
+      "end_ms": 1323880,
+      "text": "a Slack message and you're just sending"
+    },
+    {
+      "start_ms": 1322080,
+      "duration_ms": 3640,
+      "end_ms": 1325720,
+      "text": "useful information to someone or a"
+    },
+    {
+      "start_ms": 1323880,
+      "duration_ms": 3440,
+      "end_ms": 1327320,
+      "text": "confirmation or something, and that's"
+    },
+    {
+      "start_ms": 1325720,
+      "duration_ms": 3560,
+      "end_ms": 1329280,
+      "text": "it. But if you need to, you can await"
+    },
+    {
+      "start_ms": 1327320,
+      "duration_ms": 3800,
+      "end_ms": 1331120,
+      "text": "the response. You can check in on the"
+    },
+    {
+      "start_ms": 1329280,
+      "duration_ms": 3920,
+      "end_ms": 1333200,
+      "text": "message. You can do a block wait or you"
+    },
+    {
+      "start_ms": 1331120,
+      "duration_ms": 3520,
+      "end_ms": 1334640,
+      "text": "can do a non-blocking poll. I have two"
+    },
+    {
+      "start_ms": 1333200,
+      "duration_ms": 2960,
+      "end_ms": 1336160,
+      "text": "versions of this. It's going to be"
+    },
+    {
+      "start_ms": 1334640,
+      "duration_ms": 3600,
+      "end_ms": 1338240,
+      "text": "available to you. You can see our agents"
+    },
+    {
+      "start_ms": 1336160,
+      "duration_ms": 3520,
+      "end_ms": 1339680,
+      "text": "are starting to chat together here. I'll"
+    },
+    {
+      "start_ms": 1338240,
+      "duration_ms": 3200,
+      "end_ms": 1341440,
+      "text": "have two versions of this available to"
+    },
+    {
+      "start_ms": 1339680,
+      "duration_ms": 5840,
+      "end_ms": 1345520,
+      "text": "you. Both are going to be available in"
+    },
+    {
+      "start_ms": 1341440,
+      "duration_ms": 6360,
+      "end_ms": 1347800,
+      "text": "the Pi versus Cloud Code code base."
+    },
+    {
+      "start_ms": 1345520,
+      "duration_ms": 3880,
+      "end_ms": 1349400,
+      "text": "This is a code base that has been live"
+    },
+    {
+      "start_ms": 1347800,
+      "duration_ms": 4200,
+      "end_ms": 1352000,
+      "text": "for quite some time and it's where I"
+    },
+    {
+      "start_ms": 1349400,
+      "duration_ms": 5280,
+      "end_ms": 1354680,
+      "text": "posted and shared a lot of extensions"
+    },
+    {
+      "start_ms": 1352000,
+      "duration_ms": 4880,
+      "end_ms": 1356880,
+      "text": "from simple to complex cross multiple"
+    },
+    {
+      "start_ms": 1354680,
+      "duration_ms": 4360,
+      "end_ms": 1359040,
+      "text": "different agent harness use cases for"
+    },
+    {
+      "start_ms": 1356880,
+      "duration_ms": 3840,
+      "end_ms": 1360720,
+      "text": "the Pi agent harness, all right? And so,"
+    },
+    {
+      "start_ms": 1359040,
+      "duration_ms": 3960,
+      "end_ms": 1363000,
+      "text": "the whole idea here is just to hedge"
+    },
+    {
+      "start_ms": 1360720,
+      "duration_ms": 4400,
+      "end_ms": 1365120,
+      "text": "against Cloud Code, the agentic coding"
+    },
+    {
+      "start_ms": 1363000,
+      "duration_ms": 4320,
+      "end_ms": 1367320,
+      "text": "market leader, and get control of the"
+    },
+    {
+      "start_ms": 1365120,
+      "duration_ms": 3880,
+      "end_ms": 1369000,
+      "text": "agent harness. This code base builds on"
+    },
+    {
+      "start_ms": 1367320,
+      "duration_ms": 4760,
+      "end_ms": 1372080,
+      "text": "that very idea and I'm going to add"
+    },
+    {
+      "start_ms": 1369000,
+      "duration_ms": 4240,
+      "end_ms": 1373240,
+      "text": "these two extensions for you into this"
+    },
+    {
+      "start_ms": 1372080,
+      "duration_ms": 2400,
+      "end_ms": 1374480,
+      "text": "code base. And so, you know, what are"
+    },
+    {
+      "start_ms": 1373240,
+      "duration_ms": 3400,
+      "end_ms": 1376640,
+      "text": "these two extensions? We can just go"
+    },
+    {
+      "start_ms": 1374480,
+      "duration_ms": 3800,
+      "end_ms": 1378280,
+      "text": "ahead and crack these open here. Coms"
+    },
+    {
+      "start_ms": 1376640,
+      "duration_ms": 3360,
+      "end_ms": 1380000,
+      "text": "version, so this is the non-network"
+    },
+    {
+      "start_ms": 1378280,
+      "duration_ms": 3600,
+      "end_ms": 1381880,
+      "text": "version. This operates on a single"
+    },
+    {
+      "start_ms": 1380000,
+      "duration_ms": 4520,
+      "end_ms": 1384520,
+      "text": "device. But then we have a coms net"
+    },
+    {
+      "start_ms": 1381880,
+      "duration_ms": 4560,
+      "end_ms": 1386440,
+      "text": "where we basically boot up a simple"
+    },
+    {
+      "start_ms": 1384520,
+      "duration_ms": 4720,
+      "end_ms": 1389240,
+      "text": "simple simple lightweight bun server"
+    },
+    {
+      "start_ms": 1386440,
+      "duration_ms": 3960,
+      "end_ms": 1390400,
+      "text": "here that accepts requests over the"
+    },
+    {
+      "start_ms": 1389240,
+      "duration_ms": 4480,
+      "end_ms": 1393720,
+      "text": "network. And you can imagine we have a"
+    },
+    {
+      "start_ms": 1390400,
+      "duration_ms": 5760,
+      "end_ms": 1396160,
+      "text": "simple set that let the agent connect,"
+    },
+    {
+      "start_ms": 1393720,
+      "duration_ms": 4240,
+      "end_ms": 1397960,
+      "text": "get messages, list agents, process"
+    },
+    {
+      "start_ms": 1396160,
+      "duration_ms": 3520,
+      "end_ms": 1399680,
+      "text": "events, so on and so forth here, right?"
+    },
+    {
+      "start_ms": 1397960,
+      "duration_ms": 3520,
+      "end_ms": 1401480,
+      "text": "This is a very simple implementation."
+    },
+    {
+      "start_ms": 1399680,
+      "duration_ms": 3720,
+      "end_ms": 1403400,
+      "text": "Secure it, make it more legitimate for"
+    },
+    {
+      "start_ms": 1401480,
+      "duration_ms": 3920,
+      "end_ms": 1405400,
+      "text": "your specific use case. Every piece of"
+    },
+    {
+      "start_ms": 1403400,
+      "duration_ms": 4160,
+      "end_ms": 1407560,
+      "text": "code you see now, I really think it's"
+    },
+    {
+      "start_ms": 1405400,
+      "duration_ms": 3760,
+      "end_ms": 1409160,
+      "text": "really about read and adapt, right?"
+    },
+    {
+      "start_ms": 1407560,
+      "duration_ms": 4120,
+      "end_ms": 1411680,
+      "text": "Through your agents add it and have them"
+    },
+    {
+      "start_ms": 1409160,
+      "duration_ms": 5440,
+      "end_ms": 1414600,
+      "text": "transform it for your specific use case."
+    },
+    {
+      "start_ms": 1411680,
+      "duration_ms": 5320,
+      "end_ms": 1417000,
+      "text": "And always understand the code. 25% here"
+    },
+    {
+      "start_ms": 1414600,
+      "duration_ms": 4680,
+      "end_ms": 1419280,
+      "text": "on our E2B agent. See, it just responded"
+    },
+    {
+      "start_ms": 1417000,
+      "duration_ms": 5560,
+      "end_ms": 1422560,
+      "text": "directly here. Kind of looks good."
+    },
+    {
+      "start_ms": 1419280,
+      "duration_ms": 5520,
+      "end_ms": 1424800,
+      "text": "Browser. Okay, SBX tool. Nice. So, it"
+    },
+    {
+      "start_ms": 1422560,
+      "duration_ms": 4080,
+      "end_ms": 1426640,
+      "text": "looks like exi.dev agent was asking"
+    },
+    {
+      "start_ms": 1424800,
+      "duration_ms": 4600,
+      "end_ms": 1429400,
+      "text": "about the browser tool. All three"
+    },
+    {
+      "start_ms": 1426640,
+      "duration_ms": 5160,
+      "end_ms": 1431800,
+      "text": "questions cleanly answered. Quick recap."
+    },
+    {
+      "start_ms": 1429400,
+      "duration_ms": 4440,
+      "end_ms": 1433840,
+      "text": "Templates versus images. Okay, so"
+    },
+    {
+      "start_ms": 1431800,
+      "duration_ms": 4440,
+      "end_ms": 1436240,
+      "text": "confirm partial support. Let's see."
+    },
+    {
+      "start_ms": 1433840,
+      "duration_ms": 4720,
+      "end_ms": 1438560,
+      "text": "Captured artifacts, arbitrary container"
+    },
+    {
+      "start_ms": 1436240,
+      "duration_ms": 5360,
+      "end_ms": 1441600,
+      "text": "images. Okay. Browser, two primary"
+    },
+    {
+      "start_ms": 1438560,
+      "duration_ms": 5200,
+      "end_ms": 1443760,
+      "text": "files, zero E2B import fix, drop in"
+    },
+    {
+      "start_ms": 1441600,
+      "duration_ms": 5840,
+      "end_ms": 1447440,
+      "text": "portability. Great. Snapshot, no E2B"
+    },
+    {
+      "start_ms": 1443760,
+      "duration_ms": 5360,
+      "end_ms": 1449120,
+      "text": "equivalent. CP is unique to exi.dev."
+    },
+    {
+      "start_ms": 1447440,
+      "duration_ms": 3640,
+      "end_ms": 1451080,
+      "text": "Okay. So, there we go. Here he's writing"
+    },
+    {
+      "start_ms": 1449120,
+      "duration_ms": 3480,
+      "end_ms": 1452600,
+      "text": "that feature parity doc. This is looking"
+    },
+    {
+      "start_ms": 1451080,
+      "duration_ms": 4200,
+      "end_ms": 1455280,
+      "text": "great. Yeah, nice. Looks like we had a"
+    },
+    {
+      "start_ms": 1452600,
+      "duration_ms": 5040,
+      "end_ms": 1457640,
+      "text": "couple chats here to showcase"
+    },
+    {
+      "start_ms": 1455280,
+      "duration_ms": 4800,
+      "end_ms": 1460080,
+      "text": "everything. Sent this to E2B. Why now?"
+    },
+    {
+      "start_ms": 1457640,
+      "duration_ms": 4240,
+      "end_ms": 1461880,
+      "text": "The parity has their claims is to flag"
+    },
+    {
+      "start_ms": 1460080,
+      "duration_ms": 3520,
+      "end_ms": 1463600,
+      "text": "as many E2B claims that's wrong before I"
+    },
+    {
+      "start_ms": 1461880,
+      "duration_ms": 3720,
+      "end_ms": 1465600,
+      "text": "bake them into the new skill. Very cool."
+    },
+    {
+      "start_ms": 1463600,
+      "duration_ms": 4600,
+      "end_ms": 1468200,
+      "text": "Okay. Very nice. So, our agents here are"
+    },
+    {
+      "start_ms": 1465600,
+      "duration_ms": 5400,
+      "end_ms": 1471000,
+      "text": "doing the work that I would do myself,"
+    },
+    {
+      "start_ms": 1468200,
+      "duration_ms": 4120,
+      "end_ms": 1472320,
+      "text": "which is validate the claims, right?"
+    },
+    {
+      "start_ms": 1471000,
+      "duration_ms": 2880,
+      "end_ms": 1473880,
+      "text": "This is something we talked about in the"
+    },
+    {
+      "start_ms": 1472320,
+      "duration_ms": 3520,
+      "end_ms": 1475840,
+      "text": "verifier agent video we did a couple"
+    },
+    {
+      "start_ms": 1473880,
+      "duration_ms": 4320,
+      "end_ms": 1478200,
+      "text": "weeks ago where you have an agent"
+    },
+    {
+      "start_ms": 1475840,
+      "duration_ms": 4600,
+      "end_ms": 1480440,
+      "text": "basically double-checking all the claims"
+    },
+    {
+      "start_ms": 1478200,
+      "duration_ms": 3920,
+      "end_ms": 1482120,
+      "text": "and all the statements that the primary"
+    },
+    {
+      "start_ms": 1480440,
+      "duration_ms": 2960,
+      "end_ms": 1483400,
+      "text": "agent is making to make sure that"
+    },
+    {
+      "start_ms": 1482120,
+      "duration_ms": 3360,
+      "end_ms": 1485480,
+      "text": "they're right. This is a really powerful"
+    },
+    {
+      "start_ms": 1483400,
+      "duration_ms": 4840,
+      "end_ms": 1488240,
+      "text": "pattern. I like to run my Pi agents, my"
+    },
+    {
+      "start_ms": 1485480,
+      "duration_ms": 4040,
+      "end_ms": 1489520,
+      "text": "primary Pi agent with a validator on top"
+    },
+    {
+      "start_ms": 1488240,
+      "duration_ms": 3040,
+      "end_ms": 1491280,
+      "text": "of it, which basically, you know,"
+    },
+    {
+      "start_ms": 1489520,
+      "duration_ms": 4040,
+      "end_ms": 1493560,
+      "text": "increases the tokens used, but in"
+    },
+    {
+      "start_ms": 1491280,
+      "duration_ms": 4400,
+      "end_ms": 1495680,
+      "text": "exchange it saves me time because the"
+    },
+    {
+      "start_ms": 1493560,
+      "duration_ms": 3640,
+      "end_ms": 1497200,
+      "text": "validator is validating everything my"
+    },
+    {
+      "start_ms": 1495680,
+      "duration_ms": 3320,
+      "end_ms": 1499000,
+      "text": "agent just said, right? It makes sure"
+    },
+    {
+      "start_ms": 1497200,
+      "duration_ms": 3400,
+      "end_ms": 1500600,
+      "text": "that everything it said is actually"
+    },
+    {
+      "start_ms": 1499000,
+      "duration_ms": 3760,
+      "end_ms": 1502760,
+      "text": "true. And then it also makes sure that"
+    },
+    {
+      "start_ms": 1500600,
+      "duration_ms": 3280,
+      "end_ms": 1503880,
+      "text": "the work it said it did is exactly what"
+    },
+    {
+      "start_ms": 1502760,
+      "duration_ms": 2520,
+      "end_ms": 1505280,
+      "text": "was done. I'll link that in the"
+    },
+    {
+      "start_ms": 1503880,
+      "duration_ms": 3880,
+      "end_ms": 1507760,
+      "text": "description as well. There we go."
+    },
+    {
+      "start_ms": 1505280,
+      "duration_ms": 4160,
+      "end_ms": 1509440,
+      "text": "There's a nice write back to our"
+    },
+    {
+      "start_ms": 1507760,
+      "duration_ms": 4400,
+      "end_ms": 1512160,
+      "text": "eexi.dev agent. It's like it's asking"
+    },
+    {
+      "start_ms": 1509440,
+      "duration_ms": 4760,
+      "end_ms": 1514200,
+      "text": "for a recursive flag there, too. Wow, so"
+    },
+    {
+      "start_ms": 1512160,
+      "duration_ms": 3440,
+      "end_ms": 1515600,
+      "text": "much detail here. Like in the side here,"
+    },
+    {
+      "start_ms": 1514200,
+      "duration_ms": 4000,
+      "end_ms": 1518200,
+      "text": "this is a great way to just watch these"
+    },
+    {
+      "start_ms": 1515600,
+      "duration_ms": 5120,
+      "end_ms": 1520720,
+      "text": "models work together, right? GPT-5.5,"
+    },
+    {
+      "start_ms": 1518200,
+      "duration_ms": 5240,
+      "end_ms": 1523440,
+      "text": "Claude 4.7, gave them a decent size"
+    },
+    {
+      "start_ms": 1520720,
+      "duration_ms": 4960,
+      "end_ms": 1525680,
+      "text": "prompt, maybe 80 lines each, and a"
+    },
+    {
+      "start_ms": 1523440,
+      "duration_ms": 4920,
+      "end_ms": 1528360,
+      "text": "skill, and now they're just like hashing"
+    },
+    {
+      "start_ms": 1525680,
+      "duration_ms": 5240,
+      "end_ms": 1530920,
+      "text": "it out, recreating this new skill. And"
+    },
+    {
+      "start_ms": 1528360,
+      "duration_ms": 5240,
+      "end_ms": 1533600,
+      "text": "this is again just one of millions and"
+    },
+    {
+      "start_ms": 1530920,
+      "duration_ms": 5120,
+      "end_ms": 1536040,
+      "text": "millions of different ways to coordinate"
+    },
+    {
+      "start_ms": 1533600,
+      "duration_ms": 4000,
+      "end_ms": 1537600,
+      "text": "agents to work toward a goal, to work"
+    },
+    {
+      "start_ms": 1536040,
+      "duration_ms": 3600,
+      "end_ms": 1539640,
+      "text": "toward something, right? So, okay, so we"
+    },
+    {
+      "start_ms": 1537600,
+      "duration_ms": 3680,
+      "end_ms": 1541280,
+      "text": "got 10 corrections from that exchange,"
+    },
+    {
+      "start_ms": 1539640,
+      "duration_ms": 3520,
+      "end_ms": 1543160,
+      "text": "right? This is a valuable exchange of"
+    },
+    {
+      "start_ms": 1541280,
+      "duration_ms": 3680,
+      "end_ms": 1544960,
+      "text": "information. 10 corrections. There's a"
+    },
+    {
+      "start_ms": 1543160,
+      "duration_ms": 3160,
+      "end_ms": 1546320,
+      "text": "couple comments in my videos recently,"
+    },
+    {
+      "start_ms": 1544960,
+      "duration_ms": 3320,
+      "end_ms": 1548280,
+      "text": "especially when I talk about multi-agent"
+    },
+    {
+      "start_ms": 1546320,
+      "duration_ms": 3640,
+      "end_ms": 1549960,
+      "text": "orchestration, some engineers, probably"
+    },
+    {
+      "start_ms": 1548280,
+      "duration_ms": 3160,
+      "end_ms": 1551440,
+      "text": "a decent amount of vibe coders as well,"
+    },
+    {
+      "start_ms": 1549960,
+      "duration_ms": 4200,
+      "end_ms": 1554160,
+      "text": "asking, \"Why can't you just do all this"
+    },
+    {
+      "start_ms": 1551440,
+      "duration_ms": 4600,
+      "end_ms": 1556040,
+      "text": "in one agent?\" You certainly can. You"
+    },
+    {
+      "start_ms": 1554160,
+      "duration_ms": 3440,
+      "end_ms": 1557600,
+      "text": "certainly can. But you have to remember"
+    },
+    {
+      "start_ms": 1556040,
+      "duration_ms": 3720,
+      "end_ms": 1559760,
+      "text": "that couple things. There is a limit to"
+    },
+    {
+      "start_ms": 1557600,
+      "duration_ms": 4480,
+      "end_ms": 1562080,
+      "text": "the context window. The more problems,"
+    },
+    {
+      "start_ms": 1559760,
+      "duration_ms": 3840,
+      "end_ms": 1563600,
+      "text": "the more different problems, APIs,"
+    },
+    {
+      "start_ms": 1562080,
+      "duration_ms": 3640,
+      "end_ms": 1565720,
+      "text": "systems you put into that context"
+    },
+    {
+      "start_ms": 1563600,
+      "duration_ms": 3760,
+      "end_ms": 1567360,
+      "text": "window, your error rate will go up."
+    },
+    {
+      "start_ms": 1565720,
+      "duration_ms": 3080,
+      "end_ms": 1568800,
+      "text": "Okay, this is just a fact. If you don't"
+    },
+    {
+      "start_ms": 1567360,
+      "duration_ms": 2960,
+      "end_ms": 1570320,
+      "text": "believe that, you don't understand that,"
+    },
+    {
+      "start_ms": 1568800,
+      "duration_ms": 4320,
+      "end_ms": 1573120,
+      "text": "do more research on the context window,"
+    },
+    {
+      "start_ms": 1570320,
+      "duration_ms": 4960,
+      "end_ms": 1575280,
+      "text": "okay? And then second, with every unique"
+    },
+    {
+      "start_ms": 1573120,
+      "duration_ms": 4040,
+      "end_ms": 1577160,
+      "text": "model that you add to your system,"
+    },
+    {
+      "start_ms": 1575280,
+      "duration_ms": 4000,
+      "end_ms": 1579280,
+      "text": "right? I'm running Claude right next to"
+    },
+    {
+      "start_ms": 1577160,
+      "duration_ms": 3360,
+      "end_ms": 1580520,
+      "text": "GPT-5.5. These models are trained in a"
+    },
+    {
+      "start_ms": 1579280,
+      "duration_ms": 3480,
+      "end_ms": 1582760,
+      "text": "completely different way. They have"
+    },
+    {
+      "start_ms": 1580520,
+      "duration_ms": 3880,
+      "end_ms": 1584400,
+      "text": "different RL loops running on top of"
+    },
+    {
+      "start_ms": 1582760,
+      "duration_ms": 4200,
+      "end_ms": 1586960,
+      "text": "them. Putting these agents together"
+    },
+    {
+      "start_ms": 1584400,
+      "duration_ms": 5000,
+      "end_ms": 1589400,
+      "text": "creates something greater. It creates a"
+    },
+    {
+      "start_ms": 1586960,
+      "duration_ms": 4760,
+      "end_ms": 1591720,
+      "text": "system that outperforms either of them"
+    },
+    {
+      "start_ms": 1589400,
+      "duration_ms": 4120,
+      "end_ms": 1593520,
+      "text": "alone. Just like code plus agent beats"
+    },
+    {
+      "start_ms": 1591720,
+      "duration_ms": 4240,
+      "end_ms": 1595960,
+      "text": "either alone, unique agent one plus"
+    },
+    {
+      "start_ms": 1593520,
+      "duration_ms": 5480,
+      "end_ms": 1599000,
+      "text": "unique agent two communicating beats"
+    },
+    {
+      "start_ms": 1595960,
+      "duration_ms": 4840,
+      "end_ms": 1600800,
+      "text": "either alone, right? And and that's like"
+    },
+    {
+      "start_ms": 1599000,
+      "duration_ms": 3360,
+      "end_ms": 1602360,
+      "text": "really the gift and really the value"
+    },
+    {
+      "start_ms": 1600800,
+      "duration_ms": 4000,
+      "end_ms": 1604800,
+      "text": "proposition of multi-agent"
+    },
+    {
+      "start_ms": 1602360,
+      "duration_ms": 4240,
+      "end_ms": 1606600,
+      "text": "orchestration. It's not just the 10"
+    },
+    {
+      "start_ms": 1604800,
+      "duration_ms": 3720,
+      "end_ms": 1608520,
+      "text": "parallel agents you boot up to like"
+    },
+    {
+      "start_ms": 1606600,
+      "duration_ms": 3480,
+      "end_ms": 1610080,
+      "text": "write all those files or generate all"
+    },
+    {
+      "start_ms": 1608520,
+      "duration_ms": 3200,
+      "end_ms": 1611720,
+      "text": "those images at the same time. It's"
+    },
+    {
+      "start_ms": 1610080,
+      "duration_ms": 3120,
+      "end_ms": 1613200,
+      "text": "doing serious engineering work where"
+    },
+    {
+      "start_ms": 1611720,
+      "duration_ms": 2480,
+      "end_ms": 1614200,
+      "text": "your agents are checking in on each"
+    },
+    {
+      "start_ms": 1613200,
+      "duration_ms": 3520,
+      "end_ms": 1616720,
+      "text": "other, double checking the work,"
+    },
+    {
+      "start_ms": 1614200,
+      "duration_ms": 4240,
+      "end_ms": 1618440,
+      "text": "coordinating on a solution, so on and so"
+    },
+    {
+      "start_ms": 1616720,
+      "duration_ms": 3120,
+      "end_ms": 1619840,
+      "text": "forth, okay? So, that's the idea. And"
+    },
+    {
+      "start_ms": 1618440,
+      "duration_ms": 3400,
+      "end_ms": 1621840,
+      "text": "so, we got one more message coming back"
+    },
+    {
+      "start_ms": 1619840,
+      "duration_ms": 3520,
+      "end_ms": 1623360,
+      "text": "here. Hopefully, this wraps it up. And"
+    },
+    {
+      "start_ms": 1621840,
+      "duration_ms": 3320,
+      "end_ms": 1625160,
+      "text": "yeah, look at this like Opus is just"
+    },
+    {
+      "start_ms": 1623360,
+      "duration_ms": 4360,
+      "end_ms": 1627720,
+      "text": "being really, really great here with the"
+    },
+    {
+      "start_ms": 1625160,
+      "duration_ms": 5040,
+      "end_ms": 1630200,
+      "text": "verification. So, please reread the doc"
+    },
+    {
+      "start_ms": 1627720,
+      "duration_ms": 4160,
+      "end_ms": 1631880,
+      "text": "and either send review complete or flag"
+    },
+    {
+      "start_ms": 1630200,
+      "duration_ms": 4040,
+      "end_ms": 1634240,
+      "text": "remaining issues. All right, so this is"
+    },
+    {
+      "start_ms": 1631880,
+      "duration_ms": 4680,
+      "end_ms": 1636560,
+      "text": "just like, you know, it's teamwork,"
+    },
+    {
+      "start_ms": 1634240,
+      "duration_ms": 5280,
+      "end_ms": 1639520,
+      "text": "right? This is teamwork, okay? Sign off"
+    },
+    {
+      "start_ms": 1636560,
+      "duration_ms": 5080,
+      "end_ms": 1641640,
+      "text": "one non-blocking knit, okay? And then"
+    },
+    {
+      "start_ms": 1639520,
+      "duration_ms": 3800,
+      "end_ms": 1643320,
+      "text": "after this, we can proceed with uh"
+    },
+    {
+      "start_ms": 1641640,
+      "duration_ms": 3760,
+      "end_ms": 1645400,
+      "text": "scaffolding. So, there we go. So, yeah,"
+    },
+    {
+      "start_ms": 1643320,
+      "duration_ms": 4080,
+      "end_ms": 1647400,
+      "text": "it's loading that meta skill. This is my"
+    },
+    {
+      "start_ms": 1645400,
+      "duration_ms": 3560,
+      "end_ms": 1648960,
+      "text": "skill that helps me create skills. I'm"
+    },
+    {
+      "start_ms": 1647400,
+      "duration_ms": 3960,
+      "end_ms": 1651360,
+      "text": "going to let this cook. Comment down"
+    },
+    {
+      "start_ms": 1648960,
+      "duration_ms": 4560,
+      "end_ms": 1653520,
+      "text": "below if you're interested in my agent"
+    },
+    {
+      "start_ms": 1651360,
+      "duration_ms": 4600,
+      "end_ms": 1655960,
+      "text": "sandbox skills, the E2B skill, or this"
+    },
+    {
+      "start_ms": 1653520,
+      "duration_ms": 4520,
+      "end_ms": 1658040,
+      "text": "new exa.dev skill, and I'll add it to"
+    },
+    {
+      "start_ms": 1655960,
+      "duration_ms": 4120,
+      "end_ms": 1660080,
+      "text": "this codebase. But, that's the idea,"
+    },
+    {
+      "start_ms": 1658040,
+      "duration_ms": 4720,
+      "end_ms": 1662760,
+      "text": "right? It's it's it's simple, yet it's"
+    },
+    {
+      "start_ms": 1660080,
+      "duration_ms": 4360,
+      "end_ms": 1664440,
+      "text": "very, very important, okay? Now, you"
+    },
+    {
+      "start_ms": 1662760,
+      "duration_ms": 3320,
+      "end_ms": 1666080,
+      "text": "know, quickly just talking about pros"
+    },
+    {
+      "start_ms": 1664440,
+      "duration_ms": 3600,
+      "end_ms": 1668040,
+      "text": "and cons of this system. Every system"
+    },
+    {
+      "start_ms": 1666080,
+      "duration_ms": 6440,
+      "end_ms": 1672520,
+      "text": "has pros and cons. If you don't address"
+    },
+    {
+      "start_ms": 1668040,
+      "duration_ms": 4480,
+      "end_ms": 1672520,
+      "text": "them, you'll be exposed to them."
+    },
+    {
+      "start_ms": 1675640,
+      "duration_ms": 4200,
+      "end_ms": 1679840,
+      "text": "What are the pros here? It's just an"
+    },
+    {
+      "start_ms": 1677360,
+      "duration_ms": 4760,
+      "end_ms": 1682120,
+      "text": "agent, right? I just can at any time now"
+    },
+    {
+      "start_ms": 1679840,
+      "duration_ms": 5640,
+      "end_ms": 1685480,
+      "text": "boot up two agents, three agents, five"
+    },
+    {
+      "start_ms": 1682120,
+      "duration_ms": 5800,
+      "end_ms": 1687920,
+      "text": "agents on my device, my Mac mini, my M4,"
+    },
+    {
+      "start_ms": 1685480,
+      "duration_ms": 4280,
+      "end_ms": 1689760,
+      "text": "right? My cloud VMs, all my services,"
+    },
+    {
+      "start_ms": 1687920,
+      "duration_ms": 3680,
+      "end_ms": 1691600,
+      "text": "all my servers. I can just boot up an"
+    },
+    {
+      "start_ms": 1689760,
+      "duration_ms": 3880,
+      "end_ms": 1693640,
+      "text": "agent now with the extension, have them"
+    },
+    {
+      "start_ms": 1691600,
+      "duration_ms": 3880,
+      "end_ms": 1695480,
+      "text": "connect, have them talk to each other."
+    },
+    {
+      "start_ms": 1693640,
+      "duration_ms": 3400,
+      "end_ms": 1697040,
+      "text": "It's just an agent. It's that simple. As"
+    },
+    {
+      "start_ms": 1695480,
+      "duration_ms": 4000,
+      "end_ms": 1699480,
+      "text": "you say, it's just an agent and"
+    },
+    {
+      "start_ms": 1697040,
+      "duration_ms": 4960,
+      "end_ms": 1702000,
+      "text": "extension. It's permanent, okay? There's"
+    },
+    {
+      "start_ms": 1699480,
+      "duration_ms": 6160,
+      "end_ms": 1705640,
+      "text": "no you know, no subagent delegation, no"
+    },
+    {
+      "start_ms": 1702000,
+      "duration_ms": 5120,
+      "end_ms": 1707120,
+      "text": "spin-up or spin-down, no resume. Claude"
+    },
+    {
+      "start_ms": 1705640,
+      "duration_ms": 3520,
+      "end_ms": 1709160,
+      "text": "has this resume flag where you can"
+    },
+    {
+      "start_ms": 1707120,
+      "duration_ms": 3720,
+      "end_ms": 1710840,
+      "text": "reboot the agent. These are just agents"
+    },
+    {
+      "start_ms": 1709160,
+      "duration_ms": 3240,
+      "end_ms": 1712400,
+      "text": "in the terminal. That's it, right? Uh"
+    },
+    {
+      "start_ms": 1710840,
+      "duration_ms": 3720,
+      "end_ms": 1714560,
+      "text": "customizable, right? End-to-end."
+    },
+    {
+      "start_ms": 1712400,
+      "duration_ms": 3960,
+      "end_ms": 1716360,
+      "text": "Obviously, this is like a key value prop"
+    },
+    {
+      "start_ms": 1714560,
+      "duration_ms": 3480,
+      "end_ms": 1718040,
+      "text": "of why I keep talking about the Python"
+    },
+    {
+      "start_ms": 1716360,
+      "duration_ms": 3920,
+      "end_ms": 1720280,
+      "text": "coding agent and why I keep bringing it"
+    },
+    {
+      "start_ms": 1718040,
+      "duration_ms": 4400,
+      "end_ms": 1722440,
+      "text": "up. The the state space of agentic"
+    },
+    {
+      "start_ms": 1720280,
+      "duration_ms": 5440,
+      "end_ms": 1725720,
+      "text": "engineering is unknown. You know, the"
+    },
+    {
+      "start_ms": 1722440,
+      "duration_ms": 5360,
+      "end_ms": 1727800,
+      "text": "way I see this is only uh 1% of it has"
+    },
+    {
+      "start_ms": 1725720,
+      "duration_ms": 3600,
+      "end_ms": 1729320,
+      "text": "been discovered and understood and"
+    },
+    {
+      "start_ms": 1727800,
+      "duration_ms": 2960,
+      "end_ms": 1730760,
+      "text": "deployed into production, right? I"
+    },
+    {
+      "start_ms": 1729320,
+      "duration_ms": 3640,
+      "end_ms": 1732960,
+      "text": "talking like really, really low numbers"
+    },
+    {
+      "start_ms": 1730760,
+      "duration_ms": 5280,
+      "end_ms": 1736040,
+      "text": "here. Customization and extensibility is"
+    },
+    {
+      "start_ms": 1732960,
+      "duration_ms": 5160,
+      "end_ms": 1738120,
+      "text": "core to the future of agentic engineers."
+    },
+    {
+      "start_ms": 1736040,
+      "duration_ms": 3520,
+      "end_ms": 1739560,
+      "text": "And so, this tool becomes more and more"
+    },
+    {
+      "start_ms": 1738120,
+      "duration_ms": 3640,
+      "end_ms": 1741760,
+      "text": "important to me every single day. The"
+    },
+    {
+      "start_ms": 1739560,
+      "duration_ms": 4280,
+      "end_ms": 1743840,
+      "text": "tool you use limits what you believe is"
+    },
+    {
+      "start_ms": 1741760,
+      "duration_ms": 5720,
+      "end_ms": 1747480,
+      "text": "possible. And with the pie agent"
+    },
+    {
+      "start_ms": 1743840,
+      "duration_ms": 6640,
+      "end_ms": 1750480,
+      "text": "harness, I see no limits. You know, all"
+    },
+    {
+      "start_ms": 1747480,
+      "duration_ms": 4640,
+      "end_ms": 1752120,
+      "text": "the limitations of of how things work,"
+    },
+    {
+      "start_ms": 1750480,
+      "duration_ms": 3800,
+      "end_ms": 1754280,
+      "text": "they're just falling away. I don't see"
+    },
+    {
+      "start_ms": 1752120,
+      "duration_ms": 3960,
+      "end_ms": 1756080,
+      "text": "the same workflows. I don't see the same"
+    },
+    {
+      "start_ms": 1754280,
+      "duration_ms": 3480,
+      "end_ms": 1757760,
+      "text": "implementations anymore. And I think if"
+    },
+    {
+      "start_ms": 1756080,
+      "duration_ms": 3200,
+      "end_ms": 1759280,
+      "text": "you're stuck using one agentic coding"
+    },
+    {
+      "start_ms": 1757760,
+      "duration_ms": 3400,
+      "end_ms": 1761160,
+      "text": "tool, especially one that tells you how"
+    },
+    {
+      "start_ms": 1759280,
+      "duration_ms": 3480,
+      "end_ms": 1762760,
+      "text": "to do everything, hint hint Claude code,"
+    },
+    {
+      "start_ms": 1761160,
+      "duration_ms": 3320,
+      "end_ms": 1764480,
+      "text": "hint hint Codex, hint hint, you know,"
+    },
+    {
+      "start_ms": 1762760,
+      "duration_ms": 3280,
+      "end_ms": 1766040,
+      "text": "Gemini C alive if anyone's using that,"
+    },
+    {
+      "start_ms": 1764480,
+      "duration_ms": 3280,
+      "end_ms": 1767760,
+      "text": "open code, like whatever it is, right?"
+    },
+    {
+      "start_ms": 1766040,
+      "duration_ms": 4280,
+      "end_ms": 1770320,
+      "text": "You are not getting, you know, you're"
+    },
+    {
+      "start_ms": 1767760,
+      "duration_ms": 4640,
+      "end_ms": 1772400,
+      "text": "not pushing into that 99% the rest of"
+    },
+    {
+      "start_ms": 1770320,
+      "duration_ms": 3760,
+      "end_ms": 1774080,
+      "text": "the value that we can unlock with"
+    },
+    {
+      "start_ms": 1772400,
+      "duration_ms": 3920,
+      "end_ms": 1776320,
+      "text": "agents, with the right agentic"
+    },
+    {
+      "start_ms": 1774080,
+      "duration_ms": 4600,
+      "end_ms": 1778680,
+      "text": "technology, okay? So, um that's a big"
+    },
+    {
+      "start_ms": 1776320,
+      "duration_ms": 5280,
+      "end_ms": 1781600,
+      "text": "one, obviously, right? Uh bidirectional"
+    },
+    {
+      "start_ms": 1778680,
+      "duration_ms": 6440,
+      "end_ms": 1785120,
+      "text": "comms are flat. No hierarchy, right? No"
+    },
+    {
+      "start_ms": 1781600,
+      "duration_ms": 7200,
+      "end_ms": 1788800,
+      "text": "information loss. No one agent to rule"
+    },
+    {
+      "start_ms": 1785120,
+      "duration_ms": 4840,
+      "end_ms": 1789960,
+      "text": "them all, which is a con in another way,"
+    },
+    {
+      "start_ms": 1788800,
+      "duration_ms": 2880,
+      "end_ms": 1791680,
+      "text": "right? We've talked about the one agent"
+    },
+    {
+      "start_ms": 1789960,
+      "duration_ms": 2840,
+      "end_ms": 1792800,
+      "text": "to rule them all, the orchestrator."
+    },
+    {
+      "start_ms": 1791680,
+      "duration_ms": 2720,
+      "end_ms": 1794400,
+      "text": "Let's be super clear about this. This is"
+    },
+    {
+      "start_ms": 1792800,
+      "duration_ms": 3480,
+      "end_ms": 1796280,
+      "text": "the orchestrator. Um"
+    },
+    {
+      "start_ms": 1794400,
+      "duration_ms": 3320,
+      "end_ms": 1797720,
+      "text": "and this is like the current wave of"
+    },
+    {
+      "start_ms": 1796280,
+      "duration_ms": 3360,
+      "end_ms": 1799640,
+      "text": "multi-agent orchestration. This is super"
+    },
+    {
+      "start_ms": 1797720,
+      "duration_ms": 3520,
+      "end_ms": 1801240,
+      "text": "powerful. It's a great pattern. I'm"
+    },
+    {
+      "start_ms": 1799640,
+      "duration_ms": 3520,
+      "end_ms": 1803160,
+      "text": "going to continue to use it, but um"
+    },
+    {
+      "start_ms": 1801240,
+      "duration_ms": 4480,
+      "end_ms": 1805720,
+      "text": "bidirectional is great cuz it's flat,"
+    },
+    {
+      "start_ms": 1803160,
+      "duration_ms": 4040,
+      "end_ms": 1807200,
+      "text": "it's two-way, no information gets lost,"
+    },
+    {
+      "start_ms": 1805720,
+      "duration_ms": 3600,
+      "end_ms": 1809320,
+      "text": "right? Um another great part about this"
+    },
+    {
+      "start_ms": 1807200,
+      "duration_ms": 4200,
+      "end_ms": 1811400,
+      "text": "is that uh this is a primitive over"
+    },
+    {
+      "start_ms": 1809320,
+      "duration_ms": 3480,
+      "end_ms": 1812800,
+      "text": "composition approach, right? Once again,"
+    },
+    {
+      "start_ms": 1811400,
+      "duration_ms": 4200,
+      "end_ms": 1815600,
+      "text": "this kind of ties back into that first"
+    },
+    {
+      "start_ms": 1812800,
+      "duration_ms": 4680,
+      "end_ms": 1817480,
+      "text": "idea. This is just an agent. It's just a"
+    },
+    {
+      "start_ms": 1815600,
+      "duration_ms": 3520,
+      "end_ms": 1819120,
+      "text": "pie coding agent, right? Or just"
+    },
+    {
+      "start_ms": 1817480,
+      "duration_ms": 3600,
+      "end_ms": 1821080,
+      "text": "simplify it, right? Let's not hyper"
+    },
+    {
+      "start_ms": 1819120,
+      "duration_ms": 3760,
+      "end_ms": 1822880,
+      "text": "fixate on pie, right? This is just an"
+    },
+    {
+      "start_ms": 1821080,
+      "duration_ms": 3920,
+      "end_ms": 1825000,
+      "text": "agent. I just open up an agent, and then"
+    },
+    {
+      "start_ms": 1822880,
+      "duration_ms": 3600,
+      "end_ms": 1826480,
+      "text": "I can compose as many agents as I want"
+    },
+    {
+      "start_ms": 1825000,
+      "duration_ms": 3440,
+      "end_ms": 1828440,
+      "text": "to, okay? So, once again, we're"
+    },
+    {
+      "start_ms": 1826480,
+      "duration_ms": 3440,
+      "end_ms": 1829920,
+      "text": "engineering. Composition is an"
+    },
+    {
+      "start_ms": 1828440,
+      "duration_ms": 3600,
+      "end_ms": 1832040,
+      "text": "engineering pattern. We're creating"
+    },
+    {
+      "start_ms": 1829920,
+      "duration_ms": 4080,
+      "end_ms": 1834000,
+      "text": "slices of things we can combine to make"
+    },
+    {
+      "start_ms": 1832040,
+      "duration_ms": 3920,
+      "end_ms": 1835960,
+      "text": "something bigger, right? Primitives into"
+    },
+    {
+      "start_ms": 1834000,
+      "duration_ms": 4160,
+      "end_ms": 1838160,
+      "text": "compositions. But you want the primitive"
+    },
+    {
+      "start_ms": 1835960,
+      "duration_ms": 4760,
+      "end_ms": 1840720,
+      "text": "first so that you can compose it. That's"
+    },
+    {
+      "start_ms": 1838160,
+      "duration_ms": 4320,
+      "end_ms": 1842480,
+      "text": "enough glaze. Uh let's go to cons. Uh"
+    },
+    {
+      "start_ms": 1840720,
+      "duration_ms": 4560,
+      "end_ms": 1845280,
+      "text": "you have to build this yourself or get"
+    },
+    {
+      "start_ms": 1842480,
+      "duration_ms": 4840,
+      "end_ms": 1847320,
+      "text": "it from any dev Dan for free. Link in"
+    },
+    {
+      "start_ms": 1845280,
+      "duration_ms": 3000,
+      "end_ms": 1848280,
+      "text": "the description."
+    },
+    {
+      "start_ms": 1847320,
+      "duration_ms": 2120,
+      "end_ms": 1849440,
+      "text": "But, you know, you know what I mean,"
+    },
+    {
+      "start_ms": 1848280,
+      "duration_ms": 3560,
+      "end_ms": 1851840,
+      "text": "right? You have to build this, you have"
+    },
+    {
+      "start_ms": 1849440,
+      "duration_ms": 3480,
+      "end_ms": 1852920,
+      "text": "to vet this, you have to control the way"
+    },
+    {
+      "start_ms": 1851840,
+      "duration_ms": 2600,
+      "end_ms": 1854440,
+      "text": "your agents communicate. You need to"
+    },
+    {
+      "start_ms": 1852920,
+      "duration_ms": 3040,
+      "end_ms": 1855960,
+      "text": "prompt engineer everything, contact"
+    },
+    {
+      "start_ms": 1854440,
+      "duration_ms": 3400,
+      "end_ms": 1857840,
+      "text": "engineer thing everything, and you need"
+    },
+    {
+      "start_ms": 1855960,
+      "duration_ms": 4200,
+      "end_ms": 1860160,
+      "text": "to deal with the the cases, right? The"
+    },
+    {
+      "start_ms": 1857840,
+      "duration_ms": 4360,
+      "end_ms": 1862200,
+      "text": "edge cases is where really where great"
+    },
+    {
+      "start_ms": 1860160,
+      "duration_ms": 3800,
+      "end_ms": 1863960,
+      "text": "agentic engineering patterns are made,"
+    },
+    {
+      "start_ms": 1862200,
+      "duration_ms": 4320,
+      "end_ms": 1866520,
+      "text": "and great products in general, right?"
+    },
+    {
+      "start_ms": 1863960,
+      "duration_ms": 4520,
+      "end_ms": 1868480,
+      "text": "Another con here, loops are possible if"
+    },
+    {
+      "start_ms": 1866520,
+      "duration_ms": 3920,
+      "end_ms": 1870440,
+      "text": "prompts are sloppy, right? So, you can"
+    },
+    {
+      "start_ms": 1868480,
+      "duration_ms": 3200,
+      "end_ms": 1871680,
+      "text": "you can really generate some bad loops"
+    },
+    {
+      "start_ms": 1870440,
+      "duration_ms": 3000,
+      "end_ms": 1873440,
+      "text": "that that are going to really chew up"
+    },
+    {
+      "start_ms": 1871680,
+      "duration_ms": 3280,
+      "end_ms": 1874960,
+      "text": "your token usage if your prompts are"
+    },
+    {
+      "start_ms": 1873440,
+      "duration_ms": 2680,
+      "end_ms": 1876120,
+      "text": "sloppy, right? You need an end state,"
+    },
+    {
+      "start_ms": 1874960,
+      "duration_ms": 2520,
+      "end_ms": 1877480,
+      "text": "right? Let's see if our agents have hit"
+    },
+    {
+      "start_ms": 1876120,
+      "duration_ms": 2920,
+      "end_ms": 1879040,
+      "text": "their end state yet. Okay, great. So,"
+    },
+    {
+      "start_ms": 1877480,
+      "duration_ms": 3520,
+      "end_ms": 1881000,
+      "text": "yeah, so we are approaching the end"
+    },
+    {
+      "start_ms": 1879040,
+      "duration_ms": 4480,
+      "end_ms": 1883520,
+      "text": "state, right? My agent is making"
+    },
+    {
+      "start_ms": 1881000,
+      "duration_ms": 4720,
+      "end_ms": 1885720,
+      "text": "progress. It is creating this agent"
+    },
+    {
+      "start_ms": 1883520,
+      "duration_ms": 4080,
+      "end_ms": 1887600,
+      "text": "sandbox EXE dev skill. Okay, so that's"
+    },
+    {
+      "start_ms": 1885720,
+      "duration_ms": 3760,
+      "end_ms": 1889480,
+      "text": "great. So, this prompt obviously was not"
+    },
+    {
+      "start_ms": 1887600,
+      "duration_ms": 3480,
+      "end_ms": 1891080,
+      "text": "sloppy. I don't write very a ton of"
+    },
+    {
+      "start_ms": 1889480,
+      "duration_ms": 3280,
+      "end_ms": 1892760,
+      "text": "sloppy prompts anymore, but this is a"
+    },
+    {
+      "start_ms": 1891080,
+      "duration_ms": 3200,
+      "end_ms": 1894280,
+      "text": "risk of this strategy, right? And then"
+    },
+    {
+      "start_ms": 1892760,
+      "duration_ms": 4440,
+      "end_ms": 1897200,
+      "text": "there's just like general costs, right?"
+    },
+    {
+      "start_ms": 1894280,
+      "duration_ms": 5920,
+      "end_ms": 1900200,
+      "text": "Cost scales linearly with agent count"
+    },
+    {
+      "start_ms": 1897200,
+      "duration_ms": 4920,
+      "end_ms": 1902120,
+      "text": "plus communication bounce. And so, there"
+    },
+    {
+      "start_ms": 1900200,
+      "duration_ms": 4360,
+      "end_ms": 1904560,
+      "text": "a bunch of laws around the perfect"
+    },
+    {
+      "start_ms": 1902120,
+      "duration_ms": 3600,
+      "end_ms": 1905720,
+      "text": "number of actors to have in a team,"
+    },
+    {
+      "start_ms": 1904560,
+      "duration_ms": 2400,
+      "end_ms": 1906960,
+      "text": "right? Inside of your communication"
+    },
+    {
+      "start_ms": 1905720,
+      "duration_ms": 2960,
+      "end_ms": 1908680,
+      "text": "channel. That's kind of what this, you"
+    },
+    {
+      "start_ms": 1906960,
+      "duration_ms": 3520,
+      "end_ms": 1910480,
+      "text": "know, showcases, right? There's some"
+    },
+    {
+      "start_ms": 1908680,
+      "duration_ms": 3120,
+      "end_ms": 1911800,
+      "text": "magical number, Dunbar's number, or"
+    },
+    {
+      "start_ms": 1910480,
+      "duration_ms": 2720,
+      "end_ms": 1913200,
+      "text": "something. I wouldn't worry about that"
+    },
+    {
+      "start_ms": 1911800,
+      "duration_ms": 3000,
+      "end_ms": 1914800,
+      "text": "too much. I would just worry about like,"
+    },
+    {
+      "start_ms": 1913200,
+      "duration_ms": 3640,
+      "end_ms": 1916840,
+      "text": "what's useful? How can I deploy"
+    },
+    {
+      "start_ms": 1914800,
+      "duration_ms": 3760,
+      "end_ms": 1918560,
+      "text": "bidirectional agents, bidirectional"
+    },
+    {
+      "start_ms": 1916840,
+      "duration_ms": 4360,
+      "end_ms": 1921200,
+      "text": "peer-to-peer agents that it's actually"
+    },
+    {
+      "start_ms": 1918560,
+      "duration_ms": 3960,
+      "end_ms": 1922520,
+      "text": "useful across devices, or on the same"
+    },
+    {
+      "start_ms": 1921200,
+      "duration_ms": 2880,
+      "end_ms": 1924080,
+      "text": "device, right? The key here is"
+    },
+    {
+      "start_ms": 1922520,
+      "duration_ms": 3280,
+      "end_ms": 1925800,
+      "text": "peer-to-peer. And just make it as useful"
+    },
+    {
+      "start_ms": 1924080,
+      "duration_ms": 3680,
+      "end_ms": 1927760,
+      "text": "as possible. If you find that three"
+    },
+    {
+      "start_ms": 1925800,
+      "duration_ms": 3360,
+      "end_ms": 1929160,
+      "text": "agents, 10 agents, whatever is too much,"
+    },
+    {
+      "start_ms": 1927760,
+      "duration_ms": 3400,
+      "end_ms": 1931160,
+      "text": "then just trim them. So, it's not a huge"
+    },
+    {
+      "start_ms": 1929160,
+      "duration_ms": 4120,
+      "end_ms": 1933280,
+      "text": "con, but it's important to uh take into"
+    },
+    {
+      "start_ms": 1931160,
+      "duration_ms": 5240,
+      "end_ms": 1936400,
+      "text": "account, right? And I think the last con"
+    },
+    {
+      "start_ms": 1933280,
+      "duration_ms": 5120,
+      "end_ms": 1938400,
+      "text": "is, be careful not to just fall back"
+    },
+    {
+      "start_ms": 1936400,
+      "duration_ms": 3000,
+      "end_ms": 1939400,
+      "text": "into the orchestration pattern. Unless"
+    },
+    {
+      "start_ms": 1938400,
+      "duration_ms": 2520,
+      "end_ms": 1940920,
+      "text": "you need it, right? If you need"
+    },
+    {
+      "start_ms": 1939400,
+      "duration_ms": 3560,
+      "end_ms": 1942960,
+      "text": "orchestration pattern, just build that."
+    },
+    {
+      "start_ms": 1940920,
+      "duration_ms": 3920,
+      "end_ms": 1944840,
+      "text": "This is kind of nice though still cuz"
+    },
+    {
+      "start_ms": 1942960,
+      "duration_ms": 4560,
+      "end_ms": 1947520,
+      "text": "you can compose peer-to-peer agent"
+    },
+    {
+      "start_ms": 1944840,
+      "duration_ms": 3600,
+      "end_ms": 1948440,
+      "text": "communication back into a orchestration"
+    },
+    {
+      "start_ms": 1947520,
+      "duration_ms": 2680,
+      "end_ms": 1950200,
+      "text": "pattern where you have more of a"
+    },
+    {
+      "start_ms": 1948440,
+      "duration_ms": 3880,
+      "end_ms": 1952320,
+      "text": "top-down format where one agent's"
+    },
+    {
+      "start_ms": 1950200,
+      "duration_ms": 3800,
+      "end_ms": 1954000,
+      "text": "leading the rest. That's fine, too,"
+    },
+    {
+      "start_ms": 1952320,
+      "duration_ms": 3160,
+      "end_ms": 1955480,
+      "text": "right? As I mentioned, you know, we're"
+    },
+    {
+      "start_ms": 1954000,
+      "duration_ms": 3880,
+      "end_ms": 1957880,
+      "text": "exploring the state space of what's"
+    },
+    {
+      "start_ms": 1955480,
+      "duration_ms": 5320,
+      "end_ms": 1960800,
+      "text": "possible. This is equally as valuable,"
+    },
+    {
+      "start_ms": 1957880,
+      "duration_ms": 5400,
+      "end_ms": 1963280,
+      "text": "but peer-to-peer's advantage is that it"
+    },
+    {
+      "start_ms": 1960800,
+      "duration_ms": 4120,
+      "end_ms": 1964920,
+      "text": "is flat and there's no hierarchy, right?"
+    },
+    {
+      "start_ms": 1963280,
+      "duration_ms": 2960,
+      "end_ms": 1966240,
+      "text": "That's the advantage, right? Your agents"
+    },
+    {
+      "start_ms": 1964920,
+      "duration_ms": 3160,
+      "end_ms": 1968080,
+      "text": "are working together. It's not a"
+    },
+    {
+      "start_ms": 1966240,
+      "duration_ms": 3160,
+      "end_ms": 1969400,
+      "text": "delegation stream. So, these are some of"
+    },
+    {
+      "start_ms": 1968080,
+      "duration_ms": 2600,
+      "end_ms": 1970680,
+      "text": "the pros and the cons of this system. I"
+    },
+    {
+      "start_ms": 1969400,
+      "duration_ms": 2720,
+      "end_ms": 1972120,
+      "text": "think it's important to address the"
+    },
+    {
+      "start_ms": 1970680,
+      "duration_ms": 2520,
+      "end_ms": 1973200,
+      "text": "upside and the downside, right? Again,"
+    },
+    {
+      "start_ms": 1972120,
+      "duration_ms": 2800,
+      "end_ms": 1974920,
+      "text": "if you're doing engineering, you need to"
+    },
+    {
+      "start_ms": 1973200,
+      "duration_ms": 4080,
+      "end_ms": 1977280,
+      "text": "address both of them. So, this is yet"
+    },
+    {
+      "start_ms": 1974920,
+      "duration_ms": 4840,
+      "end_ms": 1979760,
+      "text": "another multi-agent orchestration system"
+    },
+    {
+      "start_ms": 1977280,
+      "duration_ms": 4320,
+      "end_ms": 1981600,
+      "text": "that you can use to push what you can do"
+    },
+    {
+      "start_ms": 1979760,
+      "duration_ms": 3200,
+      "end_ms": 1982960,
+      "text": "with your agents in the age of agents,"
+    },
+    {
+      "start_ms": 1981600,
+      "duration_ms": 2720,
+      "end_ms": 1984320,
+      "text": "right? And the goal is the same. We're"
+    },
+    {
+      "start_ms": 1982960,
+      "duration_ms": 3240,
+      "end_ms": 1986200,
+      "text": "not really changing We're not doing"
+    },
+    {
+      "start_ms": 1984320,
+      "duration_ms": 3360,
+      "end_ms": 1987680,
+      "text": "anything new here on the channel. What"
+    },
+    {
+      "start_ms": 1986200,
+      "duration_ms": 4480,
+      "end_ms": 1990680,
+      "text": "we are doing week after week is we're"
+    },
+    {
+      "start_ms": 1987680,
+      "duration_ms": 5240,
+      "end_ms": 1992920,
+      "text": "increasing trust and scale of our"
+    },
+    {
+      "start_ms": 1990680,
+      "duration_ms": 4000,
+      "end_ms": 1994680,
+      "text": "agentic systems. All right? You can see"
+    },
+    {
+      "start_ms": 1992920,
+      "duration_ms": 3600,
+      "end_ms": 1996520,
+      "text": "this final reviews coming in. This is"
+    },
+    {
+      "start_ms": 1994680,
+      "duration_ms": 3160,
+      "end_ms": 1997840,
+      "text": "coordinated agents working together,"
+    },
+    {
+      "start_ms": 1996520,
+      "duration_ms": 3160,
+      "end_ms": 1999680,
+      "text": "double-checking their work. And you can"
+    },
+    {
+      "start_ms": 1997840,
+      "duration_ms": 4560,
+      "end_ms": 2002400,
+      "text": "see here our tokens are starting to"
+    },
+    {
+      "start_ms": 1999680,
+      "duration_ms": 4960,
+      "end_ms": 2004640,
+      "text": "stack up. We have 2 million available,"
+    },
+    {
+      "start_ms": 2002400,
+      "duration_ms": 5200,
+      "end_ms": 2007600,
+      "text": "but it's split in half. One is focused"
+    },
+    {
+      "start_ms": 2004640,
+      "duration_ms": 4960,
+      "end_ms": 2009600,
+      "text": "on exe.dev, one is focused on e2b, but"
+    },
+    {
+      "start_ms": 2007600,
+      "duration_ms": 3520,
+      "end_ms": 2011120,
+      "text": "our agents are still coordinating on the"
+    },
+    {
+      "start_ms": 2009600,
+      "duration_ms": 2600,
+      "end_ms": 2012200,
+      "text": "same information. We're making sure that"
+    },
+    {
+      "start_ms": 2011120,
+      "duration_ms": 2600,
+      "end_ms": 2013720,
+      "text": "we're hitting feature parity. We're"
+    },
+    {
+      "start_ms": 2012200,
+      "duration_ms": 3160,
+      "end_ms": 2015360,
+      "text": "making sure that everything looks good."
+    },
+    {
+      "start_ms": 2013720,
+      "duration_ms": 2680,
+      "end_ms": 2016400,
+      "text": "Of course, I'm going to run more tests"
+    },
+    {
+      "start_ms": 2015360,
+      "duration_ms": 2520,
+      "end_ms": 2017880,
+      "text": "on this and make sure that this looks"
+    },
+    {
+      "start_ms": 2016400,
+      "duration_ms": 2840,
+      "end_ms": 2019240,
+      "text": "good, but I can almost guarantee you"
+    },
+    {
+      "start_ms": 2017880,
+      "duration_ms": 2920,
+      "end_ms": 2020800,
+      "text": "this is going to work out of the box"
+    },
+    {
+      "start_ms": 2019240,
+      "duration_ms": 3320,
+      "end_ms": 2022560,
+      "text": "because I had two agents two"
+    },
+    {
+      "start_ms": 2020800,
+      "duration_ms": 3560,
+      "end_ms": 2024360,
+      "text": "state-of-the-art agents working together"
+    },
+    {
+      "start_ms": 2022560,
+      "duration_ms": 3880,
+      "end_ms": 2026440,
+      "text": "to get this shipped out. Enabling"
+    },
+    {
+      "start_ms": 2024360,
+      "duration_ms": 4320,
+      "end_ms": 2028680,
+      "text": "specialized agents that chat together on"
+    },
+    {
+      "start_ms": 2026440,
+      "duration_ms": 5000,
+      "end_ms": 2031440,
+      "text": "device and across devices is a unique"
+    },
+    {
+      "start_ms": 2028680,
+      "duration_ms": 4720,
+      "end_ms": 2033400,
+      "text": "advantage you can add to your agentic"
+    },
+    {
+      "start_ms": 2031440,
+      "duration_ms": 4080,
+      "end_ms": 2035520,
+      "text": "systems, specifically to your agent"
+    },
+    {
+      "start_ms": 2033400,
+      "duration_ms": 3520,
+      "end_ms": 2036920,
+      "text": "harness. This pattern and patterns like"
+    },
+    {
+      "start_ms": 2035520,
+      "duration_ms": 3880,
+      "end_ms": 2039400,
+      "text": "this more and more of these patterns are"
+    },
+    {
+      "start_ms": 2036920,
+      "duration_ms": 3960,
+      "end_ms": 2040880,
+      "text": "going to emerge. They're impossible if"
+    },
+    {
+      "start_ms": 2039400,
+      "duration_ms": 3640,
+      "end_ms": 2043040,
+      "text": "you're using, you know, the"
+    },
+    {
+      "start_ms": 2040880,
+      "duration_ms": 3680,
+      "end_ms": 2044560,
+      "text": "out-of-the-box agents from Anthropic,"
+    },
+    {
+      "start_ms": 2043040,
+      "duration_ms": 3480,
+      "end_ms": 2046520,
+      "text": "from OpenAI, from Google. It's"
+    },
+    {
+      "start_ms": 2044560,
+      "duration_ms": 4040,
+      "end_ms": 2048600,
+      "text": "impossible when you're renting your"
+    },
+    {
+      "start_ms": 2046520,
+      "duration_ms": 3639,
+      "end_ms": 2050159,
+      "text": "agent harness, okay? To be clear, I"
+    },
+    {
+      "start_ms": 2048600,
+      "duration_ms": 2960,
+      "end_ms": 2051560,
+      "text": "still use Claude Code all the time. It's"
+    },
+    {
+      "start_ms": 2050159,
+      "duration_ms": 2961,
+      "end_ms": 2053120,
+      "text": "a great tool. I'm going to continue to"
+    },
+    {
+      "start_ms": 2051560,
+      "duration_ms": 3319,
+      "end_ms": 2054879,
+      "text": "use it, but more and more I'm reaching"
+    },
+    {
+      "start_ms": 2053120,
+      "duration_ms": 4360,
+      "end_ms": 2057480,
+      "text": "for the Pi agent harness to build the"
+    },
+    {
+      "start_ms": 2054879,
+      "duration_ms": 4280,
+      "end_ms": 2059159,
+      "text": "exact experience and products that I'm"
+    },
+    {
+      "start_ms": 2057480,
+      "duration_ms": 4120,
+      "end_ms": 2061600,
+      "text": "looking for, right? And this pattern"
+    },
+    {
+      "start_ms": 2059159,
+      "duration_ms": 5281,
+      "end_ms": 2064440,
+      "text": "adds to that bag of tricks that you and"
+    },
+    {
+      "start_ms": 2061600,
+      "duration_ms": 4559,
+      "end_ms": 2066159,
+      "text": "I can now deploy in our agent harness if"
+    },
+    {
+      "start_ms": 2064440,
+      "duration_ms": 4439,
+      "end_ms": 2068879,
+      "text": "you own your agent harness. I'm going to"
+    },
+    {
+      "start_ms": 2066159,
+      "duration_ms": 4520,
+      "end_ms": 2070679,
+      "text": "be adding these two extensions to the Pi"
+    },
+    {
+      "start_ms": 2068879,
+      "duration_ms": 3321,
+      "end_ms": 2072200,
+      "text": "versus Claude Code codebase here"
+    },
+    {
+      "start_ms": 2070679,
+      "duration_ms": 3401,
+      "end_ms": 2074080,
+      "text": "available to you, link in the"
+    },
+    {
+      "start_ms": 2072200,
+      "duration_ms": 3199,
+      "end_ms": 2075399,
+      "text": "description. I'm really excited for some"
+    },
+    {
+      "start_ms": 2074080,
+      "duration_ms": 3360,
+      "end_ms": 2077440,
+      "text": "of the big ideas I have to share with"
+    },
+    {
+      "start_ms": 2075399,
+      "duration_ms": 3641,
+      "end_ms": 2079040,
+      "text": "you here on the channel coming up. I'm"
+    },
+    {
+      "start_ms": 2077440,
+      "duration_ms": 3360,
+      "end_ms": 2080800,
+      "text": "waiting for that next Gemini model"
+    },
+    {
+      "start_ms": 2079040,
+      "duration_ms": 3240,
+      "end_ms": 2082280,
+      "text": "launch to really showcase one of these"
+    },
+    {
+      "start_ms": 2080800,
+      "duration_ms": 2760,
+      "end_ms": 2083560,
+      "text": "next-gen patterns. So, make sure you"
+    },
+    {
+      "start_ms": 2082280,
+      "duration_ms": 3160,
+      "end_ms": 2085440,
+      "text": "like, make sure you subscribe, join the"
+    },
+    {
+      "start_ms": 2083560,
+      "duration_ms": 3839,
+      "end_ms": 2087399,
+      "text": "journey so you don't miss that. You know"
+    },
+    {
+      "start_ms": 2085440,
+      "duration_ms": 6840,
+      "end_ms": 2092280,
+      "text": "where to find me every single Monday."
+    },
+    {
+      "start_ms": 2087399,
+      "duration_ms": 4881,
+      "end_ms": 2092280,
+      "text": "Stay focused and keep building."
+    }
+  ]
+}

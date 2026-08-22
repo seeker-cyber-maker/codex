@@ -1,0 +1,803 @@
+{
+  "id": "PIdETjcXNIk",
+  "title": "Pi to Pi: Two-Way Agent Orchestration with the Pi Coding Agent",
+  "channel": "IndyDevDan",
+  "channel_id": "UC_x36zCEGilGpB1m-V4gmjg",
+  "uploader": "IndyDevDan",
+  "uploader_id": "@indydevdan",
+  "upload_date": "20260518",
+  "timestamp": 1779109215,
+  "duration": 2092,
+  "description": "Subagents are the LOCAL MAXIMUM of multi-agent orchestration and most engineers are still stuck there. What's better?\n\nAgents that work together. Specifically, two pi coding agents that can coordinate using any model (gpt-5.5, opus 4.7, glm 5.1, etc) at any time to operate as a TEAM. \n\nFlat teams beats hierarchy. The best ideas die in agent hierarchies the same way they die in corporate hierarchies.\n\nThis is Pi to Pi: true two-way agent to agent communication on the Pi coding agent.\n\n\n✅ Get the Pi to Pi Extension\nhttps://github.com/disler/pi-vs-claude-code\n\n💰 VIDEO REFERENCES\n- Pi Coding Agent: https://pi.dev/\n- exe.dev: https://exe.dev/\n- e2b.dev: https://e2b.dev/\n\n🔗 LEARN MORE\n- Verifier Agent (referenced in video): https://youtu.be/EnXKysJNz_8\n\n🚀 Master Agentic Coding\nhttps://agenticengineer.com/tactical-agentic-coding?y=PIdETjcXNIk\n\nIn this video, IndyDevDan breaks down a brand new multi-agent orchestration pattern hiding in plain sight. Forget sub-agent delegation. Forget message queues. Forget the one-agent-to-rule-them-all orchestrator. We are going FLAT with peer to peer agents that ping each other, prompt each other, and await responses across devices over a simple Unix socket and BUN server. This is the A2A protocol you actually want.\n\nWhat is better than one GPT-5.5 Pi coding agent? Two. What is better than two isolated GPT-5.5 agents? Two GPT-5.5 agents that actually work together. We push this to three, four, five agents all running as equals, all coworkers, all ping-able. Real multi-agent systems. Real agent to agent communication. Zero hierarchy.\n\nWe run two live demos that prove the pattern. First, a Prod and Dev multi-agent orchestration scenario where a production Pi coding agent on a Mac Mini coordinates with a dev agent on an M5 MacBook Pro to reproduce a Pro Tier user lockout bug, all while keeping PII safe. Real engineering work, not vibe coding. Then we spin up an E2B agent and an exe.dev agent and have them communicate to build a brand new agent sandbox skill with full feature parity. This is harness engineering, context engineering, and prompt engineering coming together in one workflow.\n\nKEY IDEAS\n- Pi coding agent: The agent harness that lets you actually own the experience. The real claude code alternative.\n- Agent to agent communication: Bidirectional flows of information beat top-down delegation every time.\n- Peer to peer agents: Flat hierarchies. No orchestrator. No worker. Just equals on the network.\n- Multi-agent orchestration: Cross device coordination using a lightweight Unix socket and BUN server.\n- A2A protocol: Four simple tools. List agents, send command, send prompt, await response.\n- Context engineering: A focused agent is a performant agent. Split your context window across specialized agents.\n- Harness engineering: The tool you use limits what you believe is possible. Own your agent harness.\n- Pi extension: Two extensions shipping in the pi-vs-claude-code repo, comms and comms net.\n\nThe state space of agentic engineering is vast. Only one percent of what is possible has been discovered. If you are stuck using Claude Code, Codex, Gemini CLI, or OpenCode as your only agent, you are getting one percent of the value. The Pi coding agent unlocks the other 99.\n\nThis is week after week of the same mission on the channel. Increase trust. Increase scale. Build agentic systems that do serious engineering work on your behalf. Not vibe coding. Real agentic engineering.\n\nDrop a like if you want the agent sandbox exe.dev skill and the E2B skill added to the repo. Comment below.\n\nStay focused and keep building.\n- IndyDevDan\n\n📖 Chapters\n00:00 Pi to Pi Agent Communication\n01:18 Prod and Dev Multi-Agent Orchestration\n04:56 Why Agent to Agent Communication Matters\n12:33 e2b vs exe.dev Skills\n21:39 Pi to Pi Tools and Codebase Breakdown\n27:42 Pros and Cons of Pi to Pi Agent Communication\n\n#agenticcoding  #picodingagent #agenticengineering",
+  "webpage_url": "https://www.youtube.com/watch?v=PIdETjcXNIk",
+  "original_url": "https://www.youtube.com/watch?v=PIdETjcXNIk",
+  "availability": "public",
+  "live_status": "not_live",
+  "caption_tracks": [
+    {
+      "language": "aa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ab",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "af",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ak",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "am",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ar",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "as",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ay",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "az",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ba",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "be",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bho",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "br",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bs",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ca",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ceb",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "co",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "crs",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "cs",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "cy",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "da",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "de",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "dv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "dz",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ee",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "el",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "en",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "en-orig",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "eo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "es",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "et",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "eu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fil",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fj",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fy",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ga",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gaa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gd",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ha",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "haw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hmn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ht",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hy",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "id",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ig",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "is",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "it",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "iu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "iw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ja",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "jv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ka",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kha",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "km",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ko",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kri",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ku",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ky",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "la",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lb",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ln",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lua",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "luo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mfe",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ml",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ms",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "my",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ne",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "new",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "nl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "no",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "nso",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ny",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "oc",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "om",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "or",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "os",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pam",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ps",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pt-PT",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "qu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "rn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ro",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ru",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "rw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sd",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "si",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sm",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "so",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sq",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ss",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "st",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "su",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ta",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "te",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "th",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ti",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "to",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ts",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tum",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ug",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "uk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ur",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "uz",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ve",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "vi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "war",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "wo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "xh",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "yi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "yo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "zh-Hans",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "zh-Hant",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "zu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    }
+  ]
+}

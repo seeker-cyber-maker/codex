@@ -55,6 +55,13 @@ reconciles through the submission adapter's exact stored receipt. This is a
 cooperative local control fixture, not authenticated identity or OS-enforced
 writer isolation. See `workflow/runs/20260821T163359Z-task-inbox-controller/`.
 
+The offline worker relay is a separate, authority-neutral rendezvous seam for
+addressed peer envelopes. It stores hash-bound artifact references, bounded
+reply threads, acknowledgements, and hash-chained queue/delivery records in a
+local SQLite database. It cannot connect to a worker, execute an artifact,
+select a provider, or approve a proposal. See `relay/README.md` and
+`workflow/runs/20260822T231500Z-offline-worker-relay/`.
+
 The offline local-authority candidate verifies action-bound P-256 signatures
 against a directly enrolled public-key registry before producer enqueue. It
 retains append-only proof and revocation evidence while keeping private keys

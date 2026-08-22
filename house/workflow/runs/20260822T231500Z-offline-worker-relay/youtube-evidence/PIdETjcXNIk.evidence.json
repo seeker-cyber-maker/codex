@@ -1,0 +1,39 @@
+{
+  "schema": "youtube-evidence/1",
+  "acquired_at": "2026-08-22T22:57:35.463965+00:00",
+  "source_url": "https://www.youtube.com/watch?v=PIdETjcXNIk",
+  "video_id": "PIdETjcXNIk",
+  "title": "Pi to Pi: Two-Way Agent Orchestration with the Pi Coding Agent",
+  "channel": "IndyDevDan",
+  "upload_date": "20260518",
+  "duration_seconds": 2092,
+  "extractor": "yt-dlp",
+  "authenticated_session_used": false,
+  "authentication_material_preserved": false,
+  "selected_caption": {
+    "language": "en-orig",
+    "kind": "automatic",
+    "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt",
+    "cue_count": 1012
+  },
+  "automatic_captions_are_noisy_evidence": true,
+  "warnings": [],
+  "artifacts": [
+    {
+      "path": "PIdETjcXNIk.metadata.json",
+      "sha256": "0f8f346c915ac1edbb6b0f17c7d44f179043b5bded9cb40ae229521e63bb094b"
+    },
+    {
+      "path": "PIdETjcXNIk.en-orig.json3",
+      "sha256": "603e4dc9ef369634e696ad781255a88e598a6b855e58fb76b77d3726d949bd55"
+    },
+    {
+      "path": "PIdETjcXNIk.en-orig.transcript.json",
+      "sha256": "ee5b18e201f0dbf99b038812e72eae6aa0245b33abe0aa650cc575d17604c87c"
+    },
+    {
+      "path": "PIdETjcXNIk.en-orig.transcript.txt",
+      "sha256": "c2623b3f87c3798b30e1da2ba481386ffa8edae2d4fbdd9a168f8f0b760c32d4"
+    }
+  ]
+}
