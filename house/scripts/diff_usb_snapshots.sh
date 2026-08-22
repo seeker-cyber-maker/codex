@@ -22,7 +22,7 @@ after="$2"
 output_dir="$3"
 
 for label in "$before" "$after"; do
-  for suffix in system-profiler.json ioreg-usb.txt ioreg-yubico.txt ykman.txt; do
+  for suffix in system-profiler.json ioreg-usb.txt usb-devices.txt ioreg-yubico.txt ykman.txt; do
     if [[ ! -f "$output_dir/$label-$suffix" ]]; then
       echo "Missing snapshot: $output_dir/$label-$suffix" >&2
       exit 66
@@ -41,8 +41,7 @@ compare() {
   fi
 }
 
-compare system-profiler.json
-compare ioreg-usb.txt
+compare usb-devices.txt
 compare ioreg-yubico.txt
 compare ykman.txt
 

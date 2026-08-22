@@ -34,7 +34,7 @@ fi
 
 mkdir -p "$output_dir"
 
-for suffix in metadata.txt system-profiler.json ioreg-usb.txt ioreg-yubico.txt ykman.txt sha256.txt; do
+for suffix in metadata.txt system-profiler.json ioreg-usb.txt usb-devices.txt ioreg-yubico.txt ykman.txt sha256.txt; do
   if [[ -e "$output_dir/$label-$suffix" ]]; then
     echo "Refusing to overwrite existing snapshot: $output_dir/$label-$suffix" >&2
     exit 73
@@ -63,6 +63,10 @@ capture() {
 
 capture "$output_dir/$label-system-profiler.json" system_profiler SPUSBDataType -json
 capture "$output_dir/$label-ioreg-usb.txt" ioreg -p IOUSB -l -w 0
+# The full registry is retained above. This narrower record is the comparison
+# surface: only concrete USB host devices, excluding volatile global IOKit
+# diagnostics that otherwise drown an insertion/removal diff.
+capture "$output_dir/$label-usb-devices.txt" ioreg -p IOUSB -r -l -w 0 -c IOUSBHostDevice
 
 {
   ioreg -p IOUSB -l -w 0 | grep -i -C 4 -E 'Yubico|YubiKey|0x1050|idVendor.*1050' || true
@@ -77,6 +81,6 @@ else
   printf 'ykman not found on PATH or at /opt/homebrew/bin/ykman\n' >"$output_dir/$label-ykman.txt"
 fi
 
-(cd "$output_dir" && shasum -a 256 "$label-metadata.txt" "$label-system-profiler.json" "$label-ioreg-usb.txt" "$label-ioreg-yubico.txt" "$label-ykman.txt") >"$output_dir/$label-sha256.txt"
+(cd "$output_dir" && shasum -a 256 "$label-metadata.txt" "$label-system-profiler.json" "$label-ioreg-usb.txt" "$label-usb-devices.txt" "$label-ioreg-yubico.txt" "$label-ykman.txt") >"$output_dir/$label-sha256.txt"
 
 printf 'Captured %s in %s\n' "$label" "$output_dir"
