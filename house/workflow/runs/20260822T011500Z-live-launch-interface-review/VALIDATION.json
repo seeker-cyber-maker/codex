@@ -10,12 +10,12 @@
     {
       "name": "focused guard matrix",
       "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
-      "result": "14 tests passed"
+      "result": "15 tests passed, including the terminal preparation CLI"
     },
     {
       "name": "full House regression",
       "command": "python3 -m unittest discover -s house -p 'test_*.py'",
-      "result": "157 tests passed; temporary loopback socket permission was required for existing terminal-companion tests"
+      "result": "158 tests passed; temporary loopback socket permission was required for existing terminal-companion tests"
     },
     {
       "name": "static checks",
@@ -27,5 +27,5 @@
       "result": "version/help capture files retained with SHA-256s in the evidence packet; the sandbox blocked attempted PATH-alias creation, while no task prompt or provider call occurred"
     }
   ],
-  "claim_ceiling": "The launch gate can call only an explicit injected fixture runner and returns a blocked observation. A real Codex runner, provider call, task-result import, retry, and automatic dispatch are absent."
+  "claim_ceiling": "The terminal CLI can only create/replay a sealed PREPARED record; the launch gate can call only an explicit injected fixture runner and returns a blocked observation. A real Codex runner, provider call, task-result import, retry, and automatic dispatch are absent."
 }

@@ -113,6 +113,18 @@ fixture runner. It records a blocked observation afterward. A real Codex
 runner is absent by construction. See
 `workflow/runs/20260822T011500Z-live-launch-interface-review/`.
 
+The keyboard-first preparation command is:
+
+```sh
+python3 -m house.worker_exec.cli prepare \
+  --task-card /absolute/task-card.json --controller-db /absolute/operations.sqlite \
+  --operation-id review-001 --workspace /absolute/workspace \
+  --output-root /absolute/operation-output --codex-path /absolute/codex
+```
+
+It only creates or replays a sealed `PREPARED` record and prints a
+`NOT_ATTEMPTED` receipt.
+
 The integration-health gate is a dependency-free, read-only evaluator for
 future iTerm, provider, cache-path, and hook bindings. A strict trusted
 contract declares root-confined artifacts, optional digests, executable

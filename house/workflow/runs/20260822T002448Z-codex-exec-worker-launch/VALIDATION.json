@@ -6,12 +6,12 @@
     {
       "name": "focused worker-exec guard matrix",
       "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
-      "result": "14 tests passed: generic model omission, explicit model-only path, record/executable/output drift rejection, explicit fake-runner gating, persistent controller lease/block reconciliation, pinned CLI grammar validation, fixture-only normal/timeout process-group reaping, and final injected-fixture launch gates"
+      "result": "15 tests passed: generic model omission, explicit model-only path, record/executable/output drift rejection, explicit fake-runner gating, persistent controller lease/block reconciliation, pinned CLI grammar validation, fixture-only normal/timeout process-group reaping, final injected-fixture launch gates, and terminal no-dispatch preparation"
     },
     {
       "name": "full House regression",
       "command": "python3 -m unittest discover -s house -p 'test_*.py'",
-      "result": "157 tests passed"
+      "result": "158 tests passed"
     },
     {
       "name": "static checks",

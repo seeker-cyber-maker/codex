@@ -13,7 +13,9 @@
     "house/worker_exec/tests/test_cli_contract.py": "9ea8347446c152263ceef08e6a1cd4232cfff3ff89c91a83b6ec9e660592f2ab",
     "house/worker_exec/tests/test_process_supervisor.py": "b4d811decb6f84a5ec18672282571da4f52729f494bfa7a8d629ebcbdb7af32f",
     "house/worker_exec/fixture_gate.py": "251c54dc8334f16fd46f2247d12075db4f65d835602e97c025be6532adba95cd",
-    "house/worker_exec/tests/test_fixture_gate.py": "11699ed434e2d61efc6cd132aee83c0db145094796b996383532852f022e9406"
+    "house/worker_exec/tests/test_fixture_gate.py": "11699ed434e2d61efc6cd132aee83c0db145094796b996383532852f022e9406",
+    "house/worker_exec/cli.py": "dc7e94bc6203ae0fc3ef2e4fcf3d98688978a646dbe73ef22813eb7e022fa8f6",
+    "house/worker_exec/tests/test_cli.py": "95ced64145d466e6cb53b85855ac64eb890bcf13d2d7dd49946bd29d7218accd"
   },
   "disposition": "Accepted offline runtime-qualification primitives only; live execution remains blocked pending a fresh full-profile launch-interface review."
 }
