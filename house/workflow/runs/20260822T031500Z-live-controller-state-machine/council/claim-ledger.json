@@ -1,0 +1,24 @@
+[
+  {
+    "claim_id": "C-001",
+    "claim": "The controller-only state machine can be implemented without enabling process execution.",
+    "status": "corroborated",
+    "evidence": ["PLAN.md", "reviewers/evidence-auditor.md", "reviewers/constructive-theorist.md", "reviewers/adversarial-methodologist.md"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "local static review"],
+    "decision_impact": "high",
+    "next_test": "prove no controller transition accepts an execution callback or command"
+  },
+  {
+    "claim_id": "C-002",
+    "claim": "A durable spawn intent must prevent reacquisition before terminal reconciliation.",
+    "status": "corroborated",
+    "evidence": ["house/worker_exec/controller.py", "reviewers/adversarial-methodologist.md"],
+    "supporters": ["constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "local static review"],
+    "decision_impact": "high",
+    "next_test": "create intent, expire lease, and reject a second acquisition"
+  }
+]

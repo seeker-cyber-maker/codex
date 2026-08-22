@@ -35,8 +35,9 @@ class WorkerOperationController:
         self._clock = time.time if clock is None else clock
         self.db = sqlite3.connect(Path(database_path), timeout=5)
         self.db.row_factory = sqlite3.Row
+        self._migrate_operation_schema()
         self.db.execute(
-            "CREATE TABLE IF NOT EXISTS operation (id TEXT PRIMARY KEY, record_json TEXT NOT NULL, record_sha256 TEXT NOT NULL, state TEXT NOT NULL CHECK(state IN ('PREPARED','LEASED','BLOCKED')), observation_json TEXT)"
+            "CREATE TABLE IF NOT EXISTS operation (id TEXT PRIMARY KEY, record_json TEXT NOT NULL, record_sha256 TEXT NOT NULL, state TEXT NOT NULL CHECK(state IN ('PREPARED','LEASED','SPAWN_INTENT','RUNNING','BLOCKED')), observation_json TEXT)"
         )
         self.db.execute(
             "CREATE TABLE IF NOT EXISTS lease (operation_id TEXT PRIMARY KEY, holder TEXT NOT NULL, epoch INTEGER NOT NULL, token TEXT NOT NULL, expires_at REAL NOT NULL)"
@@ -47,7 +48,39 @@ class WorkerOperationController:
         self.db.execute(
             "CREATE TABLE IF NOT EXISTS live_launch_intent (operation_id TEXT PRIMARY KEY, holder TEXT NOT NULL, epoch INTEGER NOT NULL, token_sha256 TEXT NOT NULL, created_at REAL NOT NULL)"
         )
+        self.db.execute(
+            "CREATE TABLE IF NOT EXISTS live_intent_v2 (operation_id TEXT PRIMARY KEY, record_sha256 TEXT NOT NULL, holder TEXT NOT NULL, epoch INTEGER NOT NULL, token_sha256 TEXT NOT NULL, created_at REAL NOT NULL)"
+        )
+        self.db.execute(
+            "CREATE TABLE IF NOT EXISTS live_process_identity (operation_id TEXT PRIMARY KEY, identity_sha256 TEXT NOT NULL, recorded_at REAL NOT NULL)"
+        )
+        self.db.execute(
+            "CREATE TABLE IF NOT EXISTS live_terminal_observation (operation_id TEXT PRIMARY KEY, observation_json TEXT NOT NULL, recorded_at REAL NOT NULL)"
+        )
         self.db.commit()
+
+    def _migrate_operation_schema(self) -> None:
+        """Extend legacy local state without rewriting its rows' meanings."""
+
+        existing = self.db.execute(
+            "SELECT sql FROM sqlite_master WHERE type='table' AND name='operation'"
+        ).fetchone()
+        if existing is None or "SPAWN_INTENT" in str(existing["sql"]):
+            return
+        self.db.execute("BEGIN IMMEDIATE")
+        try:
+            self.db.execute(
+                "CREATE TABLE operation_v2 (id TEXT PRIMARY KEY, record_json TEXT NOT NULL, record_sha256 TEXT NOT NULL, state TEXT NOT NULL CHECK(state IN ('PREPARED','LEASED','SPAWN_INTENT','RUNNING','BLOCKED')), observation_json TEXT)"
+            )
+            self.db.execute(
+                "INSERT INTO operation_v2 SELECT id, record_json, record_sha256, state, observation_json FROM operation"
+            )
+            self.db.execute("DROP TABLE operation")
+            self.db.execute("ALTER TABLE operation_v2 RENAME TO operation")
+            self.db.commit()
+        except Exception:
+            self.db.rollback()
+            raise
 
     def close(self) -> None:
         self.db.close()
@@ -101,6 +134,10 @@ class WorkerOperationController:
                 raise WorkerControllerError("unknown operation")
             if row["state"] == "BLOCKED":
                 raise WorkerControllerError("blocked operation cannot be leased")
+            if row["state"] not in {"PREPARED", "LEASED"}:
+                raise WorkerControllerError("operation has a non-retryable live intent")
+            if self._has_live_intent(operation_id):
+                raise WorkerControllerError("operation has a non-retryable live intent")
             old = self.db.execute(
                 "SELECT * FROM lease WHERE operation_id = ?", (operation_id,)
             ).fetchone()
@@ -184,12 +221,17 @@ class WorkerOperationController:
         self.db.execute("BEGIN IMMEDIATE")
         try:
             row = self.db.execute(
-                "SELECT state FROM operation WHERE id = ?", (operation_id,)
+                "SELECT state, record_sha256 FROM operation WHERE id = ?",
+                (operation_id,),
             ).fetchone()
             lease = self.db.execute(
                 "SELECT * FROM lease WHERE operation_id = ?", (operation_id,)
             ).fetchone()
-            if row is None or row["state"] != "LEASED":
+            if row is None:
+                raise WorkerControllerError("operation is not actively leased")
+            if self._has_live_intent(operation_id):
+                raise WorkerControllerError("live launch was already claimed")
+            if row["state"] != "LEASED":
                 raise WorkerControllerError("operation is not actively leased")
             if (
                 lease is None
@@ -234,12 +276,17 @@ class WorkerOperationController:
         self.db.execute("BEGIN IMMEDIATE")
         try:
             row = self.db.execute(
-                "SELECT state FROM operation WHERE id = ?", (operation_id,)
+                "SELECT state, record_sha256 FROM operation WHERE id = ?",
+                (operation_id,),
             ).fetchone()
             lease = self.db.execute(
                 "SELECT * FROM lease WHERE operation_id = ?", (operation_id,)
             ).fetchone()
-            if row is None or row["state"] != "LEASED":
+            if row is None:
+                raise WorkerControllerError("operation is not actively leased")
+            if self._has_live_intent(operation_id):
+                raise WorkerControllerError("live launch was already claimed")
+            if row["state"] != "LEASED":
                 raise WorkerControllerError("operation is not actively leased")
             if (
                 lease is None
@@ -248,17 +295,19 @@ class WorkerOperationController:
                 or float(lease["expires_at"]) <= now
             ):
                 raise WorkerControllerError("stale operation fencing token")
-            if (
-                self.db.execute(
-                    "SELECT 1 FROM live_launch_intent WHERE operation_id = ?",
-                    (operation_id,),
-                ).fetchone()
-                is not None
-            ):
-                raise WorkerControllerError("live launch was already claimed")
             self.db.execute(
-                "INSERT INTO live_launch_intent VALUES (?, ?, ?, ?, ?)",
-                (operation_id, holder, lease["epoch"], _sha256(fencing_token), now),
+                "INSERT INTO live_intent_v2 VALUES (?, ?, ?, ?, ?, ?)",
+                (
+                    operation_id,
+                    row["record_sha256"],
+                    holder,
+                    lease["epoch"],
+                    _sha256(fencing_token),
+                    now,
+                ),
+            )
+            self.db.execute(
+                "UPDATE operation SET state='SPAWN_INTENT' WHERE id=?", (operation_id,)
             )
             self.db.commit()
             return {
@@ -277,15 +326,19 @@ class WorkerOperationController:
         now = float(self._clock())
         self.db.execute("BEGIN IMMEDIATE")
         try:
-            intent = self.db.execute(
-                "SELECT 1 FROM live_launch_intent WHERE operation_id = ?",
-                (operation_id,),
-            ).fetchone()
+            intent = self._has_live_intent(operation_id)
             row = self.db.execute(
                 "SELECT state FROM operation WHERE id = ?", (operation_id,)
             ).fetchone()
-            if intent is None or row is None:
+            if not intent or row is None:
                 raise WorkerControllerError("no ambiguous live intent")
+            if self.db.execute(
+                "SELECT 1 FROM live_terminal_observation WHERE operation_id = ?",
+                (operation_id,),
+            ).fetchone():
+                raise WorkerControllerError(
+                    "live intent already has a terminal observation"
+                )
             if row["state"] != "BLOCKED":
                 observation = {
                     "state": "BLOCKED_AMBIGUOUS_LIVE_INTENT",
@@ -306,6 +359,139 @@ class WorkerOperationController:
         except Exception:
             self.db.rollback()
             raise
+
+    def record_live_running(
+        self,
+        operation_id: str,
+        *,
+        holder: str,
+        fencing_token: str,
+        process_identity: str,
+    ) -> dict[str, Any]:
+        """Persist one process identity; this method never starts a process."""
+
+        if not process_identity.strip() or len(process_identity) > 512:
+            raise WorkerControllerError("invalid process identity")
+        now = float(self._clock())
+        self.db.execute("BEGIN IMMEDIATE")
+        try:
+            row, lease = self._active_live_fence(operation_id, holder, fencing_token)
+            if row["state"] != "SPAWN_INTENT":
+                raise WorkerControllerError(
+                    "operation is not awaiting process identity"
+                )
+            if self.db.execute(
+                "SELECT 1 FROM live_process_identity WHERE operation_id = ?",
+                (operation_id,),
+            ).fetchone():
+                raise WorkerControllerError("live process identity is already recorded")
+            self.db.execute(
+                "INSERT INTO live_process_identity VALUES (?, ?, ?)",
+                (operation_id, _sha256(process_identity), now),
+            )
+            self.db.execute(
+                "UPDATE operation SET state='RUNNING' WHERE id=?", (operation_id,)
+            )
+            self.db.commit()
+            return {
+                "operation_id": operation_id,
+                "state": "RUNNING_OBSERVED_NO_DISPATCH",
+                "epoch": int(lease["epoch"]),
+                "process_identity_sha256": _sha256(process_identity),
+                "recorded_at": now,
+            }
+        except Exception:
+            self.db.rollback()
+            raise
+
+    def record_live_terminal_observation(
+        self,
+        operation_id: str,
+        *,
+        holder: str,
+        fencing_token: str,
+        process_identity: str,
+        observation: Mapping[str, object],
+    ) -> dict[str, Any]:
+        """Persist a terminal observation and block; no task result is admitted."""
+
+        now = float(self._clock())
+        self.db.execute("BEGIN IMMEDIATE")
+        try:
+            row, lease = self._active_live_fence(operation_id, holder, fencing_token)
+            identity = self.db.execute(
+                "SELECT identity_sha256 FROM live_process_identity WHERE operation_id = ?",
+                (operation_id,),
+            ).fetchone()
+            if row["state"] != "RUNNING" or identity is None:
+                raise WorkerControllerError(
+                    "operation is not running with a recorded identity"
+                )
+            if identity["identity_sha256"] != _sha256(process_identity):
+                raise WorkerControllerError(
+                    "process identity does not match live intent"
+                )
+            if self.db.execute(
+                "SELECT 1 FROM live_terminal_observation WHERE operation_id = ?",
+                (operation_id,),
+            ).fetchone():
+                raise WorkerControllerError("terminal observation is already recorded")
+            terminal = {
+                "state": "LIVE_TERMINAL_OBSERVED_NOT_ADMITTED",
+                "observation": dict(observation),
+                "observed_at": now,
+                "dispatch": "NOT_ADMITTED",
+            }
+            self.db.execute(
+                "INSERT INTO live_terminal_observation VALUES (?, ?, ?)",
+                (operation_id, _canonical(terminal), now),
+            )
+            self.db.execute(
+                "UPDATE operation SET state='BLOCKED', observation_json=? WHERE id=?",
+                (_canonical(terminal), operation_id),
+            )
+            self.db.execute(
+                "UPDATE lease SET expires_at=? WHERE operation_id=?",
+                (now, operation_id),
+            )
+            self.db.commit()
+            return {
+                "operation_id": operation_id,
+                "state": terminal["state"],
+                "dispatch": terminal["dispatch"],
+                "epoch": int(lease["epoch"]),
+                "observation_sha256": _sha256(terminal),
+            }
+        except Exception:
+            self.db.rollback()
+            raise
+
+    def _active_live_fence(
+        self, operation_id: str, holder: str, fencing_token: str
+    ) -> tuple[sqlite3.Row, sqlite3.Row]:
+        row = self.db.execute(
+            "SELECT * FROM operation WHERE id = ?", (operation_id,)
+        ).fetchone()
+        lease = self.db.execute(
+            "SELECT * FROM lease WHERE operation_id = ?", (operation_id,)
+        ).fetchone()
+        if row is None or lease is None or not self._has_live_intent(operation_id):
+            raise WorkerControllerError("operation has no durable live intent")
+        if (
+            lease["holder"] != holder
+            or lease["token"] != fencing_token
+            or float(lease["expires_at"]) <= float(self._clock())
+        ):
+            raise WorkerControllerError("stale operation fencing token")
+        return row, lease
+
+    def _has_live_intent(self, operation_id: str) -> bool:
+        return bool(
+            self.db.execute(
+                "SELECT 1 FROM live_launch_intent WHERE operation_id = ? UNION ALL SELECT 1 FROM live_intent_v2 WHERE operation_id = ?",
+                (operation_id, operation_id),
+            ).fetchone()
+        )
 
     def entry(self, operation_id: str) -> dict[str, Any]:
         row = self.db.execute(

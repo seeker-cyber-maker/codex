@@ -1,0 +1,13 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "state": "PENDING_COMMIT",
+  "base_revision": "4958341667f5bf10359e083dea0b541f8a5d044a",
+  "sealed_files": {
+    "house/worker_exec/controller.py": "44bf2b96211344731126d1ee33b4cff64020c5b5a74b298940e047fadd9ac8fb",
+    "house/worker_exec/tests/test_controller.py": "0f9c3c16b3d5dab9abf8c1cba5bdfddf1108f6996c0c4b2c9a72e6000ab27ee0",
+    "PLAN.md": "c4c70bec520e107edd527f76c2a2ec7b11fc69496eed21e6fbe8401bbf4520c9",
+    "council/evidence-packet.md": "cf1daf7ca5e0227a8e4dad1639d0838ad79d06168cbf23ff51402a90ee2b39f6",
+    "council/synthesis.md": "a681c6a036e91bdbd775a2e94061a3d71c2ca81c20ef19384329941e1641d705"
+  },
+  "disposition": "Accepted controller-only state transitions and tests. A live process runner remains absent and requires a new full-profile review."
+}

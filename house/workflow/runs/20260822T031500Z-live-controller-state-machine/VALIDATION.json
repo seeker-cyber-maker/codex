@@ -1,0 +1,28 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "controller-only durable live-intent state machine; no process execution",
+  "checks": [
+    {
+      "name": "outside council plan review",
+      "evidence": "council/synthesis.md",
+      "result": "three local same-model reviewers independently confirmed packet SHA-256 and narrowly accepted controller persistence only; real dispatch remains blocked"
+    },
+    {
+      "name": "focused worker-exec matrix",
+      "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
+      "result": "20 tests passed, including legacy-schema migration, non-reacquirable intent after lease expiry, immutable process identity, and non-admitted terminal observation"
+    },
+    {
+      "name": "full House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "163 tests passed; temporary loopback socket permission was required for existing terminal-companion tests"
+    },
+    {
+      "name": "static checks",
+      "command": "ruff check house/worker_exec && ruff format --check house/worker_exec && python3 -m compileall -q house/worker_exec && git diff --check",
+      "result": "pass"
+    }
+  ],
+  "claim_ceiling": "The controller persists and reconciles state only. It does not create a subprocess, construct or accept a command, invoke Codex, contact a provider, reserve outputs, import a task result, retry work, or expose an execution switch."
+}

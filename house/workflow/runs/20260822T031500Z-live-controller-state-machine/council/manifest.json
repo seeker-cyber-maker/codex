@@ -1,0 +1,20 @@
+{
+  "council_id": "20260822-031500-live-controller-state-machine",
+  "question": "Is the proposed controller-only state machine a sufficiently narrow and testable prerequisite to implement next, without authorizing or accidentally enabling real Codex/provider execution?",
+  "mode": "independent-review",
+  "packet_sha256": "cf1daf7ca5e0227a8e4dad1639d0838ad79d06168cbf23ff51402a90ee2b39f6",
+  "privacy": "local-only",
+  "cost_ceiling": "no external provider or paid lane",
+  "chair": {
+    "model": "GPT-5.6-Sol",
+    "provider": "Codex",
+    "harness": "Codex desktop"
+  },
+  "reviewers": [
+    {"id": "evidence-auditor", "provider": "Codex", "model_family": "same-model local", "memory": "unknown", "status": "completed", "packet_hash_confirmed_in_response": true},
+    {"id": "constructive-theorist", "provider": "Codex", "model_family": "same-model local", "memory": "unknown", "status": "completed", "packet_hash_confirmed_in_response": true},
+    {"id": "adversarial-methodologist", "provider": "Codex", "model_family": "same-model local", "memory": "unknown", "status": "completed", "packet_hash_confirmed_in_response": true}
+  ],
+  "live_dispatch": "BLOCKED",
+  "implementation_authority": "CONTROLLER_ONLY_NARROW_ACCEPT"
+}
