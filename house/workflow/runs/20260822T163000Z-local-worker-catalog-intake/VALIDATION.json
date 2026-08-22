@@ -1,0 +1,23 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "offline local-worker catalog intake",
+  "checks": [
+    {
+      "name": "focused intake tests",
+      "command": "python3 -m unittest house.worker_catalog.tests.test_catalog -v",
+      "result": "3 passed"
+    },
+    {
+      "name": "full House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "168 passed"
+    },
+    {
+      "name": "static checks",
+      "command": "python3 -m compileall -q house/worker_catalog && ruff check house/worker_catalog && ruff format --check house/worker_catalog && git diff --check",
+      "result": "pass"
+    }
+  ],
+  "claim_ceiling": "Catalog intake validates data only. It does not select, start, probe, authorize, or admit a local worker."
+}
