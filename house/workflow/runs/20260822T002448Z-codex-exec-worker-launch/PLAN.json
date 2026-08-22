@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-workflow-plan/1",
+  "run_id": "20260822T002448Z-codex-exec-worker-launch",
+  "profile": "full",
+  "case_type": "provider_bridge_debug",
+  "objective": "Prepare and explicitly launch one read-only Codex CLI worker operation from a canonical task card.",
+  "authority": "explicit terminal --execute only",
+  "dispatch": "USER_GATED",
+  "acceptance_gate": "deterministic operation tests, fake-runner tests, static checks, source seal"
+}

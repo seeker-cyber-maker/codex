@@ -1,0 +1,16 @@
+{
+  "council_id": "20260822-002448-codex-exec-worker-launch",
+  "question": "Should Dream House implement a guarded terminal/dashboard adapter that can launch one admitted task through installed codex exec only after explicit human --execute?",
+  "mode": "independent-review",
+  "packet_sha256": "e17059f15dfb751caccc6b89dc9078acc785370fbb782c82f30c11623e369d32",
+  "privacy": "local-only council; future runtime provider contact unknown",
+  "cost_ceiling": "no provider calls",
+  "independence": "multi-agent, same-model family; shared packet and harness",
+  "reviewers": [
+    {"id": "evidence-auditor", "status": "completed", "packet_hash_confirmed": true},
+    {"id": "constructive-theorist", "status": "completed", "packet_hash_confirmed": true},
+    {"id": "adversarial-methodologist", "status": "completed", "packet_hash_confirmed": true}
+  ],
+  "disposition": "NARROW_ACCEPT_OFFLINE_CONTROLLER_ONLY",
+  "live_dispatch": "BLOCKED_PENDING_GUARD_MATRIX"
+}
