@@ -6,12 +6,12 @@
     {
       "name": "focused worker-exec guard matrix",
       "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
-      "result": "4 tests passed: generic model omission, explicit model-only path, record/executable/output drift rejection, and explicit fake-runner gating"
+      "result": "5 tests passed: generic model omission, explicit model-only path, record/executable/output drift rejection, explicit fake-runner gating, and persistent controller lease/block reconciliation"
     },
     {
       "name": "full House regression",
       "command": "python3 -m unittest discover -s house -p 'test_*.py'",
-      "result": "147 tests passed"
+      "result": "148 tests passed"
     },
     {
       "name": "static checks",

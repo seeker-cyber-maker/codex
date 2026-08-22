@@ -5,7 +5,9 @@ execution controller. The full-profile council narrowed the work to an offline
 operation-controller test slice and explicitly blocked live launch. The accepted
 `worker_exec` preparer now seals task/executable/prompt/argv identity, fixed
 read-only containment, output reservation, model-selection truthfulness, and
-explicit fake-runner consent tests. This avoids misrepresenting a prepared
+explicit fake-runner consent tests. Its persistent controller adds exact
+record-idempotency, expiring controller fencing, and a durable blocked-runtime
+reconciliation state. This avoids misrepresenting a prepared
 command, an advisory model route, or a subprocess exit as an assigned/accepted
 agent result.
 

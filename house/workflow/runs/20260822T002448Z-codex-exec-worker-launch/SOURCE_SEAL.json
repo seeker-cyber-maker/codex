@@ -5,7 +5,9 @@
   "sealed_files": {
     "house/worker_exec/__init__.py": "db987ba5512c9ffbf2a59be03fb02764a0569bb512555255fa19790a50c80569",
     "house/worker_exec/operation.py": "394ea21eee7ebd59aa22eb7e3a1cd6d320d5126ed55e9273239cd382b022c33f",
-    "house/worker_exec/tests/test_operation.py": "793b3ca3b7fef29f2773c7cf962a6e2bb9116c38f35166ef93a0146794bb5cc1"
+    "house/worker_exec/tests/test_operation.py": "793b3ca3b7fef29f2773c7cf962a6e2bb9116c38f35166ef93a0146794bb5cc1",
+    "house/worker_exec/controller.py": "926ddae0571c9fd4daf7735995ccc91cdce050966d888919fbdc8a832fc0f2eb",
+    "house/worker_exec/tests/test_controller.py": "88f69f73e8c1df4eb74d81d3ef2f712fba7e1dfaddfd0bb287792cc531d7d3c1"
   },
   "disposition": "Accepted offline primitive only; live execution remains blocked by council decision."
 }
