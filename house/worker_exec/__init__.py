@@ -2,6 +2,7 @@
 
 from .cli_contract import CliContractError, validate_cli_contract
 from .controller import WorkerControllerError, WorkerOperationController
+from .fixture_gate import FixtureGateError, launch_fixture
 from .operation import (
     WorkerExecError,
     execute_for_test,
@@ -12,11 +13,13 @@ from .process_supervisor import ProcessSupervisorError, supervise_fixture_proces
 
 __all__ = [
     "CliContractError",
+    "FixtureGateError",
     "ProcessSupervisorError",
     "WorkerControllerError",
     "WorkerExecError",
     "WorkerOperationController",
     "execute_for_test",
+    "launch_fixture",
     "prepare_operation",
     "supervise_fixture_process",
     "validate_cli_contract",

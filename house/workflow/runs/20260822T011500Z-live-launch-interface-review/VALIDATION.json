@@ -1,0 +1,31 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "offline injected-fixture launch gate",
+  "checks": [
+    {
+      "name": "fresh independent council",
+      "result": "three local-only same-family reviewers verified the packet hash and narrowly accepted injected-fixture implementation only; live dispatch remains blocked"
+    },
+    {
+      "name": "focused guard matrix",
+      "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
+      "result": "14 tests passed"
+    },
+    {
+      "name": "full House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "157 tests passed; temporary loopback socket permission was required for existing terminal-companion tests"
+    },
+    {
+      "name": "static checks",
+      "command": "ruff check house/worker_exec && ruff format --check house/worker_exec && python3 -m compileall -q house/worker_exec && git diff --check",
+      "result": "pass"
+    },
+    {
+      "name": "raw no-prompt CLI capture",
+      "result": "version/help capture files retained with SHA-256s in the evidence packet; the sandbox blocked attempted PATH-alias creation, while no task prompt or provider call occurred"
+    }
+  ],
+  "claim_ceiling": "The launch gate can call only an explicit injected fixture runner and returns a blocked observation. A real Codex runner, provider call, task-result import, retry, and automatic dispatch are absent."
+}

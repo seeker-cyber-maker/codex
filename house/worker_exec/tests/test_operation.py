@@ -57,6 +57,7 @@ class WorkerOperationTests(unittest.TestCase):
             record["live_dispatch"], "BLOCKED_PENDING_RUNTIME_QUALIFICATION"
         )
         self.assertNotIn("--model", record["argv"])
+        self.assertEqual(record["argv"][0], str(self.codex))
         self.assertIn("--sandbox", record["argv"])
         self.assertIn("read-only", record["argv"])
         self.assertEqual(verify_operation(record)["state"], "VERIFIED_NO_DISPATCH")

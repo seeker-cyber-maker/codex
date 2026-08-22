@@ -105,6 +105,14 @@ These are offline safety primitives only. No module starts `codex`, contacts a
 provider, imports worker output, or admits a task result. See
 `workflow/runs/20260822T002448Z-codex-exec-worker-launch/`.
 
+The subsequent injected-fixture launch gate fixes argv[0] to the sealed
+absolute executable rather than PATH-resolved `codex`, requires explicit
+consent plus a current controller fence, rechecks the sealed record and CLI
+contract, and reserves the per-operation output directory before it can call a
+fixture runner. It records a blocked observation afterward. A real Codex
+runner is absent by construction. See
+`workflow/runs/20260822T011500Z-live-launch-interface-review/`.
+
 The integration-health gate is a dependency-free, read-only evaluator for
 future iTerm, provider, cache-path, and hook bindings. A strict trusted
 contract declares root-confined artifacts, optional digests, executable

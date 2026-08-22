@@ -1,0 +1,15 @@
+{
+  "council_id": "20260822-011500-live-launch-interface",
+  "mode": "independent-review",
+  "packet_sha256": "21441884930b0a692ddd544c91f6f808066e307fbfddf50a5fb9ce739061b106",
+  "privacy": "local-only",
+  "cost_ceiling": "no provider or model calls",
+  "independence": "multi-agent, same-model-family; shared local harness",
+  "reviewers": [
+    {"id": "evidence-auditor", "status": "completed", "packet_hash_confirmed": true},
+    {"id": "constructive-theorist", "status": "completed", "packet_hash_confirmed": true},
+    {"id": "adversarial-methodologist", "status": "completed", "packet_hash_confirmed": true}
+  ],
+  "disposition": "NARROW_ACCEPT_INJECTED_FIXTURE_INTERFACE_ONLY",
+  "live_dispatch": "BLOCKED"
+}

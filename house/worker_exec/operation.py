@@ -93,10 +93,13 @@ def _prompt(snapshot: Mapping[str, str | None]) -> str:
 
 
 def _argv(
-    snapshot: Mapping[str, str | None], workspace: Path, output_path: Path
+    snapshot: Mapping[str, str | None],
+    executable: Path,
+    workspace: Path,
+    output_path: Path,
 ) -> list[str]:
     argv = [
-        "codex",
+        str(executable),
         "exec",
         "-C",
         str(workspace),
@@ -144,7 +147,7 @@ def prepare_operation(
     if not executable.stat().st_mode & 0o111:
         raise WorkerExecError("codex_path is not executable")
     prompt = _prompt(snapshot)
-    argv = _argv(snapshot, resolved_workspace, output_path)
+    argv = _argv(snapshot, executable, resolved_workspace, output_path)
     intent = f"Run read-only Codex observation for {snapshot['task_id']}"
     input_hashes = {
         "task_card_sha256": _sha256(snapshot),
@@ -172,6 +175,7 @@ def prepare_operation(
         "authority_scope": {
             "read": [str(resolved_workspace)],
             "write": [str(output_dir)],
+            "write_root": str(resolved_output_root),
             "network": ["configured-codex-provider:UNKNOWN_UNVERIFIED"],
             "external_effect_class": "POTENTIAL_PROVIDER_EXECUTION",
         },
@@ -222,15 +226,27 @@ def verify_operation(record: Mapping[str, object]) -> dict[str, Any]:
         str(record["authority_scope"]["read"][0]), "workspace"
     )  # type: ignore[index]
     output_path = Path(str(record["expected_artifacts"][0]))  # type: ignore[index]
+    output_root = _resolve_directory(
+        str(record["authority_scope"]["write_root"]), "output_root"
+    )  # type: ignore[index]
     if output_path.parent != Path(record["authority_scope"]["write"][0]):  # type: ignore[index]
         raise WorkerExecError("output path does not match reserved operation directory")
-    expected_argv = _argv(snapshot, workspace, output_path)
+    if output_path.parent.parent != output_root or output_path.parent.exists():
+        raise WorkerExecError("output reservation is no longer available")
+    executable = Path(str(record["target_identity"]))
+    if (
+        not executable.is_absolute()
+        or not executable.is_file()
+        or executable.is_symlink()
+        or not executable.stat().st_mode & 0o111
+    ):
+        raise WorkerExecError("codex executable is no longer a regular executable")
+    expected_argv = _argv(snapshot, executable, workspace, output_path)
     if (
         record.get("argv") != expected_argv
         or _sha256(expected_argv) != record["input_hashes"]["argv_sha256"]
     ):  # type: ignore[index]
         raise WorkerExecError("operation argv mismatch")
-    executable = Path(str(record["target_identity"]))
     if _file_sha256(executable) != record["input_hashes"]["codex_sha256"]:  # type: ignore[index]
         raise WorkerExecError("codex executable changed after preparation")
     return {

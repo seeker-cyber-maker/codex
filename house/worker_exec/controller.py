@@ -41,6 +41,9 @@ class WorkerOperationController:
         self.db.execute(
             "CREATE TABLE IF NOT EXISTS lease (operation_id TEXT PRIMARY KEY, holder TEXT NOT NULL, epoch INTEGER NOT NULL, token TEXT NOT NULL, expires_at REAL NOT NULL)"
         )
+        self.db.execute(
+            "CREATE TABLE IF NOT EXISTS launch_intent (operation_id TEXT PRIMARY KEY, holder TEXT NOT NULL, epoch INTEGER NOT NULL, token_sha256 TEXT NOT NULL, created_at REAL NOT NULL)"
+        )
         self.db.commit()
 
     def close(self) -> None:
@@ -165,11 +168,68 @@ class WorkerOperationController:
             self.db.rollback()
             raise
 
+    def claim_fixture_launch(
+        self, operation_id: str, *, holder: str, fencing_token: str
+    ) -> dict[str, Any]:
+        """Atomically bind one injected-fixture attempt to the active fence.
+
+        It does not spawn a process.  A separately reviewed real runner, if
+        ever proposed, needs its own durable spawn-intent/RUNNING lifecycle.
+        """
+
+        now = float(self._clock())
+        self.db.execute("BEGIN IMMEDIATE")
+        try:
+            row = self.db.execute(
+                "SELECT state FROM operation WHERE id = ?", (operation_id,)
+            ).fetchone()
+            lease = self.db.execute(
+                "SELECT * FROM lease WHERE operation_id = ?", (operation_id,)
+            ).fetchone()
+            if row is None or row["state"] != "LEASED":
+                raise WorkerControllerError("operation is not actively leased")
+            if (
+                lease is None
+                or lease["holder"] != holder
+                or lease["token"] != fencing_token
+                or float(lease["expires_at"]) <= now
+            ):
+                raise WorkerControllerError("stale operation fencing token")
+            existing = self.db.execute(
+                "SELECT operation_id FROM launch_intent WHERE operation_id = ?",
+                (operation_id,),
+            ).fetchone()
+            if existing is not None:
+                raise WorkerControllerError("fixture launch was already claimed")
+            self.db.execute(
+                "INSERT INTO launch_intent VALUES (?, ?, ?, ?, ?)",
+                (operation_id, holder, lease["epoch"], _sha256(fencing_token), now),
+            )
+            self.db.commit()
+            return {
+                "operation_id": operation_id,
+                "state": "FIXTURE_LAUNCH_CLAIMED_NO_DISPATCH",
+                "holder": holder,
+                "epoch": int(lease["epoch"]),
+                "claimed_at": now,
+            }
+        except Exception:
+            self.db.rollback()
+            raise
+
     def entries(self) -> list[dict[str, Any]]:
         return [
             self._entry(row)
             for row in self.db.execute("SELECT * FROM operation ORDER BY id")
         ]
+
+    def entry(self, operation_id: str) -> dict[str, Any]:
+        row = self.db.execute(
+            "SELECT * FROM operation WHERE id = ?", (operation_id,)
+        ).fetchone()
+        if row is None:
+            raise WorkerControllerError("unknown operation")
+        return self._entry(row)
 
     @staticmethod
     def _entry(row: sqlite3.Row) -> dict[str, Any]:
