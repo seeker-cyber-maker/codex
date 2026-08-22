@@ -11,6 +11,11 @@ returns static recipient/capability metadata, and preserves
 `NOT_ATTEMPTED`/`NO_AUTHORITY_GRANTED` at every result. It does not make a
 worker available, connect a transport, or grant authority.
 
-The next smallest authorized step is a separate interface review for a relay
-CLI/API. It must keep static directory lookup distinct from envelope submission
-and retain the existing no-dispatch boundary.
+The keyboard-first relay interface is now `python3 -m house.relay.cli`. It
+keeps static directory lookup distinct from relay database operations and
+requires explicit artifact/database paths for every operation. It has no
+socket, worker, provider, or automatic-routing path.
+
+The next smallest authorized step is a separately reviewed loopback API design
+or dashboard adapter. It must call this exact CLI/core contract rather than
+constructing a competing relay state path.

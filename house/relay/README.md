@@ -14,6 +14,12 @@ recipient/capability metadata. It preserves a catalog's `NOT_ATTEMPTED` runtime
 disposition; even an `active` catalog label remains descriptive and cannot
 select, probe, contact, or dispatch a worker.
 
+The keyboard-first interface is available through `python3 -m house.relay.cli`.
+`directory-address` and `directory-capability` require an explicit sealed
+receipt path; `submit`, `receive`, `acknowledge`, `status`, and
+`verify-journal` require an explicit local relay database. It opens no socket
+and reads no provider configuration.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
