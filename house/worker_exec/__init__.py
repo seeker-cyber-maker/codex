@@ -3,6 +3,13 @@
 from .cli_contract import CliContractError, validate_cli_contract
 from .controller import WorkerControllerError, WorkerOperationController
 from .fixture_gate import FixtureGateError, launch_fixture
+from .mock_admission import (
+    MockAdmissionError,
+    prepare_mock_execution_authority,
+    prepare_mock_runtime_profile,
+    verify_mock_admission,
+    verify_mock_runtime_profile,
+)
 from .operation import (
     WorkerExecError,
     execute_for_test,
@@ -18,15 +25,20 @@ from .process_supervisor import (
 __all__ = [
     "CliContractError",
     "FixtureGateError",
+    "MockAdmissionError",
     "ProcessSupervisorError",
     "WorkerControllerError",
     "WorkerExecError",
     "WorkerOperationController",
     "execute_for_test",
     "launch_fixture",
+    "prepare_mock_execution_authority",
+    "prepare_mock_runtime_profile",
     "prepare_operation",
     "supervise_fixture_process",
     "supervise_process",
     "validate_cli_contract",
+    "verify_mock_admission",
+    "verify_mock_runtime_profile",
     "verify_operation",
 ]

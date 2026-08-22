@@ -1,0 +1,12 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "mock-only runtime-profile and authority validation; no real runner",
+  "checks": [
+    {"name": "outside council", "evidence": "council/synthesis.md", "result": "three local same-model reviewers narrowly accepted only non-executable MOCK_ONLY records; configured Codex/provider execution remains blocked"},
+    {"name": "focused worker-exec matrix", "command": "python3 -m unittest discover -s house/worker_exec/tests -v", "result": "23 tests passed"},
+    {"name": "full House regression", "command": "python3 -m unittest discover -s house -p 'test_*.py'", "result": "166 tests passed; existing terminal-companion tests require temporary loopback socket permission"},
+    {"name": "static checks", "command": "ruff check house/worker_exec && ruff format --check house/worker_exec && python3 -m compileall -q house/worker_exec && git diff --check", "result": "pass"}
+  ],
+  "claim_ceiling": "MOCK_ONLY records validate no-runtime fixture bindings. They cannot create or select a process, executable, model, provider, egress, environment, callback, or real execution authority."
+}

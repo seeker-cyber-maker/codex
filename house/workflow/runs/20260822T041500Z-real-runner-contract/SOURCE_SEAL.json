@@ -1,0 +1,14 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "state": "PENDING_COMMIT",
+  "base_revision": "adc87cc56d5ee7b405858f54e69a8377e0b20443",
+  "sealed_files": {
+    "house/worker_exec/mock_admission.py": "c320fab3bbf6448627a466fa336e3840ac30ef795ba3fcb329d98786248d6ae1",
+    "house/worker_exec/tests/test_mock_admission.py": "16888c53b933e70ee5331d89610108e1205d2d68bd580b8c821933b6064fd317",
+    "house/worker_exec/__init__.py": "1f539e84ffc68ee1ce42be5fa73ffb74530be91f403a143e6d2166181bde9685",
+    "PLAN.md": "e611eab4e7cff2ba73d4fbc3cceb6b47bce0b165f20fd59deb0e4951641ad674",
+    "council/evidence-packet.md": "77b8787f5ad63f22dcba30f6b862fb06f9c3e0467261b7db35e1b2e8519b826b",
+    "council/synthesis.md": "806fd5b28fa0e1fc52464a0ce36dbf8a5062b6a2e15c82c2c41b8bcafb009039"
+  },
+  "disposition": "Mock-only contract accepted. Configured runtime and provider execution remain absent."
+}

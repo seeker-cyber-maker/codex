@@ -1,0 +1,14 @@
+{
+  "council_id": "20260822-041500-real-runner-contract",
+  "question": "Does this disabled-by-default real-runner contract contain a safe enough set of prerequisites to implement a mock-only runner next, while keeping configured Codex/provider invocation blocked pending a later qualification review?",
+  "mode": "independent-review",
+  "packet_sha256": "77b8787f5ad63f22dcba30f6b862fb06f9c3e0467261b7db35e1b2e8519b826b",
+  "privacy": "local-only",
+  "cost_ceiling": "no external provider or paid lane",
+  "live_dispatch": "BLOCKED",
+  "reviewers": [
+    {"id": "evidence-auditor", "status": "completed", "model_family": "same-model local", "packet_hash_confirmed_in_response": true},
+    {"id": "constructive-theorist", "status": "completed", "model_family": "same-model local", "packet_hash_confirmed_in_response": true},
+    {"id": "adversarial-methodologist", "status": "completed", "model_family": "same-model local", "packet_hash_confirmed_in_response": true}
+  ]
+}
