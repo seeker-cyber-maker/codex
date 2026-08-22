@@ -67,3 +67,20 @@ class WorkerControllerTests(unittest.TestCase):
         self.assertEqual(self.controller.entries()[0]["state"], "BLOCKED")
         with self.assertRaisesRegex(WorkerControllerError, "blocked operation"):
             self.controller.acquire("operation-1", "controller-b")
+
+    def test_live_intent_is_durable_and_ambiguous_recovery_never_retries(self) -> None:
+        self.controller.prepare(self.record)
+        lease = self.controller.acquire("operation-1", "controller-a", ttl_seconds=10)
+        intent = self.controller.claim_live_launch(
+            "operation-1", holder="controller-a", fencing_token=lease["fencing_token"]
+        )
+        self.assertEqual(intent["state"], "LIVE_SPAWN_INTENT_RECORDED_NO_SPAWN")
+        with self.assertRaisesRegex(WorkerControllerError, "already claimed"):
+            self.controller.claim_live_launch(
+                "operation-1",
+                holder="controller-a",
+                fencing_token=lease["fencing_token"],
+            )
+        receipt = self.controller.reconcile_ambiguous_live_intent("operation-1")
+        self.assertEqual(receipt["dispatch"], "UNKNOWN_NOT_RERUN")
+        self.assertEqual(self.controller.entries()[0]["state"], "BLOCKED")

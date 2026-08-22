@@ -44,6 +44,9 @@ class WorkerOperationController:
         self.db.execute(
             "CREATE TABLE IF NOT EXISTS launch_intent (operation_id TEXT PRIMARY KEY, holder TEXT NOT NULL, epoch INTEGER NOT NULL, token_sha256 TEXT NOT NULL, created_at REAL NOT NULL)"
         )
+        self.db.execute(
+            "CREATE TABLE IF NOT EXISTS live_launch_intent (operation_id TEXT PRIMARY KEY, holder TEXT NOT NULL, epoch INTEGER NOT NULL, token_sha256 TEXT NOT NULL, created_at REAL NOT NULL)"
+        )
         self.db.commit()
 
     def close(self) -> None:
@@ -222,6 +225,87 @@ class WorkerOperationController:
             self._entry(row)
             for row in self.db.execute("SELECT * FROM operation ORDER BY id")
         ]
+
+    def claim_live_launch(
+        self, operation_id: str, *, holder: str, fencing_token: str
+    ) -> dict[str, Any]:
+        """Durably record one future live spawn intent; this never spawns."""
+        now = float(self._clock())
+        self.db.execute("BEGIN IMMEDIATE")
+        try:
+            row = self.db.execute(
+                "SELECT state FROM operation WHERE id = ?", (operation_id,)
+            ).fetchone()
+            lease = self.db.execute(
+                "SELECT * FROM lease WHERE operation_id = ?", (operation_id,)
+            ).fetchone()
+            if row is None or row["state"] != "LEASED":
+                raise WorkerControllerError("operation is not actively leased")
+            if (
+                lease is None
+                or lease["holder"] != holder
+                or lease["token"] != fencing_token
+                or float(lease["expires_at"]) <= now
+            ):
+                raise WorkerControllerError("stale operation fencing token")
+            if (
+                self.db.execute(
+                    "SELECT 1 FROM live_launch_intent WHERE operation_id = ?",
+                    (operation_id,),
+                ).fetchone()
+                is not None
+            ):
+                raise WorkerControllerError("live launch was already claimed")
+            self.db.execute(
+                "INSERT INTO live_launch_intent VALUES (?, ?, ?, ?, ?)",
+                (operation_id, holder, lease["epoch"], _sha256(fencing_token), now),
+            )
+            self.db.commit()
+            return {
+                "operation_id": operation_id,
+                "state": "LIVE_SPAWN_INTENT_RECORDED_NO_SPAWN",
+                "holder": holder,
+                "epoch": int(lease["epoch"]),
+                "claimed_at": now,
+            }
+        except Exception:
+            self.db.rollback()
+            raise
+
+    def reconcile_ambiguous_live_intent(self, operation_id: str) -> dict[str, Any]:
+        """Permanently block an intent lacking a terminal observation."""
+        now = float(self._clock())
+        self.db.execute("BEGIN IMMEDIATE")
+        try:
+            intent = self.db.execute(
+                "SELECT 1 FROM live_launch_intent WHERE operation_id = ?",
+                (operation_id,),
+            ).fetchone()
+            row = self.db.execute(
+                "SELECT state FROM operation WHERE id = ?", (operation_id,)
+            ).fetchone()
+            if intent is None or row is None:
+                raise WorkerControllerError("no ambiguous live intent")
+            if row["state"] != "BLOCKED":
+                observation = {
+                    "state": "BLOCKED_AMBIGUOUS_LIVE_INTENT",
+                    "reason": "durable live spawn intent has no terminal observation",
+                    "observed_at": now,
+                    "dispatch": "UNKNOWN_NOT_RERUN",
+                }
+                self.db.execute(
+                    "UPDATE operation SET state='BLOCKED', observation_json=? WHERE id=?",
+                    (_canonical(observation), operation_id),
+                )
+            self.db.commit()
+            return {
+                "operation_id": operation_id,
+                "state": "BLOCKED_AMBIGUOUS_LIVE_INTENT",
+                "dispatch": "UNKNOWN_NOT_RERUN",
+            }
+        except Exception:
+            self.db.rollback()
+            raise
 
     def entry(self, operation_id: str) -> dict[str, Any]:
         row = self.db.execute(
