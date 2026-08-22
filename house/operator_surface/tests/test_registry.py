@@ -36,13 +36,17 @@ class CommandRegistryTests(unittest.TestCase):
             for item in registry.manifest(surface="iterm")["commands"]
         }
         self.assertEqual(agent, dashboard)
-        self.assertEqual(iterm, {"codex.house.companion.preview"})
+        self.assertEqual(
+            iterm,
+            {"codex.house.companion.preview", "codex.house.relay.preview"},
+        )
 
     def test_search_uses_inventory_without_mutating_it(self) -> None:
         registry = builtin_registry()
         matches = registry.search("terminal preview")
         self.assertEqual(
-            [item["command_id"] for item in matches], ["codex.house.companion.preview"]
+            [item["command_id"] for item in matches],
+            ["codex.house.companion.preview", "codex.house.relay.preview"],
         )
         self.assertEqual(registry.manifest(), builtin_registry().manifest())
 

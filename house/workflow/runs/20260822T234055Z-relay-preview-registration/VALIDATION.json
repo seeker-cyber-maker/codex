@@ -1,0 +1,26 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "offline relay preview registration contract",
+  "checks": [
+    {
+      "name": "relay and operator boundary tests",
+      "command": "python3 -m unittest house.relay.tests.test_operator_registration house.relay.tests.test_dashboard_view house.relay.tests.test_dashboard_viewer house.operator_surface.tests.test_registry house.operator_surface.tests.test_cli house.operator_surface.tests.test_task_enqueue",
+      "result": "44 passed",
+      "exit_code": 0
+    },
+    {
+      "name": "full House discovery suite",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "168 passed",
+      "exit_code": 0
+    },
+    {
+      "name": "static checks",
+      "command": "python3 -m compileall -q house/relay house/operator_surface && ruff check changed files && ruff format --check changed files && git diff --check",
+      "result": "pass",
+      "exit_code": 0
+    }
+  ],
+  "claim_ceiling": "An offline, display-only operator request bound to the SHA-256 of an inert renderer output. It issues no capability and performs no viewer start, browser/iTerm registration, authority grant, worker/provider operation, relay mutation, terminal input, or reverse-channel action."
+}

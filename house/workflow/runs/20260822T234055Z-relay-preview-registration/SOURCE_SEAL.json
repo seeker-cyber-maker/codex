@@ -1,0 +1,14 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "dc5488a5f63c1a3864689aa95210dd08c61aa142",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/operator_registration.py": "5c0ac3576b4f624ed2b866eab8f19a581b5b4c44af6ba8a32689c2ada0577e87",
+    "house/relay/tests/test_operator_registration.py": "518413508e274b48662499f5fa0fd4cfe88208a2954d3f269cb7bb0476743f27",
+    "house/relay/__init__.py": "bd54c5fe217f3d4c161c8b29e0e0b2a63ed62b1e8615a8ce0b7afb33b8380a23",
+    "house/operator_surface/registry.py": "2393607a001f84046e459203bae1340239ba4c12025cecdebdd6a95db85f334d",
+    "house/operator_surface/tests/test_registry.py": "ae21f7b9b95047b62346ba2aebf56903e56c7110787170dbc00fd86b90fb4791",
+    "house/operator_surface/tests/test_cli.py": "5e58b042adcb35a5285faa4f0ec18ef005770ac818fa461fdca9795398d05c41"
+  },
+  "disposition": "Core-profile local acceptance pending scoped commit; no live registration or authority claim."
+}

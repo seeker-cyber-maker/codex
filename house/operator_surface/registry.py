@@ -347,6 +347,17 @@ def builtin_registry() -> CommandRegistry:
                 source_ref="house/terminal_companion/webview.py",
             ),
             Command(
+                command_id="codex.house.relay.preview",
+                title="Preview relay dashboard",
+                description="Prepare an explicit display-only relay dashboard preview.",
+                category="terminal",
+                authority="DISPLAY_ONLY",
+                target_requirement=TargetRequirement.EXPLICIT,
+                target_kinds=("relay_dashboard_document",),
+                surfaces=("agent", "dashboard", "iterm"),
+                source_ref="house/relay/operator_registration.py",
+            ),
+            Command(
                 command_id="codex.house.routes.list",
                 title="List model routes",
                 description="Show automatic and manual-only routes without selecting one.",

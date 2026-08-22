@@ -36,6 +36,11 @@ constructs the existing capability-bound `OneShotLoopbackViewer` from a frozen
 response but does not call `start()`, launch a browser, register with iTerm, or
 open any worker, provider, write, terminal-input, or authority path.
 
+`build_relay_preview_registration()` adds the preceding offline operator
+contract: it hashes the inert document and prepares an exact display-only
+operator request. The descriptor contains neither the document nor a capability
+URL, and it does not construct/start a viewer or contact a browser or iTerm.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

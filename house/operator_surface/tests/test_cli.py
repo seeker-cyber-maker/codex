@@ -42,7 +42,7 @@ class OperatorCliTests(unittest.TestCase):
         self.assertEqual(exit_code, 0)
         self.assertEqual(
             [command["command_id"] for command in commands],
-            ["codex.house.companion.preview"],
+            ["codex.house.companion.preview", "codex.house.relay.preview"],
         )
 
     def test_keys_only_lists_assigned_bindings(self) -> None:
