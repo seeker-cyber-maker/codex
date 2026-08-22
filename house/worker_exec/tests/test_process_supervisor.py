@@ -27,6 +27,16 @@ class ProcessSupervisorTests(unittest.TestCase):
         self.assertEqual(receipt["dispatch"], "FIXTURE_ONLY")
         self.assertIsNotNone(receipt["returncode"])
 
+    def test_large_fixture_output_is_drained_hashed_and_preview_bounded(self) -> None:
+        receipt = supervise_fixture_process(
+            [sys.executable, "-c", "import sys; sys.stdout.write('x' * 200000)"],
+            wall_seconds=2,
+        )
+        self.assertEqual(receipt["stdout"]["byte_count"], 200000)
+        self.assertTrue(receipt["stdout"]["truncated"])
+        self.assertEqual(len(receipt["stdout"]["utf8_preview"]), 65_536)
+        self.assertEqual(len(receipt["stdout"]["sha256"]), 64)
+
     def test_invalid_argv_and_start_failure_fail_closed(self) -> None:
         with self.assertRaisesRegex(ProcessSupervisorError, "non-empty"):
             supervise_fixture_process([], wall_seconds=1)

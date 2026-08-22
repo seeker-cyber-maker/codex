@@ -9,7 +9,11 @@ from .operation import (
     prepare_operation,
     verify_operation,
 )
-from .process_supervisor import ProcessSupervisorError, supervise_fixture_process
+from .process_supervisor import (
+    ProcessSupervisorError,
+    supervise_fixture_process,
+    supervise_process,
+)
 
 __all__ = [
     "CliContractError",
@@ -22,6 +26,7 @@ __all__ = [
     "launch_fixture",
     "prepare_operation",
     "supervise_fixture_process",
+    "supervise_process",
     "validate_cli_contract",
     "verify_operation",
 ]

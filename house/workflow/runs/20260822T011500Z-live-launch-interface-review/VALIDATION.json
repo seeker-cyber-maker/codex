@@ -10,12 +10,12 @@
     {
       "name": "focused guard matrix",
       "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
-      "result": "15 tests passed, including the terminal preparation CLI"
+      "result": "17 tests passed, including bounded streamed stdout/stderr capture and the terminal preparation CLI"
     },
     {
       "name": "full House regression",
       "command": "python3 -m unittest discover -s house -p 'test_*.py'",
-      "result": "158 tests passed; temporary loopback socket permission was required for existing terminal-companion tests"
+      "result": "160 tests passed; temporary loopback socket permission was required for existing terminal-companion tests"
     },
     {
       "name": "static checks",
