@@ -93,6 +93,13 @@ a worker, acquire a controller lease, select a provider, or grant authority.
 The future dashboard must use this exact same adapter rather than add a second
 task-creation path. See `operator_surface/README.md` and
 `workflow/runs/20260821T234101Z-operator-task-enqueue/`.
+
+`worker_exec/` is the next guarded boundary: it can freeze one canonical task
+card, workspace, executable hash, output reservation, fixed read-only argv,
+and wall-time cap into an immutable operation record. Its only executable
+surface is an injected fake runner for deterministic tests. Live `codex exec`
+remains blocked until the separately sealed runtime-qualification guard matrix
+adds controller state, cancellation/reconciliation, and a pinned CLI contract.
 See `operator_surface/README.md`.
 
 The integration-health gate is a dependency-free, read-only evaluator for

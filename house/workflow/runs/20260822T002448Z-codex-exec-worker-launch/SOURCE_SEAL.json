@@ -1,0 +1,11 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "state": "PENDING_COMMIT",
+  "base_revision": "7776bfe103",
+  "sealed_files": {
+    "house/worker_exec/__init__.py": "db987ba5512c9ffbf2a59be03fb02764a0569bb512555255fa19790a50c80569",
+    "house/worker_exec/operation.py": "394ea21eee7ebd59aa22eb7e3a1cd6d320d5126ed55e9273239cd382b022c33f",
+    "house/worker_exec/tests/test_operation.py": "793b3ca3b7fef29f2773c7cf962a6e2bb9116c38f35166ef93a0146794bb5cc1"
+  },
+  "disposition": "Accepted offline primitive only; live execution remains blocked by council decision."
+}

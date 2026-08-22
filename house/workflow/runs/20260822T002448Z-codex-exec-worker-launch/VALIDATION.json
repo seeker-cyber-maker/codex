@@ -1,0 +1,28 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "offline guarded Codex-exec operation preparation and fake-runner control",
+  "checks": [
+    {
+      "name": "focused worker-exec guard matrix",
+      "command": "python3 -m unittest discover -s house/worker_exec/tests -v",
+      "result": "4 tests passed: generic model omission, explicit model-only path, record/executable/output drift rejection, and explicit fake-runner gating"
+    },
+    {
+      "name": "full House regression",
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "147 tests passed"
+    },
+    {
+      "name": "static checks",
+      "command": "ruff check house/worker_exec && ruff format --check house/worker_exec && python3 -m compileall -q house/worker_exec && git diff --check",
+      "result": "pass"
+    },
+    {
+      "name": "independent plan review",
+      "evidence": "council/synthesis.md",
+      "result": "three local-only same-family reviewers narrowly accepted the offline controller and blocked live dispatch"
+    }
+  ],
+  "claim_ceiling": "This module prepares and verifies records and can call an injected fake runner only. It does not start codex, contact a provider, consume quota, cancel a process, ingest a result, or dispatch an agent."
+}
