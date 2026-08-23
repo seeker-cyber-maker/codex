@@ -98,6 +98,16 @@ content-free inventory. It does not accept a default path or any scan/write,
 and it opens no relay database, listener, viewer, browser, iTerm, worker, or
 provider connection.
 
+Copy `examples/snapshot-inventory-paths.example.json`, replace every placeholder
+with a real absolute envelope directory, then run:
+
+```bash
+python3 -m house.relay.cli snapshot-inventory --input /path/to/paths.json
+```
+
+The example paths are deliberately nonexistent; the command reports missing or
+invalid named locations instead of creating, guessing, or scanning for them.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

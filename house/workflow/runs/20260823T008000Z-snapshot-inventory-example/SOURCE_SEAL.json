@@ -1,0 +1,9 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "2b56b386adc25dc265f59d31e93dc7aec64c9d52",
+  "scope": "snapshot inventory documentation example",
+  "files": {
+    "house/relay/README.md": "b397419679fb1e735a4ca4a522e564fae3b56f94ea1df0f52f664a2af8bf91cf",
+    "house/relay/examples/snapshot-inventory-paths.example.json": "ebbb7ca74e225d0b0391aaa42ebf0d1bbb2ac64392d49d1798fc30dbf14dc24f"
+  }
+}

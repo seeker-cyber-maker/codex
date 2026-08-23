@@ -1,0 +1,20 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "snapshot inventory documentation example",
+  "checks": [
+    {
+      "name": "JSON template, CLI help, focused tests, and diff check",
+      "command": "python3 -m json.tool house/relay/examples/snapshot-inventory-paths.example.json >/dev/null && python3 -m house.relay.cli snapshot-inventory --help >/dev/null && python3 -m unittest house.relay.tests.test_cli house.relay.tests.test_snapshot_inventory && git diff --check",
+      "result": "6 focused tests passed",
+      "exit_code": 0
+    },
+    {
+      "name": "all component House test suites",
+      "command": "for test_dir in $(find house -type d -name tests -print | sort); do python3 -m unittest discover -s \"$test_dir\" -p 'test_*.py'; done",
+      "result": "10 suites / 243 tests passed",
+      "exit_code": 0
+    }
+  ],
+  "claim_ceiling": "Static documentation only. It does not execute the inventory, select a default source, scan storage, write data, activate a dashboard, open a relay, or grant authority."
+}
