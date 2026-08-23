@@ -1,0 +1,99 @@
+{
+  "council_id": "council-dry-run",
+  "mode": "independent-review",
+  "profile": "context-grammar-synthetic-aacr",
+  "task_mode": "review",
+  "transport_packet_sha256": "2d8853c4c92b2718e8a3b74e748ae88eb46e8ebab3cc0eb1cdf6857fb8299a87",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/EVIDENCE_PACKET.md",
+      "sha256": "5a4b991ef378b6d45c42f76a2187d3750cf56a0be2a5de4400837fe71582b7f7"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/PLAN.md",
+      "sha256": "fbe9e4d2fa5163b1c5e3a1b45419cac1e6d6c6ccffd33215f2016c85a1a593a1"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/context_grammar.py",
+      "sha256": "622cc2cf398a43734d74165b5239a802f385de207666cbf61ab8b4ceeeaeca9d"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/mock_context_firewall.py",
+      "sha256": "fbc3e4676328a031b5a72e8c71369cdd9d4614fcb04c3413ef55750c83f23c66"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/mock_vault.py",
+      "sha256": "7022daed629041d558b6e4ac5ea81fc6bd1ea8dff53bf0e53b1cd4ea1765095f"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/tests/test_context_grammar.py",
+      "sha256": "71a8307761202093576ae2b04e8051fb12a64bef5e4a46a8ff10eccb4fa3d30a"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/tests/test_mock_vault.py",
+      "sha256": "6fe0dca0466f5f7c909a004e002cac4b8fc42cc78b873caeb1cd69666e254fe6"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "2d8853c4c92b2718e8a3b74e748ae88eb46e8ebab3cc0eb1cdf6857fb8299a87",
+      "started_at": "2026-08-23T15:40:44+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:40:44+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "constructive-theorist",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "2d8853c4c92b2718e8a3b74e748ae88eb46e8ebab3cc0eb1cdf6857fb8299a87",
+      "started_at": "2026-08-23T15:40:44+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:40:44+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-2.5-flash-lite",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-2.5-flash-lite"
+      ],
+      "packet_sha256": "2d8853c4c92b2718e8a3b74e748ae88eb46e8ebab3cc0eb1cdf6857fb8299a87",
+      "started_at": "2026-08-23T15:40:44+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:40:44+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-23T15:40:44+00:00",
+  "completed_at": "2026-08-23T15:40:44+00:00"
+}

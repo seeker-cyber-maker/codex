@@ -1,0 +1,23 @@
+{
+  "schema": "codex-house-workflow-plan/1",
+  "phase_id": "20260823T153017Z-context-grammar-synthetic-slice",
+  "baseline_commit": "abfcc11e4ed9fbec7bb7d8302bb951f47ac208ce",
+  "case_type": "semantic_implementation",
+  "recommended_model": "terra",
+  "recommended_effort": "high",
+  "authority": "project_coordinator_synthetic_only_private_backup",
+  "write_scope": [
+    "house/worker_exec/context_grammar.py",
+    "house/worker_exec/mock_context_firewall.py",
+    "house/worker_exec/mock_vault.py",
+    "house/worker_exec/tests/test_context_grammar.py",
+    "house/worker_exec/tests/test_mock_vault.py",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice"
+  ],
+  "implementation": "SYNTHETIC_ONLY",
+  "live_configuration": "NOT_READ",
+  "keychain": "NOT_ACCESSED",
+  "secret_resolution": "NOT_ATTEMPTED",
+  "next_gate": "separate authority and security review before any real firewall, resolver, Keychain, controller, or launcher integration",
+  "state": "completed"
+}

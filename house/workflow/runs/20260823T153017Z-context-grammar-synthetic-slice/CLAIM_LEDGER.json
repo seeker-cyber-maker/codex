@@ -1,0 +1,47 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "The compiler and verifier accept sealed in-memory records only and cannot emit an execution-qualified grammar.",
+      "status": "observed",
+      "evidence": ["house/worker_exec/context_grammar.py", "test_context_grammar.py#happy-path"],
+      "decision_impact": "high",
+      "next_test": "none in this synthetic slice"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "The mock firewall returns sterile terminal failures without contributor material for secret-like behavior strings or lists, unknown classes, and unadmitted public text.",
+      "status": "corroborated",
+      "evidence": ["house/worker_exec/mock_context_firewall.py", "test_context_grammar.py#test_01", "test_context_grammar.py#test_02", "test_context_grammar.py#test_02b"],
+      "supporters": ["constructive-theorist"],
+      "decision_impact": "high",
+      "next_test": "real parser only under a new secrecy-TCB authority gate"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "Mock vault records contain neither plaintext resolution nor authority and reject agent-controlled or unknown sinks.",
+      "status": "observed",
+      "evidence": ["house/worker_exec/mock_vault.py", "test_mock_vault.py#test_01"],
+      "decision_impact": "high",
+      "next_test": "disposable resolver integration after authority review"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "A pure verifier cannot authenticate a live observer, prove parser non-exfiltration, contain an active resolver, or revoke plaintext already delivered.",
+      "status": "corroborated",
+      "evidence": ["../20260823T151111Z-context-grammar-vault-design/ROOT_DESIGN_DELTA.md", "PLAN.md"],
+      "decision_impact": "high",
+      "next_test": "none; preserved as a limitation"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "The first council packet's all-secret-literal sterile-failure claim was incomplete for behavior-value lists; the final source adds a pre-projection list check and regression test.",
+      "status": "observed",
+      "evidence": ["council-attempt-2/reviewers/constructive-theorist.md", "house/worker_exec/mock_context_firewall.py", "test_context_grammar.py#test_02b"],
+      "supporters": ["constructive-theorist"],
+      "decision_impact": "high",
+      "next_test": "none; fixed and revalidated"
+    }
+  ]
+}

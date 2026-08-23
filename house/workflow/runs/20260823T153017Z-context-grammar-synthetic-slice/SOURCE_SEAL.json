@@ -1,0 +1,30 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "scope": "synthetic-only context grammar, mock firewall, mock vault, deterministic tests, and primary outside-council reconciliation",
+  "baseline_commit": "abfcc11e4ed9fbec7bb7d8302bb951f47ac208ce",
+  "paths": {
+    "house/worker_exec/__init__.py": "428093c4a39c301f7219a55657ec0591fab7deb38e1f76ad5676c08800d54196",
+    "house/worker_exec/context_grammar.py": "622cc2cf398a43734d74165b5239a802f385de207666cbf61ab8b4ceeeaeca9d",
+    "house/worker_exec/mock_context_firewall.py": "d9406c8d454d6439ce9f16656875caf2e07e261dcc16c6d2a7571b10f1762588",
+    "house/worker_exec/mock_vault.py": "7022daed629041d558b6e4ac5ea81fc6bd1ea8dff53bf0e53b1cd4ea1765095f",
+    "house/worker_exec/tests/test_context_grammar.py": "022760b97f9bcb2bd85f2e9bc567593edd91202e0e0670764e1624a6573ba74c",
+    "house/worker_exec/tests/test_mock_vault.py": "6fe0dca0466f5f7c909a004e002cac4b8fc42cc78b873caeb1cd69666e254fe6",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/AACR.md": "a640c8e419625fad59ef1b8cbb0922172469ff0d020ec401284a9b41fc666fe7",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/CLAIM_LEDGER.json": "ad45787f7ef04829b2dc103052ee95ac46fa9097a67d4be63c564303018d06a0",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/EVENTS.jsonl": "9a65f8691efe9735ad86e03e97c89202d04eec747db9117d3cfcceb7c8d3b49c",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/EVIDENCE_PACKET.md": "5a4b991ef378b6d45c42f76a2187d3750cf56a0be2a5de4400837fe71582b7f7",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/HANDOFF.md": "4856222930e17e8e1de9df2aed4474f0b3e3bbff6b00a5ab86b6f4a470843f18",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/PLAN.json": "a0f87f96a7d8024e97618be30e568f03d6844a65c8abe278f191a2dfb80c9304",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/PLAN.md": "fbe9e4d2fa5163b1c5e3a1b45419cac1e6d6c6ccffd33215f2016c85a1a593a1",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/REVIEWER_CONFIG.json": "16578c1e07ba4f4d030b689b88b703d285fd1d416a4489561451ce7dd77586ca",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/SYNTHESIS.md": "7b89c185e48b554031e96568d5d4e35c98cdeec624aaeb5898e188e3f382c651",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/VALIDATION.json": "299da361e505b02ecfe4f371e130e2d7542e26ab5238603b692a280a8215d9a5",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/council-attempt-2/manifest.json": "bfa3c9ce19fddc2f07d481aa195469f8d764049471ab2c44465e3c26f2810094",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/council-attempt-2/reviewers/adversarial-methodologist.md": "07ca5b76333a9d9ab1c59022de346a31eb4fe6c2c48e1ccc8f0030c3e03f4c87",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/council-attempt-2/reviewers/constructive-theorist.md": "efa0004dd85baf9cb1b081a67b18af540e660b3f21e3909e873a5d9229b96a48",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/council-attempt-2/reviewers/evidence-auditor.md": "b1176fbfd3a8ad5fea56e4171c17cd1e0a3412859195a59a279969547c5d4b29",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/council-attempt-2/transport-packet.md": "2d8853c4c92b2718e8a3b74e748ae88eb46e8ebab3cc0eb1cdf6857fb8299a87",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/council-dry-run/manifest.json": "50fcce174b6ddbee9bb7bd17d3e2bf4e3888c165bdc8beea3750b551e3e91e06",
+    "house/workflow/runs/20260823T153017Z-context-grammar-synthetic-slice/council-dry-run/transport-packet.md": "2d8853c4c92b2718e8a3b74e748ae88eb46e8ebab3cc0eb1cdf6857fb8299a87"
+  }
+}

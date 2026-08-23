@@ -1,0 +1,30 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS_CONTEXT_GRAMMAR_SYNTHETIC_SLICE",
+  "checks": {
+    "baseline_commit": "abfcc11e4ed9fbec7bb7d8302bb951f47ac208ce",
+    "focused_tests_before_council": "12 passed",
+    "full_house_tests_before_council": "222 passed",
+    "council_transport_sha256": "2d8853c4c92b2718e8a3b74e748ae88eb46e8ebab3cc0eb1cdf6857fb8299a87",
+    "outside_council": "3/3 completed; one narrow source-level issue accepted and fixed",
+    "focused_tests_final": "13 passed",
+    "full_house_tests_final": "223 passed",
+    "ruff": "format/check passed",
+    "py_compile": "passed",
+    "repository_formatter": "just fmt passed",
+    "diff_check": "authored source/docs passed; preserved raw constructive-theorist review has four Markdown hard-break trailing spaces",
+    "static_purity_audit": "PASS; no os/pathlib/socket/subprocess/time/requests/urllib/keyring import in three new modules",
+    "controller_sha256": "977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37",
+    "controller_state": "UNCHANGED: mcu-infinity-war-001 PREPARED, null observation, zero leases, zero launch intents",
+    "live_configuration": "NOT_READ",
+    "keychain": "NOT_ACCESSED",
+    "secret_resolution": "NOT_ATTEMPTED",
+    "execution": "NOT_ATTEMPTED"
+  },
+  "limitations": [
+    "This proves only deterministic behavior of synthetic records, not a real parser, firewall, vault, resolver, sink, controller, or launcher.",
+    "Secret-looking matching is a fixture safety check, not a semantic secrecy proof.",
+    "Record hashes establish deterministic identity/integrity, not authentic source observation.",
+    "The external council reviewed the pre-fix transport packet; its one source-level finding was repaired locally and revalidated, not treated as a final-source hash confirmation."
+  ]
+}
