@@ -45,6 +45,10 @@ _ADVISORY_FIELDS = frozenset(
     }
 )
 _RECIPIENTS = frozenset({"triage", "coder", "reviewer", "specific_model"})
+_SOURCE_NOTES = {
+    "NOT_SUPPLIED": "Source scope: NOT_SUPPLIED · no task-spine source was provided.",
+    "READ_ONLY_NAMED_DATABASE": "Source scope: READ_ONLY_NAMED_DATABASE · explicit verified task-spine input.",
+}
 
 
 class TaskCardIndexError(ValueError):
@@ -181,7 +185,15 @@ def _task_row(fields: Mapping[str, str | None]) -> str:
     )
 
 
-def render_task_card_index_html(cards: object) -> str:
+def _source_note(source_state: object) -> str:
+    if source_state is None:
+        return ""
+    if not isinstance(source_state, str) or source_state not in _SOURCE_NOTES:
+        raise TaskCardIndexError("invalid task-card source scope")
+    return f"<p>{_SOURCE_NOTES[source_state]}</p>"
+
+
+def render_task_card_index_html(cards: object, *, source_state: object = None) -> str:
     """Render bounded task-card projections without consulting task-spine state."""
     if not isinstance(cards, list):
         raise TaskCardIndexError("task cards must be a list")
@@ -193,6 +205,7 @@ def render_task_card_index_html(cards: object) -> str:
     if len(task_ids) != len(set(task_ids)):
         raise TaskCardIndexError("duplicate task-card")
     fields.sort(key=lambda item: str(item["task_id"]))
+    source_note = _source_note(source_state)
 
     document = "".join(
         (
@@ -214,6 +227,7 @@ def render_task_card_index_html(cards: object) -> str:
             '</style></head><body><p class="summary">Observe only · ',
             str(len(fields)),
             " task cards · routing is advisory · dispatch not attempted</p><main>",
+            source_note,
             "".join(_task_row(item) for item in fields),
             "</main></body></html>",
         )

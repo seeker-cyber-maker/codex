@@ -48,6 +48,8 @@ class OperatorBoardBundleTests(unittest.TestCase):
         self.assertTrue((target / "snapshot-inventory.html").is_file())
         self.assertTrue((target / "operator-board.html").is_file())
         self.assertTrue((target / "operator-board.html.receipt.json").is_file())
+        board = (target / "operator-board.html").read_text(encoding="utf-8")
+        self.assertEqual(board.count("Source scope: NOT_SUPPLIED"), 2)
         self.assertEqual(inspect_operator_board_bundle(target), receipt)
 
     def test_existing_target_and_tampered_inventory_fail_closed(self) -> None:

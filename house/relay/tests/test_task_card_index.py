@@ -97,6 +97,13 @@ class TaskCardIndexTests(unittest.TestCase):
         html = render_task_card_index_html([card])
         self.assertIn("task-generic", html)
 
+    def test_declared_source_scope_is_visible_and_exact(self) -> None:
+        document = render_task_card_index_html([], source_state="NOT_SUPPLIED")
+
+        self.assertIn("Source scope: NOT_SUPPLIED", document)
+        with self.assertRaisesRegex(TaskCardIndexError, "source scope"):
+            render_task_card_index_html([], source_state="LIVE")
+
 
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()

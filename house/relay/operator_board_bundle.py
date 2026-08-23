@@ -183,10 +183,16 @@ def write_operator_board_bundle(
 ) -> dict[str, object]:
     """Create one new offline bundle from bounded caller-supplied projections."""
     target = _absolute_output_dir(output_dir)
-    _sources(sources)
+    validated_sources = _sources(sources)
     try:
-        relay_index = render_relay_preview_index_html(registrations)
-        task_index = render_task_card_index_html(task_cards)
+        relay_index = render_relay_preview_index_html(
+            registrations,
+            source_state=validated_sources["relay_registrations"]["state"],
+        )
+        task_index = render_task_card_index_html(
+            task_cards,
+            source_state=validated_sources["task_spine"]["state"],
+        )
         snapshot = render_operator_snapshot_html(relay_index, task_index)
         descriptor = build_operator_snapshot_descriptor(
             relay_index, task_index, snapshot

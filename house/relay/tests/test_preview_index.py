@@ -50,6 +50,13 @@ class RelayPreviewIndexTests(unittest.TestCase):
         with self.assertRaisesRegex(RelayPreviewIndexError, "invalid registration"):
             render_relay_preview_index_html([invalid])
 
+    def test_declared_source_scope_is_visible_and_exact(self) -> None:
+        document = render_relay_preview_index_html([], source_state="NOT_SUPPLIED")
+
+        self.assertIn("Source scope: NOT_SUPPLIED", document)
+        with self.assertRaisesRegex(RelayPreviewIndexError, "source scope"):
+            render_relay_preview_index_html([], source_state="LIVE")
+
 
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()

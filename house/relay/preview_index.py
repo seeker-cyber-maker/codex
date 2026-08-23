@@ -8,6 +8,10 @@ from .operator_preview import RelayPreviewCardError, inspect_relay_preview_regis
 
 MAX_PREVIEW_REGISTRATIONS = 32
 MAX_INDEX_BYTES = 200_000
+_SOURCE_NOTES = {
+    "NOT_SUPPLIED": "Source scope: NOT_SUPPLIED · no relay-registration source was provided.",
+    "NAMED_JSON": "Source scope: NAMED_JSON · explicit frozen registration input.",
+}
 
 
 class RelayPreviewIndexError(ValueError):
@@ -31,7 +35,17 @@ def _preview_row(fields: dict[str, str]) -> str:
     )
 
 
-def render_relay_preview_index_html(registrations: object) -> str:
+def _source_note(source_state: object) -> str:
+    if source_state is None:
+        return ""
+    if not isinstance(source_state, str) or source_state not in _SOURCE_NOTES:
+        raise RelayPreviewIndexError("invalid relay-preview source scope")
+    return f"<p>{_SOURCE_NOTES[source_state]}</p>"
+
+
+def render_relay_preview_index_html(
+    registrations: object, *, source_state: object = None
+) -> str:
     """Render bounded verified registration identifiers without source content."""
     if not isinstance(registrations, list):
         raise RelayPreviewIndexError("registrations must be a list")
@@ -52,6 +66,7 @@ def render_relay_preview_index_html(registrations: object) -> str:
     fields.sort(key=lambda item: item["registration_sha256"])
 
     rows = "".join(_preview_row(item) for item in fields)
+    source_note = _source_note(source_state)
     document = "".join(
         (
             '<!doctype html><html lang="en"><head><meta charset="utf-8">',
@@ -70,6 +85,7 @@ def render_relay_preview_index_html(registrations: object) -> str:
             '</style></head><body><p class="summary">Observe only · ',
             str(len(fields)),
             " relay previews</p><main>",
+            source_note,
             rows,
             "</main></body></html>",
         )

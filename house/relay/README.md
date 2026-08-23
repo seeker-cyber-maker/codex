@@ -153,6 +153,11 @@ honest bootstrap bundle: both source records are marked `NOT_SUPPLIED`, rather
 than implying that the machine has no relay previews or tasks. It does not
 search for those sources.
 
+Those two source states are also rendered inside the frozen Relay previews and
+Task cards sections. They use only the fixed values `NOT_SUPPLIED`, `NAMED_JSON`,
+and `READ_ONLY_NAMED_DATABASE`; the page does not turn an omitted source into a
+claim that the corresponding live system is empty.
+
 ```bash
 python3 -m house.relay.cli build-operator-board \
   --output-dir /absolute/path/to/new-operator-board-bundle
