@@ -8,8 +8,10 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import Mock, patch
 
 from house.relay.cli import main
+from house.terminal_companion import LoopbackViewerError
 from house.worker_catalog import ingest_catalog
 
 
@@ -96,10 +98,14 @@ class RelayCliTest(unittest.TestCase):
         self.temporary.cleanup()
 
     def run_cli(self, argv: list[str]) -> tuple[int, dict[str, object]]:
+        exit_code, output = self.run_cli_text(argv)
+        return exit_code, json.loads(output)
+
+    def run_cli_text(self, argv: list[str]) -> tuple[int, str]:
         output = io.StringIO()
         with contextlib.redirect_stdout(output):
             exit_code = main(argv)
-        return exit_code, json.loads(output.getvalue())
+        return exit_code, output.getvalue()
 
     def test_directory_lookup_and_envelope_status_have_separate_inputs(self) -> None:
         exit_code, address = self.run_cli(
@@ -207,6 +213,55 @@ class RelayCliTest(unittest.TestCase):
         with self.assertRaises(SystemExit) as raised:
             self.run_cli(["export-operator-board"])
         self.assertEqual(raised.exception.code, 2)
+
+    def test_start_operator_board_viewer_is_manual_and_returns_terminal_receipt(
+        self,
+    ) -> None:
+        grant = Mock(url="http://127.0.0.1:43210/v1/display/example")
+        viewer = Mock()
+        viewer.start.return_value = grant
+        viewer.wait.return_value = {
+            "state": "EXPIRED",
+            "transport": "LOOPBACK_HTTP_ONE_SHOT",
+            "iterm_api_registration": "NOT_ATTEMPTED",
+        }
+
+        with patch(
+            "house.relay.cli.prepare_operator_board_viewer", return_value=viewer
+        ) as prepare:
+            exit_code, output = self.run_cli_text(
+                ["start-operator-board-viewer", "--output", "/tmp/operator.html"]
+            )
+
+        self.assertEqual(exit_code, 0)
+        prepare.assert_called_once_with("/tmp/operator.html")
+        viewer.start.assert_called_once_with()
+        viewer.wait.assert_called_once_with()
+        first_line, receipt = output.split("\n", 1)
+        self.assertEqual(
+            first_line, "One-time local URL: http://127.0.0.1:43210/v1/display/example"
+        )
+        self.assertEqual(json.loads(receipt)["state"], "EXPIRED")
+
+    def test_start_operator_board_viewer_rejects_missing_output(self) -> None:
+        with self.assertRaises(SystemExit) as raised:
+            self.run_cli(["start-operator-board-viewer"])
+        self.assertEqual(raised.exception.code, 2)
+
+    def test_start_operator_board_viewer_maps_start_failure_to_cli_error(self) -> None:
+        viewer = Mock()
+        viewer.start.side_effect = LoopbackViewerError("loopback bind failed")
+
+        with (
+            patch("house.relay.cli.prepare_operator_board_viewer", return_value=viewer),
+            self.assertRaises(SystemExit) as raised,
+        ):
+            self.run_cli(
+                ["start-operator-board-viewer", "--output", "/tmp/operator.html"]
+            )
+
+        self.assertEqual(raised.exception.code, 2)
+        viewer.wait.assert_not_called()
 
 
 if __name__ == "__main__":

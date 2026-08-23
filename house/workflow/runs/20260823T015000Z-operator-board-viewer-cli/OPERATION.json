@@ -1,0 +1,80 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "operator-board-viewer-cli-v1",
+  "record_revision": 1,
+  "record_sha256": "f91064075b6c239f1b1361203ce7611c2265234edf2b9e0a30fe0a6473568a71",
+  "run_id": "20260823T015000Z-operator-board-viewer-cli",
+  "intent": "Implement and locally test a manual one-shot operator-board viewer CLI without launching a real board preview",
+  "target_identity": "house/relay/cli.py",
+  "input_hashes": {
+    "base_commit": "842dfda8d3fc12685bf61a78ff99c448dcfc1aec",
+    "viewer_preparation_source": "1371c52e551674aaf93060e1355a1043aeb58e2961b6470e827bd08501ebcc3f",
+    "council_transport_packet": "c58f5f396091e22fd97971c41f49c9f6782965e11b1ad2c2e09876b84ec4a8ac"
+  },
+  "authority_scope": {
+    "read": [
+      "sealed relay viewer/export source and council evidence"
+    ],
+    "write": [
+      "additive relay CLI, tests, documentation, and workflow receipts"
+    ],
+    "network": [
+      "existing local test-only exact-loopback sockets"
+    ],
+    "external_effect_class": "REVERSIBLE_SOURCE_EDIT_AND_TEST_FIXTURE_ONLY"
+  },
+  "owner": "root",
+  "lease": {
+    "holder": "root",
+    "expires_at": null,
+    "epoch": 1,
+    "fencing_token": "local-single-lane-20260823T015000Z"
+  },
+  "idempotency": {
+    "key": "operator-board-viewer-cli-v1",
+    "binding_sha256": "a3f5a9045838faf6e6d64d8da52d5595e50ff3e5b52d094ddd7378756b500a83"
+  },
+  "start_state": {
+    "repository": "clean",
+    "real_board_preview": "NOT_ATTEMPTED",
+    "browser_launch": "NOT_ATTEMPTED",
+    "iterm_registration": "NOT_ATTEMPTED"
+  },
+  "checkpoint_policy": {
+    "after": [
+      "focused tests",
+      "council review",
+      "complete House tests"
+    ]
+  },
+  "resume_pointer": "PLAN.md",
+  "deadline": null,
+  "retry_budget": 0,
+  "resource_budget": [
+    {
+      "resource": "real_viewer_starts",
+      "unit": "starts",
+      "hard_cap": 0
+    },
+    {
+      "resource": "test_listener_lifetime",
+      "unit": "seconds",
+      "hard_cap": 300
+    }
+  ],
+  "cancellation": {
+    "supported": true,
+    "method": "no live preview is started by this implementation operation"
+  },
+  "expected_artifacts": [
+    "manual CLI source",
+    "tests",
+    "council synthesis",
+    "validation and source-seal receipts"
+  ],
+  "acceptance_verifier": "deterministic local tests plus bounded council synthesis",
+  "reconciliation": {
+    "required": true,
+    "method": "confirm no production board preview, browser/iTerm registration, provider call, relay/task mutation, or persistent listener occurred"
+  }
+}

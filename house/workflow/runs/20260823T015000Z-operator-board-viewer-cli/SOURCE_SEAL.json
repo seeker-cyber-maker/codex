@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "842dfda8d3fc12685bf61a78ff99c448dcfc1aec",
+  "scope": "manual bounded operator-board viewer start command",
+  "files": {
+    "house/relay/README.md": "7cf76b5e762d27f656b25220ba9acde3868f410f5262dc6d3f6ce516b22a0fac",
+    "house/relay/cli.py": "512d7ff7c007d7cc6e741769deb2003049cfa2c79085203ed2e325b1a945855d",
+    "house/relay/tests/test_cli.py": "db3ea9c8e4b996e9b02dedcdabbce3fa1ff938402a4dafab6cb93d669c9643a5"
+  }
+}

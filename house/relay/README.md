@@ -160,6 +160,21 @@ open a relay, launch a browser/iTerm, bind a listener, issue a capability, or
 grant authority. A later caller must explicitly own any viewer start and its
 separate authority/operation gate.
 
+`start-operator-board-viewer` is the interim manual-terminal activation
+command. It requires one explicit completed export path, starts exactly the
+prepared loopback viewer with its fixed defaults (IPv4 loopback, an ephemeral
+high port, and a 30-second TTL), prints its one-time local URL, then waits for
+the bearer-free terminal receipt. It does not open a browser or iTerm, accept a
+source/template/default path, refresh or write an export, contact a worker or
+provider, or grant any authority. Manual invocation is not proof of human or
+hardware identity; the separate YubiKey-backed authority service remains a
+future gate.
+
+```bash
+python3 -m house.relay.cli start-operator-board-viewer \
+  --output /absolute/path/to/completed-operator-board.html
+```
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

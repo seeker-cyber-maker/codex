@@ -8,11 +8,17 @@ from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
 
+from house.terminal_companion import LoopbackViewerError
+
 from .core import Relay, RelayError
 from .directory import RelayDirectory, RelayDirectoryError
 from .operator_board_export import (
     OperatorBoardExportError,
     write_operator_board_export,
+)
+from .operator_board_viewer import (
+    OperatorBoardViewerError,
+    prepare_operator_board_viewer,
 )
 from .snapshot_inventory import (
     OperatorSnapshotInventoryError,
@@ -104,6 +110,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         required=True,
         help="new absolute operator-board HTML path",
     )
+    start_board_viewer = commands.add_parser(
+        "start-operator-board-viewer",
+        help="manually start one bounded loopback preview for one completed export",
+    )
+    start_board_viewer.add_argument(
+        "--output",
+        required=True,
+        help="absolute completed operator-board HTML export path",
+    )
 
     args = parser.parse_args(argv)
     try:
@@ -134,6 +149,12 @@ def main(argv: Sequence[str] | None = None) -> int:
                 )
             )
             return 0
+        if args.command == "start-operator-board-viewer":
+            viewer = prepare_operator_board_viewer(args.output)
+            grant = viewer.start()
+            print(f"One-time local URL: {grant.url}", flush=True)
+            _emit(viewer.wait())
+            return 0
 
         relay = _relay(args)
         try:
@@ -159,7 +180,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             relay.close()
     except (
         OperatorBoardExportError,
+        OperatorBoardViewerError,
         OperatorSnapshotInventoryError,
+        LoopbackViewerError,
         RelayDirectoryError,
         RelayError,
     ) as exc:

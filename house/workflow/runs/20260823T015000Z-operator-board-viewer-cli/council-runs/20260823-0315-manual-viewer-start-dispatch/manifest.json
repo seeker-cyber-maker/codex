@@ -1,0 +1,88 @@
+{
+  "council_id": "20260823-0315-manual-viewer-start-dispatch",
+  "mode": "independent-review",
+  "profile": "authority-boundary-council",
+  "task_mode": "review",
+  "transport_packet_sha256": "c58f5f396091e22fd97971c41f49c9f6782965e11b1ad2c2e09876b84ec4a8ac",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "house/workflow/runs/20260823T015000Z-operator-board-viewer-cli/council-runs/20260823-0315-manual-viewer-start/evidence-packet.md",
+      "sha256": "6835ad13f7ec145be6302a1a6758e032137d587c00bfd6eda272b654ada054d5"
+    },
+    {
+      "path": "house/relay/cli.py",
+      "sha256": "512d7ff7c007d7cc6e741769deb2003049cfa2c79085203ed2e325b1a945855d"
+    },
+    {
+      "path": "house/relay/operator_board_viewer.py",
+      "sha256": "1371c52e551674aaf93060e1355a1043aeb58e2961b6470e827bd08501ebcc3f"
+    },
+    {
+      "path": "house/terminal_companion/loopback.py",
+      "sha256": "5b72816fe9f5b9e6f815dd4d0dab5e58794269f67e13d8fc409691fc4dcfc4e3"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "security-architect",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "c58f5f396091e22fd97971c41f49c9f6782965e11b1ad2c2e09876b84ec4a8ac",
+      "started_at": "2026-08-23T04:03:58+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T04:03:58+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-red-teamer",
+      "lane": "opencode-go",
+      "requested_model": "deepseek-v4-flash",
+      "provider": "OpenCode Go",
+      "harness": "provider-orchestration OpenCode Go catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4017/v1",
+      "candidate_models": [
+        "deepseek-v4-flash",
+        "qwen3.8-max"
+      ],
+      "packet_sha256": "c58f5f396091e22fd97971c41f49c9f6782965e11b1ad2c2e09876b84ec4a8ac",
+      "started_at": "2026-08-23T04:03:58+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T04:03:58+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "assurance-human-factors",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "c58f5f396091e22fd97971c41f49c9f6782965e11b1ad2c2e09876b84ec4a8ac",
+      "started_at": "2026-08-23T04:03:58+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T04:03:58+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-23T04:03:58+00:00",
+  "completed_at": "2026-08-23T04:03:58+00:00"
+}
