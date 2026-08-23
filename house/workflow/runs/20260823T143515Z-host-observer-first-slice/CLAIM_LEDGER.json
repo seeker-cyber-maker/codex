@@ -1,0 +1,83 @@
+{
+  "schema": "codex-house-council-claim-ledger/1",
+  "council_id": "20260823-1435-host-observer-first-slice",
+  "claims": [
+    {
+      "claim_id": "OBSIMP-001",
+      "claim": "Regular-file bytes are read through directory-anchored no-follow descriptors and bound to stable descriptor identity.",
+      "status": "observed_and_corroborated",
+      "evidence": ["house/worker_exec/host_observer.py", "house/worker_exec/tests/test_host_observer.py#test_05_file_replacement_during_read_refuses_without_partial_output"],
+      "supporters": ["security-architect", "adversarial-methodologist", "evidence-auditor"],
+      "objectors": [],
+      "shared_dependencies": ["same-immutable-packet", "same-council-prompt-profile"],
+      "decision_impact": "high",
+      "next_test": "repeat on supported target filesystems before runtime admission"
+    },
+    {
+      "claim_id": "OBSIMP-002",
+      "claim": "Retries can mix observations from an unstable first attempt into a later success.",
+      "status": "contradicted",
+      "evidence": ["house/worker_exec/tests/test_host_observer.py#test_17_retry_restarts_the_entire_observation_without_mixing"],
+      "supporters": [],
+      "objectors": ["security-architect", "adversarial-methodologist"],
+      "shared_dependencies": ["same-immutable-packet"],
+      "decision_impact": "high",
+      "next_test": "none for this slice"
+    },
+    {
+      "claim_id": "OBSIMP-003",
+      "claim": "The pure verifier performs ambient host I/O.",
+      "status": "contradicted",
+      "evidence": ["house/worker_exec/tests/test_host_observer.py#test_14_verifier_is_pure_under_ambient_api_failure", "pure-verifier AST call-graph audit"],
+      "supporters": [],
+      "objectors": ["security-architect", "adversarial-methodologist", "evidence-auditor"],
+      "shared_dependencies": ["same-source"],
+      "decision_impact": "high",
+      "next_test": "retain ambient-API failure fixture"
+    },
+    {
+      "claim_id": "OBSIMP-004",
+      "claim": "The first slice automatically derives a complete effective-context grammar from Codex runtime behavior.",
+      "status": "rejected",
+      "evidence": ["EVIDENCE_PACKET.md#explicit-claim-ceiling-and-limitation", "SYNTHESIS.md#claim-ceiling"],
+      "supporters": [],
+      "objectors": ["security-architect"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "separate version-pinned grammar-producer design"
+    },
+    {
+      "claim_id": "OBSIMP-005",
+      "claim": "The built-in secret filters prove arbitrary text cannot encode an unknown secret.",
+      "status": "rejected",
+      "evidence": ["EVIDENCE_PACKET.md#explicit-claim-ceiling-and-limitation", "SYNTHESIS.md#claim-ceiling"],
+      "supporters": [],
+      "objectors": ["security-architect", "adversarial-methodologist"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "design a semantic secret-safe projection before live private input"
+    },
+    {
+      "claim_id": "OBSIMP-006",
+      "claim": "All three council responses fully satisfied the response contract.",
+      "status": "contradicted",
+      "evidence": ["council/reviewers/evidence-auditor.md", "council/manifest.json"],
+      "supporters": [],
+      "objectors": ["root-coordinator"],
+      "shared_dependencies": [],
+      "decision_impact": "medium",
+      "next_test": "harden council validation against retained template placeholders"
+    },
+    {
+      "claim_id": "OBSIMP-007",
+      "claim": "This first slice makes a prepared operation eligible for execution.",
+      "status": "rejected",
+      "evidence": ["house/worker_exec/host_observer.py", "SYNTHESIS.md#outcome"],
+      "supporters": [],
+      "objectors": ["security-architect", "adversarial-methodologist", "evidence-auditor"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "separate later admission gates only"
+    }
+  ]
+}

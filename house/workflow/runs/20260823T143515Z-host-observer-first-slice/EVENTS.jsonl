@@ -1,0 +1,6 @@
+{"event":"phase_recovered","baseline_commit":"460e3bbc0488cde6c7f0b2d27d0ec6db0abde129","disposition":"resume_from_handoff"}
+{"event":"plan_sealed","case_type":"semantic_implementation","model_advisory":"terra/high","write_scope":"host observer module tests exports and run artifacts"}
+{"event":"focused_verification_completed","tests":"20 passed and 6 subtests passed"}
+{"event":"full_house_verification_completed","tests":"308 passed and 89 subtests passed"}
+{"event":"outside_aacr_completed","transport_sha256":"6fc1215678ca040b3979cadf494a4acfa315edb5fe1d786c080cfbb134265c07","completed_reviewers":3,"blocking_findings":0}
+{"event":"root_disposition","state":"ACCEPT_FIRST_SLICE_NON_RUNTIME","next_gate":"version-pinned context-grammar producer and secret-safe projection design"}

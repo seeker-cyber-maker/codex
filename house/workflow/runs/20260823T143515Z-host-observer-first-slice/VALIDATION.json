@@ -1,0 +1,30 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS_HOST_OBSERVER_FIRST_SLICE_NON_RUNTIME",
+  "checks": {
+    "baseline_commit": "460e3bbc0488cde6c7f0b2d27d0ec6db0abde129",
+    "focused_tests": "PASS: 20 tests and 6 subtests",
+    "full_house_tests": "PASS: 308 tests and 89 subtests",
+    "ruff": "PASS: changed Python files",
+    "python_compile": "PASS",
+    "python_format": "PASS: Ruff format",
+    "repository_format": "PASS: codex-rs just fmt",
+    "git_diff_check": "PASS",
+    "pure_verifier_ast_audit": "PASS: no reachable os time socket subprocess secrets or random calls",
+    "observer_mutating_os_audit": "PASS: no write remove unlink rename replace mkdir makedirs system or popen calls",
+    "outside_council": "PASS WITH RESPONSE NOTE: 3/3 completed and accepted; evidence-auditor retained template placeholders",
+    "review_transport_sha256": "6fc1215678ca040b3979cadf494a4acfa315edb5fe1d786c080cfbb134265c07",
+    "controller_sha256": "977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37",
+    "controller_state": "UNCHANGED: mcu-infinity-war-001 PREPARED, null observation, zero leases, zero intents",
+    "worker_dispatch": "NOT_ATTEMPTED",
+    "provider_dispatch": "COUNCIL_REVIEW_ONLY",
+    "implementation_scope": "HOST OBSERVER FIRST SLICE ONLY"
+  },
+  "limitations": [
+    "The caller-supplied discovery grammar is validated but not automatically derived from Codex runtime behavior.",
+    "Secret filtering is a defined conservative control and not proof against arbitrary novel encodings.",
+    "CLI capture and environment projection are asserted inputs, not authenticated live observations.",
+    "No runtime qualification output reservation credential controller launcher provider or result-admission path exists.",
+    "The formatted implementation module is 1118 lines; further behavior should be split into new focused modules before expansion."
+  ]
+}

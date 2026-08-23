@@ -3,6 +3,11 @@
 from .cli_contract import CliContractError, validate_cli_contract
 from .controller import WorkerControllerError, WorkerOperationController
 from .fixture_gate import FixtureGateError, launch_fixture
+from .host_observer import (
+    HostObserverError,
+    observe_host_v1,
+    verify_host_observation_v1,
+)
 from .mock_admission import (
     MockAdmissionError,
     prepare_mock_execution_authority,
@@ -38,6 +43,7 @@ from .runtime_profile import (
 __all__ = [
     "CliContractError",
     "FixtureGateError",
+    "HostObserverError",
     "MockAdmissionError",
     "OperationV2Error",
     "ProcessSupervisorError",
@@ -49,6 +55,7 @@ __all__ = [
     "assemble_route_selection_v1",
     "execute_for_test",
     "launch_fixture",
+    "observe_host_v1",
     "prepare_mock_execution_authority",
     "prepare_mock_runtime_profile",
     "prepare_operation",
@@ -56,6 +63,7 @@ __all__ = [
     "supervise_fixture_process",
     "supervise_process",
     "validate_cli_contract",
+    "verify_host_observation_v1",
     "verify_mock_admission",
     "verify_mock_runtime_profile",
     "verify_operation",

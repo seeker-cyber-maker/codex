@@ -1,0 +1,18 @@
+{
+  "schema": "codex-house-workflow-plan/1",
+  "phase_id": "20260823T143515Z-host-observer-first-slice",
+  "baseline_commit": "460e3bbc0488cde6c7f0b2d27d0ec6db0abde129",
+  "case_type": "semantic_implementation",
+  "recommended_model": "terra",
+  "recommended_effort": "high",
+  "authority": "project_coordinator_local_reversible_implementation",
+  "outside_plan_check": "satisfied_by_20260823T140236Z_host_observer_contract",
+  "write_scope": [
+    "house/worker_exec/host_observer.py",
+    "house/worker_exec/tests/test_host_observer.py",
+    "house/worker_exec/__init__.py",
+    "house/workflow/runs/20260823T143515Z-host-observer-first-slice"
+  ],
+  "next_gate": "version-pinned context-grammar producer and secret-safe projection design",
+  "state": "completed"
+}
