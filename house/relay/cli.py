@@ -10,6 +10,10 @@ from typing import Any
 
 from .core import Relay, RelayError
 from .directory import RelayDirectory, RelayDirectoryError
+from .snapshot_inventory import (
+    OperatorSnapshotInventoryError,
+    inspect_operator_snapshot_inventory,
+)
 
 
 def _emit(value: object) -> None:
@@ -61,6 +65,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     acknowledge.add_argument("--message", required=True)
     verify = commands.add_parser("verify-journal", help="verify relay journal hashes")
     verify.add_argument("--relay-db", required=True)
+    inventory = commands.add_parser(
+        "snapshot-inventory",
+        help="inspect explicitly listed frozen snapshot-envelope paths",
+    )
+    inventory.add_argument(
+        "--input",
+        required=True,
+        help="UTF-8 JSON array of one to 32 absolute envelope paths",
+    )
 
     args = parser.parse_args(argv)
     try:
@@ -72,6 +85,13 @@ def main(argv: Sequence[str] | None = None) -> int:
                 _emit(directory.address(args.recipient_id))
             else:
                 _emit(directory.find_capability(args.capability))
+            return 0
+        if args.command == "snapshot-inventory":
+            _emit(
+                inspect_operator_snapshot_inventory(
+                    _load_json(args.input, parser, "snapshot-envelope path list")
+                )
+            )
             return 0
 
         relay = _relay(args)
@@ -96,7 +116,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0
         finally:
             relay.close()
-    except (RelayError, RelayDirectoryError) as exc:
+    except (RelayError, RelayDirectoryError, OperatorSnapshotInventoryError) as exc:
         parser.error(str(exc))
     return 2  # pragma: no cover
 

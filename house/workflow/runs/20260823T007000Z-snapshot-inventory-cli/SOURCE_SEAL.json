@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "87418c8b72004b072f87ff5190ed4768f32f9911",
+  "scope": "one-shot snapshot inventory CLI",
+  "files": {
+    "house/relay/README.md": "ccbb136886b31d63e0769b7c165a07288369c368dd462661a12d43e468a77c86",
+    "house/relay/cli.py": "4a2cf1d3620a67fef7fec911dde22b46f2e73a6c9f9aa24e0fc98d9a3b7a0e28",
+    "house/relay/tests/test_cli.py": "8e483f328ef38514dac86a75f81ba96be0388233f892a2a23923b8c9727d935a"
+  }
+}

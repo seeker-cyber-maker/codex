@@ -92,6 +92,12 @@ write, repair/delete anything, or expose stored document bodies. Each named
 path receives either its descriptor/envelope hashes or a separate rejection
 reason, so a missing or invalid envelope cannot be mistaken for a valid one.
 
+The keyboard-first `snapshot-inventory` relay CLI command takes one required
+`--input` UTF-8 JSON array of those explicit paths and prints the same
+content-free inventory. It does not accept a default path or any scan/write,
+and it opens no relay database, listener, viewer, browser, iTerm, worker, or
+provider connection.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
