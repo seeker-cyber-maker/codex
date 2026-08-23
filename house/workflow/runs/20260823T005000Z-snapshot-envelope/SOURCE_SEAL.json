@@ -1,0 +1,11 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "9357a12678dd6bd816bbfa011e91c2f4d56f431e",
+  "scope": "immutable offline snapshot envelope",
+  "files": {
+    "house/relay/README.md": "ef8c2a360acbf0df61f2f0281db79f578a49e13aa487c7385fd053ce608b212a",
+    "house/relay/__init__.py": "08779f75b232836530ff8bd8b313cee21d4ddec7068ce6b5ba70da6751016637",
+    "house/relay/snapshot_envelope.py": "071c0611538447ba21e7660248381e0c453ce8e0008bc3d74d44307a5c1cabe1",
+    "house/relay/tests/test_snapshot_envelope.py": "038bed9d8b9170849fc2e58f0f97e944b7ac10004b0f2a82e90c936175847227"
+  }
+}

@@ -13,10 +13,16 @@ from .snapshot_descriptor import (
     inspect_operator_snapshot_descriptor,
     verify_operator_snapshot_descriptor,
 )
+from .snapshot_envelope import (
+    OperatorSnapshotEnvelopeError,
+    inspect_operator_snapshot_envelope,
+    write_operator_snapshot_envelope,
+)
 from .task_card_index import TaskCardIndexError, render_task_card_index_html
 
 __all__ = [
     "OperatorSnapshotDescriptorError",
+    "OperatorSnapshotEnvelopeError",
     "OperatorSnapshotError",
     "Relay",
     "RelayDirectory",
@@ -28,10 +34,12 @@ __all__ = [
     "build_operator_snapshot_descriptor",
     "build_relay_preview_registration",
     "inspect_operator_snapshot_descriptor",
+    "inspect_operator_snapshot_envelope",
     "prepare_relay_dashboard_viewer",
     "render_operator_snapshot_html",
     "render_relay_preview_card_html",
     "render_relay_preview_index_html",
     "render_task_card_index_html",
     "verify_operator_snapshot_descriptor",
+    "write_operator_snapshot_envelope",
 ]

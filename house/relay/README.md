@@ -74,6 +74,17 @@ only offline/no-authority control states. `verify_operator_snapshot_descriptor()
 repeats that bounded replay; neither function retrieves sources, refreshes
 state, binds a listener, or makes an action available.
 
+`write_operator_snapshot_envelope()` is the explicit local persistence seam for
+one already-verified snapshot: it requires an absolute, non-existent target
+directory under an existing parent, writes the two index documents, snapshot,
+canonical descriptor, and hash-bound canonical envelope, and refuses every
+existing target. An `.INCOMPLETE` marker remains if a filesystem write is
+interrupted; `inspect_operator_snapshot_envelope()` fails closed on that marker,
+unexpected files, noncanonical JSON, changed bytes, or failed static replay.
+Neither function discovers sources, refreshes state, starts a viewer, binds a
+listener, calls iTerm/browser/provider/worker code, accepts terminal input, or
+grants authority.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
