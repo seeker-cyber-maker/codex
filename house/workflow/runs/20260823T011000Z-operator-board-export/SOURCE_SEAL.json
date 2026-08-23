@@ -1,0 +1,11 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "77bd0d88661a4edde5d5233fb5b9266ed2982819",
+  "scope": "immutable frozen operator board export",
+  "files": {
+    "house/relay/README.md": "b228d46dee2fd3457aa451b5faaa0f5f6dcf842782b44c5b29bd8a8aaf88a7f9",
+    "house/relay/__init__.py": "61a29c3913cc3320bd6418519efaeb57c283b0d9a07db4016447f30d28d934d0",
+    "house/relay/operator_board_export.py": "ef11b1b4896e4f38912cffce5e9157a3b1ea27365d9f023b46b32f1281fee347",
+    "house/relay/tests/test_operator_board_export.py": "2d05b8c1588537ebedc39a591edd5be971b6d3c38a0e394fcf46f07db77f0470"
+  }
+}

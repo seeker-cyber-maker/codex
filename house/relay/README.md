@@ -119,6 +119,15 @@ snapshot and one caller-supplied inventory board into a single inert operator
 page. It validates both source signatures and static fragments, and does not
 run the inventory, access files, refresh data, or bind a viewer.
 
+`write_operator_board_export()` is the explicit local persistence seam for the
+composed page. It requires a new absolute output file below an existing parent,
+writes that page and a canonical companion receipt without overwrite, and
+leaves a sibling `.INCOMPLETE` marker if interrupted. The receipt binds the
+board and its two caller-supplied source-document byte identities; it is an
+integrity receipt, not proof of author identity or source correctness.
+`inspect_operator_board_export()` verifies the board and companion receipt but
+does not retrieve or replay source documents.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
