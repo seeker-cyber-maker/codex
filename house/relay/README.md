@@ -51,6 +51,14 @@ preview registrations into one deterministic, content-free, read-only index.
 It rejects invalid or duplicate registrations and adds no refresh, listener, or
 action behavior.
 
+`render_task_card_index_html()` separately composes up to 32 exact canonical
+`task_spine` task-card projections into deterministic, escaped static HTML. It
+requires advisory-only routing and `NOT_ATTEMPTED` dispatch, rejects malformed
+or duplicate cards, and neither consults nor changes task-spine state. It does
+not create/mutate/dispatch tasks, bind a listener, start a viewer, call a
+browser or iTerm, accept terminal input, grant authority, or open a reverse
+channel.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

@@ -1,0 +1,12 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "1c3069b2579354e0fd87bd5b7486c4005d780677",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/task_card_index.py": "7552594db965bea1a39511f3079114802ca6f07b8c4a753fb273fcd23c97f493",
+    "house/relay/tests/test_task_card_index.py": "4a5f58e01ea5ddefdcba0c86be96aaa3ad981bfde2bd72d4f794d28fc08b68e2",
+    "house/relay/__init__.py": "4e3d3c479827d278811a308c7010c03d7bb08ffc6dbf215986af95567e4594db",
+    "house/relay/README.md": "222c59cc9feaba29275a0ac0f0a695c19ebda5e4051431286184cf6d5a31e6a5"
+  },
+  "disposition": "Core-profile local acceptance pending scoped commit; live task-spine or dashboard integration remains outside this source seal."
+}
