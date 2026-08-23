@@ -1,0 +1,25 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS_OBSERVER_DESIGN_V1_1",
+  "checks": {
+    "baseline_commit": "689e6f224cc1fe2ab0f9059635a12f692f60d6f4",
+    "reviewed_transport_sha256": "f8e111c09585ce48bb7c59555839393bb59bf8c101bb000bae056a503f740989",
+    "review_packet_source_hashes": "PASS: exact match to council manifest",
+    "outside_review": "2 completed with packet confirmation; 1 lane failed after 2 bounded timeouts",
+    "full_house_tests": "PASS: 288 tests and 83 subtests",
+    "repository_format": "PASS: codex-rs just fmt",
+    "json_validation": "PASS",
+    "git_diff_check": "PASS",
+    "controller_sha256": "977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37",
+    "controller_state": "UNCHANGED: mcu-infinity-war-001 PREPARED, null observation, zero leases, zero intents",
+    "provider_dispatch": "COUNCIL_REVIEW_ONLY; no worker or operation dispatch",
+    "implementation_scope": "DESIGN_ONLY"
+  },
+  "limitations": [
+    "No observer or verifier implementation exists in this phase.",
+    "No observation authenticates its own provenance.",
+    "No runtime qualification output reservation credential controller launcher provider or result-admission path is accepted.",
+    "The council manifest records privacy as unknown despite explicit cloud-ok packet text; the mismatch is retained as a runner defect.",
+    "The OpenCode Go review lane timed out twice and supplied no substantive review."
+  ]
+}

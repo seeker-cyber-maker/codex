@@ -1,0 +1,78 @@
+{
+  "schema": "codex-house-council-claim-ledger/1",
+  "council_id": "20260823-1402-host-observer-contract",
+  "claims": [
+    {
+      "claim_id": "OBS-001",
+      "claim": "Observation, pure verification, and later admission are separate authority boundaries.",
+      "status": "accepted_design",
+      "evidence": ["HOST_OBSERVER_CONTRACT.md#2-components-and-trust-boundaries"],
+      "reviewer_support": "two completed independent reviewers",
+      "decision_impact": "high",
+      "next_test": "patch ambient I/O and authority APIs to raise while pure verification succeeds"
+    },
+    {
+      "claim_id": "OBS-002",
+      "claim": "Effective-context closure is finite and source-versioned rather than an unbounded workspace walk.",
+      "status": "accepted_design",
+      "evidence": ["HOST_OBSERVER_CONTRACT.md#4-finite-discovery-grammar", "SOURCE_ANCHORS.md"],
+      "reviewer_support": "two completed independent reviewers",
+      "decision_impact": "high",
+      "next_test": "omit each config instruction hook rule skill plugin app and MCP contributor in turn"
+    },
+    {
+      "claim_id": "OBS-003",
+      "claim": "Current CLI 0.147.0 can publicly prove project configuration was ignored.",
+      "status": "contradicted",
+      "evidence": ["SOURCE_ANCHORS.md#cli-isolation-surface", "HOST_OBSERVER_CONTRACT.md#4-finite-discovery-grammar"],
+      "reviewer_support": "not disputed",
+      "decision_impact": "high",
+      "next_test": "inventory all project configuration contributors or refuse closure"
+    },
+    {
+      "claim_id": "OBS-004",
+      "claim": "Secret values and stable secret hashes are excluded from the observation bundle.",
+      "status": "accepted_design",
+      "evidence": ["HOST_OBSERVER_CONTRACT.md#5-secret-boundary"],
+      "reviewer_support": "two completed independent reviewers",
+      "decision_impact": "high",
+      "next_test": "request auth files and secret environment values and prove no bytes or hashes escape"
+    },
+    {
+      "claim_id": "OBS-005",
+      "claim": "Path metadata alone binds hashed bytes to the originally inspected file.",
+      "status": "contradicted_and_repaired",
+      "evidence": ["V1_1_DELTA.md"],
+      "reviewer_support": "security architect residual-risk finding",
+      "decision_impact": "high",
+      "next_test": "replace and rename entries around descriptor open read and final identity checks"
+    },
+    {
+      "claim_id": "OBS-006",
+      "claim": "Observer output or its content hash authenticates provenance.",
+      "status": "rejected",
+      "evidence": ["HOST_OBSERVER_CONTRACT.md#1-claim-ceiling", "SYNTHESIS.md#root-corrections"],
+      "reviewer_support": "one reviewer overclaimed; root rejected",
+      "decision_impact": "high",
+      "next_test": "later signer and trust-policy design only"
+    },
+    {
+      "claim_id": "OBS-007",
+      "claim": "The outside council completed all three requested reviews.",
+      "status": "contradicted",
+      "evidence": ["council/manifest.json", "council/reviewers/adversarial-red-teamer.md"],
+      "reviewer_support": "two completed and one failed",
+      "decision_impact": "medium",
+      "next_test": "do not retry this accepted bounded design review; diagnose OpenCode separately"
+    },
+    {
+      "claim_id": "OBS-008",
+      "claim": "The accepted design makes a prepared operation eligible for execution.",
+      "status": "rejected",
+      "evidence": ["HOST_OBSERVER_CONTRACT.md#11-admission-boundary", "SYNTHESIS.md#outcome"],
+      "reviewer_support": "two completed independent reviewers",
+      "decision_impact": "high",
+      "next_test": "separate later gates only"
+    }
+  ]
+}

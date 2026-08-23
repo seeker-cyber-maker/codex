@@ -1,0 +1,20 @@
+{
+  "schema": "codex-house-workflow-plan/1",
+  "phase_id": "20260823T140236Z-host-observer-contract",
+  "baseline_commit": "689e6f224cc1fe2ab0f9059635a12f692f60d6f4",
+  "case_type": "security_sensitive_design",
+  "model_advisory": {
+    "model": "sol",
+    "effort": "high",
+    "reassess_after": "accepted observer design and outside review"
+  },
+  "authority": "project_coordinator_design_and_private_backup",
+  "steps": [
+    {"id": "source_review", "state": "completed"},
+    {"id": "design_packet", "state": "completed"},
+    {"id": "outside_council", "state": "completed_with_one_failed_lane"},
+    {"id": "root_synthesis_and_repair", "state": "completed"},
+    {"id": "validation_and_seal", "state": "completed"}
+  ],
+  "next_gate": "isolated observer and pure verifier implementation"
+}

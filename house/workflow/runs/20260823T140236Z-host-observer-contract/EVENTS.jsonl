@@ -1,0 +1,8 @@
+{"event":"phase_recovered","baseline_commit":"689e6f224cc1fe2ab0f9059635a12f692f60d6f4","disposition":"resume_from_handoff"}
+{"event":"source_review_completed","result":"project config cannot be ignored by a proven public exec flag in codex-cli 0.147.0"}
+{"event":"design_packet_sealed_for_review","transport_sha256":"f8e111c09585ce48bb7c59555839393bb59bf8c101bb000bae056a503f740989"}
+{"event":"outside_council_completed","completed_reviewers":2,"failed_reviewers":1,"failed_lane":"opencode-go"}
+{"event":"root_repair_adopted","repair":"directory-anchored no-follow descriptor identity"}
+{"event":"coordinator_authority_recorded","scope":"project sequencing review acceptance reversible commits and private backup"}
+{"event":"validation_completed","tests":"288 passed and 83 subtests passed","controller_sha256":"977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37"}
+{"event":"design_accepted","disposition":"ACCEPT_OBSERVER_DESIGN_V1_1","next_gate":"isolated observer and pure verifier implementation"}
