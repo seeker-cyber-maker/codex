@@ -108,6 +108,12 @@ python3 -m house.relay.cli snapshot-inventory --input /path/to/paths.json
 The example paths are deliberately nonexistent; the command reports missing or
 invalid named locations instead of creating, guessing, or scanning for them.
 
+`render_operator_snapshot_inventory_html()` is the corresponding static status
+board. It accepts only caller-supplied records already returned by the named
+inventory, displays escaped path text and receipt hashes, and identifies valid
+and rejected records separately. It neither calls the inventory nor reads a
+path, so it is a frozen presentation—not a live dashboard.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
