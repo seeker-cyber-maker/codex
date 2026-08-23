@@ -1,0 +1,16 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS_WITH_BLOCKER",
+  "checks": {
+    "git_baseline": "PASS: 4285414702954c55dc6b642d8d39189faa0fbb22",
+    "installed_cli": "PASS: codex-cli 0.147.0",
+    "executable_operation_binding": "PASS: SHA-256 match",
+    "auth_mode": "PASS: ChatGPT from CLI and auth metadata",
+    "credential_disclosure": "PASS: no raw account ID or token retained",
+    "usage_pool": "PASS: persisted native limit_id=codex and plan_type=prolite",
+    "controller_state": "PASS: PREPARED, zero leases, zero launch intents, no observation",
+    "provider_request": "NOT_ATTEMPTED",
+    "runtime_profile": "BLOCKED: operation argv and isolation contract incomplete"
+  },
+  "claim_ceiling": "Read-only local qualification inventory; no runtime profile, dispatch, or authority"
+}

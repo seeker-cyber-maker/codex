@@ -1,0 +1,65 @@
+{
+  "schema": "codex-house-local-runtime-qualification-observation/1",
+  "observed_at": "2026-08-23T12:31:12Z",
+  "state": "LOCAL_OBSERVATION_ONLY",
+  "dispatch": "NOT_ATTEMPTED",
+  "authority": "NOT_GRANTED",
+  "operation": {
+    "operation_id": "mcu-infinity-war-001",
+    "record_sha256": "bb083f9c513d8e08fa18abb130317a9f30ad75021fd12e269482de15f246aaa0",
+    "controller_database_sha256": "977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37",
+    "state": "PREPARED",
+    "lease_count": 0,
+    "launch_intent_count": 0,
+    "observation_present": false
+  },
+  "executable": {
+    "path": "/Users/tiga/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/bin/codex",
+    "sha256": "19c4f144c5226a9f17c58e6f0fa854843b0f77a6eb420f40e2745a12f10f5d37",
+    "version": "codex-cli 0.147.0",
+    "operation_binding": "MATCH"
+  },
+  "authentication": {
+    "mode": "chatgpt",
+    "login_status": "Logged in using ChatGPT",
+    "account_id_present": true,
+    "account_id_disclosed": false,
+    "account_fingerprint_policy": "sha256(codex-house-account-id-v1\\u0000 + account_id)",
+    "account_fingerprint": "83966e50b5e87f8d2405ddf0b4b7423914d73d132b40d933fba23f904054234b"
+  },
+  "usage_pool": {
+    "limit_id": "codex",
+    "plan_type": "prolite",
+    "snapshot_timestamp": "2026-08-23T12:29:06.555Z",
+    "window_minutes": 10080,
+    "used_percent_at_snapshot": 45.0,
+    "rate_limit_reached_type": null,
+    "source_rollout": "/Users/tiga/.codex/sessions/2026/08/20/rollout-2026-08-20T20-46-01-01a021c8-2ab8-73d3-a4fe-539449d981c5.jsonl",
+    "source_line": 19560
+  },
+  "configuration": {
+    "config_sha256": "6bed1385b9d39234d7678a16be927cab0c9a2a5169c2719f4592dedf33404fbe",
+    "ambient_model": "gpt-5.6-sol",
+    "ambient_service_tier": "default",
+    "chatgpt_base_url_override_present": false,
+    "hooks_override_present": false,
+    "source_default_hooks_enabled": true,
+    "source_default_chatgpt_base_url": "https://chatgpt.com/backend-api/"
+  },
+  "source_anchors": [
+    "codex-rs/cli/src/login.rs:462",
+    "codex-rs/cli/src/login.rs:473",
+    "codex-rs/app-server-protocol/src/protocol/v2/account.rs:303",
+    "codex-rs/app-server-protocol/src/protocol/v2/account.rs:306",
+    "codex-rs/exec/src/cli.rs:34",
+    "codex-rs/exec/src/cli.rs:38",
+    "codex-rs/features/src/lib.rs:1027",
+    "codex-rs/features/src/lib.rs:1031",
+    "codex-rs/core/src/config/mod.rs:4115",
+    "codex-rs/core/src/config/mod.rs:4117",
+    "house/worker_exec/operation.py:112",
+    "house/worker_exec/operation.py:193"
+  ],
+  "claim_ceiling": "AMBIENT_IDENTITY_AND_SOURCE_BEHAVIOR_ONLY",
+  "profile_eligible": false
+}
