@@ -120,6 +120,16 @@ fixture runner. It records a blocked observation afterward. A real Codex
 runner is absent by construction. See
 `workflow/runs/20260822T011500Z-live-launch-interface-review/`.
 
+The disjoint real-runtime-profile verifier accepts only a caller-supplied,
+hash-bound structural profile that agrees with the sealed operation's explicit
+model, executable/CLI evidence, environment, runtime roots, config/hook content
+evidence, provider/account and usage-pool identity, egress, filesystem
+measurements, and bounded outputs. It can also explain why an older prepared
+operation is not qualified. Both receipts remain `NOT_ATTEMPTED` and grant no
+authority; the verifier does not create profiles, leases, intents, processes,
+provider calls, or results. See
+`workflow/runs/20260823T052100Z-real-runtime-profile/`.
+
 The keyboard-first preparation command is:
 
 ```sh

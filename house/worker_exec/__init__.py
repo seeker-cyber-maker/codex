@@ -21,12 +21,18 @@ from .process_supervisor import (
     supervise_fixture_process,
     supervise_process,
 )
+from .runtime_profile import (
+    RuntimeProfileError,
+    runtime_profile_gap_receipt,
+    verify_real_runtime_profile,
+)
 
 __all__ = [
     "CliContractError",
     "FixtureGateError",
     "MockAdmissionError",
     "ProcessSupervisorError",
+    "RuntimeProfileError",
     "WorkerControllerError",
     "WorkerExecError",
     "WorkerOperationController",
@@ -35,10 +41,12 @@ __all__ = [
     "prepare_mock_execution_authority",
     "prepare_mock_runtime_profile",
     "prepare_operation",
+    "runtime_profile_gap_receipt",
     "supervise_fixture_process",
     "supervise_process",
     "validate_cli_contract",
     "verify_mock_admission",
     "verify_mock_runtime_profile",
     "verify_operation",
+    "verify_real_runtime_profile",
 ]
