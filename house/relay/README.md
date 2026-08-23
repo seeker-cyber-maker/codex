@@ -145,6 +145,12 @@ command has no default source or destination, no source discovery, no scan,
 no overwrite option, and no browser, iTerm, listener, worker, provider, or
 authority behavior.
 
+`examples/operator-board-export-paths.example.json` is a copyable record of
+the three required path values. It is deliberately **not** a CLI input or a
+configuration file: replace its nonexistent absolute placeholders manually,
+then pass those three values as the explicit command flags above. Nothing reads
+it automatically, and it cannot select a source or destination for you.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

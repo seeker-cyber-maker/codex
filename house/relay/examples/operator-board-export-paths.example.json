@@ -1,0 +1,5 @@
+{
+  "operator_snapshot": "/absolute/path/to/frozen-operator-snapshot.html",
+  "inventory_board": "/absolute/path/to/frozen-snapshot-inventory.html",
+  "output": "/absolute/path/to/new-operator-board.html"
+}

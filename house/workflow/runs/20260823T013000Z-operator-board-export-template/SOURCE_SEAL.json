@@ -1,0 +1,9 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "b9c55ade7bd67650f37eb34cdb919ecf8174544f",
+  "scope": "static explicit operator-board export path template",
+  "files": {
+    "house/relay/README.md": "479779c97c65c29b54dcab36ea3f20ec94735f0a8d4aca2a58cf3b6d4a6b09f3",
+    "house/relay/examples/operator-board-export-paths.example.json": "b63f90fe5d6756c17255d8a5c7f850cd88db50cf5b04529d593040311b05db39"
+  }
+}
