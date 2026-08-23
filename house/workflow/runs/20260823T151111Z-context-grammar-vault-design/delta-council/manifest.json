@@ -1,0 +1,250 @@
+{
+  "council_id": "delta-council",
+  "mode": "independent-review",
+  "profile": "context-vault-design",
+  "task_mode": "design",
+  "transport_packet_sha256": "36d0742c83fce26019692d81ff77295aedad189de04effb90417e86cd265167a",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "house/workflow/runs/20260823T151111Z-context-grammar-vault-design/DELTA_REVIEW_PACKET.md",
+      "sha256": "b849e9396480fbfb742a36cc5a45e7def3c3baeb7a19c4f62facf9bab4f72140"
+    },
+    {
+      "path": "house/workflow/runs/20260823T151111Z-context-grammar-vault-design/ROOT_DESIGN_DELTA.md",
+      "sha256": "fe642b90f0f8a7be556fafaf0bff9937568b592d36eb2d2122c2e72e33433e85"
+    },
+    {
+      "path": "house/workflow/runs/20260823T151111Z-context-grammar-vault-design/CONTEXT_GRAMMAR_AND_VAULT_CONTRACT.md",
+      "sha256": "eea72cec3d0596a68379267ad93ca6571cb72c7413a1e80f79a20f2aca192bb2"
+    },
+    {
+      "path": "house/workflow/runs/20260823T151111Z-context-grammar-vault-design/council/reviewers/security-architect.md",
+      "sha256": "76544361390da35e75fcd9d67769bdf98e3c325d94cccfff2d03fcc6747aa500"
+    },
+    {
+      "path": "house/workflow/runs/20260823T151111Z-context-grammar-vault-design/council/reviewers/adversarial-methodologist.md",
+      "sha256": "f394b1af7428418e595177eea831b9e8b51ac44c6c806f7a59f9444071d74e8d"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "36d0742c83fce26019692d81ff77295aedad189de04effb90417e86cd265167a",
+      "started_at": "2026-08-23T15:20:22+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "google/gemma-4-31b-it:free",
+          "started_at": "2026-08-23T15:20:22+00:00",
+          "status": "failed",
+          "http_status": 429,
+          "error": "chat completion HTTP 429: Provider returned error",
+          "latency_seconds": 5.537,
+          "completed_at": "2026-08-23T15:20:28+00:00"
+        },
+        {
+          "attempt": 2,
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "started_at": "2026-08-23T15:20:28+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "length",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "prompt_tokens": 9725,
+            "completion_tokens": 6144,
+            "total_tokens": 15869,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 7145,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "latency_seconds": 112.841,
+          "completed_at": "2026-08-23T15:22:20+00:00"
+        }
+      ],
+      "selected_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "http_status": 200,
+      "finish_reason": "length",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "prompt_tokens": 9725,
+        "completion_tokens": 6144,
+        "total_tokens": 15869,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 7145,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "latency_seconds": 118.378,
+      "completed_at": "2026-08-23T15:22:20+00:00"
+    },
+    {
+      "id": "security-architect",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "36d0742c83fce26019692d81ff77295aedad189de04effb90417e86cd265167a",
+      "started_at": "2026-08-23T15:20:22+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "cline-pass/deepseek-v4-flash",
+          "started_at": "2026-08-23T15:20:22+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "completion_tokens": 3687,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 1709
+            },
+            "cost": 0.00901692,
+            "cost_details": null,
+            "is_byok": false,
+            "prompt_tokens": 9432,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 13119
+          },
+          "latency_seconds": 31.917,
+          "completed_at": "2026-08-23T15:20:54+00:00"
+        }
+      ],
+      "selected_model": "cline-pass/deepseek-v4-flash",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "completion_tokens": 3687,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 1709
+        },
+        "cost": 0.00901692,
+        "cost_details": null,
+        "is_byok": false,
+        "prompt_tokens": 9432,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 13119
+      },
+      "latency_seconds": 31.917,
+      "completed_at": "2026-08-23T15:20:54+00:00"
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-2.5-flash-lite",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-2.5-flash-lite"
+      ],
+      "packet_sha256": "36d0742c83fce26019692d81ff77295aedad189de04effb90417e86cd265167a",
+      "started_at": "2026-08-23T15:20:22+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "gemini-2.5-flash-lite",
+          "started_at": "2026-08-23T15:20:22+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 4.975,
+          "completed_at": "2026-08-23T15:20:27+00:00"
+        }
+      ],
+      "selected_model": "gemini-2.5-flash-lite",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 4.975,
+      "completed_at": "2026-08-23T15:20:27+00:00"
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 3,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-23T15:20:22+00:00",
+  "completed_at": "2026-08-23T15:22:20+00:00"
+}

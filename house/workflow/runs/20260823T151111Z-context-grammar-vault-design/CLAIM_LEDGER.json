@@ -1,0 +1,77 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "The pinned fork already contains an age-encrypted, OS-keyring-backed Codex secrets storage primitive with separate managed, auth, and MCP namespaces.",
+      "status": "observed",
+      "evidence": ["SOURCE_ANCHORS.md#pinned-source"],
+      "decision_impact": "high",
+      "next_test": "synthetic backend fixtures only"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "The accepted HostObserverV1 returns metadata and content SHA-256, not file contents, so it cannot alone supply semantic values to a pure grammar compiler.",
+      "status": "observed",
+      "evidence": ["house/worker_exec/host_observer.py", "ROOT_DESIGN_DELTA.md#d1---split-the-runtime-projector-from-the-grammar-compiler"],
+      "decision_impact": "high",
+      "next_test": "schema fixture proving content is absent"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "A bounded LocalContextFirewallV1 must parse raw structured configuration and is therefore part of the secrecy TCB.",
+      "status": "corroborated",
+      "evidence": ["ROOT_DESIGN_DELTA.md#d1---split-the-runtime-projector-from-the-grammar-compiler", "delta-council/reviewers/security-architect.md"],
+      "decision_impact": "high",
+      "next_test": "low-entropy synthetic secret leakage fixture"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "A pure verifier can validate lineage and consistency but cannot authenticate a coherently lying observer or prove a parser did not leak while parsing.",
+      "status": "corroborated",
+      "evidence": ["ROOT_DESIGN_DELTA.md#d3---observation-authenticity-and-launch-toctou", "delta-council/reviewers/security-architect.md"],
+      "decision_impact": "high",
+      "next_test": "coherently false observer fixture"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "At-rest encryption does not protect a namespace from a resolver process capable of decrypting that namespace.",
+      "status": "corroborated",
+      "evidence": ["ROOT_DESIGN_DELTA.md#d4---vault-compromise-ceiling", "delta-council/reviewers/security-architect.md"],
+      "decision_impact": "high",
+      "next_test": "resolver compromise in a disposable namespace"
+    },
+    {
+      "claim_id": "C-006",
+      "claim": "Revocation stops future uses but cannot retract a secret already delivered to a consumer.",
+      "status": "corroborated",
+      "evidence": ["ROOT_DESIGN_DELTA.md#d5---trusted-sinks-atomic-consumption-and-revocation", "delta-council/reviewers/security-architect.md"],
+      "decision_impact": "high",
+      "next_test": "post-injection failure and rotation-required fixture"
+    },
+    {
+      "claim_id": "C-007",
+      "claim": "V1 must reject secret delivery to agent-controlled shells, arbitrary commands, and model-visible tools.",
+      "status": "corroborated",
+      "evidence": ["ROOT_DESIGN_DELTA.md#d5---trusted-sinks-atomic-consumption-and-revocation", "delta-council/reviewers/security-architect.md"],
+      "decision_impact": "high",
+      "next_test": "valid-reference wrong-sink rejection fixture"
+    },
+    {
+      "claim_id": "C-008",
+      "claim": "Repository policy may version an opaque required reference ID, but the reference-to-label/value mapping, leases, and audit state remain local vault state.",
+      "status": "corroborated",
+      "evidence": ["ROOT_DESIGN_DELTA.md#d6---vault-references-and-git", "delta-council/reviewers/evidence-auditor.md"],
+      "decision_impact": "medium",
+      "next_test": "rotation fixture showing repository policy remains resolvable without stale secret mapping"
+    },
+    {
+      "claim_id": "C-009",
+      "claim": "The accepted artifact is a design contract only and grants no live observation, secret access, lease, launch, or runtime qualification.",
+      "status": "observed",
+      "evidence": ["PLAN.md#non-goals", "ROOT_DESIGN_DELTA.md"],
+      "decision_impact": "high",
+      "next_test": "none"
+    }
+  ]
+}

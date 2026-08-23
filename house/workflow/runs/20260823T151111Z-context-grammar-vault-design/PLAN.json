@@ -1,0 +1,17 @@
+{
+  "schema": "codex-house-workflow-plan/1",
+  "phase_id": "20260823T151111Z-context-grammar-vault-design",
+  "baseline_commit": "fbbf52145707bb50f7795ca2e8584b8785514199",
+  "case_type": "semantic_implementation",
+  "recommended_model": "sol",
+  "recommended_effort": "medium",
+  "authority": "project_coordinator_design_review_private_backup",
+  "write_scope": [
+    "house/workflow/runs/20260823T151111Z-context-grammar-vault-design"
+  ],
+  "implementation": "NOT_AUTHORIZED_IN_THIS_PHASE",
+  "live_configuration": "NOT_READ",
+  "secret_resolution": "NOT_ATTEMPTED",
+  "next_gate": "synthetic-only firewall compiler schemas and pure verifier first slice",
+  "state": "completed"
+}

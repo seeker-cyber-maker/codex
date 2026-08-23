@@ -1,0 +1,25 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS_CONTEXT_GRAMMAR_VAULT_DESIGN_NON_RUNTIME",
+  "checks": {
+    "baseline_commit": "fbbf52145707bb50f7795ca2e8584b8785514199",
+    "source_anchor_count": 11,
+    "original_review_transport_sha256": "f41847cff7d1ba45897ae42583d7a911f4690eafa5860caa5b9bb5fff6953e69",
+    "delta_review_transport_sha256": "36d0742c83fce26019692d81ff77295aedad189de04effb90417e86cd265167a",
+    "outside_council": "PASS WITH ROOT CORRECTIONS: 3/3 completed in each of two rounds; all hashes confirmed",
+    "implementation": "NOT_ATTEMPTED",
+    "live_configuration": "NOT_READ",
+    "keychain": "NOT_ACCESSED",
+    "secret_resolution": "NOT_ATTEMPTED",
+    "controller_sha256": "977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37",
+    "controller_state": "UNCHANGED: mcu-infinity-war-001 PREPARED, null observation, zero leases, zero launch intents",
+    "private_backup": "SOURCE_SEAL_PRESENT; COMMIT AND PUSH VERIFIED AFTER SEAL"
+  },
+  "limitations": [
+    "The firewall is a necessary secrecy TCB and its non-exfiltration cannot be proved by the pure verifier.",
+    "The observer provides consistency evidence only unless its binary and host boundary are authenticated.",
+    "The resolver can expose an entire readable namespace if compromised.",
+    "Free-form content needs an independent admission receipt; absence of a known secret pattern is not proof.",
+    "No runtime behavior or installed Codex app behavior was verified."
+  ]
+}
