@@ -1,0 +1,8 @@
+{"event":"phase_recovered","baseline_commit":"7fde7e524d2416973c8d19f430149a03be5fe0e9","disposition":"resume_from_synthetic_slice_handoff"}
+{"event":"plan_sealed","case_type":"security_containment","model_advisory":"sol/high","scope":"non-runtime threat model only"}
+{"event":"source_anchors_pinned","source_commit":"7fde7e524d2416973c8d19f430149a03be5fe0e9","live_private_sources":"NOT_READ"}
+{"event":"threat_model_candidate_frozen","artifact":"REAL_FIREWALL_VAULT_THREAT_MODEL.md","sha256":"91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"}
+{"event":"first_council_completed","transport_sha256":"9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f","attempted":3,"completed":2,"partial":1,"root_disposition":"MATERIAL_DELTA_REQUIRED"}
+{"event":"root_delta_frozen","artifact":"ROOT_THREAT_MODEL_DELTA.md","sha256":"edf2d5e905a63b771e181ebad7e199f63c557497c125a79aafeacbaa54b03214"}
+{"event":"delta_council_completed","transport_sha256":"e4f44ccedd72403917d9029d0c06664799fd0328fcfcb4d5e3324d93ae65dc42","attempted":3,"completed":2,"partial":1,"root_disposition":"ACCEPT_DESIGN_V1_1_NON_RUNTIME"}
+{"event":"root_disposition","state":"ACCEPT_DESIGN_V1_1_NON_RUNTIME","next_gate":"generated protocol and mock-storage slice only"}

@@ -1,0 +1,18 @@
+{
+  "schema": "codex-house-workflow-plan/1",
+  "phase_id": "20260823T154950Z-real-vault-threat-model",
+  "baseline_commit": "7fde7e524d2416973c8d19f430149a03be5fe0e9",
+  "case_type": "security_containment",
+  "recommended_model": "sol",
+  "recommended_effort": "high",
+  "authority": "project_coordinator_non_runtime_design_private_backup",
+  "write_scope": [
+    "house/workflow/runs/20260823T154950Z-real-vault-threat-model"
+  ],
+  "implementation": "NOT_AUTHORIZED_IN_THIS_PHASE",
+  "live_configuration": "NOT_READ",
+  "keychain": "NOT_ACCESSED",
+  "secret_resolution": "NOT_ATTEMPTED",
+  "next_gate": "protocol and mock-storage implementation with generated values only",
+  "state": "completed"
+}

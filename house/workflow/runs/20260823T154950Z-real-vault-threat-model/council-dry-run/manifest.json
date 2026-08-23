@@ -1,0 +1,107 @@
+{
+  "council_id": "council-dry-run",
+  "mode": "independent-review",
+  "profile": "real-vault-threat-model",
+  "task_mode": "design",
+  "transport_packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/EVIDENCE_PACKET.md",
+      "sha256": "1e0dfa960b9385cae94e1f78c4fb79f52f23033fb0b013228b202265cc333ace"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/PLAN.md",
+      "sha256": "f1209b6727b0b4664e5a3106afa300ed6b0dba44fb4c5d16693f68c707f6c6e3"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/SOURCE_ANCHORS.md",
+      "sha256": "a712ecec9d55ee4ec52813bc55a47462b959b331206e1f3bda52f75710c15068"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/REAL_FIREWALL_VAULT_THREAT_MODEL.md",
+      "sha256": "91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/secrets/src/lib.rs",
+      "sha256": "24adb17fb1c54e0e98107f53f36e63c47b4475d6421528548eadc009ae8529ef"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/secrets/src/local.rs",
+      "sha256": "d43996c83710542696da20117c6413a16615858a78c59bb9be3fafaee565bf2b"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/secrets/src/sanitizer.rs",
+      "sha256": "ccdd4ff1f672191c81f0586f106b8ebb35168ff10b9c186d1c8175dd69b3465b"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/keyring-store/src/lib.rs",
+      "sha256": "8e345522aa87967a0ce36e6f58c09f5cbc2cd775fbccd7dd5fba2ab0e35b76ba"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/process-hardening/src/lib.rs",
+      "sha256": "9a9a62f29a3b3f3e6ff6d35bb4015bd97d14b3d83ae3e54502f3e9e953d84fae"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+      "started_at": "2026-08-23T15:54:45+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:54:45+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "constructive-theorist",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+      "started_at": "2026-08-23T15:54:45+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:54:45+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-2.5-flash-lite",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-2.5-flash-lite"
+      ],
+      "packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+      "started_at": "2026-08-23T15:54:45+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:54:45+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-23T15:54:45+00:00",
+  "completed_at": "2026-08-23T15:54:45+00:00"
+}

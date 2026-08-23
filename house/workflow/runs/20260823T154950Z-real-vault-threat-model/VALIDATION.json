@@ -1,0 +1,27 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS_REAL_VAULT_THREAT_MODEL_NON_RUNTIME",
+  "checks": {
+    "baseline_commit": "7fde7e524d2416973c8d19f430149a03be5fe0e9",
+    "source_hashes": "verified against tracked source",
+    "first_review_transport_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+    "first_review_denominator": "3 attempted, 2 complete, 1 partial, 0 failed",
+    "delta_review_transport_sha256": "e4f44ccedd72403917d9029d0c06664799fd0328fcfcb4d5e3324d93ae65dc42",
+    "delta_review_denominator": "3 attempted, 2 complete, 1 partial, 0 failed",
+    "root_delta": "local deny and exposure monotonicity corrected; independent random namespace keys; resolver-side replay ledger; trusted macOS spawn boundary",
+    "implementation": "NOT_ATTEMPTED",
+    "live_configuration": "NOT_READ",
+    "keychain": "NOT_ACCESSED",
+    "credentials": "NOT_READ",
+    "network": "NOT_USED_BY_PROJECT_ARTIFACTS; outside council used declared cloud-ok provider lanes",
+    "controller_sha256_expected": "977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37",
+    "diff_check": "authored documents clean; preserved raw first-round reviewer output contains Markdown trailing-space provenance",
+    "private_backup": "SOURCE_SEAL_PRESENT; COMMIT_AND_PUSH_VERIFIED_AFTER_SEAL"
+  },
+  "limitations": [
+    "No runtime containment or macOS Keychain/Seatbelt compatibility was tested.",
+    "OpenRouter's Gemma primary returned 429 and its Nemotron fallback exhausted the completion limit in both rounds; those responses remain partial.",
+    "A resolver or sink compromise still exposes its declared blast radius; the design does not claim covert-channel elimination.",
+    "The provider-header adapter and controller nonce-ledger implementation remain future reviewed work."
+  ]
+}

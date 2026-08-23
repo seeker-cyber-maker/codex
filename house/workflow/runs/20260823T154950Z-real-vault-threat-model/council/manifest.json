@@ -1,0 +1,280 @@
+{
+  "council_id": "council",
+  "mode": "independent-review",
+  "profile": "real-vault-threat-model",
+  "task_mode": "design",
+  "transport_packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/EVIDENCE_PACKET.md",
+      "sha256": "1e0dfa960b9385cae94e1f78c4fb79f52f23033fb0b013228b202265cc333ace"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/PLAN.md",
+      "sha256": "f1209b6727b0b4664e5a3106afa300ed6b0dba44fb4c5d16693f68c707f6c6e3"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/SOURCE_ANCHORS.md",
+      "sha256": "a712ecec9d55ee4ec52813bc55a47462b959b331206e1f3bda52f75710c15068"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/REAL_FIREWALL_VAULT_THREAT_MODEL.md",
+      "sha256": "91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/secrets/src/lib.rs",
+      "sha256": "24adb17fb1c54e0e98107f53f36e63c47b4475d6421528548eadc009ae8529ef"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/secrets/src/local.rs",
+      "sha256": "d43996c83710542696da20117c6413a16615858a78c59bb9be3fafaee565bf2b"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/secrets/src/sanitizer.rs",
+      "sha256": "ccdd4ff1f672191c81f0586f106b8ebb35168ff10b9c186d1c8175dd69b3465b"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/keyring-store/src/lib.rs",
+      "sha256": "8e345522aa87967a0ce36e6f58c09f5cbc2cd775fbccd7dd5fba2ab0e35b76ba"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/codex-rs/process-hardening/src/lib.rs",
+      "sha256": "9a9a62f29a3b3f3e6ff6d35bb4015bd97d14b3d83ae3e54502f3e9e953d84fae"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+      "started_at": "2026-08-23T15:54:56+00:00",
+      "status": "partial",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "google/gemma-4-31b-it:free",
+          "started_at": "2026-08-23T15:54:56+00:00",
+          "status": "failed",
+          "http_status": 429,
+          "error": "chat completion HTTP 429: Provider returned error",
+          "latency_seconds": 4.515,
+          "completed_at": "2026-08-23T15:55:00+00:00"
+        },
+        {
+          "attempt": 2,
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "started_at": "2026-08-23T15:55:00+00:00",
+          "status": "partial",
+          "http_status": 200,
+          "finish_reason": "length",
+          "contract_valid": false,
+          "missing_sections": [
+            "## Authority-bearing facts",
+            "## Contradiction handling",
+            "## Stop and human escalation",
+            "## Failure containment and recovery",
+            "## Falsification experiments",
+            "## Assumptions and limitations"
+          ],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "prompt_tokens": 18264,
+            "completion_tokens": 6144,
+            "total_tokens": 24408,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 6724,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "latency_seconds": 83.211,
+          "completed_at": "2026-08-23T15:56:24+00:00"
+        }
+      ],
+      "selected_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "http_status": 200,
+      "finish_reason": "length",
+      "contract_valid": false,
+      "missing_sections": [
+        "## Authority-bearing facts",
+        "## Contradiction handling",
+        "## Stop and human escalation",
+        "## Failure containment and recovery",
+        "## Falsification experiments",
+        "## Assumptions and limitations"
+      ],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "prompt_tokens": 18264,
+        "completion_tokens": 6144,
+        "total_tokens": 24408,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6724,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "latency_seconds": 87.726,
+      "completed_at": "2026-08-23T15:56:24+00:00"
+    },
+    {
+      "id": "constructive-theorist",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+      "started_at": "2026-08-23T15:54:56+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "cline-pass/deepseek-v4-flash",
+          "started_at": "2026-08-23T15:54:56+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "completion_tokens": 3902,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 2821
+            },
+            "cost": 0.01312828,
+            "cost_details": null,
+            "is_byok": false,
+            "prompt_tokens": 18131,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 22033
+          },
+          "latency_seconds": 62.283,
+          "completed_at": "2026-08-23T15:55:58+00:00"
+        }
+      ],
+      "selected_model": "cline-pass/deepseek-v4-flash",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "completion_tokens": 3902,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 2821
+        },
+        "cost": 0.01312828,
+        "cost_details": null,
+        "is_byok": false,
+        "prompt_tokens": 18131,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 22033
+      },
+      "latency_seconds": 62.283,
+      "completed_at": "2026-08-23T15:55:58+00:00"
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-2.5-flash-lite",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-2.5-flash-lite"
+      ],
+      "packet_sha256": "9effcb178e9187de9e4355eebb0a9e4e696417cee2731cdd89cfb929162db17f",
+      "started_at": "2026-08-23T15:54:56+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "gemini-2.5-flash-lite",
+          "started_at": "2026-08-23T15:54:56+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 4.315,
+          "completed_at": "2026-08-23T15:55:00+00:00"
+        }
+      ],
+      "selected_model": "gemini-2.5-flash-lite",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 4.315,
+      "completed_at": "2026-08-23T15:55:00+00:00"
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 2,
+  "partial_reviewers": 1,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-23T15:54:56+00:00",
+  "completed_at": "2026-08-23T15:56:24+00:00"
+}

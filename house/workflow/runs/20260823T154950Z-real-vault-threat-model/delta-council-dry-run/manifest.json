@@ -1,0 +1,87 @@
+{
+  "council_id": "delta-council-dry-run",
+  "mode": "independent-review",
+  "profile": "real-vault-threat-model",
+  "task_mode": "design",
+  "transport_packet_sha256": "e4f44ccedd72403917d9029d0c06664799fd0328fcfcb4d5e3324d93ae65dc42",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/DELTA_REVIEW_PACKET.md",
+      "sha256": "5e777937e4d9ef38aea13066aaa2e9a909c2e2b0a1ec4ddecdd61bc8d7943ce6"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/REAL_FIREWALL_VAULT_THREAT_MODEL.md",
+      "sha256": "91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/ROOT_THREAT_MODEL_DELTA.md",
+      "sha256": "edf2d5e905a63b771e181ebad7e199f63c557497c125a79aafeacbaa54b03214"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/COUNCIL_CLAIM_LEDGER.json",
+      "sha256": "fc6b0556dffd98854208e5749fe473095d518d163c35f20efbf4fafb155fc557"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "e4f44ccedd72403917d9029d0c06664799fd0328fcfcb4d5e3324d93ae65dc42",
+      "started_at": "2026-08-23T15:59:06+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:59:06+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "constructive-theorist",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "e4f44ccedd72403917d9029d0c06664799fd0328fcfcb4d5e3324d93ae65dc42",
+      "started_at": "2026-08-23T15:59:06+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:59:06+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-2.5-flash-lite",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-2.5-flash-lite"
+      ],
+      "packet_sha256": "e4f44ccedd72403917d9029d0c06664799fd0328fcfcb4d5e3324d93ae65dc42",
+      "started_at": "2026-08-23T15:59:06+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-23T15:59:06+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-23T15:59:06+00:00",
+  "completed_at": "2026-08-23T15:59:06+00:00"
+}

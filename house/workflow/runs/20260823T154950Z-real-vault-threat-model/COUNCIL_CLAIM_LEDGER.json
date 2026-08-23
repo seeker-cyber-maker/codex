@@ -1,0 +1,79 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "Broker namespace keys must be cryptographically independent from current auth/MCP stores and from each other.",
+      "status": "corroborated",
+      "evidence": ["SOURCE_ANCHORS.md", "ROOT_THREAT_MODEL_DELTA.md#d1"],
+      "supporters": ["constructive-theorist", "adversarial-methodologist"],
+      "decision_impact": "high",
+      "next_test": "mock keyring two-namespace cross-decrypt rejection"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "A valid signed authority receipt overrides local policy.",
+      "status": "contradicted",
+      "evidence": ["ROOT_THREAT_MODEL_DELTA.md#d2"],
+      "supporters": ["constructive-theorist"],
+      "objectors": ["root"],
+      "decision_impact": "high",
+      "next_test": "valid signature plus local deny must reject before key access"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "NOT_EXPOSED may override a DELIVERY_ATTEMPTED state.",
+      "status": "contradicted",
+      "evidence": ["ROOT_THREAT_MODEL_DELTA.md#d2"],
+      "supporters": ["adversarial-methodologist"],
+      "objectors": ["root"],
+      "decision_impact": "high",
+      "next_test": "crash after delivery attempt must classify POSSIBLE_EXPOSURE"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "Replay prevention must be independently enforced before Keychain access rather than trusted to a compromised front end or audit prose.",
+      "status": "corroborated",
+      "evidence": ["ROOT_THREAT_MODEL_DELTA.md#d3", "council/reviewers/constructive-theorist.md"],
+      "supporters": ["constructive-theorist", "root"],
+      "decision_impact": "high",
+      "next_test": "duplicate nonce fails before mock keyring load counter increments"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "Current macOS process hardening is sufficient by itself for a future resolver.",
+      "status": "contradicted",
+      "evidence": ["SOURCE_ANCHORS.md", "ROOT_THREAT_MODEL_DELTA.md#d4"],
+      "supporters": [],
+      "objectors": ["root"],
+      "decision_impact": "high",
+      "next_test": "generated canary with clean parent spawn, hardened runtime, Seatbelt, and Keychain compatibility"
+    },
+    {
+      "claim_id": "C-006",
+      "claim": "The policy front end should fail decryption even if given both ciphertext and its real key.",
+      "status": "contradicted",
+      "evidence": ["ROOT_THREAT_MODEL_DELTA.md#d5"],
+      "supporters": ["constructive-theorist"],
+      "objectors": ["root"],
+      "decision_impact": "medium",
+      "next_test": "prove capability denial instead of impossible decryption failure"
+    },
+    {
+      "claim_id": "C-007",
+      "claim": "The first implementation remains mock-only and cannot access macOS Keychain or real secrets.",
+      "status": "observed",
+      "evidence": ["PLAN.md", "ROOT_THREAT_MODEL_DELTA.md#corrected-first-implementation-boundary"],
+      "supporters": ["root"],
+      "decision_impact": "high",
+      "next_test": "static forbidden-API and mock-call-count gates"
+    }
+  ],
+  "review_denominator": {
+    "attempted": 3,
+    "completed": 2,
+    "partial": 1,
+    "failed": 0,
+    "note": "OpenRouter primary returned 429; Nemotron fallback echoed the packet hash but exhausted its token limit before completing the design response contract."
+  }
+}
