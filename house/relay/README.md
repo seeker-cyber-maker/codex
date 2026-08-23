@@ -67,6 +67,13 @@ grammar; malformed, swapped, or active fragments fail closed. The snapshot has
 no refresh, listener, browser/iTerm call, terminal input, task/relay mutation,
 worker/provider call, capability issue, authority action, or reverse channel.
 
+`build_operator_snapshot_descriptor()` binds two caller-supplied frozen index
+documents and their exact static composition by SHA-256. It stores no document
+bodies, replays the static composition before issuing a descriptor, and records
+only offline/no-authority control states. `verify_operator_snapshot_descriptor()`
+repeats that bounded replay; neither function retrieves sources, refreshes
+state, binds a listener, or makes an action available.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

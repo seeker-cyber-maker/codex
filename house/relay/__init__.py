@@ -7,9 +7,16 @@ from .operator_preview import RelayPreviewCardError, render_relay_preview_card_h
 from .operator_registration import build_relay_preview_registration
 from .operator_snapshot import OperatorSnapshotError, render_operator_snapshot_html
 from .preview_index import RelayPreviewIndexError, render_relay_preview_index_html
+from .snapshot_descriptor import (
+    OperatorSnapshotDescriptorError,
+    build_operator_snapshot_descriptor,
+    inspect_operator_snapshot_descriptor,
+    verify_operator_snapshot_descriptor,
+)
 from .task_card_index import TaskCardIndexError, render_task_card_index_html
 
 __all__ = [
+    "OperatorSnapshotDescriptorError",
     "OperatorSnapshotError",
     "Relay",
     "RelayDirectory",
@@ -18,10 +25,13 @@ __all__ = [
     "RelayPreviewCardError",
     "RelayPreviewIndexError",
     "TaskCardIndexError",
+    "build_operator_snapshot_descriptor",
     "build_relay_preview_registration",
+    "inspect_operator_snapshot_descriptor",
     "prepare_relay_dashboard_viewer",
     "render_operator_snapshot_html",
     "render_relay_preview_card_html",
     "render_relay_preview_index_html",
     "render_task_card_index_html",
+    "verify_operator_snapshot_descriptor",
 ]

@@ -1,0 +1,12 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "466c743fc27152a767929ebd075f04b2f3cdd345",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/snapshot_descriptor.py": "8ffa428c84f45af0735cf78bb20ef160dcfa34da6c97ce6712edf6f84f343ba3",
+    "house/relay/tests/test_snapshot_descriptor.py": "ce984fc1eb26d75dd894dfc908e77035e9edd1b2bdd7071adb6d10d96cf588ba",
+    "house/relay/__init__.py": "21b69289938a3d2e32682845dd593e7348b25c5f2b73ef3435f6ea02f3f2fd5e",
+    "house/relay/README.md": "89501fff1c141e4524f04890f1b5cffa02e22eaea588fedd93278322457a7afb"
+  },
+  "disposition": "Core-profile local acceptance pending scoped commit; the descriptor remains caller-supplied and does not authorize live capture, refresh, or action."
+}
