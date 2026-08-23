@@ -1,0 +1,48 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "run_id": "20260823T132947Z-operation-v21-first-slice",
+  "claims": [
+    {
+      "claim_id": "I-001",
+      "claim": "Task card v2, route selection, and operation v2 are exact canonical hash-bound records.",
+      "status": "verified",
+      "evidence": ["house/worker_exec/operation_v2.py", "12 focused tests"],
+      "claim_ceiling": "structure and bindings only"
+    },
+    {
+      "claim_id": "I-002",
+      "claim": "Route advice cannot override hard model, provider, or usage-pool constraints.",
+      "status": "verified",
+      "evidence": ["test_02_conflicting_hard_constraints_refuse_before_assembly", "test_03_advisory_override_requires_a_reason"],
+      "claim_ceiling": "deterministic fixture scope"
+    },
+    {
+      "claim_id": "I-003",
+      "claim": "Operation-v2 assembly and verification perform no host I/O or ambient clock, randomness, process, or network call.",
+      "status": "verified",
+      "evidence": ["test_05_assembly_succeeds_with_host_io_and_ambient_apis_disabled", "AST forbidden-import and forbidden-call audit"],
+      "claim_ceiling": "plain built-in record inputs; no claim about code executed by an untrusted custom object"
+    },
+    {
+      "claim_id": "I-004",
+      "claim": "Project-input inventory and CLI supported flags are structurally bound and cannot change under a stale operation.",
+      "status": "verified",
+      "evidence": ["test_06_ignore_policy_requires_hash_bound_cli_flag_support", "test_07_project_inventory_change_requires_a_new_operation"],
+      "claim_ceiling": "does not prove that a host observer reported truth or completeness"
+    },
+    {
+      "claim_id": "I-005",
+      "claim": "Structural verification authenticates route authorship or makes a worker executable.",
+      "status": "rejected",
+      "evidence": ["test_09_unverified_authorship_never_becomes_execution_authority"],
+      "claim_ceiling": "signature and execution authority remain absent"
+    },
+    {
+      "claim_id": "I-006",
+      "claim": "The prepared MCU worker operation was changed or dispatched by this slice.",
+      "status": "contradicted",
+      "evidence": ["controller SHA-256 977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37", "PREPARED, null observation, zero leases, zero intents"],
+      "claim_ceiling": "observed local controller state"
+    }
+  ]
+}
