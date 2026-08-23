@@ -1,0 +1,26 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "unstarted verified operator-board viewer preparation",
+  "checks": [
+    {
+      "name": "focused operator-board viewer, export, and dashboard-viewer tests",
+      "command": "python3 -m unittest house.relay.tests.test_operator_board_viewer house.relay.tests.test_operator_board_export house.relay.tests.test_dashboard_viewer",
+      "result": "15 passed",
+      "exit_code": 0
+    },
+    {
+      "name": "all component House test suites",
+      "command": "for test_dir in $(find house -type d -name tests -print | sort); do python3 -m unittest discover -s \"$test_dir\" -p 'test_*.py'; done",
+      "result": "10 suites / 255 tests passed",
+      "exit_code": 0
+    },
+    {
+      "name": "scoped static checks",
+      "command": "python3 -m compileall -q house/relay && ruff check house/relay/operator_board_viewer.py house/relay/tests/test_operator_board_viewer.py house/relay/__init__.py && ruff format --check house/relay/operator_board_viewer.py house/relay/tests/test_operator_board_viewer.py house/relay/__init__.py && git diff --check",
+      "result": "pass",
+      "exit_code": 0
+    }
+  ],
+  "claim_ceiling": "A read-only preparation seam for one explicit, completed, verified export. It does not start a listener, issue a capability, launch browser/iTerm, scan or select paths, write data, open relay/task state, contact workers/providers, accept terminal input, grant authority, or open a reverse channel."
+}

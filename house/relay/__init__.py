@@ -9,6 +9,10 @@ from .operator_board_export import (
     inspect_operator_board_export,
     write_operator_board_export,
 )
+from .operator_board_viewer import (
+    OperatorBoardViewerError,
+    prepare_operator_board_viewer,
+)
 from .operator_inventory_view import (
     OperatorSnapshotInventoryViewError,
     render_operator_snapshot_inventory_html,
@@ -37,6 +41,7 @@ from .task_card_index import TaskCardIndexError, render_task_card_index_html
 __all__ = [
     "OperatorBoardError",
     "OperatorBoardExportError",
+    "OperatorBoardViewerError",
     "OperatorSnapshotDescriptorError",
     "OperatorSnapshotEnvelopeError",
     "OperatorSnapshotError",
@@ -55,6 +60,7 @@ __all__ = [
     "inspect_operator_snapshot_descriptor",
     "inspect_operator_snapshot_envelope",
     "inspect_operator_snapshot_inventory",
+    "prepare_operator_board_viewer",
     "prepare_relay_dashboard_viewer",
     "render_operator_board_html",
     "render_operator_snapshot_html",

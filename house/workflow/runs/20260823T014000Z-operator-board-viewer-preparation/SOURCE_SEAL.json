@@ -1,0 +1,11 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "e5de4841458f657e3fc15f99eef2437d83dc2c3f",
+  "scope": "unstarted verified operator-board viewer preparation",
+  "files": {
+    "house/relay/README.md": "d0d494df8c984a1e089915e3222ab65bbe782864abc28a27a4df80dfb0865a47",
+    "house/relay/__init__.py": "e5dfd656ec955e7d84b6a65111a427af194b39ad5f631caa270abcdf8d68fa07",
+    "house/relay/operator_board_viewer.py": "1371c52e551674aaf93060e1355a1043aeb58e2961b6470e827bd08501ebcc3f",
+    "house/relay/tests/test_operator_board_viewer.py": "ab5ad119e9a388a3c841cdc895675d49807b164ca2dc387a1166df85df87106b"
+  }
+}

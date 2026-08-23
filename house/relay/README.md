@@ -151,6 +151,15 @@ configuration file: replace its nonexistent absolute placeholders manually,
 then pass those three values as the explicit command flags above. Nothing reads
 it automatically, and it cannot select a source or destination for you.
 
+`prepare_operator_board_viewer()` is the separately bounded viewer-preparation
+seam. It accepts one explicit completed export path, verifies its board and
+receipt, freezes the exact verified board bytes, and returns the existing
+capability-bound `OneShotLoopbackViewer` without calling `start()`. It does not
+scan for exports, load the path template, write or replace files, refresh data,
+open a relay, launch a browser/iTerm, bind a listener, issue a capability, or
+grant authority. A later caller must explicitly own any viewer start and its
+separate authority/operation gate.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
