@@ -3,15 +3,21 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
 
+from house.task_spine.readonly import TaskSpineReadonlyError, load_task_cards_readonly
 from house.terminal_companion import LoopbackViewerError
 
 from .core import Relay, RelayError
 from .directory import RelayDirectory, RelayDirectoryError
+from .operator_board_bundle import (
+    OperatorBoardBundleError,
+    write_operator_board_bundle,
+)
 from .operator_board_export import (
     OperatorBoardExportError,
     write_operator_board_export,
@@ -42,6 +48,80 @@ def _load_text(path: str, parser: argparse.ArgumentParser, label: str) -> str:
         return Path(path).read_text(encoding="utf-8")
     except (OSError, UnicodeDecodeError) as exc:
         parser.error(f"cannot load {label}: {exc}")
+
+
+def _load_absolute_json(
+    path: str, parser: argparse.ArgumentParser, label: str
+) -> tuple[Any, Path, str]:
+    target = Path(path)
+    if not target.is_absolute():
+        parser.error(f"{label} path must be absolute")
+    if not target.is_file() or target.is_symlink():
+        parser.error(f"{label} must be an existing regular file")
+    try:
+        encoded = target.read_bytes()
+        return (
+            json.loads(encoded.decode("utf-8")),
+            target,
+            hashlib.sha256(encoded).hexdigest(),
+        )
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+        parser.error(f"cannot load {label}: {exc}")
+
+
+def _source_projections(
+    args: argparse.Namespace, parser: argparse.ArgumentParser
+) -> tuple[list[object], list[object], dict[str, object]]:
+    registrations: list[object] = []
+    relay_source: dict[str, object] = {
+        "state": "NOT_SUPPLIED",
+        "path": None,
+        "input_sha256": None,
+        "count": 0,
+    }
+    if args.relay_registrations:
+        value, path, digest = _load_absolute_json(
+            args.relay_registrations, parser, "relay registrations"
+        )
+        if not isinstance(value, list):
+            parser.error("relay registrations must be a JSON array")
+        registrations = value
+        relay_source = {
+            "state": "NAMED_JSON",
+            "path": str(path),
+            "input_sha256": digest,
+            "count": len(registrations),
+        }
+
+    task_cards: list[object] = []
+    task_source: dict[str, object] = {
+        "state": "NOT_SUPPLIED",
+        "path": None,
+        "journal_sha256": None,
+        "count": 0,
+    }
+    if args.task_spine_db:
+        target = Path(args.task_spine_db)
+        if not target.is_absolute():
+            parser.error("task-spine database path must be absolute")
+        try:
+            task_cards, journal_sha256 = load_task_cards_readonly(target)
+        except TaskSpineReadonlyError as exc:
+            parser.error(str(exc))
+        task_source = {
+            "state": "READ_ONLY_NAMED_DATABASE",
+            "path": str(target),
+            "journal_sha256": journal_sha256,
+            "count": len(task_cards),
+        }
+    return (
+        registrations,
+        task_cards,
+        {
+            "relay_registrations": relay_source,
+            "task_spine": task_source,
+        },
+    )
 
 
 def _relay(args: argparse.Namespace) -> Relay:
@@ -110,6 +190,23 @@ def main(argv: Sequence[str] | None = None) -> int:
         required=True,
         help="new absolute operator-board HTML path",
     )
+    build_board = commands.add_parser(
+        "build-operator-board",
+        help="write one new sealed offline operator-board bundle from named sources",
+    )
+    build_board.add_argument(
+        "--output-dir",
+        required=True,
+        help="new absolute directory for the complete operator-board bundle",
+    )
+    build_board.add_argument(
+        "--relay-registrations",
+        help="optional absolute JSON array of frozen relay-preview registrations",
+    )
+    build_board.add_argument(
+        "--task-spine-db",
+        help="optional absolute existing task-spine database opened read-only",
+    )
     start_board_viewer = commands.add_parser(
         "start-operator-board-viewer",
         help="manually start one bounded loopback preview for one completed export",
@@ -149,6 +246,14 @@ def main(argv: Sequence[str] | None = None) -> int:
                 )
             )
             return 0
+        if args.command == "build-operator-board":
+            registrations, task_cards, sources = _source_projections(args, parser)
+            _emit(
+                write_operator_board_bundle(
+                    args.output_dir, registrations, task_cards, sources
+                )
+            )
+            return 0
         if args.command == "start-operator-board-viewer":
             viewer = prepare_operator_board_viewer(args.output)
             grant = viewer.start()
@@ -180,6 +285,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             relay.close()
     except (
         OperatorBoardExportError,
+        OperatorBoardBundleError,
         OperatorBoardViewerError,
         OperatorSnapshotInventoryError,
         LoopbackViewerError,

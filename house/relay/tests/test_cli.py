@@ -214,6 +214,69 @@ class RelayCliTest(unittest.TestCase):
             self.run_cli(["export-operator-board"])
         self.assertEqual(raised.exception.code, 2)
 
+    def test_build_operator_board_creates_a_labeled_bootstrap_bundle(self) -> None:
+        target = self.root / "bootstrap-board"
+
+        exit_code, receipt = self.run_cli(
+            ["build-operator-board", "--output-dir", str(target)]
+        )
+
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(receipt["state"], "COMPLETE_OFFLINE")
+        self.assertEqual(
+            receipt["sources"]["relay_registrations"]["state"], "NOT_SUPPLIED"
+        )
+        self.assertEqual(receipt["sources"]["task_spine"]["state"], "NOT_SUPPLIED")
+        self.assertTrue((target / "operator-board.html").is_file())
+
+    def test_build_operator_board_reads_only_a_named_task_spine(self) -> None:
+        from house.task_spine import TaskSpine
+
+        spine_path = self.root / "tasks.sqlite"
+        spine = TaskSpine(spine_path)
+        spine.create_work_item("work-safe", "Read-only board source")
+        spine.create_task_packet(
+            "task-safe",
+            "work-safe",
+            "Render one board without changing this journal.",
+            case_type="evidence_review",
+        )
+        spine.close()
+        before = spine_path.read_bytes()
+
+        exit_code, receipt = self.run_cli(
+            [
+                "build-operator-board",
+                "--output-dir",
+                str(self.root / "named-spine-board"),
+                "--task-spine-db",
+                str(spine_path),
+            ]
+        )
+
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(
+            receipt["sources"]["task_spine"]["state"],
+            "READ_ONLY_NAMED_DATABASE",
+        )
+        self.assertEqual(receipt["sources"]["task_spine"]["count"], 1)
+        self.assertEqual(before, spine_path.read_bytes())
+
+    def test_build_operator_board_rejects_missing_named_task_spine(self) -> None:
+        missing = self.root / "missing.sqlite"
+        with self.assertRaises(SystemExit) as raised:
+            self.run_cli(
+                [
+                    "build-operator-board",
+                    "--output-dir",
+                    str(self.root / "missing-spine-board"),
+                    "--task-spine-db",
+                    str(missing),
+                ]
+            )
+        self.assertEqual(raised.exception.code, 2)
+        self.assertFalse(missing.exists())
+
     def test_start_operator_board_viewer_is_manual_and_returns_terminal_receipt(
         self,
     ) -> None:

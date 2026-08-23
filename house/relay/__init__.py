@@ -4,6 +4,11 @@ from .core import Relay, RelayError
 from .dashboard_viewer import prepare_relay_dashboard_viewer
 from .directory import RelayDirectory, RelayDirectoryError
 from .operator_board import OperatorBoardError, render_operator_board_html
+from .operator_board_bundle import (
+    OperatorBoardBundleError,
+    inspect_operator_board_bundle,
+    write_operator_board_bundle,
+)
 from .operator_board_export import (
     OperatorBoardExportError,
     inspect_operator_board_export,
@@ -39,6 +44,7 @@ from .snapshot_inventory import (
 from .task_card_index import TaskCardIndexError, render_task_card_index_html
 
 __all__ = [
+    "OperatorBoardBundleError",
     "OperatorBoardError",
     "OperatorBoardExportError",
     "OperatorBoardViewerError",
@@ -56,6 +62,7 @@ __all__ = [
     "TaskCardIndexError",
     "build_operator_snapshot_descriptor",
     "build_relay_preview_registration",
+    "inspect_operator_board_bundle",
     "inspect_operator_board_export",
     "inspect_operator_snapshot_descriptor",
     "inspect_operator_snapshot_envelope",
@@ -69,6 +76,7 @@ __all__ = [
     "render_relay_preview_index_html",
     "render_task_card_index_html",
     "verify_operator_snapshot_descriptor",
+    "write_operator_board_bundle",
     "write_operator_board_export",
     "write_operator_snapshot_envelope",
 ]

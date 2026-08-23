@@ -145,6 +145,42 @@ command has no default source or destination, no source discovery, no scan,
 no overwrite option, and no browser, iTerm, listener, worker, provider, or
 authority behavior.
 
+`build-operator-board` is the usable offline assembly command. It creates one
+new bundle directory containing a frozen self-snapshot envelope, the matching
+inventory document, the completed operator board, its receipt, and a canonical
+`bundle.json` provenance manifest. With no optional sources it produces an
+honest bootstrap bundle: both source records are marked `NOT_SUPPLIED`, rather
+than implying that the machine has no relay previews or tasks. It does not
+search for those sources.
+
+```bash
+python3 -m house.relay.cli build-operator-board \
+  --output-dir /absolute/path/to/new-operator-board-bundle
+```
+
+To include known data, name each source explicitly. `--relay-registrations`
+is a UTF-8 JSON array of already-validated frozen preview registrations.
+`--task-spine-db` is an existing absolute task-spine SQLite file opened in
+read-only mode; its journal is verified before its task cards are projected.
+Neither option has a default location and neither can create a state database.
+
+```bash
+python3 -m house.relay.cli build-operator-board \
+  --output-dir /absolute/path/to/new-operator-board-bundle \
+  --relay-registrations /absolute/path/to/relay-registrations.json \
+  --task-spine-db /absolute/path/to/task-spine.sqlite
+```
+
+After a successful build, the completed board for the one-shot viewer is:
+
+```text
+/absolute/path/to/new-operator-board-bundle/operator-board.html
+```
+
+The bundle is a named-sources snapshot, not a live dashboard: it does not
+refresh, mutate the relay or task spine, dispatch a worker, or claim that
+omitted sources are empty.
+
 `examples/operator-board-export-paths.example.json` is a copyable record of
 the three required path values. It is deliberately **not** a CLI input or a
 configuration file: replace its nonexistent absolute placeholders manually,
