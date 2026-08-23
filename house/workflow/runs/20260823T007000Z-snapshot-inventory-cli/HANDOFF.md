@@ -2,7 +2,7 @@
 
 ## Accepted milestone
 
-`python3 -m house.relay.cli snapshot-inventory --input <absolute-json-file>`
+`python3 -m house.relay.cli snapshot-inventory --input <json-file>`
 prints only the existing content-free inventory for its explicit JSON array of
 one to 32 absolute envelope paths. It has no default source or scan and returns
 before any relay database is opened.
