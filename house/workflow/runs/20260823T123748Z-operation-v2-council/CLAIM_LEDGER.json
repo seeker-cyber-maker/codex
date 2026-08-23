@@ -1,0 +1,72 @@
+{
+  "schema": "codex-house-council-claim-ledger/1",
+  "council_id": "20260823-1237-operation-v2",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "V1 derives explicit model argv from task-card recipient metadata.",
+      "status": "observed",
+      "evidence": ["house/worker_exec/operation.py:112", "house/worker_exec/operation.py:193"],
+      "supporters": ["security-architect", "assurance-human-factors"],
+      "objectors": [],
+      "shared_dependencies": ["same-transport-packet", "same-source-files"],
+      "decision_impact": "high",
+      "next_test": "none"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "Task card, route selection, operation, runtime profile, and execution authority should remain separate hash-bound objects.",
+      "status": "corroborated",
+      "evidence": ["V2_OPERATION_CONTRACT_PROPOSAL.md#proposed-boundary"],
+      "supporters": ["security-architect", "assurance-human-factors"],
+      "objectors": [],
+      "shared_dependencies": ["same-transport-packet"],
+      "decision_impact": "high",
+      "next_test": "v2.1 fixture mutation matrix"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "Later records may take precedence over earlier records when they disagree.",
+      "status": "contradicted",
+      "evidence": ["V2_OPERATION_CONTRACT_PROPOSAL.md#contradiction-and-stop-rules"],
+      "supporters": [],
+      "objectors": ["chair-synthesis"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "require mismatch refusal in every verifier"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "A selection evidence hash alone authenticates route provenance.",
+      "status": "contradicted",
+      "evidence": ["V2_OPERATION_CONTRACT_PROPOSAL.md#proposed-route-selection-record"],
+      "supporters": [],
+      "objectors": ["chair-synthesis"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "separate structural receipt from future signer admission"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "The first implementation can be a pure no-dispatch route record plus operation-v2 assembler/verifier.",
+      "status": "plausible",
+      "evidence": ["reviewers/assurance-human-factors.md#smallest-safe-first-implementation-slice"],
+      "supporters": ["assurance-human-factors", "security-architect"],
+      "objectors": [],
+      "shared_dependencies": ["same-transport-packet"],
+      "decision_impact": "high",
+      "next_test": "prove zero host I/O and mutation across focused fixtures"
+    },
+    {
+      "claim_id": "C-006",
+      "claim": "The proposed isolation argv is sufficient for real execution.",
+      "status": "unknown",
+      "evidence": ["V2_OPERATION_CONTRACT_PROPOSAL.md#candidate-argv-policy"],
+      "supporters": [],
+      "objectors": [],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "source-tested project-config strategy and effective capability capture"
+    }
+  ]
+}

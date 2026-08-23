@@ -1,0 +1,243 @@
+{
+  "council_id": "20260823-1237-operation-v2",
+  "mode": "independent-review",
+  "profile": "authority-boundary-council",
+  "task_mode": "design",
+  "transport_packet_sha256": "6d0a55cd66389681fb0b0d6c43bec5e442f3780a985cf1b6b111841cbff50071",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T123748Z-operation-v2-council/EVIDENCE_PACKET.md",
+      "sha256": "ace81af2bcbb948026eed9f14ab133ee6e8ca9ca5ff6a26a4ec5c352695c4b6e"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T123748Z-operation-v2-council/V2_OPERATION_CONTRACT_PROPOSAL.md",
+      "sha256": "9da0c458e3010124b5705dd3e81330cd5e4b6b0ada79bc56461623ba63f16902"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T123112Z-runtime-qualification-inventory/QUALIFICATION_MATRIX.md",
+      "sha256": "5bf0d36dc3436951f67c52db72031fbcf880cc488ab5958deba7730e2563e6fa"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/operation.py",
+      "sha256": "51aab6d7cb92b1f3337bbd1e075473ba9381acde451cbe413f0cf1bc7229d8e6"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/runtime_profile.py",
+      "sha256": "b3629fcb59b8fb9c95a0bbc67c6330259f9d2733783a46e13df6e09f19ecc1e2"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "security-architect",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "6d0a55cd66389681fb0b0d6c43bec5e442f3780a985cf1b6b111841cbff50071",
+      "started_at": "2026-08-23T12:39:51+00:00",
+      "status": "partial",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "cline-pass/deepseek-v4-flash",
+          "started_at": "2026-08-23T12:39:51+00:00",
+          "status": "partial",
+          "http_status": 200,
+          "finish_reason": "length",
+          "contract_valid": false,
+          "missing_sections": [
+            "## Assumptions and limitations"
+          ],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "completion_tokens": 4097,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 2266
+            },
+            "cost": 0.01046716,
+            "cost_details": null,
+            "is_byok": false,
+            "prompt_tokens": 11498,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 15595
+          },
+          "latency_seconds": 42.614,
+          "completed_at": "2026-08-23T12:40:34+00:00"
+        }
+      ],
+      "selected_model": "cline-pass/deepseek-v4-flash",
+      "http_status": 200,
+      "finish_reason": "length",
+      "contract_valid": false,
+      "missing_sections": [
+        "## Assumptions and limitations"
+      ],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "completion_tokens": 4097,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 2266
+        },
+        "cost": 0.01046716,
+        "cost_details": null,
+        "is_byok": false,
+        "prompt_tokens": 11498,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 15595
+      },
+      "latency_seconds": 42.614,
+      "completed_at": "2026-08-23T12:40:34+00:00"
+    },
+    {
+      "id": "adversarial-red-teamer",
+      "lane": "opencode-go",
+      "requested_model": "deepseek-v4-flash",
+      "provider": "OpenCode Go",
+      "harness": "provider-orchestration OpenCode Go catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4017/v1",
+      "candidate_models": [
+        "deepseek-v4-flash",
+        "qwen3.8-max"
+      ],
+      "packet_sha256": "6d0a55cd66389681fb0b0d6c43bec5e442f3780a985cf1b6b111841cbff50071",
+      "started_at": "2026-08-23T12:39:51+00:00",
+      "status": "failed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "deepseek-v4-flash",
+          "started_at": "2026-08-23T12:39:51+00:00",
+          "status": "failed",
+          "error": "timed out",
+          "latency_seconds": 90.256,
+          "completed_at": "2026-08-23T12:41:21+00:00"
+        },
+        {
+          "attempt": 2,
+          "model": "qwen3.8-max",
+          "started_at": "2026-08-23T12:41:21+00:00",
+          "status": "failed",
+          "error": "timed out",
+          "latency_seconds": 90.008,
+          "completed_at": "2026-08-23T12:42:51+00:00"
+        }
+      ],
+      "error": "deepseek-v4-flash: timed out; qwen3.8-max: timed out",
+      "latency_seconds": 180.264,
+      "completed_at": "2026-08-23T12:42:51+00:00"
+    },
+    {
+      "id": "assurance-human-factors",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "6d0a55cd66389681fb0b0d6c43bec5e442f3780a985cf1b6b111841cbff50071",
+      "started_at": "2026-08-23T12:39:51+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "google/gemma-4-31b-it:free",
+          "started_at": "2026-08-23T12:39:51+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "prompt_tokens": 12868,
+            "completion_tokens": 1188,
+            "total_tokens": 14056,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "latency_seconds": 42.034,
+          "completed_at": "2026-08-23T12:40:33+00:00"
+        }
+      ],
+      "selected_model": "google/gemma-4-31b-it:free",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "prompt_tokens": 12868,
+        "completion_tokens": 1188,
+        "total_tokens": 14056,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "latency_seconds": 42.034,
+      "completed_at": "2026-08-23T12:40:33+00:00"
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 1,
+  "partial_reviewers": 1,
+  "failed_reviewers": 1,
+  "started_at": "2026-08-23T12:39:51+00:00",
+  "completed_at": "2026-08-23T12:42:51+00:00"
+}

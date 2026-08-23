@@ -1,0 +1,17 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS_WITH_REVISION",
+  "checks": {
+    "project_recovery": "PASS: clean repository at 799adf8d5d",
+    "packet_dry_run": "PASS: three explicit lanes, one transport hash",
+    "packet_identity": "PASS: 6d0a55cd66389681fb0b0d6c43bec5e442f3780a985cf1b6b111841cbff50071",
+    "completed_reviews": "1",
+    "partial_reviews": "1: packet-confirmed, substantive, length-truncated",
+    "failed_reviews": "1: two bounded OpenCode Go timeouts retained",
+    "provider_reported_cost": "0.01046716 from ClinePass; 0 from OpenRouter; no purchase or configuration change",
+    "controller_state": "UNCHANGED: PREPARED, zero leases, zero intents, no observation",
+    "implementation": "NOT_ATTEMPTED",
+    "root_disposition": "REVISE_DESIGN"
+  },
+  "claim_ceiling": "Advisory external design review and root synthesis only; no execution or authority"
+}
