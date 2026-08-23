@@ -114,6 +114,11 @@ inventory, displays escaped path text and receipt hashes, and identifies valid
 and rejected records separately. It neither calls the inventory nor reads a
 path, so it is a frozen presentation—not a live dashboard.
 
+`render_operator_board_html()` composes one caller-supplied frozen operator
+snapshot and one caller-supplied inventory board into a single inert operator
+page. It validates both source signatures and static fragments, and does not
+run the inventory, access files, refresh data, or bind a viewer.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

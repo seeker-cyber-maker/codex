@@ -1,0 +1,11 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "1d44ce0f3ad44edc5b470a02feb6f58ef81c9259",
+  "scope": "frozen operator board",
+  "files": {
+    "house/relay/README.md": "3a6dedf6803dc63920434b4106423cf6c66c0e953a5f287e3d73947977288e13",
+    "house/relay/__init__.py": "d184e106dc53440dfb21679e3d0cbea77c6cd20f447593e2279571721da96258",
+    "house/relay/operator_board.py": "15cef7e47cb5b9ef0aec9d849ea4caab0cd360705fd0582a28aa5af975dd1367",
+    "house/relay/tests/test_operator_board.py": "9be2799beab219c11248b5a4fcc05e4ba839c528686bea01f643087c3c77bfc2"
+  }
+}
