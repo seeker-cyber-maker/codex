@@ -59,6 +59,14 @@ not create/mutate/dispatch tasks, bind a listener, start a viewer, call a
 browser or iTerm, accept terminal input, grant authority, or open a reverse
 channel.
 
+`render_operator_snapshot_html()` composes the already-rendered relay-preview
+and task-card indexes into one static operator document. It does not invoke
+either renderer or read their backing state. Both source documents must carry
+their exact static signatures and contain only the narrow supported fragment
+grammar; malformed, swapped, or active fragments fail closed. The snapshot has
+no refresh, listener, browser/iTerm call, terminal input, task/relay mutation,
+worker/provider call, capability issue, authority action, or reverse channel.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

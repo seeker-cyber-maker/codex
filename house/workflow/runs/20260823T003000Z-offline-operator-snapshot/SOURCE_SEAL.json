@@ -1,0 +1,12 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "de298ed21cc692a4bc35346a7e8450c5c7882e29",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/operator_snapshot.py": "7532c2a2437fcff71204aef18a75332555abbbac9389d6b576b2d8e8e4b80277",
+    "house/relay/tests/test_operator_snapshot.py": "14d84ec17cfb29705bea4d033f7df9824c6377ed25d12c73a419183f50082a4a",
+    "house/relay/__init__.py": "5313b8d3cad5863e85001faed9d11a892124a1eb38e858b287b79b38aa95f51d",
+    "house/relay/README.md": "3322d10a5085a6da8e62e9e5f222fa8bd4e6c231714b30fc265248a21979357f"
+  },
+  "disposition": "Core-profile local acceptance pending scoped commit; source refresh, live state, and action surfaces remain outside this source seal."
+}
