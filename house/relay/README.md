@@ -128,6 +128,23 @@ integrity receipt, not proof of author identity or source correctness.
 `inspect_operator_board_export()` verifies the board and companion receipt but
 does not retrieve or replay source documents.
 
+The keyboard-first `export-operator-board` command connects only explicit
+frozen source files to that export seam. It requires all three paths and opens
+no relay database or viewer:
+
+```bash
+python3 -m house.relay.cli export-operator-board \
+  --operator-snapshot /path/to/frozen-operator-snapshot.html \
+  --inventory-board /path/to/frozen-snapshot-inventory.html \
+  --output /absolute/path/to/new-operator-board.html
+```
+
+The output must be a new absolute file path below an existing parent; an
+existing board, companion receipt, or incomplete marker is rejected. The
+command has no default source or destination, no source discovery, no scan,
+no overwrite option, and no browser, iTerm, listener, worker, provider, or
+authority behavior.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

@@ -10,6 +10,10 @@ from typing import Any
 
 from .core import Relay, RelayError
 from .directory import RelayDirectory, RelayDirectoryError
+from .operator_board_export import (
+    OperatorBoardExportError,
+    write_operator_board_export,
+)
 from .snapshot_inventory import (
     OperatorSnapshotInventoryError,
     inspect_operator_snapshot_inventory,
@@ -24,6 +28,13 @@ def _load_json(path: str, parser: argparse.ArgumentParser, label: str) -> Any:
     try:
         return json.loads(Path(path).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
+        parser.error(f"cannot load {label}: {exc}")
+
+
+def _load_text(path: str, parser: argparse.ArgumentParser, label: str) -> str:
+    try:
+        return Path(path).read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
         parser.error(f"cannot load {label}: {exc}")
 
 
@@ -74,6 +85,25 @@ def main(argv: Sequence[str] | None = None) -> int:
         required=True,
         help="UTF-8 JSON array of one to 32 absolute envelope paths",
     )
+    export_board = commands.add_parser(
+        "export-operator-board",
+        help="write one frozen operator board to a new explicit output path",
+    )
+    export_board.add_argument(
+        "--operator-snapshot",
+        required=True,
+        help="UTF-8 frozen operator snapshot HTML path",
+    )
+    export_board.add_argument(
+        "--inventory-board",
+        required=True,
+        help="UTF-8 frozen snapshot inventory HTML path",
+    )
+    export_board.add_argument(
+        "--output",
+        required=True,
+        help="new absolute operator-board HTML path",
+    )
 
     args = parser.parse_args(argv)
     try:
@@ -90,6 +120,17 @@ def main(argv: Sequence[str] | None = None) -> int:
             _emit(
                 inspect_operator_snapshot_inventory(
                     _load_json(args.input, parser, "snapshot-envelope path list")
+                )
+            )
+            return 0
+        if args.command == "export-operator-board":
+            _emit(
+                write_operator_board_export(
+                    args.output,
+                    _load_text(
+                        args.operator_snapshot, parser, "frozen operator snapshot"
+                    ),
+                    _load_text(args.inventory_board, parser, "frozen inventory board"),
                 )
             )
             return 0
@@ -116,7 +157,12 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0
         finally:
             relay.close()
-    except (RelayError, RelayDirectoryError, OperatorSnapshotInventoryError) as exc:
+    except (
+        OperatorBoardExportError,
+        OperatorSnapshotInventoryError,
+        RelayDirectoryError,
+        RelayError,
+    ) as exc:
         parser.error(str(exc))
     return 2  # pragma: no cover
 

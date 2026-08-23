@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "e44406d8b641268f72e243e6946ec386b6033da8",
+  "scope": "manual explicit frozen operator board export CLI",
+  "files": {
+    "house/relay/README.md": "a65173091d2c495839a003786ac0f09093e20a78352b56c882855262dfb6c144",
+    "house/relay/cli.py": "64dd0336514b594a259afbbe40ec5ebb9925c87cfff95dc8f66a62ba38091921",
+    "house/relay/tests/test_cli.py": "c5b464d85ea05a809c9692f2b7d9097a853abd1b41ac65bd4489d542ce5e6d06"
+  }
+}
