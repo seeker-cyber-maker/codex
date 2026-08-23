@@ -91,14 +91,13 @@ def _validated_registration(registration: object) -> dict[str, str]:
     document_sha256 = _require_digest(
         registration.get("document_sha256"), "document digest"
     )
+    expected_target = {"kind": "relay_dashboard_document", "id": document_sha256}
     target = registration.get("target")
-    if target != {"kind": "relay_dashboard_document", "id": document_sha256}:
+    if target != expected_target:
         raise RelayPreviewCardError("invalid registration target")
     if not isinstance(target, Mapping):  # Keeps type check explicit for the command.
         raise RelayPreviewCardError("invalid registration target")
-    normalized_target = {"kind": document_sha256, "id": document_sha256}
-    normalized_target["kind"] = "relay_dashboard_document"
-    request_sha256 = _validate_command(registration.get("command"), normalized_target)
+    request_sha256 = _validate_command(registration.get("command"), expected_target)
     required_values = {
         "state": "PREPARED_UNAUTHORIZED",
         "operator_action": "EXPLICIT_START_AND_CAPABILITY_HANDOFF_REQUIRED",
@@ -128,6 +127,11 @@ def _validated_registration(registration: object) -> dict[str, str]:
         "request_sha256": request_sha256,
         "registration_sha256": registration_sha256,
     }
+
+
+def inspect_relay_preview_registration(registration: object) -> dict[str, str]:
+    """Return only the safe identifiers from one validated registration."""
+    return dict(_validated_registration(registration))
 
 
 def render_relay_preview_card_html(registration: object) -> str:

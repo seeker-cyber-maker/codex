@@ -1,0 +1,12 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_revision": "d86956d7d13344374f6f5f66c40227990ace45ca",
+  "state": "PENDING_COMMIT",
+  "files": {
+    "house/relay/operator_preview.py": "bb9085346784c49dca2591bedbf6a706f228b9a93fd624792acfc109aef76f07",
+    "house/relay/preview_index.py": "0b3247e0aa1a161ab922dd500dcf8cf75be05e3edc903848519889ddcb0ed94b",
+    "house/relay/tests/test_preview_index.py": "9f0ffb824d0467cc7c828add8f4bb5f3b3963a18ed3eee75522d638c78f6a926",
+    "house/relay/__init__.py": "306afa278a6840f851c7f0ee17e219f34a1d2cdb1c1b6a456c27d40f55864753"
+  },
+  "disposition": "Core-profile local acceptance pending scoped commit; any live aggregation remains outside this source seal."
+}

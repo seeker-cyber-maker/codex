@@ -46,6 +46,11 @@ It verifies both descriptor and command hashes, displays fixed control-plane
 fields and hashes, and deliberately omits dashboard content and all capability
 material. It has no interactive or transport behavior.
 
+`render_relay_preview_index_html()` composes up to 32 independently verified
+preview registrations into one deterministic, content-free, read-only index.
+It rejects invalid or duplicate registrations and adds no refresh, listener, or
+action behavior.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.
