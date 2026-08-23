@@ -1,0 +1,69 @@
+{
+  "schema": "codex-house-council-claim-ledger/1",
+  "council_id": "20260823-1303-operation-v21-adversarial",
+  "claims": [
+    {
+      "claim_id": "V21-001",
+      "claim": "V2.1 replaces precedence and repair-in-place with exact cross-record agreement and refusal.",
+      "status": "accepted_design",
+      "evidence": ["V2_1_OPERATION_CONTRACT.md#object-chain-and-invariant", "V2_1_OPERATION_CONTRACT.md#agreement-checks"],
+      "reviewer_support": "substantive analysis before truncation",
+      "decision_impact": "high",
+      "next_test": "mutation fixtures must make every cross-record mismatch fail"
+    },
+    {
+      "claim_id": "V21-002",
+      "claim": "Advisory routing and hard execution constraints are separate types and cannot mint dispatch authority.",
+      "status": "accepted_design",
+      "evidence": ["V2_1_OPERATION_CONTRACT.md#task-card-v2-routing-fields", "V2_1_OPERATION_CONTRACT.md#route-selection-record"],
+      "reviewer_support": "substantive analysis before truncation",
+      "decision_impact": "high",
+      "next_test": "reject conflicting hard constraints and unexplained advisory overrides"
+    },
+    {
+      "claim_id": "V21-003",
+      "claim": "The first-slice assembler can be implemented with zero host I/O.",
+      "status": "accepted_design_with_clarification",
+      "evidence": ["V2_1_OPERATION_CONTRACT.md#zero-host-io-input-descriptors", "V2_1_OPERATION_CONTRACT.md#falsification-matrix"],
+      "reviewer_support": "reviewer examined the ambiguity but did not reach a final disposition",
+      "decision_impact": "high",
+      "next_test": "make filesystem path process time randomness and network APIs fail while assembly still passes"
+    },
+    {
+      "claim_id": "V21-004",
+      "claim": "Route-selection hashes and author fields do not authenticate provenance in the first slice.",
+      "status": "accepted_design",
+      "evidence": ["V2_1_OPERATION_CONTRACT.md#route-selection-record", "V2_1_OPERATION_CONTRACT.md#provenance-and-future-signatures"],
+      "reviewer_support": "substantive analysis before truncation",
+      "decision_impact": "high",
+      "next_test": "valid hashes with unverified authorship must remain non-executable"
+    },
+    {
+      "claim_id": "V21-005",
+      "claim": "Project configuration cannot enter the eventual runtime without a proven ignore contract or complete content-addressed inventory.",
+      "status": "accepted_design",
+      "evidence": ["V2_1_OPERATION_CONTRACT.md#isolation-and-project-input-policy"],
+      "reviewer_support": "substantive analysis before truncation",
+      "decision_impact": "high",
+      "next_test": "reject unsupported ignore claims and any missing or additional contributor"
+    },
+    {
+      "claim_id": "V21-006",
+      "claim": "The replacement reviewer returned a complete valid response contract.",
+      "status": "contradicted",
+      "evidence": ["council-runs/20260823-1303-operation-v21-adversarial/manifest.json", "council-runs/20260823-1303-operation-v21-adversarial/reviewers/adversarial-methodologist.md"],
+      "reviewer_support": "none",
+      "decision_impact": "medium",
+      "next_test": "harden council contract validation to reject echoed placeholders and missing final disposition"
+    },
+    {
+      "claim_id": "V21-007",
+      "claim": "V2.1 makes a real worker eligible for execution.",
+      "status": "rejected",
+      "evidence": ["V2_1_OPERATION_CONTRACT.md#claim-ceiling", "V2_1_OPERATION_CONTRACT.md#credentials-runtime-and-logs"],
+      "reviewer_support": "none",
+      "decision_impact": "high",
+      "next_test": "separate later gates only"
+    }
+  ]
+}

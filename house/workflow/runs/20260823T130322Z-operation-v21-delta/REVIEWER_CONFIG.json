@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "lanes": {
+    "openrouter-explicit-free": {
+      "base_url": "http://127.0.0.1:4016/v1",
+      "api_key_env": "LITELLM_MASTER_KEY",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "require_model_suffix": ":free",
+      "forbid_models": ["openrouter/free", "openrouter/auto"]
+    }
+  },
+  "profiles": {
+    "operation-v21-adversarial": [
+      {
+        "id": "adversarial-methodologist",
+        "lane": "openrouter-explicit-free",
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "fallback_models": ["cohere/north-mini-code:free"]
+      }
+    ]
+  }
+}

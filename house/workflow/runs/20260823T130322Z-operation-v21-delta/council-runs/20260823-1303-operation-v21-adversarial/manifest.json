@@ -1,0 +1,123 @@
+{
+  "council_id": "20260823-1303-operation-v21-adversarial",
+  "mode": "independent-review",
+  "profile": "operation-v21-adversarial",
+  "task_mode": "design",
+  "transport_packet_sha256": "201a9c10539e801f7d7b60f67b384f61028dafd55c5569fa9e4e30a6d5a3fac4",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T130322Z-operation-v21-delta/EVIDENCE_PACKET.md",
+      "sha256": "359b9c49e709b83cb532de8f0641cb9696f18699d70ee7f27b776f4b754f7fa1"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T130322Z-operation-v21-delta/V2_1_OPERATION_CONTRACT.md",
+      "sha256": "86ba7bb545b0d71219f0c4be2173d3edbaaaf78adc4febc04c28289d8e27c24f"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T130322Z-operation-v21-delta/V2_1_DELTA.md",
+      "sha256": "5f7c19bd390f1f2154ac19c54bc3295208d156e496b53e1a51e9c68d250f0881"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T123748Z-operation-v2-council/CLAIM_LEDGER.json",
+      "sha256": "9ba51975c0e86074c788c8eda0cbf2d93ae5c79ffdb7914470488be64f592a6c"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T123748Z-operation-v2-council/SYNTHESIS.md",
+      "sha256": "fbe42c62df479f8769c760e1475f5aabc8c441addd942e0b3cb8f356d064f0a7"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "adversarial-methodologist",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "cohere/north-mini-code:free"
+      ],
+      "packet_sha256": "201a9c10539e801f7d7b60f67b384f61028dafd55c5569fa9e4e30a6d5a3fac4",
+      "started_at": "2026-08-23T13:05:42+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "started_at": "2026-08-23T13:05:42+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "length",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "prompt_tokens": 6858,
+            "completion_tokens": 4096,
+            "total_tokens": 10954,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 4625,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "latency_seconds": 84.775,
+          "completed_at": "2026-08-23T13:07:07+00:00"
+        }
+      ],
+      "selected_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "http_status": 200,
+      "finish_reason": "length",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "prompt_tokens": 6858,
+        "completion_tokens": 4096,
+        "total_tokens": 10954,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4625,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "latency_seconds": 84.775,
+      "completed_at": "2026-08-23T13:07:07+00:00"
+    }
+  ],
+  "attempted_reviewers": 1,
+  "completed_reviewers": 1,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-23T13:05:42+00:00",
+  "completed_at": "2026-08-23T13:07:07+00:00"
+}
