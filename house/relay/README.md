@@ -85,6 +85,13 @@ Neither function discovers sources, refreshes state, starts a viewer, binds a
 listener, calls iTerm/browser/provider/worker code, accepts terminal input, or
 grants authority.
 
+`inspect_operator_snapshot_inventory()` provides selection evidence only for a
+caller-supplied list or tuple of one to 32 absolute envelope paths. It does not
+scan a parent or storage volume, create a missing path, retry an incomplete
+write, repair/delete anything, or expose stored document bodies. Each named
+path receives either its descriptor/envelope hashes or a separate rejection
+reason, so a missing or invalid envelope cannot be mistaken for a valid one.
+
 This is intentionally distinct from the upstream Codex network rendezvous
 transport and the Dream House task-spine controller. A later, separately
 qualified bridge may connect them; it must not weaken either contract.

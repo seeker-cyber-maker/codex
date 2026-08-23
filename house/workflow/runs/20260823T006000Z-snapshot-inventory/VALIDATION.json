@@ -1,0 +1,26 @@
+{
+  "schema": "codex-house-validation/1",
+  "state": "PASS",
+  "scope": "named offline operator snapshot inventory",
+  "checks": [
+    {
+      "name": "inventory, envelope, descriptor, snapshot, and source-index focused tests",
+      "command": "python3 -m unittest house.relay.tests.test_snapshot_inventory house.relay.tests.test_snapshot_envelope house.relay.tests.test_snapshot_descriptor house.relay.tests.test_operator_snapshot house.relay.tests.test_preview_index house.relay.tests.test_task_card_index",
+      "result": "21 passed",
+      "exit_code": 0
+    },
+    {
+      "name": "all component House test suites",
+      "command": "for test_dir in $(find house -type d -name tests -print | sort); do python3 -m unittest discover -s \"$test_dir\" -p 'test_*.py'; done",
+      "result": "10 suites / 241 tests passed",
+      "exit_code": 0
+    },
+    {
+      "name": "static checks",
+      "command": "python3 -m compileall -q house/relay && ruff check changed files && ruff format --check changed files && git diff --check",
+      "result": "pass",
+      "exit_code": 0
+    }
+  ],
+  "claim_ceiling": "A caller-supplied-path, read-only inventory over immutable local snapshot envelopes. It does not scan storage, create/retry/repair/delete data, apply retention, discover or refresh sources, read live task/relay state, bind a listener, start a viewer, launch a browser, call iTerm, accept terminal input, create/mutate/dispatch tasks, contact workers/providers, grant authority, or open a reverse channel."
+}

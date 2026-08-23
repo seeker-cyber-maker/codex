@@ -1,0 +1,11 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "base_commit": "6be3bc1fb04c4e26e8637e1b6108c66dd672bda2",
+  "scope": "named offline snapshot inventory",
+  "files": {
+    "house/relay/README.md": "e87dc35079008e1508ba388b19f56ab4ecaa239b1cab8730b1575efa1aeb062b",
+    "house/relay/__init__.py": "42888436a773e36883f1645fb1127b2951fdb9a7e3928a54d7d64ff68f583e68",
+    "house/relay/snapshot_inventory.py": "e8e49201c2c22f22e1a401f0ba9b7665b26be1bf819f7ba8720e029a78670f1c",
+    "house/relay/tests/test_snapshot_inventory.py": "834bedd7cec8336f3d70686d100eceba897881c5a93cb4ff21ff1a511cf6f96e"
+  }
+}
