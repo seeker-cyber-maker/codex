@@ -1,0 +1,24 @@
+{
+  "schema": "dream-house-source-seal/1",
+  "base_commit": "33bd404501",
+  "claim_ceiling": "SYNTHETIC_RECOVERY_POLICY_STRUCTURE_AND_TRANSITIONS_ONLY",
+  "artifacts": {
+    "house/task_spine/recovery_policy.py": "274668d6cdf19cdeeaff1b40ca539ddf91c78e441af1db6923c8147ec74f7042",
+    "house/task_spine/tests/test_recovery_policy.py": "37e08de7c2ed774bdabcb9e25fcbf7704502ad844511bf0d723bfa68da2ae9aa",
+    "EVALUATION_CARD.json": "1612b900f99c90d516ef77c09f0c31fad98a65ab609a02817660935d56fc2a7a",
+    "IMPLEMENTATION_RECEIPT.json": "cdd97988f51de1c0aae960b9bc5589334fbae986ef310c16cfda905d47736655"
+  },
+  "validation": [
+    "python3 -m py_compile house/task_spine/recovery_policy.py house/task_spine/tests/test_recovery_policy.py",
+    "python3 -m unittest house.task_spine.tests.test_recovery_policy",
+    "python3 -m unittest house.task_spine.tests.test_authority house.task_spine.tests.test_authority_crypto"
+  ],
+  "council_disposition": "ACCEPTED_SYNTHETIC_SOURCE_ONLY",
+  "forbidden_operations": [
+    "real key/package operation",
+    "hardware/Keychain access",
+    "persistence/controller/CLI/provider integration",
+    "network or dispatch",
+    "recovery-ready claim"
+  ]
+}

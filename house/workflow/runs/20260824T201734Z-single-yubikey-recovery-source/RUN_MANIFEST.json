@@ -8,7 +8,7 @@
   "accepted_plan": "PLAN.md + PLAN_V2.md",
   "plan_v2_sha256": "19767b5999c43d43cb31e1132a5dfae859c350f416acc683ad93a9640530a264",
   "claim_ceiling": "SYNTHETIC_RECOVERY_POLICY_STRUCTURE_AND_TRANSITIONS_ONLY",
-  "status": "PLAN_ACCEPTED_SOURCE_ONLY",
+  "status": "ACCEPTED_SYNTHETIC_SOURCE_ONLY",
   "forbidden": [
     "real key or package operations",
     "hardware or Keychain access",
@@ -17,5 +17,5 @@
     "task dispatch",
     "recovery-ready claim"
   ],
-  "next_gate": "implement private pure module and dedicated synthetic tests"
+  "next_gate": "separate stateful-integration plan required before any operational recovery work"
 }

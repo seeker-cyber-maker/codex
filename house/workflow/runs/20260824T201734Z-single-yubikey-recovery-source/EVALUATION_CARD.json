@@ -1,0 +1,113 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "single-yubikey-recovery-source-v1",
+  "claim_ids": [
+    "synthetic-recovery-policy-transition-contract",
+    "synthetic-recovery-policy-source-isolation"
+  ],
+  "task_distribution": {
+    "scope": "synthetic V6 recovery-policy schemas and deterministic state transitions only",
+    "temporal_cutoff": "2026-08-24",
+    "new_vs_legacy_slices": [
+      "new private recovery-policy module",
+      "unchanged legacy authority candidate regression"
+    ],
+    "out_of_distribution_slices": [
+      "malformed schema",
+      "replay and stale binding",
+      "wrong signer role",
+      "forbidden import/call graph"
+    ]
+  },
+  "fixtures": {
+    "public": ["synthetic recovery state and manifest fixtures in dedicated tests"],
+    "private": [],
+    "adversarial": [
+      "unknown and missing fields",
+      "wrong signer/epoch/replacement",
+      "challenge replay and conflict",
+      "early transition",
+      "forbidden source imports/calls"
+    ],
+    "known_answer": [
+      "one complete V6 transition sequence",
+      "whole receipt and state objects"
+    ]
+  },
+  "contamination": {
+    "sources_checked": [
+      "accepted V6 recovery policy",
+      "accepted source-only plan V2",
+      "existing authority modules for negative boundary evidence"
+    ],
+    "tool_access_restrictions": [
+      "no real keys",
+      "no YubiKey or Keychain",
+      "no database or controller wiring",
+      "no network/provider/CLI operations"
+    ],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {
+      "applicability": "required",
+      "reason": "new source and tests carry the claim",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "execution_trace": {
+      "applicability": "required",
+      "reason": "focused deterministic test commands must be receipted",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "side_effects": {
+      "applicability": "required",
+      "reason": "AST/source graph isolation must confirm no operational surface",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "cost": {
+      "applicability": "required",
+      "reason": "local bounded tests only",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "latency": {
+      "applicability": "not_applicable",
+      "reason": "no interactive runtime claim",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "recovery": {
+      "applicability": "not_applicable",
+      "reason": "the slice models recovery semantics without persistent recovery operations",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "long_horizon": {
+      "applicability": "not_applicable",
+      "reason": "bounded source-only implementation",
+      "gate": null,
+      "evidence_refs": []
+    }
+  },
+  "oracles": [
+    "whole-object unittest fixtures",
+    "AST source-isolation check",
+    "unchanged legacy authority regression tests"
+  ],
+  "semantic_reviewers": [],
+  "metrics": ["all focused tests pass", "all source-isolation predicates pass"],
+  "thresholds": ["zero failed focused tests", "zero forbidden imports/calls/references"],
+  "uncertainty_method": "claim ceiling retained in every verifier result",
+  "failure_taxonomy": [
+    "schema refusal",
+    "state transition refusal",
+    "replay conflict",
+    "source-isolation failure",
+    "legacy regression"
+  ],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision"
+}

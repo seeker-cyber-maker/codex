@@ -1,0 +1,38 @@
+{
+  "schema": "project-evaluation-result/1",
+  "evaluation_card_sha256": "1612b900f99c90d516ef77c09f0c31fad98a65ab609a02817660935d56fc2a7a",
+  "recorded_at": "2026-08-24T20:58:15Z",
+  "result": "PASS_WITH_SYNTHETIC_CEILING",
+  "observations": {
+    "final_output": {
+      "gate": "PASS",
+      "evidence_refs": ["recovery_policy.py", "test_recovery_policy.py"]
+    },
+    "execution_trace": {
+      "gate": "PASS",
+      "evidence_refs": ["IMPLEMENTATION_RECEIPT.json"]
+    },
+    "side_effects": {
+      "gate": "PASS",
+      "evidence_refs": ["test_recovery_policy.py::test_source_isolation_and_no_production_reachability"]
+    },
+    "cost": {
+      "gate": "PASS",
+      "evidence_refs": ["IMPLEMENTATION_RECEIPT.json"]
+    }
+  },
+  "claims_supported": [
+    "synthetic recovery-policy structure and deterministic transition semantics",
+    "source-level isolation from existing operational authority surfaces"
+  ],
+  "claims_not_supported": [
+    "real recovery",
+    "key custody or signature validity",
+    "hardware or Keychain behavior",
+    "trusted time",
+    "persistent transaction or crash atomicity",
+    "controller/CLI/provider integration",
+    "runtime admission or task dispatch",
+    "recovery readiness"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "dream-house-source-only-implementation-receipt/1",
+  "recorded_at": "2026-08-24T20:58:15Z",
+  "plan_v2_sha256": "19767b5999c43d43cb31e1132a5dfae859c350f416acc683ad93a9640530a264",
+  "source": {
+    "path": "house/task_spine/recovery_policy.py",
+    "sha256": "274668d6cdf19cdeeaff1b40ca539ddf91c78e441af1db6923c8147ec74f7042"
+  },
+  "tests": {
+    "path": "house/task_spine/tests/test_recovery_policy.py",
+    "sha256": "37e08de7c2ed774bdabcb9e25fcbf7704502ad844511bf0d723bfa68da2ae9aa"
+  },
+  "commands": [
+    {
+      "command": "python3 -m py_compile house/task_spine/recovery_policy.py house/task_spine/tests/test_recovery_policy.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -m unittest house.task_spine.tests.test_recovery_policy",
+      "result": "PASS",
+      "tests_run": 5
+    },
+    {
+      "command": "python3 -m unittest house.task_spine.tests.test_authority house.task_spine.tests.test_authority_crypto",
+      "result": "PASS",
+      "tests_run": 13
+    }
+  ],
+  "claim_ceiling": "SYNTHETIC_RECOVERY_POLICY_STRUCTURE_AND_TRANSITIONS_ONLY",
+  "authority": "NOT_GRANTED",
+  "dispatch": "NOT_ATTEMPTED",
+  "hardware": "NOT_ACCESSED",
+  "key_material": "NOT_ACCESSED",
+  "runtime_admission": "NOT_ATTEMPTED",
+  "excluded": [
+    "real key or package operations",
+    "YubiKey or Keychain access",
+    "database/controller/CLI/provider integration",
+    "network use",
+    "recovery-ready claim"
+  ]
+}

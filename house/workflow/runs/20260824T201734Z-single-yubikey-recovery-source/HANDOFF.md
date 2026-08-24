@@ -1,6 +1,6 @@
 # Handoff: single-YubiKey recovery source slice
 
-Status: `PLAN_ACCEPTED_SOURCE_ONLY`.
+Status: `ACCEPTED_SYNTHETIC_SOURCE_ONLY`.
 
 The accepted contract is `PLAN.md` plus the authoritative corrections in
 `PLAN_V2.md`. Implement only:
@@ -15,7 +15,10 @@ receipt ceiling is
 `SYNTHETIC_RECOVERY_POLICY_STRUCTURE_AND_TRANSITIONS_ONLY` with authority and
 runtime actions explicitly not granted/attempted/accessed.
 
-Next acceptance check: dedicated recovery-policy tests plus unchanged legacy
-authority tests pass, the AST/source-graph isolation test passes, and an
-independent review confirms no claim or authority widening. Stop before any real
-key, encrypted package, YubiKey, Keychain, persistence, or ceremony work.
+Completed evidence: dedicated recovery-policy tests, legacy authority/crypto
+regressions, AST/source-graph isolation, and a three-role local council review
+all passed at the synthetic claim ceiling. See `IMPLEMENTATION_RECEIPT.json`,
+`IMPLEMENTATION_COUNCIL_SUMMARY.md`, `SOURCE_SEAL.json`, and `AACR.md`.
+
+Next gate: a separate stateful-integration plan. Stop before any real key,
+encrypted package, YubiKey, Keychain, persistence, or ceremony work.
