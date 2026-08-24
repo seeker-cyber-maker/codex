@@ -1,0 +1,36 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260824T190500Z-runtime-qualification-plan",
+  "starting_head": "52e1c473452cd96d20b8c3cdc5e36fd6742877c0",
+  "profile": "full",
+  "case_type": "security_containment",
+  "authority": "USER_DELEGATED_PLANNER_BUILDER_PLAN_AND_EVIDENCE_ONLY",
+  "write_scope": ["house/workflow/runs/20260824T190500Z-runtime-qualification-plan"],
+  "read_scope": [
+    "house/worker_exec/runtime_profile.py",
+    "house/worker_exec/operation_v2.py",
+    "house/worker_exec/operation.py",
+    ".house-state/mcu-infinity-war/operation-controller.sqlite",
+    "house/workflow/runs/20260823T052100Z-real-runtime-profile",
+    "house/workflow/runs/20260824T182208Z-canary-entrypoint-static"
+  ],
+  "forbidden": [
+    "operation creation", "controller write", "credential discovery", "Keychain",
+    "certificate discovery", "candidate build", "bundle creation", "signing",
+    "launch", "provider request", "network", "YubiKey", "canary", "real secret"
+  ],
+  "graph": [
+    {"id":"freeze","owner":"coordinator","depends_on":[],"acceptance":"hash-bound source and current-operation facts"},
+    {"id":"plan","owner":"coordinator","depends_on":["freeze"],"acceptance":"no-dispatch qualification plan and evaluation card"},
+    {"id":"council","owner":"outside-council","depends_on":["plan"],"acceptance":"accept, revise, or blocker disposition"}
+  ],
+  "budgets": {"source_remediations":0,"operation_writes":0,"launches":0,"network_requests":0,"council_rounds":5},
+  "council_checkpoints": [
+    {"id":"plan","trigger":"after_plan_seal","blocking":true,"decision_question":"Does the plan preserve the no-dispatch evidence boundary and identify the first legal next action?","privacy":"local-only","maximum_staleness":"before any source or operation mutation"}
+  ],
+  "status":"PLAN_V5_SEALED_PENDING_TARGETED_COUNCIL",
+  "superseding_plan":"PLAN_V5.md",
+  "council_budget_delta":"raised from 2 to 5 after four evidence-bound schema revisions; no execution, provider, or external-cost surface added",
+  "controller_snapshot": {"path":"CONTROLLER_SNAPSHOT.json","sha256":"31f97621260a06be0049972bdd5e2a36d5d020d6d3ed8a7e25079f4208b366e1","method":"sqlite3 read-only query of operation, lease, and launch_intent"},
+  "council_round_one": {"packet_sha256":"6d158b52657bcf0b7eeca50cdbb9ad49f7163b1d363b4f68434400e369272520","accept":1,"revise":2,"block":0}
+}

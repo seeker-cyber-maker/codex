@@ -1,0 +1,14 @@
+{
+  "schema": "dream-house-read-only-controller-summary/1",
+  "observed_at": "2026-08-24T19:12:00Z",
+  "database_sha256": "977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37",
+  "operation_id": "mcu-infinity-war-001",
+  "record_sha256": "bb083f9c513d8e08fa18abb130317a9f30ad75021fd12e269482de15f246aaa0",
+  "state": "PREPARED",
+  "lease_count": 0,
+  "launch_intent_count": 0,
+  "observation_state": "ABSENT",
+  "dispatch": "NOT_ATTEMPTED",
+  "authority": "NOT_GRANTED",
+  "claim_ceiling": "READ_ONLY_CURRENT_ROW_SUMMARY"
+}

@@ -1,0 +1,11 @@
+{
+  "schema":"dream-house-validation/1",
+  "state":"PLAN_ACCEPTED_NO_IMPLEMENTATION",
+  "checks":{
+    "legacy_controller_snapshot":"PASS: read-only row summary bound by database hash",
+    "source_baseline":"PASS: runtime_profile and operation_v2 sources read only",
+    "council":"PASS: first round 1 accept 2 revise; all targeted objections resolved",
+    "forbidden_operations":"PASS: no operation write, credential discovery, build, signing, launch, provider, network, canary, or secret operation"
+  },
+  "claim_ceiling":"Plan and source-evidence only; no runtime qualification or execution admission"
+}

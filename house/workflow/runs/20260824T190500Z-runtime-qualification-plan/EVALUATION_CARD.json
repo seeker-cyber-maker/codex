@@ -1,0 +1,17 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "runtime-qualification-v2-plan",
+  "claim_ids": ["LEGACY_OPERATION_INELIGIBLE", "V2_BINDING_VERIFIER_NEXT"],
+  "task_distribution": {"scope":"no-dispatch runtime-qualification plan","temporal_cutoff":"2026-08-24T19:05:00Z","new_vs_legacy_slices":["legacy MCU v1 record","existing v2 structural records","proposed pure binding verifier"],"out_of_distribution_slices":["live provider", "candidate app", "real sandbox runtime"]},
+  "fixtures": {"public":["runtime_profile.py","operation_v2.py"],"private":["read-only local controller row"],"adversarial":["implicit model","route/operation mismatch","self-hashed evidence","credential-derived record"],"known_answer":["legacy MCU gap receipt"]},
+  "contamination": {"sources_checked":["20260823T052100Z real-runtime-profile handoff","20260824T182208Z entrypoint seal"],"tool_access_restrictions":["no provider","no credential discovery","no operation write","no launch"],"history_or_solution_leakage_checked":true},
+  "observations": {"final_output":{"applicability":"required","reason":"plan and claim ceiling","gate":null,"evidence_refs":[]},"execution_trace":{"applicability":"required","reason":"read-only source and database inspection","gate":null,"evidence_refs":[]},"side_effects":{"applicability":"required","reason":"no operation mutation is mandatory","gate":null,"evidence_refs":[]},"cost":{"applicability":"not_applicable","reason":"no external work","gate":null,"evidence_refs":[]},"latency":{"applicability":"not_applicable","reason":"no service claim","gate":null,"evidence_refs":[]},"recovery":{"applicability":"required","reason":"later operation must remain separately recoverable","gate":null,"evidence_refs":[]},"long_horizon":{"applicability":"not_applicable","reason":"one planning slice","gate":null,"evidence_refs":[]}},
+  "oracles":["runtime_profile gap receipt","operation-v2 verifier invariants","council review"],
+  "semantic_reviewers":["outside council"],
+  "metrics":["unresolved prerequisite count","forbidden-operation count","cross-record mismatch coverage"],
+  "thresholds":["legacy record remains ineligible","no external-effect operation","all future inputs explicitly typed"],
+  "uncertainty_method":"claim ceiling and separate observer gate",
+  "failure_taxonomy":["implicit model","unverified provenance","stale evidence","ambient host discovery","scope escalation"],
+  "raw_evidence_retained":true,
+  "supersession_policy":"append a new run"
+}

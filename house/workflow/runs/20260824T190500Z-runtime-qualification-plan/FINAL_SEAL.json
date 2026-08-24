@@ -1,0 +1,28 @@
+{
+  "schema":"codex-house-final-seal/1",
+  "sealed_at":"2026-08-24T19:25:00Z",
+  "starting_head":"52e1c473452cd96d20b8c3cdc5e36fd6742877c0",
+  "state":"PLAN_ACCEPTED_PENDING_FRESH_SOURCE_IMPLEMENTATION_RUN",
+  "claim_ceiling":"UNTRUSTED_INPUT_STRUCTURE_AND_CROSS_BINDINGS_ONLY",
+  "source_files":{
+    "house/worker_exec/runtime_profile.py":"b3629fcb59b8fb9c95a0bbc67c6330259f9d2733783a46e13df6e09f19ecc1e2",
+    "house/worker_exec/operation_v2.py":"3569bc26ccb2374ae707c12ba269280d0d8bbc00abeb17a70ef0b5f0590d035f"
+  },
+  "run_files":{
+    "PLAN.md":"7383d36328d0740b74a87b7301895f4d9c5f386cf776ae7883cc4f188cd481e7",
+    "PLAN_V2.md":"0d4c4d3cacd8f0e8eeb2bd6dcb961240ca7da9b0e1df83ef649dee4445c9ac63",
+    "PLAN_V3.md":"e1aba5bac764004d806ba56e074be81e4c3f3c47c32351c8ad5417f2def4a233",
+    "PLAN_V4.md":"11436d08240b76d0e05ad0dcc6b4de21b05e17b43bf094baa0b343d7040fd30c",
+    "PLAN_V5.md":"c219f869474e38c3b0ce0b0f60151d0a52a6f1bb9c152d5affa55294e5427f70",
+    "RUN_MANIFEST.json":"774a833854e918ca0bc9699db9840a1f170e96273d846dde9986d18e1ddfaf16",
+    "CONTROLLER_SNAPSHOT.json":"31f97621260a06be0049972bdd5e2a36d5d020d6d3ed8a7e25079f4208b366e1",
+    "EVIDENCE_PACKET.md":"6d158b52657bcf0b7eeca50cdbb9ad49f7163b1d363b4f68434400e369272520",
+    "COUNCIL_SUMMARY.md":"b7008888f8610e12b2c584f16f768c4e7525b40fe94b4895b345e97aafc9aff0",
+    "VALIDATION.json":"dbd4afa7a892ab31842b75e4eeb180505e294a3fdb87928d3212eee7178ffcdf",
+    "HANDOFF.md":"24862b958cd4d91721903936e72e0d3e714d50ea311a41d82d8d79ddde5e48db",
+    "EVENTS.jsonl":"06e0b58054832cd97d7e7878fcda08579869e98ccc30435ece63c603a7cd83c0"
+  },
+  "council":"ACCEPT_PLAN_AFTER_FIVE_EVIDENCE_BOUND_PLAN_REVISIONS",
+  "still_forbidden":["operation creation","controller write","credential discovery","candidate build","signing","launch","provider","network","YubiKey","canary","real secret"],
+  "next_gate":"fresh source-only P1 implementation run or separately authorized R1 observer/trust-root plan"
+}

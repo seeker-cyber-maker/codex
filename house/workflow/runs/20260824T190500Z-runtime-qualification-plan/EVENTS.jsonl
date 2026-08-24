@@ -1,0 +1,10 @@
+{"event":"run_opened","at":"2026-08-24T19:05:00Z","starting_head":"52e1c473452cd96d20b8c3cdc5e36fd6742877c0","disposition":"RECOVERY_PLAN"}
+{"event":"evidence_frozen","at":"2026-08-24T19:05:00Z","legacy_operation":"mcu-infinity-war-001 PREPARED no leases no intents","live_coordinator":"ABSENT","forbidden_operations":"NOT_ATTEMPTED"}
+{"event":"plan_sealed","at":"2026-08-24T19:05:00Z","plan":"PLAN.md","claim_ceiling":"NO_DISPATCH_SOURCE_AND_EVIDENCE_BINDING_ONLY","next":"BLOCKING_OUTSIDE_COUNCIL_PLAN_REVIEW"}
+{"event":"council_round_one","at":"2026-08-24T19:10:00Z","packet_sha256":"6d158b52657bcf0b7eeca50cdbb9ad49f7163b1d363b4f68434400e369272520","accept":1,"revise":2,"finding":"structural_binding_cannot_establish_observer_independence_or_current_freshness"}
+{"event":"controller_snapshot","at":"2026-08-24T19:12:00Z","database_sha256":"977ce2be9ff3701f53afce5c02f1c772cf2fd06aa2d5adadfc13c62b8be6dd37","operation":"mcu-infinity-war-001","state":"PREPARED","lease_count":0,"launch_intent_count":0}
+{"event":"plan_delta_sealed","at":"2026-08-24T19:12:00Z","plan":"PLAN_V2.md","scope":"untrusted_binding_only_and_later_observer_trust_root","next":"TARGETED_COUNCIL_RECHECK"}
+{"event":"plan_delta_sealed","at":"2026-08-24T19:15:00Z","plan":"PLAN_V3.md","scope":"typed_attestation_claims_account_fingerprint_policy_snapshot_binding","next":"TARGETED_COUNCIL_RECHECK"}
+{"event":"plan_delta_sealed","at":"2026-08-24T19:18:00Z","plan":"PLAN_V4.md","scope":"self_issue_disposition_binding_and_untrusted_receipt_ceiling","next":"TARGETED_COUNCIL_RECHECK"}
+{"event":"plan_delta_sealed","at":"2026-08-24T19:21:00Z","plan":"PLAN_V5.md","scope":"non_circular_attestation_content_hash","council_budget_delta":5,"next":"FINAL_TARGETED_COUNCIL_RECHECK"}
+{"event":"council_accepted","at":"2026-08-24T19:23:00Z","decision":"ACCEPT_PLAN","claim_ceiling":"UNTRUSTED_INPUT_STRUCTURE_AND_CROSS_BINDINGS_ONLY","next":"FRESH_SOURCE_IMPLEMENTATION_RUN_OR_SEPARATE_R1_PLAN"}
