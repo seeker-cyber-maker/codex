@@ -16,6 +16,7 @@ from house.native.canary_helper.artifact_inspection import (
     inspect_candidate,
 )
 from house.native.canary_helper.build_objects import build_objects
+from house.native.canary_helper.run_codec_tests import run_codec_tests
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -83,6 +84,17 @@ class StaticNativeContractTests(unittest.TestCase):
         positions = [header.index(name) for name in expected]
         self.assertEqual(positions, sorted(positions))
 
+    def test_pure_codec_contract_executable_passes_without_identity(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-codec-test-") as directory:
+            receipt = run_codec_tests(ROOT, directory)
+            self.assertEqual(receipt["state"], "PURE_CODEC_TEST_LINKED_AND_PASSED")
+            self.assertEqual(receipt["run_returncode"], 0)
+            self.assertEqual(receipt["test_executable_signature"], "adhoc")
+            self.assertEqual(receipt["test_executable_team_identifier"], "not set")
+            self.assertEqual(receipt["candidate_link"], "NOT_ATTEMPTED")
+            self.assertEqual(receipt["candidate_launch"], "NOT_ATTEMPTED")
+            self.assertEqual(receipt["identity_signing"], "NOT_ATTEMPTED")
+
 
 class ArtifactInspectionTests(unittest.TestCase):
     def _fixture(self, root: Path) -> tuple[dict[str, object], dict[str, dict[str, object]]]:
@@ -110,7 +122,7 @@ class ArtifactInspectionTests(unittest.TestCase):
             },
         }
         policy: dict[str, object] = {
-            "schema": "dream-house-canary-signing-policy/1",
+            "schema": "dream-house-canary-signing-policy/2",
             "state": "SEALED_CANDIDATE",
             "platform_build": "TEST-BUILD",
             "artifacts": {},
@@ -119,6 +131,7 @@ class ArtifactInspectionTests(unittest.TestCase):
         for name, record in records.items():
             artifacts[name] = {
                 "relative_path": str(record["path"].relative_to(root)),
+                "size": record["path"].stat().st_size,
                 "sha256": _sha256(record["path"]),
                 "cdhash": record["cdhash"],
                 "team_identifier": "TEAM123456",
@@ -145,7 +158,9 @@ class ArtifactInspectionTests(unittest.TestCase):
                 xml = plistlib.dumps(record["entitlements"], fmt=plistlib.FMT_XML).decode()
                 return subprocess.CompletedProcess(argv, 0, xml, "")
             metadata = (
-                f"Identifier=house.{name}\nSignature size=9000\n"
+                f"Identifier=house.{name}\n"
+                f"Format={record.get('format', 'Mach-O 64-bit executable arm64')}\n"
+                "Signature size=9000\n"
                 f"TeamIdentifier=TEAM123456\nCDHash={record['cdhash']}\n"
             )
             return subprocess.CompletedProcess(argv, 0, "", metadata)
@@ -158,12 +173,19 @@ class ArtifactInspectionTests(unittest.TestCase):
             policy, records = self._fixture(root)
             commands: list[list[str]] = []
             result = inspect_candidate(
-                root, policy, runner=self._runner(records, commands)
+                root,
+                policy,
+                runner=self._runner(records, commands),
+                platform_build_provider=lambda: "TEST-BUILD",
             )
             self.assertEqual(result["state"], QUALIFIED_STATE)
             self.assertEqual(result["candidate_launch"], "NOT_ATTEMPTED")
             self.assertEqual(len(commands), 8)
             self.assertTrue(all(command[0] == CODESIGN for command in commands))
+            source_paths = {str(record["path"]) for record in records.values()}
+            self.assertTrue(all(command[-1] not in source_paths for command in commands))
+            self.assertTrue(all(not Path(command[-1]).exists() for command in commands))
+            self.assertEqual(result["inspection_subject"], "PRIVATE_PINNED_FD_COPY")
 
     def test_unconfigured_policy_refuses_before_tool_invocation(self) -> None:
         policy = json.loads((ROOT / "signing_policy.json").read_text())
@@ -173,7 +195,12 @@ class ArtifactInspectionTests(unittest.TestCase):
             commands.append(argv)
             raise AssertionError("codesign must not run")
 
-        result = inspect_candidate(ROOT, policy, runner=runner)
+        result = inspect_candidate(
+            ROOT,
+            policy,
+            runner=runner,
+            platform_build_provider=lambda: "TEST-BUILD",
+        )
         self.assertEqual(result["state"], REFUSED_STATE)
         self.assertIn("not SEALED_CANDIDATE", result["reason"])
         self.assertEqual(commands, [])
@@ -188,7 +215,10 @@ class ArtifactInspectionTests(unittest.TestCase):
                 "com.apple.security.network.client": True,
             }
             result = inspect_candidate(
-                root, policy, runner=self._runner(records, [])
+                root,
+                policy,
+                runner=self._runner(records, []),
+                platform_build_provider=lambda: "TEST-BUILD",
             )
             self.assertEqual(result["state"], REFUSED_STATE)
             self.assertIn("entitlement set mismatch", result["reason"])
@@ -202,7 +232,10 @@ class ArtifactInspectionTests(unittest.TestCase):
             parent.symlink_to(records["helper"]["path"])
             commands: list[list[str]] = []
             result = inspect_candidate(
-                root, policy, runner=self._runner(records, commands)
+                root,
+                policy,
+                runner=self._runner(records, commands),
+                platform_build_provider=lambda: "TEST-BUILD",
             )
             self.assertEqual(result["state"], REFUSED_STATE)
             self.assertIn("symlink", result["reason"])
@@ -216,10 +249,129 @@ class ArtifactInspectionTests(unittest.TestCase):
             (root / "Contents").symlink_to(root / "RealContents")
             commands: list[list[str]] = []
             result = inspect_candidate(
-                root, policy, runner=self._runner(records, commands)
+                root,
+                policy,
+                runner=self._runner(records, commands),
+                platform_build_provider=lambda: "TEST-BUILD",
             )
             self.assertEqual(result["state"], REFUSED_STATE)
             self.assertIn("path component is a symlink", result["reason"])
+            self.assertEqual(commands, [])
+
+    def test_normalizing_path_components_are_rejected_before_codesign(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-path-normalization-") as directory:
+            root = Path(directory)
+            policy, records = self._fixture(root)
+            for relative_path in (".", "Contents/./MacOS/DreamHouseCanaryParent"):
+                with self.subTest(relative_path=relative_path):
+                    policy["artifacts"]["parent"]["relative_path"] = relative_path
+                    commands: list[list[str]] = []
+                    result = inspect_candidate(
+                        root,
+                        policy,
+                        runner=self._runner(records, commands),
+                        platform_build_provider=lambda: "TEST-BUILD",
+                    )
+                    self.assertEqual(result["state"], REFUSED_STATE)
+                    self.assertIn("strict relative path", result["reason"])
+                    self.assertEqual(commands, [])
+
+    def test_platform_build_mismatch_is_rejected_before_codesign(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-platform-drift-") as directory:
+            root = Path(directory)
+            policy, records = self._fixture(root)
+            commands: list[list[str]] = []
+            result = inspect_candidate(
+                root,
+                policy,
+                runner=self._runner(records, commands),
+                platform_build_provider=lambda: "DIFFERENT-BUILD",
+            )
+            self.assertEqual(result["state"], REFUSED_STATE)
+            self.assertIn("platform_build does not match", result["reason"])
+            self.assertEqual(commands, [])
+
+    def test_source_replacement_during_snapshot_inspection_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-source-race-") as directory:
+            root = Path(directory)
+            policy, records = self._fixture(root)
+            commands: list[list[str]] = []
+            base_runner = self._runner(records, commands)
+            mutated = False
+
+            def runner(argv: list[str]) -> subprocess.CompletedProcess[str]:
+                nonlocal mutated
+                result = base_runner(argv)
+                if not mutated and "--verify" in argv:
+                    Path(records["parent"]["path"]).write_bytes(b"replacement")
+                    mutated = True
+                return result
+
+            result = inspect_candidate(
+                root,
+                policy,
+                runner=runner,
+                platform_build_provider=lambda: "TEST-BUILD",
+            )
+            self.assertEqual(result["state"], REFUSED_STATE)
+            self.assertIn("source content changed", result["reason"])
+            self.assertTrue(commands)
+
+    def test_snapshot_mutation_during_codesign_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-snapshot-race-") as directory:
+            root = Path(directory)
+            policy, records = self._fixture(root)
+            commands: list[list[str]] = []
+            base_runner = self._runner(records, commands)
+            mutated = False
+
+            def runner(argv: list[str]) -> subprocess.CompletedProcess[str]:
+                nonlocal mutated
+                result = base_runner(argv)
+                if not mutated and "--verify" in argv:
+                    snapshot = Path(argv[-1])
+                    snapshot.chmod(0o700)
+                    snapshot.write_bytes(b"snapshot-replacement")
+                    mutated = True
+                return result
+
+            result = inspect_candidate(
+                root,
+                policy,
+                runner=runner,
+                platform_build_provider=lambda: "TEST-BUILD",
+            )
+            self.assertEqual(result["state"], REFUSED_STATE)
+            self.assertIn("snapshot changed", result["reason"])
+
+    def test_non_macho_snapshot_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-non-macho-") as directory:
+            root = Path(directory)
+            policy, records = self._fixture(root)
+            records["parent"]["format"] = "generic"
+            result = inspect_candidate(
+                root,
+                policy,
+                runner=self._runner(records, []),
+                platform_build_provider=lambda: "TEST-BUILD",
+            )
+            self.assertEqual(result["state"], REFUSED_STATE)
+            self.assertIn("not a Mach-O", result["reason"])
+
+    def test_size_mismatch_is_rejected_before_codesign(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-size-drift-") as directory:
+            root = Path(directory)
+            policy, records = self._fixture(root)
+            policy["artifacts"]["parent"]["size"] += 1
+            commands: list[list[str]] = []
+            result = inspect_candidate(
+                root,
+                policy,
+                runner=self._runner(records, commands),
+                platform_build_provider=lambda: "TEST-BUILD",
+            )
+            self.assertEqual(result["state"], REFUSED_STATE)
+            self.assertIn("content size mismatch", result["reason"])
             self.assertEqual(commands, [])
 
 

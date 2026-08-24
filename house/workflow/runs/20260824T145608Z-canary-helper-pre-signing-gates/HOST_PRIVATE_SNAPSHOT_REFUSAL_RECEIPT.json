@@ -1,0 +1,13 @@
+{
+  "all_codesign_subjects_cleaned": true,
+  "all_codesign_subjects_outside_source_root": true,
+  "candidate_launch": "NOT_ATTEMPTED",
+  "codesign_command_count": 2,
+  "keychain": "NOT_ATTEMPTED",
+  "network": "NOT_ATTEMPTED",
+  "real_secret": "NOT_ATTEMPTED",
+  "reason": "parent has no TeamIdentifier",
+  "schema": "dream-house-host-private-snapshot-refusal/1",
+  "source_sha256": "49f53d3a66a8440e3844e37fc1e0fc7d93540a58478e1e94c4309f66c3ef6f1a",
+  "state": "NOT_QUALIFIED_NO_LAUNCH"
+}

@@ -1,10 +1,11 @@
 {
-  "schema": "dream-house-canary-signing-policy/1",
+  "schema": "dream-house-canary-signing-policy/2",
   "state": "NOT_CONFIGURED_NO_LAUNCH",
   "platform_build": null,
   "artifacts": {
     "parent": {
       "relative_path": "Contents/MacOS/DreamHouseCanaryParent",
+      "size": null,
       "sha256": null,
       "cdhash": null,
       "team_identifier": null,
@@ -15,6 +16,7 @@
     },
     "helper": {
       "relative_path": "Contents/Helpers/DreamHouseCanaryHelper",
+      "size": null,
       "sha256": null,
       "cdhash": null,
       "team_identifier": null,

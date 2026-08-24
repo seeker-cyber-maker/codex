@@ -1,0 +1,21 @@
+{
+  "schema": "codex-house-authority-delta/1",
+  "recorded_at": "2026-08-24T14:56:08Z",
+  "plan_seal_sha256": "1daa1df97188f3582728240876371fe9111286baf7291c9a03ae9d3447f0d1fa",
+  "reason": "Apple Silicon linker output may carry a required ad-hoc code signature even when no identity signing command is invoked.",
+  "authorized": {
+    "codec_test_linker_adhoc_signature": true
+  },
+  "still_forbidden": {
+    "codesign_sign_operation": true,
+    "identity_bearing_signature": true,
+    "certificate_discovery": true,
+    "keychain_access": true,
+    "parent_helper_link": true,
+    "parent_helper_launch": true,
+    "network": true,
+    "generated_canary": true,
+    "real_secret": true
+  },
+  "acceptance": "The disposable codec test must report Signature=adhoc and TeamIdentifier=not set."
+}

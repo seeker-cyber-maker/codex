@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "20260824T145608Z-canary-helper-pre-signing-gates",
+  "claim_ids": ["SNAPSHOT_BOUND_STATIC_INSPECTION", "PURE_CODEC_BEHAVIOR_VERIFIED"],
+  "task_distribution": {
+    "scope": "standalone native parent/helper artifacts and pure protocol codec",
+    "temporal_cutoff": "2026-08-24T14:56:08Z",
+    "new_vs_legacy_slices": ["new private-snapshot inspection", "legacy path-based refusal fixtures"],
+    "out_of_distribution_slices": ["app bundles", "scripts", "detached signatures", "parent/helper runtime"]
+  },
+  "fixtures": {
+    "public": ["/usr/bin/true static signature metadata"],
+    "private": [],
+    "adversarial": ["symlink path", "source replacement during codesign", "snapshot mutation", "invalid codec fields"],
+    "known_answer": ["fixed 80-byte big-endian header", "complete transition matrix"]
+  },
+  "contamination": {
+    "sources_checked": ["accepted v1.1 design", "predecessor council findings"],
+    "tool_access_restrictions": ["no candidate link or launch", "no Keychain", "no network", "no secret"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "source and receipt claim surface", "gate": null, "evidence_refs": []},
+    "execution_trace": {"applicability": "required", "reason": "one compiler link and one codec-test execution are authorized", "gate": null, "evidence_refs": []},
+    "side_effects": {"applicability": "required", "reason": "temporary snapshot and test executable lifecycle", "gate": null, "evidence_refs": []},
+    "cost": {"applicability": "required", "reason": "bounded local processes", "gate": null, "evidence_refs": []},
+    "latency": {"applicability": "required", "reason": "five-second codec timeout", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "required", "reason": "temporary artifacts must clean up after failure", "gate": null, "evidence_refs": []},
+    "long_horizon": {"applicability": "not_applicable", "reason": "bounded local phase", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["protocol.h constants", "exhaustive transition truth table", "sealed policy hash and identity fields"],
+  "semantic_reviewers": ["scheduled blind read-only council"],
+  "metrics": ["focused tests", "full suite", "codec exit code", "source/snapshot hashes", "unauthorized side-effect count"],
+  "thresholds": ["all deterministic gates pass", "codec exit 0", "unauthorized side effects 0"],
+  "uncertainty_method": "claim ceiling excludes bundle and runtime containment behavior",
+  "failure_taxonomy": ["unsupported descriptor method", "snapshot mismatch", "source drift", "codec semantic failure", "authority violation"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision"
+}

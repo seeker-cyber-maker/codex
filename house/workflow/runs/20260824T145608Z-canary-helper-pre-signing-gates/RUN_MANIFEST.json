@@ -1,0 +1,45 @@
+{
+  "schema": "codex-house-workflow-run/1",
+  "run_id": "20260824T145608Z-canary-helper-pre-signing-gates",
+  "case_type": "security_containment",
+  "starting_head": "e51332d3c394f0eada70b85fa75adffb6af7e616",
+  "authority": "source_hardening_and_codec_test_link_run_only",
+  "static_codesign_authorized": true,
+  "codec_test_link_authorized": true,
+  "codec_test_execution_authorized": true,
+  "parent_helper_link_authorized": false,
+  "parent_helper_launch_authorized": false,
+  "network_authorized": false,
+  "keychain_authorized": false,
+  "certificate_discovery_authorized": false,
+  "signing_authorized": false,
+  "yubikey_authorized": false,
+  "provider_authorized": false,
+  "generated_canary_authorized": false,
+  "real_secret_authorized": false,
+  "model_advisory": {
+    "phase": "plan seal",
+    "recommended_model": "gpt-5.6-sol",
+    "recommended_effort": "xhigh",
+    "reason": "security-sensitive signature identity and executable-test boundary",
+    "disposition": "advisory_emitted_current_model_unknown",
+    "reassess": "after plan seal or second failed remediation"
+  },
+  "council_plan_authority": {
+    "source": "../20260824T141408Z-canary-helper-static-source/COUNCIL_SYNTHESIS.md",
+    "sha256": "29139aa2a61233ce9cacf22d0f77ebf4c699e0cc59019846b8c83ca6da6690db",
+    "disposition": "accepted mandatory pre-runtime gates"
+  },
+  "council_checkpoint": {
+    "checkpoint_id": "pre-signing-gates-promotion-review",
+    "trigger": "deterministic implementation validation complete",
+    "blocking": true,
+    "privacy": "local-ok",
+    "dispatch": "multi-agent_same-provider",
+    "requested_reviewers": 3,
+    "requested_model": "gpt-5.6-luna",
+    "requested_effort": "medium",
+    "external_network": false,
+    "required_root_disposition": "accept_or_bounded_remediation_or_needs_review"
+  }
+}

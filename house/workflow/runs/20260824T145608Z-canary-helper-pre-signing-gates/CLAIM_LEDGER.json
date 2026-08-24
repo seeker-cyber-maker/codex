@@ -1,0 +1,45 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "recorded_at": "2026-08-24T15:10:39Z",
+  "claims": [
+    {
+      "claim_id": "SNAPSHOT_BOUND_STATIC_INSPECTION",
+      "status": "SUPPORTED_PRE_COUNCIL",
+      "evidence": [
+        "artifact_inspection.py",
+        "tests/test_native_contract.py",
+        "CODESIGN_PRIVATE_SNAPSHOT_PROBE.json",
+        "HOST_PRIVATE_SNAPSHOT_REFUSAL_RECEIPT.json"
+      ],
+      "ceiling": "Only strictly verified standalone Mach-O files are covered. The private snapshot binds the static codesign subject to pinned bytes and detects ordinary source drift or replacement; it does not bind a later launch path and does not claim resistance to a malicious same-UID process controlling the inspector host."
+    },
+    {
+      "claim_id": "PURE_CODEC_BEHAVIOR_VERIFIED",
+      "status": "SUPPORTED_PRE_COUNCIL",
+      "evidence": [
+        "tests/codec_contract_test.c",
+        "CODEC_TEST_RECEIPT.json",
+        "VALIDATION.json"
+      ],
+      "ceiling": "Covers the fixed wire image, round trip, validation errors, and transition truth table in protocol.c only. No parent/helper candidate was linked or launched."
+    },
+    {
+      "claim_id": "SIGNED_CANDIDATE_IDENTITY",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "ceiling": "No certificate was discovered and no identity-bearing signature was created."
+    },
+    {
+      "claim_id": "APP_SANDBOX_RUNTIME_CONTAINMENT",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "ceiling": "Entitlement files are expected inputs, not runtime proof."
+    },
+    {
+      "claim_id": "SECRET_SAFETY",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "ceiling": "No generated canary or real secret was used."
+    }
+  ]
+}

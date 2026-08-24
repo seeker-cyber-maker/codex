@@ -1,0 +1,104 @@
+[
+  {
+    "claim_id": "C-001",
+    "claim": "All three reviewers received and echoed the same council packet hash.",
+    "status": "observed",
+    "evidence": [
+      "COUNCIL_PACKET.md",
+      "council/reviewers/evidence-auditor.md",
+      "council/reviewers/constructive-theorist.md",
+      "council/reviewers/adversarial-methodologist.md"
+    ],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-provider", "same-model-family", "same-harness"],
+    "decision_impact": "high",
+    "next_test": "none"
+  },
+  {
+    "claim_id": "C-002",
+    "claim": "The private snapshot implementation supports the narrow snapshot-bound static-inspection claim for strictly verified standalone Mach-O files.",
+    "status": "corroborated",
+    "evidence": [
+      "artifact_inspection.py",
+      "tests/test_native_contract.py",
+      "CODESIGN_PRIVATE_SNAPSHOT_PROBE.json",
+      "HOST_PRIVATE_SNAPSHOT_REFUSAL_RECEIPT.json"
+    ],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "a real sealed candidate remains required before candidate qualification"
+  },
+  {
+    "claim_id": "C-003",
+    "claim": "The unchanged protocol.c directly passed the declared pure-codec contract test.",
+    "status": "corroborated",
+    "evidence": [
+      "tests/codec_contract_test.c",
+      "CODEC_TEST_RECEIPT.json",
+      "VALIDATION.json"
+    ],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "none for the v1 pure-codec milestone"
+  },
+  {
+    "claim_id": "C-004",
+    "claim": "The evidence does not support signed-candidate identity, launch-path identity, App Sandbox runtime containment, process containment, same-UID hostile-host resistance, canary safety, or secret safety.",
+    "status": "corroborated",
+    "evidence": ["CLAIM_LEDGER.json", "EVIDENCE_PACKET.md"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "separately authorized candidate and runtime gates"
+  },
+  {
+    "claim_id": "C-005",
+    "claim": "Static codesign calls and codec compiler/signature-inspection calls lack enforced subprocess timeouts.",
+    "status": "observed",
+    "evidence": ["artifact_inspection.py", "run_codec_tests.py", "council/reviewers/adversarial-methodologist.md"],
+    "supporters": ["adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["source-inspection"],
+    "decision_impact": "low",
+    "next_test": "add bounded tool timeouts before relying on these tools in a stronger admission boundary"
+  },
+  {
+    "claim_id": "C-006",
+    "claim": "The codec runner relies on its caller to supply the fresh private output directory and does not itself enforce no-follow mode-0700 reservation.",
+    "status": "observed",
+    "evidence": ["run_codec_tests.py", "CODEC_TEST_RECEIPT.json", "council/reviewers/adversarial-methodologist.md"],
+    "supporters": ["adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["source-inspection"],
+    "decision_impact": "low",
+    "next_test": "harden before reusing the runner as a security boundary; current receipt remains a caller-scoped temporary test"
+  },
+  {
+    "claim_id": "C-007",
+    "claim": "Reviewer prose miscounted the 18 evidence-index records as 17 or as eight source plus eleven receipt records; the chair's deterministic verifier found exactly 18 records and zero hash errors.",
+    "status": "observed",
+    "evidence": ["EVIDENCE_INDEX.jsonl", "council/reviewers/evidence-auditor.md", "council/reviewers/adversarial-methodologist.md"],
+    "supporters": ["chair"],
+    "objectors": [],
+    "shared_dependencies": [],
+    "decision_impact": "low",
+    "next_test": "none; preserve the raw responses and use the deterministic index count"
+  },
+  {
+    "claim_id": "C-008",
+    "claim": "Parent/helper source and entitlement files were not indexed for this council, so prior object-build and entitlement assertions were not independently re-reviewed here.",
+    "status": "observed",
+    "evidence": ["EVIDENCE_INDEX.jsonl", "council/reviewers/adversarial-methodologist.md"],
+    "supporters": ["adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": [],
+    "decision_impact": "low",
+    "next_test": "include actual parent/helper candidate inputs in the separately authorized signing-admission packet"
+  }
+]

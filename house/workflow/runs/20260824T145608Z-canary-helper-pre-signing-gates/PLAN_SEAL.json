@@ -1,0 +1,14 @@
+{
+  "schema": "codex-house-plan-seal/1",
+  "sealed_at": "2026-08-24T14:56:08Z",
+  "starting_head": "e51332d3c394f0eada70b85fa75adffb6af7e616",
+  "disposition": "PLAN_SEALED_EXECUTE_BOUNDED_PRE_SIGNING_GATES",
+  "files": {
+    "INTAKE.md": "09a4a684b2dfa69917192b14bdde4ee7c1fa81873936b59bb08d5a34ea045f93",
+    "PLAN.md": "8004e9017d0aefd8a34761204f1d580bff46fac76d19cc5d83aaf990c63ab3dc",
+    "RUN_MANIFEST.json": "ff8557f1046d931827d1f88ca340b22d4dcc54480ad19726fd5ef621fe4df141",
+    "EVALUATION_CARD.json": "c4ce5d11ee528d50cbebe22bb5dcda63fbf83f18c1f578f3a6e5b2ae0358be56",
+    "CODESIGN_PINNED_FD_PROBE.json": "9f568f60c3c0a682f007b968aa7e8e48082ea1333a74e7618a90dd88cb4b382a",
+    "CODESIGN_PRIVATE_SNAPSHOT_PROBE.json": "f19e7acc40af0418b16e666374c3d7d587b471c537414ade30211621cbef6842"
+  }
+}

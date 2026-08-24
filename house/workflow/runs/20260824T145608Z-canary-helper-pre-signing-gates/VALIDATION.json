@@ -1,0 +1,53 @@
+{
+  "schema": "codex-house-validation/1",
+  "validated_at": "2026-08-24T15:10:39Z",
+  "starting_head": "e51332d3c394f0eada70b85fa75adffb6af7e616",
+  "state": "PRE_COUNCIL_VALIDATION_PASSED",
+  "results": {
+    "focused_native_contract": {
+      "command": "python3 -m unittest house.native.canary_helper.tests.test_native_contract",
+      "passed": 16,
+      "failed": 0
+    },
+    "full_house_suite": {
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "passed": 255,
+      "failed": 0,
+      "warnings": [
+        "pre-existing unclosed sqlite3.Connection ResourceWarning"
+      ]
+    },
+    "ruff": "PASS",
+    "compileall": "PASS",
+    "git_diff_check": "PASS",
+    "compiled_or_executable_artifacts_under_source": [],
+    "codec_test": "PURE_CODEC_TEST_LINKED_AND_PASSED",
+    "host_static_smoke": "EXPECTED_REFUSAL_PARENT_HAS_NO_TEAM_IDENTIFIER"
+  },
+  "negative_evidence": {
+    "initial_codec_attempt": "fixture payload exceeded the sealed 4096-byte bound and exited 37; corrected fixture passed on the only remediation",
+    "initial_full_suite_command": "python3 -m unittest discover found zero tests because the discovery root was omitted; corrected command passed 255 tests",
+    "pinned_dev_fd_codesign": "unsupported by host codesign",
+    "extracted_bundle_executable_snapshot": "strict verification fails without bundle context"
+  },
+  "source_sha256": {
+    "README.md": "43818d6b25e216bf3473d14e853eeb3631e15723303a36b8cee5590433357e99",
+    "artifact_inspection.py": "f107996647c3a17bb939f6a95ab7a1a6757223761ebe6e6979bfbcc8a7698fe7",
+    "signing_policy.json": "29be0e0a2ba7f3c938abeb9f0e528efa14a9affe8c93174d471cea6e826b5d09",
+    "run_codec_tests.py": "aac3ec8ed0e200301e8ec03d1613a08d359695379068f7ca1d63c75beed9824a",
+    "tests/codec_contract_test.c": "48b5b067d539e901ff37d48aff148af1d08f99297b82b04fb2359efab10fdf93",
+    "tests/test_native_contract.py": "84c4d3f12de7573253dbf0a9faa857b72b5f1a9cb09843b258ae5af32fd8b67d",
+    "protocol.c": "a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1",
+    "protocol.h": "ad725dd956c0232cf941077a6285463a8fd66bf0d7e535be02f4583d4281205e"
+  },
+  "authority_observed": {
+    "parent_helper_link": "NOT_ATTEMPTED",
+    "parent_helper_launch": "NOT_ATTEMPTED",
+    "identity_signing": "NOT_ATTEMPTED",
+    "certificate_discovery": "NOT_ATTEMPTED",
+    "keychain": "NOT_ATTEMPTED",
+    "network": "NOT_ATTEMPTED",
+    "generated_canary": "NOT_ATTEMPTED",
+    "real_secret": "NOT_ATTEMPTED"
+  }
+}

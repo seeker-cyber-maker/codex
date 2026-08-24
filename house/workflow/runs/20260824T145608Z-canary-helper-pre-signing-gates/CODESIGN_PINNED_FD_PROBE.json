@@ -1,0 +1,15 @@
+{
+  "schema": "dream-house-codesign-pinned-fd-probe/1",
+  "observed_at": "2026-08-24T14:56:08Z",
+  "source": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+  "method": "open O_RDONLY|O_CLOEXEC|O_NOFOLLOW and pass descriptor to codesign as /dev/fd/N",
+  "results": {
+    "strict_verify": {"returncode": 1, "diagnostic": "cannot find code object on disk"},
+    "display_metadata": {"returncode": 1, "diagnostic": "cannot find code object on disk"},
+    "display_requirement": {"returncode": 1, "diagnostic": "cannot find code object on disk"},
+    "display_entitlements": {"returncode": 1, "diagnostic": "cannot find code object on disk"}
+  },
+  "disposition": "REJECT_DESCRIPTOR_PATH_METHOD",
+  "candidate_launch": "NOT_ATTEMPTED",
+  "keychain": "NOT_ATTEMPTED"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "codex-house-pre-council-seal/1",
+  "sealed_at": "2026-08-24T15:10:39Z",
+  "starting_head": "e51332d3c394f0eada70b85fa75adffb6af7e616",
+  "state": "SEALED_FOR_READ_ONLY_COUNCIL",
+  "evidence_packet": {
+    "path": "EVIDENCE_PACKET.md",
+    "sha256": "30c7933f8e78560f20549094086964c3bfc8a4523af83092ee85e2e57b5913b8"
+  },
+  "evidence_index": {
+    "path": "EVIDENCE_INDEX.jsonl",
+    "sha256": "2b04d2f990e8df234cd69670560b99df583eb01bbee8f707d902f24d9a507f62"
+  },
+  "authority": "read_only_review_only_no_candidate_link_launch_signing_keychain_network_canary_or_secret"
+}

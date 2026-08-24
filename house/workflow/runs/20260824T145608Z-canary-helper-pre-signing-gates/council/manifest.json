@@ -1,0 +1,77 @@
+{
+  "council_id": "20260824T151039Z-canary-helper-pre-signing-gates",
+  "question": "May the exact source snapshot be accepted as ACCEPT_PRE_SIGNING_GATES_ONLY without implying signed-candidate or runtime qualification?",
+  "mode": "independent-review",
+  "packet_sha256": "f7f68e5676bd2eea2e186e92a41b3c815b9221c0343c870942e99d58b88850b2",
+  "privacy": "local-ok",
+  "cost_ceiling": "existing same-provider subagent allowance; no external network",
+  "chair": {
+    "model": "not surfaced to chair",
+    "provider": "OpenAI",
+    "harness": "Codex desktop"
+  },
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "requested_model": "gpt-5.6-luna",
+      "candidate_models": ["gpt-5.6-luna"],
+      "selected_model": "gpt-5.6-luna",
+      "self_reported_model": "not independently surfaced",
+      "provider": "OpenAI same-provider collaboration",
+      "harness": "Codex desktop multi-agent collaboration",
+      "memory": "isolated no-history dispatch requested; enforcement not independently observable",
+      "system_prompt_profile": "shared Codex safety/project profile; exact protected text unavailable",
+      "reasoning_mode": "medium",
+      "packet_hash_confirmed_in_response": true,
+      "status": "completed",
+      "response_sha256": "9c2b8c322cfb244349547da04b04bb7828a3fc17e914c28d7d24956ef996348b",
+      "attempts": [
+        {"attempt": 1, "model": "gpt-5.6-luna", "status": "completed"}
+      ]
+    },
+    {
+      "id": "constructive-theorist",
+      "requested_model": "gpt-5.6-luna",
+      "candidate_models": ["gpt-5.6-luna"],
+      "selected_model": "gpt-5.6-luna",
+      "self_reported_model": "not independently surfaced",
+      "provider": "OpenAI same-provider collaboration",
+      "harness": "Codex desktop multi-agent collaboration",
+      "memory": "isolated no-history dispatch requested; enforcement not independently observable",
+      "system_prompt_profile": "shared Codex safety/project profile; exact protected text unavailable",
+      "reasoning_mode": "medium",
+      "packet_hash_confirmed_in_response": true,
+      "status": "completed",
+      "response_sha256": "ef6bd6b63bd8cf5ffcfe1f69a0ae310e6328e7c847807992de0339a85c90f175",
+      "attempts": [
+        {"attempt": 1, "model": "gpt-5.6-luna", "status": "completed"}
+      ]
+    },
+    {
+      "id": "adversarial-methodologist",
+      "requested_model": "gpt-5.6-luna",
+      "candidate_models": ["gpt-5.6-luna"],
+      "selected_model": "gpt-5.6-luna",
+      "self_reported_model": "not independently surfaced",
+      "provider": "OpenAI same-provider collaboration",
+      "harness": "Codex desktop multi-agent collaboration",
+      "memory": "isolated no-history dispatch requested; enforcement not independently observable",
+      "system_prompt_profile": "shared Codex safety/project profile; exact protected text unavailable",
+      "reasoning_mode": "medium",
+      "packet_hash_confirmed_in_response": true,
+      "status": "completed",
+      "response_sha256": "b5e2fe940b6ac0681b2ee4ca9e646185e2195c19a8477ade8a8aa15d61adabbd",
+      "attempts": [
+        {"attempt": 1, "model": "gpt-5.6-luna", "status": "completed"}
+      ]
+    }
+  ],
+  "shared_dependencies": [
+    "same model family",
+    "same provider",
+    "same harness",
+    "same immutable evidence packet"
+  ],
+  "started_at": "2026-08-24T15:14:27Z",
+  "completed_at": "2026-08-24T15:16:51Z"
+}
