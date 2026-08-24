@@ -1,0 +1,61 @@
+{
+  "schema": "expert-council-final-claim-ledger/1",
+  "final_transport_sha256": "8d1e9c04daa67f13d8d2e8fb9b50146c3e8b38390dd5f6028ea6c8be24cc4f48",
+  "claims": [
+    {
+      "claim_id": "F-001",
+      "claim": "The final rotation authenticates the old record and exact stored revision before new-state mutation.",
+      "status": "corroborated",
+      "evidence": ["final source SHA-256 6f87a1ee743b7e6315e8e78dec08f4f0c9cd7f499d4203a2f78602dc89a53500", "test_09c", "three completed final-delta reviews"],
+      "supporters": ["constructive-theorist", "adversarial-methodologist", "independent-replicator", "chair"],
+      "objectors": [],
+      "shared_dependencies": ["constructive-theorist and adversarial-methodologist both used deepseek-v4-flash", "independent-replicator used gemini-2.5-flash-lite"],
+      "decision_impact": "high",
+      "next_test": "none within this mock boundary"
+    },
+    {
+      "claim_id": "F-002",
+      "claim": "The final rotation consumes and clears the proposed generated buffer on every return and exception path.",
+      "status": "corroborated",
+      "evidence": ["public try/finally wrapper", "test_09c", "test_09d", "test_09e", "three completed final-delta reviews"],
+      "supporters": ["constructive-theorist", "adversarial-methodologist", "independent-replicator", "chair"],
+      "objectors": [],
+      "shared_dependencies": ["two reviewers share deepseek-v4-flash", "independent Gemini review"],
+      "decision_impact": "high",
+      "next_test": "none within this mock boundary"
+    },
+    {
+      "claim_id": "F-003",
+      "claim": "Ordinary exceptions after new-state mutation roll back the new mock key, ciphertext, and tombstone while preserving old state.",
+      "status": "corroborated",
+      "evidence": ["rollback source path", "test_09d", "completed final-delta reviews"],
+      "supporters": ["constructive-theorist", "adversarial-methodologist", "independent-replicator", "chair"],
+      "objectors": [],
+      "shared_dependencies": ["static review plus chair-run deterministic test"],
+      "decision_impact": "high",
+      "next_test": "power-loss and hostile-filesystem cases remain out of scope"
+    },
+    {
+      "claim_id": "F-004",
+      "claim": "The final source contains literal [ADDRESS] placeholders.",
+      "status": "contradicted",
+      "evidence": ["exact source and every materialized transport contain zero [ADDRESS] matches", "py_compile pass", "source hash verification"],
+      "supporters": ["partial Nemotron outputs"],
+      "objectors": ["chair", "three completed final-delta reviewers"],
+      "shared_dependencies": ["OpenRouter Nemotron outputs only"],
+      "decision_impact": "none",
+      "next_test": "track as provider-output integrity anomaly outside this project slice"
+    },
+    {
+      "claim_id": "F-005",
+      "claim": "The final candidate is acceptable as a generated-only non-runtime reference.",
+      "status": "corroborated",
+      "evidence": ["29 focused tests", "239 full House tests", "final source seals", "three completed final-delta acceptances"],
+      "supporters": ["constructive-theorist", "adversarial-methodologist", "independent-replicator", "chair"],
+      "objectors": [],
+      "shared_dependencies": ["reviewers did not independently execute tests", "two reviews share model family"],
+      "decision_impact": "high",
+      "next_test": "separately authorize and design generated-canary helper containment"
+    }
+  ]
+}

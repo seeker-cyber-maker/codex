@@ -32,3 +32,14 @@ advances revision and epoch.
 
 Safe to commit as a non-runtime candidate. Not safe to promote into real
 resolver, helper, Keychain, network, process, YubiKey, or credential work.
+
+## Post-council closure
+
+The initial candidate was not accepted by vote count. Chair reconciliation
+reproduced three rotation defects missed by the two correlated accepting
+reviews. Remediation added source authentication, exact revision checking,
+preflight collision handling, failure rollback, and unconditional input
+clearing. The final exact source received three contract-complete acceptances,
+including an independent Gemini lineage. Final disposition:
+`ACCEPT_FINAL_NON_RUNTIME_REFERENCE`. See
+`council-review/FINAL_COUNCIL_SYNTHESIS.md`.

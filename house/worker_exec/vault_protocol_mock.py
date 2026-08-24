@@ -446,15 +446,19 @@ class GeneratedVaultStorage:
         self.root.mkdir(mode=0o700, parents=True, exist_ok=True)
         os.chmod(self.root, 0o700)
 
-    def _path(self, namespace_id: str, epoch: int, ref_id: str) -> Path:
+    def _existing_path(self, namespace_id: str, epoch: int, ref_id: str) -> Path:
         _exact_id(namespace_id, "namespace id")
         _exact_ref(ref_id)
         if type(epoch) is not int or epoch < 1:
             raise VaultProtocolMockError("invalid storage epoch")
-        namespace = self.root / f"{namespace_id}.epoch-{epoch}"
+        return self.root / f"{namespace_id}.epoch-{epoch}" / f"{ref_id}.json"
+
+    def _path(self, namespace_id: str, epoch: int, ref_id: str) -> Path:
+        path = self._existing_path(namespace_id, epoch, ref_id)
+        namespace = path.parent
         namespace.mkdir(mode=0o700, exist_ok=True)
         os.chmod(namespace, 0o700)
-        return namespace / f"{ref_id}.json"
+        return path
 
     def put_generated(
         self,
@@ -503,72 +507,10 @@ class GeneratedVaultStorage:
         finally:
             value.clear()
 
-    def rotate_generated(
-        self,
-        *,
-        namespace_id: str,
-        old_epoch: int,
-        new_epoch: int,
-        ref_id: str,
-        old_revision: int,
-        new_revision: int,
-        new_value: ZeroizingBuffer,
-    ) -> dict[str, object]:
-        """Rotate generated fixture material and retain a non-secret tombstone."""
-
-        if new_epoch <= old_epoch or new_revision <= old_revision:
-            raise VaultProtocolMockError("rotation must advance epoch and revision")
-        old_path = self._path(namespace_id, old_epoch, ref_id)
-        if not old_path.is_file():
-            raise VaultProtocolMockError("rotation source is unavailable")
-        self.keyring.generate(namespace_id, new_epoch)
-        self.put_generated(
-            namespace_id=namespace_id,
-            epoch=new_epoch,
-            ref_id=ref_id,
-            revision=new_revision,
-            value=new_value,
-        )
-        receipt = seal_record(
-            {
-                "schema": ROTATION_RECEIPT_SCHEMA,
-                "namespace_id": namespace_id,
-                "ref_id": ref_id,
-                "old_epoch": old_epoch,
-                "new_epoch": new_epoch,
-                "old_revision": old_revision,
-                "new_revision": new_revision,
-                "old_state": "SUPERSEDED_CIPHERTEXT_RETAINED",
-                "old_leases": "INVALIDATED",
-            }
-        )
-        rotations = self.root / "rotation-tombstones"
-        rotations.mkdir(mode=0o700, exist_ok=True)
-        os.chmod(rotations, 0o700)
-        tombstone = rotations / f"{ref_id}.epoch-{old_epoch}-to-{new_epoch}.json"
-        fd = os.open(tombstone, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
-        try:
-            os.write(
-                fd,
-                json.dumps(receipt, sort_keys=True, separators=(",", ":")).encode(),
-            )
-            os.fsync(fd)
-        finally:
-            os.close(fd)
-        self.keyring.destroy(namespace_id, old_epoch)
-        return receipt
-
-    def verify_generated_for_test(
-        self,
-        *,
-        namespace_id: str,
-        epoch: int,
-        ref_id: str,
-        expected: bytes,
-    ) -> bool:
-        """Compare internally and return only a boolean, never plaintext."""
-
-        path = self._path(namespace_id, epoch, ref_id)
+    def _load_authenticated_generated(
+        self, *, namespace_id: str, epoch: int, ref_id: str
+    ) -> tuple[dict[str, object], ZeroizingBuffer]:
+        path = self._existing_path(namespace_id, epoch, ref_id)
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, UnicodeError, json.JSONDecodeError) as exc:
@@ -607,14 +549,159 @@ class GeneratedVaultStorage:
                 plaintext = ZeroizingBuffer(
                     AESGCM(bytes(key.internal_view())).decrypt(nonce, ciphertext, aad)
                 )
-                try:
-                    return hmac.compare_digest(plaintext.internal_view(), expected)
-                finally:
-                    plaintext.clear()
+            if not bytes(plaintext.internal_view()).startswith(
+                b"GENERATED_CANARY_ONLY:"
+            ):
+                plaintext.clear()
+                raise VaultProtocolMockError("stored value is not a generated canary")
+            return payload, plaintext
         except (InvalidTag, ValueError, TypeError) as exc:
             raise VaultProtocolMockError(
                 "generated store authentication failed"
             ) from exc
+
+    def rotate_generated(
+        self,
+        *,
+        namespace_id: str,
+        old_epoch: int,
+        new_epoch: int,
+        ref_id: str,
+        old_revision: int,
+        new_revision: int,
+        new_value: ZeroizingBuffer,
+    ) -> dict[str, object]:
+        """Consume the proposed value while attempting a generated rotation."""
+
+        try:
+            return self._rotate_generated(
+                namespace_id=namespace_id,
+                old_epoch=old_epoch,
+                new_epoch=new_epoch,
+                ref_id=ref_id,
+                old_revision=old_revision,
+                new_revision=new_revision,
+                new_value=new_value,
+            )
+        finally:
+            new_value.clear()
+
+    def _rotate_generated(
+        self,
+        *,
+        namespace_id: str,
+        old_epoch: int,
+        new_epoch: int,
+        ref_id: str,
+        old_revision: int,
+        new_revision: int,
+        new_value: ZeroizingBuffer,
+    ) -> dict[str, object]:
+        """Rotate generated fixture material and retain a non-secret tombstone."""
+
+        if new_epoch <= old_epoch or new_revision <= old_revision:
+            raise VaultProtocolMockError("rotation must advance epoch and revision")
+        old_path = self._existing_path(namespace_id, old_epoch, ref_id)
+        if not old_path.is_file():
+            raise VaultProtocolMockError("rotation source is unavailable")
+        old_payload, old_plaintext = self._load_authenticated_generated(
+            namespace_id=namespace_id,
+            epoch=old_epoch,
+            ref_id=ref_id,
+        )
+        old_plaintext.clear()
+        if old_payload["revision"] != old_revision:
+            new_value.clear()
+            raise VaultProtocolMockError("rotation source revision mismatch")
+        if not bytes(new_value.internal_view()).startswith(b"GENERATED_CANARY_ONLY:"):
+            new_value.clear()
+            raise VaultProtocolMockError("storage accepts generated canaries only")
+
+        new_path = self._existing_path(namespace_id, new_epoch, ref_id)
+        rotations = self.root / "rotation-tombstones"
+        tombstone = rotations / f"{ref_id}.epoch-{old_epoch}-to-{new_epoch}.json"
+        if new_path.exists():
+            new_value.clear()
+            raise FileExistsError(new_path)
+        if rotations.exists() and not rotations.is_dir():
+            new_value.clear()
+            raise FileExistsError(rotations)
+        if tombstone.exists():
+            new_value.clear()
+            raise FileExistsError(tombstone)
+
+        receipt = seal_record(
+            {
+                "schema": ROTATION_RECEIPT_SCHEMA,
+                "namespace_id": namespace_id,
+                "ref_id": ref_id,
+                "old_epoch": old_epoch,
+                "new_epoch": new_epoch,
+                "old_revision": old_revision,
+                "new_revision": new_revision,
+                "old_state": "SUPERSEDED_CIPHERTEXT_RETAINED",
+                "old_leases": "INVALIDATED",
+            }
+        )
+        new_key_created = False
+        new_path_created = False
+        tombstone_created = False
+        try:
+            self.keyring.generate(namespace_id, new_epoch)
+            new_key_created = True
+            self.put_generated(
+                namespace_id=namespace_id,
+                epoch=new_epoch,
+                ref_id=ref_id,
+                revision=new_revision,
+                value=new_value,
+            )
+            new_path_created = True
+            rotations.mkdir(mode=0o700, exist_ok=True)
+            os.chmod(rotations, 0o700)
+            fd = os.open(tombstone, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+            tombstone_created = True
+            try:
+                os.write(
+                    fd,
+                    json.dumps(receipt, sort_keys=True, separators=(",", ":")).encode(),
+                )
+                os.fsync(fd)
+            finally:
+                os.close(fd)
+            self.keyring.destroy(namespace_id, old_epoch)
+            return receipt
+        except Exception:
+            if tombstone_created:
+                tombstone.unlink(missing_ok=True)
+            if new_path_created or new_path.exists():
+                new_path.unlink(missing_ok=True)
+                try:
+                    new_path.parent.rmdir()
+                except OSError:
+                    pass
+            if new_key_created:
+                self.keyring.destroy(namespace_id, new_epoch)
+            raise
+
+    def verify_generated_for_test(
+        self,
+        *,
+        namespace_id: str,
+        epoch: int,
+        ref_id: str,
+        expected: bytes,
+    ) -> bool:
+        """Compare internally and return only a boolean, never plaintext."""
+
+        try:
+            _, plaintext = self._load_authenticated_generated(
+                namespace_id=namespace_id, epoch=epoch, ref_id=ref_id
+            )
+            return hmac.compare_digest(plaintext.internal_view(), expected)
+        finally:
+            if "plaintext" in locals():
+                plaintext.clear()
 
 
 def classify_crash_v1(

@@ -1,0 +1,127 @@
+{
+  "council_id": "evidence-auditor-retry-8192",
+  "mode": "independent-review",
+  "profile": "cross-family-strong",
+  "task_mode": "review",
+  "transport_packet_sha256": "b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/council-review/EVIDENCE_PACKET.md",
+      "sha256": "530afdb58438813e45dbbee920baaa87c236fab84c6034f9fd34e403f501cb62"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/vault_protocol_mock.py",
+      "sha256": "e9b7d01d1cbb1d1c054d223dcd3eee038d6ff97a5ccdbdeb8c1d36df1514471f"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/tests/test_vault_protocol_mock.py",
+      "sha256": "f06305ef9069a7c04a526dec73027444ed8a4fcdf3e9b62ed57de8742dfc54dc"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/REAL_FIREWALL_VAULT_THREAT_MODEL.md",
+      "sha256": "91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/ROOT_THREAT_MODEL_DELTA.md",
+      "sha256": "edf2d5e905a63b771e181ebad7e199f63c557497c125a79aafeacbaa54b03214"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/VALIDATION.json",
+      "sha256": "ca6bcbceb5f7d8b8470c9d78655f2d5220acafef21214eeee08ffb08250a54dd"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "google/gemma-4-31b-it:free"
+      ],
+      "packet_sha256": "b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5",
+      "started_at": "2026-08-24T13:25:58+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "started_at": "2026-08-24T13:25:58+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "prompt_tokens": 15991,
+            "completion_tokens": 5717,
+            "total_tokens": 21708,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 4861,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "latency_seconds": 67.626,
+          "completed_at": "2026-08-24T13:27:05+00:00"
+        }
+      ],
+      "selected_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "prompt_tokens": 15991,
+        "completion_tokens": 5717,
+        "total_tokens": 21708,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4861,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "latency_seconds": 67.626,
+      "completed_at": "2026-08-24T13:27:05+00:00"
+    }
+  ],
+  "attempted_reviewers": 1,
+  "completed_reviewers": 1,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-24T13:25:58+00:00",
+  "completed_at": "2026-08-24T13:27:05+00:00"
+}

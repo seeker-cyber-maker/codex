@@ -3,3 +3,7 @@
 {"event":"focused_validation","at":"2026-08-24T13:14:06Z","tests":26,"result":"PASS"}
 {"event":"full_house_validation","at":"2026-08-24T13:14:06Z","tests":236,"result":"PASS"}
 {"event":"seal","at":"2026-08-24T13:14:06Z","disposition":"VERIFIED_CANDIDATE_PENDING_INDEPENDENT_REVIEW"}
+{"event":"outside_council","at":"2026-08-24T13:25:33Z","transport_sha256":"b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5","attempted":3,"completed":2,"partial":1,"chair_disposition":"REVISE_BEFORE_ACCEPTANCE"}
+{"event":"root_cause_reproduction","at":"2026-08-24T13:28:00Z","defects":["caller_revision_trusted","corrupt_source_rotated","new_state_stranded_on_tombstone_failure"]}
+{"event":"remediation_validation","at":"2026-08-24T13:41:00Z","focused_tests":29,"full_house_tests":239,"result":"PASS"}
+{"event":"final_delta_council","at":"2026-08-24T13:43:28Z","transport_sha256":"8d1e9c04daa67f13d8d2e8fb9b50146c3e8b38390dd5f6028ea6c8be24cc4f48","attempted":4,"completed":3,"partial":1,"chair_disposition":"ACCEPT_FINAL_NON_RUNTIME_REFERENCE"}

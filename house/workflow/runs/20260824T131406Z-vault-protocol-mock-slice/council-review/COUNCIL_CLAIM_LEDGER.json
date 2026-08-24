@@ -1,0 +1,61 @@
+{
+  "schema": "expert-council-claim-ledger/1",
+  "transport_sha256": "b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "The original candidate fits the declared generated-only boundary.",
+      "status": "disputed",
+      "evidence": ["council-round-1/reviewers/constructive-theorist.md", "council-round-1/reviewers/adversarial-methodologist.md", "chair source reconciliation"],
+      "supporters": ["constructive-theorist", "adversarial-methodologist"],
+      "objectors": ["chair"],
+      "shared_dependencies": ["both accepting reviews selected deepseek-v4-flash", "same transport packet"],
+      "decision_impact": "high",
+      "next_test": "authenticate old rotation source, require exact stored revision, and prove failure cleanup"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "The sealed source contains literal [ADDRESS] placeholders and cannot compile.",
+      "status": "contradicted",
+      "evidence": ["exact transport grep returned zero matches", "python3 -m py_compile passed", "sealed source SHA-256 e9b7d01d1cbb1d1c054d223dcd3eee038d6ff97a5ccdbdeb8c1d36df1514471f"],
+      "supporters": ["evidence-auditor"],
+      "objectors": ["chair"],
+      "shared_dependencies": ["Nemotron response text only"],
+      "decision_impact": "low",
+      "next_test": "none; exact packet text already falsifies it"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "The original rotation implementation authenticated the old record and exact old revision before mutation.",
+      "status": "contradicted",
+      "evidence": ["reproduction accepted actual revision 1 as caller revision 99", "reproduction rotated corrupt ciphertext and destroyed the old key"],
+      "supporters": [],
+      "objectors": ["chair"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "test_09c_rotation_authenticates_source_and_exact_revision_first"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "The original rotation implementation left no new key or ciphertext after a tombstone-path failure.",
+      "status": "contradicted",
+      "evidence": ["reproduction stranded provider-alpha epoch-2 key and ciphertext"],
+      "supporters": [],
+      "objectors": ["chair"],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "test_09d_rotation_failure_rolls_back_new_key_and_ciphertext"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "Chair-observed validation and source-seal results are not independently executed by cloud reviewers.",
+      "status": "observed",
+      "evidence": ["reviewer limitations", "local validation receipts"],
+      "supporters": ["constructive-theorist", "adversarial-methodologist", "evidence-auditor", "chair"],
+      "objectors": [],
+      "shared_dependencies": ["reviewers received chair-created packet"],
+      "decision_impact": "medium",
+      "next_test": "retain claim ceiling; local deterministic rerun plus source hash verification"
+    }
+  ]
+}

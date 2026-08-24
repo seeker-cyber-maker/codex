@@ -31,8 +31,15 @@ vault dependency.
 
 ## Next acceptance check
 
-Obtain an independent security review of the sealed candidate. If accepted,
-the next separately authorized rung is a generated-canary helper-containment
+Independent review is complete. Chair reconciliation rejected one false
+placeholder allegation, reproduced and repaired three real rotation defects,
+and closed one input-clearing omission. The final source passed 29 focused and
+239 complete House tests and received three contract-complete final-delta
+acceptances, including a distinct Gemini model/provider lineage.
+
+Final disposition: `ACCEPT_FINAL_NON_RUNTIME_REFERENCE`.
+
+The next separately authorized rung is a generated-canary helper-containment
 fixture with a trusted-parent spawn contract and mock sink. Do not combine that
 with macOS Keychain or any real credential. Recommended lane: Sol/xhigh for the
-review and runtime-containment design.
+runtime-containment design.

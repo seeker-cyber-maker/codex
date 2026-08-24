@@ -1,0 +1,20 @@
+{
+  "schema": "codex-house-post-council-source-seal/1",
+  "candidate_base_commit": "74b2a04a1bd1842a82e11d69c2064015ede435c4",
+  "files": [
+    {
+      "path": "house/worker_exec/vault_protocol_mock.py",
+      "sha256": "6f87a1ee743b7e6315e8e78dec08f4f0c9cd7f499d4203a2f78602dc89a53500"
+    },
+    {
+      "path": "house/worker_exec/tests/test_vault_protocol_mock.py",
+      "sha256": "b720ec9fa47cb33db372026a58ad839802ef81d8e747fb4fa2a755887b0ad263"
+    },
+    {
+      "path": "house/workflow/runs/20260823T154950Z-real-vault-threat-model/ROOT_THREAT_MODEL_DELTA.md",
+      "sha256": "edf2d5e905a63b771e181ebad7e199f63c557497c125a79aafeacbaa54b03214"
+    }
+  ],
+  "council_transport_sha256": "8d1e9c04daa67f13d8d2e8fb9b50146c3e8b38390dd5f6028ea6c8be24cc4f48",
+  "disposition": "ACCEPT_FINAL_NON_RUNTIME_REFERENCE"
+}

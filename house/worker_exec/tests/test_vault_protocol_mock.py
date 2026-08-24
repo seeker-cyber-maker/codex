@@ -318,6 +318,121 @@ class VaultProtocolMockTests(unittest.TestCase):
             self.assertEqual(len(tombstones), 1)
             self.assertEqual(os.stat(tombstones[0]).st_mode & 0o777, 0o600)
 
+    def test_09c_rotation_authenticates_source_and_exact_revision_first(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            keyring = MockKeyringStore()
+            keyring.generate("provider-alpha", 1)
+            store = GeneratedVaultStorage(root, keyring)
+            old_path = store.put_generated(
+                namespace_id="provider-alpha",
+                epoch=1,
+                ref_id="vr_0123456789abcdef",
+                revision=1,
+                value=ZeroizingBuffer(b"GENERATED_CANARY_ONLY:old"),
+            )
+            wrong_revision_value = ZeroizingBuffer(b"GENERATED_CANARY_ONLY:new")
+            with self.assertRaisesRegex(VaultProtocolMockError, "source revision"):
+                store.rotate_generated(
+                    namespace_id="provider-alpha",
+                    old_epoch=1,
+                    new_epoch=2,
+                    ref_id="vr_0123456789abcdef",
+                    old_revision=99,
+                    new_revision=100,
+                    new_value=wrong_revision_value,
+                )
+            self.assertTrue(wrong_revision_value.cleared)
+            self.assertFalse((root / "provider-alpha.epoch-2").exists())
+            self.assertFalse((root / "rotation-tombstones").exists())
+            with self.assertRaisesRegex(VaultProtocolMockError, "unavailable"):
+                keyring._borrow("provider-alpha", 2)
+
+            payload = json.loads(old_path.read_text())
+            payload["ciphertext_b64"] = "AAAA"
+            old_path.write_text(json.dumps(payload))
+            corrupt_source_value = ZeroizingBuffer(b"GENERATED_CANARY_ONLY:new")
+            with self.assertRaisesRegex(VaultProtocolMockError, "authentication"):
+                store.rotate_generated(
+                    namespace_id="provider-alpha",
+                    old_epoch=1,
+                    new_epoch=2,
+                    ref_id="vr_0123456789abcdef",
+                    old_revision=1,
+                    new_revision=2,
+                    new_value=corrupt_source_value,
+                )
+            self.assertTrue(corrupt_source_value.cleared)
+            self.assertFalse((root / "provider-alpha.epoch-2").exists())
+            self.assertFalse((root / "rotation-tombstones").exists())
+            with self.assertRaisesRegex(VaultProtocolMockError, "unavailable"):
+                keyring._borrow("provider-alpha", 2)
+
+    def test_09e_rotation_consumes_new_value_on_every_early_failure(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            keyring = MockKeyringStore()
+            store = GeneratedVaultStorage(root, keyring)
+            invalid_advance = ZeroizingBuffer(b"GENERATED_CANARY_ONLY:new")
+            with self.assertRaisesRegex(VaultProtocolMockError, "must advance"):
+                store.rotate_generated(
+                    namespace_id="provider-alpha",
+                    old_epoch=1,
+                    new_epoch=1,
+                    ref_id="vr_0123456789abcdef",
+                    old_revision=1,
+                    new_revision=2,
+                    new_value=invalid_advance,
+                )
+            self.assertTrue(invalid_advance.cleared)
+
+            missing_source = ZeroizingBuffer(b"GENERATED_CANARY_ONLY:new")
+            with self.assertRaisesRegex(
+                VaultProtocolMockError, "source is unavailable"
+            ):
+                store.rotate_generated(
+                    namespace_id="provider-alpha",
+                    old_epoch=1,
+                    new_epoch=2,
+                    ref_id="vr_0123456789abcdef",
+                    old_revision=1,
+                    new_revision=2,
+                    new_value=missing_source,
+                )
+            self.assertTrue(missing_source.cleared)
+
+    def test_09d_rotation_failure_rolls_back_new_key_and_ciphertext(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            keyring = MockKeyringStore()
+            keyring.generate("provider-alpha", 1)
+            store = GeneratedVaultStorage(root, keyring)
+            old_path = store.put_generated(
+                namespace_id="provider-alpha",
+                epoch=1,
+                ref_id="vr_0123456789abcdef",
+                revision=1,
+                value=ZeroizingBuffer(b"GENERATED_CANARY_ONLY:old"),
+            )
+            old_ciphertext = old_path.read_bytes()
+            (root / "rotation-tombstones").write_text("collision")
+            new_value = ZeroizingBuffer(b"GENERATED_CANARY_ONLY:new")
+            with self.assertRaises(FileExistsError):
+                store.rotate_generated(
+                    namespace_id="provider-alpha",
+                    old_epoch=1,
+                    new_epoch=2,
+                    ref_id="vr_0123456789abcdef",
+                    old_revision=1,
+                    new_revision=2,
+                    new_value=new_value,
+                )
+            self.assertTrue(new_value.cleared)
+            self.assertEqual(old_path.read_bytes(), old_ciphertext)
+            self.assertFalse((root / "provider-alpha.epoch-2").exists())
+            with self.assertRaisesRegex(VaultProtocolMockError, "unavailable"):
+                keyring._borrow("provider-alpha", 2)
+
     def test_10_crash_exposure_is_monotonic_and_conservative(self) -> None:
         pre = classify_crash_v1(last_durable_state="SINK_BOUND")
         attempted = classify_crash_v1(last_durable_state="DELIVERY_ATTEMPTED")

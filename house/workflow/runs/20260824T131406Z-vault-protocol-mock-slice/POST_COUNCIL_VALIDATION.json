@@ -1,0 +1,30 @@
+{
+  "schema": "codex-house-post-council-validation/1",
+  "result": "PASS",
+  "candidate_base_commit": "74b2a04a1bd1842a82e11d69c2064015ede435c4",
+  "checks": [
+    {
+      "command": "python3 -m unittest house.worker_exec.tests.test_vault_protocol_mock house.worker_exec.tests.test_mock_vault house.worker_exec.tests.test_context_grammar",
+      "result": "PASS",
+      "tests": 29
+    },
+    {
+      "command": "python3 -m unittest discover -s house -p 'test_*.py'",
+      "result": "PASS",
+      "tests": 239,
+      "note": "Existing expected CLI error text and one sqlite ResourceWarning were non-failing output."
+    },
+    {
+      "command": "ruff check house/worker_exec/vault_protocol_mock.py house/worker_exec/tests/test_vault_protocol_mock.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -m py_compile house/worker_exec/vault_protocol_mock.py house/worker_exec/tests/test_vault_protocol_mock.py",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ]
+}

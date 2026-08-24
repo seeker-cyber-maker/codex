@@ -1,0 +1,96 @@
+{
+  "council_id": "council-dry-run",
+  "mode": "independent-review",
+  "profile": "cross-family-strong",
+  "task_mode": "review",
+  "transport_packet_sha256": "b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/council-review/EVIDENCE_PACKET.md",
+      "sha256": "530afdb58438813e45dbbee920baaa87c236fab84c6034f9fd34e403f501cb62"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/vault_protocol_mock.py",
+      "sha256": "e9b7d01d1cbb1d1c054d223dcd3eee038d6ff97a5ccdbdeb8c1d36df1514471f"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/tests/test_vault_protocol_mock.py",
+      "sha256": "f06305ef9069a7c04a526dec73027444ed8a4fcdf3e9b62ed57de8742dfc54dc"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/REAL_FIREWALL_VAULT_THREAT_MODEL.md",
+      "sha256": "91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/ROOT_THREAT_MODEL_DELTA.md",
+      "sha256": "edf2d5e905a63b771e181ebad7e199f63c557497c125a79aafeacbaa54b03214"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/VALIDATION.json",
+      "sha256": "ca6bcbceb5f7d8b8470c9d78655f2d5220acafef21214eeee08ffb08250a54dd"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "google/gemma-4-31b-it:free"
+      ],
+      "packet_sha256": "b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5",
+      "started_at": "2026-08-24T13:21:11+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-24T13:21:11+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "constructive-theorist",
+      "lane": "opencode-go",
+      "requested_model": "qwen3.8-max",
+      "provider": "OpenCode Go",
+      "harness": "provider-orchestration OpenCode Go catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4017/v1",
+      "candidate_models": [
+        "qwen3.8-max",
+        "deepseek-v4-flash"
+      ],
+      "packet_sha256": "b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5",
+      "started_at": "2026-08-24T13:21:11+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-24T13:21:11+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/kimi-k2.7-code",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/kimi-k2.7-code",
+        "cline-pass/deepseek-v4-flash"
+      ],
+      "packet_sha256": "b8c955ef4b2e5ed8bd099a8b60345c9bd9dbaec802d1b9ffaa04894f474439d5",
+      "started_at": "2026-08-24T13:21:11+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-24T13:21:11+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-24T13:21:11+00:00",
+  "completed_at": "2026-08-24T13:21:11+00:00"
+}

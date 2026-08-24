@@ -1,0 +1,100 @@
+{
+  "council_id": "delta-council-dry-run",
+  "mode": "independent-review",
+  "profile": "authority-boundary-council",
+  "task_mode": "review",
+  "transport_packet_sha256": "1a27e2da87f480b6b2cb728edcb251d18a328306f3fdec00bbf429081cdeacad",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/council-review/DELTA_EVIDENCE_PACKET.md",
+      "sha256": "11ac3d5d06d5bc490c059f988ec4d1f781aa2fcec42162d3742daa2038f66667"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/vault_protocol_mock.py",
+      "sha256": "0b4e2b8f46bdf2b14ab5c7d2f78fa19522d47de7f68d44f0b82d4675c8f8c13a"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/worker_exec/tests/test_vault_protocol_mock.py",
+      "sha256": "f5b74f4c2409c18d9dd58d38b38198c37bd2fd7bea3f025d4f90ed37dfdc0979"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/council-review/POST_COUNCIL_REMEDIATION.md",
+      "sha256": "8c0f4a71b138f84ee530522fee3c3c1d5c77638c1b111fc33be9d313c3d4eaf1"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/council-review/COUNCIL_SYNTHESIS.md",
+      "sha256": "ee2ee268a53312ecd819a3a654b10e011495aa30c410a1f94241aaafc6475118"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T131406Z-vault-protocol-mock-slice/council-review/COUNCIL_CLAIM_LEDGER.json",
+      "sha256": "491e011a1b78c63444cd3bc5aa3092fedb746a903ee11b9e2b8b3b48405017ed"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260823T154950Z-real-vault-threat-model/ROOT_THREAT_MODEL_DELTA.md",
+      "sha256": "edf2d5e905a63b771e181ebad7e199f63c557497c125a79aafeacbaa54b03214"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "security-architect",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "1a27e2da87f480b6b2cb728edcb251d18a328306f3fdec00bbf429081cdeacad",
+      "started_at": "2026-08-24T13:34:30+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-24T13:34:30+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-red-teamer",
+      "lane": "opencode-go",
+      "requested_model": "deepseek-v4-flash",
+      "provider": "OpenCode Go",
+      "harness": "provider-orchestration OpenCode Go catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4017/v1",
+      "candidate_models": [
+        "deepseek-v4-flash",
+        "qwen3.8-max"
+      ],
+      "packet_sha256": "1a27e2da87f480b6b2cb728edcb251d18a328306f3fdec00bbf429081cdeacad",
+      "started_at": "2026-08-24T13:34:30+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-24T13:34:30+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "assurance-human-factors",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "1a27e2da87f480b6b2cb728edcb251d18a328306f3fdec00bbf429081cdeacad",
+      "started_at": "2026-08-24T13:34:30+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-24T13:34:30+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-24T13:34:30+00:00",
+  "completed_at": "2026-08-24T13:34:30+00:00"
+}
