@@ -8,6 +8,7 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from house.native.canary_helper.artifact_inspection import (
     CODESIGN,
@@ -94,6 +95,80 @@ class StaticNativeContractTests(unittest.TestCase):
             self.assertEqual(receipt["candidate_link"], "NOT_ATTEMPTED")
             self.assertEqual(receipt["candidate_launch"], "NOT_ATTEMPTED")
             self.assertEqual(receipt["identity_signing"], "NOT_ATTEMPTED")
+            self.assertEqual(receipt["private_output_directory_mode"], "0700")
+            self.assertEqual(
+                receipt["private_output_cleanup"],
+                "COMPLETED_BEFORE_RECEIPT_RETURN",
+            )
+            self.assertFalse(Path(receipt["private_output_directory"]).exists())
+            self.assertEqual(list(Path(directory).iterdir()), [])
+
+    def test_codec_output_root_symlink_is_rejected_before_compiler(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-codec-symlink-") as directory:
+            root = Path(directory)
+            real_output = root / "real"
+            real_output.mkdir()
+            linked_output = root / "linked"
+            linked_output.symlink_to(real_output)
+            with patch(
+                "house.native.canary_helper.run_codec_tests.subprocess.run"
+            ) as runner, self.assertRaisesRegex(RuntimeError, "must not be a symlink"):
+                run_codec_tests(ROOT, linked_output)
+            runner.assert_not_called()
+            self.assertEqual(list(real_output.iterdir()), [])
+
+    def test_codec_compile_timeout_cleans_private_output(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-codec-timeout-") as directory:
+            def timeout(*args: object, **kwargs: object) -> None:
+                raise subprocess.TimeoutExpired(args[0], kwargs["timeout"])
+
+            with patch(
+                "house.native.canary_helper.run_codec_tests.subprocess.run",
+                side_effect=timeout,
+            ), self.assertRaisesRegex(
+                RuntimeError, "codec test link timed out after 30 seconds"
+            ):
+                run_codec_tests(ROOT, directory)
+            self.assertEqual(list(Path(directory).iterdir()), [])
+
+    def test_codec_signature_timeout_cleans_private_output(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-signature-timeout-") as directory:
+            real_run = subprocess.run
+
+            def timeout_codesign(*args: object, **kwargs: object):
+                argv = args[0]
+                if argv[0] == CODESIGN:
+                    raise subprocess.TimeoutExpired(argv, kwargs["timeout"])
+                return real_run(*args, **kwargs)
+
+            with patch(
+                "house.native.canary_helper.run_codec_tests.subprocess.run",
+                side_effect=timeout_codesign,
+            ), self.assertRaisesRegex(
+                RuntimeError,
+                "codec signature inspection timed out after 10 seconds",
+            ):
+                run_codec_tests(ROOT, directory)
+            self.assertEqual(list(Path(directory).iterdir()), [])
+
+    def test_codec_execution_timeout_cleans_private_output(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-execution-timeout-") as directory:
+            real_run = subprocess.run
+
+            def timeout_executable(*args: object, **kwargs: object):
+                argv = args[0]
+                if len(argv) == 1 and argv[0].endswith("/codec_contract_test"):
+                    raise subprocess.TimeoutExpired(argv, kwargs["timeout"])
+                return real_run(*args, **kwargs)
+
+            with patch(
+                "house.native.canary_helper.run_codec_tests.subprocess.run",
+                side_effect=timeout_executable,
+            ), self.assertRaisesRegex(
+                RuntimeError, "codec contract test timed out after 5 seconds"
+            ):
+                run_codec_tests(ROOT, directory)
+            self.assertEqual(list(Path(directory).iterdir()), [])
 
 
 class ArtifactInspectionTests(unittest.TestCase):
@@ -290,6 +365,24 @@ class ArtifactInspectionTests(unittest.TestCase):
             self.assertEqual(result["state"], REFUSED_STATE)
             self.assertIn("platform_build does not match", result["reason"])
             self.assertEqual(commands, [])
+
+    def test_default_codesign_timeout_fails_closed(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="house-canary-codesign-timeout-") as directory:
+            root = Path(directory)
+            policy, _ = self._fixture(root)
+            with patch(
+                "house.native.canary_helper.artifact_inspection.subprocess.run",
+                side_effect=subprocess.TimeoutExpired([CODESIGN], 10),
+            ) as runner:
+                result = inspect_candidate(
+                    root,
+                    policy,
+                    platform_build_provider=lambda: "TEST-BUILD",
+                )
+            self.assertEqual(result["state"], REFUSED_STATE)
+            self.assertIn("codesign timed out after 10 seconds", result["reason"])
+            self.assertEqual(result["candidate_launch"], "NOT_ATTEMPTED")
+            self.assertEqual(runner.call_args.kwargs["timeout"], 10)
 
     def test_source_replacement_during_snapshot_inspection_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory(prefix="house-canary-source-race-") as directory:

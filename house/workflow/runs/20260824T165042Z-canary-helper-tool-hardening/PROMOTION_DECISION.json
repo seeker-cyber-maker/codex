@@ -1,0 +1,38 @@
+{
+  "schema": "codex-house-promotion-decision/1",
+  "decided_at": "2026-08-24T17:03:21Z",
+  "decision": "ACCEPT_TOOL_HARDENING_ONLY",
+  "confidence": {
+    "narrow_claims": "high",
+    "independent_corroboration": "moderate"
+  },
+  "council": {
+    "attempted": 3,
+    "completed": 3,
+    "packet_sha256": "3d2a4b5b2421c8ab20107009d6ceef6f1624c3dc92ecf992dd066f15a9ab158e",
+    "evidence_index_records": 14,
+    "all_packet_hashes_confirmed": true,
+    "all_indexed_hashes_confirmed": true,
+    "all_narrow_verdicts_accept": true,
+    "shared_dependencies": ["same model family", "same provider", "same harness", "same evidence"]
+  },
+  "accepted_claims": [
+    "BOUNDED_TOOL_TIMEOUTS",
+    "PRIVATE_CODEC_OUTPUT_LIFECYCLE_UNDER_ORDINARY_SAME_USER_OPERATION"
+  ],
+  "not_accepted": [
+    "MEASURED_HUNG_TOOL_WALL_CLOCK_ENFORCEMENT",
+    "HOSTILE_SAME_UID_RESISTANCE",
+    "COMPILER_OR_CODESIGN_INTEGRITY",
+    "SIGNED_CANDIDATE_IDENTITY",
+    "BUNDLE_OR_APP_SANDBOX_BEHAVIOR",
+    "DYNAMIC_PROCESS_CONTAINMENT",
+    "GENERATED_CANARY_SAFETY",
+    "REAL_SECRET_SAFETY"
+  ],
+  "preserved_behavior": [
+    "unexpected private-directory entries cause cleanup refusal and are left for investigation",
+    "cleanup remains descriptor-relative and exact; no recursive deletion is permitted"
+  ],
+  "next_authority_gate": "fresh explicit certificate-discovery and identity-signing admission; no such action is authorized by this decision"
+}

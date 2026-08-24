@@ -1,0 +1,6 @@
+{"event":"run_opened","at":"2026-08-24T16:50:42Z","starting_head":"29eac0f7d345188f5e3d23242fa4cada077da376","recovery":"RESUME_FROM_HASH_VALID_HANDOFF"}
+{"event":"authority_frozen","at":"2026-08-24T16:50:42Z","source_hardening":"AUTHORIZED","static_codesign":"AUTHORIZED","codec_test":"AUTHORIZED","parent_helper_link_launch":"NOT_AUTHORIZED","certificate_keychain_identity_signing_network_secret":"NOT_AUTHORIZED"}
+{"event":"baseline","at":"2026-08-24T16:50:42Z","focused_tests":"16_PASS","working_tree":"CLEAN","predecessor_final_seal":"VERIFIED_ZERO_MISMATCHES"}
+{"event":"implementation_validated","at":"2026-08-24T16:56:32Z","focused_tests":"21_PASS","full_tests":"260_PASS","real_codec_test":"PASS","authority_violations":0}
+{"event":"outside_council_completed","at":"2026-08-24T17:03:21Z","reviewers":"3_OF_3","packet_sha256":"3d2a4b5b2421c8ab20107009d6ceef6f1624c3dc92ecf992dd066f15a9ab158e","indexed_hashes_verified":14,"decision":"ACCEPT_TOOL_HARDENING_ONLY"}
+{"event":"final_validation","at":"2026-08-24T17:05:33Z","focused_tests":"21_PASS","full_tests":"260_PASS","ruff":"PASS","compileall":"PASS","json_jsonl":"PASS","diff_check":"PASS","source_binary_artifacts":0}

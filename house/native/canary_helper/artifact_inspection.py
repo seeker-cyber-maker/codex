@@ -24,6 +24,7 @@ QUALIFIED_STATE = "QUALIFIED_STATIC_ARTIFACTS_NO_LAUNCH"
 REFUSED_STATE = "NOT_QUALIFIED_NO_LAUNCH"
 MAX_TOOL_OUTPUT_BYTES = 1_048_576
 MAX_ARTIFACT_BYTES = 67_108_864
+CODESIGN_TIMEOUT_SECONDS = 10
 CODESIGN = "/usr/bin/codesign"
 SYSTEM_VERSION_PLIST = "/System/Library/CoreServices/SystemVersion.plist"
 
@@ -42,13 +43,19 @@ def _canonical(value: object) -> str:
 def _default_runner(argv: list[str]) -> subprocess.CompletedProcess[str]:
     if not argv or argv[0] != CODESIGN:
         raise ArtifactInspectionError("only the absolute codesign inspector is allowed")
-    return subprocess.run(
-        argv,
-        check=False,
-        capture_output=True,
-        text=True,
-        env={"LC_ALL": "C"},
-    )
+    try:
+        return subprocess.run(
+            argv,
+            check=False,
+            capture_output=True,
+            text=True,
+            env={"LC_ALL": "C"},
+            timeout=CODESIGN_TIMEOUT_SECONDS,
+        )
+    except subprocess.TimeoutExpired as exc:
+        raise ArtifactInspectionError(
+            f"codesign timed out after {CODESIGN_TIMEOUT_SECONDS} seconds"
+        ) from exc
 
 
 def _host_platform_build() -> str:

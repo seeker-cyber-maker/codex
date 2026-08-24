@@ -1,0 +1,6 @@
+{"event":"implementation_wave","at":"2026-08-24T16:50:42Z","changes":["static_codesign_timeout","private_codec_output_directory","compile_inspection_execution_timeouts","descriptor_relative_cleanup"],"parent_helper_launch":"NOT_ATTEMPTED"}
+{"event":"focused_validation","at":"2026-08-24T16:50:42Z","result":"21_PASS","timeout_stages_tested":["codesign","codec_compile","codec_signature_inspection","codec_execution"],"cleanup_stages_tested":["success","compile_timeout","signature_timeout","execution_timeout"]}
+{"event":"lint_attempt","at":"2026-08-24T16:50:42Z","attempt":1,"result":"FAIL_SIM117_4_NESTED_CONTEXTS","failure_class":"TEST_STYLE_ONLY","disposition":"FLATTEN_CONTEXTS_AND_RERUN_FAIL_FAST"}
+{"event":"lint_attempt","at":"2026-08-24T16:50:42Z","attempt":2,"result":"PASS","remediation_budget_remaining":1}
+{"event":"real_codec_run","at":"2026-08-24T16:50:42Z","result":"PASS_EXIT_0","private_mode":"0700","output_parent_residue":[],"signature":"ADHOC_NO_TEAM_ID","candidate_launch":"NOT_ATTEMPTED"}
+{"event":"full_validation","at":"2026-08-24T16:50:42Z","result":"260_PASS","pre_existing_resource_warning":"one unclosed sqlite connection warning","candidate_launch":"NOT_ATTEMPTED"}

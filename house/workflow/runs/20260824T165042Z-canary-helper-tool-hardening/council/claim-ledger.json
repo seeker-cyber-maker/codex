@@ -1,0 +1,74 @@
+[
+  {
+    "claim_id": "C-001",
+    "claim": "All three reviewers received and confirmed the same packet SHA-256 and all 14 indexed artifact hashes.",
+    "status": "corroborated",
+    "evidence": [
+      "EVIDENCE_PACKET.md",
+      "EVIDENCE_INDEX.jsonl",
+      "council/reviewers/evidence-auditor.md",
+      "council/reviewers/constructive-theorist.md",
+      "council/reviewers/adversarial-methodologist.md"
+    ],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-provider", "same-model-family", "same-harness"],
+    "decision_impact": "high",
+    "next_test": "none"
+  },
+  {
+    "claim_id": "C-002",
+    "claim": "The production static-codesign path and each codec subprocess stage have positive finite timeouts that fail closed.",
+    "status": "corroborated",
+    "evidence": ["artifact_inspection.py", "run_codec_tests.py", "tests/test_native_contract.py", "VALIDATION.json"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "measure a real hung-tool timeout before making a wall-clock enforcement claim"
+  },
+  {
+    "claim_id": "C-003",
+    "claim": "Under ordinary same-user operation, the codec runner reserves a randomized mode-0700 private directory and performs descriptor-relative exact cleanup on success and injected timeout.",
+    "status": "corroborated",
+    "evidence": ["run_codec_tests.py", "tests/test_native_contract.py", "CODEC_TEST_RECEIPT.json", "VALIDATION.json"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "retain hostile same-UID behavior outside the claim; unexpected entries must remain for investigation"
+  },
+  {
+    "claim_id": "C-004",
+    "claim": "The unchanged pure codec directly linked and passed with mode 0700, no output, an ad-hoc signature, no Team ID, exact cleanup, and zero caller-parent residue.",
+    "status": "corroborated",
+    "evidence": ["CODEC_TEST_RECEIPT.json", "VALIDATION.json"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "none for the source-only tool-hardening milestone"
+  },
+  {
+    "claim_id": "C-005",
+    "claim": "The evidence does not establish hostile same-UID resistance, compiler or codesign integrity, signed parent/helper identity, bundle or App Sandbox behavior, dynamic containment, canary safety, or secret safety.",
+    "status": "corroborated",
+    "evidence": ["CLAIM_LEDGER.json", "EVIDENCE_PACKET.md", "council/reviewers/adversarial-methodologist.md"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "separately authorized certificate, candidate, and runtime gates"
+  },
+  {
+    "claim_id": "C-006",
+    "claim": "The initially masked Ruff exit was disclosed and superseded by a later fail-fast passing validation.",
+    "status": "observed",
+    "evidence": ["VALIDATION.json", "council/reviewers/evidence-auditor.md", "council/reviewers/adversarial-methodologist.md"],
+    "supporters": ["evidence-auditor", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["recorded-validation"],
+    "decision_impact": "low",
+    "next_test": "final closeout validation must remain fail-fast"
+  }
+]

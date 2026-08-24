@@ -1,0 +1,48 @@
+{
+  "schema": "codex-house-workflow-run/1",
+  "run_id": "20260824T165042Z-canary-helper-tool-hardening",
+  "case_type": "semantic_implementation",
+  "starting_head": "29eac0f7d345188f5e3d23242fa4cada077da376",
+  "authority": "source_hardening_static_codesign_and_disposable_codec_test_only",
+  "static_codesign_authorized": true,
+  "codec_test_link_authorized": true,
+  "codec_test_execution_authorized": true,
+  "parent_helper_link_authorized": false,
+  "parent_helper_launch_authorized": false,
+  "certificate_discovery_authorized": false,
+  "keychain_authorized": false,
+  "identity_signing_authorized": false,
+  "network_authorized": false,
+  "provider_authorized": false,
+  "yubikey_authorized": false,
+  "generated_canary_authorized": false,
+  "real_secret_authorized": false,
+  "retry_budget": 2,
+  "model_advisory": {
+    "phase": "bounded source hardening",
+    "recommended_model": "gpt-5.6-terra",
+    "recommended_effort": "high",
+    "reason": "mechanical implementation with deterministic timeout and cleanup oracles",
+    "disposition": "advisory_emitted_current_model_unknown",
+    "reassess": "before identity signing or after two failed remediations"
+  },
+  "outside_council_plan_check": {
+    "source": "../20260824T145608Z-canary-helper-pre-signing-gates/council/synthesis.md",
+    "sha256": "166bd5e75f6c9b400c18c7345ff12bc935b7ea4a6c5050ed7b833db7a5439265",
+    "disposition": "accepted exact timeout and output-namespace debts as next gates"
+  },
+  "council_checkpoint": {
+    "checkpoint_id": "tool-hardening-promotion-review",
+    "trigger": "deterministic implementation validation complete",
+    "blocking": true,
+    "decision_question": "Do exact timeout and private-output changes support only the narrow tool-hardening claims?",
+    "privacy": "local-ok",
+    "dispatch": "multi-agent_same-provider",
+    "requested_reviewers": 3,
+    "requested_model": "gpt-5.6-luna",
+    "requested_effort": "medium",
+    "external_network": false,
+    "required_root_disposition": "accept_or_bounded_remediation_or_needs_review",
+    "maximum_staleness": "one implementation wave"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "20260824T165042Z-canary-helper-tool-hardening",
+  "claim_ids": ["BOUNDED_TOOL_TIMEOUTS", "PRIVATE_CODEC_OUTPUT_LIFECYCLE"],
+  "task_distribution": {
+    "scope": "local static-codesign and disposable pure-codec validation tools",
+    "temporal_cutoff": "2026-08-24T16:50:42Z",
+    "new_vs_legacy_slices": ["new timeout paths", "legacy successful codec run"],
+    "out_of_distribution_slices": ["parent/helper candidate", "identity signing", "hostile same-UID process"]
+  },
+  "fixtures": {
+    "public": ["actual local clang codec build and execution"],
+    "private": [],
+    "adversarial": ["subprocess timeout", "symlink output root", "cleanup after partial failure"],
+    "known_answer": ["timeout raises bounded refusal", "private child mode 0700", "child removed after return"]
+  },
+  "contamination": {
+    "sources_checked": ["predecessor council findings", "current source and tests"],
+    "tool_access_restrictions": ["no candidate link or launch", "no certificate/Keychain/signing", "no network or secret"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "source and receipt claim surface", "gate": null, "evidence_refs": []},
+    "execution_trace": {"applicability": "required", "reason": "bounded local compiler, codesign display, and codec execution", "gate": null, "evidence_refs": []},
+    "side_effects": {"applicability": "required", "reason": "private temporary directory lifecycle", "gate": null, "evidence_refs": []},
+    "cost": {"applicability": "required", "reason": "finite local process count", "gate": null, "evidence_refs": []},
+    "latency": {"applicability": "required", "reason": "declared subprocess timeouts", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "required", "reason": "partial tool failure must clean exact temporary output", "gate": null, "evidence_refs": []},
+    "long_horizon": {"applicability": "not_applicable", "reason": "bounded local phase", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["TimeoutExpired injection", "descriptor-relative cleanup", "filesystem mode and absence checks"],
+  "semantic_reviewers": ["scheduled blind read-only council"],
+  "metrics": ["focused tests", "full suite", "timeout classification", "private mode", "post-run residue"],
+  "thresholds": ["all deterministic gates pass", "unauthorized side effects 0", "temporary residue 0"],
+  "uncertainty_method": "claim ceiling excludes hostile same-UID and candidate/runtime behavior",
+  "failure_taxonomy": ["unbounded subprocess", "symlink parent", "unsafe cleanup", "residual artifact", "authority violation"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision"
+}

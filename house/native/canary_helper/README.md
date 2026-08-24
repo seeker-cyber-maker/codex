@@ -11,7 +11,12 @@ This directory implements only the accepted design's first source/build rung.
   undefined symbols with `nm`, and never links or executes a candidate.
 - `artifact_inspection.py` verifies a future sealed candidate using the absolute
   Apple `codesign` inspector against a private byte-for-byte snapshot copied
-  from a pinned no-follow descriptor. It never runs or loads the artifact.
+  from a pinned no-follow descriptor. Each host inspection has a fixed timeout;
+  timeout returns a fail-closed refusal. It never runs or loads the artifact.
+- `run_codec_tests.py` requires an existing non-symlink output parent, reserves
+  a randomized mode-`0700` child itself, bounds compile/inspection/execution,
+  and descriptor-cleans only its exact disposable test executable before
+  returning a receipt.
 - `signing_policy.json` is deliberately `NOT_CONFIGURED_NO_LAUNCH`; null Team
   ID, sizes, hashes, CDHashes, and designated requirements make it ineligible.
 

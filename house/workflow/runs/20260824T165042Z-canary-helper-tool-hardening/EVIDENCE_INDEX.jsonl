@@ -1,0 +1,14 @@
+{"path":"house/native/canary_helper/README.md","role":"claim_surface","sha256":"b2f8bb02638d8c536a4ca3cbb6f0782cf626a013fecffa27cc3b8ab987d9b1c5"}
+{"path":"house/native/canary_helper/artifact_inspection.py","role":"static_inspector_implementation","sha256":"b2e32e037d75843cf1e3819fe8a87987854709379b8175613516dfe4f00c35d9"}
+{"path":"house/native/canary_helper/run_codec_tests.py","role":"codec_runner_implementation","sha256":"69a492bf1fd6b16b19998963a52f175639ee67ae24047c58490fabeeb066d2b4"}
+{"path":"house/native/canary_helper/tests/test_native_contract.py","role":"adversarial_and_regression_tests","sha256":"da25f8c02a4c1984fec7c2aa166d97400c56a4c4f30c631d68fdd50fabcad60c"}
+{"path":"house/native/canary_helper/signing_policy.json","role":"unchanged_fail_closed_policy","sha256":"29be0e0a2ba7f3c938abeb9f0e528efa14a9affe8c93174d471cea6e826b5d09"}
+{"path":"house/native/canary_helper/protocol.c","role":"unchanged_codec_subject","sha256":"a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1"}
+{"path":"house/native/canary_helper/protocol.h","role":"unchanged_wire_contract","sha256":"ad725dd956c0232cf941077a6285463a8fd66bf0d7e535be02f4583d4281205e"}
+{"path":"house/native/canary_helper/tests/codec_contract_test.c","role":"unchanged_codec_oracle","sha256":"48b5b067d539e901ff37d48aff148af1d08f99297b82b04fb2359efab10fdf93"}
+{"path":"PLAN_SEAL.json","role":"plan_authority","sha256":"16c21b84ea76f89b2d9cfda017ce13361080aa9f66d3d21aa154234cb4a6e8b3"}
+{"path":"CODEC_TEST_RECEIPT.json","role":"real_execution_receipt","sha256":"8e178223991228f385b620bf6847b2a2ae417a61ac36c4d07892e52c85e836b1"}
+{"path":"EXECUTION_EVENTS.jsonl","role":"negative_and_execution_log","sha256":"af0b526c2f0cc043f2b999bec8a72460945f7ce9fbb66790b7fa09579cccb287"}
+{"path":"VALIDATION.json","role":"deterministic_validation","sha256":"903247b55ce04a76b72161108891a7f28687b0b79472b799df2d96a74b32d752"}
+{"path":"EVALUATION_RESULT.json","role":"evaluation_projection","sha256":"58591f039e13ac75e8f14536a3a7478e29180f384ac9a1193763c1e4d71d29ea"}
+{"path":"CLAIM_LEDGER.json","role":"claim_ceiling","sha256":"cacf954211017f75212306e223908814dcc385fdf8f4c6e653cc1acc26dbcdf4"}

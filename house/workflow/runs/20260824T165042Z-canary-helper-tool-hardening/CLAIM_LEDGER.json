@@ -1,0 +1,36 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "recorded_at": "2026-08-24T16:56:32Z",
+  "claims": [
+    {
+      "claim_id": "BOUNDED_TOOL_TIMEOUTS",
+      "status": "SUPPORTED_ACCEPTED_TOOL_HARDENING_ONLY",
+      "evidence": ["artifact_inspection.py", "run_codec_tests.py", "tests/test_native_contract.py", "VALIDATION.json"],
+      "ceiling": "Covers the production default codesign runner and codec compile, signature-inspection, and execution subprocesses. Injected custom static-inspection runners remain caller-controlled test seams."
+    },
+    {
+      "claim_id": "PRIVATE_CODEC_OUTPUT_LIFECYCLE",
+      "status": "SUPPORTED_ACCEPTED_TOOL_HARDENING_ONLY",
+      "evidence": ["run_codec_tests.py", "tests/test_native_contract.py", "CODEC_TEST_RECEIPT.json"],
+      "ceiling": "Covers an existing non-symlink output-root leaf, an atomically reserved randomized mode-0700 child, descriptor-relative exact-file cleanup, and zero ordinary residue on success or injected timeout. It excludes a hostile same-UID process."
+    },
+    {
+      "claim_id": "HOSTILE_HOST_RESISTANCE",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "ceiling": "No same-UID adversary or host attestation was tested."
+    },
+    {
+      "claim_id": "SIGNED_CANDIDATE_OR_RUNTIME_CONTAINMENT",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "ceiling": "No parent/helper candidate, certificate, identity signature, or runtime containment test was used."
+    },
+    {
+      "claim_id": "SECRET_SAFETY",
+      "status": "NOT_TESTED",
+      "evidence": [],
+      "ceiling": "No generated canary or real secret was used."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "codex-house-plan-seal/1",
+  "sealed_at": "2026-08-24T16:50:42Z",
+  "starting_head": "29eac0f7d345188f5e3d23242fa4cada077da376",
+  "disposition": "PLAN_SEALED_EXECUTE_BOUNDED_TOOL_HARDENING",
+  "files": {
+    "INTAKE.md": "434076e6fc824bca4c511cba288ff94d2ccb7f9460157689f614070d6f45b0cf",
+    "PLAN.md": "0f160e9581a3eb63618a61653a2bdecfc83c82a16a9f8783f3b80955c69da3bf",
+    "RUN_MANIFEST.json": "65fd6ed54d2a89a577d8bf313597c2ba34dafaeab16cc158099a5e0896b0a7c6",
+    "EVALUATION_CARD.json": "68cee004fe165b608d0cfd805bae57954fd5cbc87398d3b80bd506445f89c5b2",
+    "EVENTS.jsonl": "64380f4b527d908ebe7bcccf05101bd3468c77c09f3b13fe80500a36a06f9044"
+  }
+}
