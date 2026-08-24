@@ -1,0 +1,5 @@
+{"event":"resume","at":"2026-08-24T13:14:06Z","starting_head":"e7b62365ee8561d137a255f9641c97af43ff6f2d","predecessor":"20260823T154950Z-real-vault-threat-model"}
+{"event":"implementation","at":"2026-08-24T13:14:06Z","paths":["house/worker_exec/vault_protocol_mock.py","house/worker_exec/tests/test_vault_protocol_mock.py"],"boundary":"generated_only"}
+{"event":"focused_validation","at":"2026-08-24T13:14:06Z","tests":26,"result":"PASS"}
+{"event":"full_house_validation","at":"2026-08-24T13:14:06Z","tests":236,"result":"PASS"}
+{"event":"seal","at":"2026-08-24T13:14:06Z","disposition":"VERIFIED_CANDIDATE_PENDING_INDEPENDENT_REVIEW"}

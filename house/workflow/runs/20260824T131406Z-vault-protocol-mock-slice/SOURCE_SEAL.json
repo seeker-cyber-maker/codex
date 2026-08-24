@@ -1,0 +1,23 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "starting_head": "e7b62365ee8561d137a255f9641c97af43ff6f2d",
+  "files": [
+    {
+      "path": "house/worker_exec/vault_protocol_mock.py",
+      "sha256": "e9b7d01d1cbb1d1c054d223dcd3eee038d6ff97a5ccdbdeb8c1d36df1514471f"
+    },
+    {
+      "path": "house/worker_exec/tests/test_vault_protocol_mock.py",
+      "sha256": "f06305ef9069a7c04a526dec73027444ed8a4fcdf3e9b62ed57de8742dfc54dc"
+    },
+    {
+      "path": "house/workflow/runs/20260823T154950Z-real-vault-threat-model/REAL_FIREWALL_VAULT_THREAT_MODEL.md",
+      "sha256": "91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"
+    },
+    {
+      "path": "house/workflow/runs/20260823T154950Z-real-vault-threat-model/ROOT_THREAT_MODEL_DELTA.md",
+      "sha256": "edf2d5e905a63b771e181ebad7e199f63c557497c125a79aafeacbaa54b03214"
+    }
+  ],
+  "note": "Implementation hashes cover the final formatted candidate."
+}

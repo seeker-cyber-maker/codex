@@ -1,0 +1,37 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "The fixture binds a generated controller ticket to the complete sealed resolve intent and applies local deny precedence before an atomic nonce claim.",
+      "status": "VERIFIED_BY_TEST",
+      "evidence": "test_01 through test_04 and test_09"
+    },
+    {
+      "id": "C2",
+      "claim": "The mock store uses independent generated namespace/epoch keys, authenticated ciphertext, and restrictive temp-root modes without exporting a plaintext getter through house.worker_exec.",
+      "status": "VERIFIED_BY_TEST_WITH_PYTHON_LIMITATION",
+      "evidence": "test_06 through test_09b and test_11",
+      "ceiling": "Python best-effort buffer clearing is not a production zeroization proof"
+    },
+    {
+      "id": "C3",
+      "claim": "Crash classification marks delivery-attempted or uncertain state as POSSIBLE_EXPOSURE and requires quarantine, lock, and rotation.",
+      "status": "VERIFIED_BY_TEST",
+      "evidence": "test_10"
+    },
+    {
+      "id": "C4",
+      "claim": "No Keychain, real secret, process, network, environment, YubiKey, or provider delivery was exercised.",
+      "status": "SOURCE_AND_STATIC_BOUNDARY",
+      "evidence": "test_12 plus source review"
+    }
+  ],
+  "rejected_inferences": [
+    "production secret storage is implemented",
+    "Python clears every interpreter or cryptography-library copy",
+    "macOS helper containment is qualified",
+    "a provider sink or real resolver exists",
+    "Chrome browser integration supplies vault authority"
+  ]
+}
