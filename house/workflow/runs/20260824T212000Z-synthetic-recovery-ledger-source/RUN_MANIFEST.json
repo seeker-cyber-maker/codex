@@ -1,0 +1,68 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260824T212000Z-synthetic-recovery-ledger-source",
+  "starting_head": "135b5fba47d338f59ca489b2f889853101c03ad4",
+  "profile": "full",
+  "case_type": "security_containment",
+  "authority": "USER_CONTINUED_TO_NEXT_MILESTONE",
+  "plan": "PLAN.md",
+  "plan_sha256": "28459d9494ca6f6936aca5200845a0cf77a2d7116bb9b715abf574725b22702c",
+  "accepted_parent_plan_sha256": "d54dbb5a4d4b006e1752956f456a994ea0a4a355050503a585d82385b52d1fe1",
+  "evaluation_card_sha256": "baa69110ffc24a640481aef0338e1b290100588673eca0d95f1439ce546771eb",
+  "claim_ceiling": "SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
+  "status": "PLAN_ACCEPTED_S1_T1_ONLY",
+  "routing_advisory": {
+    "next_phase": "security-sensitive transactional source implementation",
+    "current_model": "UNKNOWN",
+    "recommended_model": "Codex Sol",
+    "recommended_effort": "high",
+    "reason": "the implementation must preserve atomic, replay, integrity, and fixed-receipt invariants simultaneously",
+    "blocking": false,
+    "user_disposition": "NOT_RECORDED",
+    "reassess_trigger": "plan council disposition or first failed deterministic gate"
+  },
+  "task_graph": [
+    {"id": "S1", "depends_on": [], "state": "READY"},
+    {"id": "T1", "depends_on": ["S1"], "state": "NOT_READY"},
+    {"id": "V1", "depends_on": ["T1"], "state": "NOT_READY"},
+    {"id": "C1", "depends_on": ["V1"], "state": "NOT_READY"},
+    {"id": "A1", "depends_on": ["C1"], "state": "NOT_READY"}
+  ],
+  "council_checkpoints": [
+    {
+      "checkpoint_id": "PLAN_COUNCIL",
+      "trigger": "after source plan and contracts are hash-frozen",
+      "blocking": true,
+      "decision_question": "Is the implementation operation precise and contained enough to authorize S1/T1?",
+      "privacy": "local-only",
+      "provider_model_lanes": "three local same-provider Codex roles",
+      "cost_ceiling": "no external provider or network",
+      "response_deadline": null,
+      "required_root_disposition": "ACCEPT, bounded plan delta, or NEEDS_REVIEW",
+      "maximum_staleness": "before any source edit"
+    },
+    {
+      "checkpoint_id": "CANDIDATE_COUNCIL",
+      "trigger": "after deterministic source verification",
+      "blocking": true,
+      "decision_question": "Does the sealed candidate meet only the synthetic claim ceiling?",
+      "privacy": "local-only",
+      "provider_model_lanes": "three local same-provider Codex roles",
+      "cost_ceiling": "no external provider or network",
+      "response_deadline": null,
+      "required_root_disposition": "ACCEPT candidate, bounded remediation, or NEEDS_REVIEW",
+      "maximum_staleness": "before source seal"
+    }
+  ],
+  "forbidden": [
+    "any write outside the two scoped source files and this run directory",
+    "real or existing database access",
+    "real key/signature/package/hardware/Keychain/trusted-time work",
+    "controller/inbox/CLI/provider/worker integration",
+    "network or dispatch",
+    "recovery-ready claim"
+  ],
+  "root_disposition": "ACCEPT_S1_T1_ONLY",
+  "accepted_plan_packet_sha256": "aceb72c67c7296c267fb07ff30cff9fe7573b0cf242706c8390c42934f35b74c",
+  "next_gate": "implement S1 then T1; stop before V1 if scoped source or plan hashes drift"
+}

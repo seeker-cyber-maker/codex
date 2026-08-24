@@ -1,0 +1,137 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "synthetic-recovery-ledger-source-v1",
+  "claim_ids": [
+    "synthetic-ledger-transaction-contract",
+    "synthetic-ledger-bounded-reopen-replay",
+    "synthetic-ledger-source-isolation"
+  ],
+  "task_distribution": {
+    "scope": "private disposable synthetic SQLite adapter around the sealed recovery reducer",
+    "temporal_cutoff": "2026-08-24",
+    "new_vs_legacy_slices": [
+      "new recovery_ledger module and dedicated tests",
+      "unchanged recovery_policy and legacy authority regressions"
+    ],
+    "out_of_distribution_slices": [
+      "real database or state path",
+      "multi-process concurrency or hostile host",
+      "real keys/signatures/packages/hardware/Keychain",
+      "protected checkpoints or operational recovery",
+      "controller/provider/worker/CLI integration"
+    ]
+  },
+  "fixtures": {
+    "public": [
+      "existing synthetic recovery-policy state, manifest, and evidence fixtures"
+    ],
+    "private": [],
+    "adversarial": [
+      "duplicate/conflicting identities",
+      "forced pre-commit exception",
+      "initial-state JSON/digest/genesis corruption",
+      "independent row/digest/state corruptions",
+      "unsafe/symlink/path-identity fixtures",
+      "oversize input and entry-cap boundary",
+      "forbidden import and production reference"
+    ],
+    "known_answer": [
+      "complete six-transition synthetic ceremony",
+      "whole outer envelopes and nested reducer receipts",
+      "canonical logical no-write database snapshots"
+    ]
+  },
+  "contamination": {
+    "sources_checked": [
+      "accepted synthetic-ledger plan",
+      "sealed recovery_policy source/tests",
+      "existing authority/inbox/controller only as negative boundary evidence"
+    ],
+    "tool_access_restrictions": [
+      "no real database path",
+      "no key/package/hardware/Keychain/network/provider/CLI/worker/controller operation",
+      "no production imports or exports"
+    ],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {
+      "applicability": "required",
+      "reason": "source and tests carry the bounded claim",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "execution_trace": {
+      "applicability": "required",
+      "reason": "focused test commands and temporary fixture behavior must be receipted",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "side_effects": {
+      "applicability": "required",
+      "reason": "only temporary fixture databases may be created and must be removed by tests",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "cost": {
+      "applicability": "required",
+      "reason": "bounded local tests with a 64-entry cap",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "latency": {
+      "applicability": "not_applicable",
+      "reason": "no interactive or production latency claim",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "recovery": {
+      "applicability": "required",
+      "reason": "rollback and reopen behavior are the synthetic claim surface",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "long_horizon": {
+      "applicability": "not_applicable",
+      "reason": "bounded single-module implementation with finite replay",
+      "gate": null,
+      "evidence_refs": []
+    }
+  },
+  "oracles": [
+    "whole-object deterministic unittest fixtures",
+    "canonical logical snapshots of all ledger tables",
+    "bounded semantic replay from initial state",
+    "AST/source-graph isolation checks",
+    "unchanged recovery-policy and authority regression suites"
+  ],
+  "semantic_reviewers": [
+    "blind local evidence auditor",
+    "blind local constructive theorist",
+    "blind local adversarial methodologist"
+  ],
+  "metrics": [
+    "zero focused or regression failures",
+    "zero forbidden source references",
+    "zero mutation on refusal/replay/conflict/failed-commit paths",
+    "exact envelope and replay equality"
+  ],
+  "thresholds": [
+    "all deterministic tests pass",
+    "all claim-ceiling literals exact",
+    "all corruption/path/size/cap cases fail closed",
+    "implementation council accepts sealed candidate"
+  ],
+  "uncertainty_method": "retain synthetic-only ceiling and stop on any plan/source mismatch",
+  "failure_taxonomy": [
+    "schema or path refusal",
+    "identity/replay conflict",
+    "rollback leak",
+    "integrity/replay mismatch",
+    "receipt ceiling mismatch",
+    "source-isolation failure",
+    "legacy regression"
+  ],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a versioned evaluation revision"
+}

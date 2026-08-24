@@ -1,0 +1,93 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "dream-house-synthetic-recovery-ledger-source-v1",
+  "record_revision": 1,
+  "record_sha256": "0f32b427408b5162ad56ed0df25e04f54453e03eab9d6a7c07c523e457eb05fd",
+  "run_id": "20260824T212000Z-synthetic-recovery-ledger-source",
+  "intent": "Implement and verify only a private disposable synthetic recovery-ledger adapter and its dedicated tests under the sealed plan.",
+  "target_identity": "/Users/tiga/Documents/Codex_Projects/codex-dream-house@135b5fba47d338f59ca489b2f889853101c03ad4",
+  "input_hashes": {
+    "accepted_ledger_plan": "d54dbb5a4d4b006e1752956f456a994ea0a4a355050503a585d82385b52d1fe1",
+    "implementation_plan": "28459d9494ca6f6936aca5200845a0cf77a2d7116bb9b715abf574725b22702c",
+    "evaluation_card": "baa69110ffc24a640481aef0338e1b290100588673eca0d95f1439ce546771eb",
+    "recovery_policy_source": "274668d6cdf19cdeeaff1b40ca539ddf91c78e441af1db6923c8147ec74f7042",
+    "recovery_policy_tests": "37e08de7c2ed774bdabcb9e25fcbf7704502ad844511bf0d723bfa68da2ae9aa"
+  },
+  "authority_scope": {
+    "read": [
+      "sealed recovery-policy and ledger plans",
+      "recovery_policy.py and its tests",
+      "existing source only for negative import/reference checks"
+    ],
+    "write": [
+      "house/task_spine/recovery_ledger.py",
+      "house/task_spine/tests/test_recovery_ledger.py",
+      "house/workflow/runs/20260824T212000Z-synthetic-recovery-ledger-source",
+      "temporary recovery-ledger-fixture-* directories created and removed by tests"
+    ],
+    "network": [],
+    "external_effect_class": "LOCAL_REVERSIBLE_SOURCE_AND_TEMP_FIXTURES"
+  },
+  "owner": "primary-codex-implementation-lane",
+  "lease": {
+    "holder": null,
+    "expires_at": null,
+    "epoch": 0,
+    "fencing_token": null
+  },
+  "idempotency": {
+    "key": "dream-house-synthetic-recovery-ledger-source-v1",
+    "binding_sha256": "b51900a6571733ea1b5c687a2e41797b6b65249aa636c9c995ee91357a3679df"
+  },
+  "start_state": {
+    "head": "135b5fba47d338f59ca489b2f889853101c03ad4",
+    "accepted_plan_status": "ACCEPTED_PLAN_ONLY_SYNTHETIC_LEDGER_BOUNDARY",
+    "scoped_source_files_exist": false,
+    "unrelated_dirty_paths": [
+      "house/README.md",
+      "house/LOCAL_ZOOKEEPER_CHAT_WORK_WRANGLER_SPEC.md"
+    ]
+  },
+  "checkpoint_policy": {
+    "kind": "source-and-test-commit-after-all-gates",
+    "real_recovery_checkpoint": "FORBIDDEN"
+  },
+  "resume_pointer": null,
+  "deadline": null,
+  "retry_budget": 1,
+  "resource_budget": [
+    {
+      "resource": "source_and_test_diff",
+      "unit": "lines",
+      "hard_cap": 800
+    },
+    {
+      "resource": "accepted_ledger_entries_per_fixture",
+      "unit": "entries",
+      "hard_cap": 64
+    },
+    {
+      "resource": "implementation_lanes",
+      "unit": "lanes",
+      "hard_cap": 1
+    }
+  ],
+  "cancellation": {
+    "supported": true,
+    "method": "stop before commit; leave scoped source unpromoted and preserve evidence"
+  },
+  "expected_artifacts": [
+    "house/task_spine/recovery_ledger.py",
+    "house/task_spine/tests/test_recovery_ledger.py",
+    "VALIDATION.json",
+    "IMPLEMENTATION_RECEIPT.json",
+    "SOURCE_SEAL.json",
+    "HANDOFF.md",
+    "AACR.md"
+  ],
+  "acceptance_verifier": "focused whole-object tests, bounded semantic reopen replay, source-graph isolation, unchanged regressions, and blind candidate council",
+  "reconciliation": {
+    "required": true,
+    "method": "verify only scoped paths changed, temporary fixtures were removed, tests match the plan hash, and no operational surface references the module"
+  }
+}
