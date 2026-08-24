@@ -1,11 +1,17 @@
-# Handoff: P1 runtime binding implementation contract
+# Handoff: P1 runtime binding source seal
 
-Status: `PLAN_ACCEPTED_PENDING_SOURCE_IMPLEMENTATION`.
+Status: `SOURCE_SEALED_NO_DISPATCH` pending the scoped git commit.
 
-Implement `verify_runtime_evidence_bindings` exactly as specified by
-`PLAN.md`, `PLAN_V2.md`, and `PLAN_V3.md`. Use existing v2 verifiers rather
-than duplicating their record validation. Keep route-v1 `account_fingerprint`
-as an opaque compatibility field; do not introduce a policy-qualified account
-claim in P1. Every success result remains no-dispatch and untrusted.
+`verify_runtime_evidence_bindings` implements the sealed P1 v3 contract: it
+invokes existing v2 verification first, binds exact untrusted caller-supplied
+observations, and returns only a no-dispatch/no-authority receipt. Route-v1
+`account_fingerprint` remains an opaque compatibility digest. The strict
+RFC3339-UTC remediation is included.
 
-Do not alter the legacy MCU operation or start R1 observer/trust work.
+Validation: 21 focused tests, 102 worker-exec tests, targeted Ruff, and
+`git diff --check` passed. The full suite has one non-failing existing SQLite
+ResourceWarning. Three local same-provider reviewers promoted the remediated
+source; see `COUNCIL_PROMOTION_PACKET_V2.md` and `COUNCIL_SUMMARY.md`.
+
+Do not alter the legacy MCU operation or begin R1 observer/trust, candidate,
+provider, signing, launch, or secret work. The next gate is separately sealed.

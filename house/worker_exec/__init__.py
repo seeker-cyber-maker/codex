@@ -57,6 +57,7 @@ from .process_supervisor import (
     supervise_fixture_process,
     supervise_process,
 )
+from .runtime_binding import RuntimeBindingError, verify_runtime_evidence_bindings
 from .runtime_profile import (
     RuntimeProfileError,
     runtime_profile_gap_receipt,
@@ -73,6 +74,7 @@ __all__ = [
     "MockVaultError",
     "OperationV2Error",
     "ProcessSupervisorError",
+    "RuntimeBindingError",
     "RuntimeProfileError",
     "WorkerControllerError",
     "WorkerExecError",
@@ -109,6 +111,7 @@ __all__ = [
     "verify_real_runtime_profile",
     "verify_route_selection_v1",
     "verify_ruleset_v1",
+    "verify_runtime_evidence_bindings",
     "verify_safe_projection_v1",
     "verify_task_card_v2",
 ]
