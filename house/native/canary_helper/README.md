@@ -19,6 +19,13 @@ This directory implements only the accepted design's first source/build rung.
   returning a receipt.
 - `signing_policy.json` is deliberately `NOT_CONFIGURED_NO_LAUNCH`; null Team
   ID, sizes, hashes, CDHashes, and designated requirements make it ineligible.
+- `candidate_contract.json` is a closed declarative description of the future
+  bundle subject. Current platform, identity, and entrypoint fields are
+  explicitly `UNRESOLVED`, so it cannot produce plan operations.
+- `candidate_plan.py` validates source and entitlement bindings and can emit a
+  bounded JSON compile/link/assembly/signing order only for a fully resolved
+  test fixture. It imports no process runner, exposes no executor, and never
+  creates a bundle or invokes a described command.
 
 The entitlement plists are exact expected sets, not runtime proof. The parent
 requests only App Sandbox. The helper requests exactly App Sandbox plus
@@ -31,3 +38,7 @@ are limited to the compiler, symbol inspector, and static code-signature
 inspector; candidate launch, linking, App Sandbox claims, generated-canary
 delivery, network probes, Keychain, YubiKey, providers, and real secrets remain
 outside this rung.
+
+The declarative contract and any emitted plan are source/design evidence only.
+They do not qualify an executable, bundle, signature, App Sandbox profile,
+runtime process, generated canary, or secret path.

@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "20260824T173434Z-canary-declarative-contract",
+  "claim_ids": ["CLOSED_DECLARATIVE_CONTRACT", "UNRESOLVED_FAIL_CLOSED", "PURE_NON_EXECUTING_PLAN_DATA"],
+  "task_distribution": {
+    "scope": "candidate contract and plan-data generation only",
+    "temporal_cutoff": "2026-08-24T17:34:34Z",
+    "new_vs_legacy_slices": ["new contract and planner", "accepted current source/entitlement inputs"],
+    "out_of_distribution_slices": ["compiler/linker", "bundle", "certificate/signature", "candidate runtime", "canary", "secret"]
+  },
+  "fixtures": {
+    "public": ["current unresolved contract", "fully resolved temporary fixture"],
+    "private": [],
+    "adversarial": ["unknown fields", "unsafe path", "symlink", "hash drift", "entitlement drift", "unexpected member", "oversize output"],
+    "known_answer": ["current contract refuses with zero operations", "resolved fixture emits exact ordered data"]
+  },
+  "contamination": {
+    "sources_checked": ["accepted PLAN_V2", "current canary-helper source and entitlements"],
+    "tool_access_restrictions": ["no compiler/linker/codesign/certificate/Keychain/launch/network/canary/secret"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "contract and plan-data claim", "gate": "PASS_COUNCIL_PROMOTED_SOURCE_ONLY", "evidence_refs": ["VALIDATION.md", "PROMOTION_DECISION.json", "council-runs/20260824T175129Z-canary-contract-promotion/synthesis.md"]},
+    "execution_trace": {"applicability": "required", "reason": "must prove tests invoke no restricted tool", "gate": "PASS_STATIC_AND_FOCUSED", "evidence_refs": ["VALIDATION.md"]},
+    "side_effects": {"applicability": "required", "reason": "source-only boundary", "gate": "PASS_ZERO_RESTRICTED_ACTIONS", "evidence_refs": ["VALIDATION.md"]},
+    "cost": {"applicability": "required", "reason": "bounded local tests and council", "gate": "BOUNDED_LOCAL_ONLY", "evidence_refs": ["VALIDATION.md"]},
+    "latency": {"applicability": "not_applicable", "reason": "no runtime latency claim", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "not_applicable", "reason": "local atomic source changes", "gate": null, "evidence_refs": []},
+    "long_horizon": {"applicability": "not_applicable", "reason": "bounded source milestone", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["closed JSON schema", "exact hashes", "AST no-execution audit", "ordered known-answer fixture"],
+  "semantic_reviewers": ["blind outside promotion council"],
+  "metrics": ["focused tests", "full tests", "refusal state", "operation order", "restricted calls zero"],
+  "thresholds": ["all deterministic gates pass", "current contract operations zero", "restricted actions zero"],
+  "uncertainty_method": "identity and platform fields remain explicitly unresolved",
+  "failure_taxonomy": ["schema widening", "unsafe path", "hash drift", "false readiness", "execution surface", "authority violation"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new contract version"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "codex-house-plan-seal/1",
+  "sealed_at": "2026-08-24T17:34:34Z",
+  "starting_head": "203e437036e3e43cadc949e6e219165e92889c53",
+  "authority": "PLAN_V2_source_and_tests_only",
+  "accepted_plan_sha256": "c2374af78b7ede938c73c4cb69061ca547c33b65cd003a039344f404f6331037",
+  "files": {
+    "INTAKE.md": "e5813a72f8fc826280763d4b0cdcf7e87731adc07437446380768e1ace06f39f",
+    "PLAN.md": "9d4090aa977892be9350d4b7c8afd6a037f34d76c9a22845ca868310bc3ec1f5",
+    "RUN_MANIFEST.json": "e3fe47db44f454e56f43c0278f92302e149784fdea636f0c55a0b2f8b87bb489",
+    "EVALUATION_CARD.json": "4c36d7f8a35f66209a13fe97431156b6e40cead17ecded412c07b0bddf830a68",
+    "EVENTS.jsonl": "cf0623f092e85844c21bf1285e86523ce17a6cea9b4daafd6b80d4775110fb22"
+  },
+  "next_gate": "source implementation only"
+}

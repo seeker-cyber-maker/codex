@@ -1,0 +1,45 @@
+{
+  "schema": "codex-house-workflow-run/1",
+  "run_id": "20260824T173434Z-canary-declarative-contract",
+  "case_type": "security_containment",
+  "profile": "full",
+  "starting_head": "203e437036e3e43cadc949e6e219165e92889c53",
+  "authority": "PLAN_V2_source_and_tests_only",
+  "source_implementation_authorized": true,
+  "test_execution_authorized": true,
+  "compiler_linker_execution_authorized": false,
+  "bundle_creation_authorized": false,
+  "certificate_discovery_authorized": false,
+  "keychain_authorized": false,
+  "codesign_execution_authorized": false,
+  "identity_signing_authorized": false,
+  "candidate_launch_authorized": false,
+  "network_authorized": false,
+  "generated_canary_authorized": false,
+  "provider_authorized": false,
+  "yubikey_authorized": false,
+  "real_secret_authorized": false,
+  "retry_budget": 2,
+  "model_advisory": {
+    "phase": "declarative future signing-boundary implementation",
+    "recommended_model": "gpt-5.6-sol",
+    "recommended_effort": "xhigh",
+    "reason": "the schema constrains a future signing and runtime containment boundary",
+    "disposition": "advisory emitted; current model not independently surfaced",
+    "reassess": "before promotion or after two failed remediations"
+  },
+  "plan_council": {
+    "source": "../20260824T171515Z-canary-candidate-source-plan/council/synthesis.md",
+    "decision": "REVISE_SOURCE_ONLY_SCAFFOLD",
+    "accepted_plan": "../20260824T171515Z-canary-candidate-source-plan/PLAN_V2.md"
+  },
+  "promotion_council": {
+    "blocking": true,
+    "trigger": "all deterministic source-only gates pass",
+    "requested_reviewers": 3,
+    "requested_model": "gpt-5.6-luna",
+    "requested_effort": "medium",
+    "privacy": "local-ok",
+    "external_network": false
+  }
+}

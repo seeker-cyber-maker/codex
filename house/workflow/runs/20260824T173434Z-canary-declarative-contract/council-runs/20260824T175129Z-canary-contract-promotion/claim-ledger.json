@@ -1,0 +1,35 @@
+[
+  {
+    "claim_id": "C-001",
+    "claim": "The checked-in unresolved contract fails closed with zero operations.",
+    "status": "corroborated",
+    "evidence": ["candidate_plan.py:549-564", "VALIDATION.md"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "same-packet", "same-local-tree"],
+    "decision_impact": "high",
+    "next_test": "none"
+  },
+  {
+    "claim_id": "C-002",
+    "claim": "The source-only planner has no execution surface.",
+    "status": "corroborated",
+    "evidence": ["candidate_plan.py", "test_candidate_plan.py", "VALIDATION.md"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "same-packet", "static-review"],
+    "decision_impact": "high",
+    "next_test": "none"
+  },
+  {
+    "claim_id": "C-003",
+    "claim": "The emitted plan data fully preserves exact future build and signing bindings.",
+    "status": "corroborated",
+    "evidence": ["candidate_plan.py", "test_candidate_plan.py", "VALIDATION.md"],
+    "supporters": ["adversarial-methodologist-round2"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "same-packet"],
+    "decision_impact": "high",
+    "next_test": "none within source-only scope"
+  }
+]

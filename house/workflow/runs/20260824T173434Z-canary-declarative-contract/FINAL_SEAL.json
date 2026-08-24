@@ -1,0 +1,51 @@
+{
+  "schema": "codex-house-final-seal/1",
+  "sealed_at": "2026-08-24T18:00:11Z",
+  "starting_head": "203e437036e3e43cadc949e6e219165e92889c53",
+  "state": "PROMOTED_SOURCE_ONLY_PENDING_FRESH_OPERATIONAL_AUTHORITY",
+  "claim_ceiling": "SOURCE_AND_PLAN_DATA_ONLY_NO_CANDIDATE_OR_RUNTIME_QUALIFICATION",
+  "source_files": {
+    "house/native/canary_helper/README.md": "e3fdbd198bd789787c193ed3f4cd45adae4e3e79749328d5aa2e455c5877a5f6",
+    "house/native/canary_helper/candidate_contract.json": "a0a4899713185c1970676c0ee6b3a97f6e3e4b51d8a9d0bd4e9b9f33e738ee87",
+    "house/native/canary_helper/candidate_plan.py": "ef224922a2d7e08131f95fb2aac97cb96fbb17a82d309e2e879a1ad7aa8b641b",
+    "house/native/canary_helper/tests/test_candidate_plan.py": "9eca036e6fabfdad57d85c8668b6c613fc0347156d6616db9a8614917946f662"
+  },
+  "run_files": {
+    "AACR.md": "dce09067bfa0691e3efc29d5d7c79a814f36f869f2f2087bb89a50dab7174c17",
+    "EVALUATION_CARD.json": "8043ab890405ee7cd07fc5f810b7925431394199a917d10f38fc4e604acf09ab",
+    "EVENTS.jsonl": "7e4786a5f62372c5a60090ee20ad9778ce41706ca7b1d9ca23a9eeaa4941dfe8",
+    "EVIDENCE_INDEX.jsonl": "5f13d02b5b8c4474c646cdaad0fcd9f05d686879d7369aa26c81399a8efcb5ed",
+    "EVIDENCE_PACKET.md": "84f7bd264d26384e527e8bdb13f58fb6da30e3739da124624c970686363365b9",
+    "EVIDENCE_PACKET_ROUND2.md": "7244d1da1a5fba50159aed521dff584f063ebb49bc5d993692fea15ef46e4f37",
+    "HANDOFF.md": "0363ffd76445baa130ce2962734e59603393b659c3c99a5b0b37dae40196dc35",
+    "INTAKE.md": "e5813a72f8fc826280763d4b0cdcf7e87731adc07437446380768e1ace06f39f",
+    "PLAN.md": "9d4090aa977892be9350d4b7c8afd6a037f34d76c9a22845ca868310bc3ec1f5",
+    "PLAN_SEAL.json": "695eaf20ee1d37ffca462359538f5019545d88627bbcbea764d9988d742161f9",
+    "PROMOTION_DECISION.json": "121baad675c13f9f9545b20e45d06d6535ef3970bb128425bf58869fec8ad295",
+    "RUN_MANIFEST.json": "e3fe47db44f454e56f43c0278f92302e149784fdea636f0c55a0b2f8b87bb489",
+    "VALIDATION.md": "f91a85e532b878ab34edf7ed8972513f534092f5cf7176cc6ca6f365aa435f5b",
+    "council-runs/20260824T175129Z-canary-contract-promotion/claim-ledger.json": "30b977220e848a18b6ba70c758c33e6c6ae3c40c9d431b7ee6ce460f4ddb6b80",
+    "council-runs/20260824T175129Z-canary-contract-promotion/manifest.json": "0f001a3de235cc287ad8aeabe332860ce933552b2b60fbdc1a9ba7e1a14c986d",
+    "council-runs/20260824T175129Z-canary-contract-promotion/reviewers/adversarial-methodologist-round2.md": "5197dd632ced1331f574f5b1d583fc69fc6fb52a255f76cf707f2800549408b1",
+    "council-runs/20260824T175129Z-canary-contract-promotion/reviewers/adversarial-methodologist.md": "8d13c87bb85d3249d40f3eaa2fcc1cb70361b57c440d3f884f5c8bef21a70ef7",
+    "council-runs/20260824T175129Z-canary-contract-promotion/reviewers/constructive-theorist.md": "f1075bc1ff5ebaf48826e9601a576d5a3f8f9c1a7818c5ae1a0bf0c8fe109c4f",
+    "council-runs/20260824T175129Z-canary-contract-promotion/reviewers/evidence-auditor.md": "8fc87af39378d5ea4e9ff69c5bebc556092b201a25d99bf7ba6795ad962033bd",
+    "council-runs/20260824T175129Z-canary-contract-promotion/synthesis.md": "548d4d8b135b167d61be2c31cfff52716716bf61dfed04f80b168f73e37bdeba"
+  },
+  "validation": {
+    "evidence_index": "23_RECORDS_ZERO_MISMATCHES",
+    "focused_tests": "23/23",
+    "ruff": "PASS",
+    "contract_state": "NOT_READY_UNRESOLVED_NO_OPERATIONS",
+    "operations": 0,
+    "restricted_calls": 0,
+    "new_compiled_entrypoints": 0,
+    "candidate_artifacts": 0,
+    "json_jsonl": "PASS",
+    "diff_check": "PASS",
+    "council": "ROUND_ONE_3_OF_3_HASH_VERIFIED_ROUND_TWO_OBJECTIONS_RESOLVED",
+    "full_suite": "NOT_RUN_AUTHORITY_RESTRICTED"
+  },
+  "still_forbidden": ["build", "link", "bundle creation", "certificate discovery", "Keychain", "signing", "candidate launch", "network", "canary", "provider", "YubiKey", "secret operations"],
+  "next_gate": "fresh explicit authority for any operation beyond source/design plan data"
+}

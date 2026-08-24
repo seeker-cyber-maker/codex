@@ -1,0 +1,162 @@
+{
+  "schema": "dream-house-canary-candidate-contract/1",
+  "state": "SOURCE_ONLY_UNRESOLVED_NO_EXECUTABLE_PLAN",
+  "unresolved_marker": "UNRESOLVED",
+  "claim_ceiling": "SOURCE_AND_PLAN_DATA_ONLY_NO_CANDIDATE_OR_RUNTIME_QUALIFICATION",
+  "package": {
+    "root": "DreamHouseCanaryParent.app",
+    "version": "0.1.0",
+    "build_version": "1",
+    "parent": {
+      "bundle_identifier": "UNRESOLVED",
+      "display_name": "Dream House Canary Parent",
+      "executable_name": "DreamHouseCanaryParent",
+      "relative_path": "Contents/MacOS/DreamHouseCanaryParent",
+      "info_plist_policy": "REQUIRED_PARENT_APP_PLIST",
+      "info_plist": {
+        "CFBundleDevelopmentRegion": "en",
+        "CFBundleDisplayName": "Dream House Canary Parent",
+        "CFBundleExecutable": "DreamHouseCanaryParent",
+        "CFBundleIdentifier": "UNRESOLVED",
+        "CFBundleInfoDictionaryVersion": "6.0",
+        "CFBundleName": "DreamHouseCanaryParent",
+        "CFBundlePackageType": "APPL",
+        "CFBundleShortVersionString": "0.1.0",
+        "CFBundleSupportedPlatforms": ["MacOSX"],
+        "CFBundleVersion": "1",
+        "LSBackgroundOnly": true,
+        "LSMinimumSystemVersion": "UNRESOLVED"
+      },
+      "entitlements": {
+        "relative_path": "parent.entitlements.plist",
+        "sha256": "97adfde4e3d17fec5442593ab1566e1cce8532f1f5285845a7e9096abb08d45b",
+        "expected": {"com.apple.security.app-sandbox": true}
+      },
+      "hardened_runtime": {
+        "required": true,
+        "codesign_options": ["runtime"],
+        "prohibited_entitlements": [
+          "com.apple.security.cs.allow-dyld-environment-variables",
+          "com.apple.security.cs.allow-jit",
+          "com.apple.security.cs.allow-unsigned-executable-memory",
+          "com.apple.security.cs.debugger",
+          "com.apple.security.cs.disable-library-validation",
+          "com.apple.security.get-task-allow",
+          "com.apple.security.network.client",
+          "com.apple.security.network.server"
+        ]
+      },
+      "identity": {
+        "signing_identity": "UNRESOLVED",
+        "team_identifier": "UNRESOLVED",
+        "designated_requirement": "UNRESOLVED",
+        "cdhash": "UNRESOLVED",
+        "size": "UNRESOLVED",
+        "sha256": "UNRESOLVED"
+      }
+    },
+    "helper": {
+      "bundle_identifier": "UNRESOLVED",
+      "display_name": "Dream House Canary Helper",
+      "executable_name": "DreamHouseCanaryHelper",
+      "relative_path": "Contents/Helpers/DreamHouseCanaryHelper",
+      "info_plist_policy": "FORBIDDEN_RAW_MACHO_HELPER_NO_SEPARATE_BUNDLE",
+      "info_plist": null,
+      "entitlements": {
+        "relative_path": "helper.entitlements.plist",
+        "sha256": "dd1e3d6ed40127688d930fce307186cbc545f031642ca50346df7b5a4e79eea9",
+        "expected": {
+          "com.apple.security.app-sandbox": true,
+          "com.apple.security.inherit": true
+        }
+      },
+      "hardened_runtime": {
+        "required": true,
+        "codesign_options": ["runtime"],
+        "prohibited_entitlements": [
+          "com.apple.security.cs.allow-dyld-environment-variables",
+          "com.apple.security.cs.allow-jit",
+          "com.apple.security.cs.allow-unsigned-executable-memory",
+          "com.apple.security.cs.debugger",
+          "com.apple.security.cs.disable-library-validation",
+          "com.apple.security.get-task-allow",
+          "com.apple.security.network.client",
+          "com.apple.security.network.server"
+        ]
+      },
+      "identity": {
+        "signing_identity": "UNRESOLVED",
+        "team_identifier": "UNRESOLVED",
+        "designated_requirement": "UNRESOLVED",
+        "cdhash": "UNRESOLVED",
+        "size": "UNRESOLVED",
+        "sha256": "UNRESOLVED"
+      }
+    }
+  },
+  "platform": {
+    "architecture": "arm64",
+    "deployment_target": "UNRESOLVED",
+    "developer_dir": "UNRESOLVED",
+    "sdk_path": "UNRESOLVED",
+    "sdk_build": "UNRESOLVED",
+    "toolchain_build": "UNRESOLVED"
+  },
+  "tools": {
+    "clang": {
+      "absolute_path": "UNRESOLVED",
+      "sha256": "UNRESOLVED",
+      "version": "UNRESOLVED"
+    },
+    "codesign": {
+      "absolute_path": "/usr/bin/codesign",
+      "sha256": "UNRESOLVED",
+      "version": "UNRESOLVED"
+    }
+  },
+  "sources": [
+    {"relative_path": "protocol.c", "role": "shared", "mode": "0644", "sha256": "a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1"},
+    {"relative_path": "protocol.h", "role": "header", "mode": "0644", "sha256": "ad725dd956c0232cf941077a6285463a8fd66bf0d7e535be02f4583d4281205e"},
+    {"relative_path": "contract.h", "role": "header", "mode": "0644", "sha256": "98a1abad329491930573e947adc57e30403480a438d2e9d97a3cf6529aacd510"},
+    {"relative_path": "parent_contract.c", "role": "parent", "mode": "0644", "sha256": "1ccfb510e744367ffa8483b9290ceb0f58979c9e8c55970b86c8e1e407ea6611"},
+    {"relative_path": "helper_contract.c", "role": "helper", "mode": "0644", "sha256": "1cc0a49cb326cf7bfcb90268e8301893abed98531df8530d5f347e4d50886f94"},
+    {"relative_path": "parent_main.c", "role": "parent", "mode": "0644", "sha256": "UNRESOLVED"},
+    {"relative_path": "helper_main.c", "role": "helper", "mode": "0644", "sha256": "UNRESOLVED"}
+  ],
+  "bundle_inventory": {
+    "required_members": [
+      {"relative_path": "Contents/Info.plist", "kind": "parent_info_plist", "mode": "0644"},
+      {"relative_path": "Contents/MacOS/DreamHouseCanaryParent", "kind": "parent_macho", "mode": "0755"},
+      {"relative_path": "Contents/Helpers/DreamHouseCanaryHelper", "kind": "helper_macho", "mode": "0755"}
+    ],
+    "signing_generated_members": ["Contents/_CodeSignature/CodeResources"],
+    "unexpected_member_policy": "REJECT",
+    "symlink_policy": "REJECT_ALL_BUNDLE_MEMBER_SYMLINKS"
+  },
+  "plan_policy": {
+    "max_serialized_bytes": 65536,
+    "output_root_policy": "EXISTING_ABSOLUTE_NON_SYMLINK_DIRECTORY_NO_WRITES",
+    "workspace_policy": {
+      "reservation": "ATOMIC_RANDOM_CHILD_UNDER_PINNED_PARENT",
+      "mode": "0700",
+      "token_bits": 128,
+      "max_attempts": 8,
+      "no_follow": true,
+      "cleanup": "EXACT_DESCRIPTOR_RELATIVE_ONLY_AFTER_TERMINAL_RECEIPT"
+    },
+    "operation_order": [
+      "reserve_private_workspace",
+      "write_parent_info_plist",
+      "compile_parent",
+      "compile_helper",
+      "link_helper",
+      "link_parent",
+      "sign_helper",
+      "verify_helper",
+      "sign_parent",
+      "verify_parent",
+      "inventory_bundle"
+    ],
+    "execution": "FORBIDDEN_DATA_ONLY"
+  }
+}

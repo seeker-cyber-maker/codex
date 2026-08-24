@@ -1,0 +1,26 @@
+{
+  "schema": "codex-house-promotion-decision/1",
+  "decided_at": "2026-08-24T18:00:11Z",
+  "decision": "PROMOTE_SOURCE_ONLY",
+  "claim_ceiling": "SOURCE_AND_PLAN_DATA_ONLY_NO_CANDIDATE_OR_RUNTIME_QUALIFICATION",
+  "council": {
+    "round_one_attempted": 3,
+    "round_one_completed": 3,
+    "round_one_packet_sha256": "84f7bd264d26384e527e8bdb13f58fb6da30e3739da124624c970686363365b9",
+    "round_one_dispositions": {"PROMOTE_SOURCE_ONLY": 2, "REVISE_SOURCE_ONLY": 1},
+    "round_two_packet_sha256": "7244d1da1a5fba50159aed521dff584f063ebb49bc5d993692fea15ef46e4f37",
+    "round_two_disposition": "OBJECTIONS_RESOLVED",
+    "shared_dependencies": ["same model family", "same provider", "same harness", "same evidence"]
+  },
+  "validation": {
+    "focused_tests": "23/23",
+    "ruff": "PASS",
+    "contract_state": "NOT_READY_UNRESOLVED_NO_OPERATIONS",
+    "operations": 0,
+    "restricted_calls": 0,
+    "generated_candidate_artifacts": 0,
+    "full_suite": "NOT_RUN_AUTHORITY_RESTRICTED"
+  },
+  "still_forbidden": ["build", "link", "bundle creation", "certificate discovery", "Keychain", "signing", "candidate launch", "network", "canary", "provider", "YubiKey", "secret operations"],
+  "next_authority_gate": "fresh explicit authority for any operation beyond source/design plan data"
+}

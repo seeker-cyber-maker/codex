@@ -1,0 +1,25 @@
+{
+  "council_id": "20260824T175129Z-canary-contract-promotion",
+  "question": "Does the implementation faithfully satisfy PLAN_V2 within the source-only authority boundary?",
+  "mode": "independent-review",
+  "packet_sha256": "84f7bd264d26384e527e8bdb13f58fb6da30e3739da124624c970686363365b9",
+  "privacy": "local-only",
+  "cost_ceiling": "existing Codex subscription",
+  "chair": {"model": "gpt-5.6-sol", "provider": "OpenAI", "harness": "Codex"},
+  "reviewers": [
+    {"id": "evidence-auditor", "requested_model": "gpt-5.6-luna", "selected_model": "gpt-5.6-luna", "provider": "OpenAI", "harness": "Codex subagent", "memory": "unknown", "system_prompt_profile": "shared Codex family, exact unknown", "packet_hash_confirmed_in_response": true, "status": "completed"},
+    {"id": "constructive-theorist", "requested_model": "gpt-5.6-luna", "selected_model": "gpt-5.6-luna", "provider": "OpenAI", "harness": "Codex subagent", "memory": "unknown", "system_prompt_profile": "shared Codex family, exact unknown", "packet_hash_confirmed_in_response": true, "status": "completed"},
+    {"id": "adversarial-methodologist", "requested_model": "gpt-5.6-luna", "selected_model": "gpt-5.6-luna", "provider": "OpenAI", "harness": "Codex subagent", "memory": "unknown", "system_prompt_profile": "shared Codex family, exact unknown", "packet_hash_confirmed_in_response": true, "status": "completed"}
+  ],
+  "started_at": "2026-08-24T17:51:29Z",
+  "completed_at": "2026-08-24T18:00:11Z",
+  "round_one_decision": "REVISE_SOURCE_ONLY_DISSENT_EVIDENCE_BEARING",
+  "round_two": {
+    "packet_sha256": "7244d1da1a5fba50159aed521dff584f063ebb49bc5d993692fea15ef46e4f37",
+    "reviewer": "adversarial-methodologist",
+    "status": "completed",
+    "packet_hash_confirmed_in_response": true,
+    "disposition": "OBJECTIONS_RESOLVED"
+  },
+  "final_decision": "PROMOTE_SOURCE_ONLY"
+}
