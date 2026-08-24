@@ -1,0 +1,8 @@
+{"event":"design_resume","at":"2026-08-24T13:54:07Z","starting_head":"f0dd0653828f78e7edefa70f4e020eaaf4be240c","predecessor":"20260824T131406Z-vault-protocol-mock-slice"}
+{"event":"source_reconciliation","at":"2026-08-24T13:54:07Z","finding":"generic_supervisor_and_structural_runtime_profile_are_not_helper_containment","process_spawn":"NOT_ATTEMPTED"}
+{"event":"platform_design_evidence","at":"2026-08-24T13:54:07Z","sdk":"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","host":"macOS 27.0 26A5388g","deprecated_mechanism":"sandbox_init","proposed_mechanism":"app_sandbox_plus_hardened_runtime_pending_runtime_proof"}
+{"event":"design_candidate","at":"2026-08-24T13:54:07Z","disposition":"PENDING_IMMUTABLE_OUTSIDE_COUNCIL","runtime":"NOT_ATTEMPTED"}
+{"event":"outside_council","at":"2026-08-24T14:00:16Z","transport_sha256":"99ecfc7e183f4d8d40cc938c3869bc7d668b2de72930d59c86881852dfe1c819","attempted":3,"completed":2,"partial":1,"chair_disposition":"REVISE_BEFORE_IMPLEMENTATION"}
+{"event":"design_remediation","at":"2026-08-24T14:00:16Z","version":"v1.1","corrections":["pre_canary_runtime_denial_gate","post_spawn_dynamic_code_identity","single_parent_process_group","rlimit_order","sink_release_state_name"],"runtime":"NOT_ATTEMPTED"}
+{"event":"final_delta_council","at":"2026-08-24T14:05:33Z","transport_sha256":"bec0c8a1195e1ff3d3259513a9e49c4460af149c6b860777e7e5ff2fe936541f","attempted":3,"completed":2,"partial":1,"chair_disposition":"ACCEPT_DESIGN_ONLY"}
+{"event":"milestone","at":"2026-08-24T14:05:33Z","disposition":"ACCEPT_DESIGN_ONLY","canonical_design":"CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md","process_spawn":"NOT_ATTEMPTED","next_gate":"spawn_disabled_native_source_and_build_inspection"}

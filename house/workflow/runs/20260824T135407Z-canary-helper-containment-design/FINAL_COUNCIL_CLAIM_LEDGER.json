@@ -1,0 +1,35 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "claims": [
+    {
+      "id": "F1",
+      "claim": "The delta transport was byte-identical to the dry-run transport and explicitly marked cloud-ok.",
+      "status": "RECEIPT_VERIFIED",
+      "evidence": "delta-council-dry-run/transport-packet.md and delta-council/transport-packet.md"
+    },
+    {
+      "id": "F2",
+      "claim": "One complete reviewer accepted design-only and one partial reviewer provided a detailed acceptance analysis; the OpenRouter fallback was non-substantive and introduced a placeholder absent from the packet.",
+      "status": "RAW_RESPONSE_VERIFIED",
+      "evidence": "delta-council/manifest.json and delta-council/reviewers/"
+    },
+    {
+      "id": "F3",
+      "claim": "v1.1 is accepted only as a non-runtime generated-canary design contract.",
+      "status": "CHAIR_ACCEPTED_DESIGN_ONLY",
+      "evidence": "CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md and FINAL_COUNCIL_SYNTHESIS.md"
+    },
+    {
+      "id": "F4",
+      "claim": "No helper was built or spawned and no network, Keychain, YubiKey, provider, real credential, or live Codex configuration was touched by this design run.",
+      "status": "SOURCE_AND_WORKFLOW_BOUNDARY",
+      "evidence": "RUN_MANIFEST.json, EVENTS.jsonl, and repository diff"
+    }
+  ],
+  "rejected_inferences": [
+    "outside review authorizes helper execution",
+    "an entitlement list proves active App Sandbox enforcement",
+    "the placeholder introduced by the OpenRouter response exists in source",
+    "generated-canary design acceptance authorizes Keychain or real secrets"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "claims": [
+    {
+      "id": "R1",
+      "claim": "The initial immutable council transport was hash-identical to its dry run and received one complete substantive revision finding, one truncated acceptance prefix, and one non-substantive completed response.",
+      "status": "RECEIPT_VERIFIED",
+      "evidence": "council/manifest.json and council/reviewers/"
+    },
+    {
+      "id": "R2",
+      "claim": "v1.1 adds pre-canary runtime denial probes, post-spawn dynamic code identity, a single parent process group, ordered RLIMIT setup, and an accurately named durable release gate.",
+      "status": "SOURCE_SUPPORTED_DESIGN",
+      "evidence": "CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md"
+    },
+    {
+      "id": "R3",
+      "claim": "No helper was built or spawned and no network, Keychain, YubiKey, provider, real credential, or live Codex configuration was touched.",
+      "status": "SOURCE_AND_WORKFLOW_BOUNDARY",
+      "evidence": "RUN_MANIFEST.json and EVENTS.jsonl"
+    }
+  ],
+  "rejected_inferences": [
+    "the OpenRouter fallback produced a substantive security review",
+    "an ENOENT path probe proves sandbox enforcement",
+    "static path signature verification closes a spawn-time replacement race",
+    "a helper in its own session will be killed with the parent process group",
+    "generated-canary incidents require credential rotation"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "codex-house-workflow-run/1",
+  "run_id": "20260824T135407Z-canary-helper-containment-design",
+  "case_type": "security_containment_design",
+  "starting_head": "f0dd0653828f78e7edefa70f4e020eaaf4be240c",
+  "authority": "design_and_generated_data_only",
+  "network_authorized": false,
+  "process_spawn_authorized": false,
+  "real_secret_authorized": false,
+  "keychain_authorized": false,
+  "yubikey_authorized": false,
+  "runtime_promotion_authorized": false,
+  "model_advisory": "Sol/xhigh for security-sensitive architecture and council synthesis; reassess to Terra/high only after design acceptance"
+}

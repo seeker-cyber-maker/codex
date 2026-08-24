@@ -1,0 +1,20 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "sealed_at": "2026-08-24T14:05:33Z",
+  "starting_head": "f0dd0653828f78e7edefa70f4e020eaaf4be240c",
+  "disposition": "ACCEPT_DESIGN_ONLY",
+  "files": {
+    "CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md": "e37fa7cae1d06fb6fd8705e6f120ed0ea895fb28cffdc11a93867ace8ce7652e",
+    "FINAL_COUNCIL_SYNTHESIS.md": "1d84d3cbeb609a084faaec2489573cdc0759fa56fc7fd09ea60a8d55f56577f9",
+    "FINAL_COUNCIL_CLAIM_LEDGER.json": "34618fa0662bd65be373ec0b4ef78b56e6d13747a7300f92232faab9fa383bd4",
+    "AACR.md": "36d00653db86cda2c7153e421eefca87e1ecc8c851af5ebf5fcfc085c890d20a",
+    "HANDOFF.md": "ba7b5b2391a79671b9d436fe1b7910305a6de50d11e1e7e60d89f812a3d96d44",
+    "VALIDATION.json": "69665bd67db0a76366527a5fe3788fca71d6356723b8d7c0ff9a53c5a7f97fbc",
+    "EVENTS.jsonl": "75f15d4b291be4f3e1af0f62dc893b9e784f745dc9cfe1734dde9deeabe34c52",
+    "delta-council/manifest.json": "f306ddfa7707f5105cc636f13d970aff1807a86065684dc3af394373535a06fd",
+    "delta-council/transport-packet.md": "bec0c8a1195e1ff3d3259513a9e49c4460af149c6b860777e7e5ff2fe936541f",
+    "delta-council/reviewers/adversarial-methodologist.md": "e1df4ed1e9a5d0ca8f3a5e50796833bea0bb9e99508bbcadf0d8eac40973ee01",
+    "delta-council/reviewers/constructive-theorist.md": "bd24e4eed196950629e06c0f8665273879a8f1df9bcdbf1af54a456a24b0be67",
+    "delta-council/reviewers/evidence-auditor.md": "1eba6f68952eaf06d3aef95b78bfba09dc7e9c085e48df748416b4b8c1a23d90"
+  }
+}

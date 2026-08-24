@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "lanes": {
+    "openrouter-explicit-free": {
+      "base_url": "http://127.0.0.1:4016/v1",
+      "api_key_env": "LITELLM_MASTER_KEY",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "require_model_suffix": ":free",
+      "forbid_models": ["openrouter/free", "openrouter/auto"]
+    },
+    "clinepass": {
+      "base_url": "http://127.0.0.1:4014/v1",
+      "api_key_env": "LITELLM_MASTER_KEY",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud"
+    },
+    "antigravity-text": {
+      "base_url": "http://127.0.0.1:4015/v1",
+      "api_key_env": "LITELLM_MASTER_KEY",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud"
+    }
+  },
+  "profiles": {
+    "canary-helper-containment-design": [
+      {
+        "id": "evidence-auditor",
+        "lane": "openrouter-explicit-free",
+        "model": "google/gemma-4-31b-it:free",
+        "fallback_models": ["nvidia/nemotron-3-super-120b-a12b:free"]
+      },
+      {
+        "id": "constructive-theorist",
+        "lane": "clinepass",
+        "model": "cline-pass/deepseek-v4-flash",
+        "fallback_models": ["cline-pass/kimi-k2.7-code"]
+      },
+      {
+        "id": "adversarial-methodologist",
+        "lane": "antigravity-text",
+        "model": "gemini-2.5-flash-lite"
+      }
+    ]
+  }
+}

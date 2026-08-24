@@ -1,0 +1,36 @@
+{
+  "schema": "codex-house-claim-ledger/1",
+  "claims": [
+    {
+      "id": "D1",
+      "claim": "The candidate design separates the future helper path from the existing generic Python process supervisor and structural runtime-profile verifier.",
+      "status": "SOURCE_SUPPORTED_DESIGN",
+      "evidence": "CANARY_HELPER_CONTAINMENT_DESIGN.md and SOURCE_ANCHORS.md"
+    },
+    {
+      "id": "D2",
+      "claim": "The candidate design puts a process-crash durable sink-attempt record before the one-use release frame and classifies later ambiguity as possible sink exposure.",
+      "status": "DESIGN_ONLY_UNVERIFIED",
+      "evidence": "CANARY_HELPER_CONTAINMENT_DESIGN.md two-phase protocol and crash table"
+    },
+    {
+      "id": "D3",
+      "claim": "The candidate design defines falsifiers for inherited FDs, environment, network, arbitrary files, subprocesses, crash output, audit failure, timeout, and protocol replay.",
+      "status": "DESIGN_ONLY_UNVERIFIED",
+      "evidence": "CANARY_HELPER_CONTAINMENT_DESIGN.md falsifier matrix"
+    },
+    {
+      "id": "D4",
+      "claim": "No proposed helper was built or spawned and no Keychain, YubiKey, provider, network, real credential, or live Codex configuration was touched in this run.",
+      "status": "SOURCE_AND_WORKFLOW_BOUNDARY",
+      "evidence": "RUN_MANIFEST.json and EVENTS.jsonl"
+    }
+  ],
+  "rejected_inferences": [
+    "App Sandbox containment has been runtime-proven",
+    "RLIMIT_NPROC alone proves no subprocess",
+    "a signed entitlement listing proves the active sandbox profile",
+    "generated-canary success would authorize a real secret",
+    "the existing generic supervisor is eligible for secret delivery"
+  ]
+}

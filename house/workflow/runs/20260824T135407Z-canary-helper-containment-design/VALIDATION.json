@@ -1,0 +1,25 @@
+{
+  "schema": "codex-house-validation/1",
+  "validated_at": "2026-08-24T14:05:33Z",
+  "result": "PASS_DESIGN_ONLY",
+  "canonical_design": {
+    "path": "CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md",
+    "sha256": "e37fa7cae1d06fb6fd8705e6f120ed0ea895fb28cffdc11a93867ace8ce7652e"
+  },
+  "checks": {
+    "all_json_and_jsonl_parse": "PASS",
+    "pre_council_source_seal": "PASS",
+    "post_council_source_seal": "PASS",
+    "initial_dry_run_transport_equals_dispatched_transport": "PASS",
+    "delta_dry_run_transport_equals_dispatched_transport": "PASS",
+    "changes_confined_to_run_directory": "PASS",
+    "diff_check_excluding_raw_reviewer_responses": "PASS",
+    "runtime_tests": "NOT_APPLICABLE_DESIGN_ONLY",
+    "helper_build": "NOT_ATTEMPTED",
+    "process_spawn": "NOT_ATTEMPTED",
+    "network_probe": "NOT_ATTEMPTED",
+    "keychain": "NOT_ATTEMPTED",
+    "real_secret": "NOT_ATTEMPTED"
+  },
+  "raw_evidence_note": "Reviewer responses are preserved byte-for-byte and excluded from whitespace normalization or diff-check remediation."
+}

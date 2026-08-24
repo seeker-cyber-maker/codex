@@ -1,0 +1,4 @@
+{"event":"design_resume","at":"2026-08-24T13:54:07Z","starting_head":"f0dd0653828f78e7edefa70f4e020eaaf4be240c","predecessor":"20260824T131406Z-vault-protocol-mock-slice"}
+{"event":"source_reconciliation","at":"2026-08-24T13:54:07Z","finding":"generic_supervisor_and_structural_runtime_profile_are_not_helper_containment","process_spawn":"NOT_ATTEMPTED"}
+{"event":"platform_design_evidence","at":"2026-08-24T13:54:07Z","sdk":"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","host":"macOS 27.0 26A5388g","deprecated_mechanism":"sandbox_init","proposed_mechanism":"app_sandbox_plus_hardened_runtime_pending_runtime_proof"}
+{"event":"design_candidate","at":"2026-08-24T13:54:07Z","disposition":"PENDING_IMMUTABLE_OUTSIDE_COUNCIL","runtime":"NOT_ATTEMPTED"}

@@ -1,0 +1,18 @@
+{
+  "schema": "codex-house-source-seal/1",
+  "sealed_at": "2026-08-24T14:00:16Z",
+  "starting_head": "f0dd0653828f78e7edefa70f4e020eaaf4be240c",
+  "disposition": "IMMUTABLE_V1_1_DELTA_PENDING_FINAL_COUNCIL",
+  "files": {
+    "CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md": "e37fa7cae1d06fb6fd8705e6f120ed0ea895fb28cffdc11a93867ace8ce7652e",
+    "COUNCIL_SYNTHESIS.md": "1cf08153be184c11c85d8d02de987f9ad25ebe0e57667bd4baa084fe402cfc35",
+    "POST_COUNCIL_CLAIM_LEDGER.json": "a87eaa68fab8cedb99340aef2ca40c999f30f4a93e41f5db0c3742b7436bd65d",
+    "DELTA_EVIDENCE_PACKET.md": "f4b261d375a3494a04ef537c4f3e91a03cb55afa3cddd75026cc19a8ef9284dc",
+    "EVENTS_POST_COUNCIL.jsonl": "14b8eccc9638aba749531eac79ea6c9f10abb9feb0c9edccfd9b98fe80e907d0",
+    "council/manifest.json": "0a9346bd9af8dbb9f5a01da95fe30702f10f0e9b0e674857917a78a3b763c0a1",
+    "council/transport-packet.md": "99ecfc7e183f4d8d40cc938c3869bc7d668b2de72930d59c86881852dfe1c819",
+    "council/reviewers/adversarial-methodologist.md": "7f05a53ee4a7cd599f61ff9c1737b003dc1daf5453fdc4dfb209245347efc626",
+    "council/reviewers/constructive-theorist.md": "7c3e37db05f684f6ea8a545f8e81962a1bea3dc3fdea3b0b9429b0e757118146",
+    "council/reviewers/evidence-auditor.md": "9934e535fc0d5a2c0ea31fa4d2658e5f36075adc6f74effb39f8032951486510"
+  }
+}

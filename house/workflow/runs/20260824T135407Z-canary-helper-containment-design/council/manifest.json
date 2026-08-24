@@ -1,0 +1,284 @@
+{
+  "council_id": "council",
+  "mode": "independent-review",
+  "profile": "canary-helper-containment-design",
+  "task_mode": "design",
+  "transport_packet_sha256": "99ecfc7e183f4d8d40cc938c3869bc7d668b2de72930d59c86881852dfe1c819",
+  "privacy": "unknown",
+  "source_artifacts": [
+    {
+      "path": "house/workflow/runs/20260824T135407Z-canary-helper-containment-design/EVIDENCE_PACKET.md",
+      "sha256": "1fde7e176f2d94b773877118211b4d32b99c690421c0ebc9095c603c51a2ab8e"
+    },
+    {
+      "path": "house/workflow/runs/20260824T135407Z-canary-helper-containment-design/CANARY_HELPER_CONTAINMENT_DESIGN.md",
+      "sha256": "b690f3635875570cbff100abd27de1427865d501eec31ab52a289bfe9d72f40b"
+    },
+    {
+      "path": "house/workflow/runs/20260824T135407Z-canary-helper-containment-design/SOURCE_ANCHORS.md",
+      "sha256": "94153ad84e812cd2866c3e09ddd0c06d2c45fa1e4b2cab867b94390cb5d9bf18"
+    },
+    {
+      "path": "house/workflow/runs/20260824T135407Z-canary-helper-containment-design/CLAIM_LEDGER.json",
+      "sha256": "29b03e7b6c75fe0280a8fad293a506a580e0118a9feeff45351043c3d0c5fc9c"
+    },
+    {
+      "path": "house/workflow/runs/20260824T135407Z-canary-helper-containment-design/RUN_MANIFEST.json",
+      "sha256": "6d9385d90182fd6787f8dc06ebd93b27e3fb07f68ea08dae58ae69fd80dcb77a"
+    },
+    {
+      "path": "house/workflow/runs/20260823T154950Z-real-vault-threat-model/REAL_FIREWALL_VAULT_THREAT_MODEL.md",
+      "sha256": "91aaae86e7ec4a87ced277a4402bcfbc26737b9e5bea24b16aa005b2d594a3ba"
+    },
+    {
+      "path": "house/worker_exec/process_supervisor.py",
+      "sha256": "67e22cf9977fb4b006a7f0cd3ae6a2785cccccf5beedd395824a3f0afb57e60f"
+    },
+    {
+      "path": "house/worker_exec/controller.py",
+      "sha256": "44bf2b96211344731126d1ee33b4cff64020c5b5a74b298940e047fadd9ac8fb"
+    },
+    {
+      "path": "house/worker_exec/runtime_profile.py",
+      "sha256": "b3629fcb59b8fb9c95a0bbc67c6330259f9d2733783a46e13df6e09f19ecc1e2"
+    },
+    {
+      "path": "house/worker_exec/vault_protocol_mock.py",
+      "sha256": "6f87a1ee743b7e6315e8e78dec08f4f0c9cd7f499d4203a2f78602dc89a53500"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "google/gemma-4-31b-it:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "99ecfc7e183f4d8d40cc938c3869bc7d668b2de72930d59c86881852dfe1c819",
+      "started_at": "2026-08-24T13:59:22+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "google/gemma-4-31b-it:free",
+          "started_at": "2026-08-24T13:59:22+00:00",
+          "status": "failed",
+          "http_status": 429,
+          "error": "chat completion HTTP 429: Provider returned error",
+          "latency_seconds": 5.136,
+          "completed_at": "2026-08-24T13:59:27+00:00"
+        },
+        {
+          "attempt": 2,
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "started_at": "2026-08-24T13:59:27+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "length",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "prompt_tokens": 25829,
+            "completion_tokens": 3000,
+            "total_tokens": 28829,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3546,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "latency_seconds": 48.522,
+          "completed_at": "2026-08-24T14:00:16+00:00"
+        }
+      ],
+      "selected_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "http_status": 200,
+      "finish_reason": "length",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "prompt_tokens": 25829,
+        "completion_tokens": 3000,
+        "total_tokens": 28829,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3546,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "latency_seconds": 53.659,
+      "completed_at": "2026-08-24T14:00:16+00:00"
+    },
+    {
+      "id": "constructive-theorist",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/deepseek-v4-flash",
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "99ecfc7e183f4d8d40cc938c3869bc7d668b2de72930d59c86881852dfe1c819",
+      "started_at": "2026-08-24T13:59:22+00:00",
+      "status": "partial",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "cline-pass/deepseek-v4-flash",
+          "started_at": "2026-08-24T13:59:22+00:00",
+          "status": "partial",
+          "http_status": 200,
+          "finish_reason": "length",
+          "contract_valid": false,
+          "missing_sections": [
+            "## Authority-bearing facts",
+            "## Contradiction handling",
+            "## Stop and human escalation",
+            "## Failure containment and recovery",
+            "## Falsification experiments",
+            "## Assumptions and limitations"
+          ],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "completion_tokens": 3000,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 2584
+            },
+            "cost": 0.01507968,
+            "cost_details": null,
+            "is_byok": false,
+            "prompt_tokens": 25272,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 28272
+          },
+          "latency_seconds": 31.56,
+          "completed_at": "2026-08-24T13:59:54+00:00"
+        }
+      ],
+      "selected_model": "cline-pass/deepseek-v4-flash",
+      "http_status": 200,
+      "finish_reason": "length",
+      "contract_valid": false,
+      "missing_sections": [
+        "## Authority-bearing facts",
+        "## Contradiction handling",
+        "## Stop and human escalation",
+        "## Failure containment and recovery",
+        "## Falsification experiments",
+        "## Assumptions and limitations"
+      ],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "completion_tokens": 3000,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 2584
+        },
+        "cost": 0.01507968,
+        "cost_details": null,
+        "is_byok": false,
+        "prompt_tokens": 25272,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 28272
+      },
+      "latency_seconds": 31.56,
+      "completed_at": "2026-08-24T13:59:54+00:00"
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-2.5-flash-lite",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-2.5-flash-lite"
+      ],
+      "packet_sha256": "99ecfc7e183f4d8d40cc938c3869bc7d668b2de72930d59c86881852dfe1c819",
+      "started_at": "2026-08-24T13:59:22+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "gemini-2.5-flash-lite",
+          "started_at": "2026-08-24T13:59:22+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 5.58,
+          "completed_at": "2026-08-24T13:59:28+00:00"
+        }
+      ],
+      "selected_model": "gemini-2.5-flash-lite",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 5.58,
+      "completed_at": "2026-08-24T13:59:28+00:00"
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 2,
+  "partial_reviewers": 1,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-24T13:59:22+00:00",
+  "completed_at": "2026-08-24T14:00:16+00:00"
+}
