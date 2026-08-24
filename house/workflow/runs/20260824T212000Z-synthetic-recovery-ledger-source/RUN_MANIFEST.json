@@ -10,7 +10,7 @@
   "accepted_parent_plan_sha256": "d54dbb5a4d4b006e1752956f456a994ea0a4a355050503a585d82385b52d1fe1",
   "evaluation_card_sha256": "baa69110ffc24a640481aef0338e1b290100588673eca0d95f1439ce546771eb",
   "claim_ceiling": "SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
-  "status": "PLAN_ACCEPTED_S1_T1_ONLY",
+  "status": "SOURCE_SEALED_AT_SYNTHETIC_CEILING",
   "routing_advisory": {
     "next_phase": "security-sensitive transactional source implementation",
     "current_model": "UNKNOWN",
@@ -22,11 +22,11 @@
     "reassess_trigger": "plan council disposition or first failed deterministic gate"
   },
   "task_graph": [
-    {"id": "S1", "depends_on": [], "state": "READY"},
-    {"id": "T1", "depends_on": ["S1"], "state": "NOT_READY"},
-    {"id": "V1", "depends_on": ["T1"], "state": "NOT_READY"},
-    {"id": "C1", "depends_on": ["V1"], "state": "NOT_READY"},
-    {"id": "A1", "depends_on": ["C1"], "state": "NOT_READY"}
+    {"id": "S1", "depends_on": [], "state": "COMPLETE"},
+    {"id": "T1", "depends_on": ["S1"], "state": "COMPLETE"},
+    {"id": "V1", "depends_on": ["T1"], "state": "COMPLETE"},
+    {"id": "C1", "depends_on": ["V1"], "state": "COMPLETE"},
+    {"id": "A1", "depends_on": ["C1"], "state": "COMPLETE"}
   ],
   "council_checkpoints": [
     {
@@ -62,7 +62,7 @@
     "network or dispatch",
     "recovery-ready claim"
   ],
-  "root_disposition": "ACCEPT_S1_T1_ONLY",
+  "root_disposition": "ACCEPT_SOURCE_SEAL_AT_SYNTHETIC_CEILING",
   "accepted_plan_packet_sha256": "aceb72c67c7296c267fb07ff30cff9fe7573b0cf242706c8390c42934f35b74c",
-  "next_gate": "implement S1 then T1; stop before V1 if scoped source or plan hashes drift"
+  "next_gate": "scoped commit and private backup push only"
 }

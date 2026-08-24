@@ -1,0 +1,47 @@
+{
+  "schema": "dream-house-implementation-validation/1",
+  "observed_at": "2026-08-24T22:32:50Z",
+  "status": "PASS_PENDING_CANDIDATE_COUNCIL",
+  "candidate": {
+    "house/task_spine/recovery_ledger.py": "063f94e98d5c624d60cefab88e0ac7f498fc615d8968a3e2dff3121b6f832ca5",
+    "house/task_spine/tests/test_recovery_ledger.py": "ae8e48473c95fc5c0032b8dd28ef0b7b5f6072bcf135fbe6c3864b1517624db8",
+    "house/task_spine/tests/test_recovery_policy.py": "aaf6ec39c22e0d54f23469914000a103f4ffce584c4706e81e3620acb39d0c15"
+  },
+  "checks": [
+    {
+      "command": "python3 -W error::ResourceWarning -m unittest house.task_spine.tests.test_recovery_ledger",
+      "result": "PASS",
+      "evidence": "6 tests passed; ResourceWarning promoted to error"
+    },
+    {
+      "command": "python3 -m unittest house.task_spine.tests.test_recovery_policy",
+      "result": "PASS",
+      "evidence": "5 tests passed after accepted exact-path test compatibility amendment"
+    },
+    {
+      "command": "python3 -m unittest house.task_spine.tests.test_authority house.task_spine.tests.test_authority_crypto",
+      "result": "PASS",
+      "evidence": "13 tests passed"
+    },
+    {
+      "command": "python3 -m py_compile house/task_spine/recovery_ledger.py house/task_spine/tests/test_recovery_ledger.py house/task_spine/tests/test_recovery_policy.py",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "check": "source and dedicated-test line ceiling",
+      "result": "PASS",
+      "evidence": "488 + 300 = 788 lines; ceiling 800"
+    }
+  ],
+  "claim_ceiling": "SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
+  "not_validated": [
+    "candidate council acceptance or source seal",
+    "OS-level containment",
+    "crash durability beyond bounded synthetic fault injection",
+    "operational recovery, keys, hardware, trusted time, dispatch, or runtime admission"
+  ]
+}

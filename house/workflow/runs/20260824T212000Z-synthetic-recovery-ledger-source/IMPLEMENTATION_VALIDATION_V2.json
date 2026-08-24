@@ -1,0 +1,48 @@
+{
+  "schema": "dream-house-implementation-validation/1",
+  "status": "PASS_PENDING_CANDIDATE_COUNCIL",
+  "candidate": {
+    "house/task_spine/recovery_ledger.py": "5f47b675d9cde29e4722e1ae4156e79af346a2069826f6019ac6eb74d85fcf6d",
+    "house/task_spine/tests/test_recovery_ledger.py": "7bd03abfabdd8faa7afe375addc6bc8718a72189a74e656003a0d74a5c8b87ca",
+    "house/task_spine/tests/test_recovery_policy.py": "aaf6ec39c22e0d54f23469914000a103f4ffce584c4706e81e3620acb39d0c15"
+  },
+  "checks": [
+    {
+      "command": "python3 -W error::ResourceWarning -m unittest house.task_spine.tests.test_recovery_ledger",
+      "result": "PASS",
+      "evidence": "7 tests passed; ResourceWarning promoted to error"
+    },
+    {
+      "command": "python3 -m unittest house.task_spine.tests.test_recovery_policy",
+      "result": "PASS",
+      "evidence": "5 tests passed"
+    },
+    {
+      "command": "python3 -m unittest house.task_spine.tests.test_authority house.task_spine.tests.test_authority_crypto",
+      "result": "PASS",
+      "evidence": "13 tests passed"
+    },
+    {
+      "command": "python3 -m py_compile house/task_spine/recovery_ledger.py house/task_spine/tests/test_recovery_ledger.py house/task_spine/tests/test_recovery_policy.py",
+      "result": "PASS"
+    },
+    {"command": "git diff --check", "result": "PASS"},
+    {
+      "check": "source and dedicated-test line ceiling",
+      "result": "PASS",
+      "evidence": "476 + 316 = 792 lines; ceiling 800"
+    },
+    {
+      "check": "coherent nested substitution",
+      "result": "PASS",
+      "evidence": "recomputed nested, outer, receipt JSON, and event digests rejected by duplicate apply and reopen without reducer call or mutation"
+    }
+  ],
+  "claim_ceiling": "SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
+  "not_validated": [
+    "candidate council acceptance or source seal",
+    "authenticity against coordinated full-history SQLite rewrite",
+    "OS-level containment or crash durability beyond bounded fault injection",
+    "operational recovery, keys, hardware, trusted time, dispatch, or runtime admission"
+  ]
+}

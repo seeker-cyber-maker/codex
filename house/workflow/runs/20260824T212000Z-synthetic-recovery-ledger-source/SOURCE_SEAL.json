@@ -1,0 +1,34 @@
+{
+  "schema": "dream-house-source-seal/1",
+  "sealed_at": "2026-08-24T22:44:56Z",
+  "run_id": "20260824T212000Z-synthetic-recovery-ledger-source",
+  "starting_head": "f07ee15846f07f0d06101f9538f54792172251f4",
+  "authority_chain": {
+    "plan_sha256": "28459d9494ca6f6936aca5200845a0cf77a2d7116bb9b715abf574725b22702c",
+    "amendment_v1_sha256": "66521a326570a0a469c9f0e0382e43a9a4b50d119a71b60986b64b207b524077",
+    "amendment_v2_sha256": "3879760df109d9d7af8fb47b60ede81ae5b0a21dc0d07610ff0ccfd45c63250e",
+    "candidate_packet_v2_sha256": "ae1b9c1762d28b536ebe833be23d0f4d4bfbabc72081043248c32611689fd966"
+  },
+  "sealed_files": {
+    "house/task_spine/recovery_ledger.py": "5f47b675d9cde29e4722e1ae4156e79af346a2069826f6019ac6eb74d85fcf6d",
+    "house/task_spine/tests/test_recovery_ledger.py": "7bd03abfabdd8faa7afe375addc6bc8718a72189a74e656003a0d74a5c8b87ca",
+    "house/task_spine/tests/test_recovery_policy.py": "aaf6ec39c22e0d54f23469914000a103f4ffce584c4706e81e3620acb39d0c15",
+    "house/workflow/runs/20260824T212000Z-synthetic-recovery-ledger-source/IMPLEMENTATION_VALIDATION_V2.json": "076f58f261d78ca42fa7746af7425f962030b5963fa023ea614b2af2ac944661"
+  },
+  "tests": {"focused": 7, "legacy_reducer": 5, "authority_crypto": 13, "total": 25},
+  "source_and_dedicated_test_lines": 792,
+  "council": {
+    "evidence": "ACCEPT",
+    "constructive": "ACCEPT",
+    "adversarial": "ACCEPT",
+    "independence": "MULTI_AGENT_SAME_PROVIDER"
+  },
+  "claim_ceiling": "SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
+  "authority": "NOT_GRANTED",
+  "dispatch": "NOT_ATTEMPTED",
+  "hardware": "NOT_ACCESSED",
+  "key_material": "NOT_ACCESSED",
+  "runtime_admission": "NOT_ATTEMPTED",
+  "checkpoint_protection": "NOT_ESTABLISHED",
+  "recovery_readiness": "NOT_ESTABLISHED"
+}
