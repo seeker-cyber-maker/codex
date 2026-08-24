@@ -1,0 +1,49 @@
+{
+  "schema": "dream-house-validation/1",
+  "status": "PASS_PLAN_GATE_ONLY",
+  "checks": [
+    {
+      "check": "sealed input hashes",
+      "result": "PASS",
+      "evidence": "parent plan, pure reducer, and reducer-test SHA-256 values matched"
+    },
+    {
+      "check": "baseline recovery-policy tests",
+      "result": "PASS",
+      "evidence": "python3 -m unittest house.task_spine.tests.test_recovery_policy; 5 passed"
+    },
+    {
+      "check": "baseline authority regressions",
+      "result": "PASS",
+      "evidence": "python3 -m unittest house.task_spine.tests.test_authority house.task_spine.tests.test_authority_crypto; 13 passed"
+    },
+    {
+      "check": "operation canonical record hash",
+      "result": "PASS",
+      "evidence": "0f32b427408b5162ad56ed0df25e04f54453e03eab9d6a7c07c523e457eb05fd"
+    },
+    {
+      "check": "corrected blocking plan council",
+      "result": "PASS",
+      "evidence": "three ACCEPT responses over packet aceb72c67c7296c267fb07ff30cff9fe7573b0cf242706c8390c42934f35b74c"
+    },
+    {
+      "check": "implementation absence",
+      "result": "PASS",
+      "evidence": "recovery_ledger.py and test_recovery_ledger.py do not exist at this gate"
+    },
+    {
+      "check": "unrelated dirty-work preservation",
+      "result": "PASS",
+      "evidence": "house/README.md and house/LOCAL_ZOOKEEPER_CHAT_WORK_WRANGLER_SPEC.md remain unstaged and unmodified by this run"
+    }
+  ],
+  "claim_ceiling": "PLAN_ACCEPTED_S1_T1_ONLY",
+  "not_validated": [
+    "source implementation",
+    "SQLite fixture behavior",
+    "transaction/rollback/reopen/replay behavior",
+    "candidate acceptance or source seal",
+    "any operational recovery behavior"
+  ]
+}

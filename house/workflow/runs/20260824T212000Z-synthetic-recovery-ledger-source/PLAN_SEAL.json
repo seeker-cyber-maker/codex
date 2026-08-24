@@ -1,0 +1,48 @@
+{
+  "schema": "dream-house-plan-seal/1",
+  "base_commit": "135b5fba47d338f59ca489b2f889853101c03ad4",
+  "status": "PLAN_ACCEPTED_S1_T1_ONLY",
+  "claim_ceiling": "PLANNED_SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
+  "artifacts": {
+    "PLAN.md": "28459d9494ca6f6936aca5200845a0cf77a2d7116bb9b715abf574725b22702c",
+    "OPERATION.json": "226fb397db32dfd16b500bdd398a87d8dbc0ba2d12a1f38cc7021e2d5da023e0",
+    "EVALUATION_CARD.json": "baa69110ffc24a640481aef0338e1b290100588673eca0d95f1439ce546771eb",
+    "RUN_MANIFEST.json": "be030ecf7e1c6e6681f6eb93f148a6f0b7421bd8915ffd6787674dddae29122d",
+    "COUNCIL_PACKET.md": "b6104b01fa1f3dad1c69290a5bb9418d7bc16475421b360911976b2ec8a247bb",
+    "COUNCIL_PACKET_V2.md": "aceb72c67c7296c267fb07ff30cff9fe7573b0cf242706c8390c42934f35b74c",
+    "PLAN_COUNCIL_SUMMARY.md": "c74fff43434548c282d7c9c2ddfc174d95a65b2e2ace7bf3fd14e51afb0088e3",
+    "PLAN_COUNCIL_RAW_RESPONSES.md": "eaad100a8e31395a7c7fb22ee18019e3ee6e39b760e4285c26a4c163b8a97a2b",
+    "EVENTS.jsonl": "870ec6e4c8f3d5df097b876c467c3f83420900a766ac848d8e1de795c5df80e7",
+    "HANDOFF.md": "5a88890b1d3f683af8b9cd5293b8249faa79c0440974a3c3679882a92ddde5a3"
+  },
+  "validation": [
+    "JSON syntax validation",
+    "OPERATION.json canonical record SHA-256 verification",
+    "sealed baseline source/test hashes",
+    "5 recovery-policy tests passed",
+    "13 authority/crypto tests passed",
+    "corrected three-role plan council accepted S1/T1 only",
+    "git diff --check before commit",
+    "no implementation file or SQLite fixture created"
+  ],
+  "council": {
+    "mode": "multi-agent same-provider local review",
+    "round_one_packet_sha256": "b6104b01fa1f3dad1c69290a5bb9418d7bc16475421b360911976b2ec8a247bb",
+    "round_one_root_disposition": "BOUNDED_PLAN_DELTA",
+    "final_packet_sha256": "aceb72c67c7296c267fb07ff30cff9fe7573b0cf242706c8390c42934f35b74c",
+    "evidence_auditor": "ACCEPT",
+    "constructive_theorist": "ACCEPT",
+    "adversarial_methodologist": "ACCEPT"
+  },
+  "authorized_next": [
+    "S1 house/task_spine/recovery_ledger.py",
+    "T1 house/task_spine/tests/test_recovery_ledger.py"
+  ],
+  "forbidden": [
+    "V1/C1/A1 promotion without new evidence",
+    "writes outside scoped files and run artifacts",
+    "real database/key/package/hardware/Keychain/trusted-time work",
+    "operational imports, controller/provider/worker/CLI integration",
+    "network, dispatch, or recovery-ready claims"
+  ]
+}
