@@ -1,0 +1,53 @@
+{
+  "council_id": "20260824T171515Z-canary-candidate-source-plan",
+  "question": "Is the refusal-only source scaffold the smallest capability-preserving next slice?",
+  "mode": "independent-review",
+  "packet_sha256": "6515fe7a9221381d58a07dda191fe5098e1a442967e91f0ce0bf36e91aac0940",
+  "evidence_index_sha256": "60fda722a13359d94ed89e9f3c824c1886727cf3b41b143ff8a9c3a4e18d4c42",
+  "privacy": "local-ok",
+  "cost_ceiling": "existing same-provider subagent allowance; no external network",
+  "chair": {"model": "not surfaced", "provider": "OpenAI", "harness": "Codex desktop"},
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "requested_model": "gpt-5.6-luna",
+      "selected_model": "gpt-5.6-luna",
+      "provider": "OpenAI same-provider collaboration",
+      "harness": "Codex collaboration harness",
+      "memory": "isolated no-history requested; enforcement not observable",
+      "reasoning_mode": "medium",
+      "packet_hash_confirmed_in_response": true,
+      "evidence_index_records_confirmed": 13,
+      "status": "completed",
+      "response_sha256": "2748ec31d4409c2dcb57d7829b34b78490537a29ed8b28eacce6f4048d658f01"
+    },
+    {
+      "id": "constructive-theorist",
+      "requested_model": "gpt-5.6-luna",
+      "selected_model": "gpt-5.6-luna",
+      "provider": "OpenAI same-provider collaboration",
+      "harness": "Codex collaboration harness",
+      "memory": "isolated no-history requested; enforcement not observable",
+      "reasoning_mode": "medium",
+      "packet_hash_confirmed_in_response": true,
+      "evidence_index_records_confirmed": 13,
+      "status": "completed",
+      "response_sha256": "5dab5d9d5dfaa3ac586c895974258902ab80f3c7936bf98bdcd6d6a796db72ec"
+    },
+    {
+      "id": "adversarial-methodologist",
+      "requested_model": "gpt-5.6-luna",
+      "selected_model": "gpt-5.6-luna",
+      "provider": "OpenAI same-provider collaboration",
+      "harness": "Codex collaboration harness",
+      "memory": "isolated no-history requested; enforcement not observable",
+      "reasoning_mode": "medium",
+      "packet_hash_confirmed_in_response": true,
+      "evidence_index_records_confirmed": 13,
+      "status": "completed",
+      "response_sha256": "bad4c4ded2b8bee82ed811459ad074168f6274817f7090a706f793b0682827f7"
+    }
+  ],
+  "shared_dependencies": ["same model family", "same provider", "same harness", "same evidence packet"],
+  "completed_at": "2026-08-24T17:22:27Z"
+}

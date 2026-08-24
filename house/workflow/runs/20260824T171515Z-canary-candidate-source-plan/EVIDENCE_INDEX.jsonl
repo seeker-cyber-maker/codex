@@ -1,0 +1,13 @@
+{"path":"INTAKE.md","sha256":"8d32e91263a99be716db77b17f801cb59bc9cdfe70a460f68e7bdfaaee49aeb9","state":"active"}
+{"path":"PLAN.md","sha256":"9c477b6a353b10e412f99507bc473bd5a275fa11c25cfb3f947c20012d8026eb","state":"proposed"}
+{"path":"RUN_MANIFEST.json","sha256":"343480255faa5962e2a4d2aaad7e130a0ec84b7ed776741c5b84b53976a07db9","state":"active"}
+{"path":"EVALUATION_CARD.json","sha256":"f405b40f77c6b5af2154c96a1cb2741be0aa6327cdf3194babb9eec9cad8a170","state":"active"}
+{"path":"SOURCE_BASELINE.json","sha256":"8481993522a23c401ef5e4c418f3a075b5a3971d9fec075784b5bd11cb8ce3c9","state":"observed"}
+{"path":"../../../native/canary_helper/README.md","sha256":"b2f8bb02638d8c536a4ca3cbb6f0782cf626a013fecffa27cc3b8ab987d9b1c5","state":"active"}
+{"path":"../../../native/canary_helper/contract.h","sha256":"98a1abad329491930573e947adc57e30403480a438d2e9d97a3cf6529aacd510","state":"active"}
+{"path":"../../../native/canary_helper/parent_contract.c","sha256":"1ccfb510e744367ffa8483b9290ceb0f58979c9e8c55970b86c8e1e407ea6611","state":"active"}
+{"path":"../../../native/canary_helper/helper_contract.c","sha256":"1cc0a49cb326cf7bfcb90268e8301893abed98531df8530d5f347e4d50886f94","state":"active"}
+{"path":"../../../native/canary_helper/signing_policy.json","sha256":"29be0e0a2ba7f3c938abeb9f0e528efa14a9affe8c93174d471cea6e826b5d09","state":"active_ineligible"}
+{"path":"../20260824T135407Z-canary-helper-containment-design/CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md","sha256":"e37fa7cae1d06fb6fd8705e6f120ed0ea895fb28cffdc11a93867ace8ce7652e","state":"accepted_design"}
+{"path":"../20260824T165042Z-canary-helper-tool-hardening/HANDOFF.md","sha256":"38ce5a15ef7e272c10fe9d6cae2256c62feb9a991638ea4beb2a2e85df6a0f5c","state":"latest_closed_handoff"}
+{"path":"../20260824T165042Z-canary-helper-tool-hardening/council/synthesis.md","sha256":"4883de1b87ad6ebec5d68c3a3360a88c4ff54f45ee732b366fb940a0ec5bc33f","state":"latest_closed_council"}

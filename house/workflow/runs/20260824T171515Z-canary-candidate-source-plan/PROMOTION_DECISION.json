@@ -1,0 +1,17 @@
+{
+  "schema": "codex-house-promotion-decision/1",
+  "decided_at": "2026-08-24T17:22:27Z",
+  "decision": "REVISE_SOURCE_ONLY_SCAFFOLD",
+  "accepted_plan": "PLAN_V2.md",
+  "rejected_or_deferred": ["refusal-only parent main", "refusal-only helper main", "executable-facing refusal symbols"],
+  "confidence": {"narrow_plan_correction": "high", "independent_corroboration": "moderate"},
+  "council": {
+    "attempted": 3,
+    "completed": 3,
+    "packet_sha256": "6515fe7a9221381d58a07dda191fe5098e1a442967e91f0ce0bf36e91aac0940",
+    "indexed_hashes_verified": 13,
+    "shared_dependencies": ["same model family", "same provider", "same harness", "same evidence"]
+  },
+  "next_authority_gate": "fresh human source-write authority for PLAN_V2 only",
+  "still_forbidden": ["compile", "link", "bundle creation", "certificate discovery", "Keychain", "identity signing", "candidate launch", "network", "generated canary", "real secret"]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "C-001",
+    "claim": "All reviewers verified the same packet and all 13 indexed artifact hashes.",
+    "status": "corroborated",
+    "evidence": ["EVIDENCE_PACKET.md", "EVIDENCE_INDEX.jsonl", "council/reviewers"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "same-provider", "same-harness"],
+    "decision_impact": "high",
+    "next_test": "none"
+  },
+  {
+    "claim_id": "C-002",
+    "claim": "A declarative candidate contract and non-executing planner can reduce signing-subject ambiguity without creating runtime evidence.",
+    "status": "corroborated",
+    "evidence": ["PLAN.md", "SOURCE_BASELINE.json", "council/reviewers"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "implement and adversarially test only after fresh source-write authority"
+  },
+  {
+    "claim_id": "C-003",
+    "claim": "Refusal-only production entrypoints are likely disposable before the complete runtime source contract and risk false confidence.",
+    "status": "corroborated",
+    "evidence": ["PLAN.md", "council/reviewers"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-evidence", "same-model-family"],
+    "decision_impact": "high",
+    "next_test": "reopen only if direct byte-for-byte reuse by the accepted runtime source is demonstrated"
+  },
+  {
+    "claim_id": "C-004",
+    "claim": "Bundle identifiers, Info.plist fields, platform/toolchain tuple, and signing identity facts remain unresolved.",
+    "status": "observed",
+    "evidence": ["SOURCE_BASELINE.json", "signing_policy.json", "council/reviewers"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "objectors": [],
+    "shared_dependencies": ["same-source-snapshot"],
+    "decision_impact": "high",
+    "next_test": "represent unresolved fields explicitly and fail closed before emitting an executable plan"
+  },
+  {
+    "claim_id": "C-005",
+    "claim": "The plan review authorizes no source implementation, build, link, bundle, certificate, Keychain, sign, launch, runtime, canary, or secret action.",
+    "status": "observed",
+    "evidence": ["INTAKE.md", "RUN_MANIFEST.json", "EVIDENCE_PACKET.md"],
+    "supporters": ["chair"],
+    "objectors": [],
+    "shared_dependencies": [],
+    "decision_impact": "high",
+    "next_test": "fresh human source-write authority"
+  }
+]

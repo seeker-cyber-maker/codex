@@ -1,0 +1,33 @@
+{
+  "schema": "dream-house-canary-source-baseline/1",
+  "recorded_at": "2026-08-24T17:15:15Z",
+  "git_head": "4644fe65f72753bc735821df5fd1da24b294475f",
+  "worktree": "CLEAN",
+  "platform": {
+    "product": "macOS",
+    "version": "27.0",
+    "build": "26A5388g",
+    "architecture": "arm64",
+    "clang": "Apple clang 21.0.0 (clang-2100.3.30.1)"
+  },
+  "candidate_state": "NO_LINKABLE_OR_SIGNABLE_PARENT_HELPER_CANDIDATE",
+  "missing": [
+    "parent entrypoint",
+    "helper entrypoint",
+    "actual bundle Info.plist",
+    "actual bundle assembly plan",
+    "built parent executable",
+    "built helper executable",
+    "sealed signing identity and artifact metadata"
+  ],
+  "source_sha256": {
+    "contract.h": "98a1abad329491930573e947adc57e30403480a438d2e9d97a3cf6529aacd510",
+    "parent_contract.c": "1ccfb510e744367ffa8483b9290ceb0f58979c9e8c55970b86c8e1e407ea6611",
+    "helper_contract.c": "1cc0a49cb326cf7bfcb90268e8301893abed98531df8530d5f347e4d50886f94",
+    "protocol.c": "a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1",
+    "protocol.h": "ad725dd956c0232cf941077a6285463a8fd66bf0d7e535be02f4583d4281205e",
+    "parent.entitlements.plist": "97adfde4e3d17fec5442593ab1566e1cce8532f1f5285845a7e9096abb08d45b",
+    "helper.entitlements.plist": "dd1e3d6ed40127688d930fce307186cbc545f031642ca50346df7b5a4e79eea9",
+    "signing_policy.json": "29be0e0a2ba7f3c938abeb9f0e528efa14a9affe8c93174d471cea6e826b5d09"
+  }
+}

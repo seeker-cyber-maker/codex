@@ -1,0 +1,5 @@
+{"event":"run_opened","at":"2026-08-24T17:15:15Z","starting_head":"4644fe65f72753bc735821df5fd1da24b294475f","recovery":"RESUME_FROM_ACCEPTED_TOOL_HARDENING_HANDOFF"}
+{"event":"authority_frozen","at":"2026-08-24T17:15:15Z","plan_and_council":"AUTHORIZED","source_implementation_build_link_bundle_certificate_keychain_sign_launch_network_canary_secret":"NOT_AUTHORIZED"}
+{"event":"candidate_inventory","at":"2026-08-24T17:15:15Z","state":"NO_LINKABLE_OR_SIGNABLE_PARENT_HELPER_CANDIDATE","parent_helper_main":false,"bundle_info_plist":false,"signing_policy":"NOT_CONFIGURED_NO_LAUNCH"}
+{"event":"outside_council_completed","at":"2026-08-24T17:22:27Z","reviewers":"3_OF_3","packet_sha256":"6515fe7a9221381d58a07dda191fe5098e1a442967e91f0ce0bf36e91aac0940","indexed_hashes_verified":13,"decision":"REVISE_SOURCE_ONLY_SCAFFOLD"}
+{"event":"plan_revised","at":"2026-08-24T17:22:27Z","accepted_plan":"PLAN_V2.md","entrypoints":"DEFERRED","next_gate":"FRESH_HUMAN_SOURCE_WRITE_AUTHORITY"}

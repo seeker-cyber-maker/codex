@@ -1,0 +1,32 @@
+{
+  "schema": "codex-house-plan-validation/1",
+  "validated_at": "2026-08-24T17:22:27Z",
+  "starting_head": "4644fe65f72753bc735821df5fd1da24b294475f",
+  "state": "REVISED_PLAN_ACCEPTED_PENDING_SOURCE_WRITE_AUTHORITY",
+  "results": {
+    "production_entrypoints": "NONE",
+    "candidate_bundle_or_info_plist": "NONE",
+    "compiled_candidate_artifacts": "NONE",
+    "signing_policy": "NOT_CONFIGURED_NO_LAUNCH",
+    "plan_json_jsonl_parse": "PASS",
+    "git_diff_check": "PASS",
+    "evidence_index": "13_RECORDS_ZERO_HASH_MISMATCHES",
+    "council": "3_OF_3_REVISE_SOURCE_ONLY_SCAFFOLD"
+  },
+  "negative_evidence": {
+    "initial_entrypoint_search": "included tests/codec_contract_test.c and found its expected test main; corrected production-only search excludes tests",
+    "source_implementation": "NOT_ATTEMPTED"
+  },
+  "authority_observed": {
+    "compile": "NOT_ATTEMPTED",
+    "link": "NOT_ATTEMPTED",
+    "bundle_creation": "NOT_ATTEMPTED",
+    "certificate_discovery": "NOT_ATTEMPTED",
+    "keychain": "NOT_ATTEMPTED",
+    "identity_signing": "NOT_ATTEMPTED",
+    "candidate_launch": "NOT_ATTEMPTED",
+    "network": "NOT_ATTEMPTED",
+    "generated_canary": "NOT_ATTEMPTED",
+    "real_secret": "NOT_ATTEMPTED"
+  }
+}

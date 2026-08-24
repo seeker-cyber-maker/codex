@@ -1,0 +1,48 @@
+{
+  "schema": "codex-house-final-seal/1",
+  "sealed_at": "2026-08-24T17:24:01Z",
+  "starting_head": "4644fe65f72753bc735821df5fd1da24b294475f",
+  "state": "REVISED_PLAN_ACCEPTED_PENDING_SOURCE_WRITE_AUTHORITY",
+  "source_files": {
+    "house/native/canary_helper/contract.h": "98a1abad329491930573e947adc57e30403480a438d2e9d97a3cf6529aacd510",
+    "house/native/canary_helper/parent_contract.c": "1ccfb510e744367ffa8483b9290ceb0f58979c9e8c55970b86c8e1e407ea6611",
+    "house/native/canary_helper/helper_contract.c": "1cc0a49cb326cf7bfcb90268e8301893abed98531df8530d5f347e4d50886f94",
+    "house/native/canary_helper/protocol.c": "a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1",
+    "house/native/canary_helper/protocol.h": "ad725dd956c0232cf941077a6285463a8fd66bf0d7e535be02f4583d4281205e",
+    "house/native/canary_helper/parent.entitlements.plist": "97adfde4e3d17fec5442593ab1566e1cce8532f1f5285845a7e9096abb08d45b",
+    "house/native/canary_helper/helper.entitlements.plist": "dd1e3d6ed40127688d930fce307186cbc545f031642ca50346df7b5a4e79eea9",
+    "house/native/canary_helper/signing_policy.json": "29be0e0a2ba7f3c938abeb9f0e528efa14a9affe8c93174d471cea6e826b5d09"
+  },
+  "run_files": {
+    "AACR.md": "a7adfa09fc692acc6c8be9f55f5487e7b87b62b2d13489bdc70e3dd455398307",
+    "EVALUATION_CARD.json": "f405b40f77c6b5af2154c96a1cb2741be0aa6327cdf3194babb9eec9cad8a170",
+    "EVENTS.jsonl": "337e3c901faa6375cbea96d255677ab0c2a8be1da6c979e18c6687131c7e45c0",
+    "EVIDENCE_INDEX.jsonl": "60fda722a13359d94ed89e9f3c824c1886727cf3b41b143ff8a9c3a4e18d4c42",
+    "EVIDENCE_PACKET.md": "6515fe7a9221381d58a07dda191fe5098e1a442967e91f0ce0bf36e91aac0940",
+    "HANDOFF.md": "9aa6850d67af47629f7852dd0d0b869433330bcce1c0800498d573d51bca13e7",
+    "INTAKE.md": "8d32e91263a99be716db77b17f801cb59bc9cdfe70a460f68e7bdfaaee49aeb9",
+    "PLAN.md": "9c477b6a353b10e412f99507bc473bd5a275fa11c25cfb3f947c20012d8026eb",
+    "PLAN_SEAL.json": "f32bbd4d62b38b35d9309874f12d85446a5251129a209d5f108aa9913fed7e90",
+    "PLAN_V2.md": "c2374af78b7ede938c73c4cb69061ca547c33b65cd003a039344f404f6331037",
+    "PROMOTION_DECISION.json": "fce4fe2aa11d1f75ef078168ede03481f3ed53ee98b71e66c3021dd406d944c4",
+    "RUN_MANIFEST.json": "343480255faa5962e2a4d2aaad7e130a0ec84b7ed776741c5b84b53976a07db9",
+    "SOURCE_BASELINE.json": "8481993522a23c401ef5e4c418f3a075b5a3971d9fec075784b5bd11cb8ce3c9",
+    "VALIDATION.json": "bed3006e4fe63a5e584067a9829b50b20ca2c0a7325a684b53ab320a0478e335",
+    "council/claim-ledger.json": "f627898492881bc48c6cb7a8d082f9448c8cb8a7e9d16b445ee62352ac9a592a",
+    "council/manifest.json": "daa9c29cec6859be230da5c2ec4156e7eb489106b57db6813e716657a2bbd74e",
+    "council/reviewers/adversarial-methodologist.md": "bad4c4ded2b8bee82ed811459ad074168f6274817f7090a706f793b0682827f7",
+    "council/reviewers/constructive-theorist.md": "5dab5d9d5dfaa3ac586c895974258902ab80f3c7936bf98bdcd6d6a796db72ec",
+    "council/reviewers/evidence-auditor.md": "2748ec31d4409c2dcb57d7829b34b78490537a29ed8b28eacce6f4048d658f01",
+    "council/synthesis.md": "e9974f77635fafcf9f4d97babc5df2f42cd8bc20ba01d8e0bccc4efc41047e69"
+  },
+  "validation": {
+    "evidence_index": "13_RECORDS_ZERO_MISMATCHES",
+    "council": "3_OF_3_VERIFIED_AND_REVISED_PLAN",
+    "source_mutation": "NONE",
+    "production_entrypoints": "NONE",
+    "candidate_artifacts": "NONE",
+    "json_jsonl": "PASS",
+    "diff_check": "PASS"
+  },
+  "next_gate": "fresh human source-write authority for PLAN_V2 only"
+}

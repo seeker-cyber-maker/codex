@@ -1,0 +1,16 @@
+{
+  "schema": "codex-house-plan-seal/1",
+  "sealed_at": "2026-08-24T17:17:34Z",
+  "starting_head": "4644fe65f72753bc735821df5fd1da24b294475f",
+  "authority": "planning_and_read_only_council_only",
+  "files": {
+    "INTAKE.md": "8d32e91263a99be716db77b17f801cb59bc9cdfe70a460f68e7bdfaaee49aeb9",
+    "PLAN.md": "9c477b6a353b10e412f99507bc473bd5a275fa11c25cfb3f947c20012d8026eb",
+    "RUN_MANIFEST.json": "343480255faa5962e2a4d2aaad7e130a0ec84b7ed776741c5b84b53976a07db9",
+    "EVALUATION_CARD.json": "f405b40f77c6b5af2154c96a1cb2741be0aa6327cdf3194babb9eec9cad8a170",
+    "SOURCE_BASELINE.json": "8481993522a23c401ef5e4c418f3a075b5a3971d9fec075784b5bd11cb8ce3c9",
+    "EVIDENCE_INDEX.jsonl": "60fda722a13359d94ed89e9f3c824c1886727cf3b41b143ff8a9c3a4e18d4c42",
+    "EVIDENCE_PACKET.md": "6515fe7a9221381d58a07dda191fe5098e1a442967e91f0ce0bf36e91aac0940"
+  },
+  "next_gate": "blocking outside-council plan review before source implementation"
+}

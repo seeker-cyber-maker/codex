@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "20260824T171515Z-canary-candidate-source-plan",
+  "claim_ids": ["SOURCE_SLICE_IS_CAPABILITY_PRESERVING", "SOURCE_SLICE_REDUCES_SIGNING_SUBJECT_AMBIGUITY"],
+  "task_distribution": {
+    "scope": "source-only candidate-layout and refusal-entrypoint plan",
+    "temporal_cutoff": "2026-08-24T17:15:15Z",
+    "new_vs_legacy_slices": ["new proposed refusal-only scaffold", "accepted spawn-disabled contracts"],
+    "out_of_distribution_slices": ["compiled or signed candidate", "runtime containment", "generated canary", "real secret"]
+  },
+  "fixtures": {
+    "public": ["accepted containment design v1.1", "current source tree", "current signing policy"],
+    "private": [],
+    "adversarial": ["false-confidence analysis", "unnecessary intermediate rung", "bundle ambiguity"],
+    "known_answer": ["current parent/helper are not linkable executables", "current policy is ineligible"]
+  },
+  "contamination": {
+    "sources_checked": ["predecessor handoff", "predecessor council synthesis", "current source and policy"],
+    "tool_access_restrictions": ["no source mutation", "no build/link/sign/launch", "no certificates/Keychain/network/secrets"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "plan decision", "gate": null, "evidence_refs": []},
+    "execution_trace": {"applicability": "not_applicable", "reason": "review-only phase", "gate": null, "evidence_refs": []},
+    "side_effects": {"applicability": "required", "reason": "must prove no restricted action", "gate": null, "evidence_refs": []},
+    "cost": {"applicability": "required", "reason": "bounded three-reviewer council", "gate": null, "evidence_refs": []},
+    "latency": {"applicability": "not_applicable", "reason": "no runtime claim", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "not_applicable", "reason": "immutable packet review", "gate": null, "evidence_refs": []},
+    "long_horizon": {"applicability": "not_applicable", "reason": "one bounded plan gate", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["current file inventory", "source semantics", "accepted design ladder", "explicit authority matrix"],
+  "semantic_reviewers": ["blind outside council"],
+  "metrics": ["capability preserved", "ambiguity reduced", "false-confidence risk", "unnecessary churn"],
+  "thresholds": ["all no-action boundaries preserved", "one smallest next slice identified", "no runtime claim"],
+  "uncertainty_method": "preserve dissent and stop if a new primary platform fact is required",
+  "failure_taxonomy": ["authority widening", "false qualification", "bundle ambiguity", "throwaway implementation"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a revised plan; do not overwrite this packet"
+}
