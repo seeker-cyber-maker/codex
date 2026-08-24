@@ -1,0 +1,28 @@
+{
+  "schema": "dream-house-canary-signing-policy/1",
+  "state": "SEALED_CANDIDATE",
+  "platform_build": "26A5388g",
+  "artifacts": {
+    "parent": {
+      "relative_path": "Contents/MacOS/DreamHouseCanaryParent",
+      "sha256": "49f53d3a66a8440e3844e37fc1e0fc7d93540a58478e1e94c4309f66c3ef6f1a",
+      "cdhash": "a17d477b3037642637473d4eb12e8f30361a183e",
+      "team_identifier": "HOUSETEST123",
+      "designated_requirement": "identifier \"com.apple.true\" and anchor apple",
+      "entitlements": {
+        "com.apple.security.app-sandbox": true
+      }
+    },
+    "helper": {
+      "relative_path": "Contents/Helpers/DreamHouseCanaryHelper",
+      "sha256": "49f53d3a66a8440e3844e37fc1e0fc7d93540a58478e1e94c4309f66c3ef6f1a",
+      "cdhash": "a17d477b3037642637473d4eb12e8f30361a183e",
+      "team_identifier": "HOUSETEST123",
+      "designated_requirement": "identifier \"com.apple.true\" and anchor apple",
+      "entitlements": {
+        "com.apple.security.app-sandbox": true,
+        "com.apple.security.inherit": true
+      }
+    }
+  }
+}

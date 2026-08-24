@@ -1,0 +1,30 @@
+{
+  "schema": "codex-house-validation/1",
+  "validated_at": "2026-08-24T14:30:39Z",
+  "result": "PASS_STATIC_SOURCE_AND_OBJECT_ONLY",
+  "checks": {
+    "focused_native_tests": {
+      "command": "python3 -m unittest -v house.native.canary_helper.tests.test_native_contract",
+      "result": "PASS_9_OF_9"
+    },
+    "changed_native_ruff": {
+      "command": "python3 -m ruff check house/native/canary_helper",
+      "result": "PASS"
+    },
+    "full_house_suite": {
+      "command": "python3 -m unittest discover -s house -p 'test*.py'",
+      "result": "PASS_248_OF_248",
+      "note": "One pre-existing unclosed-sqlite ResourceWarning was emitted without a test failure."
+    },
+    "host_codesign_xml_smoke": "PASS_NO_LAUNCH",
+    "unconfigured_policy": "REFUSED_BEFORE_CODESIGN",
+    "host_apple_signed_negative_fixture": "REFUSED_NO_TEAM_IDENTIFIER",
+    "git_diff_check": "PASS",
+    "candidate_link": "NOT_ATTEMPTED",
+    "candidate_launch": "NOT_ATTEMPTED",
+    "network": "NOT_ATTEMPTED",
+    "keychain": "NOT_ATTEMPTED",
+    "real_secret": "NOT_ATTEMPTED"
+  },
+  "claim_ceiling": "No linked-candidate, runtime-codec, App-Sandbox, process-containment, or secret-safety claim."
+}

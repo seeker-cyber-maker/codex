@@ -1,0 +1,24 @@
+{
+  "schema": "dream-house-host-codesign-xml-smoke/1",
+  "observed_at": "2026-08-24T14:30:39Z",
+  "state": "HOST_CODESIGN_XML_PARSED_NO_LAUNCH",
+  "target": "/Applications/iTerm.app",
+  "target_executable_sha256": "de176e1e079458a64ffd0f1abe58d282a99a8e10ae7d16166c239105373c5a0f",
+  "codesign_returncode": 0,
+  "entitlement_keys": [
+    "com.apple.application-identifier",
+    "com.apple.developer.team-identifier",
+    "com.apple.security.application-groups",
+    "com.apple.security.automation.apple-events",
+    "com.apple.security.cs.allow-jit",
+    "com.apple.security.device.audio-input",
+    "com.apple.security.device.camera",
+    "com.apple.security.personal-information.addressbook",
+    "com.apple.security.personal-information.calendars",
+    "com.apple.security.personal-information.location",
+    "com.apple.security.personal-information.photos-library",
+    "keychain-access-groups"
+  ],
+  "candidate_launch": "NOT_ATTEMPTED",
+  "keychain": "NOT_ATTEMPTED"
+}

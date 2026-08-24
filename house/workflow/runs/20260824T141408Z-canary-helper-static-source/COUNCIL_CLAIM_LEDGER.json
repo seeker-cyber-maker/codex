@@ -1,0 +1,60 @@
+{
+  "schema": "expert-council-claim-ledger/1",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "The source and object-build rung stays within the no-link and no-launch authority boundary.",
+      "status": "corroborated",
+      "evidence": ["OBJECT_BUILD_RECEIPT.json", "VALIDATION.json", "house/native/canary_helper"],
+      "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "objectors": [],
+      "shared_dependencies": ["same-packet", "same-model-family", "same-provider"],
+      "decision_impact": "high",
+      "next_test": "none_for_static_commit"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "This rung proves runtime codec semantics, App Sandbox enforcement, process containment, or secret safety.",
+      "status": "contradicted",
+      "evidence": ["EVALUATION_CARD.json", "VALIDATION.json"],
+      "supporters": [],
+      "objectors": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+      "shared_dependencies": ["same-packet"],
+      "decision_impact": "high",
+      "next_test": "separately_authorized_runtime_rungs"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "The static inspector closes all path-substitution races.",
+      "status": "disputed",
+      "evidence": ["house/native/canary_helper/artifact_inspection.py"],
+      "supporters": [],
+      "objectors": ["adversarial-methodologist"],
+      "shared_dependencies": [],
+      "decision_impact": "medium",
+      "next_test": "close descriptor-to-codesign TOCTOU before SEALED_CANDIDATE qualification"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "The current tests directly exercise C codec round trips and invalid-frame behavior.",
+      "status": "contradicted",
+      "evidence": ["house/native/canary_helper/tests/test_native_contract.py"],
+      "supporters": [],
+      "objectors": ["evidence-auditor"],
+      "shared_dependencies": [],
+      "decision_impact": "medium",
+      "next_test": "run separately authorized linked pure-codec tests before runtime candidate work"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "The host iTerm codesign smoke proves candidate signing or candidate entitlements.",
+      "status": "contradicted",
+      "evidence": ["HOST_CODESIGN_XML_SMOKE_RECEIPT.json"],
+      "supporters": [],
+      "objectors": ["adversarial-methodologist"],
+      "shared_dependencies": [],
+      "decision_impact": "low",
+      "next_test": "inspect a future sealed signed candidate under separate authority"
+    }
+  ]
+}

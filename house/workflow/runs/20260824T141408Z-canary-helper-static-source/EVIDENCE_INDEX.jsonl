@@ -1,0 +1,16 @@
+{"artifact":"../20260824T135407Z-canary-helper-containment-design/CANARY_HELPER_CONTAINMENT_DESIGN_V1_1.md","sha256":"e37fa7cae1d06fb6fd8705e6f120ed0ea895fb28cffdc11a93867ace8ce7652e","role":"accepted_design_authority"}
+{"artifact":"../../../native/canary_helper/protocol.h","sha256":"ad725dd956c0232cf941077a6285463a8fd66bf0d7e535be02f4583d4281205e","role":"wire_contract_source"}
+{"artifact":"../../../native/canary_helper/protocol.c","sha256":"a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1","role":"wire_codec_source"}
+{"artifact":"../../../native/canary_helper/contract.h","sha256":"98a1abad329491930573e947adc57e30403480a438d2e9d97a3cf6529aacd510","role":"native_contract_source"}
+{"artifact":"../../../native/canary_helper/parent_contract.c","sha256":"1ccfb510e744367ffa8483b9290ceb0f58979c9e8c55970b86c8e1e407ea6611","role":"parent_source"}
+{"artifact":"../../../native/canary_helper/helper_contract.c","sha256":"1cc0a49cb326cf7bfcb90268e8301893abed98531df8530d5f347e4d50886f94","role":"helper_source"}
+{"artifact":"../../../native/canary_helper/artifact_inspection.py","sha256":"648381dfae5f033227193b07ce9d46d5d2c8e92d06a88c8d16ad59f64e20f649","role":"static_inspector_source"}
+{"artifact":"../../../native/canary_helper/build_objects.py","sha256":"b19dad8e124150b9c8191e1fbe5e7855935660090d5c205ad1cd4519cc78524d","role":"object_builder_source"}
+{"artifact":"../../../native/canary_helper/tests/test_native_contract.py","sha256":"c215fc87824296888fbd72fb696e0646ddcb03d505e6a0abf0446588765b59f3","role":"deterministic_tests"}
+{"artifact":"OBJECT_BUILD_RECEIPT.json","sha256":"39950a644218ab020b911bf95e7f8cbe6e20ac392f58b270f923487476e9b716","role":"object_build_evidence"}
+{"artifact":"STATIC_INSPECTION_REFUSAL_RECEIPT.json","sha256":"06b2c8104357991fac631e6c2fa25a6143acbc5d30c42625f3dbfd60f14e39d3","role":"unconfigured_policy_refusal"}
+{"artifact":"HOST_CODESIGN_REFUSAL_RECEIPT.json","sha256":"93cc1a1eaa467860ddec5ecd9efc1bed53f6bc3c12cf31ab2037994e628fe12c","role":"real_codesign_negative_evidence"}
+{"artifact":"HOST_CODESIGN_XML_SMOKE_RECEIPT.json","sha256":"80112ae92ecd9f3aeb1edff3341e461bbea1539433b2411a9a831e4f5fb97d0c","role":"real_codesign_xml_evidence"}
+{"artifact":"VALIDATION.json","sha256":"dff16c731ea6bef98b7bf037c69847fdc5713ae95bd93cd9fa113344ca859f07","role":"validation_summary"}
+{"artifact":"EVALUATION_CARD.json","sha256":"84b0e92b901964f66447991df5524674d9df35cefff1cd8c7f2d58057dd3eb16","role":"claim_ceiling"}
+{"artifact":"EVIDENCE_PACKET.md","sha256":"2a20d0e530db0b48efd97da8d651a6f06a8299fbe5bd08c721eab51125163792","role":"immutable_council_packet"}

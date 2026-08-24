@@ -1,0 +1,28 @@
+{
+  "schema": "dream-house-canary-signing-policy/1",
+  "state": "NOT_CONFIGURED_NO_LAUNCH",
+  "platform_build": null,
+  "artifacts": {
+    "parent": {
+      "relative_path": "Contents/MacOS/DreamHouseCanaryParent",
+      "sha256": null,
+      "cdhash": null,
+      "team_identifier": null,
+      "designated_requirement": null,
+      "entitlements": {
+        "com.apple.security.app-sandbox": true
+      }
+    },
+    "helper": {
+      "relative_path": "Contents/Helpers/DreamHouseCanaryHelper",
+      "sha256": null,
+      "cdhash": null,
+      "team_identifier": null,
+      "designated_requirement": null,
+      "entitlements": {
+        "com.apple.security.app-sandbox": true,
+        "com.apple.security.inherit": true
+      }
+    }
+  }
+}

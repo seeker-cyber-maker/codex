@@ -1,0 +1,100 @@
+{
+  "candidate_launch": "NOT_ATTEMPTED",
+  "commands": [
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX27.0.sdk",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fno-common",
+      "-c",
+      "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/native/canary_helper/protocol.c",
+      "-o",
+      "/tmp/codex-house-canary-objects.CH1MOM/protocol.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/nm",
+      "-u",
+      "/tmp/codex-house-canary-objects.CH1MOM/protocol.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX27.0.sdk",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fno-common",
+      "-c",
+      "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/native/canary_helper/parent_contract.c",
+      "-o",
+      "/tmp/codex-house-canary-objects.CH1MOM/parent_contract.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/nm",
+      "-u",
+      "/tmp/codex-house-canary-objects.CH1MOM/parent_contract.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX27.0.sdk",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fno-common",
+      "-c",
+      "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/native/canary_helper/helper_contract.c",
+      "-o",
+      "/tmp/codex-house-canary-objects.CH1MOM/helper_contract.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/nm",
+      "-u",
+      "/tmp/codex-house-canary-objects.CH1MOM/helper_contract.o"
+    ]
+  ],
+  "link": "NOT_ATTEMPTED",
+  "objects": {
+    "helper_contract.c": {
+      "executable": false,
+      "forbidden_symbols": [],
+      "object_sha256": "5932c4cb2cef55ca8bfb21cff918428ddfa6515254848c70e5920df4f15436de",
+      "source_sha256": "1cc0a49cb326cf7bfcb90268e8301893abed98531df8530d5f347e4d50886f94",
+      "undefined_symbols": [
+        "_dh_canary_transition_is_valid"
+      ]
+    },
+    "parent_contract.c": {
+      "executable": false,
+      "forbidden_symbols": [],
+      "object_sha256": "608e2fe7e5e401e95f038d3eaeaf8055c74dee4617efd86f19d5313d0ba9c176",
+      "source_sha256": "1ccfb510e744367ffa8483b9290ceb0f58979c9e8c55970b86c8e1e407ea6611",
+      "undefined_symbols": [
+        "_dh_canary_transition_is_valid"
+      ]
+    },
+    "protocol.c": {
+      "executable": false,
+      "forbidden_symbols": [],
+      "object_sha256": "1fd184858f86f94a70f6d3e051532af4a261730a558089c50ef9d4b376e30819",
+      "source_sha256": "a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1",
+      "undefined_symbols": [
+        "___memcpy_chk",
+        "___memset_chk"
+      ]
+    }
+  },
+  "schema": "dream-house-canary-object-build-receipt/1",
+  "sdk": "/Library/Developer/CommandLineTools/SDKs/MacOSX27.0.sdk",
+  "state": "STATIC_OBJECTS_BUILT_NO_LINK_NO_LAUNCH",
+  "toolchain_processes": "CLANG_AND_NM_ONLY"
+}

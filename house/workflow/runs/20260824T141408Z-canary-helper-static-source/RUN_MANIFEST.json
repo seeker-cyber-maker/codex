@@ -1,0 +1,28 @@
+{
+  "schema": "codex-house-workflow-run/1",
+  "run_id": "20260824T141408Z-canary-helper-static-source",
+  "case_type": "security_containment_static_implementation",
+  "starting_head": "7f8661f4a7166418a672efce82108b13d9dcdc7b",
+  "authority": "source_and_object_build_only",
+  "toolchain_process_authorized": true,
+  "candidate_link_authorized": false,
+  "candidate_launch_authorized": false,
+  "network_authorized": false,
+  "keychain_authorized": false,
+  "yubikey_authorized": false,
+  "real_secret_authorized": false,
+  "model_advisory": "Terra/high for bounded implementation; reassess to Sol/xhigh before runtime containment",
+  "council_checkpoint": {
+    "checkpoint_id": "static-source-promotion-review",
+    "trigger": "deterministic static validation complete",
+    "blocking": true,
+    "decision_question": "Does the source faithfully implement the accepted object-only rung without widening authority?",
+    "privacy": "local-ok",
+    "dispatch": "multi-agent_same-provider",
+    "reviewers": 3,
+    "requested_model": "gpt-5.6-luna",
+    "requested_effort": "medium",
+    "external_network": false,
+    "required_root_disposition": "accept_or_bounded_remediation_or_needs_review"
+  }
+}

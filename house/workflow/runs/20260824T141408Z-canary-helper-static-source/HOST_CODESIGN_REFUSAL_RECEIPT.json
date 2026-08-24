@@ -1,0 +1,9 @@
+{
+  "candidate_launch": "NOT_ATTEMPTED",
+  "keychain": "NOT_ATTEMPTED",
+  "network": "NOT_ATTEMPTED",
+  "real_secret": "NOT_ATTEMPTED",
+  "reason": "parent has no TeamIdentifier",
+  "schema": "dream-house-canary-static-inspection-receipt/1",
+  "state": "NOT_QUALIFIED_NO_LAUNCH"
+}
