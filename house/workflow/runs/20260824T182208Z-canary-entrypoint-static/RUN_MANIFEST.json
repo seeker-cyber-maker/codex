@@ -1,0 +1,29 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260824T182208Z-canary-entrypoint-static",
+  "starting_head": "906f933b9ca84b11f5c3c2909cfe24947c34f80d",
+  "profile": "full",
+  "case_type": "systems_critical",
+  "authority": "USER_DELEGATED_PLANNER_BUILDER_STATIC_RUNG_ONLY",
+  "write_scope": ["house/native/canary_helper", "house/workflow/runs/20260824T182208Z-canary-entrypoint-static"],
+  "forbidden": ["identity signing", "certificate discovery", "Keychain", "bundle creation", "candidate launch", "network", "generated canary", "provider", "YubiKey", "real secret"],
+  "graph": [
+    {"id": "entrypoint-source", "owner": "coordinator", "depends_on": [], "acceptance": "closed static interface"},
+    {"id": "static-object-verify", "owner": "coordinator", "depends_on": ["entrypoint-source"], "acceptance": "all sources compile to non-executable objects"},
+    {"id": "promotion-review", "owner": "outside-council", "depends_on": ["static-object-verify"], "acceptance": "source-only decision"}
+  ],
+  "budgets": {"source_remediations": 2, "object_build_attempts": 2, "candidate_launches": 0, "network_requests": 0},
+  "council_checkpoints": [{"id": "plan", "trigger": "after plan seal", "blocking": true, "decision": "is the entrypoint static rung non-ceremonial and safely scoped?"}, {"id": "promotion", "trigger": "before commit", "blocking": true, "decision": "does the static evidence support source-only promotion?"}],
+  "status": "SOURCE_ONLY_PROMOTION_ACCEPTED_PENDING_SEAL",
+  "superseding_plan": "PLAN_V4.md",
+  "council_round_one": {"packet_sha256": "849682ccccfab9e62cf11571e36f9d95c069e4120fe1e8c6f501120b27063e2c", "dispositions": {"REVISE_STATIC_RUNG": 3}, "reason": "positive entrypoint interface and reproducible source paths required"},
+  "council_round_two": {"packet_sha256": "34d95bdf4dd4bdae1cdb3a2f36c3f2a9a4d4d8d56094d983e927f29f53f40d5f", "disposition": "REVISE_STATIC_RUNG", "reason": "canonical valid input must prove success"},
+  "council_round_three": {"packet_sha256": "b7751899b9a0751524c71fb89e54942676b2a151e6057fb5a404943bf2de3e11", "disposition": "REVISE_STATIC_RUNG", "reason": "test macro must guard main definitions only"},
+  "implementation_authority": "PLAN_V4_ACCEPTED_BY_COORDINATOR_AFTER_MECHANICAL_COUNCIL_DELTA",
+  "promotion_council": {
+    "packet_sha256": "e7bc96dfaa2e73814664022b05ec265bc4a9fb1f560f77cca1a777345476c1b3",
+    "mode": "multi_agent_same_model_local_only",
+    "round_one": {"accept": 2, "revise": 1, "block": 0},
+    "targeted_recheck": "ADVERSARIAL_ACCEPT_SOURCE_ONLY_PROMOTION"
+  }
+}

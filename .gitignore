@@ -98,3 +98,7 @@ __pycache__/
 # Local Dream House operation state; canonical task/operation records are local
 # control-plane data, never repository source.
 .house-state/
+
+# Reproducible static object receipts retain hashes and symbol audits; the
+# compiler's transient object bytes are never source evidence.
+house/workflow/runs/**/static-objects/

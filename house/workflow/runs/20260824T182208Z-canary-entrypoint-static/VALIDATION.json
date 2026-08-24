@@ -1,0 +1,24 @@
+{
+  "schema": "dream-house-validation/1",
+  "focused_tests": "45_PASS",
+  "full_suite": "284_PASS",
+  "native_lint": "PASS",
+  "full_repository_lint": "NOT_GREEN_PREEXISTING_OUT_OF_SCOPE",
+  "full_repository_lint_findings": [
+    "EXE001 house/scripts/capture_baseline.py",
+    "SIM117 house/scripts/capture_baseline.py"
+  ],
+  "diff_check": "PASS",
+  "json_jsonl": "PASS",
+  "static_object_build": "STATIC_OBJECTS_BUILT_NO_LINK_NO_LAUNCH",
+  "contract_tests": "PURE_CODEC_AND_ENTRYPOINT_TESTS_LINKED_AND_PASSED",
+  "forbidden_operations": {
+    "candidate_link": "NOT_ATTEMPTED",
+    "candidate_launch": "NOT_ATTEMPTED",
+    "identity_signing": "NOT_ATTEMPTED",
+    "keychain": "NOT_ATTEMPTED",
+    "network": "NOT_ATTEMPTED",
+    "generated_canary": "NOT_ATTEMPTED",
+    "real_secret": "NOT_ATTEMPTED"
+  }
+}

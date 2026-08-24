@@ -1,0 +1,35 @@
+[
+  {
+    "claim_id": "C-001",
+    "claim": "The entrypoint slice has a deterministic positive and typed-refusal admission interface.",
+    "status": "corroborated",
+    "evidence": ["parent_main.c", "helper_main.c", "tests/entrypoint_contract_test.c", "CONTRACT_TEST_RECEIPT.json"],
+    "supporters": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist-recheck"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "shared-local-packet"],
+    "decision_impact": "high",
+    "next_test": "none for source-only promotion"
+  },
+  {
+    "claim_id": "C-002",
+    "claim": "The unit-test macro cannot alter the admission implementation; it guards only production main definitions.",
+    "status": "corroborated",
+    "evidence": ["PLAN_V4.md", "tests/test_native_contract.py", "adversarial-methodologist-recheck"],
+    "supporters": ["adversarial-methodologist-recheck"],
+    "objectors": [],
+    "shared_dependencies": ["same-model-family", "shared-local-packet"],
+    "decision_impact": "high",
+    "next_test": "rerun focused test on any entrypoint source change"
+  },
+  {
+    "claim_id": "C-003",
+    "claim": "This run proves sandboxing, signing, containment, or live runtime safety.",
+    "status": "contradicted",
+    "evidence": ["CONTRACT_TEST_RECEIPT.json", "STATIC_OBJECT_BUILD_RECEIPT.json", "EVIDENCE_PACKET_PROMOTION.md"],
+    "supporters": [],
+    "objectors": ["evidence-auditor", "constructive-theorist", "adversarial-methodologist"],
+    "shared_dependencies": ["same-model-family", "shared-local-packet"],
+    "decision_impact": "high",
+    "next_test": "new separately sealed runtime-qualification run"
+  }
+]

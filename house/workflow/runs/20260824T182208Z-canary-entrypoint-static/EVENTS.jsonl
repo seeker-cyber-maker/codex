@@ -1,0 +1,12 @@
+{"event":"run_opened","at":"2026-08-24T18:22:08Z","starting_head":"906f933b9ca84b11f5c3c2909cfe24947c34f80d","recovery":"PROMOTED_CONTRACT_TO_STATIC_ENTRYPOINT_RUNG"}
+{"event":"authority_interpreted","at":"2026-08-24T18:22:08Z","user_delegation":"planner_builder","this_run":"source_and_object_compile_only","reserved_for_later":["certificate_discovery","identity_signing","bundle_creation","launch","network","canary","keychain","provider","yubikey","secret"]}
+{"event":"plan_sealed","at":"2026-08-24T18:22:08Z","case_type":"systems_critical","council_gate":"BLOCKING_PLAN_REVIEW"}
+{"event":"council_round_one_complete","at":"2026-08-24T18:25:00Z","packet_sha256":"849682ccccfab9e62cf11571e36f9d95c069e4120fe1e8c6f501120b27063e2c","dispositions":{"REVISE_STATIC_RUNG":3},"findings":["positive admission interface absent","rejection-resistant source tests absent","five source paths incorrect in packet"]}
+{"event":"plan_delta_sealed","at":"2026-08-24T18:25:00Z","plan":"PLAN_V2.md","scope":"positive static entrypoint contract only","targeted_council":"required"}
+{"event":"council_round_two_complete","at":"2026-08-24T18:27:00Z","packet_sha256":"34d95bdf4dd4bdae1cdb3a2f36c3f2a9a4d4d8d56094d983e927f29f53f40d5f","disposition":"REVISE_STATIC_RUNG","finding":"valid input success oracle absent"}
+{"event":"plan_delta_sealed","at":"2026-08-24T18:27:00Z","plan":"PLAN_V3.md","scope":"pure admission unit test plus static entrypoint contract","targeted_council":"required"}
+{"event":"council_round_three_complete","at":"2026-08-24T18:29:00Z","packet_sha256":"b7751899b9a0751524c71fb89e54942676b2a151e6057fb5a404943bf2de3e11","disposition":"REVISE_STATIC_RUNG","finding":"unit-test macro must not alter admission logic"}
+{"event":"plan_delta_accepted","at":"2026-08-24T18:29:00Z","plan":"PLAN_V4.md","scope":"macro guards main definitions only","next":"IMPLEMENTATION"}
+{"event":"implementation_verified","at":"2026-08-24T18:44:00Z","focused_tests":"45_PASS","full_suite":"284_PASS","native_lint":"PASS","object_receipt":"STATIC_OBJECTS_BUILT_NO_LINK_NO_LAUNCH","contract_receipt":"PURE_CODEC_AND_ENTRYPOINT_TESTS_LINKED_AND_PASSED"}
+{"event":"promotion_council_round_one","at":"2026-08-24T18:48:00Z","packet_sha256":"e7bc96dfaa2e73814664022b05ec265bc4a9fb1f560f77cca1a777345476c1b3","accept":2,"revise":1,"block":0,"finding":"macro_scope_assertion_not_structural_enough"}
+{"event":"promotion_council_targeted_recheck","at":"2026-08-24T18:51:00Z","finding":"resolved_by_exact_main_guard_assertion","decision":"ACCEPT_SOURCE_ONLY_PROMOTION"}

@@ -1,4 +1,4 @@
-"""Link and execute only the pure protocol-codec contract test."""
+"""Link and execute only pure codec and entrypoint-contract test programs."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ DEFAULT_COMPILE_TIMEOUT_SECONDS = 30
 DEFAULT_INSPECTION_TIMEOUT_SECONDS = 10
 PRIVATE_DIRECTORY_ATTEMPTS = 8
 PRIVATE_DIRECTORY_PREFIX = ".dream-house-codec."
-TEST_EXECUTABLE_NAME = "codec_contract_test"
+TEST_EXECUTABLE_NAMES = ("codec_contract_test", "entrypoint_contract_test")
 
 
 def _sha256(path: Path) -> str:
@@ -122,17 +122,19 @@ def _private_output_directory(output_root: str | Path) -> Iterator[tuple[Path, i
     finally:
         if private_descriptor is not None:
             entries = os.listdir(private_descriptor)
-            unexpected = [entry for entry in entries if entry != TEST_EXECUTABLE_NAME]
+            unexpected = [entry for entry in entries if entry not in TEST_EXECUTABLE_NAMES]
             if unexpected:
                 cleanup_error = RuntimeError(
                     f"private codec output contains unexpected entries: {unexpected!r}"
                 )
-            if TEST_EXECUTABLE_NAME in entries:
+            for executable_name in TEST_EXECUTABLE_NAMES:
+                if executable_name not in entries:
+                    continue
                 try:
-                    os.unlink(TEST_EXECUTABLE_NAME, dir_fd=private_descriptor)
+                    os.unlink(executable_name, dir_fd=private_descriptor)
                 except OSError as exc:
                     cleanup_error = RuntimeError(
-                        "could not remove the exact codec test executable"
+                        "could not remove an exact pure contract test executable"
                     )
                     cleanup_error.__cause__ = exc
             os.close(private_descriptor)
@@ -149,9 +151,9 @@ def _private_output_directory(output_root: str | Path) -> Iterator[tuple[Path, i
             raise cleanup_error
 
 
-def _require_regular_executable(directory_descriptor: int) -> None:
+def _require_regular_executable(directory_descriptor: int, name: str) -> None:
     info = os.stat(
-        TEST_EXECUTABLE_NAME,
+        name,
         dir_fd=directory_descriptor,
         follow_symlinks=False,
     )
@@ -172,7 +174,12 @@ def run_codec_tests(
     source = Path(source_root).resolve(strict=True)
     sdk_root = Path(sdk).resolve(strict=True)
     protocol_source = source / "protocol.c"
-    test_source = source / "tests" / "codec_contract_test.c"
+    parent_contract_source = source / "parent_contract.c"
+    helper_contract_source = source / "helper_contract.c"
+    parent_entrypoint_source = source / "parent_main.c"
+    helper_entrypoint_source = source / "helper_main.c"
+    codec_test_source = source / "tests" / "codec_contract_test.c"
+    entrypoint_test_source = source / "tests" / "entrypoint_contract_test.c"
     compile_timeout = _positive_timeout(
         compile_timeout_seconds, "codec compile timeout"
     )
@@ -183,8 +190,8 @@ def run_codec_tests(
 
     receipt: dict[str, Any]
     with _private_output_directory(output_root) as (output, output_descriptor):
-        executable = output / TEST_EXECUTABLE_NAME
-        compile_command = [
+        codec_executable = output / TEST_EXECUTABLE_NAMES[0]
+        codec_compile_command = [
             clang,
             "-isysroot",
             str(sdk_root),
@@ -197,55 +204,126 @@ def run_codec_tests(
             "-I",
             str(source),
             str(protocol_source),
-            str(test_source),
+            str(codec_test_source),
             "-o",
-            str(executable),
+            str(codec_executable),
         ]
-        compile_result = _run_process(
-            compile_command,
+        codec_compile_result = _run_process(
+            codec_compile_command,
             label="codec test link",
             timeout_seconds=compile_timeout,
         )
-        compile_output = _bounded_output(compile_result)
-        if compile_result.returncode != 0:
-            raise RuntimeError(f"codec test link failed: {compile_output}")
-        _require_regular_executable(output_descriptor)
+        codec_compile_output = _bounded_output(codec_compile_result)
+        if codec_compile_result.returncode != 0:
+            raise RuntimeError(f"codec test link failed: {codec_compile_output}")
+        _require_regular_executable(output_descriptor, TEST_EXECUTABLE_NAMES[0])
 
-        signature_command = [CODESIGN, "--display", "--verbose=4", str(executable)]
-        signature_result = _run_process(
-            signature_command,
+        codec_signature_command = [CODESIGN, "--display", "--verbose=4", str(codec_executable)]
+        codec_signature_result = _run_process(
+            codec_signature_command,
             label="codec signature inspection",
             timeout_seconds=inspection_timeout,
         )
-        signature_output = _bounded_output(signature_result)
-        if signature_result.returncode != 0:
+        codec_signature_output = _bounded_output(codec_signature_result)
+        if codec_signature_result.returncode != 0:
             raise RuntimeError("codec test signature metadata inspection failed")
-        signature_match = re.search(r"(?m)^Signature=(.+)$", signature_output)
-        team_match = re.search(r"(?m)^TeamIdentifier=(.+)$", signature_output)
+        signature_match = re.search(r"(?m)^Signature=(.+)$", codec_signature_output)
+        team_match = re.search(r"(?m)^TeamIdentifier=(.+)$", codec_signature_output)
         signature = signature_match.group(1).strip() if signature_match else "unknown"
         team_identifier = team_match.group(1).strip() if team_match else "not set"
         if signature.lower() != "adhoc" or team_identifier != "not set":
             raise RuntimeError("codec test unexpectedly used an identity-bearing signature")
-        _require_regular_executable(output_descriptor)
+        _require_regular_executable(output_descriptor, TEST_EXECUTABLE_NAMES[0])
 
-        run_command = [str(executable)]
-        run_result = _run_process(
-            run_command,
+        codec_run_command = [str(codec_executable)]
+        codec_run_result = _run_process(
+            codec_run_command,
             label="codec contract test",
             timeout_seconds=execution_timeout,
         )
-        run_output = _bounded_output(run_result)
-        if run_result.returncode != 0:
-            raise RuntimeError(f"codec contract test failed with {run_result.returncode}")
-        if run_output:
+        codec_run_output = _bounded_output(codec_run_result)
+        if codec_run_result.returncode != 0:
+            raise RuntimeError(f"codec contract test failed with {codec_run_result.returncode}")
+        if codec_run_output:
             raise RuntimeError("codec contract test produced unexpected output")
-        _require_regular_executable(output_descriptor)
+        _require_regular_executable(output_descriptor, TEST_EXECUTABLE_NAMES[0])
+
+        entrypoint_executable = output / TEST_EXECUTABLE_NAMES[1]
+        entrypoint_compile_command = [
+            clang, "-isysroot", str(sdk_root), "-std=c11", "-Wall", "-Wextra",
+            "-Werror", "-pedantic", "-fno-common", "-DDH_CANARY_ENTRYPOINT_UNIT_TEST",
+            "-I", str(source), str(protocol_source), str(parent_contract_source),
+            str(helper_contract_source), str(parent_entrypoint_source),
+            str(helper_entrypoint_source), str(entrypoint_test_source), "-o",
+            str(entrypoint_executable),
+        ]
+        entrypoint_compile_result = _run_process(
+            entrypoint_compile_command,
+            label="entrypoint contract test link",
+            timeout_seconds=compile_timeout,
+        )
+        entrypoint_compile_output = _bounded_output(entrypoint_compile_result)
+        if entrypoint_compile_result.returncode != 0:
+            raise RuntimeError(f"entrypoint contract test link failed: {entrypoint_compile_output}")
+        _require_regular_executable(output_descriptor, TEST_EXECUTABLE_NAMES[1])
+        entrypoint_signature_command = [
+            CODESIGN, "--display", "--verbose=4", str(entrypoint_executable)
+        ]
+        entrypoint_signature_result = _run_process(
+            entrypoint_signature_command,
+            label="entrypoint signature inspection",
+            timeout_seconds=inspection_timeout,
+        )
+        entrypoint_signature_output = _bounded_output(entrypoint_signature_result)
+        if entrypoint_signature_result.returncode != 0:
+            raise RuntimeError("entrypoint test signature metadata inspection failed")
+        entrypoint_signature_match = re.search(
+            r"(?m)^Signature=(.+)$", entrypoint_signature_output
+        )
+        entrypoint_team_match = re.search(
+            r"(?m)^TeamIdentifier=(.+)$", entrypoint_signature_output
+        )
+        entrypoint_signature = (
+            entrypoint_signature_match.group(1).strip()
+            if entrypoint_signature_match
+            else "unknown"
+        )
+        entrypoint_team_identifier = (
+            entrypoint_team_match.group(1).strip()
+            if entrypoint_team_match
+            else "not set"
+        )
+        if entrypoint_signature.lower() != "adhoc" or entrypoint_team_identifier != "not set":
+            raise RuntimeError(
+                "entrypoint test unexpectedly used an identity-bearing signature"
+            )
+        _require_regular_executable(output_descriptor, TEST_EXECUTABLE_NAMES[1])
+        entrypoint_run_command = [str(entrypoint_executable)]
+        entrypoint_run_result = _run_process(
+            entrypoint_run_command,
+            label="entrypoint contract test",
+            timeout_seconds=execution_timeout,
+        )
+        entrypoint_run_output = _bounded_output(entrypoint_run_result)
+        if entrypoint_run_result.returncode != 0:
+            raise RuntimeError(
+                f"entrypoint contract test failed with {entrypoint_run_result.returncode}"
+            )
+        if entrypoint_run_output:
+            raise RuntimeError("entrypoint contract test produced unexpected output")
+        _require_regular_executable(output_descriptor, TEST_EXECUTABLE_NAMES[1])
         receipt = {
-            "schema": "dream-house-canary-codec-test-receipt/2",
-            "state": "PURE_CODEC_TEST_LINKED_AND_PASSED",
+            "schema": "dream-house-canary-contract-test-receipt/3",
+            "state": "PURE_CODEC_AND_ENTRYPOINT_TESTS_LINKED_AND_PASSED",
             "protocol_source_sha256": _sha256(protocol_source),
-            "test_source_sha256": _sha256(test_source),
-            "test_executable_sha256": _sha256(executable),
+            "codec_test_source_sha256": _sha256(codec_test_source),
+            "entrypoint_test_source_sha256": _sha256(entrypoint_test_source),
+            "parent_entrypoint_source_sha256": _sha256(parent_entrypoint_source),
+            "helper_entrypoint_source_sha256": _sha256(helper_entrypoint_source),
+            "test_executable_sha256": _sha256(codec_executable),
+            "entrypoint_test_executable_sha256": _sha256(entrypoint_executable),
+            "entrypoint_test_executable_signature": entrypoint_signature,
+            "entrypoint_test_executable_team_identifier": entrypoint_team_identifier,
             "test_executable_signature": signature,
             "test_executable_team_identifier": team_identifier,
             "compile_timeout_seconds": compile_timeout,
@@ -254,12 +332,18 @@ def run_codec_tests(
             "private_output_directory": str(output),
             "private_output_directory_mode": "0700",
             "private_output_cleanup": "COMPLETED_BEFORE_RECEIPT_RETURN",
-            "compile_command": compile_command,
-            "signature_inspection_command": signature_command,
-            "run_command": run_command,
-            "run_returncode": run_result.returncode,
-            "stdout_bytes": len((run_result.stdout or "").encode()),
-            "stderr_bytes": len((run_result.stderr or "").encode()),
+            "compile_command": codec_compile_command,
+            "signature_inspection_command": codec_signature_command,
+            "run_command": codec_run_command,
+            "run_returncode": codec_run_result.returncode,
+            "stdout_bytes": len((codec_run_result.stdout or "").encode()),
+            "stderr_bytes": len((codec_run_result.stderr or "").encode()),
+            "entrypoint_compile_command": entrypoint_compile_command,
+            "entrypoint_signature_inspection_command": entrypoint_signature_command,
+            "entrypoint_run_command": entrypoint_run_command,
+            "entrypoint_run_returncode": entrypoint_run_result.returncode,
+            "entrypoint_stdout_bytes": len((entrypoint_run_result.stdout or "").encode()),
+            "entrypoint_stderr_bytes": len((entrypoint_run_result.stderr or "").encode()),
             "candidate_link": "NOT_ATTEMPTED",
             "candidate_launch": "NOT_ATTEMPTED",
             "parent_helper_link": "NOT_ATTEMPTED",
@@ -270,8 +354,8 @@ def run_codec_tests(
             "generated_canary": "NOT_ATTEMPTED",
             "real_secret": "NOT_ATTEMPTED",
             "process_environment": {"LC_ALL": "C"},
-            "process_count": 3,
-            "tool_processes": ["clang/linker", "codesign display", "codec test"],
+            "process_count": 6,
+            "tool_processes": ["clang/linker", "codesign display", "codec test", "clang/linker", "codesign display", "entrypoint test"],
             "host_pid": os.getpid(),
         }
     return receipt

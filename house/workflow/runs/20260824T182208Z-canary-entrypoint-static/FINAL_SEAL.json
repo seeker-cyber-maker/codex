@@ -1,0 +1,43 @@
+{
+  "schema": "codex-house-final-seal/1",
+  "sealed_at": "2026-08-24T18:56:00Z",
+  "starting_head": "906f933b9ca84b11f5c3c2909cfe24947c34f80d",
+  "state": "PROMOTED_SOURCE_ONLY_PENDING_FRESH_RUNTIME_QUALIFICATION_PLAN",
+  "claim_ceiling": "HASH_BOUND_PURE_ENTRYPOINT_INTERFACE_AND_DISPOSABLE_TEST_EVIDENCE_ONLY",
+  "source_files": {
+    ".gitignore": "df4880ccd0a7b01f6701a702f94f2eeafaaf875879a98bdf57eef16b12f907ce",
+    "house/native/canary_helper/README.md": "bc16cd05d1e5d72726ace42d7433e4b1b2cce46a424e7ef02b29bee3e8074da4",
+    "house/native/canary_helper/build_objects.py": "3e3452bc6bfa5dfce333f7a98b0c1b4fb1887bef22ccc8af77c2cd6294de6dfc",
+    "house/native/canary_helper/candidate_contract.json": "ae801bcab26064a4440d58d91619972c1d43b1f29f5640bce7c5f565b141b6c2",
+    "house/native/canary_helper/contract.h": "737497d047bd562fae8b69a92a686f09e5b25b099103beb900e93f3c2c55974f",
+    "house/native/canary_helper/helper_main.c": "7af849b1a447cdb5a7675be872668cf756e49e7345f5186dfc79a42b509ee755",
+    "house/native/canary_helper/parent_main.c": "e14fc11704d9f5adedf50562ce43cbcf2001754e003cee1db64c0b9b3dc2c6e0",
+    "house/native/canary_helper/run_codec_tests.py": "5be059112f14e5830fa0c2183db326ef851bdeaf929fe2cf949a7f0d84efbcda",
+    "house/native/canary_helper/tests/entrypoint_contract_test.c": "25de93897fa1d3c19221e27c2bf8d25b70039c41c346726b357dbb80abb84a08",
+    "house/native/canary_helper/tests/test_native_contract.py": "76d0a39d6b674745d7fa0051aae54b174b52de24f5e48e32910efc0870d192a3"
+  },
+  "receipts": {
+    "STATIC_OBJECT_BUILD_RECEIPT.json": "7edd953bd584f3f5b2e54f69bf87c75b26bb0a88b3875e9f4c2e5e87fce392e9",
+    "CONTRACT_TEST_RECEIPT.json": "6f1e0c6e3965312d782af7c8193e0546440faf5f8a44ad41497dde91bd913a78",
+    "EVIDENCE_PACKET_PROMOTION.md": "e7bc96dfaa2e73814664022b05ec265bc4a9fb1f560f77cca1a777345476c1b3",
+    "council/manifest.json": "0efd70f7b39bae356a7bce6fe464c37fed5cfce93709e09f615aeb99488ec25b",
+    "council/claim-ledger.json": "a2c3333e88ddaaec30e0e01d32392670d2a0fb9e2e2ae1d803efdb698dd4a3cd",
+    "council/synthesis.md": "1368a44014e9027c27c3423c5a78f016195628f8ca1f27e99b5a4d5acd6747c7"
+  },
+  "validation": {
+    "focused_tests": "45_PASS",
+    "full_suite": "284_PASS",
+    "native_lint": "PASS",
+    "full_repository_lint": "2_PREEXISTING_OUT_OF_SCOPE_FINDINGS",
+    "object_build": "5_NON_EXECUTABLE_OBJECTS_ZERO_FORBIDDEN_SYMBOLS",
+    "contract_tests": "CODEC_AND_ENTRYPOINT_PASS_ADHOC_NO_TEAM_ID",
+    "council": "2_ACCEPT_1_REVISE_THEN_TARGETED_RECHECK_ACCEPT",
+    "candidate_launch": "NOT_ATTEMPTED"
+  },
+  "still_unproven": [
+    "candidate bundle", "candidate linking", "identity signing", "certificate discovery",
+    "Keychain", "App Sandbox enforcement", "runtime containment", "network",
+    "generated canary", "provider", "YubiKey", "real-secret handling"
+  ],
+  "next_gate": "fresh sealed runtime-qualification plan before candidate build, inspection, signing, or launch"
+}

@@ -35,11 +35,21 @@ class StaticNativeContractTests(unittest.TestCase):
             )
             self.assertEqual(receipt["candidate_launch"], "NOT_ATTEMPTED")
             self.assertEqual(receipt["link"], "NOT_ATTEMPTED")
+            self.assertEqual(
+                set(receipt["objects"]),
+                {
+                    "protocol.c",
+                    "parent_contract.c",
+                    "helper_contract.c",
+                    "parent_main.c",
+                    "helper_main.c",
+                },
+            )
             for record in receipt["objects"].values():
                 self.assertFalse(record["executable"])
                 self.assertEqual(record["forbidden_symbols"], [])
 
-    def test_parent_and_helper_have_no_entrypoint_or_runtime_capability_api(self) -> None:
+    def test_contract_sources_have_no_runtime_capability_api(self) -> None:
         forbidden = (
             r"\bmain\s*\(",
             r"\bposix_spawn\s*\(",
@@ -58,6 +68,45 @@ class StaticNativeContractTests(unittest.TestCase):
             for pattern in forbidden:
                 self.assertIsNone(re.search(pattern, source), (name, pattern))
             self.assertIn("DH_CANARY_LAUNCH_DISABLED", source)
+
+    def test_entrypoint_admission_is_positive_and_test_macro_only_omits_main(self) -> None:
+        forbidden = (
+            r"\bposix_spawn\s*\(",
+            r"\bfork\s*\(",
+            r"\bexec[a-z]*\s*\(",
+            r"\bsystem\s*\(",
+            r"\bpopen\s*\(",
+            r"\bsocket\s*\(",
+            r"\bconnect\s*\(",
+            r"\bopen\s*\(",
+            r"\bgetenv\s*\(",
+            r"\bsetenv\s*\(",
+        )
+        for name, function in (
+            ("parent_main.c", "dh_parent_entrypoint_admit"),
+            ("helper_main.c", "dh_helper_entrypoint_admit"),
+        ):
+            source = (ROOT / name).read_text(encoding="utf-8")
+            self.assertEqual(source.count("DH_CANARY_ENTRYPOINT_UNIT_TEST"), 1)
+            macro_offset = source.index("DH_CANARY_ENTRYPOINT_UNIT_TEST")
+            guard_start = source.rfind("#ifndef ", 0, macro_offset)
+            self.assertGreaterEqual(guard_start, 0)
+            admission_region = source[:guard_start]
+            self.assertNotRegex(
+                admission_region,
+                r"(?m)^\s*#\s*(?:if|ifdef|ifndef|elif|else|endif)\b",
+            )
+            self.assertRegex(
+                source[guard_start:],
+                r"(?s)^#ifndef DH_CANARY_ENTRYPOINT_UNIT_TEST\n"
+                r"int main\(int argc, char \*argv\[\]\) \{.*?\n}\n#endif\s*$",
+            )
+            self.assertIn(f"int {function}_from_proof", source)
+            self.assertIn("DH_CANARY_ADMISSION_ACCEPTED", source)
+            self.assertIn("DH_CANARY_ADMISSION_FD_CONTRACT", source)
+            self.assertIn("DH_CANARY_ADMISSION_PROTOCOL_CONTRACT", source)
+            for pattern in forbidden:
+                self.assertIsNone(re.search(pattern, source), (name, pattern))
 
     def test_entitlement_files_are_exact_minimal_sets(self) -> None:
         parent = plistlib.loads((ROOT / "parent.entitlements.plist").read_bytes())
@@ -88,10 +137,17 @@ class StaticNativeContractTests(unittest.TestCase):
     def test_pure_codec_contract_executable_passes_without_identity(self) -> None:
         with tempfile.TemporaryDirectory(prefix="house-canary-codec-test-") as directory:
             receipt = run_codec_tests(ROOT, directory)
-            self.assertEqual(receipt["state"], "PURE_CODEC_TEST_LINKED_AND_PASSED")
+            self.assertEqual(
+                receipt["state"], "PURE_CODEC_AND_ENTRYPOINT_TESTS_LINKED_AND_PASSED"
+            )
             self.assertEqual(receipt["run_returncode"], 0)
+            self.assertEqual(receipt["entrypoint_run_returncode"], 0)
             self.assertEqual(receipt["test_executable_signature"], "adhoc")
             self.assertEqual(receipt["test_executable_team_identifier"], "not set")
+            self.assertEqual(receipt["entrypoint_test_executable_signature"], "adhoc")
+            self.assertEqual(
+                receipt["entrypoint_test_executable_team_identifier"], "not set"
+            )
             self.assertEqual(receipt["candidate_link"], "NOT_ATTEMPTED")
             self.assertEqual(receipt["candidate_launch"], "NOT_ATTEMPTED")
             self.assertEqual(receipt["identity_signing"], "NOT_ATTEMPTED")

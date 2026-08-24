@@ -1,0 +1,17 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "20260824T182208Z-canary-entrypoint-static",
+  "claim_ids": ["STATIC_ENTRYPOINT_INTERFACE", "OBJECT_ONLY_CAPABILITY_SURFACE"],
+  "task_distribution": {"scope": "native parent/helper source interface and object-only symbols", "temporal_cutoff": "2026-08-24T18:22:08Z", "new_vs_legacy_slices": ["new entrypoints", "existing protocol/contracts"], "out_of_distribution_slices": ["signed bundle", "runtime process", "sandbox", "network", "canary", "secret"]},
+  "fixtures": {"public": ["contract.h", "protocol.h", "protocol.c"], "private": [], "adversarial": ["wrong argv", "prohibited API import", "descriptor-role drift"], "known_answer": ["all source files compile to non-executable objects"]},
+  "contamination": {"sources_checked": ["accepted containment design v1.1", "promoted declarative contract"], "tool_access_restrictions": ["no signing", "no launch", "no network", "no secret"], "history_or_solution_leakage_checked": true},
+  "observations": {"final_output": {"applicability": "required", "reason": "source interface", "gate": null, "evidence_refs": []}, "execution_trace": {"applicability": "required", "reason": "object-only compiler and symbol inspection", "gate": null, "evidence_refs": []}, "side_effects": {"applicability": "required", "reason": "private temporary build outputs", "gate": null, "evidence_refs": []}, "cost": {"applicability": "required", "reason": "two bounded local compilation attempts", "gate": null, "evidence_refs": []}, "latency": {"applicability": "not_applicable", "reason": "no runtime service claim", "gate": null, "evidence_refs": []}, "recovery": {"applicability": "required", "reason": "private output cleanup must be verified", "gate": null, "evidence_refs": []}, "long_horizon": {"applicability": "not_applicable", "reason": "one bounded implementation wave", "gate": null, "evidence_refs": []}},
+  "oracles": ["compiler object mode", "nm undefined-symbol audit", "static source tests"],
+  "semantic_reviewers": ["outside council"],
+  "metrics": ["focused tests", "object compile count", "forbidden undefined symbols", "source residue"],
+  "thresholds": ["all focused tests pass", "five objects non-executable", "zero forbidden symbols", "zero source-tree artifacts"],
+  "uncertainty_method": "no runtime or signing claim",
+  "failure_taxonomy": ["source contract drift", "forbidden import", "compiler failure", "symbol audit failure", "artifact residue", "authority violation"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new run"
+}

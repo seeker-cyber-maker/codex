@@ -117,11 +117,11 @@
   "sources": [
     {"relative_path": "protocol.c", "role": "shared", "mode": "0644", "sha256": "a9dc942961d4486b8cb8d0bb4e9539afcac74681a81c29bab8bab875e66486b1"},
     {"relative_path": "protocol.h", "role": "header", "mode": "0644", "sha256": "ad725dd956c0232cf941077a6285463a8fd66bf0d7e535be02f4583d4281205e"},
-    {"relative_path": "contract.h", "role": "header", "mode": "0644", "sha256": "98a1abad329491930573e947adc57e30403480a438d2e9d97a3cf6529aacd510"},
+    {"relative_path": "contract.h", "role": "header", "mode": "0644", "sha256": "737497d047bd562fae8b69a92a686f09e5b25b099103beb900e93f3c2c55974f"},
     {"relative_path": "parent_contract.c", "role": "parent", "mode": "0644", "sha256": "1ccfb510e744367ffa8483b9290ceb0f58979c9e8c55970b86c8e1e407ea6611"},
     {"relative_path": "helper_contract.c", "role": "helper", "mode": "0644", "sha256": "1cc0a49cb326cf7bfcb90268e8301893abed98531df8530d5f347e4d50886f94"},
-    {"relative_path": "parent_main.c", "role": "parent", "mode": "0644", "sha256": "UNRESOLVED"},
-    {"relative_path": "helper_main.c", "role": "helper", "mode": "0644", "sha256": "UNRESOLVED"}
+    {"relative_path": "parent_main.c", "role": "parent", "mode": "0644", "sha256": "e14fc11704d9f5adedf50562ce43cbcf2001754e003cee1db64c0b9b3dc2c6e0"},
+    {"relative_path": "helper_main.c", "role": "helper", "mode": "0644", "sha256": "7af849b1a447cdb5a7675be872668cf756e49e7345f5186dfc79a42b509ee755"}
   ],
   "bundle_inventory": {
     "required_members": [

@@ -12,7 +12,13 @@ from typing import Any
 DEFAULT_CLANG = "/Library/Developer/CommandLineTools/usr/bin/clang"
 DEFAULT_NM = "/Library/Developer/CommandLineTools/usr/bin/nm"
 DEFAULT_SDK = "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
-SOURCES = ("protocol.c", "parent_contract.c", "helper_contract.c")
+SOURCES = (
+    "protocol.c",
+    "parent_contract.c",
+    "helper_contract.c",
+    "parent_main.c",
+    "helper_main.c",
+)
 FORBIDDEN_UNDEFINED = {
     "_connect",
     "_execve",

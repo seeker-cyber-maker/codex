@@ -1,0 +1,17 @@
+{
+  "council_id": "20260824T182208Z-entrypoint-static-promotion",
+  "question": "Does the completed native entrypoint slice support a source-only promotion and commit while preserving its non-runtime claim ceiling?",
+  "mode": "independent-review",
+  "packet_sha256": "e7bc96dfaa2e73814664022b05ec265bc4a9fb1f560f77cca1a777345476c1b3",
+  "privacy": "local-only",
+  "cost_ceiling": "existing local council lanes only",
+  "independence_limit": "multi-agent same-model local review over shared local source packet",
+  "reviewers": [
+    {"id":"evidence-auditor","status":"completed","packet_hash_confirmed_in_response":true,"verdict":"ACCEPT_SOURCE_ONLY_PROMOTION"},
+    {"id":"constructive-theorist","status":"completed","packet_hash_confirmed_in_response":true,"verdict":"ACCEPT_SOURCE_ONLY_PROMOTION"},
+    {"id":"adversarial-methodologist","status":"completed","packet_hash_confirmed_in_response":true,"verdict":"REVISE_SOURCE_ONLY"},
+    {"id":"adversarial-methodologist-recheck","status":"completed","packet_hash_confirmed_in_response":true,"verdict":"ACCEPT_SOURCE_ONLY_PROMOTION"}
+  ],
+  "decision": "ACCEPT_SOURCE_ONLY_PROMOTION",
+  "decision_limit": "commit only; no candidate build, bundle, signing, launch, or live-runtime authority"
+}
