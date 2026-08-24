@@ -1,0 +1,21 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260824T201734Z-single-yubikey-recovery-source",
+  "starting_head": "371a3c9e0c",
+  "profile": "full",
+  "case_type": "security_containment",
+  "authority": "USER_CONTINUED_SOURCE_ONLY_IMPLEMENTATION",
+  "accepted_plan": "PLAN.md + PLAN_V2.md",
+  "plan_v2_sha256": "19767b5999c43d43cb31e1132a5dfae859c350f416acc683ad93a9640530a264",
+  "claim_ceiling": "SYNTHETIC_RECOVERY_POLICY_STRUCTURE_AND_TRANSITIONS_ONLY",
+  "status": "PLAN_ACCEPTED_SOURCE_ONLY",
+  "forbidden": [
+    "real key or package operations",
+    "hardware or Keychain access",
+    "database or controller integration",
+    "CLI or provider wiring",
+    "task dispatch",
+    "recovery-ready claim"
+  ],
+  "next_gate": "implement private pure module and dedicated synthetic tests"
+}
