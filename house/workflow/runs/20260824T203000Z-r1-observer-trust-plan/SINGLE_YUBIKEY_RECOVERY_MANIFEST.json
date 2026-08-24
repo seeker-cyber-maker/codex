@@ -1,0 +1,16 @@
+{
+  "schema": "dream-house-plan-manifest/1",
+  "plan_id": "20260824-single-yubikey-recovery",
+  "starting_head": "427ae214bf",
+  "case_type": "security_containment",
+  "authority": "USER_REQUESTED_BACKUP_METHOD_PLAN_ONLY",
+  "accepted_plan": "PLAN_V6_SINGLE_YUBIKEY_RECOVERY.md",
+  "accepted_plan_sha256": "2dcbf7f0763c650c664896c4ea52d9d8e0ceebb6222dbf32697c0fa84d1ccffb",
+  "final_review_packet": "COUNCIL_PACKET_V6.md",
+  "final_review_packet_sha256": "09081cffa17cc50bd35444ce802f57f5937f54a544db30ad016c46e55bfed44b",
+  "review_mode": "local_same_provider_multi_agent",
+  "status": "ACCEPTED_PLAN_ONLY_NOT_RECOVERY_READY",
+  "forbidden_operations_observed": 0,
+  "next_gate": "separately authorized source-only implementation plan",
+  "real_key_ceremony_gate": "explicit future authorization required"
+}
