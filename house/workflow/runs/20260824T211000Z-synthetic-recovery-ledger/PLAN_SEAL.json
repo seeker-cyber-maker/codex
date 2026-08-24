@@ -1,0 +1,39 @@
+{
+  "schema": "dream-house-plan-seal/1",
+  "base_commit": "5588fc831f72284c54afb538790c7888f66e1755",
+  "status": "ACCEPTED_PLAN_ONLY_SYNTHETIC_LEDGER_BOUNDARY",
+  "claim_ceiling": "PLANNED_SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
+  "artifacts": {
+    "PLAN.md": "d54dbb5a4d4b006e1752956f456a994ea0a4a355050503a585d82385b52d1fe1",
+    "OPERATION.json": "396f76f1c61c80e353cbd7c81ad25aa53aa6605252c8cd4f0d3ee3b912015b8b",
+    "EVALUATION_CARD.json": "1f29d4af6e24de4fe66b1b4be4be0a0527711278982bd62b37f3ae4d4a922e1f",
+    "COUNCIL_PACKET_V3.md": "4bfa14ee2a70e8077245810b450cd96441624441a9a356fc3630c7777b9a16a3",
+    "COUNCIL_SUMMARY.md": "901857d8941d4bd889e705e71de48750519bdcea9fbe4208831e6fa54b8aeab2",
+    "EVALUATION_RESULT.json": "bcd9de3419b03b2bb92d5bd5ae7b46b3087707af7b13bc367eb05a45322cf891",
+    "HANDOFF.md": "de935a44a606c6a8a7c528551043d4a7922939be0a002cf67c70e7b49036ea6d",
+    "RUN_MANIFEST.json": "0433907ae28c0aab52c096a1a7f29579fca178c0749a1e5f278e4ecf82cc9eb3"
+  },
+  "validation": [
+    "JSON syntax validation for all JSON artifacts",
+    "OPERATION.json canonical record SHA-256 verification",
+    "git diff --check after staging only this run directory",
+    "no implementation source or test files added in this run"
+  ],
+  "council": {
+    "mode": "multi-agent same-provider local review",
+    "final_packet_sha256": "4bfa14ee2a70e8077245810b450cd96441624441a9a356fc3630c7777b9a16a3",
+    "constructive": "ACCEPT",
+    "adversarial": "ACCEPT",
+    "evidence": "ACCEPT with packet-hash format confirmation unconfirmed"
+  },
+  "forbidden_operations": [
+    "source implementation",
+    "database creation or access",
+    "key/package/hardware/Keychain access",
+    "trusted-time or signing operation",
+    "controller/inbox/CLI/provider/worker integration",
+    "network or dispatch",
+    "recovery-ready claim"
+  ],
+  "next_gate": "fresh sealed source-implementation operation and council review"
+}

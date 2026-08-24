@@ -1,0 +1,72 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "dream-house-synthetic-recovery-ledger-plan-v1",
+  "record_revision": 1,
+  "record_sha256": "e2b6daa08c3ac9edb7a8396ab1fdd53af36dcf6339400d832afec10b47d5c146",
+  "run_id": "20260824T211000Z-synthetic-recovery-ledger",
+  "intent": "Seal and review a source-only plan for a disposable synthetic recovery ledger without implementing it.",
+  "target_identity": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260824T211000Z-synthetic-recovery-ledger",
+  "input_hashes": {
+    "recovery_policy.py": "274668d6cdf19cdeeaff1b40ca539ddf91c78e441af1db6923c8147ec74f7042",
+    "test_recovery_policy.py": "37e08de7c2ed774bdabcb9e25fcbf7704502ad844511bf0d723bfa68da2ae9aa",
+    "source_plan_v1": "f5c74b50dbe31ce52ce4ae1c86cff5c322187a682c745d7b94f2fd8d8965dc49",
+    "source_plan_v2": "19767b5999c43d43cb31e1132a5dfae859c350f416acc683ad93a9640530a264",
+    "recovery_policy_v6": "2dcbf7f0763c650c664896c4ea52d9d8e0ceebb6222dbf32697c0fa84d1ccffb"
+  },
+  "authority_scope": {
+    "read": [
+      "sealed recovery-policy source and plans",
+      "existing source for negative boundary evidence"
+    ],
+    "write": [
+      "new workflow run documentation only"
+    ],
+    "network": [],
+    "external_effect_class": "NONE"
+  },
+  "owner": "primary-codex",
+  "lease": {
+    "holder": null,
+    "expires_at": null,
+    "epoch": 0,
+    "fencing_token": null
+  },
+  "idempotency": {
+    "key": "dream-house-synthetic-recovery-ledger-plan-v1",
+    "binding_sha256": "72812ab00112a40a9a0b965b7f98fffeb90e795f4858cdfcce48f01dac5e2bd7"
+  },
+  "start_state": {
+    "head": "5588fc831f72284c54afb538790c7888f66e1755",
+    "recovery_source_status": "ACCEPTED_SYNTHETIC_SOURCE_ONLY"
+  },
+  "checkpoint_policy": {
+    "kind": "plan-only",
+    "real_checkpoint": "FORBIDDEN"
+  },
+  "resume_pointer": null,
+  "deadline": null,
+  "retry_budget": 0,
+  "resource_budget": [
+    {
+      "resource": "source_changes",
+      "unit": "files",
+      "hard_cap": 5
+    }
+  ],
+  "cancellation": {
+    "supported": true,
+    "method": "stop before source implementation"
+  },
+  "expected_artifacts": [
+    "PLAN.md",
+    "COUNCIL_PACKET.md",
+    "EVALUATION_CARD.json",
+    "COUNCIL_SUMMARY.md",
+    "HANDOFF.md"
+  ],
+  "acceptance_verifier": "independent review of the sealed plan packet",
+  "reconciliation": {
+    "required": true,
+    "method": "verify plan remains documentation-only and unrelated dirty work is untouched"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "synthetic-recovery-ledger-plan-v1",
+  "claim_ids": [
+    "planned-synthetic-ledger-boundary",
+    "planned-transaction-replay-and-rollback-tests"
+  ],
+  "task_distribution": {
+    "scope": "plan only for test-only synthetic SQLite persistence around the sealed pure recovery reducer",
+    "temporal_cutoff": "2026-08-24",
+    "new_vs_legacy_slices": [
+      "new proposed recovery ledger only",
+      "existing recovery reducer and legacy controller as boundary evidence"
+    ],
+    "out_of_distribution_slices": [
+      "real key recovery",
+      "hardware/Keychain",
+      "production database",
+      "external checkpoint or backup",
+      "multi-process recovery"
+    ]
+  },
+  "fixtures": {
+    "public": [
+      "synthetic state/manifest/evidence fixtures already used by recovery-policy tests"
+    ],
+    "private": [],
+    "adversarial": [
+      "duplicate exact request",
+      "same challenge with altered manifest",
+      "forced pre-commit failure",
+      "corrupt chain/state/receipt/metadata",
+      "forbidden import or operational reference"
+    ],
+    "known_answer": [
+      "complete V6 synthetic transition sequence",
+      "whole receipt and final state equality after reopen"
+    ]
+  },
+  "contamination": {
+    "sources_checked": [
+      "V6 recovery policy",
+      "sealed source-only recovery policy module",
+      "existing authority/inbox/controller code as negative boundary evidence"
+    ],
+    "tool_access_restrictions": [
+      "no actual implementation in this planning run",
+      "no real database path",
+      "no key, package, hardware, Keychain, network, provider, CLI, controller, or dispatch operation"
+    ],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {
+      "applicability": "required",
+      "reason": "sealed plan and review decision",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "execution_trace": {
+      "applicability": "not_applicable",
+      "reason": "this run performs no runtime or source implementation",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "side_effects": {
+      "applicability": "required",
+      "reason": "reconciliation must prove documentation-only changes",
+      "gate": "PENDING",
+      "evidence_refs": []
+    },
+    "recovery": {
+      "applicability": "not_applicable",
+      "reason": "the plan does not establish a recovery system",
+      "gate": null,
+      "evidence_refs": []
+    }
+  },
+  "oracles": [
+    "plan review against source-only handoff",
+    "git diff/status isolation check",
+    "council claim ledger"
+  ],
+  "semantic_reviewers": [
+    "evidence auditor",
+    "constructive theorist",
+    "adversarial methodologist"
+  ],
+  "metrics": [
+    "zero plan-authorized operational effects",
+    "all required state/replay/corruption boundaries are specified"
+  ],
+  "thresholds": [
+    "no reviewer identifies an implicit operational authority path",
+    "no planned receipt exceeds synthetic local transaction semantics"
+  ],
+  "uncertainty_method": "defer implementation until a plan council explicitly accepts the claim ceiling",
+  "failure_taxonomy": [
+    "scope widening",
+    "receipt overclaim",
+    "idempotency ambiguity",
+    "rollback ambiguity",
+    "source-graph coupling"
+  ],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision"
+}

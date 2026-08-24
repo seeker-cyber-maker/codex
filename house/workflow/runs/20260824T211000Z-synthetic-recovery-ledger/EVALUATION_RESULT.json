@@ -1,0 +1,38 @@
+{
+  "schema": "project-evaluation-result/1",
+  "evaluation_id": "synthetic-recovery-ledger-plan-v1",
+  "status": "ACCEPTED_PLAN_ONLY",
+  "claim_ceiling": "PLANNED_SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY",
+  "plan_sha256": "d54dbb5a4d4b006e1752956f456a994ea0a4a355050503a585d82385b52d1fe1",
+  "evidence": {
+    "operation_record_verified": true,
+    "plan_only_files_added": true,
+    "implementation_files_added": false,
+    "runtime_or_database_execution": "NOT_ATTEMPTED",
+    "council_final_packet_sha256": "4bfa14ee2a70e8077245810b450cd96441624441a9a356fc3630c7777b9a16a3",
+    "council_disposition": "ACCEPT_PLAN_ONLY_SYNTHETIC_LEDGER_BOUNDARY",
+    "reviewer_hash_confirmations": {
+      "constructive": "CONFIRMED",
+      "adversarial": "CONFIRMED",
+      "evidence": "UNCONFIRMED_FORMAT"
+    }
+  },
+  "accepted_properties": [
+    "closed initialization and state-free apply API",
+    "closed duplicate/conflict/refusal outcome table",
+    "accepted-only journal mutation",
+    "fixed outer ledger receipt envelope",
+    "temporary-fixture path guard explicitly not treated as OS security",
+    "stop boundaries retained"
+  ],
+  "not_established": [
+    "implementation correctness",
+    "SQLite transaction or crash behavior",
+    "real persistence or checkpoint protection",
+    "real key, signature, package, hardware, or Keychain behavior",
+    "controller/provider/worker/CLI integration",
+    "runtime admission or dispatch",
+    "recovery readiness"
+  ],
+  "next_gate": "separately sealed source-implementation plan and council review"
+}
