@@ -1,6 +1,11 @@
 # Handoff: synthetic recovery-ledger source sealed
 
-Status: `SOURCE_SEALED_AT_SYNTHETIC_CEILING`.
+Status: `COMPLETE_SEALED_AND_BACKED_UP`.
+
+Source commit `6685bacb31` and evidence commit
+`95cf5e4ceff22ace3f94babbed823e95d842eb4c` were pushed to the private
+`backup/codex/dream-house-auto-switcher` branch and verified with
+`git ls-remote`.
 
 The accepted source plan is [`PLAN.md`](PLAN.md), SHA-256
 `28459d9494ca6f6936aca5200845a0cf77a2d7116bb9b715abf574725b22702c`.

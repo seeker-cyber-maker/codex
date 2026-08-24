@@ -10,3 +10,4 @@
 {"schema":"project-event/1","sequence":10,"kind":"IMPLEMENTATION_VALIDATED_V2","result":"PASS","tests":25,"source_and_dedicated_test_lines":792,"next":"CANDIDATE_COUNCIL_V2"}
 {"schema":"project-event/1","sequence":11,"kind":"CANDIDATE_COUNCIL_V2","packet_sha256":"ae1b9c1762d28b536ebe833be23d0f4d4bfbabc72081043248c32611689fd966","reviewers":{"evidence":"ACCEPT","constructive":"ACCEPT","adversarial":"ACCEPT"},"root_disposition":"ACCEPT_SOURCE_SEAL_AT_SYNTHETIC_CEILING"}
 {"schema":"project-event/1","sequence":12,"kind":"SOURCE_SEALED","result":"PASS","claim_ceiling":"SYNTHETIC_RECOVERY_LEDGER_LOCAL_TRANSACTION_ONLY","next":"SCOPED_COMMIT_AND_PRIVATE_BACKUP"}
+{"schema":"project-event/1","sequence":13,"kind":"PRIVATE_BACKUP_VERIFIED","result":"PASS","source_commit":"6685bacb31","evidence_commit":"95cf5e4ceff22ace3f94babbed823e95d842eb4c","remote":"backup","branch":"codex/dream-house-auto-switcher"}
