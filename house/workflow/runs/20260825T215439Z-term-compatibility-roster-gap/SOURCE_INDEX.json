@@ -1,0 +1,28 @@
+{
+  "schema": "dream-house/source-index/1",
+  "freshness": "LIVE_VERIFIED",
+  "verified_at": "2026-08-25T21:54:39Z",
+  "sources": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/provider-orchestration/docs/local-worker-lanes.md",
+      "sha256": "ef6c85b69168421fb065dfecbbbee551e320617d1123c8f3d63e5183ede7dbb6",
+      "role": "local specialist qualification and dispatch state"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/provider-orchestration/registry/workers.yaml",
+      "sha256": "23d02f128aafd9b5a489b6093bebcc264b5b312dc05eb5c15a530975cd2ecf38",
+      "role": "worker authority and transport state"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/provider-orchestration/state/generated/omlx-test-roster.json",
+      "sha256": "64ace458d3c62bd2b0d5a523029f754d8cd2597b3010f6dd5c41f63df41a7523",
+      "role": "current test-only local model inventory"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/provider-orchestration/docs/application-mode-lanes.md",
+      "sha256": "24f170d65f2fcb2530ce45c11680d82723bb5289a41d15dc3b77269b24f78087",
+      "role": "application lane boundary"
+    }
+  ],
+  "claim_ceiling": "CURRENT_CATALOG_GAP_ONLY"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260825T215439Z-term-compatibility-roster-gap",
+  "starting_head": "a6b5ed905c6074c8db2cee487c4862cf0b85f267",
+  "profile": "read_only_gap_audit",
+  "case_type": "evidence_review",
+  "authority": "USER_REQUESTED_CONTINUATION_UNTIL_MILESTONE_OR_BLOCKER",
+  "write_scope": [
+    "house/workflow/runs/20260825T215439Z-term-compatibility-roster-gap"
+  ],
+  "forbidden": [
+    "model or provider calls",
+    "model loading",
+    "worker dispatch",
+    "prompt rendering",
+    "task or relay mutation",
+    "registry mutation",
+    "credential or secret access"
+  ],
+  "status": "BLOCKED_BY_UNQUALIFIED_ROSTER",
+  "next_gate": "qualified six-variant roster and separately sealed offline output-collection run"
+}

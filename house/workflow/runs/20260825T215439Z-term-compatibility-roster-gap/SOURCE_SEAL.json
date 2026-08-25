@@ -1,0 +1,23 @@
+{
+  "schema": "dream-house/source-seal/1",
+  "sealed_at": "2026-08-25T21:54:39Z",
+  "status": "PASS",
+  "starting_head": "a6b5ed905c6074c8db2cee487c4862cf0b85f267",
+  "artifacts": [
+    {
+      "path": "house/workflow/runs/20260825T215439Z-term-compatibility-roster-gap/RUN_MANIFEST.json",
+      "sha256": "7798de1cb1e7f045b704d4ec26821c3b045df49746002afe34e2ce12f8ff876b"
+    },
+    {
+      "path": "house/workflow/runs/20260825T215439Z-term-compatibility-roster-gap/SOURCE_INDEX.json",
+      "sha256": "0f104f78130251c575024f3ff0c64c60ad055dca32429ad52ab7f655188804ed"
+    },
+    {
+      "path": "house/workflow/runs/20260825T215439Z-term-compatibility-roster-gap/ROSTER_GAP_RECEIPT.md",
+      "sha256": "41cd75e53c52b05cd3db02b5870c768052c4192e3cf190fab4e7a99b7e789632"
+    }
+  ],
+  "claim_ceiling": "CURRENT_CATALOG_GAP_ONLY",
+  "model_or_provider_calls": "NOT_ATTEMPTED",
+  "task_or_authority_effects": "NONE"
+}
