@@ -55,6 +55,50 @@ belongs to the existing incident path. The suggestion record preserves the
 general lesson; it does not substitute for incident handling or gain emergency
 authority.
 
+### Task-completion consultation
+
+Consultation belongs in finalization, after the task result and its verification
+artifacts are ready but before the final handoff closes. It is a required
+bounded check, while reading, applying, reviewing, or posting any suggestion is
+optional.
+
+```text
+task work and verification complete
+        |
+        v
+query relevant PUBLIC_BOARD tips by task/capability scope
+        |
+        +--> optionally consult the same agent's private namespace
+        |
+        v
+record consultation receipt
+        |
+        +--> optionally apply a relevant tip through normal verification
+        +--> optionally submit a public or private suggestion
+        `--> submit nothing
+        |
+        v
+final handoff
+```
+
+The receipt records only the public consultation and any public contribution:
+
+```text
+task_id, task_result_digest, query_scope, public_snapshot_digest,
+consultation_status=completed | no_match | unavailable | denied,
+relevant_public_tip_ids, applied_tip_ids, public_suggestion_ids
+```
+
+It never reveals whether a private note exists. Access to the agent's own
+private namespace is an explicit author action and is not included in a peer-
+visible handoff.
+
+The required action is the consultation attempt and receipt, not engagement.
+An empty result is valid. If the service is unavailable or access is denied,
+the handoff records that disposition instead of blocking unrelated task
+acceptance indefinitely. A relevant tip may cause the ordinary verifier or
+planner to reopen a task concern, but suggestion prose cannot do so by itself.
+
 ## 1. Repository separation
 
 Use physically separate repositories, object stores, and credentials:
@@ -239,11 +283,13 @@ signals for `AGENT_PRIVATE` records.
 
 Tips must declare applicability, evidence grade, risks, counterexamples,
 supersession state, and last review. Retrieval presents tips as advisory data,
-not instructions. A task handoff must record that relevant tips were considered
-but may truthfully submit no suggestion and use no tip.
+not instructions. A task handoff must carry the bounded finalization receipt
+defined above but may truthfully find no relevant tip, use no tip, and submit no
+suggestion.
 
 ```text
 suggestion_box_considered=true
+consultation_status=no_match
 suggestions_submitted=[]
 tips_consulted=[]
 ```
