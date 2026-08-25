@@ -35,6 +35,11 @@
       "path": "A2A_EXPERIMENT_PRE_FLIGHT_STATUS.json",
       "sha256": "071ed340dec1553f0cdef0c2fed32f322bd5e84790bcddc610d6fad4cb9e99a4",
       "status": "NOT_READY_NO_DISPATCH"
+    },
+    {
+      "path": "SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md",
+      "sha256": "2538416788cd9cd486da75fa0131513ea74dca9c59b5fae1791ce37be1c5156e",
+      "status": "DRAFT_SECURITY_DESIGN_NOT_IMPLEMENTED"
     }
   ],
   "source_drafts": [
