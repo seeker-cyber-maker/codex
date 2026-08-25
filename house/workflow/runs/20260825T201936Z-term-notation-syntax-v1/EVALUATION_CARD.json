@@ -1,0 +1,135 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "term-notation-syntax-v1",
+  "claim_ids": [
+    "TERM-SYNTAX-001-closed-grammar",
+    "TERM-SYNTAX-002-side-effect-free-parser",
+    "TERM-SYNTAX-003-explicit-preference"
+  ],
+  "task_distribution": {
+    "scope": "one TERM or PREF record parsed under TERM_NOTATION/1",
+    "temporal_cutoff": "2026-08-25T20:19:36Z",
+    "new_vs_legacy_slices": [
+      "new machine-readable grammar",
+      "legacy readable TERM proposal"
+    ],
+    "out_of_distribution_slices": [
+      "prompt injection into a live model",
+      "multi-record context compaction",
+      "task or authority integration"
+    ]
+  },
+  "fixtures": {
+    "public": [
+      "declared examples"
+    ],
+    "private": [],
+    "adversarial": [
+      "unknown operator",
+      "unknown field",
+      "duplicate field",
+      "ambiguous delimiter",
+      "task or authority extension",
+      "oversized input"
+    ],
+    "known_answer": [
+      "typed parsed records",
+      "fail-closed error class"
+    ]
+  },
+  "contamination": {
+    "sources_checked": [
+      "TERM_NOTATION_SYNTHESIS_V1.md",
+      "TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md",
+      "TERM_SHORTHAND_USER_DECISION_ADDENDUM_20260825.md"
+    ],
+    "tool_access_restrictions": [
+      "parser has no I/O or execution surface",
+      "Chat/Work sees only the frozen capsule"
+    ],
+    "history_or_solution_leakage_checked": false
+  },
+  "observations": {
+    "final_output": {
+      "applicability": "required",
+      "reason": "dictionary and typed parser are the claim surface",
+      "gate": "PASS",
+      "evidence_refs": [
+        "house/term_notation/dictionary.json",
+        "house/term_notation/parser.py",
+        "house/term_notation/README.md"
+      ]
+    },
+    "execution_trace": {
+      "applicability": "required",
+      "reason": "focused parser tests must execute",
+      "gate": "PASS",
+      "evidence_refs": [
+        "house/term_notation/tests/test_parser.py",
+        "VALIDATION.json"
+      ]
+    },
+    "side_effects": {
+      "applicability": "required",
+      "reason": "the parser must remain data-only",
+      "gate": "PASS",
+      "evidence_refs": [
+        "house/term_notation/tests/test_parser.py#test_parser_has_only_pure_standard_library_dependencies",
+        "STOP_HOOK_COMPATIBILITY.md"
+      ]
+    },
+    "cost": {
+      "applicability": "not_applicable",
+      "reason": "no cost claim is made",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "latency": {
+      "applicability": "not_applicable",
+      "reason": "no latency claim is made",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "recovery": {
+      "applicability": "not_applicable",
+      "reason": "the parser is pure and the Git change is reversible",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "long_horizon": {
+      "applicability": "not_applicable",
+      "reason": "context-compaction efficacy remains a separate experiment",
+      "gate": null,
+      "evidence_refs": []
+    }
+  },
+  "oracles": [
+    "closed grammar invariants",
+    "known-answer parser tests",
+    "source scan for forbidden integration imports"
+  ],
+  "semantic_reviewers": [
+    "supervised Chat/Work advisory lane",
+    "Dream House coordinator"
+  ],
+  "metrics": [
+    "declared forms accepted",
+    "malformed and control-like forms rejected",
+    "typed round-trip stability"
+  ],
+  "thresholds": [
+    "all focused tests pass",
+    "zero task or authority effects",
+    "no implicit preference"
+  ],
+  "uncertainty_method": "separate deterministic parser results from advisory semantic review",
+  "failure_taxonomy": [
+    "grammar ambiguity",
+    "silent field acceptance",
+    "control-plane leakage",
+    "implicit preference",
+    "stop-hook coupling"
+  ],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision"
+}

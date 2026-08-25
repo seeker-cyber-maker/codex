@@ -1,0 +1,56 @@
+{
+  "schema": "dream-house/term-notation-validation/1",
+  "validated_at": "2026-08-25T20:32:05Z",
+  "status": "PASS_STANDALONE_SOURCE_SLICE",
+  "checks": [
+    {
+      "check": "focused parser suite",
+      "result": "PASS",
+      "evidence": "15 unittest cases passed"
+    },
+    {
+      "check": "Python lint",
+      "result": "PASS",
+      "evidence": "ruff check house/term_notation"
+    },
+    {
+      "check": "repository formatter",
+      "result": "PASS",
+      "evidence": "just fmt completed without introducing Rust changes"
+    },
+    {
+      "check": "dictionary and parser constants",
+      "result": "PASS",
+      "evidence": "dictionary identity, limits, and preference values match parser constants"
+    },
+    {
+      "check": "fail-closed syntax",
+      "result": "PASS",
+      "evidence": "unknown, duplicate, unordered, missing, ambiguous, oversize, and control-like inputs reject"
+    },
+    {
+      "check": "data-only boundary",
+      "result": "PASS",
+      "evidence": "AST test admits only pure standard-library imports and forbids dynamic execution calls"
+    },
+    {
+      "check": "Chat/Work operation reconciliation",
+      "result": "PASS_WITH_LIMITATION",
+      "evidence": "one call completed; semantic advice locally reviewed; preference recorded not_stated"
+    },
+    {
+      "check": "Stop-hook compatibility",
+      "result": "PASS_NO_DIRECT_DEPENDENCY",
+      "evidence": "TERM parser has no hook imports or lifecycle dependency; shared runtime unchanged"
+    },
+    {
+      "check": "unrelated dirty-work preservation",
+      "result": "PASS",
+      "evidence": "house/README.md and LOCAL_ZOOKEEPER_CHAT_WORK_WRANGLER_SPEC.md remain outside the staged scope"
+    }
+  ],
+  "implementation_ceiling": "STANDALONE_PARSE_AND_NORMALIZE_ONLY",
+  "prompt_integration": "NOT_ATTEMPTED",
+  "task_or_authority_effects": "NONE",
+  "runtime_dispatch": "NOT_ATTEMPTED"
+}

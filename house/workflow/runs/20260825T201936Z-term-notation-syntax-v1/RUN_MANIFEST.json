@@ -1,0 +1,31 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260825T201936Z-term-notation-syntax-v1",
+  "starting_head": "181ad609d4bfec6eaafba00d145c27aebf297d5f",
+  "profile": "bounded",
+  "case_type": "semantic_implementation",
+  "authority": "USER_AUTHORIZED_SYNTAX_DICTIONARY_BUILD_AND_CHAT_WORK_ADVISORY",
+  "write_scope": [
+    "house/term_notation",
+    "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1",
+    "house/communications_rfc/PACKET_MANIFEST.json"
+  ],
+  "forbidden": [
+    "prompt integration",
+    "task or ticket mutation",
+    "relay dispatch",
+    "authority or admission effects",
+    "Codex hook source modification",
+    "credential discovery",
+    "secret access",
+    "reviewer preference inference"
+  ],
+  "budgets": {
+    "chat_work_advisory_calls": 1,
+    "implementation_remediations": 2,
+    "stop_hook_source_patches": 0,
+    "external_write_operations": 0
+  },
+  "status": "CLOSED_DURABLE",
+  "next_gate": "separately_authorized_offline_compatibility_experiment"
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "project-operation/1",
+  "operation_id": "term-notation-chat-work-advisory-v1",
+  "record_revision": 2,
+  "record_sha256": "37b91812e3fbc6e03668d9044f40636ffabc7eaac895aaef2ba934c5e85bda61",
+  "run_id": "20260825T201936Z-term-notation-syntax-v1",
+  "state": "RECONCILED",
+  "intent": "one bounded advisory review of TERM notation syntax v1",
+  "target_identity": "application.chat_work via supervised Pi chair",
+  "input_hashes": {
+    "CHAT_WORK_CAPSULE.md": "da8800c624b9ae5bd0589588edf0eacc0a95c8f5558acdb182e9d50dca0908c5"
+  },
+  "authority_scope": {
+    "read": [
+      "frozen capsule only"
+    ],
+    "write": [],
+    "network": [
+      "loopback provider bridge to application.chat_work"
+    ],
+    "external_effect_class": "ADVISORY_REVIEW_REQUEST"
+  },
+  "owner": "dream-house-coordinator",
+  "lease": {
+    "holder": null,
+    "expires_at": null,
+    "epoch": 0,
+    "fencing_token": null
+  },
+  "idempotency": {
+    "key": "term-notation-chat-work-advisory-v1",
+    "binding_sha256": "9a12d5c12a9566cac14002dbb1b521b6051091bfd238124af1443f5de8f20f8d"
+  },
+  "start_state": {
+    "provider_capability": "callable_direct",
+    "provider_authority": "supervised_proposals_and_host_mediated_allowlisted_tools_only"
+  },
+  "checkpoint_policy": {
+    "single_attempt": true,
+    "preserve_raw_response": true
+  },
+  "resume_pointer": null,
+  "deadline": null,
+  "retry_budget": 0,
+  "resource_budget": [
+    {
+      "resource": "provider_calls",
+      "unit": "calls",
+      "hard_cap": 1
+    }
+  ],
+  "cancellation": {
+    "supported": false,
+    "method": "single bounded print request"
+  },
+  "expected_artifacts": [
+    "CHAT_WORK_RESPONSE_TRANSCRIPT.md",
+    "CHAT_WORK_LOCAL_DISPOSITION.md"
+  ],
+  "acceptance_verifier": "local deterministic contract checks plus coordinator source review",
+  "reconciliation": {
+    "required": true,
+    "method": "record exit status, response hash, transport limitations, and local disposition",
+    "result": {
+      "provider_calls": 1,
+      "exit_code": 0,
+      "response_transcript_sha256": "26fc87e3f96616da590d92f730befc5b5bff38c508454a193607d8af1e924b94",
+      "local_disposition_sha256": "ec146633c119455c6195784027877f7fdbab57be98d64f2c343eb569233e188b",
+      "preference": "not_stated",
+      "authority": "ADVISORY_ONLY"
+    }
+  }
+}

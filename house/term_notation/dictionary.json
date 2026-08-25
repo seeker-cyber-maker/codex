@@ -1,0 +1,112 @@
+{
+  "schema": "dream-house/term-notation-dictionary/1",
+  "notation_id": "TERM_NOTATION/1",
+  "canonical_name": "Scoped Terminology Repair notation",
+  "ordinary_name": "TERM notation",
+  "status": "STANDALONE_SYNTAX_SLICE_NOT_PROMPT_INTEGRATED",
+  "authority_ceiling": "PARSE_AND_NORMALIZE_ONE_RECORD_ONLY",
+  "limits": {
+    "max_record_bytes": 4096,
+    "max_value_characters": 1024,
+    "max_context_identifier_characters": 128,
+    "max_block_lines": 4
+  },
+  "operators": {
+    "TERM?": {
+      "record_kind": "repair_query",
+      "layout": "block",
+      "candidate": "required",
+      "allowed_fields": [
+        "MEAN",
+        "NOT",
+        "SCOPE"
+      ],
+      "field_order": [
+        "MEAN",
+        "NOT",
+        "SCOPE"
+      ],
+      "required_fields": [],
+      "meaning": "Ask participants to repair a possibly ambiguous term in one declared scope."
+    },
+    "TERM=": {
+      "record_kind": "working_definition",
+      "layout": "inline",
+      "candidate": "required",
+      "allowed_fields": [
+        "MEAN",
+        "SCOPE",
+        "CTX"
+      ],
+      "required_fields": [
+        "MEAN",
+        "SCOPE",
+        "CTX"
+      ],
+      "field_order": [
+        "MEAN",
+        "SCOPE",
+        "CTX"
+      ],
+      "meaning": "Record a scoped working meaning for one context generation without making it global."
+    },
+    "TERM~": {
+      "record_kind": "unresolved",
+      "layout": "inline",
+      "candidate": "required",
+      "allowed_fields": [
+        "SCOPE",
+        "WHY"
+      ],
+      "required_fields": [
+        "SCOPE",
+        "WHY"
+      ],
+      "field_order": [
+        "SCOPE",
+        "WHY"
+      ],
+      "meaning": "Mark a term unresolved so repetition cannot be treated as agreement."
+    },
+    "PREF?": {
+      "record_kind": "preference_query",
+      "layout": "exact",
+      "candidate": "forbidden",
+      "required_target": "TERM_NOTATION/1",
+      "meaning": "Require an attributed notation-preference response during formal review."
+    },
+    "PREF=": {
+      "record_kind": "preference_response",
+      "layout": "inline",
+      "candidate": "forbidden",
+      "required_target": "TERM_NOTATION/1",
+      "reviewer_values": [
+        "preferred",
+        "not_preferred",
+        "no_preference",
+        "undetermined"
+      ],
+      "wrapper_only_value": "not_stated",
+      "optional_field": "ALT",
+      "optional_field_condition": "preference == not_preferred",
+      "meaning": "Record preference separately from correctness, admission, and authority."
+    }
+  },
+  "normalized_fields": {
+    "MEAN": "meaning",
+    "NOT": "excluded_meaning",
+    "SCOPE": "scope",
+    "CTX": "context_generation",
+    "WHY": "reason",
+    "ALT": "alternative"
+  },
+  "invariants": [
+    "one input contains exactly one record",
+    "fields are closed, unique, and canonically ordered",
+    "values cannot contain the inline delimiter",
+    "unknown operators or fields fail closed",
+    "not_stated is produced only by a supervising wrapper",
+    "records have no task, prompt, relay, execution, admission, or authority effect",
+    "parser correctness never depends on lifecycle or stop-hook delivery"
+  ]
+}

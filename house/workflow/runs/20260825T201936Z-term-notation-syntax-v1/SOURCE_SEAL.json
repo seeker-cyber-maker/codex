@@ -1,0 +1,79 @@
+{
+  "schema": "dream-house/source-seal/1",
+  "sealed_at": "2026-08-25T20:32:05Z",
+  "status": "PASS",
+  "starting_head": "181ad609d4bfec6eaafba00d145c27aebf297d5f",
+  "artifacts": [
+    {
+      "path": "house/term_notation/README.md",
+      "sha256": "a4be315c27342f15ef2497e2c325ad611100107e1f92aafec285c10b15591197"
+    },
+    {
+      "path": "house/term_notation/__init__.py",
+      "sha256": "a9649616cb9e3e2ac2c15f9279e3fc64eba7c90c19d0ab98a5342b64a7fac6cf"
+    },
+    {
+      "path": "house/term_notation/dictionary.json",
+      "sha256": "9a63f9f2aae0b7e93f0424485793f02a4a7160a1515f13f7da81933f379204c7"
+    },
+    {
+      "path": "house/term_notation/parser.py",
+      "sha256": "298a6a2b850b2a9116d740ba928ecf337b42b3882f776fa051419a0f1dbde0dc"
+    },
+    {
+      "path": "house/term_notation/tests/test_parser.py",
+      "sha256": "820a938c8c462ec6b97fb09d0f5f9d41ddee757144dd34399ab7209de8e108e7"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/AACR.md",
+      "sha256": "aa25db3c185ebbf437697b481fa49e6ad1bde6eb5e03589e7f0eb382751f9c41"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/CHAT_WORK_CAPSULE.md",
+      "sha256": "52c1e1436b71f9940d84500758728934d886e2677400e1fc317cfa1b259e9e13"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/CHAT_WORK_LOCAL_DISPOSITION.md",
+      "sha256": "7ecf5f877a95a52913ba395fb73a8e3349bb55d0e71473aa108955a7d5e2a6ba"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/CHAT_WORK_RESPONSE_TRANSCRIPT.md",
+      "sha256": "26fc87e3f96616da590d92f730befc5b5bff38c508454a193607d8af1e924b94"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/EVALUATION_CARD.json",
+      "sha256": "ad2e54978472eeda3607ffe91e9382b2c7197292098882297f505b6caf830ff7"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/HANDOFF.md",
+      "sha256": "c25e1f3c7d61ff5165136efac614c893daf7d86106d5f2c0b0815232893ce48f"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/INTAKE.md",
+      "sha256": "3ec2c01b8e9e4e71789e2dd135f1520a0f7a69cb16541d9f68aa4778395f085c"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/OPERATION_CHAT_WORK.json",
+      "sha256": "11e97565b5e58693ea2ef74f96b4cf331db39a857e00eecad4e636a807a87441"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/PLAN.md",
+      "sha256": "a5106d3239a7d76ac3b941a906e8e47940c01dd3e18685c252b8b55616347621"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/RUN_MANIFEST.json",
+      "sha256": "5788a1d431313ef8f34e5913e89e13ed81572e4c404930cce8e7ec94ceaef888"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/STOP_HOOK_COMPATIBILITY.md",
+      "sha256": "4a55c0079ed3035be2ec37da5f768d82e2b5bb1b7a8f77236c10990fb36359a6"
+    },
+    {
+      "path": "house/workflow/runs/20260825T201936Z-term-notation-syntax-v1/VALIDATION.json",
+      "sha256": "f1425364047616a9f6e54738485fafb74e1749605c6ad9b4986fc8715ef8d1a0"
+    }
+  ],
+  "claim_ceiling": "STANDALONE_TERM_NOTATION_SOURCE_AND_TESTS_ONLY",
+  "prompt_integration": "NOT_ATTEMPTED",
+  "task_or_authority_effects": "NONE"
+}
