@@ -1,0 +1,1320 @@
+{
+  "authority": {
+    "classifier_may": [
+      "suggest_asset_role",
+      "suggest_review_priority"
+    ],
+    "classifier_may_not": [
+      "establish_identity",
+      "establish_lineage",
+      "approve_promotion",
+      "mutate_files"
+    ]
+  },
+  "bundle": {
+    "file_count": 13,
+    "file_names": [
+      ".gitattributes",
+      "README.md",
+      "chat_template.jinja",
+      "config.json",
+      "model-00001-of-00002.safetensors",
+      "model-00002-of-00002.safetensors",
+      "model.safetensors.index.json",
+      "preprocessor_config.json",
+      "processor_config.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "video_preprocessor_config.json",
+      "vocab.json"
+    ],
+    "total_bytes": 5977074591,
+    "truncated": false
+  },
+  "classification": {
+    "status": "not_run"
+  },
+  "classifier_input": "artifact qwen3.5-9b-mlx-4bit format safetensors complete bundle files .gitattributes readme.md chat_template.jinja config.json model-00001-of-00002.safetensors model-00002-of-00002.safetensors model.safetensors.index.json preprocessor_config.json processor_config.json tokenizer.json tokenizer_config.json video_preprocessor_config.json vocab.json role hints deployment quantized configuration architectures ['qwen3_5forconditionalgeneration'] model_type qwen3_5 quantization {'group_size': 64, 'bits': 4, 'mode': 'affine'} quantization_config {'group_size': 64, 'bits': 4, 'mode': 'affine'} transformers_version 4.57.0.dev0 model-native facts architectures qwen3_5forconditionalgeneration declared transformer blocks none inferred transformer blocks 32 parameters from tensor shapes 1855937776 quantization {'group_size': 64, 'bits': 4, 'mode': 'affine'} completeness complete_as_observed problems lineage generation none lineage parent none",
+  "deterministic_evidence": {
+    "configs": {
+      "config.json": {
+        "architectures": [
+          "Qwen3_5ForConditionalGeneration"
+        ],
+        "model_type": "qwen3_5",
+        "quantization": {
+          "bits": 4,
+          "group_size": 64,
+          "mode": "affine"
+        },
+        "quantization_config": {
+          "bits": 4,
+          "group_size": 64,
+          "mode": "affine"
+        },
+        "transformers_version": "4.57.0.dev0"
+      },
+      "model.safetensors.index.json": {},
+      "preprocessor_config.json": {},
+      "processor_config.json": {},
+      "tokenizer_config.json": {}
+    },
+    "format_kind": "safetensors",
+    "inspected_files": [
+      {
+        "config": {
+          "architectures": [
+            "Qwen3_5ForConditionalGeneration"
+          ],
+          "model_type": "qwen3_5",
+          "quantization": {
+            "bits": 4,
+            "group_size": 64,
+            "mode": "affine"
+          },
+          "quantization_config": {
+            "bits": 4,
+            "group_size": 64,
+            "mode": "affine"
+          },
+          "transformers_version": "4.57.0.dev0"
+        },
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 3331,
+          "scope": "complete",
+          "value": "a96942cb6a8a1d3f1d17514d81a1925d04362a6a3233b389d13012211baaa9f8"
+        },
+        "modified_ns": 1783186083375167027,
+        "name": "config.json",
+        "size_bytes": 3331,
+        "suffix": ".json"
+      },
+      {
+        "fingerprint": {
+          "algorithm": "sha256-first-last-size-v1",
+          "byte_count": 2097152,
+          "scope": "candidate-only",
+          "value": "d7ec82ce3def99ca60073fda5c4a826ed2efe8f1fafa30e58c0a57c2b1fe04d4"
+        },
+        "format_header": {
+          "content_layout": {
+            "offsets_within_file": true,
+            "overlapping_ranges": [],
+            "shape_dtype_byte_mismatches": [],
+            "unchecked_dtype_count": 0
+          },
+          "data_bytes_by_dtype": {
+            "BF16": 1406964704,
+            "F32": 3072,
+            "U32": 3942645760
+          },
+          "data_section_bytes": 5349613536,
+          "declared_data_end": 5349613536,
+          "dtypes": {
+            "BF16": 981,
+            "F32": 24,
+            "U32": 248
+          },
+          "errors": [],
+          "file_bytes": 5349771222,
+          "header_bytes": 157678,
+          "metadata": {
+            "format": "mlx"
+          },
+          "metadata_keys": [
+            "format"
+          ],
+          "parameter_count": 1689144560,
+          "parameter_count_by_dtype": {
+            "BF16": 703482352,
+            "F32": 768,
+            "U32": 985661440
+          },
+          "tensor_count": 1253,
+          "tensor_count_by_dtype": {
+            "BF16": 981,
+            "F32": 24,
+            "U32": 248
+          },
+          "transformer_blocks": {
+            "dominant_naming_family": "layers",
+            "families": {
+              "blocks": {
+                "distinct_count": 27,
+                "distinct_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26
+                ],
+                "max_index": 26,
+                "missing_indices": []
+              },
+              "layers": {
+                "distinct_count": 32,
+                "distinct_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31
+                ],
+                "max_index": 31,
+                "missing_indices": []
+              }
+            },
+            "inferred_block_count": 32,
+            "method": "distinct numeric indices in common transformer tensor-name families"
+          },
+          "valid": true
+        },
+        "modified_ns": 1783186135644122500,
+        "name": "model-00001-of-00002.safetensors",
+        "size_bytes": 5349771222,
+        "suffix": ".safetensors"
+      },
+      {
+        "fingerprint": {
+          "algorithm": "sha256-first-last-size-v1",
+          "byte_count": 2097152,
+          "scope": "candidate-only",
+          "value": "312807d53b918955cd81a5c8432228ae895240d3d9e24f6e81516c349e0915b0"
+        },
+        "format_header": {
+          "content_layout": {
+            "offsets_within_file": true,
+            "overlapping_ranges": [],
+            "shape_dtype_byte_mismatches": [],
+            "unchecked_dtype_count": 0
+          },
+          "data_bytes_by_dtype": {
+            "BF16": 66723840,
+            "U32": 533725184
+          },
+          "data_section_bytes": 600449024,
+          "declared_data_end": 600449024,
+          "dtypes": {
+            "BF16": 5,
+            "U32": 2
+          },
+          "errors": [],
+          "file_bytes": 600449850,
+          "header_bytes": 818,
+          "metadata": {
+            "format": "mlx"
+          },
+          "metadata_keys": [
+            "format"
+          ],
+          "parameter_count": 166793216,
+          "parameter_count_by_dtype": {
+            "BF16": 33361920,
+            "U32": 133431296
+          },
+          "tensor_count": 7,
+          "tensor_count_by_dtype": {
+            "BF16": 5,
+            "U32": 2
+          },
+          "transformer_blocks": {
+            "dominant_naming_family": "layers",
+            "families": {
+              "layers": {
+                "distinct_count": 1,
+                "distinct_indices": [
+                  31
+                ],
+                "max_index": 31,
+                "missing_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30
+                ]
+              }
+            },
+            "inferred_block_count": 1,
+            "method": "distinct numeric indices in common transformer tensor-name families"
+          },
+          "valid": true
+        },
+        "modified_ns": 1783186093671900677,
+        "name": "model-00002-of-00002.safetensors",
+        "size_bytes": 600449850,
+        "suffix": ".safetensors"
+      },
+      {
+        "config": {},
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 123592,
+          "scope": "complete",
+          "value": "dd023913fb87cfdae27fb11dcf695117c925833796ccac3c64117d6652d8ff1e"
+        },
+        "modified_ns": 1783186083384236130,
+        "name": "model.safetensors.index.json",
+        "size_bytes": 123592,
+        "suffix": ".json"
+      },
+      {
+        "config": {},
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 390,
+          "scope": "complete",
+          "value": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+        },
+        "modified_ns": 1783186083383210540,
+        "name": "preprocessor_config.json",
+        "size_bytes": 390,
+        "suffix": ".json"
+      },
+      {
+        "config": {},
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 1300,
+          "scope": "complete",
+          "value": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b"
+        },
+        "modified_ns": 1783186083513139418,
+        "name": "processor_config.json",
+        "size_bytes": 1300,
+        "suffix": ".json"
+      },
+      {
+        "config": {},
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 1139,
+          "scope": "complete",
+          "value": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"
+        },
+        "modified_ns": 1783186083520875262,
+        "name": "tokenizer_config.json",
+        "size_bytes": 1139,
+        "suffix": ".json"
+      }
+    ],
+    "model_file_probe": {
+      "architecture": {
+        "architectures": [
+          "Qwen3_5ForConditionalGeneration"
+        ],
+        "declared_transformer_block_count": null,
+        "declared_transformer_block_key": null,
+        "inferred_transformer_blocks": {
+          "dominant_naming_family": "layers",
+          "families": {
+            "blocks": {
+              "distinct_count": 27,
+              "distinct_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ],
+              "max_index": 26,
+              "missing_indices": []
+            },
+            "layers": {
+              "distinct_count": 32,
+              "distinct_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "max_index": 31,
+              "missing_indices": []
+            }
+          },
+          "inferred_block_count": 32,
+          "method": "distinct numeric indices in common transformer tensor-name families"
+        },
+        "quantization": {
+          "bits": 4,
+          "group_size": 64,
+          "mode": "affine"
+        },
+        "total_parameter_count_from_shapes": 1855937776
+      },
+      "bundle": {
+        "config_file_count": 6,
+        "file_count": 13,
+        "truncated": false,
+        "weight_container_count": 1
+      },
+      "completeness": {
+        "adapter_config_present": false,
+        "adapter_weights_present": false,
+        "problems": [],
+        "status": "complete_as_observed"
+      },
+      "configs": [
+        {
+          "keys": [
+            "architectures",
+            "image_token_id",
+            "model_type",
+            "quantization",
+            "quantization_config",
+            "text_config",
+            "tie_word_embeddings",
+            "transformers_version",
+            "video_token_id",
+            "vision_config",
+            "vision_end_token_id",
+            "vision_start_token_id"
+          ],
+          "name": "config.json",
+          "relative_path": "config.json",
+          "selected": {
+            "architectures": [
+              "Qwen3_5ForConditionalGeneration"
+            ],
+            "model_type": "qwen3_5",
+            "quantization": {
+              "bits": 4,
+              "group_size": 64,
+              "mode": "affine"
+            },
+            "quantization_config": {
+              "bits": 4,
+              "group_size": 64,
+              "mode": "affine"
+            },
+            "transformers_version": "4.57.0.dev0"
+          },
+          "sha256": "a96942cb6a8a1d3f1d17514d81a1925d04362a6a3233b389d13012211baaa9f8",
+          "size_bytes": 3331,
+          "valid": true
+        },
+        {
+          "keys": [
+            "metadata",
+            "weight_map"
+          ],
+          "name": "model.safetensors.index.json",
+          "relative_path": "model.safetensors.index.json",
+          "selected": {},
+          "sha256": "dd023913fb87cfdae27fb11dcf695117c925833796ccac3c64117d6652d8ff1e",
+          "size_bytes": 123592,
+          "valid": true
+        },
+        {
+          "keys": [
+            "image_mean",
+            "image_processor_type",
+            "image_std",
+            "merge_size",
+            "patch_size",
+            "processor_class",
+            "size",
+            "temporal_patch_size"
+          ],
+          "name": "preprocessor_config.json",
+          "relative_path": "preprocessor_config.json",
+          "selected": {},
+          "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+          "size_bytes": 390,
+          "valid": true
+        },
+        {
+          "keys": [
+            "image_processor",
+            "processor_class",
+            "video_processor"
+          ],
+          "name": "processor_config.json",
+          "relative_path": "processor_config.json",
+          "selected": {},
+          "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b",
+          "size_bytes": 1300,
+          "valid": true
+        },
+        {
+          "keys": [
+            "add_prefix_space",
+            "audio_bos_token",
+            "audio_eos_token",
+            "audio_token",
+            "backend",
+            "bos_token",
+            "clean_up_tokenization_spaces",
+            "eos_token",
+            "errors",
+            "image_token",
+            "is_local",
+            "model_max_length",
+            "model_specific_special_tokens",
+            "pad_token",
+            "pretokenize_regex",
+            "processor_class",
+            "split_special_tokens",
+            "tokenizer_class",
+            "unk_token",
+            "video_token",
+            "vision_bos_token",
+            "vision_eos_token"
+          ],
+          "name": "tokenizer_config.json",
+          "relative_path": "tokenizer_config.json",
+          "selected": {},
+          "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182",
+          "size_bytes": 1139,
+          "valid": true
+        },
+        {
+          "keys": [
+            "image_mean",
+            "image_std",
+            "merge_size",
+            "patch_size",
+            "processor_class",
+            "size",
+            "temporal_patch_size",
+            "video_processor_type"
+          ],
+          "name": "video_preprocessor_config.json",
+          "relative_path": "video_preprocessor_config.json",
+          "selected": {},
+          "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+          "size_bytes": 385,
+          "valid": true
+        }
+      ],
+      "consistency": [
+        {
+          "check": "safetensors_shard_index",
+          "declared_shards": [
+            "model-00001-of-00002.safetensors",
+            "model-00002-of-00002.safetensors"
+          ],
+          "declared_tensor_count": 1260,
+          "missing_shards": [],
+          "missing_tensors": [],
+          "path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit/model.safetensors.index.json",
+          "status": "match",
+          "unindexed_tensors": [],
+          "valid": true
+        }
+      ],
+      "lineage_signals": {
+        "generation": null,
+        "parent_identity": null
+      },
+      "read_contract": {
+        "not_read": [
+          "Safetensors tensor data",
+          "GGUF tensor data",
+          "ONNX raw initializer data"
+        ],
+        "read": [
+          "bounded JSON configuration",
+          "Safetensors JSON headers",
+          "GGUF metadata and tensor descriptors",
+          "ONNX protobuf structure"
+        ],
+        "weight_payloads_loaded": false
+      },
+      "repair_assessment": {
+        "adapter_config_present": false,
+        "adapter_weights_present": false,
+        "automatic_repair_authorized": false,
+        "defect_detected": false,
+        "suggestions": []
+      },
+      "schema": "model-file-probe/1.0.0",
+      "source_layout": {
+        "kind": "mlx_safetensors",
+        "symlink_count": 0,
+        "symlinks": []
+      },
+      "target": {
+        "kind": "directory",
+        "path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit"
+      },
+      "weights": [
+        {
+          "container": "safetensors",
+          "data_bytes_by_dtype": {
+            "BF16": 1473688544,
+            "F32": 3072,
+            "U32": 4476370944
+          },
+          "duplicate_tensor_names": [],
+          "errors": [],
+          "parameter_count": 1855937776,
+          "parameter_count_by_dtype": {
+            "BF16": 736844272,
+            "F32": 768,
+            "U32": 1119092736
+          },
+          "shard_count": 2,
+          "shards": [
+            {
+              "error": null,
+              "header_bytes": 157678,
+              "name": "model-00001-of-00002.safetensors",
+              "parameter_count": 1689144560,
+              "path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit/model-00001-of-00002.safetensors",
+              "tensor_count": 1253,
+              "valid": true
+            },
+            {
+              "error": null,
+              "header_bytes": 818,
+              "name": "model-00002-of-00002.safetensors",
+              "parameter_count": 166793216,
+              "path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit/model-00002-of-00002.safetensors",
+              "tensor_count": 7,
+              "valid": true
+            }
+          ],
+          "tensor_count": 1260,
+          "tensor_count_by_dtype": {
+            "BF16": 986,
+            "F32": 24,
+            "U32": 250
+          },
+          "tensor_samples": [
+            {
+              "data_bytes": 31784960,
+              "data_offsets": [
+                5016729984,
+                5048514944
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 31784960,
+              "name": "language_model.model.embed_tokens.biases",
+              "parameter_count": 15892480,
+              "shape": [
+                248320,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 31784960,
+              "data_offsets": [
+                3997943744,
+                4029728704
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 31784960,
+              "name": "language_model.model.embed_tokens.scales",
+              "parameter_count": 15892480,
+              "shape": [
+                248320,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 508559360,
+              "data_offsets": [
+                2931578720,
+                3440138080
+              ],
+              "dtype": "U32",
+              "expected_bytes": 508559360,
+              "name": "language_model.model.embed_tokens.weight",
+              "parameter_count": 127139840,
+              "shape": [
+                248320,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 8192,
+              "data_offsets": [
+                2863246112,
+                2863254304
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8192,
+              "name": "language_model.model.layers.0.input_layernorm.weight",
+              "parameter_count": 4096,
+              "shape": [
+                4096
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 128,
+              "data_offsets": [
+                1709817280,
+                1709817408
+              ],
+              "dtype": "F32",
+              "expected_bytes": 128,
+              "name": "language_model.model.layers.0.linear_attn.A_log",
+              "parameter_count": 32,
+              "shape": [
+                32
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 65536,
+              "data_offsets": [
+                2931504992,
+                2931570528
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 65536,
+              "name": "language_model.model.layers.0.linear_attn.conv1d.weight",
+              "parameter_count": 32768,
+              "shape": [
+                8192,
+                4,
+                1
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 64,
+              "data_offsets": [
+                2890052896,
+                2890052960
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 64,
+              "name": "language_model.model.layers.0.linear_attn.dt_bias",
+              "parameter_count": 32,
+              "shape": [
+                32
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 4096,
+              "data_offsets": [
+                3675299680,
+                3675303776
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 4096,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_a.biases",
+              "parameter_count": 2048,
+              "shape": [
+                32,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 4096,
+              "data_offsets": [
+                4055421184,
+                4055425280
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 4096,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_a.scales",
+              "parameter_count": 2048,
+              "shape": [
+                32,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 65536,
+              "data_offsets": [
+                2901542240,
+                2901607776
+              ],
+              "dtype": "U32",
+              "expected_bytes": 65536,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_a.weight",
+              "parameter_count": 16384,
+              "shape": [
+                32,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 4096,
+              "data_offsets": [
+                1712441152,
+                1712445248
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 4096,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_b.biases",
+              "parameter_count": 2048,
+              "shape": [
+                32,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 4096,
+              "data_offsets": [
+                2032924352,
+                2032928448
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 4096,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_b.scales",
+              "parameter_count": 2048,
+              "shape": [
+                32,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 65536,
+              "data_offsets": [
+                5331648736,
+                5331714272
+              ],
+              "dtype": "U32",
+              "expected_bytes": 65536,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_b.weight",
+              "parameter_count": 16384,
+              "shape": [
+                32,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1048576,
+              "data_offsets": [
+                4126195200,
+                4127243776
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1048576,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_qkv.biases",
+              "parameter_count": 524288,
+              "shape": [
+                8192,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1048576,
+              "data_offsets": [
+                5315850720,
+                5316899296
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1048576,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_qkv.scales",
+              "parameter_count": 524288,
+              "shape": [
+                8192,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 16777216,
+              "data_offsets": [
+                2914727776,
+                2931504992
+              ],
+              "dtype": "U32",
+              "expected_bytes": 16777216,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_qkv.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                8192,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 524288,
+              "data_offsets": [
+                2903187040,
+                2903711328
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 524288,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_z.biases",
+              "parameter_count": 262144,
+              "shape": [
+                4096,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 524288,
+              "data_offsets": [
+                2903713632,
+                2904237920
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 524288,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_z.scales",
+              "parameter_count": 262144,
+              "shape": [
+                4096,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                2904237920,
+                2912626528
+              ],
+              "dtype": "U32",
+              "expected_bytes": 8388608,
+              "name": "language_model.model.layers.0.linear_attn.in_proj_z.weight",
+              "parameter_count": 2097152,
+              "shape": [
+                4096,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 256,
+              "data_offsets": [
+                2890050336,
+                2890050592
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 256,
+              "name": "language_model.model.layers.0.linear_attn.norm.weight",
+              "parameter_count": 128,
+              "shape": [
+                128
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 524288,
+              "data_offsets": [
+                4795581728,
+                4796106016
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 524288,
+              "name": "language_model.model.layers.0.linear_attn.out_proj.biases",
+              "parameter_count": 262144,
+              "shape": [
+                4096,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 524288,
+              "data_offsets": [
+                2881137440,
+                2881661728
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 524288,
+              "name": "language_model.model.layers.0.linear_attn.out_proj.scales",
+              "parameter_count": 262144,
+              "shape": [
+                4096,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                2881661728,
+                2890050336
+              ],
+              "dtype": "U32",
+              "expected_bytes": 8388608,
+              "name": "language_model.model.layers.0.linear_attn.out_proj.weight",
+              "parameter_count": 2097152,
+              "shape": [
+                4096,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1572864,
+              "data_offsets": [
+                3722877056,
+                3724449920
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1572864,
+              "name": "language_model.model.layers.0.mlp.down_proj.biases",
+              "parameter_count": 786432,
+              "shape": [
+                4096,
+                192
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1572864,
+              "data_offsets": [
+                3440138080,
+                3441710944
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1572864,
+              "name": "language_model.model.layers.0.mlp.down_proj.scales",
+              "parameter_count": 786432,
+              "shape": [
+                4096,
+                192
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 25165824,
+              "data_offsets": [
+                2838080288,
+                2863246112
+              ],
+              "dtype": "U32",
+              "expected_bytes": 25165824,
+              "name": "language_model.model.layers.0.mlp.down_proj.weight",
+              "parameter_count": 6291456,
+              "shape": [
+                4096,
+                1536
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1572864,
+              "data_offsets": [
+                5304611296,
+                5306184160
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1572864,
+              "name": "language_model.model.layers.0.mlp.gate_proj.biases",
+              "parameter_count": 786432,
+              "shape": [
+                12288,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1572864,
+              "data_offsets": [
+                4994065408,
+                4995638272
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1572864,
+              "name": "language_model.model.layers.0.mlp.gate_proj.scales",
+              "parameter_count": 786432,
+              "shape": [
+                12288,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 25165824,
+              "data_offsets": [
+                4510195936,
+                4535361760
+              ],
+              "dtype": "U32",
+              "expected_bytes": 25165824,
+              "name": "language_model.model.layers.0.mlp.gate_proj.weight",
+              "parameter_count": 6291456,
+              "shape": [
+                12288,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1572864,
+              "data_offsets": [
+                1157157504,
+                1158730368
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1572864,
+              "name": "language_model.model.layers.0.mlp.up_proj.biases",
+              "parameter_count": 786432,
+              "shape": [
+                12288,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 1572864,
+              "data_offsets": [
+                2748614752,
+                2750187616
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 1572864,
+              "name": "language_model.model.layers.0.mlp.up_proj.scales",
+              "parameter_count": 786432,
+              "shape": [
+                12288,
+                64
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            },
+            {
+              "data_bytes": 25165824,
+              "data_offsets": [
+                2812371488,
+                2837537312
+              ],
+              "dtype": "U32",
+              "expected_bytes": 25165824,
+              "name": "language_model.model.layers.0.mlp.up_proj.weight",
+              "parameter_count": 6291456,
+              "shape": [
+                12288,
+                512
+              ],
+              "shard": "model-00001-of-00002.safetensors"
+            }
+          ],
+          "transformer_blocks": {
+            "dominant_naming_family": "layers",
+            "families": {
+              "blocks": {
+                "distinct_count": 27,
+                "distinct_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26
+                ],
+                "max_index": 26,
+                "missing_indices": []
+              },
+              "layers": {
+                "distinct_count": 32,
+                "distinct_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31
+                ],
+                "max_index": 31,
+                "missing_indices": []
+              }
+            },
+            "inferred_block_count": 32,
+            "method": "distinct numeric indices in common transformer tensor-name families"
+          },
+          "unique_tensor_count": 1260,
+          "valid": true,
+          "weight_set": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit/model.safetensors.index.json"
+        }
+      ]
+    },
+    "role_hints": [
+      "deployment",
+      "quantized"
+    ],
+    "weights_deserialized": false
+  },
+  "observed_at": "2026-08-25T23:20:23.838350+00:00",
+  "schema": "model-asset-grinder-receipt/1.1.0",
+  "target": {
+    "kind": "directory",
+    "name": "Qwen3.5-9B-MLX-4bit",
+    "path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit"
+  }
+}

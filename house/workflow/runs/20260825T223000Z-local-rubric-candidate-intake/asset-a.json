@@ -1,0 +1,1192 @@
+{
+  "authority": {
+    "classifier_may": [
+      "suggest_asset_role",
+      "suggest_review_priority"
+    ],
+    "classifier_may_not": [
+      "establish_identity",
+      "establish_lineage",
+      "approve_promotion",
+      "mutate_files"
+    ]
+  },
+  "bundle": {
+    "file_count": 10,
+    "file_names": [
+      "README.md",
+      "chat_template.jinja",
+      "config.json",
+      "lineage.json",
+      "model-00001-of-00003.safetensors",
+      "model-00002-of-00003.safetensors",
+      "model-00003-of-00003.safetensors",
+      "model.safetensors.index.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "total_bytes": 14487033249,
+    "truncated": false
+  },
+  "classification": {
+    "status": "not_run"
+  },
+  "classifier_input": "artifact prometheus-7b-v2.0-mlx-bf16 format safetensors complete bundle files readme.md chat_template.jinja config.json lineage.json model-00001-of-00003.safetensors model-00002-of-00003.safetensors model-00003-of-00003.safetensors model.safetensors.index.json tokenizer.json tokenizer_config.json role hints configuration architectures ['mistralforcausallm'] hidden_size 4096 intermediate_size 14336 max_position_embeddings 32768 model_type mistral num_attention_heads 32 num_hidden_layers 32 num_key_value_heads 8 torch_dtype bfloat16 transformers_version 4.35.2 vocab_size 32000 model-native facts architectures mistralforcausallm declared transformer blocks 32 inferred transformer blocks 32 parameters from tensor shapes 7241732096 quantization none completeness complete_as_observed problems lineage generation none lineage parent none",
+  "deterministic_evidence": {
+    "configs": {
+      "config.json": {
+        "architectures": [
+          "MistralForCausalLM"
+        ],
+        "hidden_size": 4096,
+        "intermediate_size": 14336,
+        "max_position_embeddings": 32768,
+        "model_type": "mistral",
+        "num_attention_heads": 32,
+        "num_hidden_layers": 32,
+        "num_key_value_heads": 8,
+        "torch_dtype": "bfloat16",
+        "transformers_version": "4.35.2",
+        "vocab_size": 32000
+      },
+      "model.safetensors.index.json": {},
+      "tokenizer_config.json": {}
+    },
+    "format_kind": "safetensors",
+    "inspected_files": [
+      {
+        "config": {
+          "architectures": [
+            "MistralForCausalLM"
+          ],
+          "hidden_size": 4096,
+          "intermediate_size": 14336,
+          "max_position_embeddings": 32768,
+          "model_type": "mistral",
+          "num_attention_heads": 32,
+          "num_hidden_layers": 32,
+          "num_key_value_heads": 8,
+          "torch_dtype": "bfloat16",
+          "transformers_version": "4.35.2",
+          "vocab_size": 32000
+        },
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 643,
+          "scope": "complete",
+          "value": "3443164e2e67862c353fdd6c54e74ae2c61ed4cfb480325dc69a2d34483cf36b"
+        },
+        "modified_ns": 1787693601683476063,
+        "name": "config.json",
+        "size_bytes": 643,
+        "suffix": ".json"
+      },
+      {
+        "fingerprint": {
+          "algorithm": "sha256-first-last-size-v1",
+          "byte_count": 2097152,
+          "scope": "candidate-only",
+          "value": "7b34a774fdb2c23cf54cb19c333afe2a8ea2920f05cd6a24b66a8577d1376ca7"
+        },
+        "format_header": {
+          "content_layout": {
+            "offsets_within_file": true,
+            "overlapping_ranges": [],
+            "shape_dtype_byte_mismatches": [],
+            "unchecked_dtype_count": 0
+          },
+          "data_bytes_by_dtype": {
+            "BF16": 5261934592
+          },
+          "data_section_bytes": 5261934592,
+          "declared_data_end": 5261934592,
+          "dtypes": {
+            "BF16": 105
+          },
+          "errors": [],
+          "file_bytes": 5261946744,
+          "header_bytes": 12144,
+          "metadata": {
+            "format": "mlx"
+          },
+          "metadata_keys": [
+            "format"
+          ],
+          "parameter_count": 2630967296,
+          "parameter_count_by_dtype": {
+            "BF16": 2630967296
+          },
+          "tensor_count": 105,
+          "tensor_count_by_dtype": {
+            "BF16": 105
+          },
+          "transformer_blocks": {
+            "dominant_naming_family": "layers",
+            "families": {
+              "layers": {
+                "distinct_count": 12,
+                "distinct_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11
+                ],
+                "max_index": 11,
+                "missing_indices": []
+              }
+            },
+            "inferred_block_count": 12,
+            "method": "distinct numeric indices in common transformer tensor-name families"
+          },
+          "valid": true
+        },
+        "modified_ns": 1787693578207814675,
+        "name": "model-00001-of-00003.safetensors",
+        "size_bytes": 5261946744,
+        "suffix": ".safetensors"
+      },
+      {
+        "fingerprint": {
+          "algorithm": "sha256-first-last-size-v1",
+          "byte_count": 2097152,
+          "scope": "candidate-only",
+          "value": "28d333357ee8332b402c92f42c407f0f260bd8c9882f7ac63139ac1a45809f43"
+        },
+        "format_header": {
+          "content_layout": {
+            "offsets_within_file": true,
+            "overlapping_ranges": [],
+            "shape_dtype_byte_mismatches": [],
+            "unchecked_dtype_count": 0
+          },
+          "data_bytes_by_dtype": {
+            "BF16": 5352128512
+          },
+          "data_section_bytes": 5352128512,
+          "declared_data_end": 5352128512,
+          "dtypes": {
+            "BF16": 109
+          },
+          "errors": [],
+          "file_bytes": 5352141224,
+          "header_bytes": 12704,
+          "metadata": {
+            "format": "mlx"
+          },
+          "metadata_keys": [
+            "format"
+          ],
+          "parameter_count": 2676064256,
+          "parameter_count_by_dtype": {
+            "BF16": 2676064256
+          },
+          "tensor_count": 109,
+          "tensor_count_by_dtype": {
+            "BF16": 109
+          },
+          "transformer_blocks": {
+            "dominant_naming_family": "layers",
+            "families": {
+              "layers": {
+                "distinct_count": 13,
+                "distinct_indices": [
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23
+                ],
+                "max_index": 23,
+                "missing_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ]
+              }
+            },
+            "inferred_block_count": 13,
+            "method": "distinct numeric indices in common transformer tensor-name families"
+          },
+          "valid": true
+        },
+        "modified_ns": 1787693591815493111,
+        "name": "model-00002-of-00003.safetensors",
+        "size_bytes": 5352141224,
+        "suffix": ".safetensors"
+      },
+      {
+        "fingerprint": {
+          "algorithm": "sha256-first-last-size-v1",
+          "byte_count": 2097152,
+          "scope": "candidate-only",
+          "value": "ffc2529cdd9d6ad2680ac054e53af4c309cae8af72895f1829cddfdb800196a6"
+        },
+        "format_header": {
+          "content_layout": {
+            "offsets_within_file": true,
+            "overlapping_ranges": [],
+            "shape_dtype_byte_mismatches": [],
+            "unchecked_dtype_count": 0
+          },
+          "data_bytes_by_dtype": {
+            "BF16": 3869401088
+          },
+          "data_section_bytes": 3869401088,
+          "declared_data_end": 3869401088,
+          "dtypes": {
+            "BF16": 77
+          },
+          "errors": [],
+          "file_bytes": 3869410030,
+          "header_bytes": 8934,
+          "metadata": {
+            "format": "mlx"
+          },
+          "metadata_keys": [
+            "format"
+          ],
+          "parameter_count": 1934700544,
+          "parameter_count_by_dtype": {
+            "BF16": 1934700544
+          },
+          "tensor_count": 77,
+          "tensor_count_by_dtype": {
+            "BF16": 77
+          },
+          "transformer_blocks": {
+            "dominant_naming_family": "layers",
+            "families": {
+              "layers": {
+                "distinct_count": 9,
+                "distinct_indices": [
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31
+                ],
+                "max_index": 31,
+                "missing_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22
+                ]
+              }
+            },
+            "inferred_block_count": 9,
+            "method": "distinct numeric indices in common transformer tensor-name families"
+          },
+          "valid": true
+        },
+        "modified_ns": 1787693601672432229,
+        "name": "model-00003-of-00003.safetensors",
+        "size_bytes": 3869410030,
+        "suffix": ".safetensors"
+      },
+      {
+        "config": {},
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 25165,
+          "scope": "complete",
+          "value": "4c2cdd604e020b5e877fc0814463f2e75506f07aece8a9a424de96a057bdcaef"
+        },
+        "modified_ns": 1787693601683082146,
+        "name": "model.safetensors.index.json",
+        "size_bytes": 25165,
+        "suffix": ".json"
+      },
+      {
+        "config": {},
+        "fingerprint": {
+          "algorithm": "sha256",
+          "byte_count": 571,
+          "scope": "complete",
+          "value": "2c2b4495758448428a9f3cc0a47cf04f87ff818c4aa0fa3e69fa7af5d7af4b94"
+        },
+        "modified_ns": 1787693601684928729,
+        "name": "tokenizer_config.json",
+        "size_bytes": 571,
+        "suffix": ".json"
+      }
+    ],
+    "model_file_probe": {
+      "architecture": {
+        "architectures": [
+          "MistralForCausalLM"
+        ],
+        "declared_transformer_block_count": 32,
+        "declared_transformer_block_key": "num_hidden_layers",
+        "inferred_transformer_blocks": {
+          "dominant_naming_family": "layers",
+          "families": {
+            "layers": {
+              "distinct_count": 32,
+              "distinct_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "max_index": 31,
+              "missing_indices": []
+            }
+          },
+          "inferred_block_count": 32,
+          "method": "distinct numeric indices in common transformer tensor-name families"
+        },
+        "quantization": null,
+        "total_parameter_count_from_shapes": 7241732096
+      },
+      "bundle": {
+        "config_file_count": 3,
+        "file_count": 10,
+        "truncated": false,
+        "weight_container_count": 1
+      },
+      "completeness": {
+        "adapter_config_present": false,
+        "adapter_weights_present": false,
+        "problems": [],
+        "status": "complete_as_observed"
+      },
+      "configs": [
+        {
+          "keys": [
+            "architectures",
+            "attention_dropout",
+            "bos_token_id",
+            "eos_token_id",
+            "hidden_act",
+            "hidden_size",
+            "initializer_range",
+            "intermediate_size",
+            "max_position_embeddings",
+            "model_type",
+            "num_attention_heads",
+            "num_hidden_layers",
+            "num_key_value_heads",
+            "rms_norm_eps",
+            "rope_theta",
+            "sliding_window",
+            "tie_word_embeddings",
+            "torch_dtype",
+            "transformers_version",
+            "use_cache",
+            "vocab_size"
+          ],
+          "name": "config.json",
+          "relative_path": "config.json",
+          "selected": {
+            "architectures": [
+              "MistralForCausalLM"
+            ],
+            "hidden_size": 4096,
+            "intermediate_size": 14336,
+            "max_position_embeddings": 32768,
+            "model_type": "mistral",
+            "num_attention_heads": 32,
+            "num_hidden_layers": 32,
+            "num_key_value_heads": 8,
+            "torch_dtype": "bfloat16",
+            "transformers_version": "4.35.2",
+            "vocab_size": 32000
+          },
+          "sha256": "3443164e2e67862c353fdd6c54e74ae2c61ed4cfb480325dc69a2d34483cf36b",
+          "size_bytes": 643,
+          "valid": true
+        },
+        {
+          "keys": [
+            "metadata",
+            "weight_map"
+          ],
+          "name": "model.safetensors.index.json",
+          "relative_path": "model.safetensors.index.json",
+          "selected": {},
+          "sha256": "4c2cdd604e020b5e877fc0814463f2e75506f07aece8a9a424de96a057bdcaef",
+          "size_bytes": 25165,
+          "valid": true
+        },
+        {
+          "keys": [
+            "backend",
+            "bos_token",
+            "clean_up_tokenization_spaces",
+            "eos_token",
+            "extra_special_tokens",
+            "is_local",
+            "legacy",
+            "local_files_only",
+            "max_length",
+            "model_max_length",
+            "pad_token",
+            "sp_model_kwargs",
+            "spaces_between_special_tokens",
+            "stride",
+            "tokenizer_class",
+            "truncation_side",
+            "truncation_strategy",
+            "unk_token",
+            "use_default_system_prompt"
+          ],
+          "name": "tokenizer_config.json",
+          "relative_path": "tokenizer_config.json",
+          "selected": {},
+          "sha256": "2c2b4495758448428a9f3cc0a47cf04f87ff818c4aa0fa3e69fa7af5d7af4b94",
+          "size_bytes": 571,
+          "valid": true
+        }
+      ],
+      "consistency": [
+        {
+          "check": "declared_vs_inferred_transformer_blocks",
+          "declared": 32,
+          "declared_source": "num_hidden_layers",
+          "inferred": 32,
+          "status": "match"
+        },
+        {
+          "check": "safetensors_shard_index",
+          "declared_shards": [
+            "model-00001-of-00003.safetensors",
+            "model-00002-of-00003.safetensors",
+            "model-00003-of-00003.safetensors"
+          ],
+          "declared_tensor_count": 291,
+          "missing_shards": [],
+          "missing_tensors": [],
+          "path": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16/model.safetensors.index.json",
+          "status": "match",
+          "unindexed_tensors": [],
+          "valid": true
+        }
+      ],
+      "lineage_signals": {
+        "generation": null,
+        "parent_identity": null
+      },
+      "read_contract": {
+        "not_read": [
+          "Safetensors tensor data",
+          "GGUF tensor data",
+          "ONNX raw initializer data"
+        ],
+        "read": [
+          "bounded JSON configuration",
+          "Safetensors JSON headers",
+          "GGUF metadata and tensor descriptors",
+          "ONNX protobuf structure"
+        ],
+        "weight_payloads_loaded": false
+      },
+      "repair_assessment": {
+        "adapter_config_present": false,
+        "adapter_weights_present": false,
+        "automatic_repair_authorized": false,
+        "defect_detected": false,
+        "suggestions": []
+      },
+      "schema": "model-file-probe/1.0.0",
+      "source_layout": {
+        "kind": "mlx_safetensors",
+        "symlink_count": 0,
+        "symlinks": []
+      },
+      "target": {
+        "kind": "directory",
+        "path": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16"
+      },
+      "weights": [
+        {
+          "container": "safetensors",
+          "data_bytes_by_dtype": {
+            "BF16": 14483464192
+          },
+          "duplicate_tensor_names": [],
+          "errors": [],
+          "parameter_count": 7241732096,
+          "parameter_count_by_dtype": {
+            "BF16": 7241732096
+          },
+          "shard_count": 3,
+          "shards": [
+            {
+              "error": null,
+              "header_bytes": 12144,
+              "name": "model-00001-of-00003.safetensors",
+              "parameter_count": 2630967296,
+              "path": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16/model-00001-of-00003.safetensors",
+              "tensor_count": 105,
+              "valid": true
+            },
+            {
+              "error": null,
+              "header_bytes": 12704,
+              "name": "model-00002-of-00003.safetensors",
+              "parameter_count": 2676064256,
+              "path": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16/model-00002-of-00003.safetensors",
+              "tensor_count": 109,
+              "valid": true
+            },
+            {
+              "error": null,
+              "header_bytes": 8934,
+              "name": "model-00003-of-00003.safetensors",
+              "parameter_count": 1934700544,
+              "path": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16/model-00003-of-00003.safetensors",
+              "tensor_count": 77,
+              "valid": true
+            }
+          ],
+          "tensor_count": 291,
+          "tensor_count_by_dtype": {
+            "BF16": 291
+          },
+          "tensor_samples": [
+            {
+              "data_bytes": 262144000,
+              "data_offsets": [
+                4102176768,
+                4364320768
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 262144000,
+              "name": "model.embed_tokens.weight",
+              "parameter_count": 131072000,
+              "shape": [
+                32000,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8192,
+              "data_offsets": [
+                5228363776,
+                5228371968
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8192,
+              "name": "model.layers.0.input_layernorm.weight",
+              "parameter_count": 4096,
+              "shape": [
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                3976347648,
+                4093788160
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.0.mlp.down_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                4096,
+                14336
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                1694580736,
+                1812021248
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.0.mlp.gate_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                14336,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                3733061632,
+                3850502144
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.0.mlp.up_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                14336,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8192,
+              "data_offsets": [
+                2634121216,
+                2634129408
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8192,
+              "name": "model.layers.0.post_attention_layernorm.weight",
+              "parameter_count": 4096,
+              "shape": [
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                4792147968,
+                4800536576
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8388608,
+              "name": "model.layers.0.self_attn.k_proj.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                1024,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                4917985280,
+                4951539712
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.0.self_attn.o_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                5068980224,
+                5102534656
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.0.self_attn.q_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                2785124352,
+                2793512960
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8388608,
+              "name": "model.layers.0.self_attn.v_proj.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                1024,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8192,
+              "data_offsets": [
+                5261926400,
+                5261934592
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8192,
+              "name": "model.layers.1.input_layernorm.weight",
+              "parameter_count": 4096,
+              "shape": [
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                2508283904,
+                2625724416
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.1.mlp.down_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                4096,
+                14336
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                3850502144,
+                3967942656
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.1.mlp.gate_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                14336,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                3615612928,
+                3733053440
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.1.mlp.up_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                14336,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8192,
+              "data_offsets": [
+                3976331264,
+                3976339456
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8192,
+              "name": "model.layers.1.post_attention_layernorm.weight",
+              "parameter_count": 4096,
+              "shape": [
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                5027037184,
+                5035425792
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8388608,
+              "name": "model.layers.1.self_attn.k_proj.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                1024,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                4993482752,
+                5027037184
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.1.self_attn.o_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                5228371968,
+                5261926400
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.1.self_attn.q_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                4985094144,
+                4993482752
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8388608,
+              "name": "model.layers.1.self_attn.v_proj.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                1024,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8192,
+              "data_offsets": [
+                159391744,
+                159399936
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8192,
+              "name": "model.layers.10.input_layernorm.weight",
+              "parameter_count": 4096,
+              "shape": [
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                3028393984,
+                3145834496
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.10.mlp.down_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                4096,
+                14336
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                5102534656,
+                5219975168
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.10.mlp.gate_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                14336,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                4364320768,
+                4481761280
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.10.mlp.up_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                14336,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8192,
+              "data_offsets": [
+                159383552,
+                159391744
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8192,
+              "name": "model.layers.10.post_attention_layernorm.weight",
+              "parameter_count": 4096,
+              "shape": [
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                461398016,
+                469786624
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8388608,
+              "name": "model.layers.10.self_attn.k_proj.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                1024,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                159399936,
+                192954368
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.10.self_attn.o_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                427843584,
+                461398016
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.10.self_attn.q_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                2499895296,
+                2508283904
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8388608,
+              "name": "model.layers.10.self_attn.v_proj.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                1024,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 117440512,
+              "data_offsets": [
+                0,
+                117440512
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 117440512,
+              "name": "model.layers.11.mlp.gate_proj.weight",
+              "parameter_count": 58720256,
+              "shape": [
+                14336,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 8388608,
+              "data_offsets": [
+                2625724416,
+                2634113024
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 8388608,
+              "name": "model.layers.11.self_attn.k_proj.weight",
+              "parameter_count": 4194304,
+              "shape": [
+                1024,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                117440512,
+                150994944
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.11.self_attn.o_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            },
+            {
+              "data_bytes": 33554432,
+              "data_offsets": [
+                4951539712,
+                4985094144
+              ],
+              "dtype": "BF16",
+              "expected_bytes": 33554432,
+              "name": "model.layers.11.self_attn.q_proj.weight",
+              "parameter_count": 16777216,
+              "shape": [
+                4096,
+                4096
+              ],
+              "shard": "model-00001-of-00003.safetensors"
+            }
+          ],
+          "transformer_blocks": {
+            "dominant_naming_family": "layers",
+            "families": {
+              "layers": {
+                "distinct_count": 32,
+                "distinct_indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31
+                ],
+                "max_index": 31,
+                "missing_indices": []
+              }
+            },
+            "inferred_block_count": 32,
+            "method": "distinct numeric indices in common transformer tensor-name families"
+          },
+          "unique_tensor_count": 291,
+          "valid": true,
+          "weight_set": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16/model.safetensors.index.json"
+        }
+      ]
+    },
+    "role_hints": [],
+    "weights_deserialized": false
+  },
+  "observed_at": "2026-08-25T23:20:23.673679+00:00",
+  "schema": "model-asset-grinder-receipt/1.1.0",
+  "target": {
+    "kind": "directory",
+    "name": "prometheus-7b-v2.0-mlx-bf16",
+    "path": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16"
+  }
+}
