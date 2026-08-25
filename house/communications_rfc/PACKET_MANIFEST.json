@@ -40,6 +40,11 @@
       "path": "SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md",
       "sha256": "acc2f2c25f7c224ba1c8cb8bc445c490db46ce5f72016e476aabf5f969ce3b63",
       "status": "DRAFT_SECURITY_DESIGN_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "SUGGESTION_COMMONS_SOCIAL_FAILURES_ADDENDUM.md",
+      "sha256": "cd3fa46f1dd9824f2445802f4959b190003d5e278d044e9fcb77a017205dbd76",
+      "status": "DESIGN_NOTE_HUMOR_PRESERVED_NOT_IMPLEMENTED"
     }
   ],
   "source_drafts": [
