@@ -1,0 +1,23 @@
+{
+  "schema": "codex-house-f1-v3-closure-probes/1",
+  "result": "PASS",
+  "probes": {
+    "fixed_discriminator": {
+      "mutation": "unsigned checkpoint context changed in isolated temporary copy",
+      "result": "REJECTED",
+      "error": "unsigned_checkpoint fixed value mismatch: context"
+    },
+    "extra_directory": {
+      "mutation": "unexpected directory added to isolated fixture root",
+      "result": "REJECTED",
+      "error": "fixture entry is not a regular file: unexpected-directory"
+    },
+    "symlink_substitution": {
+      "mutation": "signature.der replaced by symlink in isolated fixture root",
+      "result": "REJECTED",
+      "error": "fixture entry is not a regular file: signature.der"
+    }
+  },
+  "workspace_fixture_modified": false,
+  "temporary_copies_retained": false
+}

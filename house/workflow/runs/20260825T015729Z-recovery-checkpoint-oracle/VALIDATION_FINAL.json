@@ -1,0 +1,23 @@
+{
+  "schema": "codex-house-f1-validation/2",
+  "supersedes": "VALIDATION.json",
+  "result": "PASS_F1_ONLY",
+  "claim": "FROZEN_PUBLIC_SYNTHETIC_CHECKPOINT_ORACLE_BYTES_INDEPENDENTLY_VERIFIED",
+  "fixture_sha256": "0d52a694cf3e5c681c40faee2ff577fc8ac07c01222c59c6722c0a14ecedc25e",
+  "verifier_v3_sha256": "4e8a433f7cc56f7ddd9e666e469636352d71814ad785ed8b78567f381cbe9580",
+  "final_packet_sha256": "5f2cc0cd1be8bcec2fa7b9548657994af70270f6d82b9e9b959b323015a032e0",
+  "determinism": "PASS",
+  "cryptography_public_verifier": "PASS",
+  "openssl_public_verifier": "PASS",
+  "schema_field_closure": "PASS",
+  "fixed_value_closure": "PASS",
+  "exact_directory_entry_type_closure": "PASS",
+  "closure_probes": "PASS_3_OF_3_REJECTED",
+  "final_council": "UNANIMOUS_ACCEPT_F1_ONLY",
+  "source_promotion": "F1_ORACLE_ONLY",
+  "s1_authority": "NOT_GRANTED",
+  "real_key_material": "NOT_ACCESSED",
+  "hardware": "NOT_ACCESSED",
+  "recovery_readiness": "NOT_ESTABLISHED",
+  "next_gate": "SEPARATE_USER_AUTHORITY_FOR_S1_SOURCE_IMPLEMENTATION"
+}

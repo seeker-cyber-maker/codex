@@ -10,3 +10,8 @@
 {"schema":"project-event/1","sequence":10,"kind":"F1_SCHEMA_CLOSURE_PROBE","result":"V1_ACCEPTED_V2_REJECTED_UNKNOWN_FIELD","workspace_fixture_modified":false}
 {"schema":"project-event/1","sequence":11,"kind":"F1_COUNCIL_ROUND2","packet_sha256":"657107cd796e8e608e58ffca3092ac0b3f638d1141da6646d1cd5c2c045be9a6","result":"DECISION_BEARING_FIXED_VALUE_AND_PATH_TYPE_GAP","verdicts":["REVISE","ACCEPT_F1_ONLY","ACCEPT_F1_ONLY"]}
 {"schema":"project-event/1","sequence":12,"kind":"ROOT_DISPOSITION","result":"NEEDS_REVIEW_COUNCIL_BUDGET_EXHAUSTED","s1":"NOT_AUTHORIZED"}
+{"schema":"project-event/1","sequence":13,"kind":"USER_CONTINUATION","result":"PLAN_DELTA_3_AUTHORIZED","scope":"FIXED_VALUES_PATH_TYPES_THREE_PROBES_ONE_FINAL_COUNCIL"}
+{"schema":"project-event/1","sequence":14,"kind":"F1_VERIFIER_V3","result":"PASS_BOTH_UNCHANGED_ATTEMPTS","verifier_sha256":"4e8a433f7cc56f7ddd9e666e469636352d71814ad785ed8b78567f381cbe9580"}
+{"schema":"project-event/1","sequence":15,"kind":"F1_V3_CLOSURE_PROBES","result":"ALL_THREE_REJECTED_AS_EXPECTED","workspace_fixture_modified":false}
+{"schema":"project-event/1","sequence":16,"kind":"F1_FINAL_COUNCIL","packet_sha256":"5f2cc0cd1be8bcec2fa7b9548657994af70270f6d82b9e9b959b323015a032e0","result":"UNANIMOUS_ACCEPT_F1_ONLY","verdicts":["ACCEPT_F1_ONLY","ACCEPT_F1_ONLY","ACCEPT_F1_ONLY"]}
+{"schema":"project-event/1","sequence":17,"kind":"ROOT_DISPOSITION","result":"ACCEPTED_F1_ONLY__STOP_BEFORE_S1","s1":"NOT_AUTHORIZED"}

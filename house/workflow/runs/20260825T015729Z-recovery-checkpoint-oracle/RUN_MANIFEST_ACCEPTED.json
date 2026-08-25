@@ -1,0 +1,26 @@
+{
+  "schema": "dream-house-run-manifest-final/2",
+  "run_id": "20260825T015729Z-recovery-checkpoint-oracle",
+  "supersedes": "RUN_MANIFEST_FINAL.json",
+  "starting_head": "851e27235d139d45e7d0da716814f58466ca7254",
+  "status": "ACCEPTED_F1_ONLY__STOP_BEFORE_S1",
+  "task_graph": [
+    {"id": "F1P", "state": "COMPLETE"},
+    {"id": "F1G", "state": "COMPLETE_ACCEPTED"},
+    {"id": "F1V", "state": "COMPLETE_ACCEPTED_V3"},
+    {"id": "F1C", "state": "COMPLETE_UNANIMOUS"},
+    {"id": "F1A", "state": "ACCEPTED_F1_ONLY"},
+    {"id": "S1", "state": "NOT_AUTHORIZED"}
+  ],
+  "delta_3_authority": "USER_DOT_CONTINUATION",
+  "final_council_rounds_added": 1,
+  "next_gate": "separate user authority for S1 source implementation",
+  "routing_advisory": {
+    "next_phase": "private pure checkpoint verifier implementation against frozen F1 oracle",
+    "recommended_model": "Codex Terra",
+    "recommended_effort": "high",
+    "reason": "the implementation contract and positive oracle are now exact and deterministic",
+    "blocking": false,
+    "reassess_trigger": "before S1 promotion council"
+  }
+}
