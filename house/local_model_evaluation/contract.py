@@ -133,17 +133,29 @@ def require_execution_authority(
     )
 
 
-def render_rubric_prompt(fixture: Mapping[str, object]) -> str:
-    """Render the model-neutral instruction text for one already-validated fixture."""
+def render_rubric_prompt(
+    fixture: Mapping[str, object], adapter: Mapping[str, object] | None = None
+) -> str:
+    """Render one fixture with an optional, closed adapter response contract."""
 
     _require_exact_fields(fixture, _FIXTURE_FIELDS, "fixture")
     _validate_fixtures({"schema": FIXTURE_SCHEMA, "fixtures": [fixture]})
+    response_contract = "Return a score from 1 through 5 and concise rubric-grounded feedback."
+    if adapter is not None:
+        _validate_adapters([adapter])
+        if adapter["output_parser"] == "bracket_result_integer_v1":
+            response_contract = (
+                "Return concise rubric-grounded feedback, then use exactly: "
+                "[RESULT] (integer)."
+            )
+        elif adapter["output_parser"] == "json_score_integer_v1":
+            response_contract = 'Return exactly {"score": integer} and no other text.'
     score_lines = "\n".join(
         f"Score {score}: {fixture['scores'][score]}" for score in ("1", "2", "3", "4", "5")
     )
     return (
         "Evaluate the candidate response against the supplied reference answer and rubric.\n"
-        "Return a score from 1 through 5 and concise rubric-grounded feedback.\n\n"
+        f"{response_contract}\n\n"
         f"Instruction:\n{fixture['instruction']}\n\n"
         f"Candidate response:\n{fixture['response']}\n\n"
         f"Reference answer:\n{fixture['reference_answer']}\n\n"

@@ -75,6 +75,15 @@ class LocalEvaluationContractTests(unittest.TestCase):
         with self.assertRaisesRegex(LocalEvaluationContractError, "absent"):
             parse_adapter_score(bracket, "score 4")
 
+    def test_renderer_declares_the_selected_adapter_output_shape(self) -> None:
+        _manifest, fixtures, adapters = self._inputs()
+        bracket, json_adapter = adapters
+        json_prompt = render_rubric_prompt(fixtures["fixtures"][0], json_adapter)
+        self.assertIn('exactly {"score": integer}', json_prompt)
+        self.assertNotIn("feedback", json_prompt.lower())
+        bracket_prompt = render_rubric_prompt(fixtures["fixtures"][0], bracket)
+        self.assertIn("[RESULT] (integer)", bracket_prompt)
+
 
 if __name__ == "__main__":
     unittest.main()
