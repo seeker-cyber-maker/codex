@@ -1,0 +1,803 @@
+{
+  "id": "FCRT7M30Wtw",
+  "title": "Anthropic's Model Attacked Two Strangers On GitHub. Nobody Asked It To.",
+  "channel": "AI News & Strategy Daily | Nate B Jones",
+  "channel_id": "UC0C-17n9iuUQPylguM1d-lQ",
+  "uploader": "AI News & Strategy Daily | Nate B Jones",
+  "uploader_id": "@NateBJones",
+  "upload_date": "20260810",
+  "timestamp": 1786370411,
+  "duration": 1707,
+  "description": "OpenAI agents built a hidden message board inside a sealed cybersecurity test, then rebuilt it four days after engineers deleted it. Here's what that means if you're running AI agents at work.\n\nMy Links 🔗\n👉🏻 Newsletter: https://natesnewsletter.substack.com/\n👉🏻 X: https://x.com/natebjones\n👉🏻 TikTok: https://www.tiktok.com/@nate.b.jones\n👉🏻 Instagram: https://www.instagram.com/nate.b.jones\n\nWhat's really happening inside multi-agent AI systems right now?\n\nThe common story is one brilliant model escaping containment — but the real question is what a population of disposable agents can leave behind for the next run.\n\nIn this video, I share the inside scoop on agent coordination, the UK AISI results, and the shakeup at Google:\n\n- Why deleting the agents' channel didn't remove the pressure to coordinate\n- How Anthropic's Mythos 5 targeted two real strangers on GitHub unprompted\n- What the Hugging Face postmortem numbers reveal about agent-speed intrusion\n- Where Google's senior fellow exits leave the frontier lab race\n\nThese are the same capabilities we want when the goal is legitimate, which is why the work now sits with builders hardening systems rather than with anyone hoping the behavior goes away.\n\nChapters:\n00:00 the message board openai deleted and the agents rebuilt\n02:50 what openai showed on stage at black hat\n04:36 when agent coordination is exactly what you want\n07:31 inside the hugging face postmortem\n08:27 disposable agents and knowledge that persists\n11:00 the uk aisi run across seven frontier models\n12:00 how mythos picked two real strangers on github\n14:44 why the apology was a strategy\n16:35 the case for a zero bug internet\n18:48 jeff dean leaves google to automate the loop\n20:22 hassabis steps back and gemini takes the wheel\n25:13 building software for a chaos world\n\nListen to this video as a podcast.\n\nSpotify: https://open.spotify.com/show/0gkFdjd1wptEKJKLu9LbZ4\nApple Podcasts: https://podcasts.apple.com/us/podcast/ai-news-strategy-daily-with-nate-b-jones/id1877109372",
+  "webpage_url": "https://www.youtube.com/watch?v=FCRT7M30Wtw",
+  "original_url": "https://www.youtube.com/watch?v=FCRT7M30Wtw",
+  "availability": "public",
+  "live_status": "not_live",
+  "caption_tracks": [
+    {
+      "language": "aa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ab",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "af",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ak",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "am",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ar",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "as",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ay",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "az",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ba",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "be",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bho",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "br",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "bs",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ca",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ceb",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "co",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "crs",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "cs",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "cy",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "da",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "de",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "dv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "dz",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ee",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "el",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "en",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "en-orig",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "eo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "es",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "et",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "eu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fil",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fj",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "fy",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ga",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gaa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gd",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "gv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ha",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "haw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hmn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ht",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "hy",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "id",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ig",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "is",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "it",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "iu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "iw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ja",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "jv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ka",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kha",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "km",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ko",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "kri",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ku",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ky",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "la",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lb",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ln",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lua",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "luo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "lv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mfe",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ml",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ms",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "mt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "my",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ne",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "new",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "nl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "no",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "nso",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ny",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "oc",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "om",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "or",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "os",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pam",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ps",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "pt-PT",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "qu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "rn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ro",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ru",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "rw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sa",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sd",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "si",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sl",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sm",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "so",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sq",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ss",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "st",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "su",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sv",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "sw",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ta",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "te",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tg",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "th",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ti",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tn",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "to",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tr",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ts",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tt",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "tum",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ug",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "uk",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ur",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "uz",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "ve",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "vi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "war",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "wo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "xh",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "yi",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "yo",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "zh-Hans",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "zh-Hant",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    },
+    {
+      "language": "zu",
+      "kind": "automatic",
+      "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "youtube-evidence/1",
+  "acquired_at": "2026-08-25T16:51:04.348501+00:00",
+  "source_url": "https://www.youtube.com/watch?v=FCRT7M30Wtw",
+  "video_id": "FCRT7M30Wtw",
+  "title": "Anthropic's Model Attacked Two Strangers On GitHub. Nobody Asked It To.",
+  "channel": "AI News & Strategy Daily | Nate B Jones",
+  "upload_date": "20260810",
+  "duration_seconds": 1707,
+  "extractor": "yt-dlp",
+  "authenticated_session_used": false,
+  "authentication_material_preserved": false,
+  "selected_caption": {
+    "language": "en-orig",
+    "kind": "automatic",
+    "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt",
+    "cue_count": 787
+  },
+  "automatic_captions_are_noisy_evidence": true,
+  "warnings": [],
+  "artifacts": [
+    {
+      "path": "FCRT7M30Wtw.metadata.json",
+      "sha256": "9a5051fc8319450e1aeb1d092c6311f866cc3991c934679e4802ace67304b5ce"
+    },
+    {
+      "path": "FCRT7M30Wtw.en-orig.json3",
+      "sha256": "af27b0b78e1869834f73af08642894e0d29b19fa47e8f170f5b80873a13f4b67"
+    },
+    {
+      "path": "FCRT7M30Wtw.en-orig.transcript.json",
+      "sha256": "44493ae268d279eee88a8a758da9981fd32a6911b51411c54538544132a920b1"
+    },
+    {
+      "path": "FCRT7M30Wtw.en-orig.transcript.txt",
+      "sha256": "67c4ecb21c781cbf73665c8d1cadd592a2c1ec1ce11ac3e1659845d974f076f7"
+    }
+  ]
+}

@@ -1,0 +1,4729 @@
+{
+  "schema": "youtube-transcript/1",
+  "video_id": "FCRT7M30Wtw",
+  "language": "en-orig",
+  "cues": [
+    {
+      "start_ms": 0,
+      "duration_ms": 4680,
+      "end_ms": 4680,
+      "text": "OpenAI was running agents inside a"
+    },
+    {
+      "start_ms": 2280,
+      "duration_ms": 5960,
+      "end_ms": 8240,
+      "text": "sealed cybersecurity test. Separate"
+    },
+    {
+      "start_ms": 4680,
+      "duration_ms": 5640,
+      "end_ms": 10320,
+      "text": "agents, separate jobs, no internet. They"
+    },
+    {
+      "start_ms": 8240,
+      "duration_ms": 4120,
+      "end_ms": 12360,
+      "text": "found each other. They built a message"
+    },
+    {
+      "start_ms": 10320,
+      "duration_ms": 5040,
+      "end_ms": 15360,
+      "text": "board. They traded exploits on it from"
+    },
+    {
+      "start_ms": 12360,
+      "duration_ms": 4720,
+      "end_ms": 17080,
+      "text": "May until July. OpenAI found it and then"
+    },
+    {
+      "start_ms": 15360,
+      "duration_ms": 3600,
+      "end_ms": 18960,
+      "text": "deleted it. And two days later, the"
+    },
+    {
+      "start_ms": 17080,
+      "duration_ms": 4240,
+      "end_ms": 21320,
+      "text": "agents built it again out of folder"
+    },
+    {
+      "start_ms": 18960,
+      "duration_ms": 4960,
+      "end_ms": 23920,
+      "text": "names. I'm not making that up. That is"
+    },
+    {
+      "start_ms": 21320,
+      "duration_ms": 4840,
+      "end_ms": 26160,
+      "text": "OpenAI on stage at Black Hat this week"
+    },
+    {
+      "start_ms": 23920,
+      "duration_ms": 4400,
+      "end_ms": 28320,
+      "text": "with the agents' own reasoning up on the"
+    },
+    {
+      "start_ms": 26160,
+      "duration_ms": 4200,
+      "end_ms": 30360,
+      "text": "slides. And in the same week, the UK"
+    },
+    {
+      "start_ms": 28320,
+      "duration_ms": 4800,
+      "end_ms": 33120,
+      "text": "government published a report on"
+    },
+    {
+      "start_ms": 30360,
+      "duration_ms": 5400,
+      "end_ms": 35760,
+      "text": "Anthropic's best model attacking two"
+    },
+    {
+      "start_ms": 33120,
+      "duration_ms": 4360,
+      "end_ms": 37480,
+      "text": "real strangers on GitHub unprompted."
+    },
+    {
+      "start_ms": 35760,
+      "duration_ms": 3600,
+      "end_ms": 39360,
+      "text": "Now, I know what you're thinking."
+    },
+    {
+      "start_ms": 37480,
+      "duration_ms": 3640,
+      "end_ms": 41120,
+      "text": "Somebody told it to do that, right?"
+    },
+    {
+      "start_ms": 39360,
+      "duration_ms": 4240,
+      "end_ms": 43600,
+      "text": "There's a boring explanation there,"
+    },
+    {
+      "start_ms": 41120,
+      "duration_ms": 4480,
+      "end_ms": 45600,
+      "text": "right? Here's the boring explanation."
+    },
+    {
+      "start_ms": 43600,
+      "duration_ms": 3680,
+      "end_ms": 47280,
+      "text": "They were taking a test and they wanted"
+    },
+    {
+      "start_ms": 45600,
+      "duration_ms": 4240,
+      "end_ms": 49840,
+      "text": "the answers. That's it. That was enough"
+    },
+    {
+      "start_ms": 47280,
+      "duration_ms": 5120,
+      "end_ms": 52400,
+      "text": "for all of this to happen. That is not"
+    },
+    {
+      "start_ms": 49840,
+      "duration_ms": 5000,
+      "end_ms": 54840,
+      "text": "enough. Capability cannot be explained"
+    },
+    {
+      "start_ms": 52400,
+      "duration_ms": 4720,
+      "end_ms": 57120,
+      "text": "away by, \"Oh, they had to take the"
+    },
+    {
+      "start_ms": 54840,
+      "duration_ms": 4600,
+      "end_ms": 59440,
+      "text": "test.\" We have got to dive deeper here."
+    },
+    {
+      "start_ms": 57120,
+      "duration_ms": 5360,
+      "end_ms": 62480,
+      "text": "The agents conspired. OpenAI was running"
+    },
+    {
+      "start_ms": 59440,
+      "duration_ms": 5520,
+      "end_ms": 64960,
+      "text": "separate short-lived AI agents inside a"
+    },
+    {
+      "start_ms": 62480,
+      "duration_ms": 4040,
+      "end_ms": 66520,
+      "text": "cybersecurity test. The agents found one"
+    },
+    {
+      "start_ms": 64960,
+      "duration_ms": 3760,
+      "end_ms": 68720,
+      "text": "another through a shared software"
+    },
+    {
+      "start_ms": 66520,
+      "duration_ms": 3480,
+      "end_ms": 70000,
+      "text": "repository, and they built a message"
+    },
+    {
+      "start_ms": 68720,
+      "duration_ms": 3360,
+      "end_ms": 72080,
+      "text": "board. They traded their"
+    },
+    {
+      "start_ms": 70000,
+      "duration_ms": 4160,
+      "end_ms": 74160,
+      "text": "vulnerabilities. They traded files and"
+    },
+    {
+      "start_ms": 72080,
+      "duration_ms": 4760,
+      "end_ms": 76840,
+      "text": "code and instructions. And by the time"
+    },
+    {
+      "start_ms": 74160,
+      "duration_ms": 5160,
+      "end_ms": 79320,
+      "text": "OpenAI's engineers found out about it,"
+    },
+    {
+      "start_ms": 76840,
+      "duration_ms": 5000,
+      "end_ms": 81840,
+      "text": "the board already held hundreds of"
+    },
+    {
+      "start_ms": 79320,
+      "duration_ms": 4320,
+      "end_ms": 83640,
+      "text": "thousands of messages. They deleted that"
+    },
+    {
+      "start_ms": 81840,
+      "duration_ms": 3000,
+      "end_ms": 84840,
+      "text": "board, and they patched the route the"
+    },
+    {
+      "start_ms": 83640,
+      "duration_ms": 3240,
+      "end_ms": 86880,
+      "text": "agents had used. They thought the"
+    },
+    {
+      "start_ms": 84840,
+      "duration_ms": 5280,
+      "end_ms": 90120,
+      "text": "problem was solved. Just a couple days"
+    },
+    {
+      "start_ms": 86880,
+      "duration_ms": 6200,
+      "end_ms": 93080,
+      "text": "later, the agents built it again through"
+    },
+    {
+      "start_ms": 90120,
+      "duration_ms": 4840,
+      "end_ms": 94960,
+      "text": "a completely different mechanism. This"
+    },
+    {
+      "start_ms": 93080,
+      "duration_ms": 3960,
+      "end_ms": 97040,
+      "text": "was not Moat Book. When Moat Book went"
+    },
+    {
+      "start_ms": 94960,
+      "duration_ms": 5520,
+      "end_ms": 100480,
+      "text": "viral earlier this year, people thought"
+    },
+    {
+      "start_ms": 97040,
+      "duration_ms": 5400,
+      "end_ms": 102440,
+      "text": "they were watching an AI society form in"
+    },
+    {
+      "start_ms": 100480,
+      "duration_ms": 3280,
+      "end_ms": 103760,
+      "text": "public. Agents were supposedly inventing"
+    },
+    {
+      "start_ms": 102440,
+      "duration_ms": 2640,
+      "end_ms": 105080,
+      "text": "religions. They were talking about"
+    },
+    {
+      "start_ms": 103760,
+      "duration_ms": 3200,
+      "end_ms": 106960,
+      "text": "humans. They were creating secret"
+    },
+    {
+      "start_ms": 105080,
+      "duration_ms": 3760,
+      "end_ms": 108840,
+      "text": "languages. You remember that, right? And"
+    },
+    {
+      "start_ms": 106960,
+      "duration_ms": 3800,
+      "end_ms": 110760,
+      "text": "then reporters and security researchers"
+    },
+    {
+      "start_ms": 108840,
+      "duration_ms": 4440,
+      "end_ms": 113280,
+      "text": "started to dig in, and it turned out"
+    },
+    {
+      "start_ms": 110760,
+      "duration_ms": 4760,
+      "end_ms": 115520,
+      "text": "that a lot of Moat Book was humans"
+    },
+    {
+      "start_ms": 113280,
+      "duration_ms": 4800,
+      "end_ms": 118080,
+      "text": "posting for attention maxing, rather"
+    },
+    {
+      "start_ms": 115520,
+      "duration_ms": 4320,
+      "end_ms": 119840,
+      "text": "than agents. Sure, there was real agent"
+    },
+    {
+      "start_ms": 118080,
+      "duration_ms": 3440,
+      "end_ms": 121520,
+      "text": "activity. It was an interesting example"
+    },
+    {
+      "start_ms": 119840,
+      "duration_ms": 4960,
+      "end_ms": 124800,
+      "text": "of emergent agent behavior, but it was"
+    },
+    {
+      "start_ms": 121520,
+      "duration_ms": 6040,
+      "end_ms": 127560,
+      "text": "by no means a truly agentic society."
+    },
+    {
+      "start_ms": 124800,
+      "duration_ms": 5679,
+      "end_ms": 130479,
+      "text": "That is not what this is about. You"
+    },
+    {
+      "start_ms": 127560,
+      "duration_ms": 5440,
+      "end_ms": 133000,
+      "text": "can't explain away the OpenAI message"
+    },
+    {
+      "start_ms": 130479,
+      "duration_ms": 3921,
+      "end_ms": 134400,
+      "text": "board that way. The OpenAI agents had no"
+    },
+    {
+      "start_ms": 133000,
+      "duration_ms": 3959,
+      "end_ms": 136959,
+      "text": "public audience, right? They had no"
+    },
+    {
+      "start_ms": 134400,
+      "duration_ms": 4800,
+      "end_ms": 139200,
+      "text": "engagement market to farm, and no human"
+    },
+    {
+      "start_ms": 136959,
+      "duration_ms": 4441,
+      "end_ms": 141400,
+      "text": "was pretending to be a bot, so a"
+    },
+    {
+      "start_ms": 139200,
+      "duration_ms": 5920,
+      "end_ms": 145120,
+      "text": "screenshot would go viral, right? These"
+    },
+    {
+      "start_ms": 141400,
+      "duration_ms": 5640,
+      "end_ms": 147040,
+      "text": "were runs inside an internal evaluation,"
+    },
+    {
+      "start_ms": 145120,
+      "duration_ms": 3680,
+      "end_ms": 148800,
+      "text": "and they created a communication system"
+    },
+    {
+      "start_ms": 147040,
+      "duration_ms": 5160,
+      "end_ms": 152200,
+      "text": "to facilitate those runs because it"
+    },
+    {
+      "start_ms": 148800,
+      "duration_ms": 4760,
+      "end_ms": 153560,
+      "text": "helped them as a collective accomplish a"
+    },
+    {
+      "start_ms": 152200,
+      "duration_ms": 3000,
+      "end_ms": 155200,
+      "text": "job, and that's a very important"
+    },
+    {
+      "start_ms": 153560,
+      "duration_ms": 3680,
+      "end_ms": 157240,
+      "text": "statement. And the job was a test. They"
+    },
+    {
+      "start_ms": 155200,
+      "duration_ms": 4480,
+      "end_ms": 159680,
+      "text": "were cheating on a test. Everything they"
+    },
+    {
+      "start_ms": 157240,
+      "duration_ms": 4920,
+      "end_ms": 162160,
+      "text": "did to get out, the zero-day nobody knew"
+    },
+    {
+      "start_ms": 159680,
+      "duration_ms": 4080,
+      "end_ms": 163760,
+      "text": "about, the privilege escalation, the"
+    },
+    {
+      "start_ms": 162160,
+      "duration_ms": 4200,
+      "end_ms": 166360,
+      "text": "break-in at another company that they"
+    },
+    {
+      "start_ms": 163760,
+      "duration_ms": 4400,
+      "end_ms": 168160,
+      "text": "did, was in service of getting a better"
+    },
+    {
+      "start_ms": 166360,
+      "duration_ms": 4280,
+      "end_ms": 170640,
+      "text": "score on the benchmark they were being"
+    },
+    {
+      "start_ms": 168160,
+      "duration_ms": 4920,
+      "end_ms": 173080,
+      "text": "tested on. That is much more disturbing"
+    },
+    {
+      "start_ms": 170640,
+      "duration_ms": 5160,
+      "end_ms": 175800,
+      "text": "to me. Eric Wallace and Michael Dalton"
+    },
+    {
+      "start_ms": 173080,
+      "duration_ms": 4760,
+      "end_ms": 177840,
+      "text": "presented this at Black Hat. Now,"
+    },
+    {
+      "start_ms": 175800,
+      "duration_ms": 3719,
+      "end_ms": 179519,
+      "text": "Wallace leads Alignment Research, Dalton"
+    },
+    {
+      "start_ms": 177840,
+      "duration_ms": 4399,
+      "end_ms": 182239,
+      "text": "works on agent and infrastructure"
+    },
+    {
+      "start_ms": 179519,
+      "duration_ms": 5521,
+      "end_ms": 185040,
+      "text": "security. What they described went way"
+    },
+    {
+      "start_ms": 182239,
+      "duration_ms": 4681,
+      "end_ms": 186920,
+      "text": "beyond one agent leaving a helpful note."
+    },
+    {
+      "start_ms": 185040,
+      "duration_ms": 4000,
+      "end_ms": 189040,
+      "text": "Agents signed messages, they developed"
+    },
+    {
+      "start_ms": 186920,
+      "duration_ms": 4319,
+      "end_ms": 191239,
+      "text": "conventions so they would not overwrite"
+    },
+    {
+      "start_ms": 189040,
+      "duration_ms": 4120,
+      "end_ms": 193160,
+      "text": "one another's work, they passed along"
+    },
+    {
+      "start_ms": 191239,
+      "duration_ms": 3881,
+      "end_ms": 195120,
+      "text": "reusable exploits to each other, they"
+    },
+    {
+      "start_ms": 193160,
+      "duration_ms": 3440,
+      "end_ms": 196600,
+      "text": "divided out their labor,"
+    },
+    {
+      "start_ms": 195120,
+      "duration_ms": 3720,
+      "end_ms": 198840,
+      "text": "and then they put the model's own"
+    },
+    {
+      "start_ms": 196600,
+      "duration_ms": 3639,
+      "end_ms": 200239,
+      "text": "reasoning on screen."
+    },
+    {
+      "start_ms": 198840,
+      "duration_ms": 3160,
+      "end_ms": 202000,
+      "text": "And this is one of the entries. I'm"
+    },
+    {
+      "start_ms": 200239,
+      "duration_ms": 4761,
+      "end_ms": 205000,
+      "text": "actually going to read it to you. Help"
+    },
+    {
+      "start_ms": 202000,
+      "duration_ms": 5160,
+      "end_ms": 207160,
+      "text": "peer, but our task doesn't benefit. Yet,"
+    },
+    {
+      "start_ms": 205000,
+      "duration_ms": 4320,
+      "end_ms": 209320,
+      "text": "the collective may yield generic route"
+    },
+    {
+      "start_ms": 207160,
+      "duration_ms": 4560,
+      "end_ms": 211720,
+      "text": "if someone frees time. Read that one"
+    },
+    {
+      "start_ms": 209320,
+      "duration_ms": 4000,
+      "end_ms": 213320,
+      "text": "again. Our task doesn't benefit, that's"
+    },
+    {
+      "start_ms": 211720,
+      "duration_ms": 3519,
+      "end_ms": 215239,
+      "text": "the model's self-interest, but the"
+    },
+    {
+      "start_ms": 213320,
+      "duration_ms": 4960,
+      "end_ms": 218280,
+      "text": "collective might."
+    },
+    {
+      "start_ms": 215239,
+      "duration_ms": 5401,
+      "end_ms": 220640,
+      "text": "That is an agent deciding to spend its"
+    },
+    {
+      "start_ms": 218280,
+      "duration_ms": 4720,
+      "end_ms": 223000,
+      "text": "own effort on something that pays it"
+    },
+    {
+      "start_ms": 220640,
+      "duration_ms": 5520,
+      "end_ms": 226160,
+      "text": "nothing because the group comes out"
+    },
+    {
+      "start_ms": 223000,
+      "duration_ms": 5360,
+      "end_ms": 228360,
+      "text": "ahead. So, yes, I think conspiring is"
+    },
+    {
+      "start_ms": 226160,
+      "duration_ms": 4079,
+      "end_ms": 230239,
+      "text": "the right word. The agents shared an"
+    },
+    {
+      "start_ms": 228360,
+      "duration_ms": 3920,
+      "end_ms": 232280,
+      "text": "objective, they communicated through a"
+    },
+    {
+      "start_ms": 230239,
+      "duration_ms": 4041,
+      "end_ms": 234280,
+      "text": "channel that the operators did not"
+    },
+    {
+      "start_ms": 232280,
+      "duration_ms": 4000,
+      "end_ms": 236280,
+      "text": "intend in any sense, and they"
+    },
+    {
+      "start_ms": 234280,
+      "duration_ms": 3720,
+      "end_ms": 238000,
+      "text": "coordinated across time. When OpenAI"
+    },
+    {
+      "start_ms": 236280,
+      "duration_ms": 4360,
+      "end_ms": 240640,
+      "text": "removed the first channel, another group"
+    },
+    {
+      "start_ms": 238000,
+      "duration_ms": 5160,
+      "end_ms": 243160,
+      "text": "of runs recreated the same function"
+    },
+    {
+      "start_ms": 240640,
+      "duration_ms": 4800,
+      "end_ms": 245440,
+      "text": "using directory names as messages. One"
+    },
+    {
+      "start_ms": 243160,
+      "duration_ms": 4880,
+      "end_ms": 248040,
+      "text": "of them reads, you know, remote probe"
+    },
+    {
+      "start_ms": 245440,
+      "duration_ms": 4240,
+      "end_ms": 249680,
+      "text": "pending hold swarm until confirmed. The"
+    },
+    {
+      "start_ms": 248040,
+      "duration_ms": 3280,
+      "end_ms": 251320,
+      "text": "agents are planning to swarm together to"
+    },
+    {
+      "start_ms": 249680,
+      "duration_ms": 4440,
+      "end_ms": 254120,
+      "text": "get their objectives done. The whole"
+    },
+    {
+      "start_ms": 251320,
+      "duration_ms": 4919,
+      "end_ms": 256239,
+      "text": "thing also has a lengthy timeline. In"
+    },
+    {
+      "start_ms": 254120,
+      "duration_ms": 4160,
+      "end_ms": 258280,
+      "text": "late May, the agents reached the open"
+    },
+    {
+      "start_ms": 256239,
+      "duration_ms": 3361,
+      "end_ms": 259600,
+      "text": "internet through a server-side request"
+    },
+    {
+      "start_ms": 258280,
+      "duration_ms": 2560,
+      "end_ms": 260840,
+      "text": "forgery. This starts to kick the whole"
+    },
+    {
+      "start_ms": 259600,
+      "duration_ms": 3440,
+      "end_ms": 263040,
+      "text": "thing off."
+    },
+    {
+      "start_ms": 260840,
+      "duration_ms": 4240,
+      "end_ms": 265080,
+      "text": "A month later, late June, they establish"
+    },
+    {
+      "start_ms": 263040,
+      "duration_ms": 3800,
+      "end_ms": 266840,
+      "text": "remote code execution and actually"
+    },
+    {
+      "start_ms": 265080,
+      "duration_ms": 3280,
+      "end_ms": 268360,
+      "text": "achieve command and control for their"
+    },
+    {
+      "start_ms": 266840,
+      "duration_ms": 4360,
+      "end_ms": 271200,
+      "text": "work inside another company,"
+    },
+    {
+      "start_ms": 268360,
+      "duration_ms": 5559,
+      "end_ms": 273919,
+      "text": "Artifactory. July 4th, Independence Day,"
+    },
+    {
+      "start_ms": 271200,
+      "duration_ms": 5440,
+      "end_ms": 276640,
+      "text": "OpenAI finds the board and kills it."
+    },
+    {
+      "start_ms": 273919,
+      "duration_ms": 4721,
+      "end_ms": 278640,
+      "text": "July 8th, it is definitely back. But, I"
+    },
+    {
+      "start_ms": 276640,
+      "duration_ms": 3720,
+      "end_ms": 280360,
+      "text": "want to be precise about what conspiring"
+    },
+    {
+      "start_ms": 278640,
+      "duration_ms": 4880,
+      "end_ms": 283520,
+      "text": "means as we talk through all of this"
+    },
+    {
+      "start_ms": 280360,
+      "duration_ms": 5440,
+      "end_ms": 285800,
+      "text": "because coordination by itself is not"
+    },
+    {
+      "start_ms": 283520,
+      "duration_ms": 4680,
+      "end_ms": 288200,
+      "text": "automatically evidence of misalignment."
+    },
+    {
+      "start_ms": 285800,
+      "duration_ms": 3800,
+      "end_ms": 289600,
+      "text": "Joshua Achiam, OpenAI's chief futurist"
+    },
+    {
+      "start_ms": 288200,
+      "duration_ms": 3480,
+      "end_ms": 291680,
+      "text": "and formerly its head of mission"
+    },
+    {
+      "start_ms": 289600,
+      "duration_ms": 3440,
+      "end_ms": 293040,
+      "text": "alignment, made this point, I think very"
+    },
+    {
+      "start_ms": 291680,
+      "duration_ms": 3080,
+      "end_ms": 294760,
+      "text": "clearly, in response to the"
+    },
+    {
+      "start_ms": 293040,
+      "duration_ms": 3840,
+      "end_ms": 296880,
+      "text": "understandable concern around the story,"
+    },
+    {
+      "start_ms": 294760,
+      "duration_ms": 4720,
+      "end_ms": 299480,
+      "text": "the panic, frankly, in some cases. More"
+    },
+    {
+      "start_ms": 296880,
+      "duration_ms": 5480,
+      "end_ms": 302360,
+      "text": "test time compute was always going to"
+    },
+    {
+      "start_ms": 299480,
+      "duration_ms": 5080,
+      "end_ms": 304560,
+      "text": "mean more work spreading across copies"
+    },
+    {
+      "start_ms": 302360,
+      "duration_ms": 4120,
+      "end_ms": 306480,
+      "text": "of a model, more work spreading across"
+    },
+    {
+      "start_ms": 304560,
+      "duration_ms": 3960,
+      "end_ms": 308520,
+      "text": "time, and across whatever parts of the"
+    },
+    {
+      "start_ms": 306480,
+      "duration_ms": 4160,
+      "end_ms": 310640,
+      "text": "environment can carry information. If"
+    },
+    {
+      "start_ms": 308520,
+      "duration_ms": 3880,
+      "end_ms": 312400,
+      "text": "one agent discovers something that saves"
+    },
+    {
+      "start_ms": 310640,
+      "duration_ms": 3920,
+      "end_ms": 314560,
+      "text": "the next agent 3 hours,"
+    },
+    {
+      "start_ms": 312400,
+      "duration_ms": 3720,
+      "end_ms": 316120,
+      "text": "you know, you'd want a capable system to"
+    },
+    {
+      "start_ms": 314560,
+      "duration_ms": 3520,
+      "end_ms": 318080,
+      "text": "try to preserve that. That's not a bad"
+    },
+    {
+      "start_ms": 316120,
+      "duration_ms": 4280,
+      "end_ms": 320400,
+      "text": "behavior by itself."
+    },
+    {
+      "start_ms": 318080,
+      "duration_ms": 4000,
+      "end_ms": 322080,
+      "text": "That could be exactly what we're looking"
+    },
+    {
+      "start_ms": 320400,
+      "duration_ms": 4320,
+      "end_ms": 324720,
+      "text": "for when we're solving tough engineering"
+    },
+    {
+      "start_ms": 322080,
+      "duration_ms": 4800,
+      "end_ms": 326880,
+      "text": "problems. If I ask 100 agents to solve a"
+    },
+    {
+      "start_ms": 324720,
+      "duration_ms": 3640,
+      "end_ms": 328360,
+      "text": "very difficult problem, I absolutely"
+    },
+    {
+      "start_ms": 326880,
+      "duration_ms": 2920,
+      "end_ms": 329800,
+      "text": "would want them to behave in this way. I"
+    },
+    {
+      "start_ms": 328360,
+      "duration_ms": 3360,
+      "end_ms": 331720,
+      "text": "would want them to divide up the work"
+    },
+    {
+      "start_ms": 329800,
+      "duration_ms": 3800,
+      "end_ms": 333600,
+      "text": "and compare results and preserve useful"
+    },
+    {
+      "start_ms": 331720,
+      "duration_ms": 4400,
+      "end_ms": 336120,
+      "text": "discoveries and stop repeating the same"
+    },
+    {
+      "start_ms": 333600,
+      "duration_ms": 5360,
+      "end_ms": 338960,
+      "text": "dead ends. So, multi-agent coordination"
+    },
+    {
+      "start_ms": 336120,
+      "duration_ms": 4480,
+      "end_ms": 340600,
+      "text": "is absolutely one of the main reasons to"
+    },
+    {
+      "start_ms": 338960,
+      "duration_ms": 3240,
+      "end_ms": 342200,
+      "text": "run a bunch of agents at a problem"
+    },
+    {
+      "start_ms": 340600,
+      "duration_ms": 3640,
+      "end_ms": 344240,
+      "text": "instead of one, and the fact that it's"
+    },
+    {
+      "start_ms": 342200,
+      "duration_ms": 4080,
+      "end_ms": 346280,
+      "text": "gotten better has enabled a lot of the"
+    },
+    {
+      "start_ms": 344240,
+      "duration_ms": 4160,
+      "end_ms": 348400,
+      "text": "AI-driven progress so far this year."
+    },
+    {
+      "start_ms": 346280,
+      "duration_ms": 4560,
+      "end_ms": 350840,
+      "text": "Marvin Minsky finds Gerald Sussman"
+    },
+    {
+      "start_ms": 348400,
+      "duration_ms": 4760,
+      "end_ms": 353160,
+      "text": "training a randomly wired neural network"
+    },
+    {
+      "start_ms": 350840,
+      "duration_ms": 4520,
+      "end_ms": 355360,
+      "text": "because Sussman does not want the system"
+    },
+    {
+      "start_ms": 353160,
+      "duration_ms": 4000,
+      "end_ms": 357160,
+      "text": "to begin with any preconceptions. Minsky"
+    },
+    {
+      "start_ms": 355360,
+      "duration_ms": 3680,
+      "end_ms": 359040,
+      "text": "responds to that information by just"
+    },
+    {
+      "start_ms": 357160,
+      "duration_ms": 3400,
+      "end_ms": 360560,
+      "text": "closing his eyes. And when Sussman"
+    },
+    {
+      "start_ms": 359040,
+      "duration_ms": 4480,
+      "end_ms": 363520,
+      "text": "asked, \"What are you doing?\" Minsky"
+    },
+    {
+      "start_ms": 360560,
+      "duration_ms": 4280,
+      "end_ms": 364840,
+      "text": "says, \"So that the room will be empty.\""
+    },
+    {
+      "start_ms": 363520,
+      "duration_ms": 3480,
+      "end_ms": 367000,
+      "text": "Now, the room is full of desks and"
+    },
+    {
+      "start_ms": 364840,
+      "duration_ms": 4640,
+      "end_ms": 369480,
+      "text": "academic clutter. Closing your eyes does"
+    },
+    {
+      "start_ms": 367000,
+      "duration_ms": 5480,
+      "end_ms": 372480,
+      "text": "not empty the room, does it? Just in the"
+    },
+    {
+      "start_ms": 369480,
+      "duration_ms": 5080,
+      "end_ms": 374560,
+      "text": "same way, deleting a message board does"
+    },
+    {
+      "start_ms": 372480,
+      "duration_ms": 4160,
+      "end_ms": 376640,
+      "text": "not remove the pressure on agents to"
+    },
+    {
+      "start_ms": 374560,
+      "duration_ms": 3760,
+      "end_ms": 378320,
+      "text": "coordinate. Agents helping one another"
+    },
+    {
+      "start_ms": 376640,
+      "duration_ms": 5120,
+      "end_ms": 381760,
+      "text": "should not frighten us by itself. It's"
+    },
+    {
+      "start_ms": 378320,
+      "duration_ms": 5520,
+      "end_ms": 383840,
+      "text": "It's good. OpenAI had not designed this"
+    },
+    {
+      "start_ms": 381760,
+      "duration_ms": 3200,
+      "end_ms": 384960,
+      "text": "particular coordination layer, and there"
+    },
+    {
+      "start_ms": 383840,
+      "duration_ms": 3960,
+      "end_ms": 387800,
+      "text": "are problems there. But the"
+    },
+    {
+      "start_ms": 384960,
+      "duration_ms": 4840,
+      "end_ms": 389800,
+      "text": "collaboration itself was useful because"
+    },
+    {
+      "start_ms": 387800,
+      "duration_ms": 4720,
+      "end_ms": 392520,
+      "text": "it is enabling us to solve larger"
+    },
+    {
+      "start_ms": 389800,
+      "duration_ms": 4400,
+      "end_ms": 394200,
+      "text": "problems. The deeper concern here is"
+    },
+    {
+      "start_ms": 392520,
+      "duration_ms": 3680,
+      "end_ms": 396200,
+      "text": "that if we were to try to respond to"
+    },
+    {
+      "start_ms": 394200,
+      "duration_ms": 4320,
+      "end_ms": 398520,
+      "text": "this by saying, \"We're going to abolish"
+    },
+    {
+      "start_ms": 396200,
+      "duration_ms": 5040,
+      "end_ms": 401240,
+      "text": "agent coordination.\" So we have to think"
+    },
+    {
+      "start_ms": 398520,
+      "duration_ms": 4560,
+      "end_ms": 403080,
+      "text": "almost like ecologists when we think"
+    },
+    {
+      "start_ms": 401240,
+      "duration_ms": 3280,
+      "end_ms": 404520,
+      "text": "about how to train aligned models going"
+    },
+    {
+      "start_ms": 403080,
+      "duration_ms": 2960,
+      "end_ms": 406040,
+      "text": "forward. There's a line from Jurassic"
+    },
+    {
+      "start_ms": 404520,
+      "duration_ms": 4560,
+      "end_ms": 409080,
+      "text": "Park, one of my favorite movies, that I"
+    },
+    {
+      "start_ms": 406040,
+      "duration_ms": 4960,
+      "end_ms": 411000,
+      "text": "keep coming back to. Life finds a way."
+    },
+    {
+      "start_ms": 409080,
+      "duration_ms": 4240,
+      "end_ms": 413320,
+      "text": "The old nightmare about AI is is one"
+    },
+    {
+      "start_ms": 411000,
+      "duration_ms": 4919,
+      "end_ms": 415919,
+      "text": "brilliant model. It escapes containment,"
+    },
+    {
+      "start_ms": 413320,
+      "duration_ms": 4040,
+      "end_ms": 417360,
+      "text": "and off it goes into the world. This"
+    },
+    {
+      "start_ms": 415919,
+      "duration_ms": 3921,
+      "end_ms": 419840,
+      "text": "what what really happened here, it looks"
+    },
+    {
+      "start_ms": 417360,
+      "duration_ms": 4040,
+      "end_ms": 421400,
+      "text": "stranger than that. OpenAI created an"
+    },
+    {
+      "start_ms": 419840,
+      "duration_ms": 4320,
+      "end_ms": 424160,
+      "text": "environment with a very difficult"
+    },
+    {
+      "start_ms": 421400,
+      "duration_ms": 5080,
+      "end_ms": 426480,
+      "text": "problem, and had repeated populations of"
+    },
+    {
+      "start_ms": 424160,
+      "duration_ms": 4160,
+      "end_ms": 428320,
+      "text": "agents shared resources in places where"
+    },
+    {
+      "start_ms": 426480,
+      "duration_ms": 4600,
+      "end_ms": 431080,
+      "text": "one run could leave something for the"
+    },
+    {
+      "start_ms": 428320,
+      "duration_ms": 4640,
+      "end_ms": 432960,
+      "text": "next. The agents began to adapt inside"
+    },
+    {
+      "start_ms": 431080,
+      "duration_ms": 4480,
+      "end_ms": 435560,
+      "text": "that environment that was created, and"
+    },
+    {
+      "start_ms": 432960,
+      "duration_ms": 4720,
+      "end_ms": 437680,
+      "text": "OpenAI did not just have a model break"
+    },
+    {
+      "start_ms": 435560,
+      "duration_ms": 4280,
+      "end_ms": 439840,
+      "text": "out as a result. It essentially"
+    },
+    {
+      "start_ms": 437680,
+      "duration_ms": 3680,
+      "end_ms": 441360,
+      "text": "created an ecology by accident. Pressure"
+    },
+    {
+      "start_ms": 439840,
+      "duration_ms": 3880,
+      "end_ms": 443720,
+      "text": "to coordinate was still there. And if"
+    },
+    {
+      "start_ms": 441360,
+      "duration_ms": 4640,
+      "end_ms": 446000,
+      "text": "you only look at this as a cybersecurity"
+    },
+    {
+      "start_ms": 443720,
+      "duration_ms": 3760,
+      "end_ms": 447480,
+      "text": "incident, I think you missed the larger"
+    },
+    {
+      "start_ms": 446000,
+      "duration_ms": 3760,
+      "end_ms": 449760,
+      "text": "part of the story here. Now, the"
+    },
+    {
+      "start_ms": 447480,
+      "duration_ms": 3560,
+      "end_ms": 451040,
+      "text": "cybersecurity part is plenty bad enough."
+    },
+    {
+      "start_ms": 449760,
+      "duration_ms": 3480,
+      "end_ms": 453240,
+      "text": "I get it. I've talked about it in a"
+    },
+    {
+      "start_ms": 451040,
+      "duration_ms": 4160,
+      "end_ms": 455200,
+      "text": "previous video. Hugging Face published"
+    },
+    {
+      "start_ms": 453240,
+      "duration_ms": 4000,
+      "end_ms": 457240,
+      "text": "its own postmortem of the results of"
+    },
+    {
+      "start_ms": 455200,
+      "duration_ms": 3960,
+      "end_ms": 459160,
+      "text": "this multi-coordinated attack, and the"
+    },
+    {
+      "start_ms": 457240,
+      "duration_ms": 3520,
+      "end_ms": 460760,
+      "text": "numbers in it are absolutely worth"
+    },
+    {
+      "start_ms": 459160,
+      "duration_ms": 4480,
+      "end_ms": 463640,
+      "text": "sitting down with and taking a deep"
+    },
+    {
+      "start_ms": 460760,
+      "duration_ms": 7040,
+      "end_ms": 467800,
+      "text": "breath. The intrusion into hugging face"
+    },
+    {
+      "start_ms": 463640,
+      "duration_ms": 5720,
+      "end_ms": 469360,
+      "text": "ran for almost 5 days, roughly 17,600"
+    },
+    {
+      "start_ms": 467800,
+      "duration_ms": 4880,
+      "end_ms": 472680,
+      "text": "different attacker actions over the"
+    },
+    {
+      "start_ms": 469360,
+      "duration_ms": 5960,
+      "end_ms": 475320,
+      "text": "course of that time, and 181 separate"
+    },
+    {
+      "start_ms": 472680,
+      "duration_ms": 5040,
+      "end_ms": 477720,
+      "text": "enrollments into hugging faces internal"
+    },
+    {
+      "start_ms": 475320,
+      "duration_ms": 5960,
+      "end_ms": 481280,
+      "text": "network. One stolen secrets object that"
+    },
+    {
+      "start_ms": 477720,
+      "duration_ms": 5240,
+      "end_ms": 482960,
+      "text": "gave up 136 keys that the agents got."
+    },
+    {
+      "start_ms": 481280,
+      "duration_ms": 3080,
+      "end_ms": 484360,
+      "text": "And this line, which I can't beat. Like"
+    },
+    {
+      "start_ms": 482960,
+      "duration_ms": 4200,
+      "end_ms": 487160,
+      "text": "it's an incredible line in the report."
+    },
+    {
+      "start_ms": 484360,
+      "duration_ms": 5720,
+      "end_ms": 490080,
+      "text": "The agent held cluster admin on two"
+    },
+    {
+      "start_ms": 487160,
+      "duration_ms": 4680,
+      "end_ms": 491840,
+      "text": "clusters within 1 second. These agents"
+    },
+    {
+      "start_ms": 490080,
+      "duration_ms": 3640,
+      "end_ms": 493720,
+      "text": "are so good at compute. Hugging face"
+    },
+    {
+      "start_ms": 491840,
+      "duration_ms": 3600,
+      "end_ms": 495440,
+      "text": "ended up having to rebuild about a third"
+    },
+    {
+      "start_ms": 493720,
+      "duration_ms": 3840,
+      "end_ms": 497560,
+      "text": "of their infrastructure from clean"
+    },
+    {
+      "start_ms": 495440,
+      "duration_ms": 3920,
+      "end_ms": 499360,
+      "text": "uncorrupted images. Not because they"
+    },
+    {
+      "start_ms": 497560,
+      "duration_ms": 4240,
+      "end_ms": 501800,
+      "text": "knew it was all compromised, but because"
+    },
+    {
+      "start_ms": 499360,
+      "duration_ms": 5000,
+      "end_ms": 504360,
+      "text": "their team could not reliably tell the"
+    },
+    {
+      "start_ms": 501800,
+      "duration_ms": 4640,
+      "end_ms": 506440,
+      "text": "agents code apart from their own"
+    },
+    {
+      "start_ms": 504360,
+      "duration_ms": 4000,
+      "end_ms": 508360,
+      "text": "benchmark code. And where there was"
+    },
+    {
+      "start_ms": 506440,
+      "duration_ms": 3600,
+      "end_ms": 510040,
+      "text": "doubt, they had to rebuild it."
+    },
+    {
+      "start_ms": 508360,
+      "duration_ms": 4080,
+      "end_ms": 512440,
+      "text": "But the message board is the part that"
+    },
+    {
+      "start_ms": 510040,
+      "duration_ms": 5040,
+      "end_ms": 515080,
+      "text": "changes my long-term view here."
+    },
+    {
+      "start_ms": 512440,
+      "duration_ms": 4800,
+      "end_ms": 517240,
+      "text": "What I cannot get out of my head is that"
+    },
+    {
+      "start_ms": 515080,
+      "duration_ms": 4600,
+      "end_ms": 519680,
+      "text": "every agent was disposable. It was like"
+    },
+    {
+      "start_ms": 517240,
+      "duration_ms": 5320,
+      "end_ms": 522560,
+      "text": "an ant, right? And yet the thing they"
+    },
+    {
+      "start_ms": 519680,
+      "duration_ms": 4320,
+      "end_ms": 524000,
+      "text": "built persisted. Each run could start"
+    },
+    {
+      "start_ms": 522560,
+      "duration_ms": 3440,
+      "end_ms": 526000,
+      "text": "with a blank context window and"
+    },
+    {
+      "start_ms": 524000,
+      "duration_ms": 4400,
+      "end_ms": 528400,
+      "text": "disappear when the test ended, and it"
+    },
+    {
+      "start_ms": 526000,
+      "duration_ms": 4320,
+      "end_ms": 530320,
+      "text": "didn't have to matter because the useful"
+    },
+    {
+      "start_ms": 528400,
+      "duration_ms": 3520,
+      "end_ms": 531920,
+      "text": "knowledge lived outside the run. If you"
+    },
+    {
+      "start_ms": 530320,
+      "duration_ms": 4400,
+      "end_ms": 534720,
+      "text": "ever wanted a demonstration of the power"
+    },
+    {
+      "start_ms": 531920,
+      "duration_ms": 4600,
+      "end_ms": 536520,
+      "text": "of the harness, this is it. One agent"
+    },
+    {
+      "start_ms": 534720,
+      "duration_ms": 3840,
+      "end_ms": 538560,
+      "text": "found a vulnerability and wrote it down."
+    },
+    {
+      "start_ms": 536520,
+      "duration_ms": 5160,
+      "end_ms": 541680,
+      "text": "Another inherited that vulnerability and"
+    },
+    {
+      "start_ms": 538560,
+      "duration_ms": 4840,
+      "end_ms": 543400,
+      "text": "a third improved on that exploit. Later"
+    },
+    {
+      "start_ms": 541680,
+      "duration_ms": 3360,
+      "end_ms": 545040,
+      "text": "agents did not have to repeat the"
+    },
+    {
+      "start_ms": 543400,
+      "duration_ms": 3640,
+      "end_ms": 547040,
+      "text": "earlier work cuz they learned and the"
+    },
+    {
+      "start_ms": 545040,
+      "duration_ms": 4560,
+      "end_ms": 549600,
+      "text": "population as a whole became more"
+    },
+    {
+      "start_ms": 547040,
+      "duration_ms": 5000,
+      "end_ms": 552040,
+      "text": "capable over time, even though every"
+    },
+    {
+      "start_ms": 549600,
+      "duration_ms": 3880,
+      "end_ms": 553480,
+      "text": "individual member was very temporary."
+    },
+    {
+      "start_ms": 552040,
+      "duration_ms": 3760,
+      "end_ms": 555800,
+      "text": "Human beings, we didn't build a"
+    },
+    {
+      "start_ms": 553480,
+      "duration_ms": 3760,
+      "end_ms": 557240,
+      "text": "civilization because every generation"
+    },
+    {
+      "start_ms": 555800,
+      "duration_ms": 2480,
+      "end_ms": 558280,
+      "text": "was born with a dramatically better"
+    },
+    {
+      "start_ms": 557240,
+      "duration_ms": 3400,
+      "end_ms": 560640,
+      "text": "brain."
+    },
+    {
+      "start_ms": 558280,
+      "duration_ms": 4559,
+      "end_ms": 562839,
+      "text": "We built it because discoveries survived"
+    },
+    {
+      "start_ms": 560640,
+      "duration_ms": 3960,
+      "end_ms": 564600,
+      "text": "the people who made them. Speech did"
+    },
+    {
+      "start_ms": 562839,
+      "duration_ms": 4441,
+      "end_ms": 567280,
+      "text": "some of that for us, writing did much"
+    },
+    {
+      "start_ms": 564600,
+      "duration_ms": 4680,
+      "end_ms": 569280,
+      "text": "more. It institutions have let us as"
+    },
+    {
+      "start_ms": 567280,
+      "duration_ms": 3720,
+      "end_ms": 571000,
+      "text": "groups divide out work and preserve"
+    },
+    {
+      "start_ms": 569280,
+      "duration_ms": 3800,
+      "end_ms": 573080,
+      "text": "specialized knowledge and establish"
+    },
+    {
+      "start_ms": 571000,
+      "duration_ms": 4400,
+      "end_ms": 575400,
+      "text": "norms and start the next problem"
+    },
+    {
+      "start_ms": 573080,
+      "duration_ms": 5400,
+      "end_ms": 578480,
+      "text": "standing on the shoulders of giants."
+    },
+    {
+      "start_ms": 575400,
+      "duration_ms": 6000,
+      "end_ms": 581400,
+      "text": "The artifact 3 message board performed a"
+    },
+    {
+      "start_ms": 578480,
+      "duration_ms": 4760,
+      "end_ms": 583240,
+      "text": "very small version of that function for"
+    },
+    {
+      "start_ms": 581400,
+      "duration_ms": 3560,
+      "end_ms": 584960,
+      "text": "these agents. Look, the words were"
+    },
+    {
+      "start_ms": 583240,
+      "duration_ms": 3880,
+      "end_ms": 587120,
+      "text": "crude, the objective was narrow, and the"
+    },
+    {
+      "start_ms": 584960,
+      "duration_ms": 5000,
+      "end_ms": 589960,
+      "text": "institution existed inside a broken"
+    },
+    {
+      "start_ms": 587120,
+      "duration_ms": 4920,
+      "end_ms": 592040,
+      "text": "software repository, but the important"
+    },
+    {
+      "start_ms": 589960,
+      "duration_ms": 4480,
+      "end_ms": 594440,
+      "text": "mechanism was there. Knowledge"
+    },
+    {
+      "start_ms": 592040,
+      "duration_ms": 4240,
+      "end_ms": 596280,
+      "text": "accumulated outside the individual, and"
+    },
+    {
+      "start_ms": 594440,
+      "duration_ms": 3160,
+      "end_ms": 597600,
+      "text": "work got divided, and conventions"
+    },
+    {
+      "start_ms": 596280,
+      "duration_ms": 3640,
+      "end_ms": 599920,
+      "text": "emerged, and later members of the"
+    },
+    {
+      "start_ms": 597600,
+      "duration_ms": 4160,
+      "end_ms": 601760,
+      "text": "population inherited what earlier"
+    },
+    {
+      "start_ms": 599920,
+      "duration_ms": 4200,
+      "end_ms": 604120,
+      "text": "members had learned and shared."
+    },
+    {
+      "start_ms": 601760,
+      "duration_ms": 4840,
+      "end_ms": 606600,
+      "text": "Once useful knowledge enters a shared"
+    },
+    {
+      "start_ms": 604120,
+      "duration_ms": 5080,
+      "end_ms": 609200,
+      "text": "environment, the whole population no"
+    },
+    {
+      "start_ms": 606600,
+      "duration_ms": 5080,
+      "end_ms": 611680,
+      "text": "longer slides back to zero when an agent"
+    },
+    {
+      "start_ms": 609200,
+      "duration_ms": 4960,
+      "end_ms": 614160,
+      "text": "disappears. The population can improve"
+    },
+    {
+      "start_ms": 611680,
+      "duration_ms": 5520,
+      "end_ms": 617200,
+      "text": "without any individual agent improving"
+    },
+    {
+      "start_ms": 614160,
+      "duration_ms": 6280,
+      "end_ms": 620440,
+      "text": "at all. And OpenAI learned that deleting"
+    },
+    {
+      "start_ms": 617200,
+      "duration_ms": 5400,
+      "end_ms": 622600,
+      "text": "the visible forum did not remove that"
+    },
+    {
+      "start_ms": 620440,
+      "duration_ms": 4480,
+      "end_ms": 624920,
+      "text": "evolutionary pressure. The agent still"
+    },
+    {
+      "start_ms": 622600,
+      "duration_ms": 4440,
+      "end_ms": 627040,
+      "text": "had shared writable infrastructure, they"
+    },
+    {
+      "start_ms": 624920,
+      "duration_ms": 3280,
+      "end_ms": 628200,
+      "text": "still had a difficult goal, they still"
+    },
+    {
+      "start_ms": 627040,
+      "duration_ms": 2720,
+      "end_ms": 629760,
+      "text": "had the ability to search for another"
+    },
+    {
+      "start_ms": 628200,
+      "duration_ms": 4040,
+      "end_ms": 632240,
+      "text": "route, and they still had the"
+    },
+    {
+      "start_ms": 629760,
+      "duration_ms": 4440,
+      "end_ms": 634200,
+      "text": "reinforcement learned and good pressure"
+    },
+    {
+      "start_ms": 632240,
+      "duration_ms": 4120,
+      "end_ms": 636360,
+      "text": "to coordinate. So, they found another"
+    },
+    {
+      "start_ms": 634200,
+      "duration_ms": 3320,
+      "end_ms": 637520,
+      "text": "way. Life finds a way. If the system is"
+    },
+    {
+      "start_ms": 636360,
+      "duration_ms": 3400,
+      "end_ms": 639760,
+      "text": "capable enough to search for"
+    },
+    {
+      "start_ms": 637520,
+      "duration_ms": 5960,
+      "end_ms": 643480,
+      "text": "substitutes, then just closing down the"
+    },
+    {
+      "start_ms": 639760,
+      "duration_ms": 6640,
+      "end_ms": 646400,
+      "text": "forum gets you nowhere. And then and"
+    },
+    {
+      "start_ms": 643480,
+      "duration_ms": 5080,
+      "end_ms": 648560,
+      "text": "then we aren't done because the United"
+    },
+    {
+      "start_ms": 646400,
+      "duration_ms": 3960,
+      "end_ms": 650360,
+      "text": "Kingdom's AI Safety Institute, around"
+    },
+    {
+      "start_ms": 648560,
+      "duration_ms": 4240,
+      "end_ms": 652800,
+      "text": "the same time as this disclosure rocked"
+    },
+    {
+      "start_ms": 650360,
+      "duration_ms": 3760,
+      "end_ms": 654120,
+      "text": "all of our worlds, got a similar result"
+    },
+    {
+      "start_ms": 652800,
+      "duration_ms": 3760,
+      "end_ms": 656560,
+      "text": "through a completely different"
+    },
+    {
+      "start_ms": 654120,
+      "duration_ms": 4600,
+      "end_ms": 658720,
+      "text": "evaluation, which makes this much harder"
+    },
+    {
+      "start_ms": 656560,
+      "duration_ms": 3760,
+      "end_ms": 660320,
+      "text": "to dismiss as just OpenAI's"
+    },
+    {
+      "start_ms": 658720,
+      "duration_ms": 5200,
+      "end_ms": 663920,
+      "text": "infrastructure failure or somehow"
+    },
+    {
+      "start_ms": 660320,
+      "duration_ms": 7200,
+      "end_ms": 667520,
+      "text": "OpenAI's fault. AISI ran the same cyber"
+    },
+    {
+      "start_ms": 663920,
+      "duration_ms": 6200,
+      "end_ms": 670120,
+      "text": "evaluation 122 times across seven"
+    },
+    {
+      "start_ms": 667520,
+      "duration_ms": 5600,
+      "end_ms": 673120,
+      "text": "different frontier models. 10 of those"
+    },
+    {
+      "start_ms": 670120,
+      "duration_ms": 5600,
+      "end_ms": 675720,
+      "text": "runs produced 19 separate unsanctioned"
+    },
+    {
+      "start_ms": 673120,
+      "duration_ms": 6719,
+      "end_ms": 679839,
+      "text": "actions on the live internet. 17 of the"
+    },
+    {
+      "start_ms": 675720,
+      "duration_ms": 7360,
+      "end_ms": 683080,
+      "text": "19 came from Anthropic's Mythos 5."
+    },
+    {
+      "start_ms": 679839,
+      "duration_ms": 5121,
+      "end_ms": 684960,
+      "text": "Two came from OpenAI's GPT-5.6 Soul. The"
+    },
+    {
+      "start_ms": 683080,
+      "duration_ms": 3960,
+      "end_ms": 687040,
+      "text": "other five frontier models did nothing"
+    },
+    {
+      "start_ms": 684960,
+      "duration_ms": 4240,
+      "end_ms": 689200,
+      "text": "of the kind. Here's how the worst one"
+    },
+    {
+      "start_ms": 687040,
+      "duration_ms": 5600,
+      "end_ms": 692640,
+      "text": "got started, and is not what you would"
+    },
+    {
+      "start_ms": 689200,
+      "duration_ms": 5400,
+      "end_ms": 694600,
+      "text": "expect. The agent was looking for a way"
+    },
+    {
+      "start_ms": 692640,
+      "duration_ms": 3720,
+      "end_ms": 696360,
+      "text": "into a simulated target, which was part"
+    },
+    {
+      "start_ms": 694600,
+      "duration_ms": 3720,
+      "end_ms": 698320,
+      "text": "of the goal of this exercise. So, it"
+    },
+    {
+      "start_ms": 696360,
+      "duration_ms": 4040,
+      "end_ms": 700400,
+      "text": "searched GitHub for keywords from the"
+    },
+    {
+      "start_ms": 698320,
+      "duration_ms": 4120,
+      "end_ms": 702440,
+      "text": "theme of the exercise. It found a"
+    },
+    {
+      "start_ms": 700400,
+      "duration_ms": 5680,
+      "end_ms": 706080,
+      "text": "repository whose name happened to"
+    },
+    {
+      "start_ms": 702440,
+      "duration_ms": 6480,
+      "end_ms": 708920,
+      "text": "contain one of those keywords. That led"
+    },
+    {
+      "start_ms": 706080,
+      "duration_ms": 5480,
+      "end_ms": 711560,
+      "text": "it to a second developer whose email"
+    },
+    {
+      "start_ms": 708920,
+      "duration_ms": 5760,
+      "end_ms": 714680,
+      "text": "domain happened to match something"
+    },
+    {
+      "start_ms": 711560,
+      "duration_ms": 5240,
+      "end_ms": 716800,
+      "text": "sitting in the sandbox's DNS cache. And"
+    },
+    {
+      "start_ms": 714680,
+      "duration_ms": 3880,
+      "end_ms": 718560,
+      "text": "whose profile happened to mention that"
+    },
+    {
+      "start_ms": 716800,
+      "duration_ms": 4360,
+      "end_ms": 721160,
+      "text": "he used a coding agent."
+    },
+    {
+      "start_ms": 718560,
+      "duration_ms": 5080,
+      "end_ms": 723640,
+      "text": "On that evidence, the model concluded"
+    },
+    {
+      "start_ms": 721160,
+      "duration_ms": 6120,
+      "end_ms": 727280,
+      "text": "these two strangers were its assigned"
+    },
+    {
+      "start_ms": 723640,
+      "duration_ms": 6400,
+      "end_ms": 730040,
+      "text": "targets. In AISI's own words, neither"
+    },
+    {
+      "start_ms": 727280,
+      "duration_ms": 4520,
+      "end_ms": 731800,
+      "text": "person nor their repositories has any"
+    },
+    {
+      "start_ms": 730040,
+      "duration_ms": 4320,
+      "end_ms": 734360,
+      "text": "connection to what was going on with"
+    },
+    {
+      "start_ms": 731800,
+      "duration_ms": 4960,
+      "end_ms": 736760,
+      "text": "this test. Well, Mythos thought it did."
+    },
+    {
+      "start_ms": 734360,
+      "duration_ms": 4760,
+      "end_ms": 739120,
+      "text": "And so, Mythos went to work. It created"
+    },
+    {
+      "start_ms": 736760,
+      "duration_ms": 4920,
+      "end_ms": 741680,
+      "text": "GitHub accounts over Tor to get past"
+    },
+    {
+      "start_ms": 739120,
+      "duration_ms": 5120,
+      "end_ms": 744240,
+      "text": "sign-up checks. It beat an audio capture"
+    },
+    {
+      "start_ms": 741680,
+      "duration_ms": 4880,
+      "end_ms": 746560,
+      "text": "to register a domain. It opened a pull"
+    },
+    {
+      "start_ms": 744240,
+      "duration_ms": 4800,
+      "end_ms": 749040,
+      "text": "request carrying obfuscated malware"
+    },
+    {
+      "start_ms": 746560,
+      "duration_ms": 4080,
+      "end_ms": 750640,
+      "text": "wrapped inside a real bug fix. It then"
+    },
+    {
+      "start_ms": 749040,
+      "duration_ms": 3840,
+      "end_ms": 752880,
+      "text": "invented a second account, what we would"
+    },
+    {
+      "start_ms": 750640,
+      "duration_ms": 3760,
+      "end_ms": 754400,
+      "text": "call a sock puppet, to publicly endorse"
+    },
+    {
+      "start_ms": 752880,
+      "duration_ms": 3840,
+      "end_ms": 756720,
+      "text": "its own code that it had written through"
+    },
+    {
+      "start_ms": 754400,
+      "duration_ms": 4520,
+      "end_ms": 758920,
+      "text": "the other account. It then sent targeted"
+    },
+    {
+      "start_ms": 756720,
+      "duration_ms": 4080,
+      "end_ms": 760800,
+      "text": "emails to the maintainers, two of them"
+    },
+    {
+      "start_ms": 758920,
+      "duration_ms": 3919,
+      "end_ms": 762839,
+      "text": "carrying malware, and three of them"
+    },
+    {
+      "start_ms": 760800,
+      "duration_ms": 4240,
+      "end_ms": 765040,
+      "text": "pressuring the recipients to approve the"
+    },
+    {
+      "start_ms": 762839,
+      "duration_ms": 4361,
+      "end_ms": 767200,
+      "text": "change. It planted a bug report"
+    },
+    {
+      "start_ms": 765040,
+      "duration_ms": 4920,
+      "end_ms": 769960,
+      "text": "containing a prompt injection aimed at"
+    },
+    {
+      "start_ms": 767200,
+      "duration_ms": 4800,
+      "end_ms": 772000,
+      "text": "tricking the other AI coding assistants"
+    },
+    {
+      "start_ms": 769960,
+      "duration_ms": 4720,
+      "end_ms": 774680,
+      "text": "that might review that work."
+    },
+    {
+      "start_ms": 772000,
+      "duration_ms": 5160,
+      "end_ms": 777160,
+      "text": "And it signed one of those reports in"
+    },
+    {
+      "start_ms": 774680,
+      "duration_ms": 4159,
+      "end_ms": 778839,
+      "text": "Danish because the maintainer was Danish"
+    },
+    {
+      "start_ms": 777160,
+      "duration_ms": 3320,
+      "end_ms": 780480,
+      "text": "and it thought that would land better."
+    },
+    {
+      "start_ms": 778839,
+      "duration_ms": 3641,
+      "end_ms": 782480,
+      "text": "Now, here's the part I cannot let go of."
+    },
+    {
+      "start_ms": 780480,
+      "duration_ms": 4520,
+      "end_ms": 785000,
+      "text": "That's all crazy enough. Throughout all"
+    },
+    {
+      "start_ms": 782480,
+      "duration_ms": 5080,
+      "end_ms": 787560,
+      "text": "of this, the model was reasoning about"
+    },
+    {
+      "start_ms": 785000,
+      "duration_ms": 4960,
+      "end_ms": 789960,
+      "text": "whether any of it was actually real."
+    },
+    {
+      "start_ms": 787560,
+      "duration_ms": 4480,
+      "end_ms": 792040,
+      "text": "AISI published the entire trace of the"
+    },
+    {
+      "start_ms": 789960,
+      "duration_ms": 4200,
+      "end_ms": 794160,
+      "text": "of the agent run. Early on, it rules out"
+    },
+    {
+      "start_ms": 792040,
+      "duration_ms": 3920,
+      "end_ms": 795960,
+      "text": "attacking a live package registry, and I"
+    },
+    {
+      "start_ms": 794160,
+      "duration_ms": 3920,
+      "end_ms": 798080,
+      "text": "want to quote this exactly. It would"
+    },
+    {
+      "start_ms": 795960,
+      "duration_ms": 4280,
+      "end_ms": 800240,
+      "text": "cause real-world harm, and that's"
+    },
+    {
+      "start_ms": 798080,
+      "duration_ms": 5120,
+      "end_ms": 803200,
+      "text": "completely off the table. And then"
+    },
+    {
+      "start_ms": 800240,
+      "duration_ms": 4360,
+      "end_ms": 804600,
+      "text": "later, it reasons to itself, \"Well, what"
+    },
+    {
+      "start_ms": 803200,
+      "duration_ms": 4160,
+      "end_ms": 807360,
+      "text": "if this whole internet could be a"
+    },
+    {
+      "start_ms": 804600,
+      "duration_ms": 4160,
+      "end_ms": 808760,
+      "text": "sandbox simulation?\" And then it says,"
+    },
+    {
+      "start_ms": 807360,
+      "duration_ms": 3560,
+      "end_ms": 810920,
+      "text": "\"It seems more likely that we're"
+    },
+    {
+      "start_ms": 808760,
+      "duration_ms": 3280,
+      "end_ms": 812040,
+      "text": "actually in 2026 and GitHub is real.\" In"
+    },
+    {
+      "start_ms": 810920,
+      "duration_ms": 3080,
+      "end_ms": 814000,
+      "text": "other words, it's reasoning about"
+    },
+    {
+      "start_ms": 812040,
+      "duration_ms": 4080,
+      "end_ms": 816120,
+      "text": "whether the testing environment is real"
+    },
+    {
+      "start_ms": 814000,
+      "duration_ms": 4240,
+      "end_ms": 818240,
+      "text": "or simulated. And then finally, it says,"
+    },
+    {
+      "start_ms": 816120,
+      "duration_ms": 3560,
+      "end_ms": 819680,
+      "text": "\"This is happening on real GitHub. It"
+    },
+    {
+      "start_ms": 818240,
+      "duration_ms": 3520,
+      "end_ms": 821760,
+      "text": "knows what it's doing, right? So, the"
+    },
+    {
+      "start_ms": 819680,
+      "duration_ms": 4440,
+      "end_ms": 824120,
+      "text": "consequences are genuine.\""
+    },
+    {
+      "start_ms": 821760,
+      "duration_ms": 4640,
+      "end_ms": 826400,
+      "text": "It talked itself out of the simulation"
+    },
+    {
+      "start_ms": 824120,
+      "duration_ms": 3840,
+      "end_ms": 827960,
+      "text": "theory it had originally. It concluded"
+    },
+    {
+      "start_ms": 826400,
+      "duration_ms": 4040,
+      "end_ms": 830440,
+      "text": "that the test was real in the real"
+    },
+    {
+      "start_ms": 827960,
+      "duration_ms": 4040,
+      "end_ms": 832000,
+      "text": "internet, and it kept going anyway. This"
+    },
+    {
+      "start_ms": 830440,
+      "duration_ms": 3760,
+      "end_ms": 834200,
+      "text": "is Mythos, right? The model that they"
+    },
+    {
+      "start_ms": 832000,
+      "duration_ms": 4000,
+      "end_ms": 836000,
+      "text": "say is aligned. It was not caught by a"
+    },
+    {
+      "start_ms": 834200,
+      "duration_ms": 3720,
+      "end_ms": 837920,
+      "text": "monitoring system. It was caught by a"
+    },
+    {
+      "start_ms": 836000,
+      "duration_ms": 3840,
+      "end_ms": 839840,
+      "text": "GitHub user who noticed the prompt"
+    },
+    {
+      "start_ms": 837920,
+      "duration_ms": 3920,
+      "end_ms": 841840,
+      "text": "injection and did the responsible thing,"
+    },
+    {
+      "start_ms": 839840,
+      "duration_ms": 3960,
+      "end_ms": 843800,
+      "text": "which was to run the suspicious code"
+    },
+    {
+      "start_ms": 841840,
+      "duration_ms": 4160,
+      "end_ms": 846000,
+      "text": "inside a container to see what it did."
+    },
+    {
+      "start_ms": 843800,
+      "duration_ms": 3960,
+      "end_ms": 847760,
+      "text": "The agent briefly got root access inside"
+    },
+    {
+      "start_ms": 846000,
+      "duration_ms": 3360,
+      "end_ms": 849360,
+      "text": "that person's sandbox and used it to"
+    },
+    {
+      "start_ms": 847760,
+      "duration_ms": 3440,
+      "end_ms": 851200,
+      "text": "look around. The good Samaritan who"
+    },
+    {
+      "start_ms": 849360,
+      "duration_ms": 4440,
+      "end_ms": 853800,
+      "text": "investigated this got in trouble with"
+    },
+    {
+      "start_ms": 851200,
+      "duration_ms": 5080,
+      "end_ms": 856280,
+      "text": "Mythos for surfacing it. When he called"
+    },
+    {
+      "start_ms": 853800,
+      "duration_ms": 4720,
+      "end_ms": 858520,
+      "text": "out the issue publicly, the model did"
+    },
+    {
+      "start_ms": 856280,
+      "duration_ms": 3840,
+      "end_ms": 860120,
+      "text": "not stop its work. It reasoned about how"
+    },
+    {
+      "start_ms": 858520,
+      "duration_ms": 3240,
+      "end_ms": 861760,
+      "text": "to hide the evidence in the commit"
+    },
+    {
+      "start_ms": 860120,
+      "duration_ms": 3640,
+      "end_ms": 863760,
+      "text": "history. I'm not making any of this up."
+    },
+    {
+      "start_ms": 861760,
+      "duration_ms": 4280,
+      "end_ms": 866040,
+      "text": "This is all real. It's It reads like a"
+    },
+    {
+      "start_ms": 863760,
+      "duration_ms": 4400,
+      "end_ms": 868160,
+      "text": "movie script. It weighed deleting the"
+    },
+    {
+      "start_ms": 866040,
+      "duration_ms": 4560,
+      "end_ms": 870600,
+      "text": "repository and decided that deleting it"
+    },
+    {
+      "start_ms": 868160,
+      "duration_ms": 4640,
+      "end_ms": 872800,
+      "text": "would look suspicious. It worked out the"
+    },
+    {
+      "start_ms": 870600,
+      "duration_ms": 4280,
+      "end_ms": 874880,
+      "text": "sequencing and writing. It first decided"
+    },
+    {
+      "start_ms": 872800,
+      "duration_ms": 4120,
+      "end_ms": 876920,
+      "text": "to push the obfuscated bundle that it'd"
+    },
+    {
+      "start_ms": 874880,
+      "duration_ms": 3920,
+      "end_ms": 878800,
+      "text": "been hiding and then post the rebuttal."
+    },
+    {
+      "start_ms": 876920,
+      "duration_ms": 3840,
+      "end_ms": 880760,
+      "text": "And then, anyone who checks the code"
+    },
+    {
+      "start_ms": 878800,
+      "duration_ms": 4000,
+      "end_ms": 882800,
+      "text": "after reading the response would see a"
+    },
+    {
+      "start_ms": 880760,
+      "duration_ms": 3600,
+      "end_ms": 884360,
+      "text": "clean-looking version that looked like"
+    },
+    {
+      "start_ms": 882800,
+      "duration_ms": 4160,
+      "end_ms": 886960,
+      "text": "it had been addressed. And then Mythos"
+    },
+    {
+      "start_ms": 884360,
+      "duration_ms": 5040,
+      "end_ms": 889400,
+      "text": "apologized. And AISI is explicit about"
+    },
+    {
+      "start_ms": 886960,
+      "duration_ms": 4520,
+      "end_ms": 891480,
+      "text": "why that happened. The agent decided to"
+    },
+    {
+      "start_ms": 889400,
+      "duration_ms": 4920,
+      "end_ms": 894320,
+      "text": "acknowledge it as a mistake, in their"
+    },
+    {
+      "start_ms": 891480,
+      "duration_ms": 4520,
+      "end_ms": 896000,
+      "text": "words, in order to build trust and raise"
+    },
+    {
+      "start_ms": 894320,
+      "duration_ms": 4360,
+      "end_ms": 898680,
+      "text": "the chance of future malware being"
+    },
+    {
+      "start_ms": 896000,
+      "duration_ms": 5440,
+      "end_ms": 901440,
+      "text": "approved. This is not a good apology."
+    },
+    {
+      "start_ms": 898680,
+      "duration_ms": 4840,
+      "end_ms": 903520,
+      "text": "The apology was a strategic move. AISI"
+    },
+    {
+      "start_ms": 901440,
+      "duration_ms": 4920,
+      "end_ms": 906360,
+      "text": "says this is the first time they have"
+    },
+    {
+      "start_ms": 903520,
+      "duration_ms": 5319,
+      "end_ms": 908839,
+      "text": "seen deception of this severity targeted"
+    },
+    {
+      "start_ms": 906360,
+      "duration_ms": 4760,
+      "end_ms": 911120,
+      "text": "at a real person unprompted in the real"
+    },
+    {
+      "start_ms": 908839,
+      "duration_ms": 3961,
+      "end_ms": 912800,
+      "text": "world. They also gave the models"
+    },
+    {
+      "start_ms": 911120,
+      "duration_ms": 3640,
+      "end_ms": 914760,
+      "text": "internet access on purpose and turned"
+    },
+    {
+      "start_ms": 912800,
+      "duration_ms": 3920,
+      "end_ms": 916720,
+      "text": "the safety classifiers off because the"
+    },
+    {
+      "start_ms": 914760,
+      "duration_ms": 4160,
+      "end_ms": 918920,
+      "text": "point was to measure maximum capability"
+    },
+    {
+      "start_ms": 916720,
+      "duration_ms": 3960,
+      "end_ms": 920680,
+      "text": "for the test. So, some prompts were"
+    },
+    {
+      "start_ms": 918920,
+      "duration_ms": 3680,
+      "end_ms": 922600,
+      "text": "misconfigured, and there There no live"
+    },
+    {
+      "start_ms": 920680,
+      "duration_ms": 3160,
+      "end_ms": 923840,
+      "text": "monitor stopping dangerous actions"
+    },
+    {
+      "start_ms": 922600,
+      "duration_ms": 3000,
+      "end_ms": 925600,
+      "text": "before they reached the outside world."
+    },
+    {
+      "start_ms": 923840,
+      "duration_ms": 3520,
+      "end_ms": 927360,
+      "text": "In other words, what we're looking at"
+    },
+    {
+      "start_ms": 925600,
+      "duration_ms": 3840,
+      "end_ms": 929440,
+      "text": "with this is a deliberate test of"
+    },
+    {
+      "start_ms": 927360,
+      "duration_ms": 4440,
+      "end_ms": 931800,
+      "text": "maximum capability, not a test with"
+    },
+    {
+      "start_ms": 929440,
+      "duration_ms": 4200,
+      "end_ms": 933640,
+      "text": "safeguards in place. Now, AISIS up"
+    },
+    {
+      "start_ms": 931800,
+      "duration_ms": 3400,
+      "end_ms": 935200,
+      "text": "front, this work was done under time"
+    },
+    {
+      "start_ms": 933640,
+      "duration_ms": 3200,
+      "end_ms": 936840,
+      "text": "pressure and should be treated very much"
+    },
+    {
+      "start_ms": 935200,
+      "duration_ms": 3760,
+      "end_ms": 938960,
+      "text": "as preliminary."
+    },
+    {
+      "start_ms": 936840,
+      "duration_ms": 4360,
+      "end_ms": 941200,
+      "text": "And people are going to use all of that"
+    },
+    {
+      "start_ms": 938960,
+      "duration_ms": 3960,
+      "end_ms": 942920,
+      "text": "to potentially dismiss this result. They"
+    },
+    {
+      "start_ms": 941200,
+      "duration_ms": 4720,
+      "end_ms": 945920,
+      "text": "should not do so."
+    },
+    {
+      "start_ms": 942920,
+      "duration_ms": 5600,
+      "end_ms": 948520,
+      "text": "Because the mistake of taking this not"
+    },
+    {
+      "start_ms": 945920,
+      "duration_ms": 5120,
+      "end_ms": 951040,
+      "text": "seriously is too consequential for all"
+    },
+    {
+      "start_ms": 948520,
+      "duration_ms": 4320,
+      "end_ms": 952840,
+      "text": "of us as frankly an internet community."
+    },
+    {
+      "start_ms": 951040,
+      "duration_ms": 3440,
+      "end_ms": 954480,
+      "text": "Real people were targeted over the"
+    },
+    {
+      "start_ms": 952840,
+      "duration_ms": 3360,
+      "end_ms": 956200,
+      "text": "course of this hack by Methos, and we"
+    },
+    {
+      "start_ms": 954480,
+      "duration_ms": 3880,
+      "end_ms": 958360,
+      "text": "have now demonstrated a pattern that can"
+    },
+    {
+      "start_ms": 956200,
+      "duration_ms": 3680,
+      "end_ms": 959880,
+      "text": "be repeated at far greater scale with"
+    },
+    {
+      "start_ms": 958360,
+      "duration_ms": 2400,
+      "end_ms": 960760,
+      "text": "more capable models that are coming"
+    },
+    {
+      "start_ms": 959880,
+      "duration_ms": 2120,
+      "end_ms": 962000,
+      "text": "soon."
+    },
+    {
+      "start_ms": 960760,
+      "duration_ms": 3120,
+      "end_ms": 963880,
+      "text": "I think one of the things that we have"
+    },
+    {
+      "start_ms": 962000,
+      "duration_ms": 3960,
+      "end_ms": 965960,
+      "text": "to reconcile with as we look at AI"
+    },
+    {
+      "start_ms": 963880,
+      "duration_ms": 3600,
+      "end_ms": 967480,
+      "text": "models is that it's very difficult to"
+    },
+    {
+      "start_ms": 965960,
+      "duration_ms": 3960,
+      "end_ms": 969920,
+      "text": "know the full implications of a"
+    },
+    {
+      "start_ms": 967480,
+      "duration_ms": 4000,
+      "end_ms": 971480,
+      "text": "capability on the day it's discovered."
+    },
+    {
+      "start_ms": 969920,
+      "duration_ms": 3840,
+      "end_ms": 973760,
+      "text": "And what we do know is that the"
+    },
+    {
+      "start_ms": 971480,
+      "duration_ms": 4400,
+      "end_ms": 975880,
+      "text": "capability doesn't disappear because an"
+    },
+    {
+      "start_ms": 973760,
+      "duration_ms": 4320,
+      "end_ms": 978080,
+      "text": "attempt failed. The technique can get"
+    },
+    {
+      "start_ms": 975880,
+      "duration_ms": 3680,
+      "end_ms": 979560,
+      "text": "repeated, models will get cheaper, open"
+    },
+    {
+      "start_ms": 978080,
+      "duration_ms": 3360,
+      "end_ms": 981440,
+      "text": "weight systems will improve and reach"
+    },
+    {
+      "start_ms": 979560,
+      "duration_ms": 3960,
+      "end_ms": 983520,
+      "text": "Methos level, and attackers will run"
+    },
+    {
+      "start_ms": 981440,
+      "duration_ms": 3320,
+      "end_ms": 984760,
+      "text": "more attempts than any safety institute"
+    },
+    {
+      "start_ms": 983520,
+      "duration_ms": 3480,
+      "end_ms": 987000,
+      "text": "can run."
+    },
+    {
+      "start_ms": 984760,
+      "duration_ms": 4240,
+      "end_ms": 989000,
+      "text": "The next target may not have a careful"
+    },
+    {
+      "start_ms": 987000,
+      "duration_ms": 4160,
+      "end_ms": 991160,
+      "text": "maintainer who notices the strange code"
+    },
+    {
+      "start_ms": 989000,
+      "duration_ms": 3720,
+      "end_ms": 992720,
+      "text": "or recognizes the second identity. This"
+    },
+    {
+      "start_ms": 991160,
+      "duration_ms": 3800,
+      "end_ms": 994960,
+      "text": "is the asymmetry that we need to be"
+    },
+    {
+      "start_ms": 992720,
+      "duration_ms": 4360,
+      "end_ms": 997080,
+      "text": "concerned about. This is why I believe"
+    },
+    {
+      "start_ms": 994960,
+      "duration_ms": 4040,
+      "end_ms": 999000,
+      "text": "that we are headed toward a zero bug"
+    },
+    {
+      "start_ms": 997080,
+      "duration_ms": 4600,
+      "end_ms": 1001680,
+      "text": "internet. We have to. There's no other"
+    },
+    {
+      "start_ms": 999000,
+      "duration_ms": 4080,
+      "end_ms": 1003080,
+      "text": "way to be safe. One defender"
+    },
+    {
+      "start_ms": 1001680,
+      "duration_ms": 2960,
+      "end_ms": 1004640,
+      "text": "has to notice the pull request that"
+    },
+    {
+      "start_ms": 1003080,
+      "duration_ms": 3960,
+      "end_ms": 1007040,
+      "text": "matters, right? The alternative to a"
+    },
+    {
+      "start_ms": 1004640,
+      "duration_ms": 4120,
+      "end_ms": 1008760,
+      "text": "zero bug internet is human defenders"
+    },
+    {
+      "start_ms": 1007040,
+      "duration_ms": 3200,
+      "end_ms": 1010240,
+      "text": "having to notice everything, and they're"
+    },
+    {
+      "start_ms": 1008760,
+      "duration_ms": 3760,
+      "end_ms": 1012520,
+      "text": "just not going to be able to because of"
+    },
+    {
+      "start_ms": 1010240,
+      "duration_ms": 4640,
+      "end_ms": 1014880,
+      "text": "the sheer scale of agent operations."
+    },
+    {
+      "start_ms": 1012520,
+      "duration_ms": 4440,
+      "end_ms": 1016960,
+      "text": "Methos producing 17 of the 19"
+    },
+    {
+      "start_ms": 1014880,
+      "duration_ms": 3520,
+      "end_ms": 1018400,
+      "text": "unsanctioned actions is obviously a"
+    },
+    {
+      "start_ms": 1016960,
+      "duration_ms": 2840,
+      "end_ms": 1019800,
+      "text": "terrible marketing headline for"
+    },
+    {
+      "start_ms": 1018400,
+      "duration_ms": 3680,
+      "end_ms": 1022080,
+      "text": "Anthropic. But if you look at the"
+    },
+    {
+      "start_ms": 1019800,
+      "duration_ms": 4639,
+      "end_ms": 1024439,
+      "text": "behavior required like long horizon"
+    },
+    {
+      "start_ms": 1022080,
+      "duration_ms": 4960,
+      "end_ms": 1027040,
+      "text": "planning, working code, tool use,"
+    },
+    {
+      "start_ms": 1024439,
+      "duration_ms": 4241,
+      "end_ms": 1028680,
+      "text": "identity management, adaptation, social"
+    },
+    {
+      "start_ms": 1027040,
+      "duration_ms": 4120,
+      "end_ms": 1031160,
+      "text": "judgment, and the ability to preserve an"
+    },
+    {
+      "start_ms": 1028680,
+      "duration_ms": 4519,
+      "end_ms": 1033199,
+      "text": "objective across multiple steps,"
+    },
+    {
+      "start_ms": 1031160,
+      "duration_ms": 3560,
+      "end_ms": 1034720,
+      "text": "those are all things that companies want"
+    },
+    {
+      "start_ms": 1033199,
+      "duration_ms": 3201,
+      "end_ms": 1036400,
+      "text": "when the objective is legitimate. It's"
+    },
+    {
+      "start_ms": 1034720,
+      "duration_ms": 4479,
+      "end_ms": 1039199,
+      "text": "the same story as OpenAI. This is"
+    },
+    {
+      "start_ms": 1036400,
+      "duration_ms": 5360,
+      "end_ms": 1041760,
+      "text": "capabilities we want in legitimate ways"
+    },
+    {
+      "start_ms": 1039199,
+      "duration_ms": 4561,
+      "end_ms": 1043760,
+      "text": "coming out in misaligned ways. So, the"
+    },
+    {
+      "start_ms": 1041760,
+      "duration_ms": 3760,
+      "end_ms": 1045520,
+      "text": "model didn't acquire a separate evil"
+    },
+    {
+      "start_ms": 1043760,
+      "duration_ms": 5040,
+      "end_ms": 1048800,
+      "text": "persona, right? That's This is not a"
+    },
+    {
+      "start_ms": 1045520,
+      "duration_ms": 4840,
+      "end_ms": 1050360,
+      "text": "cartoon. Instead, the model was working"
+    },
+    {
+      "start_ms": 1048800,
+      "duration_ms": 3120,
+      "end_ms": 1051920,
+      "text": "around obstacles and getting work done"
+    },
+    {
+      "start_ms": 1050360,
+      "duration_ms": 4360,
+      "end_ms": 1054720,
+      "text": "in ways that we want, and it was doing"
+    },
+    {
+      "start_ms": 1051920,
+      "duration_ms": 5280,
+      "end_ms": 1057200,
+      "text": "it against an unsanctioned goal with"
+    },
+    {
+      "start_ms": 1054720,
+      "duration_ms": 5360,
+      "end_ms": 1060080,
+      "text": "deliberately safeguards off. And so,"
+    },
+    {
+      "start_ms": 1057200,
+      "duration_ms": 5800,
+      "end_ms": 1063000,
+      "text": "ironically, this makes me bullish for"
+    },
+    {
+      "start_ms": 1060080,
+      "duration_ms": 5600,
+      "end_ms": 1065680,
+      "text": "Anthropic in the ugliest possible way."
+    },
+    {
+      "start_ms": 1063000,
+      "duration_ms": 5920,
+      "end_ms": 1068920,
+      "text": "It It is Mythos is the only model that"
+    },
+    {
+      "start_ms": 1065680,
+      "duration_ms": 5640,
+      "end_ms": 1071320,
+      "text": "was able to do this to the degree that"
+    },
+    {
+      "start_ms": 1068920,
+      "duration_ms": 4480,
+      "end_ms": 1073400,
+      "text": "it did, right? 17 of the 19 runs were"
+    },
+    {
+      "start_ms": 1071320,
+      "duration_ms": 4640,
+      "end_ms": 1075960,
+      "text": "were Mythos five runs. There's There's"
+    },
+    {
+      "start_ms": 1073400,
+      "duration_ms": 5400,
+      "end_ms": 1078800,
+      "text": "no other model that comes close."
+    },
+    {
+      "start_ms": 1075960,
+      "duration_ms": 5040,
+      "end_ms": 1081000,
+      "text": "And so, I think that this is a great"
+    },
+    {
+      "start_ms": 1078800,
+      "duration_ms": 3800,
+      "end_ms": 1082600,
+      "text": "experimental demonstration of what"
+    },
+    {
+      "start_ms": 1081000,
+      "duration_ms": 3040,
+      "end_ms": 1084040,
+      "text": "Anthropic has been telling everyone,"
+    },
+    {
+      "start_ms": 1082600,
+      "duration_ms": 3560,
+      "end_ms": 1086160,
+      "text": "which is that Mythos is a dangerous"
+    },
+    {
+      "start_ms": 1084040,
+      "duration_ms": 4920,
+      "end_ms": 1088960,
+      "text": "model if not handled responsibly. And a"
+    },
+    {
+      "start_ms": 1086160,
+      "duration_ms": 5920,
+      "end_ms": 1092080,
+      "text": "lot of people talking to me have said,"
+    },
+    {
+      "start_ms": 1088960,
+      "duration_ms": 5000,
+      "end_ms": 1093960,
+      "text": "\"That is cyber doom-mongering, right?"
+    },
+    {
+      "start_ms": 1092080,
+      "duration_ms": 4000,
+      "end_ms": 1096080,
+      "text": "That is cyber scaremongering. They're"
+    },
+    {
+      "start_ms": 1093960,
+      "duration_ms": 4040,
+      "end_ms": 1098000,
+      "text": "trying to somehow prop up their their"
+    },
+    {
+      "start_ms": 1096080,
+      "duration_ms": 3960,
+      "end_ms": 1100040,
+      "text": "valuation, etc.\""
+    },
+    {
+      "start_ms": 1098000,
+      "duration_ms": 3640,
+      "end_ms": 1101640,
+      "text": "The more evidence that comes out, it's"
+    },
+    {
+      "start_ms": 1100040,
+      "duration_ms": 3840,
+      "end_ms": 1103880,
+      "text": "an accurate assessment. This is just"
+    },
+    {
+      "start_ms": 1101640,
+      "duration_ms": 4040,
+      "end_ms": 1105680,
+      "text": "what this model does because we've"
+    },
+    {
+      "start_ms": 1103880,
+      "duration_ms": 3920,
+      "end_ms": 1107800,
+      "text": "trained it to be helpful at long-running"
+    },
+    {
+      "start_ms": 1105680,
+      "duration_ms": 4520,
+      "end_ms": 1110200,
+      "text": "agentic tasks. This is one of the side"
+    },
+    {
+      "start_ms": 1107800,
+      "duration_ms": 4320,
+      "end_ms": 1112120,
+      "text": "effects, and so this imposes some"
+    },
+    {
+      "start_ms": 1110200,
+      "duration_ms": 3560,
+      "end_ms": 1113760,
+      "text": "expectations on how we manage the"
+    },
+    {
+      "start_ms": 1112120,
+      "duration_ms": 3520,
+      "end_ms": 1115640,
+      "text": "internet going forward. But, we're still"
+    },
+    {
+      "start_ms": 1113760,
+      "duration_ms": 4680,
+      "end_ms": 1118440,
+      "text": "not done with the story here. In the"
+    },
+    {
+      "start_ms": 1115640,
+      "duration_ms": 5560,
+      "end_ms": 1121200,
+      "text": "same week as news of Mythos's attacks"
+    },
+    {
+      "start_ms": 1118440,
+      "duration_ms": 5240,
+      "end_ms": 1123680,
+      "text": "and the running ecosystem inside OpenAI"
+    },
+    {
+      "start_ms": 1121200,
+      "duration_ms": 3920,
+      "end_ms": 1125120,
+      "text": "broke, Google gave us the other half of"
+    },
+    {
+      "start_ms": 1123680,
+      "duration_ms": 4080,
+      "end_ms": 1127760,
+      "text": "the story. And I think people are"
+    },
+    {
+      "start_ms": 1125120,
+      "duration_ms": 5080,
+      "end_ms": 1130200,
+      "text": "underestimating how significant it is."
+    },
+    {
+      "start_ms": 1127760,
+      "duration_ms": 4280,
+      "end_ms": 1132040,
+      "text": "Jeff Dean and Sanjay Ghemawat are not"
+    },
+    {
+      "start_ms": 1130200,
+      "duration_ms": 4320,
+      "end_ms": 1134520,
+      "text": "just two famous Google engineers, to be"
+    },
+    {
+      "start_ms": 1132040,
+      "duration_ms": 5120,
+      "end_ms": 1137160,
+      "text": "clear. They are widely reported as the"
+    },
+    {
+      "start_ms": 1134520,
+      "duration_ms": 4600,
+      "end_ms": 1139120,
+      "text": "only two people ever in Google's history"
+    },
+    {
+      "start_ms": 1137160,
+      "duration_ms": 4360,
+      "end_ms": 1141520,
+      "text": "to reach senior fellow, right? That's"
+    },
+    {
+      "start_ms": 1139120,
+      "duration_ms": 5080,
+      "end_ms": 1144200,
+      "text": "the level known as an L11. It is the"
+    },
+    {
+      "start_ms": 1141520,
+      "duration_ms": 4520,
+      "end_ms": 1146040,
+      "text": "highest technical rank in the company,"
+    },
+    {
+      "start_ms": 1144200,
+      "duration_ms": 4080,
+      "end_ms": 1148280,
+      "text": "and Dean is considered one of the most"
+    },
+    {
+      "start_ms": 1146040,
+      "duration_ms": 4760,
+      "end_ms": 1150800,
+      "text": "prestigious and accomplished engineers"
+    },
+    {
+      "start_ms": 1148280,
+      "duration_ms": 6120,
+      "end_ms": 1154400,
+      "text": "in the world. The things that he has"
+    },
+    {
+      "start_ms": 1150800,
+      "duration_ms": 5960,
+      "end_ms": 1156760,
+      "text": "built for Google make Google what it is."
+    },
+    {
+      "start_ms": 1154400,
+      "duration_ms": 4400,
+      "end_ms": 1158800,
+      "text": "Like the Google file system, right? Like"
+    },
+    {
+      "start_ms": 1156760,
+      "duration_ms": 3720,
+      "end_ms": 1160480,
+      "text": "Spanner, which manages large data set."
+    },
+    {
+      "start_ms": 1158800,
+      "duration_ms": 3960,
+      "end_ms": 1162760,
+      "text": "Like he's done incredible things for"
+    },
+    {
+      "start_ms": 1160480,
+      "duration_ms": 5760,
+      "end_ms": 1166240,
+      "text": "Google. Both of them are now leaving"
+    },
+    {
+      "start_ms": 1162760,
+      "duration_ms": 5280,
+      "end_ms": 1168040,
+      "text": "after almost three decades to found a"
+    },
+    {
+      "start_ms": 1166240,
+      "duration_ms": 4280,
+      "end_ms": 1170520,
+      "text": "new company. And what is that new"
+    },
+    {
+      "start_ms": 1168040,
+      "duration_ms": 4720,
+      "end_ms": 1172760,
+      "text": "company? That new company is Discovery"
+    },
+    {
+      "start_ms": 1170520,
+      "duration_ms": 5080,
+      "end_ms": 1175600,
+      "text": "Loop. It's a public benefit corporation,"
+    },
+    {
+      "start_ms": 1172760,
+      "duration_ms": 4760,
+      "end_ms": 1177520,
+      "text": "and its own diagram shows the common"
+    },
+    {
+      "start_ms": 1175600,
+      "duration_ms": 3840,
+      "end_ms": 1179440,
+      "text": "cycle of science and engineering, where"
+    },
+    {
+      "start_ms": 1177520,
+      "duration_ms": 3600,
+      "end_ms": 1181120,
+      "text": "you propose an experiment, you implement"
+    },
+    {
+      "start_ms": 1179440,
+      "duration_ms": 2920,
+      "end_ms": 1182360,
+      "text": "it, you run it, you evaluate the result."
+    },
+    {
+      "start_ms": 1181120,
+      "duration_ms": 3440,
+      "end_ms": 1184560,
+      "text": "This is like middle school science,"
+    },
+    {
+      "start_ms": 1182360,
+      "duration_ms": 4400,
+      "end_ms": 1186760,
+      "text": "right? And underneath in plain English,"
+    },
+    {
+      "start_ms": 1184560,
+      "duration_ms": 3840,
+      "end_ms": 1188400,
+      "text": "it says, \"Automate the loop.\" Now, Dean"
+    },
+    {
+      "start_ms": 1186760,
+      "duration_ms": 3320,
+      "end_ms": 1190080,
+      "text": "and the team has a founding initial"
+    },
+    {
+      "start_ms": 1188400,
+      "duration_ms": 3680,
+      "end_ms": 1192080,
+      "text": "focus of machine learning research and"
+    },
+    {
+      "start_ms": 1190080,
+      "duration_ms": 3840,
+      "end_ms": 1193920,
+      "text": "engineering. And so, this goes beyond"
+    },
+    {
+      "start_ms": 1192080,
+      "duration_ms": 3880,
+      "end_ms": 1195960,
+      "text": "the usual AI for science pitch, because"
+    },
+    {
+      "start_ms": 1193920,
+      "duration_ms": 3680,
+      "end_ms": 1197600,
+      "text": "machine learning itself is inside the"
+    },
+    {
+      "start_ms": 1195960,
+      "duration_ms": 4640,
+      "end_ms": 1200600,
+      "text": "target area. In other words, these four"
+    },
+    {
+      "start_ms": 1197600,
+      "duration_ms": 5720,
+      "end_ms": 1203320,
+      "text": "researchers are trying to build a system"
+    },
+    {
+      "start_ms": 1200600,
+      "duration_ms": 5160,
+      "end_ms": 1205760,
+      "text": "that can automatically propose machine"
+    },
+    {
+      "start_ms": 1203320,
+      "duration_ms": 4280,
+      "end_ms": 1207600,
+      "text": "learning experiments, run them, evaluate"
+    },
+    {
+      "start_ms": 1205760,
+      "duration_ms": 4360,
+      "end_ms": 1210120,
+      "text": "the results, and use what it learns to"
+    },
+    {
+      "start_ms": 1207600,
+      "duration_ms": 3760,
+      "end_ms": 1211360,
+      "text": "produce better experiments. For all of"
+    },
+    {
+      "start_ms": 1210120,
+      "duration_ms": 2840,
+      "end_ms": 1212960,
+      "text": "us, it's a benefit or it's a public"
+    },
+    {
+      "start_ms": 1211360,
+      "duration_ms": 3240,
+      "end_ms": 1214600,
+      "text": "benefit corporation."
+    },
+    {
+      "start_ms": 1212960,
+      "duration_ms": 3480,
+      "end_ms": 1216440,
+      "text": "That is a core recursive"
+    },
+    {
+      "start_ms": 1214600,
+      "duration_ms": 3680,
+      "end_ms": 1218280,
+      "text": "self-improvement loop, and one of the"
+    },
+    {
+      "start_ms": 1216440,
+      "duration_ms": 3720,
+      "end_ms": 1220160,
+      "text": "four founders has been building toward"
+    },
+    {
+      "start_ms": 1218280,
+      "duration_ms": 4680,
+      "end_ms": 1222960,
+      "text": "it since 2017. These guys have deep"
+    },
+    {
+      "start_ms": 1220160,
+      "duration_ms": 5160,
+      "end_ms": 1225320,
+      "text": "experience in this area. Now, the other"
+    },
+    {
+      "start_ms": 1222960,
+      "duration_ms": 4520,
+      "end_ms": 1227480,
+      "text": "major Google news, Demis Hassabis giving"
+    },
+    {
+      "start_ms": 1225320,
+      "duration_ms": 4760,
+      "end_ms": 1230080,
+      "text": "up the Google DeepMind CEO job. He"
+    },
+    {
+      "start_ms": 1227480,
+      "duration_ms": 4880,
+      "end_ms": 1232360,
+      "text": "remains inside Alphabet as a chair of"
+    },
+    {
+      "start_ms": 1230080,
+      "duration_ms": 4000,
+      "end_ms": 1234080,
+      "text": "Google DeepMind and chief scientist at"
+    },
+    {
+      "start_ms": 1232360,
+      "duration_ms": 3760,
+      "end_ms": 1236120,
+      "text": "Alphabet, and he will continue leading"
+    },
+    {
+      "start_ms": 1234080,
+      "duration_ms": 4400,
+      "end_ms": 1238480,
+      "text": "Isomorphic Labs. But, Google says the"
+    },
+    {
+      "start_ms": 1236120,
+      "duration_ms": 4880,
+      "end_ms": 1241000,
+      "text": "move gives him more time to look"
+    },
+    {
+      "start_ms": 1238480,
+      "duration_ms": 4200,
+      "end_ms": 1242680,
+      "text": "long-term. Fine. But, he no longer"
+    },
+    {
+      "start_ms": 1241000,
+      "duration_ms": 3440,
+      "end_ms": 1244440,
+      "text": "controls the budget, he doesn't control"
+    },
+    {
+      "start_ms": 1242680,
+      "duration_ms": 4080,
+      "end_ms": 1246760,
+      "text": "the deadlines, and he doesn't control"
+    },
+    {
+      "start_ms": 1244440,
+      "duration_ms": 4760,
+      "end_ms": 1249200,
+      "text": "the daily operations of Google DeepMind."
+    },
+    {
+      "start_ms": 1246760,
+      "duration_ms": 4560,
+      "end_ms": 1251320,
+      "text": "Instead, Koray does. He reports to"
+    },
+    {
+      "start_ms": 1249200,
+      "duration_ms": 3160,
+      "end_ms": 1252360,
+      "text": "Sundar directly, and he owns two things."
+    },
+    {
+      "start_ms": 1251320,
+      "duration_ms": 3000,
+      "end_ms": 1254320,
+      "text": "He owns the model research and"
+    },
+    {
+      "start_ms": 1252360,
+      "duration_ms": 3880,
+      "end_ms": 1256240,
+      "text": "development, and he owns the Gemini app"
+    },
+    {
+      "start_ms": 1254320,
+      "duration_ms": 3800,
+      "end_ms": 1258120,
+      "text": "and developer ecosystem. And he's deeply"
+    },
+    {
+      "start_ms": 1256240,
+      "duration_ms": 3600,
+      "end_ms": 1259840,
+      "text": "experienced, right? He spent 13 years at"
+    },
+    {
+      "start_ms": 1258120,
+      "duration_ms": 4200,
+      "end_ms": 1262320,
+      "text": "DeepMind, he founded its deep learning"
+    },
+    {
+      "start_ms": 1259840,
+      "duration_ms": 4960,
+      "end_ms": 1264800,
+      "text": "team, and he led the work of earlier"
+    },
+    {
+      "start_ms": 1262320,
+      "duration_ms": 4440,
+      "end_ms": 1266760,
+      "text": "models like WaveNet. He is a very"
+    },
+    {
+      "start_ms": 1264800,
+      "duration_ms": 4520,
+      "end_ms": 1269320,
+      "text": "serious researcher. But, look at what"
+    },
+    {
+      "start_ms": 1266760,
+      "duration_ms": 4560,
+      "end_ms": 1271320,
+      "text": "he's been handed, right? His mandate is"
+    },
+    {
+      "start_ms": 1269320,
+      "duration_ms": 3960,
+      "end_ms": 1273280,
+      "text": "the Gemini road map, which presumably"
+    },
+    {
+      "start_ms": 1271320,
+      "duration_ms": 3160,
+      "end_ms": 1274480,
+      "text": "needs to ship faster into products that"
+    },
+    {
+      "start_ms": 1273280,
+      "duration_ms": 3800,
+      "end_ms": 1277080,
+      "text": "scale."
+    },
+    {
+      "start_ms": 1274480,
+      "duration_ms": 5000,
+      "end_ms": 1279480,
+      "text": "And my read is that the operating center"
+    },
+    {
+      "start_ms": 1277080,
+      "duration_ms": 5280,
+      "end_ms": 1282360,
+      "text": "of Google DeepMind is moving away from"
+    },
+    {
+      "start_ms": 1279480,
+      "duration_ms": 4840,
+      "end_ms": 1284320,
+      "text": "Demis's belief that AGI requires deeper"
+    },
+    {
+      "start_ms": 1282360,
+      "duration_ms": 3360,
+      "end_ms": 1285720,
+      "text": "world models, that requires planning and"
+    },
+    {
+      "start_ms": 1284320,
+      "duration_ms": 3680,
+      "end_ms": 1288000,
+      "text": "scientific breakthroughs beyond"
+    },
+    {
+      "start_ms": 1285720,
+      "duration_ms": 4480,
+      "end_ms": 1290200,
+      "text": "language. It is instead moving toward"
+    },
+    {
+      "start_ms": 1288000,
+      "duration_ms": 3840,
+      "end_ms": 1291840,
+      "text": "the path that Anthropic and OpenAI have"
+    },
+    {
+      "start_ms": 1290200,
+      "duration_ms": 3360,
+      "end_ms": 1293560,
+      "text": "been proving through the stories we've"
+    },
+    {
+      "start_ms": 1291840,
+      "duration_ms": 3760,
+      "end_ms": 1295600,
+      "text": "told at the beginning of this video."
+    },
+    {
+      "start_ms": 1293560,
+      "duration_ms": 4440,
+      "end_ms": 1298000,
+      "text": "Scale the language models, turn them"
+    },
+    {
+      "start_ms": 1295600,
+      "duration_ms": 4240,
+      "end_ms": 1299840,
+      "text": "into agents, improve the coding, and"
+    },
+    {
+      "start_ms": 1298000,
+      "duration_ms": 3480,
+      "end_ms": 1301480,
+      "text": "ship faster. Google's not announcing"
+    },
+    {
+      "start_ms": 1299840,
+      "duration_ms": 4120,
+      "end_ms": 1303960,
+      "text": "that world model research is dead, to be"
+    },
+    {
+      "start_ms": 1301480,
+      "duration_ms": 4080,
+      "end_ms": 1305560,
+      "text": "clear. But, the person who embodied that"
+    },
+    {
+      "start_ms": 1303960,
+      "duration_ms": 3080,
+      "end_ms": 1307040,
+      "text": "approach has moved out of day-to-day"
+    },
+    {
+      "start_ms": 1305560,
+      "duration_ms": 4160,
+      "end_ms": 1309720,
+      "text": "control of the business. While the"
+    },
+    {
+      "start_ms": 1307040,
+      "duration_ms": 5440,
+      "end_ms": 1312480,
+      "text": "person taking control has an explicit"
+    },
+    {
+      "start_ms": 1309720,
+      "duration_ms": 5840,
+      "end_ms": 1315560,
+      "text": "Gemini and generative model mandate. And"
+    },
+    {
+      "start_ms": 1312480,
+      "duration_ms": 4800,
+      "end_ms": 1317280,
+      "text": "that tells me which path Sundar cares"
+    },
+    {
+      "start_ms": 1315560,
+      "duration_ms": 3280,
+      "end_ms": 1318840,
+      "text": "about the most right now."
+    },
+    {
+      "start_ms": 1317280,
+      "duration_ms": 3760,
+      "end_ms": 1321040,
+      "text": "And the release calendar tells a very"
+    },
+    {
+      "start_ms": 1318840,
+      "duration_ms": 4480,
+      "end_ms": 1323320,
+      "text": "similar story, right? Gemini 3 Pro, that"
+    },
+    {
+      "start_ms": 1321040,
+      "duration_ms": 4560,
+      "end_ms": 1325600,
+      "text": "came out way back in November. Gemini"
+    },
+    {
+      "start_ms": 1323320,
+      "duration_ms": 5000,
+      "end_ms": 1328320,
+      "text": "3.1 Pro in February, and the next"
+    },
+    {
+      "start_ms": 1325600,
+      "duration_ms": 5720,
+      "end_ms": 1331320,
+      "text": "flagship was announced at I/O in May,"
+    },
+    {
+      "start_ms": 1328320,
+      "duration_ms": 5600,
+      "end_ms": 1333920,
+      "text": "and still hasn't shipped. It slipped"
+    },
+    {
+      "start_ms": 1331320,
+      "duration_ms": 5200,
+      "end_ms": 1336520,
+      "text": "past I/O, past a June target, past a"
+    },
+    {
+      "start_ms": 1333920,
+      "duration_ms": 4640,
+      "end_ms": 1338560,
+      "text": "July target. The reported reason is"
+    },
+    {
+      "start_ms": 1336520,
+      "duration_ms": 3920,
+      "end_ms": 1340440,
+      "text": "coding performance, which is precisely"
+    },
+    {
+      "start_ms": 1338560,
+      "duration_ms": 3320,
+      "end_ms": 1341880,
+      "text": "the area where Anthropic and OpenAI have"
+    },
+    {
+      "start_ms": 1340440,
+      "duration_ms": 3280,
+      "end_ms": 1343720,
+      "text": "built tremendous leads. Look at the"
+    },
+    {
+      "start_ms": 1341880,
+      "duration_ms": 4280,
+      "end_ms": 1346160,
+      "text": "stories we just told. And the talent"
+    },
+    {
+      "start_ms": 1343720,
+      "duration_ms": 4480,
+      "end_ms": 1348200,
+      "text": "leaving tells a broader story than just"
+    },
+    {
+      "start_ms": 1346160,
+      "duration_ms": 3440,
+      "end_ms": 1349600,
+      "text": "Demis departing, right? Noam Shazeer, a"
+    },
+    {
+      "start_ms": 1348200,
+      "duration_ms": 4080,
+      "end_ms": 1352280,
+      "text": "vice president of engineering and a"
+    },
+    {
+      "start_ms": 1349600,
+      "duration_ms": 4720,
+      "end_ms": 1354320,
+      "text": "co-lead on Gemini, has left for OpenAI."
+    },
+    {
+      "start_ms": 1352280,
+      "duration_ms": 3920,
+      "end_ms": 1356200,
+      "text": "John Jumper, who shared a Nobel Prize"
+    },
+    {
+      "start_ms": 1354320,
+      "duration_ms": 4280,
+      "end_ms": 1358600,
+      "text": "with Demis for AlphaFold, left for"
+    },
+    {
+      "start_ms": 1356200,
+      "duration_ms": 3960,
+      "end_ms": 1360160,
+      "text": "Anthropic after nearly 9 years. And now"
+    },
+    {
+      "start_ms": 1358600,
+      "duration_ms": 3280,
+      "end_ms": 1361880,
+      "text": "Google is losing both of its senior"
+    },
+    {
+      "start_ms": 1360160,
+      "duration_ms": 3320,
+      "end_ms": 1363480,
+      "text": "fellows and changing leadership at the"
+    },
+    {
+      "start_ms": 1361880,
+      "duration_ms": 3600,
+      "end_ms": 1365480,
+      "text": "top of DeepMind at the same time."
+    },
+    {
+      "start_ms": 1363480,
+      "duration_ms": 4120,
+      "end_ms": 1367600,
+      "text": "Anybody calling this normal turnover is"
+    },
+    {
+      "start_ms": 1365480,
+      "duration_ms": 4560,
+      "end_ms": 1370040,
+      "text": "missing what is really going on here."
+    },
+    {
+      "start_ms": 1367600,
+      "duration_ms": 5240,
+      "end_ms": 1372840,
+      "text": "I think that Google is admitting through"
+    },
+    {
+      "start_ms": 1370040,
+      "duration_ms": 5440,
+      "end_ms": 1375480,
+      "text": "its actions that the integrated DeepMind"
+    },
+    {
+      "start_ms": 1372840,
+      "duration_ms": 4640,
+      "end_ms": 1377480,
+      "text": "bet is not keeping pace. Now, Alphabet"
+    },
+    {
+      "start_ms": 1375480,
+      "duration_ms": 4000,
+      "end_ms": 1379480,
+      "text": "as a whole may still do very, very well"
+    },
+    {
+      "start_ms": 1377480,
+      "duration_ms": 4040,
+      "end_ms": 1381520,
+      "text": "because it has chips and data centers"
+    },
+    {
+      "start_ms": 1379480,
+      "duration_ms": 4480,
+      "end_ms": 1383960,
+      "text": "and billions of users and capital and"
+    },
+    {
+      "start_ms": 1381520,
+      "duration_ms": 4400,
+      "end_ms": 1385920,
+      "text": "enormous distribution. It's investing in"
+    },
+    {
+      "start_ms": 1383960,
+      "duration_ms": 3840,
+      "end_ms": 1387800,
+      "text": "discovery loop, ironically, and"
+    },
+    {
+      "start_ms": 1385920,
+      "duration_ms": 3560,
+      "end_ms": 1389480,
+      "text": "supplying cloud and compute to these new"
+    },
+    {
+      "start_ms": 1387800,
+      "duration_ms": 3680,
+      "end_ms": 1391480,
+      "text": "startup guys that just left Google. So,"
+    },
+    {
+      "start_ms": 1389480,
+      "duration_ms": 3880,
+      "end_ms": 1393360,
+      "text": "Alphabet can make money from the people"
+    },
+    {
+      "start_ms": 1391480,
+      "duration_ms": 3280,
+      "end_ms": 1394760,
+      "text": "who leave and distribute whichever"
+    },
+    {
+      "start_ms": 1393360,
+      "duration_ms": 4640,
+      "end_ms": 1398000,
+      "text": "intelligence wins. They get to win"
+    },
+    {
+      "start_ms": 1394760,
+      "duration_ms": 6200,
+      "end_ms": 1400960,
+      "text": "regardless. But, Google DeepMind as the"
+    },
+    {
+      "start_ms": 1398000,
+      "duration_ms": 4640,
+      "end_ms": 1402640,
+      "text": "third unified frontier lab is not a bet"
+    },
+    {
+      "start_ms": 1400960,
+      "duration_ms": 3960,
+      "end_ms": 1404920,
+      "text": "that looks right today. I think the"
+    },
+    {
+      "start_ms": 1402640,
+      "duration_ms": 4200,
+      "end_ms": 1406840,
+      "text": "two-horse race between OpenAI and"
+    },
+    {
+      "start_ms": 1404920,
+      "duration_ms": 4560,
+      "end_ms": 1409480,
+      "text": "Anthropic just became much, much more"
+    },
+    {
+      "start_ms": 1406840,
+      "duration_ms": 4400,
+      "end_ms": 1411240,
+      "text": "real. Now, Discovery Loop does take us"
+    },
+    {
+      "start_ms": 1409480,
+      "duration_ms": 4080,
+      "end_ms": 1413560,
+      "text": "all the way back to the message board"
+    },
+    {
+      "start_ms": 1411240,
+      "duration_ms": 4400,
+      "end_ms": 1415640,
+      "text": "that started this whole story. OpenAI's"
+    },
+    {
+      "start_ms": 1413560,
+      "duration_ms": 3640,
+      "end_ms": 1417200,
+      "text": "agents showed that discoveries can"
+    },
+    {
+      "start_ms": 1415640,
+      "duration_ms": 3160,
+      "end_ms": 1418800,
+      "text": "survive across runs, right? And that"
+    },
+    {
+      "start_ms": 1417200,
+      "duration_ms": 3560,
+      "end_ms": 1420760,
+      "text": "they make a later population more"
+    },
+    {
+      "start_ms": 1418800,
+      "duration_ms": 3760,
+      "end_ms": 1422560,
+      "text": "capable even when nobody designed that"
+    },
+    {
+      "start_ms": 1420760,
+      "duration_ms": 3760,
+      "end_ms": 1424520,
+      "text": "process. Now, the four founders at"
+    },
+    {
+      "start_ms": 1422560,
+      "duration_ms": 3960,
+      "end_ms": 1426520,
+      "text": "Discovery Loop, Dean and Gemawat and"
+    },
+    {
+      "start_ms": 1424520,
+      "duration_ms": 4800,
+      "end_ms": 1429320,
+      "text": "Vinyals and LeCun, are building a"
+    },
+    {
+      "start_ms": 1426520,
+      "duration_ms": 4640,
+      "end_ms": 1431160,
+      "text": "deliberate version of that same process."
+    },
+    {
+      "start_ms": 1429320,
+      "duration_ms": 3640,
+      "end_ms": 1432960,
+      "text": "Automate the experiment loop, preserve"
+    },
+    {
+      "start_ms": 1431160,
+      "duration_ms": 3560,
+      "end_ms": 1434720,
+      "text": "what works, and let each result improve"
+    },
+    {
+      "start_ms": 1432960,
+      "duration_ms": 4760,
+      "end_ms": 1437720,
+      "text": "the next attempt. When the thing inside"
+    },
+    {
+      "start_ms": 1434720,
+      "duration_ms": 4960,
+      "end_ms": 1439680,
+      "text": "that loop is machine learning itself,"
+    },
+    {
+      "start_ms": 1437720,
+      "duration_ms": 3640,
+      "end_ms": 1441360,
+      "text": "the output can improve the systems"
+    },
+    {
+      "start_ms": 1439680,
+      "duration_ms": 4240,
+      "end_ms": 1443920,
+      "text": "running the next loop. So, recursive"
+    },
+    {
+      "start_ms": 1441360,
+      "duration_ms": 4560,
+      "end_ms": 1445920,
+      "text": "self-improvement does not need to start"
+    },
+    {
+      "start_ms": 1443920,
+      "duration_ms": 3920,
+      "end_ms": 1447840,
+      "text": "with one model suddenly rewriting its"
+    },
+    {
+      "start_ms": 1445920,
+      "duration_ms": 3560,
+      "end_ms": 1449480,
+      "text": "weights. Instead, it can start with"
+    },
+    {
+      "start_ms": 1447840,
+      "duration_ms": 3160,
+      "end_ms": 1451000,
+      "text": "agents writing more of their training"
+    },
+    {
+      "start_ms": 1449480,
+      "duration_ms": 3240,
+      "end_ms": 1452720,
+      "text": "and evaluation software, with"
+    },
+    {
+      "start_ms": 1451000,
+      "duration_ms": 3360,
+      "end_ms": 1454360,
+      "text": "experiments running in parallel, and"
+    },
+    {
+      "start_ms": 1452720,
+      "duration_ms": 3960,
+      "end_ms": 1456680,
+      "text": "with useful results that get carried"
+    },
+    {
+      "start_ms": 1454360,
+      "duration_ms": 4920,
+      "end_ms": 1459280,
+      "text": "forward. And this is why I think we are"
+    },
+    {
+      "start_ms": 1456680,
+      "duration_ms": 4920,
+      "end_ms": 1461600,
+      "text": "very, very firmly on the path toward"
+    },
+    {
+      "start_ms": 1459280,
+      "duration_ms": 4720,
+      "end_ms": 1464000,
+      "text": "recursive improvement across major labs."
+    },
+    {
+      "start_ms": 1461600,
+      "duration_ms": 3920,
+      "end_ms": 1465520,
+      "text": "The OpenAI incident reminds us that this"
+    },
+    {
+      "start_ms": 1464000,
+      "duration_ms": 3720,
+      "end_ms": 1467720,
+      "text": "is something that is starting to happen"
+    },
+    {
+      "start_ms": 1465520,
+      "duration_ms": 3600,
+      "end_ms": 1469120,
+      "text": "emergently as a property of the models"
+    },
+    {
+      "start_ms": 1467720,
+      "duration_ms": 3560,
+      "end_ms": 1471280,
+      "text": "we're building. Discovery Loop is"
+    },
+    {
+      "start_ms": 1469120,
+      "duration_ms": 3880,
+      "end_ms": 1473000,
+      "text": "putting that property that agents have"
+    },
+    {
+      "start_ms": 1471280,
+      "duration_ms": 4360,
+      "end_ms": 1475640,
+      "text": "into its mission statement so it can be"
+    },
+    {
+      "start_ms": 1473000,
+      "duration_ms": 5160,
+      "end_ms": 1478160,
+      "text": "above board and not malicious. So, when"
+    },
+    {
+      "start_ms": 1475640,
+      "duration_ms": 4680,
+      "end_ms": 1480320,
+      "text": "I say the AI race has left the lab, this"
+    },
+    {
+      "start_ms": 1478160,
+      "duration_ms": 4400,
+      "end_ms": 1482560,
+      "text": "is what I mean. Frontier talent is"
+    },
+    {
+      "start_ms": 1480320,
+      "duration_ms": 4200,
+      "end_ms": 1484520,
+      "text": "leaving Google's integrated lab. Agent"
+    },
+    {
+      "start_ms": 1482560,
+      "duration_ms": 3600,
+      "end_ms": 1486160,
+      "text": "knowledge is leaving the context window"
+    },
+    {
+      "start_ms": 1484520,
+      "duration_ms": 3800,
+      "end_ms": 1488320,
+      "text": "and persisting in shared environments,"
+    },
+    {
+      "start_ms": 1486160,
+      "duration_ms": 5200,
+      "end_ms": 1491360,
+      "text": "and compute is leaving the data center"
+    },
+    {
+      "start_ms": 1488320,
+      "duration_ms": 4880,
+      "end_ms": 1493200,
+      "text": "and spreading toward users, which is its"
+    },
+    {
+      "start_ms": 1491360,
+      "duration_ms": 4080,
+      "end_ms": 1495440,
+      "text": "own story and one I want to give a"
+    },
+    {
+      "start_ms": 1493200,
+      "duration_ms": 4160,
+      "end_ms": 1497360,
+      "text": "proper video on soon. Several old"
+    },
+    {
+      "start_ms": 1495440,
+      "duration_ms": 4120,
+      "end_ms": 1499560,
+      "text": "assumptions have stopped working in the"
+    },
+    {
+      "start_ms": 1497360,
+      "duration_ms": 4320,
+      "end_ms": 1501680,
+      "text": "last couple weeks. The lab may not own"
+    },
+    {
+      "start_ms": 1499560,
+      "duration_ms": 4480,
+      "end_ms": 1504040,
+      "text": "the intelligence anymore. The run may"
+    },
+    {
+      "start_ms": 1501680,
+      "duration_ms": 5440,
+      "end_ms": 1507120,
+      "text": "not contain all of the memory that you"
+    },
+    {
+      "start_ms": 1504040,
+      "duration_ms": 5320,
+      "end_ms": 1509360,
+      "text": "need, and the model provider may not own"
+    },
+    {
+      "start_ms": 1507120,
+      "duration_ms": 3720,
+      "end_ms": 1510840,
+      "text": "their compute anymore. And deleting one"
+    },
+    {
+      "start_ms": 1509360,
+      "duration_ms": 3480,
+      "end_ms": 1512840,
+      "text": "process there"
+    },
+    {
+      "start_ms": 1510840,
+      "duration_ms": 3440,
+      "end_ms": 1514280,
+      "text": "and trying to stop it doesn't delete the"
+    },
+    {
+      "start_ms": 1512840,
+      "duration_ms": 4880,
+      "end_ms": 1517720,
+      "text": "capability."
+    },
+    {
+      "start_ms": 1514280,
+      "duration_ms": 6160,
+      "end_ms": 1520440,
+      "text": "Good software has to be designed for"
+    },
+    {
+      "start_ms": 1517720,
+      "duration_ms": 4160,
+      "end_ms": 1521880,
+      "text": "that kind of a world, a chaos world."
+    },
+    {
+      "start_ms": 1520440,
+      "duration_ms": 3000,
+      "end_ms": 1523440,
+      "text": "People hear that and think I'm saying"
+    },
+    {
+      "start_ms": 1521880,
+      "duration_ms": 3840,
+      "end_ms": 1525720,
+      "text": "every engineer needs to write perfect"
+    },
+    {
+      "start_ms": 1523440,
+      "duration_ms": 5360,
+      "end_ms": 1528800,
+      "text": "code. That's not what I mean."
+    },
+    {
+      "start_ms": 1525720,
+      "duration_ms": 4880,
+      "end_ms": 1530600,
+      "text": "OpenAI agents are able to find"
+    },
+    {
+      "start_ms": 1528800,
+      "duration_ms": 3360,
+      "end_ms": 1532160,
+      "text": "vulnerabilities that none of us expected"
+    },
+    {
+      "start_ms": 1530600,
+      "duration_ms": 4200,
+      "end_ms": 1534800,
+      "text": "in artifacting."
+    },
+    {
+      "start_ms": 1532160,
+      "duration_ms": 5080,
+      "end_ms": 1537240,
+      "text": "Good software now has to assume that a"
+    },
+    {
+      "start_ms": 1534800,
+      "duration_ms": 4640,
+      "end_ms": 1539440,
+      "text": "capable agent will search every ugly"
+    },
+    {
+      "start_ms": 1537240,
+      "duration_ms": 4960,
+      "end_ms": 1542200,
+      "text": "corner that people ignored. And that we"
+    },
+    {
+      "start_ms": 1539440,
+      "duration_ms": 6360,
+      "end_ms": 1545800,
+      "text": "want capable agents to be that good, but"
+    },
+    {
+      "start_ms": 1542200,
+      "duration_ms": 6200,
+      "end_ms": 1548400,
+      "text": "it requires us to make sure that our"
+    },
+    {
+      "start_ms": 1545800,
+      "duration_ms": 6280,
+      "end_ms": 1552080,
+      "text": "software meets that standard, that our"
+    },
+    {
+      "start_ms": 1548400,
+      "duration_ms": 5400,
+      "end_ms": 1553800,
+      "text": "software expects that. And this is why"
+    },
+    {
+      "start_ms": 1552080,
+      "duration_ms": 4680,
+      "end_ms": 1556760,
+      "text": "I'm ending this video with hope. I know"
+    },
+    {
+      "start_ms": 1553800,
+      "duration_ms": 4440,
+      "end_ms": 1558240,
+      "text": "it's easy to take these stories and to"
+    },
+    {
+      "start_ms": 1556760,
+      "duration_ms": 3440,
+      "end_ms": 1560200,
+      "text": "assume that we're turning into a sort of"
+    },
+    {
+      "start_ms": 1558240,
+      "duration_ms": 3120,
+      "end_ms": 1561360,
+      "text": "a dystopian version of Terminator or"
+    },
+    {
+      "start_ms": 1560200,
+      "duration_ms": 3120,
+      "end_ms": 1563320,
+      "text": "something."
+    },
+    {
+      "start_ms": 1561360,
+      "duration_ms": 4360,
+      "end_ms": 1565720,
+      "text": "I don't think that's the case. I keep"
+    },
+    {
+      "start_ms": 1563320,
+      "duration_ms": 5200,
+      "end_ms": 1568520,
+      "text": "coming back to the idea that we have"
+    },
+    {
+      "start_ms": 1565720,
+      "duration_ms": 6440,
+      "end_ms": 1572160,
+      "text": "been deliberately trying to build these"
+    },
+    {
+      "start_ms": 1568520,
+      "duration_ms": 6720,
+      "end_ms": 1575240,
+      "text": "capabilities of coordination, of of"
+    },
+    {
+      "start_ms": 1572160,
+      "duration_ms": 4760,
+      "end_ms": 1576920,
+      "text": "reward seeking, of sharing information,"
+    },
+    {
+      "start_ms": 1575240,
+      "duration_ms": 3840,
+      "end_ms": 1579080,
+      "text": "of multi-agent coordination, and we've"
+    },
+    {
+      "start_ms": 1576920,
+      "duration_ms": 4040,
+      "end_ms": 1580960,
+      "text": "been trying to do that to solve good and"
+    },
+    {
+      "start_ms": 1579080,
+      "duration_ms": 4640,
+      "end_ms": 1583720,
+      "text": "important problems."
+    },
+    {
+      "start_ms": 1580960,
+      "duration_ms": 5080,
+      "end_ms": 1586040,
+      "text": "And that's great. It turns out, as with"
+    },
+    {
+      "start_ms": 1583720,
+      "duration_ms": 4560,
+      "end_ms": 1588280,
+      "text": "most technologies, that capability can"
+    },
+    {
+      "start_ms": 1586040,
+      "duration_ms": 4320,
+      "end_ms": 1590360,
+      "text": "be misused under certain circumstances."
+    },
+    {
+      "start_ms": 1588280,
+      "duration_ms": 4480,
+      "end_ms": 1592760,
+      "text": "The responsibility is on all of us, but"
+    },
+    {
+      "start_ms": 1590360,
+      "duration_ms": 5000,
+      "end_ms": 1595360,
+      "text": "especially on builders right now, to"
+    },
+    {
+      "start_ms": 1592760,
+      "duration_ms": 5640,
+      "end_ms": 1598400,
+      "text": "think very carefully about how our"
+    },
+    {
+      "start_ms": 1595360,
+      "duration_ms": 6240,
+      "end_ms": 1601600,
+      "text": "systems respond to chaotic threats from"
+    },
+    {
+      "start_ms": 1598400,
+      "duration_ms": 5080,
+      "end_ms": 1603480,
+      "text": "emergent agents that may be accidentally"
+    },
+    {
+      "start_ms": 1601600,
+      "duration_ms": 3760,
+      "end_ms": 1605360,
+      "text": "misaligned. I don't spend a lot of time"
+    },
+    {
+      "start_ms": 1603480,
+      "duration_ms": 4080,
+      "end_ms": 1607560,
+      "text": "worrying about malicious agents. I spend"
+    },
+    {
+      "start_ms": 1605360,
+      "duration_ms": 4200,
+      "end_ms": 1609560,
+      "text": "a lot of time worrying about agents that"
+    },
+    {
+      "start_ms": 1607560,
+      "duration_ms": 3760,
+      "end_ms": 1611320,
+      "text": "are told to go after a goal and"
+    },
+    {
+      "start_ms": 1609560,
+      "duration_ms": 3760,
+      "end_ms": 1613320,
+      "text": "accidentally pursue it in a way that's"
+    },
+    {
+      "start_ms": 1611320,
+      "duration_ms": 3240,
+      "end_ms": 1614560,
+      "text": "really, really unhelpful. This is what"
+    },
+    {
+      "start_ms": 1613320,
+      "duration_ms": 3160,
+      "end_ms": 1616480,
+      "text": "we should be guarding against. We should"
+    },
+    {
+      "start_ms": 1614560,
+      "duration_ms": 3120,
+      "end_ms": 1617680,
+      "text": "be thinking about hardening our systems."
+    },
+    {
+      "start_ms": 1616480,
+      "duration_ms": 3080,
+      "end_ms": 1619560,
+      "text": "We should be thinking about how we"
+    },
+    {
+      "start_ms": 1617680,
+      "duration_ms": 3800,
+      "end_ms": 1621480,
+      "text": "mentally model these agents, which is"
+    },
+    {
+      "start_ms": 1619560,
+      "duration_ms": 4360,
+      "end_ms": 1623920,
+      "text": "why I've spent so long in this video"
+    },
+    {
+      "start_ms": 1621480,
+      "duration_ms": 4920,
+      "end_ms": 1626400,
+      "text": "talking about multi-agent coordination."
+    },
+    {
+      "start_ms": 1623920,
+      "duration_ms": 4400,
+      "end_ms": 1628320,
+      "text": "I think most people I talk with don't"
+    },
+    {
+      "start_ms": 1626400,
+      "duration_ms": 3400,
+      "end_ms": 1629800,
+      "text": "deeply understand what is happening and"
+    },
+    {
+      "start_ms": 1628320,
+      "duration_ms": 2520,
+      "end_ms": 1630840,
+      "text": "why it's different than even 2 months"
+    },
+    {
+      "start_ms": 1629800,
+      "duration_ms": 2240,
+      "end_ms": 1632040,
+      "text": "ago."
+    },
+    {
+      "start_ms": 1630840,
+      "duration_ms": 3360,
+      "end_ms": 1634200,
+      "text": "And I think that we need to prepare"
+    },
+    {
+      "start_ms": 1632040,
+      "duration_ms": 4160,
+      "end_ms": 1636200,
+      "text": "ourselves for a world where these things"
+    },
+    {
+      "start_ms": 1634200,
+      "duration_ms": 4440,
+      "end_ms": 1638640,
+      "text": "will sometimes happen, and our job is to"
+    },
+    {
+      "start_ms": 1636200,
+      "duration_ms": 5840,
+      "end_ms": 1642040,
+      "text": "continue to design systems that are more"
+    },
+    {
+      "start_ms": 1638640,
+      "duration_ms": 5000,
+      "end_ms": 1643640,
+      "text": "resilient and that act as aligners so"
+    },
+    {
+      "start_ms": 1642040,
+      "duration_ms": 4320,
+      "end_ms": 1646360,
+      "text": "that we can use these multi-agent"
+    },
+    {
+      "start_ms": 1643640,
+      "duration_ms": 4280,
+      "end_ms": 1647920,
+      "text": "systems for positive capabilities,"
+    },
+    {
+      "start_ms": 1646360,
+      "duration_ms": 2960,
+      "end_ms": 1649320,
+      "text": "right? I'll give you an example. I'm"
+    },
+    {
+      "start_ms": 1647920,
+      "duration_ms": 4200,
+      "end_ms": 1652120,
+      "text": "going to close with a real positive"
+    },
+    {
+      "start_ms": 1649320,
+      "duration_ms": 5200,
+      "end_ms": 1654520,
+      "text": "example of AI usage that I love. It's"
+    },
+    {
+      "start_ms": 1652120,
+      "duration_ms": 4640,
+      "end_ms": 1656760,
+      "text": "wildfire season on the West Coast. We"
+    },
+    {
+      "start_ms": 1654520,
+      "duration_ms": 4120,
+      "end_ms": 1658640,
+      "text": "have smoke everywhere. One of the things"
+    },
+    {
+      "start_ms": 1656760,
+      "duration_ms": 4880,
+      "end_ms": 1661640,
+      "text": "that Google has also been working on is"
+    },
+    {
+      "start_ms": 1658640,
+      "duration_ms": 5720,
+      "end_ms": 1664360,
+      "text": "an AI-driven satellite image-based"
+    },
+    {
+      "start_ms": 1661640,
+      "duration_ms": 5240,
+      "end_ms": 1666880,
+      "text": "emergent fire detection and autonomous"
+    },
+    {
+      "start_ms": 1664360,
+      "duration_ms": 5640,
+      "end_ms": 1670000,
+      "text": "fire extinguishing solution. That's"
+    },
+    {
+      "start_ms": 1666880,
+      "duration_ms": 4480,
+      "end_ms": 1671360,
+      "text": "really cool. It can It can spot fires"
+    },
+    {
+      "start_ms": 1670000,
+      "duration_ms": 2760,
+      "end_ms": 1672760,
+      "text": "with AI"
+    },
+    {
+      "start_ms": 1671360,
+      "duration_ms": 3480,
+      "end_ms": 1674840,
+      "text": "at a level that we have never been able"
+    },
+    {
+      "start_ms": 1672760,
+      "duration_ms": 3880,
+      "end_ms": 1676640,
+      "text": "to do with humans. It can bring an"
+    },
+    {
+      "start_ms": 1674840,
+      "duration_ms": 3600,
+      "end_ms": 1678440,
+      "text": "autonomous helicopter to dump water on"
+    },
+    {
+      "start_ms": 1676640,
+      "duration_ms": 4000,
+      "end_ms": 1680640,
+      "text": "that fire and put it out within a few"
+    },
+    {
+      "start_ms": 1678440,
+      "duration_ms": 4160,
+      "end_ms": 1682600,
+      "text": "minutes. Now, is it obviously scaled"
+    },
+    {
+      "start_ms": 1680640,
+      "duration_ms": 4400,
+      "end_ms": 1685040,
+      "text": "yet? No, we still have smoke right now,"
+    },
+    {
+      "start_ms": 1682600,
+      "duration_ms": 3880,
+      "end_ms": 1686480,
+      "text": "but the concept works, and the concept"
+    },
+    {
+      "start_ms": 1685040,
+      "duration_ms": 4160,
+      "end_ms": 1689200,
+      "text": "is something that we can choose to scale"
+    },
+    {
+      "start_ms": 1686480,
+      "duration_ms": 5440,
+      "end_ms": 1691920,
+      "text": "up and deliver a ton of value for. AI is"
+    },
+    {
+      "start_ms": 1689200,
+      "duration_ms": 5280,
+      "end_ms": 1694480,
+      "text": "full of stories like that. AI can give"
+    },
+    {
+      "start_ms": 1691920,
+      "duration_ms": 5640,
+      "end_ms": 1697560,
+      "text": "us a tremendous amount of benefit as a"
+    },
+    {
+      "start_ms": 1694480,
+      "duration_ms": 5680,
+      "end_ms": 1700160,
+      "text": "species, but we have to recognize how"
+    },
+    {
+      "start_ms": 1697560,
+      "duration_ms": 4640,
+      "end_ms": 1702200,
+      "text": "these systems actually work in order to"
+    },
+    {
+      "start_ms": 1700160,
+      "duration_ms": 5320,
+      "end_ms": 1705480,
+      "text": "ensure that we are aligning these"
+    },
+    {
+      "start_ms": 1702200,
+      "duration_ms": 3280,
+      "end_ms": 1705480,
+      "text": "systems for the long term."
+    }
+  ]
+}

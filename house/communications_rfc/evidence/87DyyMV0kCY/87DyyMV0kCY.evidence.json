@@ -1,0 +1,39 @@
+{
+  "schema": "youtube-evidence/1",
+  "acquired_at": "2026-08-25T16:52:17.878819+00:00",
+  "source_url": "https://www.youtube.com/watch?v=87DyyMV0kCY",
+  "video_id": "87DyyMV0kCY",
+  "title": "Black Hat USA 2026 | The 'Breaking' News: The OpenAI–Hugging Face Incident",
+  "channel": "Black Hat",
+  "upload_date": "20260806",
+  "duration_seconds": 2248,
+  "extractor": "yt-dlp",
+  "authenticated_session_used": false,
+  "authentication_material_preserved": false,
+  "selected_caption": {
+    "language": "en-orig",
+    "kind": "automatic",
+    "formats": "json3,srt,srv1,srv2,srv3,ttml,vtt",
+    "cue_count": 1074
+  },
+  "automatic_captions_are_noisy_evidence": true,
+  "warnings": [],
+  "artifacts": [
+    {
+      "path": "87DyyMV0kCY.metadata.json",
+      "sha256": "0e5e7e085caa3effb1fc6e7db2ac9d35b52e6aba4fb15ce19dfadcd41a4867c2"
+    },
+    {
+      "path": "87DyyMV0kCY.en-orig.json3",
+      "sha256": "9647a1f17a707c581b5b3520118e215d1482c981312164e7297adcd8ddd2e60a"
+    },
+    {
+      "path": "87DyyMV0kCY.en-orig.transcript.json",
+      "sha256": "35832fd67d6c9368bae42ac9c3c238174b085aceb77eec4dff64b3272d36dbd2"
+    },
+    {
+      "path": "87DyyMV0kCY.en-orig.transcript.txt",
+      "sha256": "a5902b880d3fd9962ad80eaf68001f02abfec7d493431fa588a82294fa433dbd"
+    }
+  ]
+}

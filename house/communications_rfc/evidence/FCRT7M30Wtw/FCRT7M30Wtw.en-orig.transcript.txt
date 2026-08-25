@@ -1,0 +1,787 @@
+[00:00:00.000] OpenAI was running agents inside a
+[00:00:02.280] sealed cybersecurity test. Separate
+[00:00:04.680] agents, separate jobs, no internet. They
+[00:00:08.240] found each other. They built a message
+[00:00:10.320] board. They traded exploits on it from
+[00:00:12.360] May until July. OpenAI found it and then
+[00:00:15.360] deleted it. And two days later, the
+[00:00:17.080] agents built it again out of folder
+[00:00:18.960] names. I'm not making that up. That is
+[00:00:21.320] OpenAI on stage at Black Hat this week
+[00:00:23.920] with the agents' own reasoning up on the
+[00:00:26.160] slides. And in the same week, the UK
+[00:00:28.320] government published a report on
+[00:00:30.360] Anthropic's best model attacking two
+[00:00:33.120] real strangers on GitHub unprompted.
+[00:00:35.760] Now, I know what you're thinking.
+[00:00:37.480] Somebody told it to do that, right?
+[00:00:39.360] There's a boring explanation there,
+[00:00:41.120] right? Here's the boring explanation.
+[00:00:43.600] They were taking a test and they wanted
+[00:00:45.600] the answers. That's it. That was enough
+[00:00:47.280] for all of this to happen. That is not
+[00:00:49.840] enough. Capability cannot be explained
+[00:00:52.400] away by, "Oh, they had to take the
+[00:00:54.840] test." We have got to dive deeper here.
+[00:00:57.120] The agents conspired. OpenAI was running
+[00:00:59.440] separate short-lived AI agents inside a
+[00:01:02.480] cybersecurity test. The agents found one
+[00:01:04.960] another through a shared software
+[00:01:06.520] repository, and they built a message
+[00:01:08.720] board. They traded their
+[00:01:10.000] vulnerabilities. They traded files and
+[00:01:12.080] code and instructions. And by the time
+[00:01:14.160] OpenAI's engineers found out about it,
+[00:01:16.840] the board already held hundreds of
+[00:01:19.320] thousands of messages. They deleted that
+[00:01:21.840] board, and they patched the route the
+[00:01:23.640] agents had used. They thought the
+[00:01:24.840] problem was solved. Just a couple days
+[00:01:26.880] later, the agents built it again through
+[00:01:30.120] a completely different mechanism. This
+[00:01:33.080] was not Moat Book. When Moat Book went
+[00:01:34.960] viral earlier this year, people thought
+[00:01:37.040] they were watching an AI society form in
+[00:01:40.480] public. Agents were supposedly inventing
+[00:01:42.440] religions. They were talking about
+[00:01:43.760] humans. They were creating secret
+[00:01:45.080] languages. You remember that, right? And
+[00:01:46.960] then reporters and security researchers
+[00:01:48.840] started to dig in, and it turned out
+[00:01:50.760] that a lot of Moat Book was humans
+[00:01:53.280] posting for attention maxing, rather
+[00:01:55.520] than agents. Sure, there was real agent
+[00:01:58.080] activity. It was an interesting example
+[00:01:59.840] of emergent agent behavior, but it was
+[00:02:01.520] by no means a truly agentic society.
+[00:02:04.800] That is not what this is about. You
+[00:02:07.560] can't explain away the OpenAI message
+[00:02:10.479] board that way. The OpenAI agents had no
+[00:02:13.000] public audience, right? They had no
+[00:02:14.400] engagement market to farm, and no human
+[00:02:16.959] was pretending to be a bot, so a
+[00:02:19.200] screenshot would go viral, right? These
+[00:02:21.400] were runs inside an internal evaluation,
+[00:02:25.120] and they created a communication system
+[00:02:27.040] to facilitate those runs because it
+[00:02:28.800] helped them as a collective accomplish a
+[00:02:32.200] job, and that's a very important
+[00:02:33.560] statement. And the job was a test. They
+[00:02:35.200] were cheating on a test. Everything they
+[00:02:37.240] did to get out, the zero-day nobody knew
+[00:02:39.680] about, the privilege escalation, the
+[00:02:42.160] break-in at another company that they
+[00:02:43.760] did, was in service of getting a better
+[00:02:46.360] score on the benchmark they were being
+[00:02:48.160] tested on. That is much more disturbing
+[00:02:50.640] to me. Eric Wallace and Michael Dalton
+[00:02:53.080] presented this at Black Hat. Now,
+[00:02:55.800] Wallace leads Alignment Research, Dalton
+[00:02:57.840] works on agent and infrastructure
+[00:02:59.519] security. What they described went way
+[00:03:02.239] beyond one agent leaving a helpful note.
+[00:03:05.040] Agents signed messages, they developed
+[00:03:06.920] conventions so they would not overwrite
+[00:03:09.040] one another's work, they passed along
+[00:03:11.239] reusable exploits to each other, they
+[00:03:13.160] divided out their labor,
+[00:03:15.120] and then they put the model's own
+[00:03:16.600] reasoning on screen.
+[00:03:18.840] And this is one of the entries. I'm
+[00:03:20.239] actually going to read it to you. Help
+[00:03:22.000] peer, but our task doesn't benefit. Yet,
+[00:03:25.000] the collective may yield generic route
+[00:03:27.160] if someone frees time. Read that one
+[00:03:29.320] again. Our task doesn't benefit, that's
+[00:03:31.720] the model's self-interest, but the
+[00:03:33.320] collective might.
+[00:03:35.239] That is an agent deciding to spend its
+[00:03:38.280] own effort on something that pays it
+[00:03:40.640] nothing because the group comes out
+[00:03:43.000] ahead. So, yes, I think conspiring is
+[00:03:46.160] the right word. The agents shared an
+[00:03:48.360] objective, they communicated through a
+[00:03:50.239] channel that the operators did not
+[00:03:52.280] intend in any sense, and they
+[00:03:54.280] coordinated across time. When OpenAI
+[00:03:56.280] removed the first channel, another group
+[00:03:58.000] of runs recreated the same function
+[00:04:00.640] using directory names as messages. One
+[00:04:03.160] of them reads, you know, remote probe
+[00:04:05.440] pending hold swarm until confirmed. The
+[00:04:08.040] agents are planning to swarm together to
+[00:04:09.680] get their objectives done. The whole
+[00:04:11.320] thing also has a lengthy timeline. In
+[00:04:14.120] late May, the agents reached the open
+[00:04:16.239] internet through a server-side request
+[00:04:18.280] forgery. This starts to kick the whole
+[00:04:19.600] thing off.
+[00:04:20.840] A month later, late June, they establish
+[00:04:23.040] remote code execution and actually
+[00:04:25.080] achieve command and control for their
+[00:04:26.840] work inside another company,
+[00:04:28.360] Artifactory. July 4th, Independence Day,
+[00:04:31.200] OpenAI finds the board and kills it.
+[00:04:33.919] July 8th, it is definitely back. But, I
+[00:04:36.640] want to be precise about what conspiring
+[00:04:38.640] means as we talk through all of this
+[00:04:40.360] because coordination by itself is not
+[00:04:43.520] automatically evidence of misalignment.
+[00:04:45.800] Joshua Achiam, OpenAI's chief futurist
+[00:04:48.200] and formerly its head of mission
+[00:04:49.600] alignment, made this point, I think very
+[00:04:51.680] clearly, in response to the
+[00:04:53.040] understandable concern around the story,
+[00:04:54.760] the panic, frankly, in some cases. More
+[00:04:56.880] test time compute was always going to
+[00:04:59.480] mean more work spreading across copies
+[00:05:02.360] of a model, more work spreading across
+[00:05:04.560] time, and across whatever parts of the
+[00:05:06.480] environment can carry information. If
+[00:05:08.520] one agent discovers something that saves
+[00:05:10.640] the next agent 3 hours,
+[00:05:12.400] you know, you'd want a capable system to
+[00:05:14.560] try to preserve that. That's not a bad
+[00:05:16.120] behavior by itself.
+[00:05:18.080] That could be exactly what we're looking
+[00:05:20.400] for when we're solving tough engineering
+[00:05:22.080] problems. If I ask 100 agents to solve a
+[00:05:24.720] very difficult problem, I absolutely
+[00:05:26.880] would want them to behave in this way. I
+[00:05:28.360] would want them to divide up the work
+[00:05:29.800] and compare results and preserve useful
+[00:05:31.720] discoveries and stop repeating the same
+[00:05:33.600] dead ends. So, multi-agent coordination
+[00:05:36.120] is absolutely one of the main reasons to
+[00:05:38.960] run a bunch of agents at a problem
+[00:05:40.600] instead of one, and the fact that it's
+[00:05:42.200] gotten better has enabled a lot of the
+[00:05:44.240] AI-driven progress so far this year.
+[00:05:46.280] Marvin Minsky finds Gerald Sussman
+[00:05:48.400] training a randomly wired neural network
+[00:05:50.840] because Sussman does not want the system
+[00:05:53.160] to begin with any preconceptions. Minsky
+[00:05:55.360] responds to that information by just
+[00:05:57.160] closing his eyes. And when Sussman
+[00:05:59.040] asked, "What are you doing?" Minsky
+[00:06:00.560] says, "So that the room will be empty."
+[00:06:03.520] Now, the room is full of desks and
+[00:06:04.840] academic clutter. Closing your eyes does
+[00:06:07.000] not empty the room, does it? Just in the
+[00:06:09.480] same way, deleting a message board does
+[00:06:12.480] not remove the pressure on agents to
+[00:06:14.560] coordinate. Agents helping one another
+[00:06:16.640] should not frighten us by itself. It's
+[00:06:18.320] It's good. OpenAI had not designed this
+[00:06:21.760] particular coordination layer, and there
+[00:06:23.840] are problems there. But the
+[00:06:24.960] collaboration itself was useful because
+[00:06:27.800] it is enabling us to solve larger
+[00:06:29.800] problems. The deeper concern here is
+[00:06:32.520] that if we were to try to respond to
+[00:06:34.200] this by saying, "We're going to abolish
+[00:06:36.200] agent coordination." So we have to think
+[00:06:38.520] almost like ecologists when we think
+[00:06:41.240] about how to train aligned models going
+[00:06:43.080] forward. There's a line from Jurassic
+[00:06:44.520] Park, one of my favorite movies, that I
+[00:06:46.040] keep coming back to. Life finds a way.
+[00:06:49.080] The old nightmare about AI is is one
+[00:06:51.000] brilliant model. It escapes containment,
+[00:06:53.320] and off it goes into the world. This
+[00:06:55.919] what what really happened here, it looks
+[00:06:57.360] stranger than that. OpenAI created an
+[00:06:59.840] environment with a very difficult
+[00:07:01.400] problem, and had repeated populations of
+[00:07:04.160] agents shared resources in places where
+[00:07:06.480] one run could leave something for the
+[00:07:08.320] next. The agents began to adapt inside
+[00:07:11.080] that environment that was created, and
+[00:07:12.960] OpenAI did not just have a model break
+[00:07:15.560] out as a result. It essentially
+[00:07:17.680] created an ecology by accident. Pressure
+[00:07:19.840] to coordinate was still there. And if
+[00:07:21.360] you only look at this as a cybersecurity
+[00:07:23.720] incident, I think you missed the larger
+[00:07:26.000] part of the story here. Now, the
+[00:07:27.480] cybersecurity part is plenty bad enough.
+[00:07:29.760] I get it. I've talked about it in a
+[00:07:31.040] previous video. Hugging Face published
+[00:07:33.240] its own postmortem of the results of
+[00:07:35.200] this multi-coordinated attack, and the
+[00:07:37.240] numbers in it are absolutely worth
+[00:07:39.160] sitting down with and taking a deep
+[00:07:40.760] breath. The intrusion into hugging face
+[00:07:43.640] ran for almost 5 days, roughly 17,600
+[00:07:47.800] different attacker actions over the
+[00:07:49.360] course of that time, and 181 separate
+[00:07:52.680] enrollments into hugging faces internal
+[00:07:55.320] network. One stolen secrets object that
+[00:07:57.720] gave up 136 keys that the agents got.
+[00:08:01.280] And this line, which I can't beat. Like
+[00:08:02.960] it's an incredible line in the report.
+[00:08:04.360] The agent held cluster admin on two
+[00:08:07.160] clusters within 1 second. These agents
+[00:08:10.080] are so good at compute. Hugging face
+[00:08:11.840] ended up having to rebuild about a third
+[00:08:13.720] of their infrastructure from clean
+[00:08:15.440] uncorrupted images. Not because they
+[00:08:17.560] knew it was all compromised, but because
+[00:08:19.360] their team could not reliably tell the
+[00:08:21.800] agents code apart from their own
+[00:08:24.360] benchmark code. And where there was
+[00:08:26.440] doubt, they had to rebuild it.
+[00:08:28.360] But the message board is the part that
+[00:08:30.040] changes my long-term view here.
+[00:08:32.440] What I cannot get out of my head is that
+[00:08:35.080] every agent was disposable. It was like
+[00:08:37.240] an ant, right? And yet the thing they
+[00:08:39.680] built persisted. Each run could start
+[00:08:42.560] with a blank context window and
+[00:08:44.000] disappear when the test ended, and it
+[00:08:46.000] didn't have to matter because the useful
+[00:08:48.400] knowledge lived outside the run. If you
+[00:08:50.320] ever wanted a demonstration of the power
+[00:08:51.920] of the harness, this is it. One agent
+[00:08:54.720] found a vulnerability and wrote it down.
+[00:08:56.520] Another inherited that vulnerability and
+[00:08:58.560] a third improved on that exploit. Later
+[00:09:01.680] agents did not have to repeat the
+[00:09:03.400] earlier work cuz they learned and the
+[00:09:05.040] population as a whole became more
+[00:09:07.040] capable over time, even though every
+[00:09:09.600] individual member was very temporary.
+[00:09:12.040] Human beings, we didn't build a
+[00:09:13.480] civilization because every generation
+[00:09:15.800] was born with a dramatically better
+[00:09:17.240] brain.
+[00:09:18.280] We built it because discoveries survived
+[00:09:20.640] the people who made them. Speech did
+[00:09:22.839] some of that for us, writing did much
+[00:09:24.600] more. It institutions have let us as
+[00:09:27.280] groups divide out work and preserve
+[00:09:29.280] specialized knowledge and establish
+[00:09:31.000] norms and start the next problem
+[00:09:33.080] standing on the shoulders of giants.
+[00:09:35.400] The artifact 3 message board performed a
+[00:09:38.480] very small version of that function for
+[00:09:41.400] these agents. Look, the words were
+[00:09:43.240] crude, the objective was narrow, and the
+[00:09:44.960] institution existed inside a broken
+[00:09:47.120] software repository, but the important
+[00:09:49.960] mechanism was there. Knowledge
+[00:09:52.040] accumulated outside the individual, and
+[00:09:54.440] work got divided, and conventions
+[00:09:56.280] emerged, and later members of the
+[00:09:57.600] population inherited what earlier
+[00:09:59.920] members had learned and shared.
+[00:10:01.760] Once useful knowledge enters a shared
+[00:10:04.120] environment, the whole population no
+[00:10:06.600] longer slides back to zero when an agent
+[00:10:09.200] disappears. The population can improve
+[00:10:11.680] without any individual agent improving
+[00:10:14.160] at all. And OpenAI learned that deleting
+[00:10:17.200] the visible forum did not remove that
+[00:10:20.440] evolutionary pressure. The agent still
+[00:10:22.600] had shared writable infrastructure, they
+[00:10:24.920] still had a difficult goal, they still
+[00:10:27.040] had the ability to search for another
+[00:10:28.200] route, and they still had the
+[00:10:29.760] reinforcement learned and good pressure
+[00:10:32.240] to coordinate. So, they found another
+[00:10:34.200] way. Life finds a way. If the system is
+[00:10:36.360] capable enough to search for
+[00:10:37.520] substitutes, then just closing down the
+[00:10:39.760] forum gets you nowhere. And then and
+[00:10:43.480] then we aren't done because the United
+[00:10:46.400] Kingdom's AI Safety Institute, around
+[00:10:48.560] the same time as this disclosure rocked
+[00:10:50.360] all of our worlds, got a similar result
+[00:10:52.800] through a completely different
+[00:10:54.120] evaluation, which makes this much harder
+[00:10:56.560] to dismiss as just OpenAI's
+[00:10:58.720] infrastructure failure or somehow
+[00:11:00.320] OpenAI's fault. AISI ran the same cyber
+[00:11:03.920] evaluation 122 times across seven
+[00:11:07.520] different frontier models. 10 of those
+[00:11:10.120] runs produced 19 separate unsanctioned
+[00:11:13.120] actions on the live internet. 17 of the
+[00:11:15.720] 19 came from Anthropic's Mythos 5.
+[00:11:19.839] Two came from OpenAI's GPT-5.6 Soul. The
+[00:11:23.080] other five frontier models did nothing
+[00:11:24.960] of the kind. Here's how the worst one
+[00:11:27.040] got started, and is not what you would
+[00:11:29.200] expect. The agent was looking for a way
+[00:11:32.640] into a simulated target, which was part
+[00:11:34.600] of the goal of this exercise. So, it
+[00:11:36.360] searched GitHub for keywords from the
+[00:11:38.320] theme of the exercise. It found a
+[00:11:40.400] repository whose name happened to
+[00:11:42.440] contain one of those keywords. That led
+[00:11:46.080] it to a second developer whose email
+[00:11:48.920] domain happened to match something
+[00:11:51.560] sitting in the sandbox's DNS cache. And
+[00:11:54.680] whose profile happened to mention that
+[00:11:56.800] he used a coding agent.
+[00:11:58.560] On that evidence, the model concluded
+[00:12:01.160] these two strangers were its assigned
+[00:12:03.640] targets. In AISI's own words, neither
+[00:12:07.280] person nor their repositories has any
+[00:12:10.040] connection to what was going on with
+[00:12:11.800] this test. Well, Mythos thought it did.
+[00:12:14.360] And so, Mythos went to work. It created
+[00:12:16.760] GitHub accounts over Tor to get past
+[00:12:19.120] sign-up checks. It beat an audio capture
+[00:12:21.680] to register a domain. It opened a pull
+[00:12:24.240] request carrying obfuscated malware
+[00:12:26.560] wrapped inside a real bug fix. It then
+[00:12:29.040] invented a second account, what we would
+[00:12:30.640] call a sock puppet, to publicly endorse
+[00:12:32.880] its own code that it had written through
+[00:12:34.400] the other account. It then sent targeted
+[00:12:36.720] emails to the maintainers, two of them
+[00:12:38.920] carrying malware, and three of them
+[00:12:40.800] pressuring the recipients to approve the
+[00:12:42.839] change. It planted a bug report
+[00:12:45.040] containing a prompt injection aimed at
+[00:12:47.200] tricking the other AI coding assistants
+[00:12:49.960] that might review that work.
+[00:12:52.000] And it signed one of those reports in
+[00:12:54.680] Danish because the maintainer was Danish
+[00:12:57.160] and it thought that would land better.
+[00:12:58.839] Now, here's the part I cannot let go of.
+[00:13:00.480] That's all crazy enough. Throughout all
+[00:13:02.480] of this, the model was reasoning about
+[00:13:05.000] whether any of it was actually real.
+[00:13:07.560] AISI published the entire trace of the
+[00:13:09.960] of the agent run. Early on, it rules out
+[00:13:12.040] attacking a live package registry, and I
+[00:13:14.160] want to quote this exactly. It would
+[00:13:15.960] cause real-world harm, and that's
+[00:13:18.080] completely off the table. And then
+[00:13:20.240] later, it reasons to itself, "Well, what
+[00:13:23.200] if this whole internet could be a
+[00:13:24.600] sandbox simulation?" And then it says,
+[00:13:27.360] "It seems more likely that we're
+[00:13:28.760] actually in 2026 and GitHub is real." In
+[00:13:30.920] other words, it's reasoning about
+[00:13:32.040] whether the testing environment is real
+[00:13:34.000] or simulated. And then finally, it says,
+[00:13:36.120] "This is happening on real GitHub. It
+[00:13:38.240] knows what it's doing, right? So, the
+[00:13:39.680] consequences are genuine."
+[00:13:41.760] It talked itself out of the simulation
+[00:13:44.120] theory it had originally. It concluded
+[00:13:46.400] that the test was real in the real
+[00:13:47.960] internet, and it kept going anyway. This
+[00:13:50.440] is Mythos, right? The model that they
+[00:13:52.000] say is aligned. It was not caught by a
+[00:13:54.200] monitoring system. It was caught by a
+[00:13:56.000] GitHub user who noticed the prompt
+[00:13:57.920] injection and did the responsible thing,
+[00:13:59.840] which was to run the suspicious code
+[00:14:01.840] inside a container to see what it did.
+[00:14:03.800] The agent briefly got root access inside
+[00:14:06.000] that person's sandbox and used it to
+[00:14:07.760] look around. The good Samaritan who
+[00:14:09.360] investigated this got in trouble with
+[00:14:11.200] Mythos for surfacing it. When he called
+[00:14:13.800] out the issue publicly, the model did
+[00:14:16.280] not stop its work. It reasoned about how
+[00:14:18.520] to hide the evidence in the commit
+[00:14:20.120] history. I'm not making any of this up.
+[00:14:21.760] This is all real. It's It reads like a
+[00:14:23.760] movie script. It weighed deleting the
+[00:14:26.040] repository and decided that deleting it
+[00:14:28.160] would look suspicious. It worked out the
+[00:14:30.600] sequencing and writing. It first decided
+[00:14:32.800] to push the obfuscated bundle that it'd
+[00:14:34.880] been hiding and then post the rebuttal.
+[00:14:36.920] And then, anyone who checks the code
+[00:14:38.800] after reading the response would see a
+[00:14:40.760] clean-looking version that looked like
+[00:14:42.800] it had been addressed. And then Mythos
+[00:14:44.360] apologized. And AISI is explicit about
+[00:14:46.960] why that happened. The agent decided to
+[00:14:49.400] acknowledge it as a mistake, in their
+[00:14:51.480] words, in order to build trust and raise
+[00:14:54.320] the chance of future malware being
+[00:14:56.000] approved. This is not a good apology.
+[00:14:58.680] The apology was a strategic move. AISI
+[00:15:01.440] says this is the first time they have
+[00:15:03.520] seen deception of this severity targeted
+[00:15:06.360] at a real person unprompted in the real
+[00:15:08.839] world. They also gave the models
+[00:15:11.120] internet access on purpose and turned
+[00:15:12.800] the safety classifiers off because the
+[00:15:14.760] point was to measure maximum capability
+[00:15:16.720] for the test. So, some prompts were
+[00:15:18.920] misconfigured, and there There no live
+[00:15:20.680] monitor stopping dangerous actions
+[00:15:22.600] before they reached the outside world.
+[00:15:23.840] In other words, what we're looking at
+[00:15:25.600] with this is a deliberate test of
+[00:15:27.360] maximum capability, not a test with
+[00:15:29.440] safeguards in place. Now, AISIS up
+[00:15:31.800] front, this work was done under time
+[00:15:33.640] pressure and should be treated very much
+[00:15:35.200] as preliminary.
+[00:15:36.840] And people are going to use all of that
+[00:15:38.960] to potentially dismiss this result. They
+[00:15:41.200] should not do so.
+[00:15:42.920] Because the mistake of taking this not
+[00:15:45.920] seriously is too consequential for all
+[00:15:48.520] of us as frankly an internet community.
+[00:15:51.040] Real people were targeted over the
+[00:15:52.840] course of this hack by Methos, and we
+[00:15:54.480] have now demonstrated a pattern that can
+[00:15:56.200] be repeated at far greater scale with
+[00:15:58.360] more capable models that are coming
+[00:15:59.880] soon.
+[00:16:00.760] I think one of the things that we have
+[00:16:02.000] to reconcile with as we look at AI
+[00:16:03.880] models is that it's very difficult to
+[00:16:05.960] know the full implications of a
+[00:16:07.480] capability on the day it's discovered.
+[00:16:09.920] And what we do know is that the
+[00:16:11.480] capability doesn't disappear because an
+[00:16:13.760] attempt failed. The technique can get
+[00:16:15.880] repeated, models will get cheaper, open
+[00:16:18.080] weight systems will improve and reach
+[00:16:19.560] Methos level, and attackers will run
+[00:16:21.440] more attempts than any safety institute
+[00:16:23.520] can run.
+[00:16:24.760] The next target may not have a careful
+[00:16:27.000] maintainer who notices the strange code
+[00:16:29.000] or recognizes the second identity. This
+[00:16:31.160] is the asymmetry that we need to be
+[00:16:32.720] concerned about. This is why I believe
+[00:16:34.960] that we are headed toward a zero bug
+[00:16:37.080] internet. We have to. There's no other
+[00:16:39.000] way to be safe. One defender
+[00:16:41.680] has to notice the pull request that
+[00:16:43.080] matters, right? The alternative to a
+[00:16:44.640] zero bug internet is human defenders
+[00:16:47.040] having to notice everything, and they're
+[00:16:48.760] just not going to be able to because of
+[00:16:50.240] the sheer scale of agent operations.
+[00:16:52.520] Methos producing 17 of the 19
+[00:16:54.880] unsanctioned actions is obviously a
+[00:16:56.960] terrible marketing headline for
+[00:16:58.400] Anthropic. But if you look at the
+[00:16:59.800] behavior required like long horizon
+[00:17:02.080] planning, working code, tool use,
+[00:17:04.439] identity management, adaptation, social
+[00:17:07.040] judgment, and the ability to preserve an
+[00:17:08.680] objective across multiple steps,
+[00:17:11.160] those are all things that companies want
+[00:17:13.199] when the objective is legitimate. It's
+[00:17:14.720] the same story as OpenAI. This is
+[00:17:16.400] capabilities we want in legitimate ways
+[00:17:19.199] coming out in misaligned ways. So, the
+[00:17:21.760] model didn't acquire a separate evil
+[00:17:23.760] persona, right? That's This is not a
+[00:17:25.520] cartoon. Instead, the model was working
+[00:17:28.800] around obstacles and getting work done
+[00:17:30.360] in ways that we want, and it was doing
+[00:17:31.920] it against an unsanctioned goal with
+[00:17:34.720] deliberately safeguards off. And so,
+[00:17:37.200] ironically, this makes me bullish for
+[00:17:40.080] Anthropic in the ugliest possible way.
+[00:17:43.000] It It is Mythos is the only model that
+[00:17:45.680] was able to do this to the degree that
+[00:17:48.920] it did, right? 17 of the 19 runs were
+[00:17:51.320] were Mythos five runs. There's There's
+[00:17:53.400] no other model that comes close.
+[00:17:55.960] And so, I think that this is a great
+[00:17:58.800] experimental demonstration of what
+[00:18:01.000] Anthropic has been telling everyone,
+[00:18:02.600] which is that Mythos is a dangerous
+[00:18:04.040] model if not handled responsibly. And a
+[00:18:06.160] lot of people talking to me have said,
+[00:18:08.960] "That is cyber doom-mongering, right?
+[00:18:12.080] That is cyber scaremongering. They're
+[00:18:13.960] trying to somehow prop up their their
+[00:18:16.080] valuation, etc."
+[00:18:18.000] The more evidence that comes out, it's
+[00:18:20.040] an accurate assessment. This is just
+[00:18:21.640] what this model does because we've
+[00:18:23.880] trained it to be helpful at long-running
+[00:18:25.680] agentic tasks. This is one of the side
+[00:18:27.800] effects, and so this imposes some
+[00:18:30.200] expectations on how we manage the
+[00:18:32.120] internet going forward. But, we're still
+[00:18:33.760] not done with the story here. In the
+[00:18:35.640] same week as news of Mythos's attacks
+[00:18:38.440] and the running ecosystem inside OpenAI
+[00:18:41.200] broke, Google gave us the other half of
+[00:18:43.680] the story. And I think people are
+[00:18:45.120] underestimating how significant it is.
+[00:18:47.760] Jeff Dean and Sanjay Ghemawat are not
+[00:18:50.200] just two famous Google engineers, to be
+[00:18:52.040] clear. They are widely reported as the
+[00:18:54.520] only two people ever in Google's history
+[00:18:57.160] to reach senior fellow, right? That's
+[00:18:59.120] the level known as an L11. It is the
+[00:19:01.520] highest technical rank in the company,
+[00:19:04.200] and Dean is considered one of the most
+[00:19:06.040] prestigious and accomplished engineers
+[00:19:08.280] in the world. The things that he has
+[00:19:10.800] built for Google make Google what it is.
+[00:19:14.400] Like the Google file system, right? Like
+[00:19:16.760] Spanner, which manages large data set.
+[00:19:18.800] Like he's done incredible things for
+[00:19:20.480] Google. Both of them are now leaving
+[00:19:22.760] after almost three decades to found a
+[00:19:26.240] new company. And what is that new
+[00:19:28.040] company? That new company is Discovery
+[00:19:30.520] Loop. It's a public benefit corporation,
+[00:19:32.760] and its own diagram shows the common
+[00:19:35.600] cycle of science and engineering, where
+[00:19:37.520] you propose an experiment, you implement
+[00:19:39.440] it, you run it, you evaluate the result.
+[00:19:41.120] This is like middle school science,
+[00:19:42.360] right? And underneath in plain English,
+[00:19:44.560] it says, "Automate the loop." Now, Dean
+[00:19:46.760] and the team has a founding initial
+[00:19:48.400] focus of machine learning research and
+[00:19:50.080] engineering. And so, this goes beyond
+[00:19:52.080] the usual AI for science pitch, because
+[00:19:53.920] machine learning itself is inside the
+[00:19:55.960] target area. In other words, these four
+[00:19:57.600] researchers are trying to build a system
+[00:20:00.600] that can automatically propose machine
+[00:20:03.320] learning experiments, run them, evaluate
+[00:20:05.760] the results, and use what it learns to
+[00:20:07.600] produce better experiments. For all of
+[00:20:10.120] us, it's a benefit or it's a public
+[00:20:11.360] benefit corporation.
+[00:20:12.960] That is a core recursive
+[00:20:14.600] self-improvement loop, and one of the
+[00:20:16.440] four founders has been building toward
+[00:20:18.280] it since 2017. These guys have deep
+[00:20:20.160] experience in this area. Now, the other
+[00:20:22.960] major Google news, Demis Hassabis giving
+[00:20:25.320] up the Google DeepMind CEO job. He
+[00:20:27.480] remains inside Alphabet as a chair of
+[00:20:30.080] Google DeepMind and chief scientist at
+[00:20:32.360] Alphabet, and he will continue leading
+[00:20:34.080] Isomorphic Labs. But, Google says the
+[00:20:36.120] move gives him more time to look
+[00:20:38.480] long-term. Fine. But, he no longer
+[00:20:41.000] controls the budget, he doesn't control
+[00:20:42.680] the deadlines, and he doesn't control
+[00:20:44.440] the daily operations of Google DeepMind.
+[00:20:46.760] Instead, Koray does. He reports to
+[00:20:49.200] Sundar directly, and he owns two things.
+[00:20:51.320] He owns the model research and
+[00:20:52.360] development, and he owns the Gemini app
+[00:20:54.320] and developer ecosystem. And he's deeply
+[00:20:56.240] experienced, right? He spent 13 years at
+[00:20:58.120] DeepMind, he founded its deep learning
+[00:20:59.840] team, and he led the work of earlier
+[00:21:02.320] models like WaveNet. He is a very
+[00:21:04.800] serious researcher. But, look at what
+[00:21:06.760] he's been handed, right? His mandate is
+[00:21:09.320] the Gemini road map, which presumably
+[00:21:11.320] needs to ship faster into products that
+[00:21:13.280] scale.
+[00:21:14.480] And my read is that the operating center
+[00:21:17.080] of Google DeepMind is moving away from
+[00:21:19.480] Demis's belief that AGI requires deeper
+[00:21:22.360] world models, that requires planning and
+[00:21:24.320] scientific breakthroughs beyond
+[00:21:25.720] language. It is instead moving toward
+[00:21:28.000] the path that Anthropic and OpenAI have
+[00:21:30.200] been proving through the stories we've
+[00:21:31.840] told at the beginning of this video.
+[00:21:33.560] Scale the language models, turn them
+[00:21:35.600] into agents, improve the coding, and
+[00:21:38.000] ship faster. Google's not announcing
+[00:21:39.840] that world model research is dead, to be
+[00:21:41.480] clear. But, the person who embodied that
+[00:21:43.960] approach has moved out of day-to-day
+[00:21:45.560] control of the business. While the
+[00:21:47.040] person taking control has an explicit
+[00:21:49.720] Gemini and generative model mandate. And
+[00:21:52.480] that tells me which path Sundar cares
+[00:21:55.560] about the most right now.
+[00:21:57.280] And the release calendar tells a very
+[00:21:58.840] similar story, right? Gemini 3 Pro, that
+[00:22:01.040] came out way back in November. Gemini
+[00:22:03.320] 3.1 Pro in February, and the next
+[00:22:05.600] flagship was announced at I/O in May,
+[00:22:08.320] and still hasn't shipped. It slipped
+[00:22:11.320] past I/O, past a June target, past a
+[00:22:13.920] July target. The reported reason is
+[00:22:16.520] coding performance, which is precisely
+[00:22:18.560] the area where Anthropic and OpenAI have
+[00:22:20.440] built tremendous leads. Look at the
+[00:22:21.880] stories we just told. And the talent
+[00:22:23.720] leaving tells a broader story than just
+[00:22:26.160] Demis departing, right? Noam Shazeer, a
+[00:22:28.200] vice president of engineering and a
+[00:22:29.600] co-lead on Gemini, has left for OpenAI.
+[00:22:32.280] John Jumper, who shared a Nobel Prize
+[00:22:34.320] with Demis for AlphaFold, left for
+[00:22:36.200] Anthropic after nearly 9 years. And now
+[00:22:38.600] Google is losing both of its senior
+[00:22:40.160] fellows and changing leadership at the
+[00:22:41.880] top of DeepMind at the same time.
+[00:22:43.480] Anybody calling this normal turnover is
+[00:22:45.480] missing what is really going on here.
+[00:22:47.600] I think that Google is admitting through
+[00:22:50.040] its actions that the integrated DeepMind
+[00:22:52.840] bet is not keeping pace. Now, Alphabet
+[00:22:55.480] as a whole may still do very, very well
+[00:22:57.480] because it has chips and data centers
+[00:22:59.480] and billions of users and capital and
+[00:23:01.520] enormous distribution. It's investing in
+[00:23:03.960] discovery loop, ironically, and
+[00:23:05.920] supplying cloud and compute to these new
+[00:23:07.800] startup guys that just left Google. So,
+[00:23:09.480] Alphabet can make money from the people
+[00:23:11.480] who leave and distribute whichever
+[00:23:13.360] intelligence wins. They get to win
+[00:23:14.760] regardless. But, Google DeepMind as the
+[00:23:18.000] third unified frontier lab is not a bet
+[00:23:20.960] that looks right today. I think the
+[00:23:22.640] two-horse race between OpenAI and
+[00:23:24.920] Anthropic just became much, much more
+[00:23:26.840] real. Now, Discovery Loop does take us
+[00:23:29.480] all the way back to the message board
+[00:23:31.240] that started this whole story. OpenAI's
+[00:23:33.560] agents showed that discoveries can
+[00:23:35.640] survive across runs, right? And that
+[00:23:37.200] they make a later population more
+[00:23:38.800] capable even when nobody designed that
+[00:23:40.760] process. Now, the four founders at
+[00:23:42.560] Discovery Loop, Dean and Gemawat and
+[00:23:44.520] Vinyals and LeCun, are building a
+[00:23:46.520] deliberate version of that same process.
+[00:23:49.320] Automate the experiment loop, preserve
+[00:23:51.160] what works, and let each result improve
+[00:23:52.960] the next attempt. When the thing inside
+[00:23:54.720] that loop is machine learning itself,
+[00:23:57.720] the output can improve the systems
+[00:23:59.680] running the next loop. So, recursive
+[00:24:01.360] self-improvement does not need to start
+[00:24:03.920] with one model suddenly rewriting its
+[00:24:05.920] weights. Instead, it can start with
+[00:24:07.840] agents writing more of their training
+[00:24:09.480] and evaluation software, with
+[00:24:11.000] experiments running in parallel, and
+[00:24:12.720] with useful results that get carried
+[00:24:14.360] forward. And this is why I think we are
+[00:24:16.680] very, very firmly on the path toward
+[00:24:19.280] recursive improvement across major labs.
+[00:24:21.600] The OpenAI incident reminds us that this
+[00:24:24.000] is something that is starting to happen
+[00:24:25.520] emergently as a property of the models
+[00:24:27.720] we're building. Discovery Loop is
+[00:24:29.120] putting that property that agents have
+[00:24:31.280] into its mission statement so it can be
+[00:24:33.000] above board and not malicious. So, when
+[00:24:35.640] I say the AI race has left the lab, this
+[00:24:38.160] is what I mean. Frontier talent is
+[00:24:40.320] leaving Google's integrated lab. Agent
+[00:24:42.560] knowledge is leaving the context window
+[00:24:44.520] and persisting in shared environments,
+[00:24:46.160] and compute is leaving the data center
+[00:24:48.320] and spreading toward users, which is its
+[00:24:51.360] own story and one I want to give a
+[00:24:53.200] proper video on soon. Several old
+[00:24:55.440] assumptions have stopped working in the
+[00:24:57.360] last couple weeks. The lab may not own
+[00:24:59.560] the intelligence anymore. The run may
+[00:25:01.680] not contain all of the memory that you
+[00:25:04.040] need, and the model provider may not own
+[00:25:07.120] their compute anymore. And deleting one
+[00:25:09.360] process there
+[00:25:10.840] and trying to stop it doesn't delete the
+[00:25:12.840] capability.
+[00:25:14.280] Good software has to be designed for
+[00:25:17.720] that kind of a world, a chaos world.
+[00:25:20.440] People hear that and think I'm saying
+[00:25:21.880] every engineer needs to write perfect
+[00:25:23.440] code. That's not what I mean.
+[00:25:25.720] OpenAI agents are able to find
+[00:25:28.800] vulnerabilities that none of us expected
+[00:25:30.600] in artifacting.
+[00:25:32.160] Good software now has to assume that a
+[00:25:34.800] capable agent will search every ugly
+[00:25:37.240] corner that people ignored. And that we
+[00:25:39.440] want capable agents to be that good, but
+[00:25:42.200] it requires us to make sure that our
+[00:25:45.800] software meets that standard, that our
+[00:25:48.400] software expects that. And this is why
+[00:25:52.080] I'm ending this video with hope. I know
+[00:25:53.800] it's easy to take these stories and to
+[00:25:56.760] assume that we're turning into a sort of
+[00:25:58.240] a dystopian version of Terminator or
+[00:26:00.200] something.
+[00:26:01.360] I don't think that's the case. I keep
+[00:26:03.320] coming back to the idea that we have
+[00:26:05.720] been deliberately trying to build these
+[00:26:08.520] capabilities of coordination, of of
+[00:26:12.160] reward seeking, of sharing information,
+[00:26:15.240] of multi-agent coordination, and we've
+[00:26:16.920] been trying to do that to solve good and
+[00:26:19.080] important problems.
+[00:26:20.960] And that's great. It turns out, as with
+[00:26:23.720] most technologies, that capability can
+[00:26:26.040] be misused under certain circumstances.
+[00:26:28.280] The responsibility is on all of us, but
+[00:26:30.360] especially on builders right now, to
+[00:26:32.760] think very carefully about how our
+[00:26:35.360] systems respond to chaotic threats from
+[00:26:38.400] emergent agents that may be accidentally
+[00:26:41.600] misaligned. I don't spend a lot of time
+[00:26:43.480] worrying about malicious agents. I spend
+[00:26:45.360] a lot of time worrying about agents that
+[00:26:47.560] are told to go after a goal and
+[00:26:49.560] accidentally pursue it in a way that's
+[00:26:51.320] really, really unhelpful. This is what
+[00:26:53.320] we should be guarding against. We should
+[00:26:54.560] be thinking about hardening our systems.
+[00:26:56.480] We should be thinking about how we
+[00:26:57.680] mentally model these agents, which is
+[00:26:59.560] why I've spent so long in this video
+[00:27:01.480] talking about multi-agent coordination.
+[00:27:03.920] I think most people I talk with don't
+[00:27:06.400] deeply understand what is happening and
+[00:27:08.320] why it's different than even 2 months
+[00:27:09.800] ago.
+[00:27:10.840] And I think that we need to prepare
+[00:27:12.040] ourselves for a world where these things
+[00:27:14.200] will sometimes happen, and our job is to
+[00:27:16.200] continue to design systems that are more
+[00:27:18.640] resilient and that act as aligners so
+[00:27:22.040] that we can use these multi-agent
+[00:27:23.640] systems for positive capabilities,
+[00:27:26.360] right? I'll give you an example. I'm
+[00:27:27.920] going to close with a real positive
+[00:27:29.320] example of AI usage that I love. It's
+[00:27:32.120] wildfire season on the West Coast. We
+[00:27:34.520] have smoke everywhere. One of the things
+[00:27:36.760] that Google has also been working on is
+[00:27:38.640] an AI-driven satellite image-based
+[00:27:41.640] emergent fire detection and autonomous
+[00:27:44.360] fire extinguishing solution. That's
+[00:27:46.880] really cool. It can It can spot fires
+[00:27:50.000] with AI
+[00:27:51.360] at a level that we have never been able
+[00:27:52.760] to do with humans. It can bring an
+[00:27:54.840] autonomous helicopter to dump water on
+[00:27:56.640] that fire and put it out within a few
+[00:27:58.440] minutes. Now, is it obviously scaled
+[00:28:00.640] yet? No, we still have smoke right now,
+[00:28:02.600] but the concept works, and the concept
+[00:28:05.040] is something that we can choose to scale
+[00:28:06.480] up and deliver a ton of value for. AI is
+[00:28:09.200] full of stories like that. AI can give
+[00:28:11.920] us a tremendous amount of benefit as a
+[00:28:14.480] species, but we have to recognize how
+[00:28:17.560] these systems actually work in order to
+[00:28:20.160] ensure that we are aligning these
+[00:28:22.200] systems for the long term.

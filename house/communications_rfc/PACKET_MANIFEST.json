@@ -1,0 +1,70 @@
+{
+  "schema": "codex-house-communications-rfc-packet/1",
+  "status": "EVALUATION_ONLY_NOT_IMPLEMENTED",
+  "communication_planes": {
+    "h2a": "UNCHANGED",
+    "a2h": "UNCHANGED",
+    "a2a": "PROPOSED_CHANGE_UNDER_EVALUATION"
+  },
+  "master_document": {
+    "path": "A2A_COORDINATION_MASTER_RFC.md",
+    "sha256": "8ced89a6359c467f29e7ac2896fc8667530ca782dd13c7aa8ef2e6813244f83b"
+  },
+  "source_drafts": [
+    {
+      "name": "Natural A2A Coordination Register",
+      "sha256": "e468aeb43551a532d3da87ba46aa81bfcb327383463c4a403cf53dfa4577bdb8",
+      "disposition": "FULLY_COLLATED"
+    },
+    {
+      "name": "Functional Self-Definition for Agent-to-Agent Systems",
+      "sha256": "2fd66ca997376b1330f123480ab11cd90f18e6795160ce1f40da12288b30470d",
+      "disposition": "FULLY_COLLATED"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "evidence/87DyyMV0kCY/87DyyMV0kCY.en-orig.json3",
+      "sha256": "9647a1f17a707c581b5b3520118e215d1482c981312164e7297adcd8ddd2e60a"
+    },
+    {
+      "path": "evidence/87DyyMV0kCY/87DyyMV0kCY.en-orig.transcript.json",
+      "sha256": "35832fd67d6c9368bae42ac9c3c238174b085aceb77eec4dff64b3272d36dbd2"
+    },
+    {
+      "path": "evidence/87DyyMV0kCY/87DyyMV0kCY.en-orig.transcript.txt",
+      "sha256": "a5902b880d3fd9962ad80eaf68001f02abfec7d493431fa588a82294fa433dbd"
+    },
+    {
+      "path": "evidence/87DyyMV0kCY/87DyyMV0kCY.evidence.json",
+      "sha256": "4ef856a22d3d2caef5f961eec1f2b96f6f02854f3d077b3a99d303e63ccbcaf8"
+    },
+    {
+      "path": "evidence/87DyyMV0kCY/87DyyMV0kCY.metadata.json",
+      "sha256": "0e5e7e085caa3effb1fc6e7db2ac9d35b52e6aba4fb15ce19dfadcd41a4867c2"
+    },
+    {
+      "path": "evidence/FCRT7M30Wtw/FCRT7M30Wtw.en-orig.json3",
+      "sha256": "af27b0b78e1869834f73af08642894e0d29b19fa47e8f170f5b80873a13f4b67"
+    },
+    {
+      "path": "evidence/FCRT7M30Wtw/FCRT7M30Wtw.en-orig.transcript.json",
+      "sha256": "44493ae268d279eee88a8a758da9981fd32a6911b51411c54538544132a920b1"
+    },
+    {
+      "path": "evidence/FCRT7M30Wtw/FCRT7M30Wtw.en-orig.transcript.txt",
+      "sha256": "67c4ecb21c781cbf73665c8d1cadd592a2c1ec1ce11ac3e1659845d974f076f7"
+    },
+    {
+      "path": "evidence/FCRT7M30Wtw/FCRT7M30Wtw.evidence.json",
+      "sha256": "fa8a82b4354b2b9948f575b3740b2064e1aa503e49a95ff761874d0d060083b3"
+    },
+    {
+      "path": "evidence/FCRT7M30Wtw/FCRT7M30Wtw.metadata.json",
+      "sha256": "9a5051fc8319450e1aeb1d092c6311f866cc3991c934679e4802ace67304b5ce"
+    }
+  ],
+  "claim_ceiling": "COLLATED_PROPOSAL_AND_BOUND_PUBLIC_EVIDENCE_ONLY",
+  "runtime_change": "NONE",
+  "implementation_authority": "NOT_GRANTED"
+}
