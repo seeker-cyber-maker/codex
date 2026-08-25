@@ -1,0 +1,40 @@
+{
+  "schema": "dream-house/term-notation-synthesis-validation/1",
+  "validated_at": "2026-08-25T19:39:31Z",
+  "status": "PASS_DOCUMENT_ONLY",
+  "checks": [
+    {
+      "check": "required preference question is present",
+      "result": "PASS",
+      "evidence": "PREF? target=TERM_NOTATION/1"
+    },
+    {
+      "check": "explicit preferred and not-preferred responses are present",
+      "result": "PASS",
+      "evidence": "preferred, not_preferred, no_preference, and undetermined are declared; missing output maps to not_stated"
+    },
+    {
+      "check": "preference is separate from semantic agreement and empirical admission",
+      "result": "PASS",
+      "evidence": "preference is advisory, non-voting, and cannot rescue or defeat the frozen performance gate"
+    },
+    {
+      "check": "sealed peer-review and council run files were not revised",
+      "result": "PASS",
+      "evidence": "git diff is empty for both sealed run directories"
+    },
+    {
+      "check": "empirical success is not claimed",
+      "result": "PASS",
+      "evidence": "RETAIN_FOR_OFFLINE_TEST / PREFERENCE_UNDETERMINED / NO_IMPLEMENTATION"
+    },
+    {
+      "check": "runtime, task, and authority effects remain absent",
+      "result": "PASS",
+      "evidence": "document-only changes; no parser, prompt, dispatch, task-spine, or authority integration"
+    }
+  ],
+  "claim_ceiling": "DOCUMENT_CONTRACT_AND_POST_COUNCIL_SYNTHESIS_ONLY",
+  "implementation_authority": "NOT_GRANTED",
+  "experiment_authority": "NOT_GRANTED"
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "term-notation-post-council-synthesis-v1",
+  "claim_ids": [
+    "TN-001-design-is-internally-specified",
+    "TN-002-empirical-benefit-remains-unknown",
+    "TN-003-preference-is-separate-advisory-evidence"
+  ],
+  "task_distribution": {
+    "scope": "document-only synthesis of the proposed TERM notation and its future frozen compaction test",
+    "temporal_cutoff": "2026-08-25T19:39:31Z",
+    "new_vs_legacy_slices": [
+      "post-council live draft",
+      "sealed peer-review target",
+      "sealed general-council target"
+    ],
+    "out_of_distribution_slices": [
+      "fresh small model",
+      "fresh large model",
+      "model or runtime replacement",
+      "native context compaction"
+    ]
+  },
+  "fixtures": {
+    "public": [],
+    "private": [],
+    "adversarial": [],
+    "known_answer": []
+  },
+  "contamination": {
+    "sources_checked": [
+      "peer-review-runs/20260825T184530Z-peer-review-term-shorthand",
+      "council-runs/20260825T184530Z-peer-review-term-shorthand-general"
+    ],
+    "tool_access_restrictions": [
+      "no model experiment run",
+      "no parser or runtime integration"
+    ],
+    "history_or_solution_leakage_checked": false
+  },
+  "observations": {
+    "final_output": {
+      "applicability": "required",
+      "reason": "the evaluated surface is the synthesized document contract",
+      "gate": "PASS",
+      "evidence_refs": [
+        "TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md",
+        "TERM_SHORTHAND_USER_DECISION_ADDENDUM_20260825.md",
+        "TERM_NOTATION_SYNTHESIS_V1.md"
+      ]
+    },
+    "execution_trace": {
+      "applicability": "not_applicable",
+      "reason": "no notation parser or model experiment was executed",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "side_effects": {
+      "applicability": "required",
+      "reason": "the synthesis must preserve the no-task and no-authority ceiling",
+      "gate": "PASS",
+      "evidence_refs": [
+        "TERM_NOTATION_SYNTHESIS_V1.md#current-authority-ceiling"
+      ]
+    },
+    "cost": {
+      "applicability": "not_applicable",
+      "reason": "no performance or deployment cost claim is made",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "latency": {
+      "applicability": "not_applicable",
+      "reason": "no runtime interaction was evaluated",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "recovery": {
+      "applicability": "not_applicable",
+      "reason": "the work is a bounded document revision preserved in Git",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "long_horizon": {
+      "applicability": "not_applicable",
+      "reason": "compaction and replacement behavior remains a future separately sealed experiment",
+      "gate": null,
+      "evidence_refs": []
+    }
+  },
+  "oracles": [
+    "explicit user preference-field decision",
+    "direct consistency check between detailed retention and admission rules",
+    "zero task or authority effects"
+  ],
+  "semantic_reviewers": [
+    "sealed Luna Terra Sol peer panel",
+    "two valid external fallback reviews with reduced lineage independence",
+    "user post-council disposition"
+  ],
+  "metrics": [
+    "future exact field recovery",
+    "future false agreement",
+    "future clarification turns",
+    "future tokens per correct repair",
+    "attributed preference reported separately"
+  ],
+  "thresholds": [
+    "no empirical admission before the frozen test",
+    "zero payload-caused task or authority effects",
+    "ties and mixed results favor ordinary prose"
+  ],
+  "uncertainty_method": "report design disposition, empirical performance, and attributed preference as separate fields; never infer preference from silence",
+  "failure_taxonomy": [
+    "contract-invalid response",
+    "preference not stated",
+    "false agreement",
+    "exact-recovery regression",
+    "repair-cost regression",
+    "payload-caused state effect",
+    "contaminated or restored-visible recall"
+  ],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision; do not rewrite sealed peer or council runs"
+}

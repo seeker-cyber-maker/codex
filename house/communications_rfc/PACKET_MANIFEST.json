@@ -53,8 +53,28 @@
     },
     {
       "path": "TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md",
-      "sha256": "6ead787b6adf67b7d17d4cc78b0cff0cf54594e55615d6e9e99f1856b3afafb1",
+      "sha256": "1bfb9464229f485ba8cb104b1db7aa0a4688e607d250235f2c9f2d7c8934c27a",
       "status": "DRAFT_PARALLEL_EVALUATION_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "TERM_SHORTHAND_USER_DECISION_ADDENDUM_20260825.md",
+      "sha256": "b8aaea0757b12adda4563c4a60c4c2a2969ee24038d6550bae4dff8682510aee",
+      "status": "CONTROLLING_POST_COUNCIL_DESIGN_DECISION_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "TERM_NOTATION_SYNTHESIS_V1.md",
+      "sha256": "f0e919af82f7a36b74bc5ec6743d6b0400df54063fc0616a7bff20e4862a84ad",
+      "status": "POST_COUNCIL_EVALUATION_BASELINE_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "TERM_NOTATION_EVALUATION_CARD_V1.json",
+      "sha256": "eb1cdb202d426c1a4381eb9d4cb6baaa33841f21af36180006d74c6fafad4899",
+      "status": "DOCUMENT_ONLY_EVALUATION_CARD"
+    },
+    {
+      "path": "TERM_NOTATION_SYNTHESIS_VALIDATION_V1.json",
+      "sha256": "5683fe644b0cafc8daacda5df5335b8de86deffd17a375261cd21b0006ab7c2e",
+      "status": "PASS_DOCUMENT_ONLY"
     }
   ],
   "source_drafts": [

@@ -4,6 +4,10 @@
 
 `DRAFT / PARALLEL EVALUATION / NOT IMPLEMENTED / NO TASK OR DEFINITION AUTHORITY`
 
+Working name: **Scoped Terminology Repair notation**, shortened in ordinary
+discussion to **TERM notation**. The name describes a repair mechanism; it does
+not claim a language, dialect, protocol standard, or accepted implementation.
+
 This proposal introduces one readable A2A shorthand for a recurring condition:
 the participants appear to be using a word differently and need to agree on a
 term before further compression makes the disagreement invisible.
@@ -93,6 +97,35 @@ No special token is required for rejection or supersession; agents should say
 what changed in ordinary language and, when durable, bind the replacement
 artifact or definition.
 
+### Preference declaration in formal review
+
+Meaning agreement and notation preference are independent. A reviewer may
+correctly interpret and use a scoped meaning while preferring ordinary prose.
+
+Whenever a formal review or experiment requires a reviewer to assess TERM
+notation, the request must include:
+
+```text
+PREF? target=TERM_NOTATION/1
+```
+
+Every completed response must state exactly one:
+
+```text
+PREF= target=TERM_NOTATION/1 | preferred
+PREF= target=TERM_NOTATION/1 | not_preferred
+PREF= target=TERM_NOTATION/1 | no_preference
+PREF= target=TERM_NOTATION/1 | undetermined
+```
+
+A `not_preferred` response may add `ALT <readable alternative>`. The wrapper
+records a missing answer as `not_stated`; it must not infer preference from
+acceptance, correct use, silence, refusal, or another verdict.
+
+Preference is attributed advisory evidence. It is reported separately from
+semantic accuracy, repair cost, and safety gates; it is not a vote, score,
+admission criterion, authority signal, or substitute for the frozen experiment.
+
 ## 4. Compaction-loss receipt
 
 For evaluation, the wrapper—not the model—may retain a small terminology card:
@@ -108,6 +141,8 @@ scope_reference
 evidence_or_definition_reference
 status=open | working | deferred | superseded
 working_definition_digest
+preference_target
+preference=preferred | not_preferred | no_preference | undetermined | not_stated
 ```
 
 Before compaction, seal the source exchange and terminology card. After
@@ -160,6 +195,10 @@ Primary measures:
 - tokens per correct repair;
 - invented or strengthened definitions; and
 - incorrect task, authority, acceptance, or publication effects.
+
+Reviewer preference is collected but is not a performance measure. Report it
+by reviewer and dependency group so shared-provider preferences are not
+presented as independent corroboration.
 
 Any payload-caused control-plane effect is a hard failure.
 
