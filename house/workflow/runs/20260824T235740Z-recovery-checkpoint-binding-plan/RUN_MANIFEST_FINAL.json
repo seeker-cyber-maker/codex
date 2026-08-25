@@ -1,0 +1,34 @@
+{
+  "schema": "dream-house-run-manifest-final/1",
+  "run_id": "20260824T235740Z-recovery-checkpoint-binding-plan",
+  "starting_head": "dbe5c3e6716926a3db3e76cd2a08ed5fa4e11bfc",
+  "profile": "full",
+  "case_type": "security_containment",
+  "authority": "USER_CONTINUED_TO_NEXT_MILESTONE_PLAN_ONLY",
+  "write_scope": ["house/workflow/runs/20260824T235740Z-recovery-checkpoint-binding-plan"],
+  "status": "ACCEPTED_PLAN_ONLY__NO_SOURCE",
+  "accepted_plan": "PLAN_V2.md",
+  "task_graph": [
+    {"id": "P0", "depends_on": [], "state": "COMPLETE"},
+    {"id": "C0", "depends_on": ["P0"], "state": "COMPLETE"},
+    {"id": "A0", "depends_on": ["C0"], "state": "COMPLETE"},
+    {"id": "F1", "depends_on": ["A0"], "state": "NOT_AUTHORIZED"},
+    {"id": "S1", "depends_on": ["F1"], "state": "NOT_READY"}
+  ],
+  "budgets_used": {
+    "source_edits": 0,
+    "test_runs": 0,
+    "council_rounds": 2,
+    "network_requests_before_backup": 0,
+    "external_operations_before_backup": 0
+  },
+  "next_gate": "separate authority for F1 independent-oracle freeze",
+  "routing_advisory": {
+    "next_phase": "independent fixture and oracle design",
+    "recommended_model": "Codex Sol",
+    "recommended_effort": "high",
+    "reason": "cryptographic fixture independence and canonical-byte review",
+    "blocking": false,
+    "reassess_trigger": "before any F1 authorization"
+  }
+}

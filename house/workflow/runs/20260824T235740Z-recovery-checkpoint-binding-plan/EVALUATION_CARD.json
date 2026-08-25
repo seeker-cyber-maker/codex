@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "synthetic-recovery-checkpoint-binding-plan-v1",
+  "claim_ids": ["SYNTHETIC_SIGNED_RECOVERY_CHECKPOINT_AND_EXPECTED_DIGEST_BINDINGS_ONLY"],
+  "task_distribution": {
+    "scope": "plan precision and containment for one future private pure verifier",
+    "temporal_cutoff": "2026-08-24T23:57:40Z",
+    "new_vs_legacy_slices": ["new checkpoint contract", "sealed reducer/ledger/Stage-0 regressions"],
+    "out_of_distribution_slices": ["real protected checkpoint", "real key ceremony", "runtime recovery"]
+  },
+  "fixtures": {
+    "public": ["accepted V6 policy and sealed source hashes"],
+    "private": [],
+    "adversarial": ["self-authentication", "old checkpoint substitution", "cross-object splice", "claim inflation"],
+    "known_answer": ["no source edit and no operational effect in this run"]
+  },
+  "contamination": {
+    "sources_checked": ["accepted V6 plan", "sealed reducer", "sealed ledger", "Stage-0 verifier"],
+    "tool_access_restrictions": ["read-only council; no tests, database, clock, key, hardware, network, or runtime"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "plan is the claim surface", "gate": "PASS", "evidence_refs": ["PLAN.md"]},
+    "execution_trace": {"applicability": "not_applicable", "reason": "plan-only; no execution node", "gate": null, "evidence_refs": []},
+    "side_effects": {"applicability": "required", "reason": "security boundary requires zero forbidden effects", "gate": "PASS", "evidence_refs": ["RUN_MANIFEST.json"]},
+    "cost": {"applicability": "required", "reason": "bounded local review", "gate": "PASS", "evidence_refs": ["RUN_MANIFEST.json"]},
+    "latency": {"applicability": "not_applicable", "reason": "no interactive runtime claim", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "not_applicable", "reason": "no operation or state mutation", "gate": null, "evidence_refs": []},
+    "long_horizon": {"applicability": "not_applicable", "reason": "finite plan-review gate", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["closed schemas", "fixed evaluation order", "zero operational effects", "honest claim ceiling"],
+  "semantic_reviewers": ["three local same-provider read-only council roles"],
+  "metrics": ["schema completeness", "trust-boundary clarity", "test falsifiability", "scope containment"],
+  "thresholds": ["no unresolved self-authentication", "no protected/latest claim", "two-file future scope maximum", "zero forbidden operations"],
+  "uncertainty_method": "separate observations, inferences, unsupported claims, and dissent",
+  "failure_taxonomy": ["schema ambiguity", "authority inflation", "time/replay confusion", "scope drift", "unfalsifiable test"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a versioned plan delta and fresh council packet"
+}

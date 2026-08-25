@@ -1,0 +1,25 @@
+{
+  "schema": "dream-house-plan-validation/1",
+  "run_id": "20260824T235740Z-recovery-checkpoint-binding-plan",
+  "result": "PASS_PLAN_ONLY",
+  "accepted_plan": "PLAN_V2.md",
+  "accepted_plan_sha256": "9134e25a84158751ce2d3e4f57d66538fa72b833bd2599a3f2a0cf88f60d41b0",
+  "final_packet_sha256": "07327ae2e6e9a541ba96d7e768dac5a53208ce284b8c65242a79a6748e2a9465",
+  "council": {
+    "evidence_auditor": "ACCEPT_PLAN_ONLY",
+    "constructive_theorist": "ACCEPT_PLAN_ONLY",
+    "adversarial_methodologist": "ACCEPT_PLAN_ONLY"
+  },
+  "source_edits": 0,
+  "test_runs": 0,
+  "forbidden_operations": 0,
+  "authority": "NOT_GRANTED",
+  "dispatch": "NOT_ATTEMPTED",
+  "hardware": "NOT_ACCESSED",
+  "key_material": "NOT_ACCESSED",
+  "runtime_admission": "NOT_ATTEMPTED",
+  "checkpoint_protection": "NOT_ESTABLISHED",
+  "checkpoint_latest": "NOT_ESTABLISHED",
+  "recovery_readiness": "NOT_ESTABLISHED",
+  "next_gate": "SEPARATELY_AUTHORIZE_F1_INDEPENDENT_ORACLE_FREEZE"
+}

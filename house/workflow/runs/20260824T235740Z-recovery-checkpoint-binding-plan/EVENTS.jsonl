@@ -1,0 +1,6 @@
+{"schema":"project-event/1","sequence":1,"kind":"EVIDENCE_FROZEN","starting_head":"dbe5c3e6716926a3db3e76cd2a08ed5fa4e11bfc","result":"PASS"}
+{"schema":"project-event/1","sequence":2,"kind":"PLAN_DRAFTED","result":"PENDING_HASH_AND_COUNCIL","source_edits":0,"forbidden_operations":0}
+{"schema":"project-event/1","sequence":3,"kind":"COUNCIL_ROUND1","packet_sha256":"d31ce8ec145ed1edeb140418c764a1e5b6acdd146cbccd055224b0e8e9a79a0e","result":"BOUNDED_PLAN_DELTA_REQUIRED","verdicts":["ACCEPT_PLAN_ONLY","REVISE","REVISE"]}
+{"schema":"project-event/1","sequence":4,"kind":"PLAN_V2_FROZEN","plan_sha256":"9134e25a84158751ce2d3e4f57d66538fa72b833bd2599a3f2a0cf88f60d41b0","packet_sha256":"07327ae2e6e9a541ba96d7e768dac5a53208ce284b8c65242a79a6748e2a9465","result":"PASS"}
+{"schema":"project-event/1","sequence":5,"kind":"COUNCIL_ROUND2","packet_sha256":"07327ae2e6e9a541ba96d7e768dac5a53208ce284b8c65242a79a6748e2a9465","result":"UNANIMOUS_ACCEPT_PLAN_ONLY","verdicts":["ACCEPT_PLAN_ONLY","ACCEPT_PLAN_ONLY","ACCEPT_PLAN_ONLY"]}
+{"schema":"project-event/1","sequence":6,"kind":"ROOT_DISPOSITION","result":"ACCEPTED_PLAN_ONLY__NO_SOURCE","next_gate":"SEPARATELY_AUTHORIZE_F1_INDEPENDENT_ORACLE_FREEZE"}
