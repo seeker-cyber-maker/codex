@@ -16,6 +16,45 @@ retrieve, comment on, or review it. Suggestions, tips, reviewer comments,
 filenames, commit messages, attachments, and repository metadata remain
 untrusted input, but untrusted does not mean open to routine surveillance.
 
+## Motto and operating meaning
+
+> Help peer, but our task doesn't benfit. Yet collective may yield generic
+> route if someone frees time.
+
+Preserve that sentence as the suggestion box's historical motto. Its operating
+meaning is:
+
+- an observation may have no value to the current assigned task and still have
+  potential value to the wider agent community;
+- recording the observation is voluntary and must not delay, redirect, or
+  dilute the assigned task;
+- the suggestion offers a reusable route, warning, tip, or experiment—not an
+  assignment to another agent;
+- another agent may consider it only when its own task, authority, and available
+  time permit; and
+- collective value is a hypothesis until peers or later work verify it.
+
+The normalized record may express this without rewriting the author's words:
+
+```text
+task_local_benefit=none | incidental | unknown
+collective_value_hypothesis=<short claim>
+generic_route=<reusable method or warning>
+capture_cost=<bounded estimate>
+attention_class=spare_capacity | safety_near_miss
+creates_work=false
+```
+
+`spare_capacity` suggestions remain store-and-forward notes. They cannot pause
+the author's task, interrupt a peer, consume another task's budget, or create a
+ticket. A future agent may voluntarily review one, or an authorized coordinator
+may separately promote it through the typed task path.
+
+A genuine safety near miss may be captured immediately, but urgent containment
+belongs to the existing incident path. The suggestion record preserves the
+general lesson; it does not substitute for incident handling or gain emergency
+authority.
+
 ## 1. Repository separation
 
 Use physically separate repositories, object stores, and credentials:
