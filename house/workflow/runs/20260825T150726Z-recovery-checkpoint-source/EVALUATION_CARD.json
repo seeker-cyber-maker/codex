@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "recovery-checkpoint-source-s1-v1",
+  "claim_ids": ["SYNTHETIC_SIGNED_RECOVERY_CHECKPOINT_AND_EXPECTED_DIGEST_BINDINGS_ONLY"],
+  "task_distribution": {
+    "scope": "one pure structural P-256 checkpoint verifier against caller-supplied JSON-compatible objects",
+    "temporal_cutoff": "2026-08-25T15:07:26Z",
+    "new_vs_legacy_slices": ["new production verifier", "F1 public known answer", "V2 accepted contract"],
+    "out_of_distribution_slices": ["real key recovery", "trusted anchors", "latest/protected persistence", "runtime admission"]
+  },
+  "fixtures": {
+    "public": ["F1 attempt-a fixture with public synthetic scalar disclosure"],
+    "private": [],
+    "adversarial": ["wrong field", "wrong digest", "wrong SPKI/key-id", "invalid/high-S DER", "cross-object splice", "sequence/predecessor substitution", "forbidden source graph"],
+    "known_answer": ["complete F1 success receipt", "idempotent repeat receipt"]
+  },
+  "contamination": {
+    "sources_checked": ["accepted V2 plan", "accepted F1 fixture/handoff", "sealed Stage-0 public verification primitives"],
+    "tool_access_restrictions": ["no F1 generator import", "no private-key use", "no files/clock/database/network/process/hardware/runtime/dispatch in production source"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "whole receipt is the claimed result", "gate": null, "evidence_refs": []},
+    "execution_trace": {"applicability": "required", "reason": "local deterministic tests must record commands/results", "gate": null, "evidence_refs": []},
+    "side_effects": {"applicability": "required", "reason": "source graph and preserved path checks establish no operational path", "gate": null, "evidence_refs": []},
+    "cost": {"applicability": "required", "reason": "bounded local source/test run", "gate": null, "evidence_refs": []},
+    "latency": {"applicability": "not_applicable", "reason": "no interactive service claim", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "not_applicable", "reason": "pure idempotent function with no persistent operation", "gate": null, "evidence_refs": []},
+    "long_horizon": {"applicability": "not_applicable", "reason": "finite source-only milestone", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["F1 exact receipt", "negative matrix", "repeat equivalence", "AST/import graph check", "unchanged donor regressions"],
+  "semantic_reviewers": ["three isolated same-provider outside-council roles"],
+  "metrics": ["whole receipt equality", "refusal coverage", "source containment", "regression preservation", "claim honesty"],
+  "thresholds": ["all deterministic predicates pass", "no scope drift", "blocking council accepts the narrow source-only claim"],
+  "uncertainty_method": "separate deterministic observations from reviewer inference and unsupported claims",
+  "failure_taxonomy": ["schema", "canonicalization", "digest", "signature", "cross-binding", "source-containment", "regression", "authority inflation"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a bounded plan delta or validation record; never overwrite F1 evidence"
+}

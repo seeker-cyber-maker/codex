@@ -1,0 +1,25 @@
+{
+  "schema": "dream-house-source-run-plan-disposition/1",
+  "run_id": "20260825T150726Z-recovery-checkpoint-source",
+  "prior_manifest_sha256": "5a96cdd94dc8b86c283c1db66d4b3d594b580aaf395e9144dc2a0f5f12e8644a",
+  "council_packet_sha256": "04fd23dbb7d8c8f8681584facf6cd1f61a5a679f6807bea16e6c21ba2db89dac",
+  "disposition": "ACCEPT_PLAN_ONLY__AUTHORIZE_S1I_TWO_FILE_SOURCE_SCOPE",
+  "task_graph": [
+    {"id": "S1P", "state": "COMPLETE"},
+    {"id": "S1C", "state": "COMPLETE_ACCEPT_PLAN_ONLY"},
+    {"id": "S1I", "state": "AUTHORIZED"},
+    {"id": "S1V", "state": "BLOCKED_ON_S1I"},
+    {"id": "S1C2", "state": "BLOCKED_ON_S1V"},
+    {"id": "S1A", "state": "BLOCKED_ON_S1C2"}
+  ],
+  "authority_ceiling": "SOURCE_ONLY_NO_OPERATIONAL_AUTHORITY",
+  "source_scope": [
+    "house/task_spine/recovery_checkpoint.py",
+    "house/task_spine/tests/test_recovery_checkpoint.py"
+  ],
+  "forbidden_operations": [
+    "YubiKey", "Keychain", "certificate", "signing", "private key", "clock",
+    "SQLite", "production verifier file access", "network", "provider", "worker",
+    "runtime", "process launch", "dispatch", "real recovery"
+  ]
+}

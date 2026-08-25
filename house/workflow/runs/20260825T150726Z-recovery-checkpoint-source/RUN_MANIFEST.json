@@ -1,0 +1,77 @@
+{
+  "schema": "dream-house-source-run/1",
+  "run_id": "20260825T150726Z-recovery-checkpoint-source",
+  "project": "codex-dream-house",
+  "recovery_disposition": "RESUME_FROM_HANDOFF",
+  "starting_head": "783f2c646c3eb5d6d5f38b98797ec49e0cf9a857",
+  "case_type": "security_containment",
+  "authority": "user continuation dot after accepted F1 handoff; S1 source-only scope",
+  "privacy": "local repository and accepted public synthetic fixture only",
+  "forbidden_operations": [
+    "YubiKey", "Keychain", "certificate discovery", "signing", "private key",
+    "clock", "SQLite", "file access by production verifier", "network", "provider",
+    "worker", "runtime", "process launch", "dispatch", "real recovery data"
+  ],
+  "write_scope": [
+    "house/task_spine/recovery_checkpoint.py",
+    "house/task_spine/tests/test_recovery_checkpoint.py",
+    "house/workflow/runs/20260825T150726Z-recovery-checkpoint-source/**"
+  ],
+  "protected_user_paths": [
+    "house/README.md",
+    "house/LOCAL_ZOOKEEPER_CHAT_WORK_WRANGLER_SPEC.md"
+  ],
+  "task_graph": [
+    {"id": "S1P", "state": "COMPLETE"},
+    {"id": "S1C", "state": "PENDING_BLOCKING"},
+    {"id": "S1I", "state": "BLOCKED"},
+    {"id": "S1V", "state": "BLOCKED"},
+    {"id": "S1C2", "state": "BLOCKED"},
+    {"id": "S1A", "state": "BLOCKED"}
+  ],
+  "budgets": {
+    "implementation_attempts": 1,
+    "bounded_remediation_attempts": 2,
+    "plan_council_rounds": 1,
+    "promotion_council_rounds": 1,
+    "private_backup_pushes": 1
+  },
+  "council_checkpoints": [
+    {
+      "checkpoint_id": "S1C",
+      "trigger": "plan sealed",
+      "blocking": true,
+      "decision_question": "Does this two-file pure verifier plan correctly implement V2/F1 without widening any authority or test-oracle boundary?",
+      "packet_contents": ["INTAKE.md", "PLAN.md", "RUN_MANIFEST.json", "EVALUATION_CARD.json", "F1 handoff", "V2 plan"],
+      "privacy": "local, public synthetic evidence only",
+      "provider_model_lanes": ["same-provider isolated reviewer roles"],
+      "cost_ceiling": "three read-only reviews",
+      "response_deadline": "before source mutation",
+      "required_root_disposition": "ACCEPT_PLAN_ONLY | REVISE | NEEDS_REVIEW",
+      "maximum_staleness": "no source mutations before disposition"
+    },
+    {
+      "checkpoint_id": "S1C2",
+      "trigger": "deterministic verification passes",
+      "blocking": true,
+      "decision_question": "Do exact source/tests and sealed validation support the source-only claim ceiling?",
+      "packet_contents": ["source", "tests", "validation", "fixture hashes", "receipt hash"],
+      "privacy": "local, public synthetic evidence only",
+      "provider_model_lanes": ["same-provider isolated reviewer roles"],
+      "cost_ceiling": "three read-only reviews",
+      "response_deadline": "before source seal",
+      "required_root_disposition": "ACCEPT_SOURCE_ONLY | REVISE | NEEDS_REVIEW",
+      "maximum_staleness": "no backup before disposition"
+    }
+  ],
+  "routing_advisory": {
+    "current_model_if_known": "unknown",
+    "current_effort_if_known": "unknown",
+    "recommended_model": "Codex Terra",
+    "recommended_effort": "high",
+    "reason": "bounded security-containment verifier implementation",
+    "blocking": false,
+    "reassess_trigger": "before S1C2",
+    "user_disposition": "advisory; no automatic client switch claimed"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "dream-house-s1-debug-receipt/1",
+  "incident": "independent_verifier_direct_script_import",
+  "reproduction": "python3 house/workflow/runs/20260825T150726Z-recovery-checkpoint-source/independent_verify.py",
+  "observed_error": "ModuleNotFoundError: No module named 'house'",
+  "root_cause": "Direct Python script execution puts the run directory, rather than the repository root, at sys.path[0]; the validation helper imported house before adding the repository root.",
+  "comparison": "python3 -c can import house from repository cwd; the direct script cannot before bootstrap.",
+  "single_fix": "derive repository root from __file__, prepend it to sys.path before importing the candidate module",
+  "fix_scope": "workflow validation helper only; production source and test scope unchanged",
+  "verification": "direct independent checker and full unittest discovery pass after the one change",
+  "attempt_count": 1,
+  "operational_authority": "NOT_GRANTED"
+}

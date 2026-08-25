@@ -1,0 +1,5 @@
+{"path":"house/workflow/runs/20260824T235740Z-recovery-checkpoint-binding-plan/PLAN_V2.md","role":"accepted source contract","sha256":"9134e25a84158751ce2d3e4f57d66538fa72b833bd2599a3f2a0cf88f60d41b0"}
+{"path":"house/workflow/runs/20260825T015729Z-recovery-checkpoint-oracle/HANDOFF_FINAL.md","role":"accepted F1 handoff","sha256":"0a7d2517bbaba80a8def4079092c547ddff9e776b22461fb68e2265d683a6603"}
+{"path":"house/workflow/runs/20260825T015729Z-recovery-checkpoint-oracle/attempt-a/fixture.json","role":"public synthetic known-answer fixture","sha256":"0d52a694cf3e5c681c40faee2ff577fc8ac07c01222c59c6722c0a14ecedc25e"}
+{"path":"house/authority_stage0/profile.py","role":"sealed public verification donor","sha256":"3161bd77f685420050858a6a59b70cb5220ad86c3ad2ac1412f7ce42c5ea579a"}
+{"path":"house/authority_stage0/canonical.py","role":"sealed canonicalization donor","sha256":"cce7998a421445e356b0d8d8996c4cdcc2c19900e7ced407fc56488e0551d757"}

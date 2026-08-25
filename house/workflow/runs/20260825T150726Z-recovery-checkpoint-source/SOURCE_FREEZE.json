@@ -1,0 +1,15 @@
+{
+  "schema": "dream-house-s1-source-freeze/1",
+  "base_commit": "783f2c646c3eb5d6d5f38b98797ec49e0cf9a857",
+  "allowed_source_paths": {
+    "house/task_spine/recovery_checkpoint.py": "c554c780dc3211812226b6df298679e2d8775c1409b8e1633b9119a11d7ea554",
+    "house/task_spine/tests/test_recovery_checkpoint.py": "7d880cbe86273361597ba01c06866f179f25c25ea375478105a76eefd87cc5d2"
+  },
+  "preserved_user_paths": [
+    "house/README.md",
+    "house/LOCAL_ZOOKEEPER_CHAT_WORK_WRANGLER_SPEC.md"
+  ],
+  "f1_fixture_sha256": "0d52a694cf3e5c681c40faee2ff577fc8ac07c01222c59c6722c0a14ecedc25e",
+  "f1_expected_receipt_sha256": "7222f1e7ba1e1b314b8e2620e9405f4fa2df629e7d4389939db7749b918ccf9f",
+  "status": "CANDIDATE_SOURCE_ONLY_AWAITING_S1C2"
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "dream-house-s1-validation/1",
+  "result": "PASS",
+  "production_source": {
+    "path": "house/task_spine/recovery_checkpoint.py",
+    "sha256": "c554c780dc3211812226b6df298679e2d8775c1409b8e1633b9119a11d7ea554",
+    "lines": 280
+  },
+  "dedicated_tests": {
+    "path": "house/task_spine/tests/test_recovery_checkpoint.py",
+    "sha256": "7d880cbe86273361597ba01c06866f179f25c25ea375478105a76eefd87cc5d2",
+    "lines": 176,
+    "result": "PASS: 8 tests"
+  },
+  "line_budget": {
+    "source_plus_dedicated_tests": 456,
+    "maximum": 800,
+    "source_maximum": 500,
+    "result": "PASS"
+  },
+  "focused_regressions": {
+    "command": "python3 -m unittest house.task_spine.tests.test_recovery_checkpoint house.task_spine.tests.test_recovery_policy house.task_spine.tests.test_recovery_ledger house.authority_stage0.tests.test_canonical house.authority_stage0.tests.test_vectors",
+    "result": "PASS: 34 tests"
+  },
+  "full_regressions": {
+    "command": "python3 -m unittest discover -s house -p test_*.py",
+    "result": "PASS: 312 tests",
+    "preexisting_observation": "The complete suite emits three expected argparse usage lines and one ResourceWarning for an unclosed SQLite connection, while finishing PASS. This source-only change did not modify those components."
+  },
+  "independent_checker": {
+    "path": "house/workflow/runs/20260825T150726Z-recovery-checkpoint-source/independent_verify.py",
+    "sha256": "00e3c6fa2d0b20fc8ce05a69f941c13cd695db59fb03f05778b67ab4bce55319",
+    "result": "PASS: exact F1 receipt, repeat equality, F1 fixture identity, static source containment"
+  },
+  "containment": {
+    "production_file_reads": "NOT_PRESENT",
+    "production_clock_database_network_process_hardware_provider_worker_runtime_dispatch": "NOT_PRESENT_BY_SOURCE_GRAPH",
+    "fixture_generator_or_test_scalar_import": "NOT_PRESENT_BY_SOURCE_GRAPH",
+    "authority": "NOT_GRANTED",
+    "dispatch": "NOT_ATTEMPTED"
+  },
+  "limitations": [
+    "F1 is public synthetic known-answer evidence, not a trust anchor.",
+    "Validation does not establish trusted/latest/protected persistence, key custody or revocation, recovery readiness, runtime admission, authority, or dispatch."
+  ]
+}
