@@ -1,0 +1,20 @@
+[
+  {
+    "schema": "dream-house/local-rubric-adapter/1",
+    "adapter_id": "instructor-bracket-result-v1",
+    "state": "DECLARED_UNQUALIFIED",
+    "input_renderer": "chat_template_single_user_v1",
+    "output_parser": "bracket_result_integer_v1",
+    "semantic_role": "rubric_critic",
+    "notes": "For locally compatible instructor-style rendering; actual model bindings remain external and unqualified."
+  },
+  {
+    "schema": "dream-house/local-rubric-adapter/1",
+    "adapter_id": "chat-json-score-v1",
+    "state": "DECLARED_UNQUALIFIED",
+    "input_renderer": "chat_template_system_user_v1",
+    "output_parser": "json_score_integer_v1",
+    "semantic_role": "rubric_critic",
+    "notes": "For local chat models that can be separately shown to emit a closed score object."
+  }
+]

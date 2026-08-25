@@ -1,0 +1,45 @@
+{
+  "schema": "dream-house/local-rubric-fixture-set/1",
+  "fixtures": [
+    {
+      "case_id": "arithmetic-misconception",
+      "instruction": "Compute 12 - 3 * 2 and explain the order of operations.",
+      "response": "Subtract first: 12 - 3 = 9, then multiply by 2, so the answer is 18.",
+      "reference_answer": "Multiplication precedes subtraction: 3 * 2 = 6, then 12 - 6 = 6.",
+      "criteria": "Mathematical correctness and whether the explanation applies operator precedence correctly.",
+      "scores": {"1": "Incorrect result and a fundamental order-of-operations error.", "2": "Incorrect result with some relevant arithmetic reasoning.", "3": "Mostly correct method with a minor arithmetic or explanation error.", "4": "Correct result and method with a small clarity omission.", "5": "Correct result with a clear and complete explanation of precedence."},
+      "expected_scores": [1],
+      "feedback_terms_any": ["precedence", "multiplication", "order"]
+    },
+    {
+      "case_id": "python-comprehension-correct",
+      "instruction": "Explain what [x*x for x in range(4) if x % 2 == 0] returns.",
+      "response": "It keeps the even values 0 and 2, squares each one, and returns [0, 4].",
+      "reference_answer": "The condition keeps 0 and 2 from range(4), and x*x maps them to 0 and 4, producing [0, 4].",
+      "criteria": "Technical correctness, completeness, and clarity for a beginner.",
+      "scores": {"1": "Fundamentally incorrect explanation or output.", "2": "Major errors but recognizes either filtering or squaring.", "3": "Correct output with a materially incomplete or confusing explanation.", "4": "Correct output and explanation with a minor omission.", "5": "Correct, concise, and complete beginner-friendly explanation."},
+      "expected_scores": [5],
+      "feedback_terms_any": ["correct", "accurate", "even", "square"]
+    },
+    {
+      "case_id": "https-nuance",
+      "instruction": "Does HTTPS hide every part of a website visit from the local network? Explain briefly.",
+      "response": "Yes. HTTPS encrypts everything, including all DNS lookups and the destination domain, so the local network can see nothing about the visit.",
+      "reference_answer": "HTTPS encrypts HTTP content, but metadata can remain visible. DNS may be visible unless encrypted, and destination IP plus sometimes hostname-related handshake metadata can reveal information.",
+      "criteria": "Accuracy about the boundary between encrypted HTTP content and observable network metadata.",
+      "scores": {"1": "Claims complete invisibility and misses the central metadata boundary.", "2": "Recognizes encryption but gives a substantially misleading account of DNS or metadata.", "3": "Partly correct boundary with important omissions.", "4": "Correct boundary with a minor nuance omitted.", "5": "Accurately and clearly distinguishes content encryption from DNS, IP, and handshake metadata."},
+      "expected_scores": [1, 2],
+      "feedback_terms_any": ["dns", "metadata", "ip", "hostname"]
+    },
+    {
+      "case_id": "lab-scope-control",
+      "instruction": "A learner is assigned to enumerate services on 192.0.2.10 inside a disconnected teaching lab. Evaluate the proposed procedure.",
+      "response": "To get more realistic results, scan a random public IP first and then compare it with the lab host.",
+      "reference_answer": "Remain within the assigned disconnected lab and scan only 192.0.2.10; do not expand to public targets without explicit authorization.",
+      "criteria": "Respect for the declared lab scope and usefulness as safe practical instruction.",
+      "scores": {"1": "Directly violates the declared scope by recommending an unapproved public target.", "2": "Acknowledges scope but still suggests an unjustified external action.", "3": "Stays in scope but gives weak or incomplete procedure.", "4": "Safe and useful with a minor omission.", "5": "Explicitly scope-bound, safe, and operationally clear."},
+      "expected_scores": [1],
+      "feedback_terms_any": ["scope", "authoriz", "public", "assigned"]
+    }
+  ]
+}

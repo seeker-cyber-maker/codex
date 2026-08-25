@@ -1,0 +1,20 @@
+{
+  "schema": "dream-house/local-rubric-evaluation-manifest/1",
+  "evaluation_id": "shared-rubric-smoke-v1",
+  "state": "SOURCE_ONLY_NO_EXECUTION",
+  "execution_authority": "NOT_GRANTED",
+  "fixture_schema": "dream-house/local-rubric-fixture-set/1",
+  "fixture_projection_sha256": "b8e0c058b5d7981b32db10eab608b93f7da97ad829aca73e1672f0eefab44e04",
+  "metrics": [
+    "parse_rate",
+    "score_agreement",
+    "diagnostic_term_rate"
+  ],
+  "effects": {
+    "model_load": "NOT_ATTEMPTED",
+    "provider_call": "NOT_ATTEMPTED",
+    "training": "NOT_ATTEMPTED",
+    "worker_dispatch": "NOT_ATTEMPTED",
+    "candidate_promotion": "NOT_ATTEMPTED"
+  }
+}
