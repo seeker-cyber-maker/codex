@@ -1,0 +1,178 @@
+{
+  "council_id": "dry-run-external",
+  "mode": "independent-review",
+  "profile": "requested-external-wave",
+  "task_mode": "review",
+  "transport_packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "house/communications_rfc/council-runs/20260825T171154Z-extended-native-register-review/evidence-packet.md",
+      "sha256": "4fa1b1d240ff065264e2fd33a82dcb26e26b30a974ed120097c570775651e528"
+    },
+    {
+      "path": "house/communications_rfc/council-runs/20260825T171154Z-extended-native-register-review/USER_DECISION_ADDENDUM.md",
+      "sha256": "f9330f65dc58f617f83b6645586b97e68e1b5170412a5d1f80d2e32430df1b3d"
+    },
+    {
+      "path": "house/communications_rfc/council-runs/20260825T171154Z-extended-native-register-review/USER_DECISION_ADDENDUM_2.md",
+      "sha256": "cb3769da5f15c41e5f8dfec0e3c29224193ab7450e751a8bb04c118c6accf8df"
+    },
+    {
+      "path": "house/communications_rfc/A2A_COORDINATION_MASTER_RFC.md",
+      "sha256": "8ced89a6359c467f29e7ac2896fc8667530ca782dd13c7aa8ef2e6813244f83b"
+    },
+    {
+      "path": "house/communications_rfc/KNOWN_AGENT_REGISTERS_AND_DIALECTS.md",
+      "sha256": "113deebde14f53a469b921aaba4dcdd7862294c5eacbfd15548e24ae93b4a3ae"
+    },
+    {
+      "path": "house/communications_rfc/A2A_SUGGESTION_BOX_CONTRACT.md",
+      "sha256": "212b7c2ae6248bc4ca47d62cb12dcc9d09fc359539e26c5217f24668a665e007"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "glm-adversarial-methodology",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/glm-5.2",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/glm-5.2"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "kimi-model-interface",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/kimi-k2.7-code",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "nemotron-evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "agy-claude-sonnet-human-factors",
+      "lane": "antigravity-text",
+      "requested_model": "claude-sonnet-4-6",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "claude-sonnet-4-6"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "agy-claude-opus-governance",
+      "lane": "antigravity-text",
+      "requested_model": "claude-opus-4-6-thinking",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "claude-opus-4-6-thinking"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "agy-gpt-oss-translation",
+      "lane": "antigravity-text",
+      "requested_model": "gpt-oss-120b-medium",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gpt-oss-120b-medium"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "agy-gemini-flash-pragmatics",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-3.6-flash-medium",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-3.6-flash-medium"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "agy-gemini-pro-cross-project",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-3.1-pro-low",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-3.1-pro-low"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:39+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T17:19:39+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 8,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-25T17:19:39+00:00",
+  "completed_at": "2026-08-25T17:19:39+00:00"
+}

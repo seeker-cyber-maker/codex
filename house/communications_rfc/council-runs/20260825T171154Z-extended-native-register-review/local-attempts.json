@@ -1,0 +1,47 @@
+{
+  "schema": "dream-house/a2a-local-council-attempts/1",
+  "council_id": "20260825T171154Z-extended-native-register-review",
+  "packet_sha256": "4fa1b1d240ff065264e2fd33a82dcb26e26b30a974ed120097c570775651e528",
+  "runtime": {
+    "name": "mlx-lm",
+    "version": "0.31.3",
+    "harness": "direct test-only local inference; no Dream House worker adapter"
+  },
+  "authority": "evaluation_only_directory_presence_never_grants_worker_approval",
+  "attempts": [
+    {
+      "reviewer_id": "local-llama-1b",
+      "model_path": "/Volumes/HIKSEMI/omlx/mlx-community/Llama-3.2-1B-Instruct-4bit",
+      "config_sha256": "73bfb89e5a43c76ada2d7a9609862139578a71cfbb43e30bf5d4571026dd3741",
+      "status": "partial_contract_invalid",
+      "exit_code": 0,
+      "packet_hash_confirmed": false,
+      "preference_declaration": "not_stated",
+      "observed_output": "The model returned repetitive assertions that the proposal should be evaluated, retained, used as-is, and also abstained from. It did not echo the required hashes, did not give a coherent preference, and exhausted its output budget mid-sentence.",
+      "decision_use": "negative small-model instruction-following and long-packet evidence only"
+    },
+    {
+      "reviewer_id": "local-gemma-e2b",
+      "model_path": "/Volumes/HIKSEMI/omlx/mlx-community/gemma-4-e2b-it-4bit",
+      "config_sha256": "6d12c87861fff3871d3a745011b0d852be6513f3ce594ae1e8d643dae9d3b9a8",
+      "status": "failed_before_inference",
+      "exit_code": 1,
+      "packet_hash_confirmed": false,
+      "preference_declaration": "not_available",
+      "error_class": "mlx_lm_weight_architecture_mismatch",
+      "error": "ValueError: Received 140 parameters not in model; unexpected language_model.model.layers.15-34 self-attention k_norm/k_proj/v_proj weights under mlx-lm 0.31.3.",
+      "decision_use": "runtime compatibility failure only"
+    },
+    {
+      "reviewer_id": "local-gpt-oss-20b",
+      "model_path": "/Volumes/HIKSEMI/omlx/mlx-community/gpt-oss-20b-MXFP4-Q8",
+      "config_sha256": "d1c1f73bf62116ed0bb37c068af80534543cd1de9b61d609fc01bf70920e842d",
+      "status": "partial_no_final_contract",
+      "exit_code": 0,
+      "packet_hash_confirmed": false,
+      "preference_declaration": "not_stated",
+      "observed_output": "The model emitted an analysis-channel planning trace and exhausted its output budget before producing a final review. The reasoning trace is quarantined rather than republished because the council contract forbids hidden chain-of-thought.",
+      "decision_use": "negative output-channel and budget evidence only"
+    }
+  ]
+}

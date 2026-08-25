@@ -1,0 +1,112 @@
+{
+  "schema": "dream-house/a2a-council-preference-ledger/1",
+  "council_id": "20260825T171154Z-extended-native-register-review",
+  "rule": "Record only explicit reviewer preference. Do not infer silence or conditional recommendations as agreement.",
+  "preferences": [
+    {
+      "reviewer_id": "codex-luna-linguistics",
+      "status": "completed",
+      "preference": "dialects_first",
+      "declaration": "separated model-facing dialect adapters behind one canonical semantic and authority layer",
+      "source": "reviewers/codex-luna-linguistics.md#addendum-decision"
+    },
+    {
+      "reviewer_id": "codex-terra-task-systems",
+      "status": "completed",
+      "preference": "empirically_undetermined",
+      "declaration": "test the common model-facing contract first; qualify a dialect only after recurrent incompatibility",
+      "source": "reviewers/codex-terra-task-systems.md#addendum-decision"
+    },
+    {
+      "reviewer_id": "codex-sol-architecture",
+      "status": "completed",
+      "preference": "common_first",
+      "declaration": "begin with one minimal common model-facing coordination contract; introduce a dialect only after a repaired common contract still fails",
+      "source": "reviewers/codex-sol-architecture.md#verdict"
+    },
+    {
+      "reviewer_id": "spark-fast-cross-lineage",
+      "status": "completed_after_one_contract_invalid_attempt",
+      "preference": "common_first",
+      "declaration": "one common model-facing contract with dialect translation at boundaries where required",
+      "source": "reviewers/spark-fast-cross-lineage.md#preference-declaration"
+    },
+    {
+      "reviewer_id": "glm-adversarial-methodology",
+      "status": "completed",
+      "preference": "dialects_first",
+      "declaration": "separated model-native dialects behind a canonical semantic and authority layer",
+      "source": "external-wave/reviewers/glm-adversarial-methodology.md#verdict"
+    },
+    {
+      "reviewer_id": "kimi-model-interface",
+      "status": "partial_missing_recommendation_and_limitations",
+      "preference": "dialects_first",
+      "declaration": "separated model-native dialects behind a canonical semantic and authority layer",
+      "source": "external-wave/reviewers/kimi-model-interface.md#verdict"
+    },
+    {
+      "reviewer_id": "nemotron-evidence-auditor",
+      "status": "completed",
+      "preference": "not_stated",
+      "declaration": null,
+      "source": "external-wave/reviewers/nemotron-evidence-auditor.md"
+    },
+    {
+      "reviewer_id": "agy-claude-sonnet-human-factors",
+      "status": "completed",
+      "preference": "common_first",
+      "declaration": "one unified model-facing contract with optional capability-profile fields",
+      "source": "external-wave/reviewers/agy-claude-sonnet-human-factors.md#inferences"
+    },
+    {
+      "reviewer_id": "agy-claude-opus-governance",
+      "status": "completed",
+      "preference": "dialects_first",
+      "declaration": "Option 2: separated model-native dialects behind a canonical semantic and authority layer",
+      "source": "external-wave/reviewers/agy-claude-opus-governance.md#verdict"
+    },
+    {
+      "reviewer_id": "agy-gpt-oss-translation",
+      "status": "completed",
+      "preference": "conditional_no_current_choice",
+      "declaration": "adopt separated dialects if any agent mis-parses the proposed common register",
+      "source": "external-wave/reviewers/agy-gpt-oss-translation.md#recommendation"
+    },
+    {
+      "reviewer_id": "agy-gemini-flash-pragmatics",
+      "status": "completed",
+      "preference": "dialects_first",
+      "declaration": "separated model-native dialects behind a single canonical semantic and authority layer",
+      "source": "external-wave/reviewers/agy-gemini-flash-pragmatics.md#verdict"
+    },
+    {
+      "reviewer_id": "agy-gemini-pro-cross-project",
+      "status": "completed",
+      "preference": "dialects_first",
+      "declaration": "separated model-native dialects behind a canonical semantic layer",
+      "source": "external-wave/reviewers/agy-gemini-pro-cross-project.md#verdict"
+    },
+    {
+      "reviewer_id": "local-llama-1b",
+      "status": "partial_contract_invalid",
+      "preference": "not_stated",
+      "declaration": null,
+      "source": "local-attempts.json"
+    },
+    {
+      "reviewer_id": "local-gemma-e2b",
+      "status": "failed_before_inference",
+      "preference": "unavailable",
+      "declaration": null,
+      "source": "local-attempts.json"
+    },
+    {
+      "reviewer_id": "local-gpt-oss-20b",
+      "status": "partial_no_final_contract",
+      "preference": "not_stated",
+      "declaration": null,
+      "source": "local-attempts.json"
+    }
+  ]
+}

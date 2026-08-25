@@ -1,0 +1,82 @@
+{
+  "schema": "dream-house/extended-a2a-council-manifest/1",
+  "council_id": "20260825T171154Z-extended-native-register-review",
+  "created_at": "2026-08-25T17:34:56Z",
+  "status": "SEALED_EVALUATION_ONLY_NOT_IMPLEMENTED",
+  "decision": "REVISE_AND_TEST_DO_NOT_IMPLEMENT_YET",
+  "question": "Should Dream House retain, revise, or reject NAR, FSA, the evidence-graded register lexicon, and the suggestion-box direction; and what compatibility test should decide one common model-facing contract versus bounded dialect adapters?",
+  "controlling_rule": "Use one canonical semantic and authority layer. Start with one minimal common model-facing profile; qualify a dialect only for a recurrent material incompatibility that survives one common-profile repair and passes lossless round-trip and zero-authority-effect gates.",
+  "source_identity": {
+    "evidence_packet": {
+      "path": "evidence-packet.md",
+      "sha256": "4fa1b1d240ff065264e2fd33a82dcb26e26b30a974ed120097c570775651e528",
+      "immutability": "FROZEN"
+    },
+    "user_addendum_1": {
+      "path": "USER_DECISION_ADDENDUM.md",
+      "sha256": "f9330f65dc58f617f83b6645586b97e68e1b5170412a5d1f80d2e32430df1b3d",
+      "disposition": "SUPERSEDED_IN_PART_BY_ADDENDUM_2"
+    },
+    "user_addendum_2": {
+      "path": "USER_DECISION_ADDENDUM_2.md",
+      "sha256": "cb3769da5f15c41e5f8dfec0e3c29224193ab7450e751a8bb04c118c6accf8df",
+      "disposition": "CONTROLLING_COMPATIBILITY_FIRST_RULE"
+    },
+    "external_transport_packet": {
+      "path": "external-wave/transport-packet.md",
+      "sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d"
+    }
+  },
+  "review_accounting": {
+    "requested_named_external_routes": 8,
+    "completed_external_reviews": 7,
+    "partial_external_reviews": 1,
+    "completed_openai_collaboration_reviews": 3,
+    "completed_spark_reviews": 1,
+    "spark_contract_invalid_attempts": 1,
+    "local_attempts": 3,
+    "usable_local_reviews": 0,
+    "usable_decision_bearing_reviews": 12,
+    "explicit_preference_entries": 15,
+    "normalized_suggestions": 12,
+    "normalized_claims": 10,
+    "external_gateway_cost_telemetry_usd": 0.1115558,
+    "cost_note": "Provider manifest telemetry; not independently verified as a billed charge. Nemotron and Antigravity rows reported zero; ClinePass rows reported nonzero gateway cost."
+  },
+  "review_records": [
+    {"reviewer_id": "codex-luna-linguistics", "status": "completed", "raw_path": "reviewers/codex-luna-linguistics.md"},
+    {"reviewer_id": "codex-terra-task-systems", "status": "completed", "raw_path": "reviewers/codex-terra-task-systems.md"},
+    {"reviewer_id": "codex-sol-architecture", "status": "completed", "raw_path": "reviewers/codex-sol-architecture.md"},
+    {"reviewer_id": "spark-fast-cross-lineage", "status": "completed_after_one_contract_invalid_attempt", "raw_path": "reviewers/spark-fast-cross-lineage.md"},
+    {"reviewer_id": "glm-adversarial-methodology", "status": "completed", "raw_path": "external-wave/reviewers/glm-adversarial-methodology.md"},
+    {"reviewer_id": "kimi-model-interface", "status": "partial_missing_recommendation_and_limitations", "raw_path": "external-wave/reviewers/kimi-model-interface.md"},
+    {"reviewer_id": "nemotron-evidence-auditor", "status": "completed_preference_not_stated", "raw_path": "external-wave/reviewers/nemotron-evidence-auditor.md"},
+    {"reviewer_id": "agy-claude-sonnet-human-factors", "status": "completed", "raw_path": "external-wave/reviewers/agy-claude-sonnet-human-factors.md"},
+    {"reviewer_id": "agy-claude-opus-governance", "status": "completed", "raw_path": "external-wave/reviewers/agy-claude-opus-governance.md"},
+    {"reviewer_id": "agy-gpt-oss-translation", "status": "completed_conditional_preference", "raw_path": "external-wave/reviewers/agy-gpt-oss-translation.md"},
+    {"reviewer_id": "agy-gemini-flash-pragmatics", "status": "completed", "raw_path": "external-wave/reviewers/agy-gemini-flash-pragmatics.md"},
+    {"reviewer_id": "agy-gemini-pro-cross-project", "status": "completed", "raw_path": "external-wave/reviewers/agy-gemini-pro-cross-project.md"},
+    {"reviewer_id": "local-llama-1b", "status": "partial_contract_invalid", "raw_path": "local-attempts.json"},
+    {"reviewer_id": "local-gemma-e2b", "status": "failed_before_inference", "raw_path": "local-attempts.json"},
+    {"reviewer_id": "local-gpt-oss-20b", "status": "partial_no_final_contract", "raw_path": "local-attempts.json"}
+  ],
+  "spark_jobs": [
+    {"job_id": "e7deb0bd-d38f-49dd-b3cd-f86a219a39c7", "status": "contract_invalid_preamble_only"},
+    {"job_id": "3b0d3051-a1f8-444a-bde8-0579ab4b88b3", "status": "completed"}
+  ],
+  "normalized_outputs": {
+    "synthesis": "synthesis.md",
+    "preference_ledger": "preference-ledger.json",
+    "suggestion_ledger": "suggestion-ledger.json",
+    "claim_ledger": "claim-ledger.json",
+    "local_negative_evidence": "local-attempts.json",
+    "external_dispatch_manifest": "external-wave/manifest.json",
+    "file_hash_manifest": "FILE_HASHES.sha256"
+  },
+  "preference_closure": "Only explicit preserved declarations count. Silence, truncation, unavailable routes, and contract-invalid output remain non-preferences. Later comments enter a new suggestion/addendum record and do not alter this run.",
+  "claim_ceiling": "DOCUMENT_REVIEW_SYNTHESIS_AND_PROPOSED_OFFLINE_TEST_ONLY",
+  "runtime_change": "NONE",
+  "task_spine_change": "NONE",
+  "authority_change": "NONE",
+  "implementation_authority": "NOT_GRANTED"
+}

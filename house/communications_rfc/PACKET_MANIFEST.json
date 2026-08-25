@@ -10,6 +10,18 @@
     "path": "A2A_COORDINATION_MASTER_RFC.md",
     "sha256": "8ced89a6359c467f29e7ac2896fc8667530ca782dd13c7aa8ef2e6813244f83b"
   },
+  "proposal_documents": [
+    {
+      "path": "A2A_SUGGESTION_BOX_CONTRACT.md",
+      "sha256": "212b7c2ae6248bc4ca47d62cb12dcc9d09fc359539e26c5217f24668a665e007",
+      "status": "DRAFT_EVALUATION_ONLY_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "KNOWN_AGENT_REGISTERS_AND_DIALECTS.md",
+      "sha256": "113deebde14f53a469b921aaba4dcdd7862294c5eacbfd15548e24ae93b4a3ae",
+      "status": "REFERENCE_LEXICON_NOT_A_STANDARD"
+    }
+  ],
   "source_drafts": [
     {
       "name": "Natural A2A Coordination Register",
@@ -62,6 +74,26 @@
     {
       "path": "evidence/FCRT7M30Wtw/FCRT7M30Wtw.metadata.json",
       "sha256": "9a5051fc8319450e1aeb1d092c6311f866cc3991c934679e4802ace67304b5ce"
+    }
+  ],
+  "council_runs": [
+    {
+      "council_id": "20260825T171154Z-extended-native-register-review",
+      "path": "council-runs/20260825T171154Z-extended-native-register-review",
+      "status": "SEALED_EVALUATION_ONLY_NOT_IMPLEMENTED",
+      "decision": "REVISE_AND_TEST_DO_NOT_IMPLEMENT_YET",
+      "manifest_sha256": "070722c053d3d10e2a9799ac49d525f42a2ce44bc544f830570949ad363e8d31",
+      "file_hash_manifest_sha256": "f64752e32de7e718bff8e64a29725405edce623c2e1fddb6d1485f5999791424",
+      "synthesis_sha256": "963aca4cc5318b6ca4e2ea3b46ab92cd246a91f415db67a4712fbd27eb5e6f9c",
+      "preference_closure": "EXPLICIT_DECLARATIONS_ONLY_LATER_INPUT_GOES_TO_NEW_SUGGESTION_RECORD"
+    }
+  ],
+  "contractor_packages": [
+    {
+      "path": "packages/a2a-communications-evaluation-council-20260825.zip",
+      "sha256": "c786042ef9c53b6426d71bb8b5202e09d1349a645462b74a3c37da9292917164",
+      "size_bytes": 356487,
+      "contents": "THREE_PROPOSAL_AND_REFERENCE_DOCUMENTS_BOUND_PUBLIC_EVIDENCE_AND_COMPLETE_COUNCIL_RUN"
     }
   ],
   "claim_ceiling": "COLLATED_PROPOSAL_AND_BOUND_PUBLIC_EVIDENCE_ONLY",

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "lanes": {
+    "openrouter-explicit-free": {
+      "base_url": "http://127.0.0.1:4016/v1",
+      "api_key_env": "LITELLM_MASTER_KEY",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "require_model_suffix": ":free",
+      "forbid_models": ["openrouter/free", "openrouter/auto"]
+    },
+    "clinepass": {
+      "base_url": "http://127.0.0.1:4014/v1",
+      "api_key_env": "LITELLM_MASTER_KEY",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud"
+    },
+    "antigravity-text": {
+      "base_url": "http://127.0.0.1:4015/v1",
+      "api_key_env": "LITELLM_MASTER_KEY",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud"
+    }
+  },
+  "profiles": {
+    "requested-external-wave": [
+      {
+        "id": "glm-adversarial-methodology",
+        "lane": "clinepass",
+        "model": "cline-pass/glm-5.2"
+      },
+      {
+        "id": "kimi-model-interface",
+        "lane": "clinepass",
+        "model": "cline-pass/kimi-k2.7-code"
+      },
+      {
+        "id": "nemotron-evidence-auditor",
+        "lane": "openrouter-explicit-free",
+        "model": "nvidia/nemotron-3-super-120b-a12b:free"
+      },
+      {
+        "id": "agy-claude-sonnet-human-factors",
+        "lane": "antigravity-text",
+        "model": "claude-sonnet-4-6"
+      },
+      {
+        "id": "agy-claude-opus-governance",
+        "lane": "antigravity-text",
+        "model": "claude-opus-4-6-thinking"
+      },
+      {
+        "id": "agy-gpt-oss-translation",
+        "lane": "antigravity-text",
+        "model": "gpt-oss-120b-medium"
+      },
+      {
+        "id": "agy-gemini-flash-pragmatics",
+        "lane": "antigravity-text",
+        "model": "gemini-3.6-flash-medium"
+      },
+      {
+        "id": "agy-gemini-pro-cross-project",
+        "lane": "antigravity-text",
+        "model": "gemini-3.1-pro-low"
+      }
+    ]
+  }
+}

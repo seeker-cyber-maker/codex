@@ -1,0 +1,488 @@
+{
+  "council_id": "external-wave",
+  "mode": "independent-review",
+  "profile": "requested-external-wave",
+  "task_mode": "review",
+  "transport_packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "house/communications_rfc/council-runs/20260825T171154Z-extended-native-register-review/evidence-packet.md",
+      "sha256": "4fa1b1d240ff065264e2fd33a82dcb26e26b30a974ed120097c570775651e528"
+    },
+    {
+      "path": "house/communications_rfc/council-runs/20260825T171154Z-extended-native-register-review/USER_DECISION_ADDENDUM.md",
+      "sha256": "f9330f65dc58f617f83b6645586b97e68e1b5170412a5d1f80d2e32430df1b3d"
+    },
+    {
+      "path": "house/communications_rfc/council-runs/20260825T171154Z-extended-native-register-review/USER_DECISION_ADDENDUM_2.md",
+      "sha256": "cb3769da5f15c41e5f8dfec0e3c29224193ab7450e751a8bb04c118c6accf8df"
+    },
+    {
+      "path": "house/communications_rfc/A2A_COORDINATION_MASTER_RFC.md",
+      "sha256": "8ced89a6359c467f29e7ac2896fc8667530ca782dd13c7aa8ef2e6813244f83b"
+    },
+    {
+      "path": "house/communications_rfc/KNOWN_AGENT_REGISTERS_AND_DIALECTS.md",
+      "sha256": "113deebde14f53a469b921aaba4dcdd7862294c5eacbfd15548e24ae93b4a3ae"
+    },
+    {
+      "path": "house/communications_rfc/A2A_SUGGESTION_BOX_CONTRACT.md",
+      "sha256": "212b7c2ae6248bc4ca47d62cb12dcc9d09fc359539e26c5217f24668a665e007"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "glm-adversarial-methodology",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/glm-5.2",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/glm-5.2"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "cline-pass/glm-5.2",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "completion_tokens": 1248,
+            "completion_tokens_details": {
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.0298624,
+            "cost_details": null,
+            "gateway_cost": 0.0298624,
+            "is_byok": false,
+            "market_cost": 0.0298624,
+            "prompt_tokens": 17408,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 18656
+          },
+          "latency_seconds": 25.933,
+          "completed_at": "2026-08-25T17:20:16+00:00"
+        }
+      ],
+      "selected_model": "cline-pass/glm-5.2",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "completion_tokens": 1248,
+        "completion_tokens_details": {
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "cost": 0.0298624,
+        "cost_details": null,
+        "gateway_cost": 0.0298624,
+        "is_byok": false,
+        "market_cost": 0.0298624,
+        "prompt_tokens": 17408,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 18656
+      },
+      "latency_seconds": 25.933,
+      "completed_at": "2026-08-25T17:20:16+00:00"
+    },
+    {
+      "id": "kimi-model-interface",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/kimi-k2.7-code",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/kimi-k2.7-code"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "partial",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "cline-pass/kimi-k2.7-code",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "partial",
+          "http_status": 200,
+          "finish_reason": "length",
+          "contract_valid": false,
+          "missing_sections": [
+            "## Recommendation",
+            "## Limitations"
+          ],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "completion_tokens": 8192,
+            "completion_tokens_details": {
+              "image_tokens": 0,
+              "reasoning_tokens": 6897
+            },
+            "cost": 0.0816934,
+            "cost_details": null,
+            "gateway_cost": 0.0490339,
+            "is_byok": false,
+            "market_cost": 0.0490339,
+            "prompt_tokens": 17122,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 25314
+          },
+          "latency_seconds": 124.605,
+          "completed_at": "2026-08-25T17:21:55+00:00"
+        }
+      ],
+      "selected_model": "cline-pass/kimi-k2.7-code",
+      "http_status": 200,
+      "finish_reason": "length",
+      "contract_valid": false,
+      "missing_sections": [
+        "## Recommendation",
+        "## Limitations"
+      ],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "cache_creation_input_tokens": 0,
+        "completion_tokens": 8192,
+        "completion_tokens_details": {
+          "image_tokens": 0,
+          "reasoning_tokens": 6897
+        },
+        "cost": 0.0816934,
+        "cost_details": null,
+        "gateway_cost": 0.0490339,
+        "is_byok": false,
+        "market_cost": 0.0490339,
+        "prompt_tokens": 17122,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 25314
+      },
+      "latency_seconds": 124.605,
+      "completed_at": "2026-08-25T17:21:55+00:00"
+    },
+    {
+      "id": "nemotron-evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": {
+            "prompt_tokens": 18736,
+            "completion_tokens": 3818,
+            "total_tokens": 22554,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3708,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "latency_seconds": 60.62,
+          "completed_at": "2026-08-25T17:20:51+00:00"
+        }
+      ],
+      "selected_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": {
+        "prompt_tokens": 18736,
+        "completion_tokens": 3818,
+        "total_tokens": 22554,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3708,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "latency_seconds": 60.619,
+      "completed_at": "2026-08-25T17:20:51+00:00"
+    },
+    {
+      "id": "agy-claude-sonnet-human-factors",
+      "lane": "antigravity-text",
+      "requested_model": "claude-sonnet-4-6",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "claude-sonnet-4-6"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "claude-sonnet-4-6",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 75.089,
+          "completed_at": "2026-08-25T17:21:06+00:00"
+        }
+      ],
+      "selected_model": "claude-sonnet-4-6",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 75.089,
+      "completed_at": "2026-08-25T17:21:06+00:00"
+    },
+    {
+      "id": "agy-claude-opus-governance",
+      "lane": "antigravity-text",
+      "requested_model": "claude-opus-4-6-thinking",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "claude-opus-4-6-thinking"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "claude-opus-4-6-thinking",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 199.975,
+          "completed_at": "2026-08-25T17:23:10+00:00"
+        }
+      ],
+      "selected_model": "claude-opus-4-6-thinking",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 199.975,
+      "completed_at": "2026-08-25T17:23:10+00:00"
+    },
+    {
+      "id": "agy-gpt-oss-translation",
+      "lane": "antigravity-text",
+      "requested_model": "gpt-oss-120b-medium",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gpt-oss-120b-medium"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "gpt-oss-120b-medium",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 99.376,
+          "completed_at": "2026-08-25T17:21:30+00:00"
+        }
+      ],
+      "selected_model": "gpt-oss-120b-medium",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 99.376,
+      "completed_at": "2026-08-25T17:21:30+00:00"
+    },
+    {
+      "id": "agy-gemini-flash-pragmatics",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-3.6-flash-medium",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-3.6-flash-medium"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "gemini-3.6-flash-medium",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 80.628,
+          "completed_at": "2026-08-25T17:21:11+00:00"
+        }
+      ],
+      "selected_model": "gemini-3.6-flash-medium",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 80.628,
+      "completed_at": "2026-08-25T17:21:11+00:00"
+    },
+    {
+      "id": "agy-gemini-pro-cross-project",
+      "lane": "antigravity-text",
+      "requested_model": "gemini-3.1-pro-low",
+      "provider": "Google Antigravity",
+      "harness": "provider-orchestration Antigravity text-only OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4015/v1",
+      "candidate_models": [
+        "gemini-3.1-pro-low"
+      ],
+      "packet_sha256": "7e3fb6397edc8b04ee9a4783033f450d331dfc76cacbcd48a596c3e20acbaf8d",
+      "started_at": "2026-08-25T17:19:50+00:00",
+      "status": "completed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "model": "gemini-3.1-pro-low",
+          "started_at": "2026-08-25T17:19:50+00:00",
+          "status": "completed",
+          "http_status": 200,
+          "finish_reason": "stop",
+          "contract_valid": true,
+          "missing_sections": [],
+          "packet_hash_confirmed_in_response": true,
+          "usage": null,
+          "latency_seconds": 223.54,
+          "completed_at": "2026-08-25T17:23:34+00:00"
+        }
+      ],
+      "selected_model": "gemini-3.1-pro-low",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "contract_valid": true,
+      "missing_sections": [],
+      "packet_hash_confirmed_in_response": true,
+      "usage": null,
+      "latency_seconds": 223.54,
+      "completed_at": "2026-08-25T17:23:34+00:00"
+    }
+  ],
+  "attempted_reviewers": 8,
+  "completed_reviewers": 7,
+  "partial_reviewers": 1,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-25T17:19:50+00:00",
+  "completed_at": "2026-08-25T17:23:34+00:00"
+}

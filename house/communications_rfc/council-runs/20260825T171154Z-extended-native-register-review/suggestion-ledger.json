@@ -1,0 +1,92 @@
+{
+  "schema": "dream-house/a2a-suggestion-ledger/1",
+  "council_id": "20260825T171154Z-extended-native-register-review",
+  "lifecycle": "received_unreviewed",
+  "authority": "advisory_only_no_ticket_or_implementation_effect",
+  "suggestions": [
+    {
+      "suggestion_id": "S-001",
+      "author": "codex-luna-linguistics",
+      "target": "pragmatic transfer qualification",
+      "proposal": "Require unfamiliar mixed-lineage peers to interpret, repair, and translate frozen register messages before any compression or lexicon entry is considered useful.",
+      "source": "reviewers/codex-luna-linguistics.md#suggestion"
+    },
+    {
+      "suggestion_id": "S-002",
+      "author": "codex-terra-task-systems",
+      "target": "suggestion-box intake",
+      "proposal": "Add submission-attempt identity, delivery idempotency, expected-version transitions, and duplicate receipts; keep semantic deduplication separate from delivery idempotency.",
+      "source": "reviewers/codex-terra-task-systems.md#suggestion"
+    },
+    {
+      "suggestion_id": "S-003",
+      "author": "codex-sol-architecture",
+      "target": "canonical claim boundary",
+      "proposal": "Define one versioned canonical coordination claim and qualify any dialect only after the frozen compatibility matrix demonstrates an unrepaired incompatibility.",
+      "source": "reviewers/codex-sol-architecture.md#suggestion"
+    },
+    {
+      "suggestion_id": "S-004",
+      "author": "spark-fast-cross-lineage",
+      "target": "compatibility experiment",
+      "proposal": "Run one bounded A/B evaluation over three model families and two sizes, promoting a dialect adapter only when the common-contract falsifier fires.",
+      "source": "reviewers/spark-fast-cross-lineage.md#suggestion-box-proposal"
+    },
+    {
+      "suggestion_id": "S-005",
+      "author": "glm-adversarial-methodology",
+      "target": "cross-lineage comparison",
+      "proposal": "Seal a small/large mixed-lineage matrix comparing readable natural language, NAR/FSA guidance, and deliberately overcompressed shorthand, scoring coverage, repair, authority confusion, and uncertainty preservation.",
+      "source": "external-wave/reviewers/glm-adversarial-methodology.md#recommendation"
+    },
+    {
+      "suggestion_id": "S-006",
+      "author": "kimi-model-interface",
+      "target": "authority-smuggling replay",
+      "proposal": "Add a frozen mixed-lineage comprehension replay with false status-transition payloads and compare NAR/FSA, lineage-native terse output, and verbose natural language.",
+      "source": "external-wave/reviewers/kimi-model-interface.md#suggestion"
+    },
+    {
+      "suggestion_id": "S-007",
+      "author": "nemotron-evidence-auditor",
+      "target": "dialect lifetime",
+      "proposal": "Scope local dialects to an explicit task or context generation and expire them on compaction or restart unless separately requalified.",
+      "source": "external-wave/reviewers/nemotron-evidence-auditor.md#suggestion"
+    },
+    {
+      "suggestion_id": "S-008",
+      "author": "agy-claude-sonnet-human-factors",
+      "target": "A2H translation boundary",
+      "proposal": "Add a controlled A2H study that checks whether translated shorthand preserves uncertainty, causality, attribution, requested action, and consequence at parity with readable baseline messages.",
+      "source": "external-wave/reviewers/agy-claude-sonnet-human-factors.md#recommendation"
+    },
+    {
+      "suggestion_id": "S-009",
+      "author": "agy-claude-opus-governance",
+      "target": "pre-implementation gate",
+      "proposal": "Seal five coordination scenarios across three lineages, a common-contract and adapter condition, preregistered thresholds, and blinded scoring before promoting any register convention.",
+      "source": "external-wave/reviewers/agy-claude-opus-governance.md#suggestion"
+    },
+    {
+      "suggestion_id": "S-010",
+      "author": "agy-gpt-oss-translation",
+      "target": "semantic echo oracle",
+      "proposal": "Have different lineages map frozen NAR messages into deterministic semantic-field JSON and compare those outputs with a human-sealed ground truth.",
+      "source": "external-wave/reviewers/agy-gpt-oss-translation.md#suggestion"
+    },
+    {
+      "suggestion_id": "S-011",
+      "author": "agy-gemini-flash-pragmatics",
+      "target": "repair-cost comparison",
+      "proposal": "Compare a unified NAR prompt with adapter-translated payloads on a frozen 50-task offline replay and measure task completion and repair turns.",
+      "source": "external-wave/reviewers/agy-gemini-flash-pragmatics.md#recommendation"
+    },
+    {
+      "suggestion_id": "S-012",
+      "author": "agy-gemini-pro-cross-project",
+      "target": "cross-provider pilot",
+      "proposal": "Compare forced common NAR against Contractor Station native adapters on a Gemini-to-Claude task assignment and verification test, measuring completion and false capability acceptance.",
+      "source": "external-wave/reviewers/agy-gemini-pro-cross-project.md#suggestion"
+    }
+  ]
+}

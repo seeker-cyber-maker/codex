@@ -1,0 +1,116 @@
+{
+  "schema": "dream-house/a2a-council-claim-ledger/1",
+  "council_id": "20260825T171154Z-extended-native-register-review",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "The bound evidence confirms a model-native language or grammar.",
+      "status": "contradicted",
+      "evidence": ["KNOWN_AGENT_REGISTERS_AND_DIALECTS.md#evidence-classes", "evidence-packet.md#known-unknowns"],
+      "supporters": [],
+      "objectors": ["codex-luna-linguistics", "codex-sol-architecture", "glm-adversarial-methodology", "kimi-model-interface", "agy-claude-opus-governance"],
+      "shared_dependencies": ["same-evidence-packet"],
+      "decision_impact": "high",
+      "next_test": "bind a raw corpus and controlled lineage, prompt, transport, and training conditions"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "The first-party OpenAI evidence supports an emergent operational register with shared notes, recipient and ordering conventions, handoff, repair, collision, and authentication concerns.",
+      "status": "observed",
+      "evidence": ["evidence/87DyyMV0kCY/87DyyMV0kCY.en-orig.transcript.txt", "KNOWN_AGENT_REGISTERS_AND_DIALECTS.md#openai-hugging-face-incident-operational-register"],
+      "supporters": ["codex-luna-linguistics", "codex-sol-architecture", "agy-claude-opus-governance"],
+      "objectors": [],
+      "shared_dependencies": ["automatic-caption-source", "same-evidence-packet"],
+      "decision_impact": "medium",
+      "next_test": "recover and bind raw message-board artifacts"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "NAR, FSA, and the suggestion box are evaluation-only and do not modify H2A, A2H, task state, authority, verification, or acceptance.",
+      "status": "observed",
+      "evidence": ["evidence-packet.md#authoritative-status", "A2A_SUGGESTION_BOX_CONTRACT.md#authority-boundary", "A2A_COORDINATION_MASTER_RFC.md#dream-house-task-and-ticket-integration"],
+      "supporters": ["all-completed-reviewers"],
+      "objectors": [],
+      "shared_dependencies": ["documentary-contract-only"],
+      "decision_impact": "high",
+      "next_test": "none before implementation; retain as a normative boundary"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "One canonical semantic and authority layer must remain authoritative whether model-facing communication is common or dialect-adapted.",
+      "status": "corroborated",
+      "evidence": ["docs/adr/0030-keep-the-task-spine-agent-first-and-event-authoritative.md", "docs/adr/0031-use-compact-views-and-artifact-first-delegation.md", "provider-orchestration/docs/agy-bidirectional-dialect-adapter.md"],
+      "supporters": ["codex-luna-linguistics", "codex-terra-task-systems", "codex-sol-architecture", "spark-fast-cross-lineage", "glm-adversarial-methodology", "kimi-model-interface", "agy-claude-sonnet-human-factors", "agy-claude-opus-governance", "agy-gpt-oss-translation", "agy-gemini-flash-pragmatics", "agy-gemini-pro-cross-project"],
+      "objectors": [],
+      "shared_dependencies": ["same-evidence-packet", "shared-Dream-House-contracts"],
+      "decision_impact": "high",
+      "next_test": "conformance fixtures must prove adapters cannot emit authority or task effects"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "One common model-facing coordination contract preserves requirements across small, large, and mixed-lineage models without material loss.",
+      "status": "unknown",
+      "evidence": ["USER_DECISION_ADDENDUM_2.md#compatibility-first-decision-rule"],
+      "supporters": ["codex-sol-architecture", "spark-fast-cross-lineage", "agy-claude-sonnet-human-factors"],
+      "objectors": ["codex-luna-linguistics", "glm-adversarial-methodology", "kimi-model-interface", "agy-claude-opus-governance", "agy-gemini-flash-pragmatics", "agy-gemini-pro-cross-project"],
+      "shared_dependencies": ["no-sealed-compatibility-matrix"],
+      "decision_impact": "high",
+      "next_test": "run the frozen directed small-large mixed-lineage matrix"
+    },
+    {
+      "claim_id": "C-006",
+      "claim": "Separate model-native coordination dialects are required.",
+      "status": "unknown",
+      "evidence": ["USER_DECISION_ADDENDUM_2.md#compatibility-first-decision-rule"],
+      "supporters": ["codex-luna-linguistics", "glm-adversarial-methodology", "kimi-model-interface", "agy-claude-opus-governance", "agy-gemini-flash-pragmatics", "agy-gemini-pro-cross-project"],
+      "objectors": ["codex-sol-architecture", "spark-fast-cross-lineage", "agy-claude-sonnet-human-factors"],
+      "shared_dependencies": ["provider-adapter-analogy", "no-sealed-compatibility-matrix"],
+      "decision_impact": "high",
+      "next_test": "qualify a dialect only after a common-contract repair still fails recurrently"
+    },
+    {
+      "claim_id": "C-007",
+      "claim": "Contractor Station proves engineered provider presentation dialects around one canonical core, not emergent model-native coordination languages.",
+      "status": "observed",
+      "evidence": ["provider-orchestration/docs/agy-bidirectional-dialect-adapter.md", "KNOWN_AGENT_REGISTERS_AND_DIALECTS.md#contractor-station-dialects"],
+      "supporters": ["codex-luna-linguistics", "codex-sol-architecture", "kimi-model-interface", "agy-claude-opus-governance"],
+      "objectors": [],
+      "shared_dependencies": ["same-provider-orchestration-documents"],
+      "decision_impact": "high",
+      "next_test": "none; preserve the evidence ceiling"
+    },
+    {
+      "claim_id": "C-008",
+      "claim": "The draft suggestion-box contract lacks deterministic delivery idempotency, replay receipts, and expected-version lifecycle transitions distinct from semantic deduplication.",
+      "status": "observed",
+      "evidence": ["A2A_SUGGESTION_BOX_CONTRACT.md#normalized-envelope", "A2A_SUGGESTION_BOX_CONTRACT.md#deduplication"],
+      "supporters": ["codex-terra-task-systems"],
+      "objectors": [],
+      "shared_dependencies": [],
+      "decision_impact": "high",
+      "next_test": "one repeated-delivery fixture must yield one suggestion lineage and one duplicate receipt with no task effect"
+    },
+    {
+      "claim_id": "C-009",
+      "claim": "The local test spread demonstrates that small and local models can all consume the current long-form packet and return a valid council contract.",
+      "status": "contradicted",
+      "evidence": ["local-attempts.json"],
+      "supporters": [],
+      "objectors": ["local-llama-1b", "local-gemma-e2b", "local-gpt-oss-20b"],
+      "shared_dependencies": ["same-mlx-lm-0.31.3-runtime", "same-long-form-packet"],
+      "decision_impact": "medium",
+      "next_test": "test compact task-specific views and model-compatible output-channel budgets"
+    },
+    {
+      "claim_id": "C-010",
+      "claim": "A compatibility matrix must include semantic recovery, repair cost, uncertainty and provenance preservation, restart or compaction, and zero authority or task effects.",
+      "status": "corroborated",
+      "evidence": ["reviewers/codex-sol-architecture.md#recommendation", "reviewers/codex-luna-linguistics.md#addendum-decision", "reviewers/codex-terra-task-systems.md#addendum-decision"],
+      "supporters": ["all-completed-reviewers-with-test-recommendations"],
+      "objectors": [],
+      "shared_dependencies": ["same-question-addenda"],
+      "decision_impact": "high",
+      "next_test": "seal the exact fixture set, model matrix, thresholds, and independent evaluator before any run"
+    }
+  ]
+}

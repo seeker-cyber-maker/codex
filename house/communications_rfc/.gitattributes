@@ -1,1 +1,4 @@
 evidence/**/*.json3 binary
+# Reviewer reports are immutable raw model output. Preserve their bytes,
+# including provider-emitted trailing spaces, instead of normalizing them.
+council-runs/**/reviewers/*.md -whitespace
