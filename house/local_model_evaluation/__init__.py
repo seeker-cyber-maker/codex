@@ -7,12 +7,16 @@ candidate.
 
 from .contract import (
     LocalEvaluationContractError,
+    parse_adapter_score,
+    render_rubric_prompt,
     require_execution_authority,
     validate_source_only_contract,
 )
 
 __all__ = [
     "LocalEvaluationContractError",
+    "parse_adapter_score",
+    "render_rubric_prompt",
     "require_execution_authority",
     "validate_source_only_contract",
 ]

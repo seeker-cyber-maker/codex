@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from collections.abc import Mapping
 from dataclasses import dataclass
 
@@ -37,6 +38,7 @@ ALLOWED_PARSERS = (
     "bracket_result_integer_v1",
     "json_score_integer_v1",
 )
+_BRACKET_SCORE_RE = re.compile(r"\[RESULT\]\s*\(?\s*([1-5])\s*\)?")
 _MANIFEST_FIELDS = {
     "schema",
     "evaluation_id",
@@ -129,6 +131,51 @@ def require_execution_authority(
     raise LocalEvaluationContractError(
         "source-only local evaluation has no execution or promotion authority"
     )
+
+
+def render_rubric_prompt(fixture: Mapping[str, object]) -> str:
+    """Render the model-neutral instruction text for one already-validated fixture."""
+
+    _require_exact_fields(fixture, _FIXTURE_FIELDS, "fixture")
+    _validate_fixtures({"schema": FIXTURE_SCHEMA, "fixtures": [fixture]})
+    score_lines = "\n".join(
+        f"Score {score}: {fixture['scores'][score]}" for score in ("1", "2", "3", "4", "5")
+    )
+    return (
+        "Evaluate the candidate response against the supplied reference answer and rubric.\n"
+        "Return a score from 1 through 5 and concise rubric-grounded feedback.\n\n"
+        f"Instruction:\n{fixture['instruction']}\n\n"
+        f"Candidate response:\n{fixture['response']}\n\n"
+        f"Reference answer:\n{fixture['reference_answer']}\n\n"
+        f"Criteria:\n{fixture['criteria']}\n\n"
+        f"Rubric:\n{score_lines}"
+    )
+
+
+def parse_adapter_score(adapter: Mapping[str, object], output: str) -> int:
+    """Parse one adapter's closed score surface without assigning quality."""
+
+    _validate_adapters([adapter])
+    if not isinstance(output, str) or not output:
+        raise LocalEvaluationContractError("adapter output must be nonempty text")
+    parser = adapter["output_parser"]
+    if parser == "bracket_result_integer_v1":
+        match = _BRACKET_SCORE_RE.search(output)
+        if match is None:
+            raise LocalEvaluationContractError("bracketed result score is absent")
+        return int(match.group(1))
+    if parser == "json_score_integer_v1":
+        try:
+            value = json.loads(output)
+        except json.JSONDecodeError as error:
+            raise LocalEvaluationContractError("JSON score output is invalid") from error
+        if not isinstance(value, Mapping) or set(value) != {"score"}:
+            raise LocalEvaluationContractError("JSON score output must be exactly {score}")
+        score = value["score"]
+        if not isinstance(score, int) or isinstance(score, bool) or score not in range(1, 6):
+            raise LocalEvaluationContractError("JSON score must be an integer from 1 through 5")
+        return score
+    raise LocalEvaluationContractError("adapter output parser is not implemented")
 
 
 def _require_exact_fields(value: object, expected: set[str], label: str) -> None:

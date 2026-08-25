@@ -7,6 +7,8 @@ from pathlib import Path
 
 from house.local_model_evaluation import (
     LocalEvaluationContractError,
+    parse_adapter_score,
+    render_rubric_prompt,
     require_execution_authority,
     validate_source_only_contract,
 )
@@ -54,6 +56,24 @@ class LocalEvaluationContractTests(unittest.TestCase):
         bad_parser[1]["output_parser"] = "freeform-prose-v1"
         with self.assertRaisesRegex(LocalEvaluationContractError, "not declared"):
             validate_source_only_contract(manifest, fixtures, bad_parser)
+
+    def test_renders_shared_prompt_without_adapter_identity(self) -> None:
+        _manifest, fixtures, _adapters = self._inputs()
+        rendered = render_rubric_prompt(fixtures["fixtures"][0])
+        self.assertIn("Compute 12 - 3 * 2", rendered)
+        self.assertIn("Score 5:", rendered)
+        self.assertNotIn("adapter_id", rendered)
+        self.assertNotIn("model", rendered.lower())
+
+    def test_closed_adapter_parsers(self) -> None:
+        _manifest, _fixtures, adapters = self._inputs()
+        bracket, json_adapter = adapters
+        self.assertEqual(parse_adapter_score(bracket, "Feedback. [RESULT] 4"), 4)
+        self.assertEqual(parse_adapter_score(json_adapter, '{"score": 5}'), 5)
+        with self.assertRaisesRegex(LocalEvaluationContractError, "exactly"):
+            parse_adapter_score(json_adapter, '{"score": 5, "notes": "extra"}')
+        with self.assertRaisesRegex(LocalEvaluationContractError, "absent"):
+            parse_adapter_score(bracket, "score 4")
 
 
 if __name__ == "__main__":
