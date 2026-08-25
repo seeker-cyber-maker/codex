@@ -1,0 +1,13 @@
+{
+  "schema": "dream-house/local-rubric-inference-manifest/1",
+  "state": "INFERENCE_ONLY_AUTHORIZED",
+  "authority_basis": "user-requested local test continuation",
+  "opaque_candidate_id": "local-rubric-candidate-b",
+  "prebinding": "../20260825T224000Z-local-rubric-candidate-b-prebinding/candidate_binding.json",
+  "fixture_set": "house/local_model_evaluation/rubric_fixtures_v1.json",
+  "case_ids": ["arithmetic-misconception"],
+  "adapter_id": "chat-json-score-v1",
+  "decoding": {"temperature": 0.0, "seed": 20260825, "max_tokens": 32, "retries": 0},
+  "effects": {"model_load": "AUTHORIZED", "provider_call": "FORBIDDEN", "training": "FORBIDDEN", "worker_dispatch": "FORBIDDEN", "candidate_promotion": "FORBIDDEN"},
+  "acceptance_ceiling": "runtime-and-format-smoke-only"
+}

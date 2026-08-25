@@ -32,3 +32,13 @@ python3 -m unittest discover -s house/local_model_evaluation/tests -v
 The validator rejects every attempt to claim execution, model loading,
 training, worker dispatch, or candidate promotion.  A future inference run
 needs a separately sealed model-binding manifest and an explicit authorization.
+
+## Sealed smoke-run driver
+
+The execution driver is deliberately outside this source-only package:
+`house/workflow/run_local_rubric_smoke.py`. It accepts only the closed
+inference-only manifest surface, verifies the prebound artifact hashes, and
+writes one receipt atomically. It never imports the Dream House control plane
+and cannot promote or dispatch a candidate. The first completed four-case
+example is recorded at
+`house/workflow/runs/20260825T225000Z-local-rubric-candidate-b-onecase/`.

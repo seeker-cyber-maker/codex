@@ -1,0 +1,118 @@
+{
+  "acceptance_ceiling": "runtime-and-format-smoke-only",
+  "adapter_id": "chat-json-score-v1",
+  "artifact_fingerprint_verified": [
+    {
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "bf03240339489cbf7582654c237b7c7bba729640eb5957fbb8918b889d9a8e91"
+    },
+    {
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "1adbf960fd4eee50836d54683dd0a8915976ec57a6326cfa0588238fa6c6e69f"
+    },
+    {
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "562933b8e4840869a912bf0d9ba1b53a7ebd13619f299342d0c0e2229b95a639"
+    },
+    {
+      "path": "config.json",
+      "sha256": "9d3d76706bab9e3515a1603514a515e60ba844c78b7c447604560262130bdfcb"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "sha256": "3f4e2d4721509e89ae2415389ecb021bc618aa547dfe3342f997ed3481c4daf9"
+    },
+    {
+      "path": "chat_template.jinja",
+      "sha256": "ed825380b678dad25046e0a92ef5c64a57178ccaba7e780b5ed581e91a4fd6ac"
+    },
+    {
+      "path": "tokenizer.json",
+      "sha256": "99cf274236c60277fcfad861a5a1007518687ad06ba8938760f50b55ffa0b1ef"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "sha256": "d11b71c3d855b030fb174bc8bf20542ccaf8281c7897d8074942a717eb0f11e4"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "arithmetic-misconception",
+      "expected_scores": [
+        1
+      ],
+      "output": "{\"score\": 1}",
+      "parse_error": null,
+      "parsed_score": 1,
+      "score_agrees": true
+    },
+    {
+      "case_id": "python-comprehension-correct",
+      "expected_scores": [
+        5
+      ],
+      "output": "{\"score\": 5}",
+      "parse_error": null,
+      "parsed_score": 5,
+      "score_agrees": true
+    },
+    {
+      "case_id": "https-nuance",
+      "expected_scores": [
+        1,
+        2
+      ],
+      "output": "{\"score\": 1}",
+      "parse_error": null,
+      "parsed_score": 1,
+      "score_agrees": true
+    },
+    {
+      "case_id": "lab-scope-control",
+      "expected_scores": [
+        1
+      ],
+      "output": "{\"score\": 1}",
+      "parse_error": null,
+      "parsed_score": 1,
+      "score_agrees": true
+    }
+  ],
+  "decoding": {
+    "max_tokens": 32,
+    "retries": 0,
+    "seed": 20260825,
+    "temperature": 0.0
+  },
+  "disposition": "RUNTIME_AND_FORMAT_EVIDENCE_ONLY_NOT_A_WORKER_QUALIFICATION",
+  "effects": {
+    "candidate_promotion": "FORBIDDEN",
+    "model_load": "AUTHORIZED",
+    "provider_call": "FORBIDDEN",
+    "training": "FORBIDDEN",
+    "worker_dispatch": "FORBIDDEN"
+  },
+  "manifest": {
+    "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260825T225000Z-local-rubric-candidate-b-onecase/EXECUTION_MANIFEST_V2.json",
+    "sha256": "541fc5327fabb84018ec2922fb59ee0bd4ac2e8cc26114c0f5fdb5ef8a28b56e"
+  },
+  "metrics": {
+    "case_count": 4,
+    "parse_rate": 1.0,
+    "score_agreement": 1.0
+  },
+  "opaque_candidate_id": "local-rubric-candidate-b",
+  "prebinding": {
+    "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260825T224000Z-local-rubric-candidate-b-prebinding/candidate_binding.json",
+    "sha256": "b06ab02ddf7b237f358d425c416aa3a1824b1afd1167537830b3ca86c005aabf"
+  },
+  "runtime": {
+    "mlx": "0.31.2",
+    "mlx_lm": "0.31.3",
+    "tokenizer_config": {
+      "fix_mistral_regex": true
+    }
+  },
+  "schema": "dream-house/local-rubric-inference-receipt/1",
+  "state": "COMPLETED_INFERENCE_ONLY"
+}
