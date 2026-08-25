@@ -1,0 +1,114 @@
+{
+  "schema": "dream-house/suggestion-commons-general-council-claim-ledger/1",
+  "council_id": "20260825T184530Z-peer-review-term-shorthand-general",
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "claim": "The peer-review design separates public speech, formal same-provider peer review, and council without granting task or authority effects to prose.",
+      "status": "corroborated_document_contract",
+      "evidence": [
+        "../../SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md#1-three-distinct-surfaces",
+        "external-wave/reviewers/constructive-theorist.md",
+        "external-wave/reviewers/adversarial-methodologist.md"
+      ],
+      "supporters": [
+        "constructive-theorist",
+        "adversarial-methodologist"
+      ],
+      "objectors": [],
+      "decision_impact": "high",
+      "next_test": "none before separately authorized implementation"
+    },
+    {
+      "claim_id": "C-002",
+      "claim": "The mandatory-review trigger referring to a canonical design decision was mechanically precise.",
+      "status": "contradicted_and_corrected",
+      "evidence": [
+        "evidence-packet.md",
+        "external-wave/reviewers/constructive-theorist.md",
+        "../../SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md#3-when-formal-review-applies"
+      ],
+      "supporters": [],
+      "objectors": [
+        "constructive-theorist"
+      ],
+      "decision_impact": "medium",
+      "next_test": "verify future trigger implementations bind an identified authoritative artifact and stated constraint"
+    },
+    {
+      "claim_id": "C-003",
+      "claim": "The detailed TERM retention gate and summary admission rule used one consistent comparator and decision rule.",
+      "status": "contradicted_and_corrected",
+      "evidence": [
+        "evidence-packet.md",
+        "external-wave/reviewers/constructive-theorist.md",
+        "../../TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md#5-experimental-conditions",
+        "../../TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md#6-admission-rule"
+      ],
+      "supporters": [],
+      "objectors": [
+        "constructive-theorist"
+      ],
+      "decision_impact": "high",
+      "next_test": "freeze one comparator matrix and apply the corrected conjunctive gate"
+    },
+    {
+      "claim_id": "C-004",
+      "claim": "TERM shorthand improves false agreement, exact recovery, or repair cost.",
+      "status": "unknown_hypothesis",
+      "evidence": [
+        "../../TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md#8-claim-and-authority-ceiling"
+      ],
+      "supporters": [],
+      "objectors": [],
+      "decision_impact": "high",
+      "next_test": "run a separately authorized frozen marker-only versus unmarked versus readable-repair compaction pilot"
+    },
+    {
+      "claim_id": "C-005",
+      "claim": "One consultation per task-result version plus a yes or no dirty-triggered refresh choice avoids timer polling and bounds stale advice.",
+      "status": "supported_design_hypothesis",
+      "evidence": [
+        "../../SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md#task-completion-consultation",
+        "external-wave/reviewers/constructive-theorist.md"
+      ],
+      "supporters": [
+        "constructive-theorist"
+      ],
+      "objectors": [],
+      "decision_impact": "medium",
+      "next_test": "if implemented, verify refresh_count cannot exceed one for one task-result digest"
+    },
+    {
+      "claim_id": "C-006",
+      "claim": "Prometheus omissions were caused by hard context-window exhaustion.",
+      "status": "contradicted_for_this_case",
+      "evidence": [
+        "../../peer-review-runs/20260825T184530Z-peer-review-term-shorthand/manifest.json",
+        "../../peer-review-runs/20260825T184530Z-peer-review-term-shorthand/synthesis.md"
+      ],
+      "supporters": [],
+      "objectors": [
+        "peer-review-chair"
+      ],
+      "decision_impact": "medium",
+      "next_test": "hold content constant while varying only layout or retrieval cues to distinguish salience from other interface effects"
+    },
+    {
+      "claim_id": "C-007",
+      "claim": "The external council supplied three independent model lineages as intended.",
+      "status": "contradicted",
+      "evidence": [
+        "external-wave/manifest.json",
+        "external-wave/reviewers/constructive-theorist.md",
+        "external-wave/reviewers/adversarial-methodologist.md"
+      ],
+      "supporters": [],
+      "objectors": [
+        "council-chair"
+      ],
+      "decision_impact": "high",
+      "next_test": "rerun only if genuine multi-lineage independence is required before implementation"
+    }
+  ]
+}

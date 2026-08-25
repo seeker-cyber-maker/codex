@@ -38,13 +38,23 @@
     },
     {
       "path": "SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md",
-      "sha256": "acc2f2c25f7c224ba1c8cb8bc445c490db46ce5f72016e476aabf5f969ce3b63",
+      "sha256": "9fb325e63e8b343eab3353d89f71154ad0c11ce2e511d94c5865b1d25916569a",
       "status": "DRAFT_SECURITY_DESIGN_NOT_IMPLEMENTED"
     },
     {
       "path": "SUGGESTION_COMMONS_SOCIAL_FAILURES_ADDENDUM.md",
       "sha256": "cd3fa46f1dd9824f2445802f4959b190003d5e278d044e9fcb77a017205dbd76",
       "status": "DESIGN_NOTE_HUMOR_PRESERVED_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md",
+      "sha256": "6fa9fe67b197fc398ff9f0fb133f63d211d78c6529d2f12c6aa038b18a2a1acb",
+      "status": "DRAFT_SOCIAL_EXPERIMENT_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md",
+      "sha256": "6ead787b6adf67b7d17d4cc78b0cff0cf54594e55615d6e9e99f1856b3afafb1",
+      "status": "DRAFT_PARALLEL_EVALUATION_NOT_IMPLEMENTED"
     }
   ],
   "source_drafts": [
@@ -101,6 +111,18 @@
       "sha256": "9a5051fc8319450e1aeb1d092c6311f866cc3991c934679e4802ace67304b5ce"
     }
   ],
+  "peer_review_runs": [
+    {
+      "peer_review_id": "20260825T184530Z-peer-review-term-shorthand",
+      "path": "peer-review-runs/20260825T184530Z-peer-review-term-shorthand",
+      "status": "SEALED_PEER_REVIEW_REVISIONS_APPLIED_GENERAL_COUNCIL_PENDING",
+      "decision": "REVISE_AND_RETAIN_NO_IMPLEMENTATION",
+      "manifest_sha256": "ba7d6ab7ada39a2d1f0b004f3d8a2d90d8b5d8f43e6cf7ccc30d3a50955f8df0",
+      "synthesis_sha256": "9f875d8ce1fca552eff0ec9db50eba30c6beb99f3ba55fe3fa430b096660d2b7",
+      "followup_council_id": "20260825T184530Z-peer-review-term-shorthand-general",
+      "followup_disposition": "SEALED_PARTIAL_COUNCIL_REVISIONS_APPLIED_NOT_IMPLEMENTED"
+    }
+  ],
   "council_runs": [
     {
       "council_id": "20260825T171154Z-extended-native-register-review",
@@ -111,6 +133,16 @@
       "file_hash_manifest_sha256": "f64752e32de7e718bff8e64a29725405edce623c2e1fddb6d1485f5999791424",
       "synthesis_sha256": "963aca4cc5318b6ca4e2ea3b46ab92cd246a91f415db67a4712fbd27eb5e6f9c",
       "preference_closure": "EXPLICIT_DECLARATIONS_ONLY_LATER_INPUT_GOES_TO_NEW_SUGGESTION_RECORD"
+    },
+    {
+      "council_id": "20260825T184530Z-peer-review-term-shorthand-general",
+      "path": "council-runs/20260825T184530Z-peer-review-term-shorthand-general",
+      "status": "SEALED_PARTIAL_COUNCIL_REVISIONS_APPLIED_NOT_IMPLEMENTED",
+      "decision": "REVISE_AND_RETAIN_NO_IMPLEMENTATION",
+      "manifest_sha256": "149500c462f429110460bafb9b160106351205801b822ab384902c6f43fcbafe",
+      "file_hash_manifest_sha256": "fbefc6a20dfba3ba95d31b96f391c84197365c41895885ddeba007a110bceb30",
+      "synthesis_sha256": "c70dd13886b9f7e13f8138f595387a25915ed7e72e0deed5043ea4db469522bd",
+      "independence_disposition": "MULTI_PROVIDER_BUT_NOT_MULTI_LINEAGE_DECISION_BEARING_REVIEW"
     }
   ],
   "contractor_packages": [
@@ -119,6 +151,13 @@
       "sha256": "c786042ef9c53b6426d71bb8b5202e09d1349a645462b74a3c37da9292917164",
       "size_bytes": 356487,
       "contents": "THREE_PROPOSAL_AND_REFERENCE_DOCUMENTS_BOUND_PUBLIC_EVIDENCE_AND_COMPLETE_COUNCIL_RUN"
+    },
+    {
+      "path": "packages/suggestion-commons-peer-term-council-20260825.zip",
+      "sha256": "b08078ff8556aa14e18c42ed5011793f40feea2021ac4acafd604cc024859ace",
+      "size_bytes": 509810,
+      "seal_path": "packages/suggestion-commons-peer-term-council-20260825.zip.sha256",
+      "contents": "COLLATED_COMMUNICATIONS_RFC_WITH_PEER_REVIEW_TERM_EXPERIMENT_PROMETHEUS_RECEIPTS_AND_GENERAL_COUNCIL"
     }
   ],
   "claim_ceiling": "COLLATED_PROPOSAL_AND_BOUND_PUBLIC_EVIDENCE_ONLY",

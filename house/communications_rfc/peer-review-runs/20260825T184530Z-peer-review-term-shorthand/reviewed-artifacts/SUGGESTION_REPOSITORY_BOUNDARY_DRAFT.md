@@ -107,20 +107,12 @@ planner to reopen a task concern, but suggestion prose cannot do so by itself.
 
 Consult once for each task-result version, then choose whether a later relevant
 change justifies rechecking. `refresh_on_relevant_change=no` closes the
-consultation for that task-result digest and explicitly accepts bounded
-staleness if relevant public material changes later. `yes` permits one
-additional query
+consultation for that task-result digest. `yes` permits one additional query
 only after the applicable public snapshot or topic access point is marked
 dirty; it does not enable timer-based polling, periodic refresh, or repeated
 queries against an unchanged snapshot. A recheck records a new snapshot digest
-and changes `refresh_count` from zero to one; values above one are invalid.
-The dirty-marker identity and prior/new snapshot digests are bound in the
-receipt. Further refreshes require a new task-result
+and increments `refresh_count`. Further refreshes require a new task-result
 version or an explicit coordinator decision.
-
-The refresh choice and any retrieved tip remain advisory. They cannot reopen a
-task, alter acceptance, create work, or change any canonical state without an
-independently authorized typed event.
 
 Dirty propagation stays narrow: new information marks the closest classified
 topic access point and its declared upstream depth, not the entire suggestion

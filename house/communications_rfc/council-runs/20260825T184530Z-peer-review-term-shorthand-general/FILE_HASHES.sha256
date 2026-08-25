@@ -1,0 +1,14 @@
+7ce60727e6d4ce54e2b37e4389939d1a7493f59fd4eacb1c409e7e60f041a712  ./claim-ledger.json
+6fb9ab2f134630568d7e883788ece67ba907771e1f22a1d1d91acb6e69b8e35e  ./dry-run/manifest.json
+77d577971fb99669845f2b4809603dc977268f1c892bf06ac330fca9977f03fb  ./dry-run/reviewers/adversarial-methodologist.md
+8674946d2e6918ee57d5bf1e03dd056ea3433a4829b1a18483d989da8dc0753e  ./dry-run/reviewers/constructive-theorist.md
+81139048a223fbb6867974a3fd45500933dbb3b35f54351b48c298802f9ee608  ./dry-run/reviewers/evidence-auditor.md
+82de7f743ce3fa383f8ff0ed6c405b94113fbf070a4ce8739237d9f02c1373e8  ./dry-run/transport-packet.md
+d337851a4418ad81e9c8d25a95a148aceccf1d8946dc45c35ad0de0ac7674a95  ./evidence-packet.md
+097972fbc764e6c3eb4aef1f472e099d18e93745d74e6c56b29270dda0c41ecf  ./external-wave/manifest.json
+e8d620c01882358359c188607913c3bcbf9945a14ae4e17ae54079de92e9b70f  ./external-wave/reviewers/adversarial-methodologist.md
+52b7a840be77ff80655fb8a68ab141f15c78950bbbce7e2f979c07d59df9296d  ./external-wave/reviewers/constructive-theorist.md
+319e9bc5b5a272e7141161245ebf504c229dfdb7bb3daa6d2acabc23cd7ec55b  ./external-wave/reviewers/evidence-auditor.md
+82de7f743ce3fa383f8ff0ed6c405b94113fbf070a4ce8739237d9f02c1373e8  ./external-wave/transport-packet.md
+149500c462f429110460bafb9b160106351205801b822ab384902c6f43fcbafe  ./manifest.json
+c70dd13886b9f7e13f8138f595387a25915ed7e72e0deed5043ea4db469522bd  ./synthesis.md

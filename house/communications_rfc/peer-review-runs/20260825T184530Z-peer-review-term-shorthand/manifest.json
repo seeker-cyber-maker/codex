@@ -1,0 +1,120 @@
+{
+  "schema": "dream-house/peer-review-run/1",
+  "peer_review_id": "20260825T184530Z-peer-review-term-shorthand",
+  "status": "SEALED_PEER_REVIEW_REVISIONS_APPLIED_GENERAL_COUNCIL_PENDING",
+  "decision": "REVISE_AND_RETAIN_NO_IMPLEMENTATION",
+  "question": "Should Dream House retain, revise, reject, or defer the light-touch suggestion-commons peer-review design and parallel TERM terminology-repair experiment as design baselines?",
+  "started_at": "2026-08-25T18:45:30Z",
+  "completed_at": "2026-08-25T19:06:01Z",
+  "packet": {
+    "path": "evidence-packet.md",
+    "sha256": "35fe05b3d7e4b80e7043ee3bc29be735a22e3702d62bb7dfbedea32935938e30",
+    "immutability": "FROZEN"
+  },
+  "reviewed_artifacts": [
+    {"path": "reviewed-artifacts/SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md", "sha256": "3a7af292f303b4fe79243490e11a0443db79c1c66b6a8d36d97f4f979c078277"},
+    {"path": "reviewed-artifacts/TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md", "sha256": "6597a1ca2cc15f2c233c8b4341329c8f9c80a3333df627a647c793ae3e99313c"},
+    {"path": "reviewed-artifacts/SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md", "sha256": "7764c8fcf98c3a2bb6beba9c8dde1a8c72c9b3d4f2405e75abc55615afe294ac"},
+    {"path": "reviewed-artifacts/SUGGESTION_COMMONS_SOCIAL_FAILURES_ADDENDUM.md", "sha256": "cd3fa46f1dd9824f2445802f4959b190003d5e278d044e9fcb77a017205dbd76"},
+    {"path": "reviewed-artifacts/A2A_COUNCIL_REVISION_ADDENDUM_V1.md", "sha256": "6d6a44fe2111b6984ff59ab16ad4c75d664d7f89570086f4c60eb473e94f2feb"}
+  ],
+  "live_revisions_after_review": [
+    {"path": "../../SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md", "sha256": "ef189bf6fcf3212c2f6cd6e6bb18481ac11033ce6aea2fc8e987abc68c9fd54c"},
+    {"path": "../../TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md", "sha256": "68ff611911123e4076b3e2d99c3ae90741200568d9b308e81758610a615bf3b6"},
+    {"path": "../../SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md", "sha256": "9fb325e63e8b343eab3353d89f71154ad0c11ce2e511d94c5865b1d25916569a"}
+  ],
+  "panel": {
+    "definition": "same-provider OpenAI spine plus supplementary local evaluation peers",
+    "memory_preflight": {
+      "physical_bytes": 34359738368,
+      "macos_memory_free_percent_before_local_runs": 71,
+      "execution": "sequential",
+      "capacity_disposition": "TWO_LOCAL_MODEL_LOADS_FIT"
+    },
+    "members": [
+      {
+        "reviewer_id": "luna",
+        "requested_model": "gpt-5.6-luna",
+        "selected_model": "gpt-5.6-luna",
+        "provider": "OpenAI",
+        "reasoning_effort": "medium",
+        "harness": "Codex collaboration",
+        "status": "completed",
+        "packet_hash_confirmed": true,
+        "raw_path": "reviewers/luna.md",
+        "raw_sha256": "b892f27d9c7b0d8917a4a4caa9973d61c17ca728ce5c8e067051338cde5a6ade"
+      },
+      {
+        "reviewer_id": "terra",
+        "requested_model": "gpt-5.6-terra",
+        "selected_model": "gpt-5.6-terra",
+        "provider": "OpenAI",
+        "reasoning_effort": "high",
+        "harness": "Codex collaboration",
+        "status": "completed",
+        "packet_hash_confirmed": true,
+        "raw_path": "reviewers/terra.md",
+        "raw_sha256": "7cf2e14bda7aeb116a2780269c032794a21a007c52c5c2472cde5c2639b9c84f"
+      },
+      {
+        "reviewer_id": "sol",
+        "requested_model": "gpt-5.6-sol",
+        "selected_model": "gpt-5.6-sol",
+        "provider": "OpenAI",
+        "reasoning_effort": "high",
+        "harness": "Codex collaboration",
+        "status": "completed",
+        "packet_hash_confirmed": true,
+        "raw_path": "reviewers/sol.md",
+        "raw_sha256": "337f0aa62b07f8e691ed7465c7c106df6b4b010b816aae5589376d312a05dfc5"
+      },
+      {
+        "reviewer_id": "local-small-lfm",
+        "requested_model": "/Volumes/HIKSEMI/omlx/LiquidAI/LFM2.5-2.6B-MLX/4bit",
+        "selected_model": "LFM2.5-2.6B-MLX-4bit",
+        "provider": "local MLX",
+        "runtime": "mlx-lm 0.31.3",
+        "status": "failed_contract_after_two_attempts",
+        "packet_hash_confirmed": false,
+        "attempt_paths": ["attempts/local-lfm-attempt-1.md", "attempts/local-lfm-attempt-2.raw.md"]
+      },
+      {
+        "reviewer_id": "local-mid-qwen",
+        "requested_model": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit",
+        "selected_model": "Qwen3.5-9B-MLX-4bit",
+        "provider": "local MLX",
+        "runtime": "mlx-lm 0.31.3",
+        "status": "partial_missing_required_falsifiers_and_exact_dispatch_echo",
+        "packet_hash_confirmed": false,
+        "raw_path": "reviewers/local-qwen9b.raw.md",
+        "raw_sha256": "c25c99bfb8d74d36a5e1ff0c6a19625bfacbf0bf9ac4579cf5c0db2fbd76ef84"
+      }
+    ]
+  },
+  "supplementary_critic": {
+    "reviewer_id": "prometheus-rubric-critic",
+    "role": "PROBATIONARY_RUBRIC_CRITIC_ONLY",
+    "model": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-4bit",
+    "provider": "local MLX",
+    "runtime": "mlx-lm 0.31.3",
+    "document_input_tokens": 4547,
+    "declared_context_tokens": 32768,
+    "document_score": 3,
+    "compact_control_score": 5,
+    "document_raw_sha256": "85e603cc2efc13f3ffa71af3d21683da6daa7485572b2cde53b7b1da421a8c3e",
+    "compact_raw_sha256": "2de108b8c66a05c7488aa5ae827af2f2458e92e2fc0d758c20e0192f0b2af30a",
+    "translation_schema": "prometheus_result_translation/1",
+    "chair_disposition": "SALIENT_COMPACT_VIEW_REQUIRED_NOT_CONTEXT_WINDOW_EXHAUSTION",
+    "normalized_path": "reviewers/prometheus-rubric-critic.md",
+    "normalized_sha256": "05059332eb360268dc68353f6118957c86b89789611db7d0367b13f4ff6ea912"
+  },
+  "outputs": {
+    "synthesis": {"path": "synthesis.md", "sha256": "9f875d8ce1fca552eff0ec9db50eba30c6beb99f3ba55fe3fa430b096660d2b7"},
+    "claim_ledger": {"path": "claim-ledger.json", "sha256": "ae545969190f9c464a2d6e0e7511104706d02e03f0c055955e62b8fcc02fe700"}
+  },
+  "claim_ceiling": "DOCUMENT_REVIEW_AND_REVISED_DESIGN_ONLY",
+  "runtime_change": "NONE",
+  "task_spine_change": "NONE",
+  "authority_change": "NONE",
+  "implementation_authority": "NOT_GRANTED"
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "dream-house/suggestion-commons-general-council-manifest/1",
+  "council_id": "20260825T184530Z-peer-review-term-shorthand-general",
+  "started_at": "2026-08-25T18:45:30Z",
+  "completed_at": "2026-08-25T19:19:50Z",
+  "status": "SEALED_PARTIAL_COUNCIL_REVISIONS_APPLIED_NOT_IMPLEMENTED",
+  "decision": "REVISE_AND_RETAIN_NO_IMPLEMENTATION",
+  "question": "Should Dream House retain, revise, reject, or defer the light-touch suggestion-commons peer-review design and parallel TERM terminology-repair experiment as design baselines?",
+  "source_identity": {
+    "evidence_packet": {
+      "path": "evidence-packet.md",
+      "sha256": "d337851a4418ad81e9c8d25a95a148aceccf1d8946dc45c35ad0de0ac7674a95",
+      "immutability": "FROZEN"
+    },
+    "external_transport_packet": {
+      "path": "external-wave/transport-packet.md",
+      "sha256": "82de7f743ce3fa383f8ff0ed6c405b94113fbf070a4ce8739237d9f02c1373e8"
+    },
+    "external_transport_manifest": {
+      "path": "external-wave/manifest.json",
+      "sha256": "097972fbc764e6c3eb4aef1f472e099d18e93745d74e6c56b29270dda0c41ecf",
+      "disposition": "PRESERVED_RAW_WITH_CHAIR_CONTRACT_VALIDITY_CORRECTION"
+    },
+    "prior_peer_review_manifest": {
+      "path": "../../peer-review-runs/20260825T184530Z-peer-review-term-shorthand/manifest.json",
+      "sha256": "ba7d6ab7ada39a2d1f0b004f3d8a2d90d8b5d8f43e6cf7ccc30d3a50955f8df0"
+    },
+    "prior_peer_review_synthesis": {
+      "path": "../../peer-review-runs/20260825T184530Z-peer-review-term-shorthand/synthesis.md",
+      "sha256": "9f875d8ce1fca552eff0ec9db50eba30c6beb99f3ba55fe3fa430b096660d2b7"
+    }
+  },
+  "review_accounting": {
+    "requested_routes": 3,
+    "raw_responses": 3,
+    "valid_final_review_contracts": 2,
+    "partial_contract_invalid": 1,
+    "requested_primary_model_failures": 2,
+    "successful_fallbacks": 2,
+    "selected_model_lineages_attempted": 2,
+    "decision_bearing_model_lineages": 1,
+    "providers_with_valid_reviews": 2,
+    "independence_disposition": "MULTI_PROVIDER_BUT_NOT_MULTI_LINEAGE_DECISION_BEARING_REVIEW"
+  },
+  "review_records": [
+    {
+      "reviewer_id": "evidence-auditor",
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "selected_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider": "OpenRouter",
+      "transport_status": "completed_finish_reason_length",
+      "chair_status": "partial_contract_invalid_no_final_review",
+      "parser_correction": "external manifest contract_valid true matched contract headings copied from the prompt, not an emitted final contract",
+      "raw_path": "external-wave/reviewers/evidence-auditor.md",
+      "raw_sha256": "319e9bc5b5a272e7141161245ebf504c229dfdb7bb3daa6d2acabc23cd7ec55b"
+    },
+    {
+      "reviewer_id": "constructive-theorist",
+      "requested_model": "qwen3.8-max",
+      "selected_model": "deepseek-v4-flash",
+      "provider": "OpenCode Go",
+      "primary_status": "failed_http_500",
+      "chair_status": "completed_valid_contract",
+      "verdict": {
+        "peer_review_addendum": "revise",
+        "term_shorthand_experiment": "revise"
+      },
+      "raw_path": "external-wave/reviewers/constructive-theorist.md",
+      "raw_sha256": "52b7a840be77ff80655fb8a68ab141f15c78950bbbce7e2f979c07d59df9296d"
+    },
+    {
+      "reviewer_id": "adversarial-methodologist",
+      "requested_model": "cline-pass/kimi-k2.7-code",
+      "selected_model": "cline-pass/deepseek-v4-flash",
+      "provider": "ClinePass",
+      "primary_status": "failed_http_500_empty_response",
+      "chair_status": "completed_valid_contract",
+      "verdict": {
+        "peer_review_addendum": "accept",
+        "term_shorthand_experiment": "accept"
+      },
+      "raw_path": "external-wave/reviewers/adversarial-methodologist.md",
+      "raw_sha256": "e8d620c01882358359c188607913c3bcbf9945a14ae4e17ae54079de92e9b70f"
+    }
+  ],
+  "live_revisions_after_council": [
+    {
+      "path": "../../SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md",
+      "sha256": "6fa9fe67b197fc398ff9f0fb133f63d211d78c6529d2f12c6aa038b18a2a1acb",
+      "revision": "bind the fifth mandatory-review trigger to a stated constraint in an identified authoritative artifact"
+    },
+    {
+      "path": "../../TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md",
+      "sha256": "6ead787b6adf67b7d17d4cc78b0cff0cf54594e55615d6e9e99f1856b3afafb1",
+      "revision": "align the admission summary with the detailed conjunctive hard gate and comparators"
+    },
+    {
+      "path": "../../SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md",
+      "sha256": "9fb325e63e8b343eab3353d89f71154ad0c11ce2e511d94c5865b1d25916569a",
+      "revision": "unchanged by general council"
+    }
+  ],
+  "outputs": {
+    "synthesis": {
+      "path": "synthesis.md",
+      "sha256": "c70dd13886b9f7e13f8138f595387a25915ed7e72e0deed5043ea4db469522bd"
+    },
+    "claim_ledger": {
+      "path": "claim-ledger.json",
+      "sha256": "7ce60727e6d4ce54e2b37e4389939d1a7493f59fd4eacb1c409e7e60f041a712"
+    },
+    "file_hash_manifest": "FILE_HASHES.sha256"
+  },
+  "claim_ceiling": "DOCUMENT_REVIEW_SYNTHESIS_AND_CORRECTED_DESIGN_ONLY",
+  "runtime_change": "NONE",
+  "task_spine_change": "NONE",
+  "authority_change": "NONE",
+  "implementation_authority": "NOT_GRANTED",
+  "experiment_authority": "NOT_GRANTED"
+}

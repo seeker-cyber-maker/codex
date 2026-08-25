@@ -1,0 +1,83 @@
+{
+  "schema": "dream-house/peer-review-claim-ledger/1",
+  "peer_review_id": "20260825T184530Z-peer-review-term-shorthand",
+  "claims": [
+    {
+      "claim_id": "P-001",
+      "claim": "Public conversation, same-provider peer review, and multi-provider council are distinct and non-automatic surfaces.",
+      "status": "corroborated",
+      "evidence": ["reviewed-artifacts/SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md"],
+      "supporters": ["luna", "terra", "sol", "local-qwen9b"],
+      "objectors": [],
+      "shared_dependencies": ["same-packet"],
+      "decision_impact": "high",
+      "next_test": "none before implementation"
+    },
+    {
+      "claim_id": "P-002",
+      "claim": "The reviewed peer-review draft needed an ordered evidence-manifest digest and machine-checkable wrapper receipt.",
+      "status": "corroborated",
+      "evidence": ["reviewers/luna.md", "reviewers/sol.md"],
+      "supporters": ["luna", "sol"],
+      "objectors": [],
+      "shared_dependencies": ["same-provider-openai"],
+      "decision_impact": "high",
+      "next_test": "validate the future receipt schema before implementation"
+    },
+    {
+      "claim_id": "P-003",
+      "claim": "Marker-only TERM? can signal a repair need but cannot recover omitted meaning, exclusion, or scope.",
+      "status": "corroborated",
+      "evidence": ["reviewers/terra.md", "reviewers/sol.md"],
+      "supporters": ["terra", "sol"],
+      "objectors": [],
+      "shared_dependencies": ["same-provider-openai"],
+      "decision_impact": "high",
+      "next_test": "one sealed paired compaction fixture"
+    },
+    {
+      "claim_id": "P-004",
+      "claim": "TERM shorthand is superior to ordinary readable repair across fresh models and compaction.",
+      "status": "unknown",
+      "evidence": ["reviewed-artifacts/TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md"],
+      "supporters": [],
+      "objectors": ["local-qwen9b"],
+      "shared_dependencies": ["no-experiment-run"],
+      "decision_impact": "high",
+      "next_test": "paired readable-versus-shorthand micro-matrix with ties favoring prose"
+    },
+    {
+      "claim_id": "P-005",
+      "claim": "One consultation plus an optional single dirty-triggered recheck bounds query churn.",
+      "status": "plausible",
+      "evidence": ["reviewed-artifacts/SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md", "reviewers/luna.md", "reviewers/terra.md", "reviewers/sol.md"],
+      "supporters": ["luna", "terra", "sol"],
+      "objectors": [],
+      "shared_dependencies": ["document-only-policy"],
+      "decision_impact": "medium",
+      "next_test": "unchanged, irrelevant-dirty, relevant-dirty, and no-refresh receipt fixtures"
+    },
+    {
+      "claim_id": "P-006",
+      "claim": "The local peer interface is already reliable for both selected local models.",
+      "status": "contradicted",
+      "evidence": ["attempts/local-lfm-attempt-1.md", "attempts/local-lfm-attempt-2.raw.md", "reviewers/local-qwen9b.raw.md"],
+      "supporters": [],
+      "objectors": ["local-lfm", "local-qwen9b-partial"],
+      "shared_dependencies": ["mlx-0.31.3", "same-long-packet"],
+      "decision_impact": "medium",
+      "next_test": "compact model-compatible view with wrapper-owned receipt fields"
+    },
+    {
+      "claim_id": "P-007",
+      "claim": "Prometheus's false missing-control findings were caused by exhausting its 32768-token context window.",
+      "status": "contradicted",
+      "evidence": ["reviewers/prometheus-rubric-critic.md", "attempts/prometheus-full.raw.txt", "attempts/prometheus-compact.raw.txt"],
+      "supporters": [],
+      "objectors": ["token-count-control", "compact-control"],
+      "shared_dependencies": ["same-model", "presentation-changed"],
+      "decision_impact": "medium",
+      "next_test": "vary document organization at fixed token count if causal attribution is needed"
+    }
+  ]
+}

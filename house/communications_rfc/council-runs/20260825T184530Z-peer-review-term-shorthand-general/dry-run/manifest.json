@@ -1,0 +1,104 @@
+{
+  "council_id": "dry-run",
+  "mode": "independent-review",
+  "profile": "cross-family-strong",
+  "task_mode": "review",
+  "transport_packet_sha256": "82de7f743ce3fa383f8ff0ed6c405b94113fbf070a4ce8739237d9f02c1373e8",
+  "privacy": "cloud-ok",
+  "source_artifacts": [
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/council-runs/20260825T184530Z-peer-review-term-shorthand-general/evidence-packet.md",
+      "sha256": "d337851a4418ad81e9c8d25a95a148aceccf1d8946dc45c35ad0de0ac7674a95"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/SUGGESTION_COMMONS_PEER_REVIEW_ADDENDUM.md",
+      "sha256": "ef189bf6fcf3212c2f6cd6e6bb18481ac11033ce6aea2fc8e987abc68c9fd54c"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md",
+      "sha256": "68ff611911123e4076b3e2d99c3ae90741200568d9b308e81758610a615bf3b6"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md",
+      "sha256": "9fb325e63e8b343eab3353d89f71154ad0c11ce2e511d94c5865b1d25916569a"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/SUGGESTION_COMMONS_SOCIAL_FAILURES_ADDENDUM.md",
+      "sha256": "cd3fa46f1dd9824f2445802f4959b190003d5e278d044e9fcb77a017205dbd76"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/A2A_COUNCIL_REVISION_ADDENDUM_V1.md",
+      "sha256": "6d6a44fe2111b6984ff59ab16ad4c75d664d7f89570086f4c60eb473e94f2feb"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/peer-review-runs/20260825T184530Z-peer-review-term-shorthand/manifest.json",
+      "sha256": "ba7d6ab7ada39a2d1f0b004f3d8a2d90d8b5d8f43e6cf7ccc30d3a50955f8df0"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/communications_rfc/peer-review-runs/20260825T184530Z-peer-review-term-shorthand/synthesis.md",
+      "sha256": "9f875d8ce1fca552eff0ec9db50eba30c6beb99f3ba55fe3fa430b096660d2b7"
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "evidence-auditor",
+      "lane": "openrouter-explicit-free",
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "provider": "OpenRouter",
+      "harness": "provider-orchestration explicit-free catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4016/v1",
+      "candidate_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "google/gemma-4-31b-it:free"
+      ],
+      "packet_sha256": "82de7f743ce3fa383f8ff0ed6c405b94113fbf070a4ce8739237d9f02c1373e8",
+      "started_at": "2026-08-25T19:09:47+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T19:09:47+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "constructive-theorist",
+      "lane": "opencode-go",
+      "requested_model": "qwen3.8-max",
+      "provider": "OpenCode Go",
+      "harness": "provider-orchestration OpenCode Go catalog proxy",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4017/v1",
+      "candidate_models": [
+        "qwen3.8-max",
+        "deepseek-v4-flash"
+      ],
+      "packet_sha256": "82de7f743ce3fa383f8ff0ed6c405b94113fbf070a4ce8739237d9f02c1373e8",
+      "started_at": "2026-08-25T19:09:47+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T19:09:47+00:00",
+      "contract_valid": null
+    },
+    {
+      "id": "adversarial-methodologist",
+      "lane": "clinepass",
+      "requested_model": "cline-pass/kimi-k2.7-code",
+      "provider": "ClinePass",
+      "harness": "provider-orchestration ClinePass OpenAI shim",
+      "privacy": "third-party-cloud",
+      "endpoint": "http://127.0.0.1:4014/v1",
+      "candidate_models": [
+        "cline-pass/kimi-k2.7-code",
+        "cline-pass/deepseek-v4-flash"
+      ],
+      "packet_sha256": "82de7f743ce3fa383f8ff0ed6c405b94113fbf070a4ce8739237d9f02c1373e8",
+      "started_at": "2026-08-25T19:09:47+00:00",
+      "status": "dry-run",
+      "completed_at": "2026-08-25T19:09:47+00:00",
+      "contract_valid": null
+    }
+  ],
+  "attempted_reviewers": 3,
+  "completed_reviewers": 0,
+  "partial_reviewers": 0,
+  "failed_reviewers": 0,
+  "started_at": "2026-08-25T19:09:47+00:00",
+  "completed_at": "2026-08-25T19:09:47+00:00"
+}
