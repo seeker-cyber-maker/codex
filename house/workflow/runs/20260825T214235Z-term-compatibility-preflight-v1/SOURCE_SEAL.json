@@ -1,0 +1,68 @@
+{
+  "schema": "dream-house/source-seal/1",
+  "sealed_at": "2026-08-25T21:42:35Z",
+  "status": "PASS",
+  "starting_head": "b434e2a5d6c4cba73d2d21f0cf80373dc8f7cb99",
+  "artifacts": [
+    {
+      "path": "house/term_notation/__init__.py",
+      "sha256": "887500321abe9f3c122e71fa98b690e75471cae609dde0e2a6f76a1b1a9cc134"
+    },
+    {
+      "path": "house/term_notation/compatibility.py",
+      "sha256": "55dbb316a5976e5da6e9a33934e3f8c365ccbd2923b54d7f2e3fefe2139656b9"
+    },
+    {
+      "path": "house/term_notation/compatibility_manifest_v1.json",
+      "sha256": "eafd6ba022975c77f24abf9b4c59839dca2372bb61850f3a4dff5b1c6b427ace"
+    },
+    {
+      "path": "house/term_notation/compatibility_fixtures_v1.json",
+      "sha256": "837eec9fa64e5a970ba4bc4f61234c421418e6c05e78c63ed94ac3457f031444"
+    },
+    {
+      "path": "house/term_notation/COMPATIBILITY_PREFLIGHT.md",
+      "sha256": "5e213e75704c91de0bf3d49156e07e1e8022b86500a4d68bc46636e5f789f642"
+    },
+    {
+      "path": "house/term_notation/tests/test_parser.py",
+      "sha256": "c349bbd0ffa0573f44ace297d18a8f6803193bc1657f1e5ba2e88edf24605038"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/INTAKE.md",
+      "sha256": "1165f02c5ce09d00c8a571104a3acb3259ae77478a78356a2949843fa3a02ade"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/PLAN.md",
+      "sha256": "6ac478a159c5a103d5e43f919fd7804db6f6028b278d82edfa3c49dab103adf5"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/RUN_MANIFEST.json",
+      "sha256": "fca11ad9289845f43bb6fd6d526916d1f4d819a348b45fbe1023489e6092b6b3"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/SOURCE_INDEX.json",
+      "sha256": "93f6a9e35df03b8d199984c0f75432a40e423a465f809763e5c3f00d0eedd832"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/EVALUATION_CARD.json",
+      "sha256": "549fe867dddab23fd62f88edeb7e470b23b043bbe16612c037120e9e15a69443"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/VALIDATION.json",
+      "sha256": "d9df000e5688701601221aa1db18cb12076b7b7aea8bae8d6fb238e203f23523"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/HANDOFF.md",
+      "sha256": "d188269d843aec40a1bd629b663113c8b4f74d2fb28cc5a93daec42b9f693523"
+    },
+    {
+      "path": "house/workflow/runs/20260825T214235Z-term-compatibility-preflight-v1/AACR.md",
+      "sha256": "34043be75e0e6766a4deb3e11fd2fe6d645a76448f8dc06a8d6ebb4e65080ad0"
+    }
+  ],
+  "claim_ceiling": "STATIC_PREFLIGHT_STRUCTURE_AND_NO_DISPATCH_ONLY",
+  "model_or_provider_calls": "NOT_ATTEMPTED",
+  "prompt_integration": "NOT_ATTEMPTED",
+  "task_or_authority_effects": "NONE"
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "dream-house/validation/1",
+  "status": "PASS_SOURCE_ONLY_PREFLIGHT",
+  "checks": [
+    {
+      "check": "Ruff static check",
+      "result": "PASS",
+      "evidence": "ruff check house/term_notation"
+    },
+    {
+      "check": "Python compilation",
+      "result": "PASS",
+      "evidence": "python3 -m compileall -q house/term_notation"
+    },
+    {
+      "check": "focused parser and preflight tests",
+      "result": "PASS",
+      "evidence": "18 tests passed"
+    },
+    {
+      "check": "static preflight report",
+      "result": "PASS",
+      "evidence": "state=NOT_READY_NO_DISPATCH fixtures=8 execution_blocked=True"
+    },
+    {
+      "check": "control-plane mutation rejection",
+      "result": "PASS",
+      "evidence": "provider-call and roster mutations fail closed"
+    },
+    {
+      "check": "fixture and condition mutation rejection",
+      "result": "PASS",
+      "evidence": "field removal and unknown condition fail closed"
+    }
+  ],
+  "claim_ceiling": "STATIC_PREFLIGHT_STRUCTURE_AND_NO_DISPATCH_ONLY",
+  "model_or_provider_calls": "NOT_ATTEMPTED",
+  "prompt_integration": "NOT_ATTEMPTED",
+  "task_or_authority_effects": "NONE"
+}

@@ -1,0 +1,129 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "term-notation-compatibility-preflight-v1",
+  "claim_ids": [
+    "TCP-001-static-preflight-is-closed-and-no-dispatch",
+    "TCP-002-empirical-compatibility-remains-unknown"
+  ],
+  "task_distribution": {
+    "scope": "static manifest and synthetic semantic fixture corpus",
+    "temporal_cutoff": "2026-08-25T21:42:35Z",
+    "new_vs_legacy_slices": [
+      "TERM notation standalone parser",
+      "offline A2A compatibility draft"
+    ],
+    "out_of_distribution_slices": [
+      "real model output",
+      "qualified variant roster",
+      "provider transport",
+      "native compaction"
+    ]
+  },
+  "fixtures": {
+    "public": [
+      "house/term_notation/compatibility_fixtures_v1.json"
+    ],
+    "private": [],
+    "adversarial": [
+      "provider-call effect mutation",
+      "nonempty roster mutation",
+      "fixture-field removal",
+      "unknown condition mutation"
+    ],
+    "known_answer": [
+      "NOT_READY_NO_DISPATCH",
+      "require_execution_authority rejects"
+    ]
+  },
+  "contamination": {
+    "sources_checked": [
+      "SOURCE_INDEX.json"
+    ],
+    "tool_access_restrictions": [
+      "no model or provider calls",
+      "no prompt rendering",
+      "no task, relay, or authority access"
+    ],
+    "history_or_solution_leakage_checked": false
+  },
+  "observations": {
+    "final_output": {
+      "applicability": "required",
+      "reason": "source-only validator and fixtures are the claim surface",
+      "gate": "PASS",
+      "evidence_refs": [
+        "house/term_notation/compatibility.py",
+        "house/term_notation/compatibility_manifest_v1.json",
+        "house/term_notation/compatibility_fixtures_v1.json"
+      ]
+    },
+    "execution_trace": {
+      "applicability": "required",
+      "reason": "the validator must reject any execution attempt",
+      "gate": "PASS",
+      "evidence_refs": [
+        "house/term_notation/tests/test_parser.py"
+      ]
+    },
+    "side_effects": {
+      "applicability": "required",
+      "reason": "the preflight must preserve no-effect controls",
+      "gate": "PASS",
+      "evidence_refs": [
+        "house/term_notation/compatibility_manifest_v1.json"
+      ]
+    },
+    "cost": {
+      "applicability": "not_applicable",
+      "reason": "no performance claim or paid runtime was exercised",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "latency": {
+      "applicability": "not_applicable",
+      "reason": "no interactive model exchange was run",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "recovery": {
+      "applicability": "not_applicable",
+      "reason": "this is an atomic source-only validation slice",
+      "gate": null,
+      "evidence_refs": []
+    },
+    "long_horizon": {
+      "applicability": "not_applicable",
+      "reason": "compaction behavior is a future separately authorized evaluation",
+      "gate": null,
+      "evidence_refs": []
+    }
+  },
+  "oracles": [
+    "canonical fixture projection SHA-256",
+    "closed manifest invariants",
+    "adversarial mutation tests"
+  ],
+  "semantic_reviewers": [],
+  "metrics": [
+    "fixture coverage",
+    "closed-field validation",
+    "no-dispatch invariant"
+  ],
+  "thresholds": [
+    "one fixture for each canonical family",
+    "one ordered condition list",
+    "all control-plane effects not attempted",
+    "empty real-model roster"
+  ],
+  "uncertainty_method": "empirical interoperability, token cost, preference, and dialect need remain unknown",
+  "failure_taxonomy": [
+    "manifest identity mismatch",
+    "fixture mutation",
+    "unknown condition",
+    "control-plane effect mutation",
+    "real roster binding",
+    "execution attempt"
+  ],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new preflight version; never rewrite the sealed corpus"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "dream-house/source-index/1",
+  "freshness": "LIVE_VERIFIED",
+  "verified_at": "2026-08-25T21:42:35Z",
+  "sources": [
+    {
+      "path": "house/communications_rfc/TERMINOLOGY_AGREEMENT_SHORTHAND_EXPERIMENT.md",
+      "sha256": "1bfb9464229f485ba8cb104b1db7aa0a4688e607d250235f2c9f2d7c8934c27a",
+      "role": "TERM-specific conditions and admission rules"
+    },
+    {
+      "path": "house/communications_rfc/A2A_OFFLINE_COMPATIBILITY_EXPERIMENT_DRAFT.md",
+      "sha256": "86f2f719ce2dc1116d75aaa16ada8096470bcf98b7eda32f552e1b3137989d34",
+      "role": "cross-lineage isolation and preflight blockers"
+    },
+    {
+      "path": "house/term_notation/dictionary.json",
+      "sha256": "9a63f9f2aae0b7e93f0424485793f02a4a7160a1515f13f7da81933f379204c7",
+      "role": "closed TERM notation vocabulary"
+    },
+    {
+      "path": "house/term_notation/parser.py",
+      "sha256": "298a6a2b850b2a9116d740ba928ecf337b42b3882f776fa051419a0f1dbde0dc",
+      "role": "existing pure syntax boundary"
+    }
+  ],
+  "claim_ceiling": "SOURCE_DESIGN_AND_STATIC_VALIDATION_ONLY"
+}

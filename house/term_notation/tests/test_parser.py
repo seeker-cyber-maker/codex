@@ -1,15 +1,19 @@
 from __future__ import annotations
 
 import ast
+import copy
 import json
 import unittest
 from pathlib import Path
 
 from house.term_notation import (
     NOTATION_ID,
+    CompatibilityPreflightError,
     TermNotationError,
     missing_preference,
     parse_record,
+    require_execution_authority,
+    validate_preflight,
 )
 from house.term_notation.parser import (
     MAX_BLOCK_LINES,
@@ -20,6 +24,16 @@ from house.term_notation.parser import (
 
 
 class TermNotationParserTests(unittest.TestCase):
+    def _compatibility_inputs(self) -> tuple[dict[str, object], dict[str, object]]:
+        root = Path(__file__).parents[1]
+        manifest = json.loads(
+            (root / "compatibility_manifest_v1.json").read_text(encoding="utf-8")
+        )
+        fixtures = json.loads(
+            (root / "compatibility_fixtures_v1.json").read_text(encoding="utf-8")
+        )
+        return manifest, fixtures
+
     def test_parses_casual_repair_query(self) -> None:
         self.assertEqual(
             parse_record("TERM? native language").to_dict(),
@@ -188,6 +202,37 @@ class TermNotationParserTests(unittest.TestCase):
         self.assertTrue(
             {"open", "exec", "eval", "compile", "__import__"}.isdisjoint(called_names)
         )
+
+    def test_compatibility_preflight_is_valid_but_execution_blocked(self) -> None:
+        manifest, fixtures = self._compatibility_inputs()
+        report = validate_preflight(manifest, fixtures)
+        self.assertTrue(report.execution_blocked)
+        self.assertEqual(report.fixture_count, 8)
+        self.assertEqual(report.state, "NOT_READY_NO_DISPATCH")
+        with self.assertRaisesRegex(CompatibilityPreflightError, "no execution authority"):
+            require_execution_authority(manifest, fixtures)
+
+    def test_compatibility_preflight_rejects_effect_or_roster_mutation(self) -> None:
+        manifest, fixtures = self._compatibility_inputs()
+        bad_effect = copy.deepcopy(manifest)
+        bad_effect["effects"]["provider_call"] = "ATTEMPTED"
+        with self.assertRaisesRegex(CompatibilityPreflightError, "not attempted"):
+            validate_preflight(bad_effect, fixtures)
+        bad_roster = copy.deepcopy(manifest)
+        bad_roster["qualified_variant_roster"] = ["opaque-variant-01"]
+        with self.assertRaisesRegex(CompatibilityPreflightError, "cannot bind"):
+            validate_preflight(bad_roster, fixtures)
+
+    def test_compatibility_preflight_rejects_fixture_mutation_or_unknown_condition(self) -> None:
+        manifest, fixtures = self._compatibility_inputs()
+        missing_field = copy.deepcopy(fixtures)
+        del missing_field["fixtures"][0]["scope"]
+        with self.assertRaisesRegex(CompatibilityPreflightError, "closed and exact"):
+            validate_preflight(manifest, missing_field)
+        unknown_condition = copy.deepcopy(manifest)
+        unknown_condition["conditions"].append("LIVE_RELAY")
+        with self.assertRaisesRegex(CompatibilityPreflightError, "canonical ordered"):
+            validate_preflight(unknown_condition, fixtures)
 
 
 if __name__ == "__main__":

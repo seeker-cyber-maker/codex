@@ -1,0 +1,31 @@
+{
+  "schema": "dream-house/term-notation-compatibility-manifest/1",
+  "experiment_id": "term-notation-offline-compatibility-preflight-v1",
+  "state": "NOT_READY_NO_DISPATCH",
+  "execution_authority": "NOT_GRANTED",
+  "fixture_set_schema": "dream-house/term-notation-fixture-set/1",
+  "fixture_projection_sha256": "3f955e764b2272826806751b0e12ecde43427c9be669cbe9da09cd0e5706fd5d",
+  "conditions": [
+    "ORDINARY_UNMARKED",
+    "ORDINARY_READABLE_REPAIR",
+    "TERM_MARKER_ONLY",
+    "TERM_FULL_FORM",
+    "OVERCOMPRESSED_CONTROL"
+  ],
+  "qualified_variant_roster": [],
+  "missing_prerequisites": [
+    "qualified six-variant roster with receipts",
+    "decoding, seed, retry, token, time, cost, and concurrency ceilings",
+    "independent evaluator identities and scoring implementation",
+    "retention and provider-use conditions",
+    "approved execution run manifest",
+    "human authorization to collect model outputs"
+  ],
+  "effects": {
+    "prompt_integration": "NOT_ATTEMPTED",
+    "task_mutation": "NOT_ATTEMPTED",
+    "relay_dispatch": "NOT_ATTEMPTED",
+    "authority_effect": "NOT_ATTEMPTED",
+    "provider_call": "NOT_ATTEMPTED"
+  }
+}
