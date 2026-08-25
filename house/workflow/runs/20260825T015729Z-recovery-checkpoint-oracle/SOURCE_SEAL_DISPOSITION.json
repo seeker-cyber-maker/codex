@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-source-seal-disposition/1",
+  "result": "NOT_PROMOTED_NEEDS_REVIEW",
+  "accepted_fixture_sha256": null,
+  "candidate_fixture_sha256": "0d52a694cf3e5c681c40faee2ff577fc8ac07c01222c59c6722c0a14ecedc25e",
+  "candidate_verifier_v2_sha256": "45f5bdd09c782141dbb8cc4c338dba70cc7ee0dbff96ca6bd4e30ead98da3add",
+  "reason": "fixed discriminator and exact directory-entry-type closure remain incomplete after the sealed council budget",
+  "production_import_allowed": false,
+  "s1_allowed": false
+}

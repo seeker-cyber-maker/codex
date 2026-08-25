@@ -1,0 +1,15 @@
+{
+  "schema": "codex-house-recovery-checkpoint-independent-verification/1",
+  "result": "PASS",
+  "attempts_verified": ["attempt-a", "attempt-b"],
+  "fixture_sha256": "0d52a694cf3e5c681c40faee2ff577fc8ac07c01222c59c6722c0a14ecedc25e",
+  "assertion_sha256": "94caf0b9b70ee5e3e1ec325b2a5c7400f211fc7b5ea345c6548b011d8684e97c",
+  "recovery_key_id": "p256:a43860b944d0517ba1b225aab01b5e4c93d1694a800247b986ffaf08e73f4928",
+  "receipt_sha256": "7222f1e7ba1e1b314b8e2620e9405f4fa2df629e7d4389939db7749b918ccf9f",
+  "verifier_sha256": "3a96a44f5d7e61b19217ddf04655f6ed619bf826793ba0194f8d8b6a8ad7d75a",
+  "imports_house_modules": false,
+  "authority": "NOT_GRANTED",
+  "real_key_material": "NOT_ACCESSED",
+  "hardware": "NOT_ACCESSED",
+  "recovery_readiness": "NOT_ESTABLISHED"
+}

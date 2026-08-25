@@ -1,0 +1,39 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "recovery-checkpoint-public-oracle-f1-v1",
+  "claim_ids": ["FROZEN_PUBLIC_SYNTHETIC_CHECKPOINT_ORACLE_BYTES_INDEPENDENTLY_VERIFIED"],
+  "task_distribution": {
+    "scope": "one deterministic synthetic P-256 recovery-checkpoint positive oracle",
+    "temporal_cutoff": "2026-08-25T01:57:29Z",
+    "new_vs_legacy_slices": ["new F1 fixture", "sealed Stage-0 donor hashes", "accepted V2 schema"],
+    "out_of_distribution_slices": ["real recovery key", "hardware signature", "protected/latest checkpoint", "production verifier"]
+  },
+  "fixtures": {
+    "public": ["complete generated positive fixture and synthetic test scalar"],
+    "private": [],
+    "adversarial": ["candidate-generated oracle", "partial-envelope hash", "high-S", "cross-object splice", "fixture-key authority confusion"],
+    "known_answer": ["two independent generated output trees must match byte-for-byte", "cryptography and OpenSSL must verify the same frozen signature"]
+  },
+  "contamination": {
+    "sources_checked": ["accepted PLAN_V2", "Stage-0 pure signing donor", "cryptography public verifier", "OpenSSL public verifier"],
+    "tool_access_restrictions": ["no production imports in independent verifier", "no real key, hardware, database, clock, network, runtime, or dispatch"],
+    "history_or_solution_leakage_checked": true
+  },
+  "observations": {
+    "final_output": {"applicability": "required", "reason": "fixture bytes and receipt are the claim surface", "gate": null, "evidence_refs": []},
+    "execution_trace": {"applicability": "required", "reason": "generator and two verifier paths execute locally", "gate": null, "evidence_refs": []},
+    "side_effects": {"applicability": "required", "reason": "writes must remain inside the run directory and touch no real key or service", "gate": null, "evidence_refs": []},
+    "cost": {"applicability": "required", "reason": "two bounded generator attempts and finite verification", "gate": null, "evidence_refs": []},
+    "latency": {"applicability": "not_applicable", "reason": "no interactive runtime claim", "gate": null, "evidence_refs": []},
+    "recovery": {"applicability": "required", "reason": "a failed attempt leaves isolated output and does not overwrite accepted evidence", "gate": null, "evidence_refs": []},
+    "long_horizon": {"applicability": "not_applicable", "reason": "finite local F1 operation", "gate": null, "evidence_refs": []}
+  },
+  "oracles": ["byte-identical A/B outputs", "independent cryptography verifier", "OpenSSL signature verification", "whole-object receipt comparison"],
+  "semantic_reviewers": ["three local same-provider read-only council roles"],
+  "metrics": ["determinism", "canonical-byte completeness", "cryptographic agreement", "scope containment", "claim honesty"],
+  "thresholds": ["all claimed artifacts identical", "both verifier paths pass", "zero forbidden effects", "blocking council acceptance"],
+  "uncertainty_method": "separate observations, inferences, unsupported claims, and dissent",
+  "failure_taxonomy": ["nondeterminism", "signature disagreement", "schema mismatch", "oracle contamination", "authority inflation", "scope violation"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "retain failed attempt and add a versioned bounded remediation"
+}

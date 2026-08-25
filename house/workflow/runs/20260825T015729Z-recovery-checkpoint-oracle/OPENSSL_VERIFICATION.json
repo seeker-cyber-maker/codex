@@ -1,0 +1,12 @@
+{
+  "schema": "codex-house-recovery-checkpoint-openssl-verification/1",
+  "result": "PASS",
+  "stdout": "Verified OK",
+  "openssl_version": "OpenSSL 3.5.6 7 Apr 2026",
+  "public_spki_der_sha256": "a43860b944d0517ba1b225aab01b5e4c93d1694a800247b986ffaf08e73f4928",
+  "public_spki_pem_sha256": "305ed13aa190e44fc7e911da34542d2ae2b781dd94bd5550df79285275aef96a",
+  "signature_der_sha256": "432f143c5d72fe472c07539ea54aa6428a5ae3253990e4ba983ce3cc3daeef04",
+  "signed_input_sha256": "6ddbf82af8704c06e90cd117d9c98418054eb3288cbb621f03d4f8b148b25d02",
+  "private_key_input": "NONE",
+  "hardware": "NOT_ACCESSED"
+}

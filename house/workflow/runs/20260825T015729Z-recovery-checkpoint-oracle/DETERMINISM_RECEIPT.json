@@ -1,0 +1,14 @@
+{
+  "schema": "codex-house-recovery-checkpoint-determinism-receipt/1",
+  "result": "PASS_BYTE_IDENTICAL",
+  "comparison": "recursive file-name and byte comparison",
+  "attempt_a": "attempt-a",
+  "attempt_b": "attempt-b",
+  "files_compared": 10,
+  "differences": 0,
+  "generator_sha256": "75e498b11e6846cd06d7a168af3f481a833fef2c36139d374de0ea83ab16eef1",
+  "fixture_sha256": "0d52a694cf3e5c681c40faee2ff577fc8ac07c01222c59c6722c0a14ecedc25e",
+  "synthetic_test_scalar_access": "GENERATOR_ONLY_PUBLIC_TEST_EVIDENCE",
+  "real_key_material": "NOT_ACCESSED",
+  "hardware": "NOT_ACCESSED"
+}

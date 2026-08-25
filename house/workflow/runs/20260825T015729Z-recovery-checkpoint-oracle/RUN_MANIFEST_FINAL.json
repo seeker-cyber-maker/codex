@@ -1,0 +1,31 @@
+{
+  "schema": "dream-house-run-manifest-final/1",
+  "run_id": "20260825T015729Z-recovery-checkpoint-oracle",
+  "starting_head": "d8bd11e8ed9f12c0de9abbd1ca7ea3698cecd324",
+  "status": "NEEDS_REVIEW_COUNCIL_BUDGET_EXHAUSTED",
+  "task_graph": [
+    {"id": "F1P", "state": "COMPLETE"},
+    {"id": "F1G", "state": "COMPLETE_CANDIDATE_ONLY"},
+    {"id": "F1V", "state": "INCOMPLETE_FIXED_VALUE_AND_PATH_TYPE_CLOSURE"},
+    {"id": "F1C", "state": "COMPLETE_NO_ACCEPTANCE"},
+    {"id": "F1A", "state": "NEEDS_REVIEW"},
+    {"id": "S1", "state": "NOT_AUTHORIZED"}
+  ],
+  "budgets_used": {
+    "generator_output_trees": 2,
+    "pre_generation_failures": 1,
+    "independent_verifier_v1_runs": 2,
+    "independent_verifier_v2_runs": 2,
+    "openssl_verifier_runs": 1,
+    "council_rounds": 2
+  },
+  "next_gate": "user continuation authorizing plan delta 3 and one final council round",
+  "routing_advisory": {
+    "next_phase": "mechanical fixed-value and filesystem-entry closure",
+    "recommended_model": "Codex Terra",
+    "recommended_effort": "high",
+    "reason": "the remaining delta is bounded implementation against exact literals, followed by Sol review",
+    "blocking": false,
+    "reassess_trigger": "before final promotion council"
+  }
+}

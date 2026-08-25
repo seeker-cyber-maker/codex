@@ -1,0 +1,19 @@
+{
+  "schema": "codex-house-f1-validation/1",
+  "result": "NEEDS_REVIEW",
+  "claim": "FROZEN_PUBLIC_SYNTHETIC_CHECKPOINT_ORACLE_BYTES_INDEPENDENTLY_VERIFIED",
+  "determinism": "PASS",
+  "cryptography_public_verifier": "PASS",
+  "openssl_public_verifier": "PASS",
+  "duplicate_key_and_field_set_closure": "PASS_V2",
+  "fixed_discriminator_closure": "FAIL_INCOMPLETE",
+  "exact_directory_entry_type_closure": "FAIL_INCOMPLETE",
+  "council_rounds_used": 2,
+  "council_rounds_budget": 2,
+  "source_promotion": "NOT_GRANTED",
+  "s1_authority": "NOT_GRANTED",
+  "real_key_material": "NOT_ACCESSED",
+  "hardware": "NOT_ACCESSED",
+  "recovery_readiness": "NOT_ESTABLISHED",
+  "next_gate": "USER_CONTINUATION_FOR_PLAN_DELTA_3_AND_ONE_FINAL_COUNCIL_ROUND"
+}

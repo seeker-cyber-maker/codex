@@ -1,0 +1,19 @@
+{
+  "schema": "project-evaluation-result/2",
+  "evaluation_id": "recovery-checkpoint-public-oracle-f1-v1",
+  "supersedes": "EVALUATION_RESULT.json",
+  "result": "PASS_PENDING_FINAL_COUNCIL",
+  "claim_ceiling": "FROZEN_PUBLIC_SYNTHETIC_CHECKPOINT_ORACLE_BYTES_INDEPENDENTLY_VERIFIED",
+  "observations": {
+    "final_output": {"gate": "PASS", "evidence_refs": ["attempt-a/fixture.json", "ARTIFACT_HASHES.json"]},
+    "execution_trace": {"gate": "PASS_WITH_RETAINED_FAILURE_AND_REMEDIATION", "evidence_refs": ["EXECUTION_FAILURE_1.json", "PLAN_DELTA_1.md", "PLAN_DELTA_2.md", "INDEPENDENT_VERIFICATION_V2.json", "SCHEMA_CLOSURE_PROBE.json", "OPENSSL_VERIFICATION.json"]},
+    "side_effects": {"gate": "PASS", "evidence_refs": ["DETERMINISM_RECEIPT.json", "SOURCE_FREEZE_V2.json"]},
+    "cost": {"gate": "PASS", "evidence_refs": ["RUN_MANIFEST.json", "PLAN_DELTA_1.md", "PLAN_DELTA_2.md"]},
+    "recovery": {"gate": "PASS", "evidence_refs": ["EXECUTION_FAILURE_1.json"]}
+  },
+  "production_source_edits": 0,
+  "fixture_outputs_changed_after_round_one": false,
+  "real_key_or_hardware_operations": 0,
+  "trusted_latest_protected_or_ready_claim": false,
+  "next_gate": "F1_FIXTURE_COUNCIL_ROUND_2"
+}

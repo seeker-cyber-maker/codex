@@ -1,0 +1,55 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260825T015729Z-recovery-checkpoint-oracle",
+  "starting_head": "d8bd11e8ed9f12c0de9abbd1ca7ea3698cecd324",
+  "profile": "full",
+  "case_type": "security_containment",
+  "authority": "USER_DOT_CONTINUATION_TO_RECORDED_F1_MILESTONE",
+  "write_scope": ["house/workflow/runs/20260825T015729Z-recovery-checkpoint-oracle"],
+  "status": "F1_PLAN_SEALED_READY",
+  "routing_advisory": {
+    "next_phase": "independent cryptographic fixture generation and verification",
+    "current_model": "UNKNOWN",
+    "recommended_model": "Codex Sol",
+    "recommended_effort": "high",
+    "reason": "canonical cryptographic evidence must not share a vacuous oracle with the future candidate",
+    "blocking": false,
+    "user_disposition": "CONTINUED",
+    "reassess_trigger": "before F1 council disposition"
+  },
+  "budgets": {
+    "generator_attempts": 2,
+    "independent_verifier_runs": 2,
+    "openssl_verifier_runs": 1,
+    "council_rounds": 2,
+    "network_requests_before_backup": 0,
+    "real_key_or_hardware_operations": 0
+  },
+  "task_graph": [
+    {"id": "F1P", "depends_on": [], "state": "COMPLETE"},
+    {"id": "F1G", "depends_on": ["F1P"], "state": "READY"},
+    {"id": "F1V", "depends_on": ["F1G"], "state": "NOT_READY"},
+    {"id": "F1C", "depends_on": ["F1V"], "state": "NOT_READY"},
+    {"id": "F1A", "depends_on": ["F1C"], "state": "NOT_READY"},
+    {"id": "S1", "depends_on": ["F1A"], "state": "NOT_AUTHORIZED"}
+  ],
+  "council_checkpoints": [{
+    "checkpoint_id": "F1_FIXTURE_COUNCIL",
+    "trigger": "after exact generator, verifier, fixture, determinism, and OpenSSL receipts are hash-frozen",
+    "blocking": true,
+    "decision_question": "Is the public oracle deterministic, independently verifiable, complete, and honestly non-authoritative?",
+    "privacy": "local public synthetic evidence only",
+    "provider_model_lanes": "three local same-provider Codex roles",
+    "cost_ceiling": "no external provider or network",
+    "response_deadline": null,
+    "required_root_disposition": "ACCEPT_F1_ONLY, bounded remediation, or NEEDS_REVIEW",
+    "maximum_staleness": "before any S1 source edit"
+  }],
+  "forbidden": [
+    "production source or test edit",
+    "real private key, YubiKey, Keychain, certificate, or signing",
+    "database, clock-derived semantic field, network, runtime, provider, worker, or dispatch",
+    "trusted/latest/protected/recovery-ready claim"
+  ],
+  "next_gate": "F1G deterministic synthetic evidence generation"
+}

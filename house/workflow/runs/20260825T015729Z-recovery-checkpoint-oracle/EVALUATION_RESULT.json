@@ -1,0 +1,17 @@
+{
+  "schema": "project-evaluation-result/1",
+  "evaluation_id": "recovery-checkpoint-public-oracle-f1-v1",
+  "result": "PASS_PENDING_COUNCIL",
+  "claim_ceiling": "FROZEN_PUBLIC_SYNTHETIC_CHECKPOINT_ORACLE_BYTES_INDEPENDENTLY_VERIFIED",
+  "observations": {
+    "final_output": {"gate": "PASS", "evidence_refs": ["attempt-a/fixture.json", "ARTIFACT_HASHES.json"]},
+    "execution_trace": {"gate": "PASS_WITH_RETAINED_PRE_GENERATION_FAILURE", "evidence_refs": ["EXECUTION_FAILURE_1.json", "PLAN_DELTA_1.md", "INDEPENDENT_VERIFICATION.json", "OPENSSL_VERIFICATION.json"]},
+    "side_effects": {"gate": "PASS", "evidence_refs": ["DETERMINISM_RECEIPT.json", "SOURCE_FREEZE.json"]},
+    "cost": {"gate": "PASS", "evidence_refs": ["RUN_MANIFEST.json", "PLAN_DELTA_1.md"]},
+    "recovery": {"gate": "PASS", "evidence_refs": ["EXECUTION_FAILURE_1.json"]}
+  },
+  "production_source_edits": 0,
+  "real_key_or_hardware_operations": 0,
+  "trusted_latest_protected_or_ready_claim": false,
+  "next_gate": "F1_FIXTURE_COUNCIL"
+}

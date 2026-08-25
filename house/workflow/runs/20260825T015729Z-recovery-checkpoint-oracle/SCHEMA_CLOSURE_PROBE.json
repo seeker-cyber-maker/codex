@@ -1,0 +1,10 @@
+{
+  "schema": "codex-house-f1-schema-closure-probe/1",
+  "result": "PASS",
+  "mutation": "add unknown_probe_field to top-level fixture in an isolated temporary copy",
+  "v1_result": "PASS",
+  "v2_result": "REJECTED",
+  "v2_error": "fixture fields differ: missing=[], unknown=['unknown_probe_field']",
+  "workspace_fixture_modified": false,
+  "temporary_copy_retained": false
+}

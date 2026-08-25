@@ -1,0 +1,16 @@
+{
+  "schema": "codex-house-recovery-checkpoint-oracle-artifact-hashes/1",
+  "attempts_byte_identical": true,
+  "artifacts": {
+    "artifact_manifest.json": "fbc9f03f38c421b3f83f669fd0c64bdfaee6b211ddec6cd90dc6f3c7cc2a3620",
+    "expected_descriptor.canonical.json": "084c471a3cf28d7d05a8e4754b4522ac926be79cd6c6fd0c5c2e22d26a8c1cae",
+    "expected_receipt.canonical.json": "9a2ff54926ec16e7171181bfada1dc8eb63adf2ffe31a4d7fafd608ca9c2f7ba",
+    "fixture.json": "0d52a694cf3e5c681c40faee2ff577fc8ac07c01222c59c6722c0a14ecedc25e",
+    "ledger_summary.canonical.json": "19c259253d1d33a4696126d8a2f3e4d1430d5f20ec1681a947626b7f716d865b",
+    "public_spki.der": "a43860b944d0517ba1b225aab01b5e4c93d1694a800247b986ffaf08e73f4928",
+    "public_test_key_disclosure.json": "788b5e48d55e76fd5fc055ad55cf5d7c36da11a932db2de60582656109e4429a",
+    "signature.der": "432f143c5d72fe472c07539ea54aa6428a5ae3253990e4ba983ce3cc3daeef04",
+    "signed_checkpoint_envelope.canonical.json": "94caf0b9b70ee5e3e1ec325b2a5c7400f211fc7b5ea345c6548b011d8684e97c",
+    "unsigned_checkpoint.canonical.json": "6ddbf82af8704c06e90cd117d9c98418054eb3288cbb621f03d4f8b148b25d02"
+  }
+}

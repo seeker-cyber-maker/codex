@@ -1,0 +1,15 @@
+{
+  "schema": "codex-house-f1-execution-failure/1",
+  "phase": "pre_generation_import",
+  "result": "FAILED_NO_OUTPUT",
+  "error_type": "ModuleNotFoundError",
+  "error_detail": "direct script execution did not place repository root on sys.path for the sealed house.authority_stage0.p256 donor import",
+  "attempt_a_created": false,
+  "attempt_b_created": false,
+  "synthetic_private_scalar_derived": false,
+  "real_key_material": "NOT_ACCESSED",
+  "hardware": "NOT_ACCESSED",
+  "database": "NOT_ACCESSED",
+  "network": "NOT_ACCESSED",
+  "root_disposition": "ONE_BOUNDED_INVOCATION_DELTA"
+}
