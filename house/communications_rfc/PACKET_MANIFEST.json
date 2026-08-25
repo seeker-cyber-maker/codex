@@ -20,6 +20,21 @@
       "path": "KNOWN_AGENT_REGISTERS_AND_DIALECTS.md",
       "sha256": "113deebde14f53a469b921aaba4dcdd7862294c5eacbfd15548e24ae93b4a3ae",
       "status": "REFERENCE_LEXICON_NOT_A_STANDARD"
+    },
+    {
+      "path": "A2A_COUNCIL_REVISION_ADDENDUM_V1.md",
+      "sha256": "6d6a44fe2111b6984ff59ab16ad4c75d664d7f89570086f4c60eb473e94f2feb",
+      "status": "DRAFT_POST_COUNCIL_REVISION_NOT_IMPLEMENTED"
+    },
+    {
+      "path": "A2A_OFFLINE_COMPATIBILITY_EXPERIMENT_DRAFT.md",
+      "sha256": "86f2f719ce2dc1116d75aaa16ada8096470bcf98b7eda32f552e1b3137989d34",
+      "status": "PRE_FLIGHT_DRAFT_NO_DISPATCH_AUTHORITY"
+    },
+    {
+      "path": "A2A_EXPERIMENT_PRE_FLIGHT_STATUS.json",
+      "sha256": "071ed340dec1553f0cdef0c2fed32f322bd5e84790bcddc610d6fad4cb9e99a4",
+      "status": "NOT_READY_NO_DISPATCH"
     }
   ],
   "source_drafts": [

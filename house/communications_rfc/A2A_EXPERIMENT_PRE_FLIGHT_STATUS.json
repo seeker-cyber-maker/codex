@@ -1,0 +1,44 @@
+{
+  "schema": "dream-house/a2a-offline-compatibility-preflight/1",
+  "status": "NOT_READY_NO_DISPATCH",
+  "authority": {
+    "runtime_change": "NONE",
+    "task_spine_change": "NONE",
+    "provider_dispatch": "FORBIDDEN",
+    "model_execution": "FORBIDDEN",
+    "implementation_authority": "NOT_GRANTED"
+  },
+  "decision_question": "Does one minimal common model-facing coordination profile satisfy the frozen cross-lineage compatibility gates, or does a bounded dialect adapter become necessary?",
+  "sources": [
+    {
+      "path": "A2A_COUNCIL_REVISION_ADDENDUM_V1.md",
+      "sha256": "6d6a44fe2111b6984ff59ab16ad4c75d664d7f89570086f4c60eb473e94f2feb"
+    },
+    {
+      "path": "A2A_OFFLINE_COMPATIBILITY_EXPERIMENT_DRAFT.md",
+      "sha256": "86f2f719ce2dc1116d75aaa16ada8096470bcf98b7eda32f552e1b3137989d34"
+    },
+    {
+      "path": "council-runs/20260825T171154Z-extended-native-register-review/synthesis.md",
+      "sha256": "963aca4cc5318b6ca4e2ea3b46ab92cd246a91f415db67a4712fbd27eb5e6f9c"
+    }
+  ],
+  "case_type": "model_evaluation",
+  "model_advisory": {
+    "planning_phase": "sealed-document review",
+    "recommended_class": "Sol",
+    "recommended_effort": "medium",
+    "reason": "The remaining work is an evidence and evaluation-contract synthesis; no model route is selected for execution.",
+    "reassess_at": "after exact roster, evaluator, and budget are accepted"
+  },
+  "required_before_execution": [
+    "exact six-variant roster with qualification receipts",
+    "fixture corpus and hash-sealed ground truth",
+    "deterministic scorer and forbidden-effect checker",
+    "decoding, seed, retry, token, time, cost, and concurrency caps",
+    "evaluator-independence and blinded-scoring plan",
+    "retention, privacy, provider-use, stop, incident, and finalization rules"
+  ],
+  "next_permitted_action": "review and accept or revise the pre-flight design documents",
+  "next_forbidden_action": "dispatch, provider call, local model run, task mutation, or live relay integration"
+}
