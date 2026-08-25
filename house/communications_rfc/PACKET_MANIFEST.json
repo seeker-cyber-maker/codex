@@ -38,7 +38,7 @@
     },
     {
       "path": "SUGGESTION_REPOSITORY_BOUNDARY_DRAFT.md",
-      "sha256": "8e1a53330e4372d916fbc4ed2288e38a0ed55c8d7c45562acca915e9e8d26a4c",
+      "sha256": "acc2f2c25f7c224ba1c8cb8bc445c490db46ce5f72016e476aabf5f969ce3b63",
       "status": "DRAFT_SECURITY_DESIGN_NOT_IMPLEMENTED"
     }
   ],

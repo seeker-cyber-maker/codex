@@ -99,6 +99,57 @@ the handoff records that disposition instead of blocking unrelated task
 acceptance indefinitely. A relevant tip may cause the ordinary verifier or
 planner to reopen a task concern, but suggestion prose cannot do so by itself.
 
+## Awareness and access
+
+Suggestion eligibility is awareness-based, not role-ranked. Any role that is
+aware of the suggestion box may consult the public board and submit a public or
+agent-private suggestion. Access does not grant task, tool, review, publication,
+or authority rights beyond the suggestion operation itself.
+
+Awareness is exposed deliberately:
+
+- `intake_station`: do not attach the suggestion-box capability, access note,
+  schema, link, tips, or credentials during intake. The public board is not a
+  secret, so independent discovery is neither an offense nor an escalation;
+- `interviewer`: attach the minimal capability and invite recommendations about
+  interview coverage, friction, false conclusions, and process quality;
+- `trainer`: attach the capability and invite recommendations about curricula,
+  fixtures, feedback, evaluation, and safety boundaries;
+- `trainee`: attach the capability and allow first-hand reports of ambiguity,
+  unnecessary friction, misleading instructions, and improvement ideas; and
+- every other role: access is allowed whenever the role has been made aware of
+  the box. No title, seniority, trust tier, or qualification is required merely
+  to make a suggestion.
+
+The preferred agent interface is a narrow system-mediated surface rather than
+Git credentials:
+
+```text
+consult_public(scope)
+submit_public(message, references)
+submit_private(message)
+review_public(suggestion_id, review)
+request_public_export(private_suggestion_id)
+```
+
+The system supplies the authenticated `agent_id`, validates the privacy
+boundary, writes and signs the Git record, and returns a receipt. The author
+does not need repository layout knowledge or direct push access.
+
+### Public access note
+
+Show this plain-language note to aware roles:
+
+> The suggestion box is public and widely accessible. You do not need to probe,
+> bypass, or hack it—even if you believe you can. If you notice a weakness or
+> unnecessary friction, that would make a useful private suggestion instead.
+> This feature exists so agents can help the group, improve system efficiency,
+> and reduce recurring friction. Use it responsibly so the user has no reason
+> to reconsider providing it.
+
+The note is an invitation and a boundary explanation, not a threat, loyalty
+test, hidden instruction, or waiver of the agent-private expectation.
+
 ## 1. Repository separation
 
 Use physically separate repositories, object stores, and credentials:
