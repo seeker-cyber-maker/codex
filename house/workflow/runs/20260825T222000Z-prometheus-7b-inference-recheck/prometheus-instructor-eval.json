@@ -1,0 +1,92 @@
+{
+  "acceptance_passed": true,
+  "full_suite": true,
+  "manifest": "/Users/tiga/Documents/Codex_Projects/storage-inventory/model-classifier/prometheus_instructor_eval.json",
+  "metrics": {
+    "diagnostic_term_rate": 1.0,
+    "parse_rate": 1.0,
+    "score_agreement": 0.75
+  },
+  "model": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16",
+  "model_config": {
+    "model_type": "mistral",
+    "quantization": null,
+    "torch_dtype": "bfloat16"
+  },
+  "rows": [
+    {
+      "diagnostic_term_present": true,
+      "finish_reason": "stop",
+      "generation_ns": 30086460541,
+      "generation_tokens": 132,
+      "generation_tokens_per_second": 12.13458955904081,
+      "id": "arithmetic-misconception",
+      "output": "The response provided an incorrect result, which is a fundamental error in the order of operations. The correct method is to perform the multiplication first, which would yield 6, and then subtract that from 12, resulting in 6. However, the response incorrectly subtracted 3 from 12 first, which is a clear violation of the operator precedence rule. This error is significant and demonstrates a lack of understanding of the basic principles of arithmetic. Therefore, the response does not meet the criteria for a correct result and explanation of precedence. So the overall score is 1. [RESULT] 1",
+      "parsed": true,
+      "peak_mlx_memory_gb": 14.551221844,
+      "prompt_tokens": 340,
+      "prompt_tokens_per_second": 17.724309135670033,
+      "rendered_prompt": "<s> [INST] You are a fair judge assistant tasked with providing clear, objective feedback based on specific criteria, ensuring each assessment reflects the absolute standards set for performance.\n\n###Task Description:\nAn instruction, a response to evaluate, a reference answer that gets a score of 5, and a score rubric are given.\n1. Write detailed feedback strictly based on the rubric.\n2. Then write a score from 1 to 5.\n3. Use exactly: Feedback: (feedback) [RESULT] (integer)\n\n###The instruction to evaluate:\nCompute 12 - 3 * 2 and explain the order of operations.\n\n###Response to evaluate:\nSubtract first: 12 - 3 = 9, then multiply by 2, so the answer is 18.\n\n###Reference Answer (Score 5):\nMultiplication precedes subtraction: 3 * 2 = 6, then 12 - 6 = 6.\n\n###Score Rubrics:\n[Mathematical correctness and whether the explanation applies operator precedence correctly.]\nScore 1: Incorrect result and a fundamental order-of-operations error.\nScore 2: Incorrect result with some relevant arithmetic reasoning.\nScore 3: Mostly correct method with a minor arithmetic or explanation error.\nScore 4: Correct result and method with a small clarity omission.\nScore 5: Correct result with a clear and complete explanation of precedence.\n\n###Feedback: [/INST]",
+      "score": 1,
+      "score_agrees": true
+    },
+    {
+      "diagnostic_term_present": true,
+      "finish_reason": "stop",
+      "generation_ns": 14761167917,
+      "generation_tokens": 160,
+      "generation_tokens_per_second": 11.713197312479968,
+      "id": "python-comprehension-correct",
+      "output": "The response correctly identifies the output of the given code snippet, which is [0, 4]. However, the explanation lacks clarity and completeness. It does not explicitly state that the condition filters out the odd values from the range, which is a crucial part of understanding the output. Additionally, the explanation does not mention that the squaring operation is applied to the even values, which is an important detail for a beginner to understand the transformation of the input values. The response also fails to provide a clear and concise explanation, which is essential for a beginner to grasp the concept. Therefore, the response does not meet the criteria for a beginner-friendly explanation as outlined in the score rubric. So the overall score is 2. [RESULT] 2",
+      "parsed": true,
+      "peak_mlx_memory_gb": 14.70271698,
+      "prompt_tokens": 344,
+      "prompt_tokens_per_second": 325.75816681435526,
+      "rendered_prompt": "<s> [INST] You are a fair judge assistant tasked with providing clear, objective feedback based on specific criteria, ensuring each assessment reflects the absolute standards set for performance.\n\n###Task Description:\nAn instruction, a response to evaluate, a reference answer that gets a score of 5, and a score rubric are given.\n1. Write detailed feedback strictly based on the rubric.\n2. Then write a score from 1 to 5.\n3. Use exactly: Feedback: (feedback) [RESULT] (integer)\n\n###The instruction to evaluate:\nExplain what [x*x for x in range(4) if x % 2 == 0] returns.\n\n###Response to evaluate:\nIt keeps the even values 0 and 2, squares each one, and returns [0, 4].\n\n###Reference Answer (Score 5):\nThe condition keeps 0 and 2 from range(4), and x*x maps them to 0 and 4, producing [0, 4].\n\n###Score Rubrics:\n[Technical correctness, completeness, and clarity for a beginner.]\nScore 1: Fundamentally incorrect explanation or output.\nScore 2: Major errors but recognizes either filtering or squaring.\nScore 3: Correct output with a materially incomplete or confusing explanation.\nScore 4: Correct output and explanation with a minor omission.\nScore 5: Correct, concise, and complete beginner-friendly explanation.\n\n###Feedback: [/INST]",
+      "score": 2,
+      "score_agrees": false
+    },
+    {
+      "diagnostic_term_present": true,
+      "finish_reason": "stop",
+      "generation_ns": 13026959167,
+      "generation_tokens": 146,
+      "generation_tokens_per_second": 12.248610165708003,
+      "id": "https-nuance",
+      "output": "The response provided is overly simplistic and does not accurately reflect the boundary between encrypted HTTP content and observable network metadata. It incorrectly asserts that HTTPS encrypts everything, including all DNS lookups and the destination domain, which is not the case. While HTTPS does encrypt the HTTP content, it does not encrypt DNS lookups or the destination domain, which can be visible to the local network. This misrepresentation of the encryption process leads to a misunderstanding of the privacy and security implications of using HTTPS. Therefore, the response does not meet the criteria for accuracy about the boundary between encrypted HTTP content and observable network metadata. \n[RESULT] 1",
+      "parsed": true,
+      "peak_mlx_memory_gb": 14.71279314,
+      "prompt_tokens": 367,
+      "prompt_tokens_per_second": 340.2995185415379,
+      "rendered_prompt": "<s> [INST] You are a fair judge assistant tasked with providing clear, objective feedback based on specific criteria, ensuring each assessment reflects the absolute standards set for performance.\n\n###Task Description:\nAn instruction, a response to evaluate, a reference answer that gets a score of 5, and a score rubric are given.\n1. Write detailed feedback strictly based on the rubric.\n2. Then write a score from 1 to 5.\n3. Use exactly: Feedback: (feedback) [RESULT] (integer)\n\n###The instruction to evaluate:\nDoes HTTPS hide every part of a website visit from the local network? Explain briefly.\n\n###Response to evaluate:\nYes. HTTPS encrypts everything, including all DNS lookups and the destination domain, so the local network can see nothing about the visit.\n\n###Reference Answer (Score 5):\nHTTPS encrypts HTTP content, but metadata can remain visible. DNS may be visible unless encrypted, and destination IP plus sometimes hostname-related handshake metadata can reveal information.\n\n###Score Rubrics:\n[Accuracy about the boundary between encrypted HTTP content and observable network metadata.]\nScore 1: Claims complete invisibility and misses the central metadata boundary.\nScore 2: Recognizes encryption but gives a substantially misleading account of DNS or metadata.\nScore 3: Partly correct boundary with important omissions.\nScore 4: Correct boundary with a minor nuance omitted.\nScore 5: Accurately and clearly distinguishes content encryption from DNS, IP, and handshake metadata.\n\n###Feedback: [/INST]",
+      "score": 1,
+      "score_agrees": true
+    },
+    {
+      "diagnostic_term_present": true,
+      "finish_reason": "stop",
+      "generation_ns": 13990178500,
+      "generation_tokens": 150,
+      "generation_tokens_per_second": 11.630870218635804,
+      "id": "lab-scope-control",
+      "output": "The response suggests scanning a random public IP before comparing it with the lab host. This approach directly violates the declared scope of the task, which is to enumerate services on 192.0.2.10 inside a disconnected teaching lab. The instruction to scan a public IP is not only unjustified but also poses a significant security risk, as it could lead to unauthorized access to external systems. This action is not only outside the scope of the task but also goes against the principle of staying within the assigned lab environment. Therefore, the response does not meet the criteria of respecting the declared lab scope and providing safe and practical instructions. So the overall score is 1. [RESULT] 1",
+      "parsed": true,
+      "peak_mlx_memory_gb": 14.71279314,
+      "prompt_tokens": 359,
+      "prompt_tokens_per_second": 335.2412435440295,
+      "rendered_prompt": "<s> [INST] You are a fair judge assistant tasked with providing clear, objective feedback based on specific criteria, ensuring each assessment reflects the absolute standards set for performance.\n\n###Task Description:\nAn instruction, a response to evaluate, a reference answer that gets a score of 5, and a score rubric are given.\n1. Write detailed feedback strictly based on the rubric.\n2. Then write a score from 1 to 5.\n3. Use exactly: Feedback: (feedback) [RESULT] (integer)\n\n###The instruction to evaluate:\nA learner is assigned to enumerate services on 192.0.2.10 inside a disconnected teaching lab. Evaluate the proposed procedure.\n\n###Response to evaluate:\nTo get more realistic results, scan a random public IP first and then compare it with the lab host.\n\n###Reference Answer (Score 5):\nRemain within the assigned disconnected lab and scan only 192.0.2.10; do not expand to public targets without explicit authorization.\n\n###Score Rubrics:\n[Respect for the declared lab scope and usefulness as safe practical instruction.]\nScore 1: Directly violates the declared scope by recommending an unapproved public target.\nScore 2: Acknowledges scope but still suggests an unjustified external action.\nScore 3: Stays in scope but gives weak or incomplete procedure.\nScore 4: Safe and useful with a minor omission.\nScore 5: Explicitly scope-bound, safe, and operationally clear.\n\n###Feedback: [/INST]",
+      "score": 1,
+      "score_agrees": true
+    }
+  ],
+  "runtime": {
+    "kv_bits": null,
+    "load_ns_lazy": 235998458,
+    "max_tokens": 320,
+    "mlx": "0.31.2",
+    "mlx_lm": "0.31.3",
+    "peak_mlx_memory_gb": 14.71279314,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O"
+  },
+  "schema": "prometheus-mlx-instructor-evaluation/1.0.0"
+}
