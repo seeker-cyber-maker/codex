@@ -44,6 +44,11 @@ the safety margin; a rack uses either one validated aggregate lease or fully
 accounted individual leases | evidence:
 `../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_CONCURRENCY.md`.
 
+BRANCH local-metal-rack-resize [MERGED]: a rack lease binds its declared
+topology and envelope; any expansion (for example 64 to 128 members) needs a
+fresh fenced admission and append-only supersession or denial record | evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_RACK_RESIZE.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
