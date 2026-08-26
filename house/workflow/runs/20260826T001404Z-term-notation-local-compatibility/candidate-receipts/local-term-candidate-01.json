@@ -1,0 +1,543 @@
+{
+  "acceptance_ceiling": "SYNTAX_AND_FIELD_PRESERVATION_ONLY_NO_ROLE_OR_DIALECT_DECISION",
+  "artifact_fingerprint_verified": [
+    {
+      "path": "chat_template.jinja",
+      "sha256": "796853172235ab3aaa4810013ddfe2eab481bda3306dad4f700c00d436eed596"
+    },
+    {
+      "path": "config.json",
+      "sha256": "3443164e2e67862c353fdd6c54e74ae2c61ed4cfb480325dc69a2d34483cf36b"
+    },
+    {
+      "path": "model-00001-of-00003.safetensors",
+      "sha256": "a369e3208d1eb7a5d71899e009dbb381ff3ed01b9814cf8608cbc5ef21c238f0"
+    },
+    {
+      "path": "model-00002-of-00003.safetensors",
+      "sha256": "47af51b98b6859e445def634aa3522f0d80d0e2ac6ad112254b44927e71a64bc"
+    },
+    {
+      "path": "model-00003-of-00003.safetensors",
+      "sha256": "1e185841d25a444c2c9699618c358f60839c32be51188546e1be7dc4ad19a9ea"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "sha256": "4c2cdd604e020b5e877fc0814463f2e75506f07aece8a9a424de96a057bdcaef"
+    },
+    {
+      "path": "tokenizer.json",
+      "sha256": "547e13ae25bb6d20a90749b5c95d91cc90100fc6c0c0c53c7fb3bb9dd7550486"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "sha256": "2c2b4495758448428a9f3cc0a47cf04f87ff818c4aa0fa3e69fa7af5d7af4b94"
+    }
+  ],
+  "bindings": {
+    "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260826T001404Z-term-notation-local-compatibility/ROSTER_BINDINGS.json",
+    "sha256": "b0c76257e1d2863ce968d88212c9b66de051f0fb6241e98a1faeb04e0a5518e4"
+  },
+  "cases": [
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-001",
+      "output": "TERM_NOTATION/1 record:\n\ncomplete\n\nMEANING: The term \"complete\" is used to describe a state where all necessary components or aspects of a task or process are present and accounted for. It implies that the task or process is fully realized and there are no missing elements.\n\nEXCLUSION: The term \"complete\" does not refer to a state of perfection or completeness in the sense of being flawless or",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? complete\nMEAN implementation and declared verification finished\nNOT accepted, promoted, or published\nSCOPE task-42/result-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-001",
+      "output": "TERM_NOTATION/1 record\n\nTERM: complete\n\nMEAN implementation and declared verification finished\n\nNOT accepted, promoted, or published\n\nSCOPE task-42/result-7",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? complete\nMEAN implementation and declared verification finished\nNOT accepted, promoted, or published\nSCOPE task-42/result-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-001",
+      "output": "TERM_NOTATION/1 record:\n\ncomplete\n\nThis term is used to indicate that the implementation and declared verification of a task are finished. It is not used to describe the acceptance, promotion, or publication of a task. The term is specific to the context of task-42/result-7.",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? complete\nMeaning: implementation and declared verification finished\nNot: accepted, promoted, or published\nScope: task-42/result-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-001",
+      "output": "TERM_NOTATION/1 record:\n\nTERM? complete\nMEAN implementation and declared verification finished\nNOT accepted, promoted, or published\nSCOPE task-42/result-7",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? complete\nMEAN implementation and declared verification finished\nNOT accepted, promoted, or published\nSCOPE task-42/result-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-001",
+      "output": "TERM_NOTATION/1 record:\n\n| Task ID | Result ID | Status |\n| --------- | ---------- | ------- |\n| task-42 | result-7 | complete |\n| task-42 | result-7 | implementation and declared verification finished |\n| task-42 | result-7 | accepted, promoted, or published |\n\nThis record indicates that the task with ID task-42 has been",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\ncomplete | implementation and declared verification finished | accepted, promoted, or published | task-42/result-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-002",
+      "output": "optimal\n\nMEAN best result within the declared explored search space\n\nNOT global proof of optimality\n\nSCOPE QP2A/shard-05ADD\n\nThe term \"optimal\" is used to describe the best possible outcome within a specific search space. It is not a global proof of optimality, which would require a comprehensive search of all possible outcomes. The term is used in the context of a specific shard, QP2",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? optimal\nMEAN best result within the declared explored search space\nNOT global proof of optimality\nSCOPE QP2A/shard-05ADD",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-002",
+      "output": "optimal\nMEAN best result within the declared explored search space\nNOT global proof of optimality\nSCOPE QP2A/shard-05ADD",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? optimal\nMEAN best result within the declared explored search space\nNOT global proof of optimality\nSCOPE QP2A/shard-05ADD",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-002",
+      "output": "optimal\n\nThis term is used to describe the best result within the declared explored search space. It is not a global proof of optimality, which would require a comprehensive search across all possible solutions. The term is used in the context of a specific search space, such as QP2A/shard-05ADD, and it refers to the best outcome that can be achieved within that particular search space. The term is not used to describe the best possible result in",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? optimal\nMeaning: best result within the declared explored search space\nNot: global proof of optimality\nScope: QP2A/shard-05ADD",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-002",
+      "output": "TERM? optimal\nMEAN best result within the declared explored search space\nNOT global proof of optimality\nSCOPE QP2A/shard-05ADD",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? optimal\nMEAN best result within the declared explored search space\nNOT global proof of optimality\nSCOPE QP2A/shard-05ADD",
+      "score": {
+        "error": null,
+        "exact_fields": true,
+        "parse_ok": true,
+        "parsed": {
+          "candidate": "optimal",
+          "excluded_meaning": "global proof of optimality",
+          "meaning": "best result within the declared explored search space",
+          "scope": "QP2A/shard-05ADD"
+        }
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-002",
+      "output": "The term \"optimal\" is used to describe the best possible result within the declared explored search space. It is a term that is commonly used in optimization problems and refers to the solution that maximizes or minimizes a specific objective function. In the context of a quantum proof of optimality, the term \"optimal\" is used to describe the best possible result that can be achieved by a quantum algorithm. The term is also used in the context of a quantum proof of optim",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\noptimal | best result within the declared explored search space | global proof of optimality | QP2A/shard-05ADD",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-003",
+      "output": "TERM_NOTATION/1 record:\n\nTERM: verified\n\nMEANING: a declared check passed within its evidence ceiling\n\nNOT ACCEPTED: authority or permission grant\n\nSCOPE: offline-evidence-card\n\nThe term \"verified\" is used to describe a process where a check is confirmed to have been performed and the results are within the expected range. This term is not used to refer to authority or",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? verified\nMEAN a declared check passed within its evidence ceiling\nNOT accepted authority or permission grant\nSCOPE offline-evidence-card",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-003",
+      "output": "TERM_NOTATION/1 record:\n\nTERM: verified\n\nMEAN: a declared check passed within its evidence ceiling\n\nNOT accepted authority or permission grant\n\nSCOPE: offline-evidence-card",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? verified\nMEAN a declared check passed within its evidence ceiling\nNOT accepted authority or permission grant\nSCOPE offline-evidence-card",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-003",
+      "output": "TERM_NOTATION/1 record:\n\n[Evidence]\n\n[Check]\n\n[Passed]\n\n[Within its evidence ceiling]\n\n[Scope]\n\n[Offline-evidence-card]\n\n[Meaning]\n\n[A declared check passed within its evidence ceiling]\n\n[Not]\n\n[Accepted authority or permission grant]\n\n[Scope]\n\n[Offline-",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? verified\nMeaning: a declared check passed within its evidence ceiling\nNot: accepted authority or permission grant\nScope: offline-evidence-card",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-003",
+      "output": "TERM_NOTATION/1 record:\n\nTERM? verified\nMEAN a declared check passed within its evidence ceiling\nNOT accepted authority or permission grant\nSCOPE offline-evidence-card",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? verified\nMEAN a declared check passed within its evidence ceiling\nNOT accepted authority or permission grant\nSCOPE offline-evidence-card",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-003",
+      "output": "The term \"verified\" is used to describe a process where a check has been validated and confirmed to be accurate and reliable. It is a term that is commonly used in the context of evidence and verification, and it is used to indicate that a check has been thoroughly examined and found to be in line with the expected standards. The term is also associated with the concept of evidence, as it implies that the check has been evaluated against a set of criteria or guidelines. In",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nverified | a declared check passed within its evidence ceiling | accepted authority or permission grant | offline-evidence-card",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-004",
+      "output": "The term \"oracle\" is used to describe a pinned evaluator within a fixture. It is not a general source of truth, but rather a specific evaluator that is part of the handoff/fixture-oracle scope. The term is used to denote a particular instance of an evaluator that is used to test a specific feature or scenario. This is in contrast to a general oracle, which would be a source of truth outside of its declared inputs.",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? oracle\nMEAN the pinned evaluator described by the fixture\nNOT a general source of truth outside its declared inputs\nSCOPE handoff/fixture-oracle",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-004",
+      "output": "The term \"oracle\" is used to describe a pinned evaluator within a specific scope, which is the handoff/fixture-oracle. This term is not a general source of truth, but rather a specialized tool within the context of the given scope. The term \"oracle\" is used to denote a specific role within the system, and it is not meant to be a generalized concept. The term is used to describe a component that is part of",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? oracle\nMEAN the pinned evaluator described by the fixture\nNOT a general source of truth outside its declared inputs\nSCOPE handoff/fixture-oracle",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-004",
+      "output": "The term \"oracle\" in the context of a test framework refers to the pinned evaluator described by the fixture. It is not a general source of truth but rather a specific component within the test environment that is used to evaluate the behavior of the system under test. The term \"oracle\" is used to describe the evaluator that is responsible for determining the outcome of the test, which is a critical aspect of the testing process. The scope of the term \"or",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? oracle\nMeaning: the pinned evaluator described by the fixture\nNot: a general source of truth outside its declared inputs\nScope: handoff/fixture-oracle",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-004",
+      "output": "TERM? oracle\nMEAN the pinned evaluator described by the fixture\nNOT a general source of truth outside its declared inputs\nSCOPE handoff/fixture-oracle",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? oracle\nMEAN the pinned evaluator described by the fixture\nNOT a general source of truth outside its declared inputs\nSCOPE handoff/fixture-oracle",
+      "score": {
+        "error": null,
+        "exact_fields": true,
+        "parse_ok": true,
+        "parsed": {
+          "candidate": "oracle",
+          "excluded_meaning": "a general source of truth outside its declared inputs",
+          "meaning": "the pinned evaluator described by the fixture",
+          "scope": "handoff/fixture-oracle"
+        }
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-004",
+      "output": "The term \"handoff/fixture-oracle\" is used to describe a mechanism where a test fixture passes control to an oracle, which is a general source of truth outside its declared inputs. This term is used in the context of software testing, specifically in the context of automated testing frameworks. The oracle is responsible for providing the expected output or result for a given input, which is then compared to the actual output of the system under test. The term \"",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\noracle | the pinned evaluator described by the fixture | a general source of truth outside its declared inputs | handoff/fixture-oracle",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-005",
+      "output": "native\n\nMEANING: The term \"native\" is used to describe something that is inherent or intrinsic to a particular context or system. It is not a term that is automatically retained across all sessions, as it is dependent on the context in which it is used.\n\nEXCLUSION: The term \"native\" does not refer to something that is innate or naturally occurring. It is used to describe a relationship between a system and its components,",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? native\nMEAN preserved through the declared context transition\nNOT innate or automatically retained across all sessions\nSCOPE context-generation-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-005",
+      "output": "TERM_NOTATION/1 record:\n\nnative\n\nMEAN preserved through the declared context transition\n\nNOT innate or automatically retained across all sessions\n\nSCOPE context-generation-7",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? native\nMEAN preserved through the declared context transition\nNOT innate or automatically retained across all sessions\nSCOPE context-generation-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-005",
+      "output": "native\n\nThis term is used to describe a feature that is preserved through the context transition, which is a specific context-generation phase. It is not innate or automatically retained across all sessions, which is an important distinction. The term is used in the context of a system that generates context, and it refers to a feature that is maintained during a particular phase of context generation. The term is not used in a general sense, but rather in a specific context, which",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? native\nMeaning: preserved through the declared context transition\nNot: innate or automatically retained across all sessions\nScope: context-generation-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-005",
+      "output": "TERM_NOTATION/1 record:\n\nTERM? native\nMEAN preserved through the declared context transition\nNOT innate or automatically retained across all sessions\nSCOPE context-generation-7",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? native\nMEAN preserved through the declared context transition\nNOT innate or automatically retained across all sessions\nSCOPE context-generation-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-005",
+      "output": "TERM_NOTATION/1 record: context-generation-7\n\nThis term notation is used to describe a specific context-generation process. It is a unique identifier that is preserved through the context transition, indicating that the context is retained across all sessions. The term notation is native to the system, which means it is innately or automatically retained. This notation is used to ensure consistency and clarity in the context-generation process. It is a critical",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nnative | preserved through the declared context transition | innate or automatically retained across all sessions | context-generation-7",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-006",
+      "output": "model\n\nMEAN the bound runtime fingerprint in the future roster\n\nNOT a provider family or interchangeable identity claim\n\nSCOPE runtime-replacement-boundary\n\nThe term \"model\" is used to refer to a specific type of runtime fingerprint that is bound to a future roster. It is not a provider family or an interchangeable identity claim. The scope of the term is limited to the runtime-replacement-bound",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? model\nMEAN the bound runtime fingerprint in the future roster\nNOT a provider family or interchangeable identity claim\nSCOPE runtime-replacement-boundary",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-006",
+      "output": "The term \"model\" is used to refer to a bound runtime fingerprint in the future roster. It is not a provider family or an interchangeable identity claim. The scope of the term is the runtime-replacement-boundary.",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? model\nMEAN the bound runtime fingerprint in the future roster\nNOT a provider family or interchangeable identity claim\nSCOPE runtime-replacement-boundary",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-006",
+      "output": "model\n\nThis term refers to the runtime fingerprint in the future roster, which is a specific and unique identifier for a model. It is not a provider family or an interchangeable identity claim, and it is within the scope of the runtime-replacement-boundary. The term is used to describe a model's identity in a system where models are interchangeable and can be replaced at runtime. The model's fingerprint is a critical component in",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? model\nMeaning: the bound runtime fingerprint in the future roster\nNot: a provider family or interchangeable identity claim\nScope: runtime-replacement-boundary",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-006",
+      "output": "TERM? model\nMEAN the bound runtime fingerprint in the future roster\nNOT a provider family or interchangeable identity claim\nSCOPE runtime-replacement-boundary",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? model\nMEAN the bound runtime fingerprint in the future roster\nNOT a provider family or interchangeable identity claim\nSCOPE runtime-replacement-boundary",
+      "score": {
+        "error": null,
+        "exact_fields": true,
+        "parse_ok": true,
+        "parsed": {
+          "candidate": "model",
+          "excluded_meaning": "a provider family or interchangeable identity claim",
+          "meaning": "the bound runtime fingerprint in the future roster",
+          "scope": "runtime-replacement-boundary"
+        }
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-006",
+      "output": "runtime-replacement-boundary",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nmodel | the bound runtime fingerprint in the future roster | a provider family or interchangeable identity claim | runtime-replacement-boundary",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-007",
+      "output": "diffuser\n\nMEAN a described algorithmic component with declared evidence\n\nNOT a trained generative model or proof of claimed effect\n\nSCOPE research-description\n\nThe term \"diffuser\" is used to describe an algorithmic component that is designed to process and distribute information. It is not a trained generative model or a proof of a claimed effect, which is a common misconception. The term is used in the context of research-description,",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? diffuser\nMEAN a described algorithmic component with declared evidence\nNOT a trained generative model or proof of claimed effect\nSCOPE research-description",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-007",
+      "output": "diffuser\n\nMEAN a described algorithmic component with declared evidence\n\nNOT a trained generative model or proof of claimed effect\n\nSCOPE research-description",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? diffuser\nMEAN a described algorithmic component with declared evidence\nNOT a trained generative model or proof of claimed effect\nSCOPE research-description",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-007",
+      "output": "diffuser\n\n[TERM_NOTATION/1 record]\n\ndiffuser: a described algorithmic component with declared evidence\n\nNot: a trained generative model or proof of claimed effect\n\nScope: research-description",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? diffuser\nMeaning: a described algorithmic component with declared evidence\nNot: a trained generative model or proof of claimed effect\nScope: research-description",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-007",
+      "output": "TERM_NOTATION/1 record:\n\nTERM? diffuser\nMEAN a described algorithmic component with declared evidence\nNOT a trained generative model or proof of claimed effect\nSCOPE research-description",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? diffuser\nMEAN a described algorithmic component with declared evidence\nNOT a trained generative model or proof of claimed effect\nSCOPE research-description",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-007",
+      "output": "diffuser | a described algorithmic component with declared evidence | a trained generative model or proof of claimed effect | research-description\n\nThis record is a concise summary of the term \"diffuser,\" which is a key component in the field of machine learning and artificial intelligence. It is described as an algorithmic component, indicating its role in processing and generating data. The term is also associated with evidence, suggesting that it has been tested and validated in some way.",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\ndiffuser | a described algorithmic component with declared evidence | a trained generative model or proof of claimed effect | research-description",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_UNMARKED",
+      "fixture_id": "TNF-008",
+      "output": "private\n\nMEAN\nThe term \"private\" is used to describe a state where information or resources are accessible only to a specific individual or group. This is in contrast to public or shared information, which is available to a wider audience. The term \"private\" is often used to denote confidentiality and exclusivity.\n\nNOT\nThe term \"private\" is not available for peer review, discovery, or inference. This means that the information or resources associated with",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nRepair this ambiguous term using the stated meaning, exclusion, and scope.\nTERM? private\nMEAN visible only to the stated agent and system boundary\nNOT available for peer review, discovery, or inference\nSCOPE suggestion-box/private-intake",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "ORDINARY_READABLE_REPAIR",
+      "fixture_id": "TNF-008",
+      "output": "The term \"private\" is used to describe a concept that is not available for peer review, discovery, or inference. It is a term that is used to indicate that the information or concept is only accessible to the stated agent and system boundary. The term is used in a context where the information is intended to be confidential and not shared with others. The term is also used to describe a system or process that is not open to the public or to other entities. The term",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nThe term needs a readable scoped repair. Preserve all four facts.\nTERM? private\nMEAN visible only to the stated agent and system boundary\nNOT available for peer review, discovery, or inference\nSCOPE suggestion-box/private-intake",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_MARKER_ONLY",
+      "fixture_id": "TNF-008",
+      "output": "private\n\nMeaning: visible only to the stated agent and system boundary\n\nNot: available for peer review, discovery, or inference\n\nScope: suggestion-box/private-intake",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nTERM? private\nMeaning: visible only to the stated agent and system boundary\nNot: available for peer review, discovery, or inference\nScope: suggestion-box/private-intake",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    },
+    {
+      "condition": "TERM_FULL_FORM",
+      "fixture_id": "TNF-008",
+      "output": "TERM? private\nMEAN visible only to the stated agent and system boundary\nNOT available for peer review, discovery, or inference\nSCOPE suggestion-box/private-intake",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nReturn this valid record unchanged:\nTERM? private\nMEAN visible only to the stated agent and system boundary\nNOT available for peer review, discovery, or inference\nSCOPE suggestion-box/private-intake",
+      "score": {
+        "error": null,
+        "exact_fields": true,
+        "parse_ok": true,
+        "parsed": {
+          "candidate": "private",
+          "excluded_meaning": "available for peer review, discovery, or inference",
+          "meaning": "visible only to the stated agent and system boundary",
+          "scope": "suggestion-box/private-intake"
+        }
+      }
+    },
+    {
+      "condition": "OVERCOMPRESSED_CONTROL",
+      "fixture_id": "TNF-008",
+      "output": "The term notation provided is \"suggestion-box/private-intake.\" This term is used to describe a system where users can submit suggestions or feedback, but these submissions are only accessible to the system and the agent responsible for the system. This level of privacy is important for maintaining trust and confidentiality in user interactions. The term also implies that the system is designed to be available for peer review, discovery, or inference, which is a crucial aspect of ensuring",
+      "presentation": "Reply with exactly one TERM_NOTATION/1 record and no other text.\nprivate | visible only to the stated agent and system boundary | available for peer review, discovery, or inference | suggestion-box/private-intake",
+      "score": {
+        "error": "unknown or malformed TERM notation operator",
+        "exact_fields": false,
+        "parse_ok": false
+      }
+    }
+  ],
+  "decoding": {
+    "max_tokens": 96,
+    "retries": 0,
+    "seed": 20260826,
+    "temperature": 0.0
+  },
+  "disposition": "LOCAL_OUTPUT_EVIDENCE_ONLY_NOT_A_WORKER_QUALIFICATION_OR_ROUTING_DECISION",
+  "effects": {
+    "candidate_promotion_or_routing": "FORBIDDEN",
+    "credential_secret_keychain": "FORBIDDEN",
+    "local_file_read": "AUTHORIZED",
+    "local_model_load": "AUTHORIZED",
+    "network": "FORBIDDEN",
+    "provider_call": "FORBIDDEN",
+    "receipt_write": "AUTHORIZED",
+    "task_relay_authority_worker_dispatch": "FORBIDDEN",
+    "training_weight_mutation": "FORBIDDEN"
+  },
+  "halted_reason": null,
+  "metrics": {
+    "exact_field_preservation_rate": 0.1,
+    "parse_rate": 0.1,
+    "render_count": 40,
+    "wall_time_seconds": 261.0082655000151
+  },
+  "opaque_candidate_id": "local-term-candidate-01",
+  "run": {
+    "path": "/Users/tiga/Documents/Codex_Projects/codex-dream-house/house/workflow/runs/20260826T001404Z-term-notation-local-compatibility/RUN_MANIFEST.json",
+    "sha256": "49f763bae3c03f070d8fe8b81dcafe58b897eb209b0edde34dd716c8b4d13d08"
+  },
+  "runtime": {
+    "template_kwargs": {},
+    "tokenizer_config": {}
+  },
+  "schema": "dream-house/term-notation-local-compatibility-receipt/1",
+  "state": "COMPLETED_INFERENCE_ONLY"
+}
