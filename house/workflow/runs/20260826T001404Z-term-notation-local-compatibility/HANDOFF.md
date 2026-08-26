@@ -38,6 +38,12 @@ model launch, including Codex-originated work, needs a granted reservation
 before initialization | evidence:
 `../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826.md`.
 
+BRANCH local-metal-co-residency [MERGED]: independent bounded small workloads
+may run concurrently when their separate envelopes plus one baseline/reserve fit
+the safety margin; a rack uses either one validated aggregate lease or fully
+accounted individual leases | evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_CONCURRENCY.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
