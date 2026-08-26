@@ -68,6 +68,13 @@ variance margin, rack calibration/resize, and identity/swap revisions are
 implemented in a disposable revision | evidence:
 `../20260826T015833Z-local-metal-admission-council-packet/PHASE1_CANDIDATE_RECONCILIATION.md`.
 
+BRANCH local-metal-phase1-revision [MERGED]: revised candidate `c0474a4c`
+satisfies the five source-only requirements and independently passes 19 focused
+tests, lint, and diff validation; it is accepted only as an unmerged reference
+pending shared-journal lifecycle, legacy compatibility, trusted classification,
+and enforcement reviews | evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/PHASE1_REVISION_RECONCILIATION.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
