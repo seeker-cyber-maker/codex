@@ -1,0 +1,46 @@
+{
+  "schema": "dream-house/local-rubric-candidate-prebinding/1",
+  "state": "PREPARED_NOT_AUTHORIZED",
+  "opaque_candidate_id": "local-rubric-candidate-c",
+  "evaluation_contract": {
+    "path": "house/local_model_evaluation/rubric_manifest_v1.json",
+    "fixture_projection_sha256": "b8e0c058b5d7981b32db10eab608b93f7da97ad829aca73e1672f0eefab44e04",
+    "adapter_id": "chat-json-score-v1"
+  },
+  "artifact": {
+    "local_provenance_path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit",
+    "format": "mlx_safetensors",
+    "files": [
+      {"path": "model-00001-of-00002.safetensors", "sha256": "a68b87558c6ef43f74c2bd63ce7e9092ceddc3101f3def0030774bae5f42aadd"},
+      {"path": "model-00002-of-00002.safetensors", "sha256": "b0a770bf8469c7f3f18756a0e0283f1c1174344a83e059a4e483f6af4907352d"},
+      {"path": "config.json", "sha256": "a96942cb6a8a1d3f1d17514d81a1925d04362a6a3233b389d13012211baaa9f8"},
+      {"path": "model.safetensors.index.json", "sha256": "dd023913fb87cfdae27fb11dcf695117c925833796ccac3c64117d6652d8ff1e"},
+      {"path": "chat_template.jinja", "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"},
+      {"path": "tokenizer.json", "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"},
+      {"path": "tokenizer_config.json", "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"},
+      {"path": "preprocessor_config.json", "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"}
+    ]
+  },
+  "observed_structural_receipt": {
+    "path": "../20260825T223000Z-local-rubric-candidate-intake/asset-c.json",
+    "sha256": "332e12593d036a5607da3e0ec8e2bf03928abe654505435a0659346f46df4bce",
+    "weight_payloads_loaded": false,
+    "completeness": "complete_as_observed"
+  },
+  "runtime": {
+    "status": "STATIC_LOAD_COMPATIBILITY_OBSERVED",
+    "required_before_run": [
+      "exact local runtime and library versions",
+      "verified model-load compatibility",
+      "fixed decoding settings",
+      "bounded output reservation"
+    ]
+  },
+  "authority": {
+    "inference": "NOT_GRANTED",
+    "training": "NOT_GRANTED",
+    "worker_dispatch": "NOT_GRANTED",
+    "candidate_promotion": "NOT_GRANTED"
+  },
+  "scoring_boundary": "The evaluator receives only local-rubric-candidate-c; provenance names and paths are not scoring inputs."
+}

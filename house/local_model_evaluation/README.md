@@ -19,6 +19,8 @@ contract.
   a bracketed integer result.
 - `chat-json-score-v1`: system/user chat rendering with a closed JSON integer
   score.
+- `chat-json-score-no-thinking-v1`: the same closed JSON score, with an
+  explicitly documented chat-template no-thinking generation control.
 
 Both are `DECLARED_UNQUALIFIED`: neither is a worker route or evidence that a
 particular local model is suitable.

@@ -27,7 +27,12 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-from house.local_model_evaluation import LocalEvaluationContractError, parse_adapter_score, render_rubric_prompt
+from house.local_model_evaluation import (
+    LocalEvaluationContractError,
+    canonical_fixture_projection_sha256,
+    parse_adapter_score,
+    render_rubric_prompt,
+)
 
 
 EXECUTION_SCHEMA = "dream-house/local-rubric-inference-manifest/1"
@@ -122,7 +127,7 @@ def _validate_execution_manifest(manifest: object) -> Mapping[str, Any]:
     if decoding != expected_decoding:
         raise SmokeRunError("decoding configuration drift")
     runtime = value["runtime"]
-    if not isinstance(runtime, Mapping) or runtime.get("tokenizer_config") != {"fix_mistral_regex": True}:
+    if not isinstance(runtime, Mapping) or runtime.get("tokenizer_config") not in ({}, {"fix_mistral_regex": True}):
         raise SmokeRunError("runtime tokenizer configuration drift")
     case_ids = value["case_ids"]
     if not isinstance(case_ids, list) or not case_ids or len(case_ids) != len(set(case_ids)):
@@ -165,6 +170,13 @@ def _render_prompt(adapter: Mapping[str, Any], fixture: Mapping[str, Any], token
         return tokenizer.apply_chat_template(
             [{"role": "user", "content": prompt}], tokenize=False, add_generation_prompt=True
         )
+    if adapter.get("input_renderer") == "chat_template_system_user_no_thinking_v1":
+        return tokenizer.apply_chat_template(
+            [{"role": "user", "content": prompt}],
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
+        )
     if adapter.get("input_renderer") == "chat_template_single_user_v1":
         return prompt
     raise SmokeRunError("adapter renderer is not supported by this bounded runner")
@@ -196,6 +208,13 @@ def run(manifest_path: Path, output_path: Path) -> dict[str, Any]:
     adapters_value = _load_json(_REPO_ROOT / "house/local_model_evaluation/adapter_declarations_v1.json")
     if not isinstance(fixtures_value, Mapping):
         raise SmokeRunError("fixture set must be an object")
+    evaluation_contract = binding.get("evaluation_contract")
+    if not isinstance(evaluation_contract, Mapping):
+        raise SmokeRunError("prebinding evaluation contract is absent")
+    if evaluation_contract.get("adapter_id") != manifest["adapter_id"]:
+        raise SmokeRunError("prebinding adapter does not match the sealed manifest")
+    if evaluation_contract.get("fixture_projection_sha256") != canonical_fixture_projection_sha256(fixtures_value):
+        raise SmokeRunError("prebinding fixture projection does not match the sealed fixture set")
     adapter = _select_adapter(adapters_value, str(manifest["adapter_id"]))
     fixtures_by_id = {
         fixture.get("case_id"): fixture

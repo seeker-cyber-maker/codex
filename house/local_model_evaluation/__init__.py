@@ -7,6 +7,7 @@ candidate.
 
 from .contract import (
     LocalEvaluationContractError,
+    canonical_fixture_projection_sha256,
     parse_adapter_score,
     render_rubric_prompt,
     require_execution_authority,
@@ -15,6 +16,7 @@ from .contract import (
 
 __all__ = [
     "LocalEvaluationContractError",
+    "canonical_fixture_projection_sha256",
     "parse_adapter_score",
     "render_rubric_prompt",
     "require_execution_authority",

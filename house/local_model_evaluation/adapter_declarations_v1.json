@@ -16,5 +16,14 @@
     "output_parser": "json_score_integer_v1",
     "semantic_role": "rubric_critic",
     "notes": "For local chat models that can be separately shown to emit a closed score object."
+  },
+  {
+    "schema": "dream-house/local-rubric-adapter/1",
+    "adapter_id": "chat-json-score-no-thinking-v1",
+    "state": "DECLARED_UNQUALIFIED",
+    "input_renderer": "chat_template_system_user_no_thinking_v1",
+    "output_parser": "json_score_integer_v1",
+    "semantic_role": "rubric_critic",
+    "notes": "For local chat templates with an explicit, documented no-thinking generation control; actual bindings remain external and unqualified."
   }
 ]

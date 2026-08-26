@@ -30,7 +30,11 @@ class LocalEvaluationContractTests(unittest.TestCase):
         self.assertTrue(report.execution_blocked)
         self.assertEqual(
             report.adapter_ids,
-            ("instructor-bracket-result-v1", "chat-json-score-v1"),
+            (
+                "instructor-bracket-result-v1",
+                "chat-json-score-v1",
+                "chat-json-score-no-thinking-v1",
+            ),
         )
         with self.assertRaisesRegex(LocalEvaluationContractError, "no execution"):
             require_execution_authority(manifest, fixtures, adapters)
@@ -67,7 +71,7 @@ class LocalEvaluationContractTests(unittest.TestCase):
 
     def test_closed_adapter_parsers(self) -> None:
         _manifest, _fixtures, adapters = self._inputs()
-        bracket, json_adapter = adapters
+        bracket, json_adapter, no_thinking_adapter = adapters
         self.assertEqual(parse_adapter_score(bracket, "Feedback. [RESULT] 4"), 4)
         self.assertEqual(parse_adapter_score(json_adapter, '{"score": 5}'), 5)
         with self.assertRaisesRegex(LocalEvaluationContractError, "exactly"):
@@ -77,12 +81,14 @@ class LocalEvaluationContractTests(unittest.TestCase):
 
     def test_renderer_declares_the_selected_adapter_output_shape(self) -> None:
         _manifest, fixtures, adapters = self._inputs()
-        bracket, json_adapter = adapters
+        bracket, json_adapter, no_thinking_adapter = adapters
         json_prompt = render_rubric_prompt(fixtures["fixtures"][0], json_adapter)
         self.assertIn('exactly {"score": integer}', json_prompt)
         self.assertNotIn("feedback", json_prompt.lower())
         bracket_prompt = render_rubric_prompt(fixtures["fixtures"][0], bracket)
         self.assertIn("[RESULT] (integer)", bracket_prompt)
+        no_thinking_prompt = render_rubric_prompt(fixtures["fixtures"][0], no_thinking_adapter)
+        self.assertIn('exactly {"score": integer}', no_thinking_prompt)
 
 
 if __name__ == "__main__":

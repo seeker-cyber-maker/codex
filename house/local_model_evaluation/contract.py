@@ -33,6 +33,7 @@ CANONICAL_EFFECTS = (
 ALLOWED_RENDERERS = (
     "chat_template_single_user_v1",
     "chat_template_system_user_v1",
+    "chat_template_system_user_no_thinking_v1",
 )
 ALLOWED_PARSERS = (
     "bracket_result_integer_v1",
