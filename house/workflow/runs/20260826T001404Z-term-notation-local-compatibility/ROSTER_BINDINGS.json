@@ -1,0 +1,375 @@
+{
+  "bindings": [
+    {
+      "artifact": {
+        "files": [
+          {
+            "path": "chat_template.jinja",
+            "sha256": "796853172235ab3aaa4810013ddfe2eab481bda3306dad4f700c00d436eed596"
+          },
+          {
+            "path": "config.json",
+            "sha256": "3443164e2e67862c353fdd6c54e74ae2c61ed4cfb480325dc69a2d34483cf36b"
+          },
+          {
+            "path": "model-00001-of-00003.safetensors",
+            "sha256": "a369e3208d1eb7a5d71899e009dbb381ff3ed01b9814cf8608cbc5ef21c238f0"
+          },
+          {
+            "path": "model-00002-of-00003.safetensors",
+            "sha256": "47af51b98b6859e445def634aa3522f0d80d0e2ac6ad112254b44927e71a64bc"
+          },
+          {
+            "path": "model-00003-of-00003.safetensors",
+            "sha256": "1e185841d25a444c2c9699618c358f60839c32be51188546e1be7dc4ad19a9ea"
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "sha256": "4c2cdd604e020b5e877fc0814463f2e75506f07aece8a9a424de96a057bdcaef"
+          },
+          {
+            "path": "tokenizer.json",
+            "sha256": "547e13ae25bb6d20a90749b5c95d91cc90100fc6c0c0c53c7fb3bb9dd7550486"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "sha256": "2c2b4495758448428a9f3cc0a47cf04f87ff818c4aa0fa3e69fa7af5d7af4b94"
+          }
+        ],
+        "local_provenance_path": "/Volumes/Models/trainers/prometheus-7b-v2.0-mlx-bf16"
+      },
+      "opaque_candidate_id": "local-term-candidate-01",
+      "runtime": {
+        "template_kwargs": {},
+        "tokenizer_config": {}
+      },
+      "static_load": "PASS_LAZY_LOCAL_ONLY"
+    },
+    {
+      "artifact": {
+        "files": [
+          {
+            "path": "chat_template.jinja",
+            "sha256": "ed825380b678dad25046e0a92ef5c64a57178ccaba7e780b5ed581e91a4fd6ac"
+          },
+          {
+            "path": "config.json",
+            "sha256": "9d3d76706bab9e3515a1603514a515e60ba844c78b7c447604560262130bdfcb"
+          },
+          {
+            "path": "generation_config.json",
+            "sha256": "c5ee59a086c5504838db2a66cafdf04d10aac11cb021dd4e92a15946645c2dda"
+          },
+          {
+            "path": "model-00001-of-00003.safetensors",
+            "sha256": "bf03240339489cbf7582654c237b7c7bba729640eb5957fbb8918b889d9a8e91"
+          },
+          {
+            "path": "model-00002-of-00003.safetensors",
+            "sha256": "1adbf960fd4eee50836d54683dd0a8915976ec57a6326cfa0588238fa6c6e69f"
+          },
+          {
+            "path": "model-00003-of-00003.safetensors",
+            "sha256": "562933b8e4840869a912bf0d9ba1b53a7ebd13619f299342d0c0e2229b95a639"
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "sha256": "3f4e2d4721509e89ae2415389ecb021bc618aa547dfe3342f997ed3481c4daf9"
+          },
+          {
+            "path": "params.json",
+            "sha256": "1618da0d6f897e074ff7ec4b1047b5d2e8a1a4aa1fab41e26fc88f3b5b94d2aa"
+          },
+          {
+            "path": "processor_config.json",
+            "sha256": "cb1dc0b2c1a2da025f50df0f1516bc7018aaae98916b19c0ced6f189a7dd700b"
+          },
+          {
+            "path": "tekken.json",
+            "sha256": "600bb27946565481ecf51ba8aee252e49b9a68507866080ac9c30185bb312843"
+          },
+          {
+            "path": "tokenizer.json",
+            "sha256": "99cf274236c60277fcfad861a5a1007518687ad06ba8938760f50b55ffa0b1ef"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "sha256": "d11b71c3d855b030fb174bc8bf20542ccaf8281c7897d8074942a717eb0f11e4"
+          }
+        ],
+        "local_provenance_path": "/Volumes/HIKSEMI/omlx/mlx-community/Devstral-Small-2-24B-Instruct-2512-4bit"
+      },
+      "opaque_candidate_id": "local-term-candidate-02",
+      "runtime": {
+        "template_kwargs": {},
+        "tokenizer_config": {
+          "fix_mistral_regex": true
+        }
+      },
+      "static_load": "PASS_LAZY_LOCAL_ONLY"
+    },
+    {
+      "artifact": {
+        "files": [
+          {
+            "path": "chat_template.jinja",
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+          },
+          {
+            "path": "config.json",
+            "sha256": "a96942cb6a8a1d3f1d17514d81a1925d04362a6a3233b389d13012211baaa9f8"
+          },
+          {
+            "path": "model-00001-of-00002.safetensors",
+            "sha256": "a68b87558c6ef43f74c2bd63ce7e9092ceddc3101f3def0030774bae5f42aadd"
+          },
+          {
+            "path": "model-00002-of-00002.safetensors",
+            "sha256": "b0a770bf8469c7f3f18756a0e0283f1c1174344a83e059a4e483f6af4907352d"
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "sha256": "dd023913fb87cfdae27fb11dcf695117c925833796ccac3c64117d6652d8ff1e"
+          },
+          {
+            "path": "preprocessor_config.json",
+            "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+          },
+          {
+            "path": "processor_config.json",
+            "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b"
+          },
+          {
+            "path": "tokenizer.json",
+            "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"
+          },
+          {
+            "path": "video_preprocessor_config.json",
+            "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+          },
+          {
+            "path": "vocab.json",
+            "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+          }
+        ],
+        "local_provenance_path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.5-9B-MLX-4bit"
+      },
+      "opaque_candidate_id": "local-term-candidate-03",
+      "runtime": {
+        "template_kwargs": {
+          "enable_thinking": false
+        },
+        "tokenizer_config": {}
+      },
+      "static_load": "PASS_LAZY_LOCAL_ONLY"
+    },
+    {
+      "artifact": {
+        "files": [
+          {
+            "path": "chat_template.jinja",
+            "sha256": "a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146"
+          },
+          {
+            "path": "config.json",
+            "sha256": "d1c1f73bf62116ed0bb37c068af80534543cd1de9b61d609fc01bf70920e842d"
+          },
+          {
+            "path": "generation_config.json",
+            "sha256": "f9970ada892d2d1f72e3ed0a6535ccebadd11897318794ca671d8c7014c957da"
+          },
+          {
+            "path": "model-00001-of-00003.safetensors",
+            "sha256": "57f4846924652b1b23537c6c6d6b65f64fde811e47369d4e23c5c45b4d7584a7"
+          },
+          {
+            "path": "model-00002-of-00003.safetensors",
+            "sha256": "4a862a873080e489db16125877e19553b958562ff4dd0246135bc061c3293652"
+          },
+          {
+            "path": "model-00003-of-00003.safetensors",
+            "sha256": "16c32bb8dbd1fa8d556815706589d6d6480d29946196cd2fe2b721d4daf84132"
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "sha256": "6fa724aa7a9130561f9b97debcc06c56ba150d8fbd58fc1168f53a22d6a5490a"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "sha256": "8464cabd6eda239fe46ebf8ae63b46c417721784a961a022f6b59174a2cda0e2"
+          },
+          {
+            "path": "tokenizer.json",
+            "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "sha256": "2d8386578f85ea1fa698e78c58b2d8503e8122d6b110b61f93d3995601b07d91"
+          }
+        ],
+        "local_provenance_path": "/Volumes/HIKSEMI/omlx/mlx-community/gpt-oss-20b-MXFP4-Q8"
+      },
+      "opaque_candidate_id": "local-term-candidate-04",
+      "runtime": {
+        "template_kwargs": {
+          "reasoning_effort": "low"
+        },
+        "tokenizer_config": {}
+      },
+      "static_load": "PASS_LAZY_LOCAL_ONLY"
+    },
+    {
+      "artifact": {
+        "files": [
+          {
+            "path": "chat_template.jinja",
+            "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259"
+          },
+          {
+            "path": "config.json",
+            "sha256": "ede24666ac51e6d5ab948a8a1e6c72fc6effd941ba3aabb6dd942eb517c78043"
+          },
+          {
+            "path": "configuration.json",
+            "sha256": "2d4464e2ead06bc9bc718c781309ad1e7baded626d66e8dcdc8b469ba185faf0"
+          },
+          {
+            "path": "generation_config.json",
+            "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+          },
+          {
+            "path": "model-00001-of-00003.safetensors",
+            "sha256": "2689680915661f040c50c35244d08b336def279e509e1ca11873f8dd1b0e7ce0"
+          },
+          {
+            "path": "model-00002-of-00003.safetensors",
+            "sha256": "a46183727b2c5cd16613fd8395f5e9e7cc4ad679644558cc87c9406fe334463d"
+          },
+          {
+            "path": "model-00003-of-00003.safetensors",
+            "sha256": "ac23bf70b1f239a040921d6f93770d74176fd435dbf44e42317053d06c68d702"
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "sha256": "13b840162b4cb35c66fef7df072f7dbb4717908204364f5e5d9f9655a2758fa8"
+          },
+          {
+            "path": "preprocessor_config.json",
+            "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+          },
+          {
+            "path": "processor_config.json",
+            "sha256": "51c5f33646392e0bf1ed3e96be02504da47406c21c6cb86925d8908d1a6c4da7"
+          },
+          {
+            "path": "tokenizer.json",
+            "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"
+          },
+          {
+            "path": "video_preprocessor_config.json",
+            "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+          },
+          {
+            "path": "vocab.json",
+            "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+          }
+        ],
+        "local_provenance_path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.6-27B-4bit"
+      },
+      "opaque_candidate_id": "local-term-candidate-05",
+      "runtime": {
+        "template_kwargs": {
+          "enable_thinking": false
+        },
+        "tokenizer_config": {}
+      },
+      "static_load": "PASS_LAZY_LOCAL_ONLY"
+    },
+    {
+      "artifact": {
+        "files": [
+          {
+            "path": "chat_template.jinja",
+            "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259"
+          },
+          {
+            "path": "config.json",
+            "sha256": "a822a9e48b0aafbe3144ec37d4fb067e178ed96615ce6e4420b3149893cc5767"
+          },
+          {
+            "path": "configuration.json",
+            "sha256": "c1b09db419119513247e9b8b912c4b9897106c9b20c6cada7e107d993c5435eb"
+          },
+          {
+            "path": "generation_config.json",
+            "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+          },
+          {
+            "path": "model-00001-of-00004.safetensors",
+            "sha256": "09f3e6ecb0b7af6e6a38bc8169a134c821b0924c2679b2bb8f4426ad38d032b8"
+          },
+          {
+            "path": "model-00002-of-00004.safetensors",
+            "sha256": "31dcdb1c49eebdb1505bd14e3cb33f9cf900bd2546b638f2464694ae763a033f"
+          },
+          {
+            "path": "model-00003-of-00004.safetensors",
+            "sha256": "3e66de06a1f03dade16a612a368cfce4a4c9caa4efd7d28185454384082cec03"
+          },
+          {
+            "path": "model-00004-of-00004.safetensors",
+            "sha256": "a5d0cf03519c26f8b506df6b0ba60526e5c08c8cea22d0c21ce92950e58a5422"
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "sha256": "0b28df60e33753a14e816d3b31577ae2c93884c58430a4a6de6ae9ea483842ea"
+          },
+          {
+            "path": "preprocessor_config.json",
+            "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+          },
+          {
+            "path": "processor_config.json",
+            "sha256": "51c5f33646392e0bf1ed3e96be02504da47406c21c6cb86925d8908d1a6c4da7"
+          },
+          {
+            "path": "tokenizer.json",
+            "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"
+          },
+          {
+            "path": "video_preprocessor_config.json",
+            "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+          },
+          {
+            "path": "vocab.json",
+            "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+          }
+        ],
+        "local_provenance_path": "/Volumes/HIKSEMI/omlx/mlx-community/Qwen3.6-35B-A3B-4bit"
+      },
+      "opaque_candidate_id": "local-term-candidate-06",
+      "runtime": {
+        "template_kwargs": {
+          "enable_thinking": false
+        },
+        "tokenizer_config": {}
+      },
+      "static_load": "PASS_LAZY_LOCAL_ONLY"
+    }
+  ],
+  "fixture_projection_sha256": "3f955e764b2272826806751b0e12ecde43427c9be669cbe9da09cd0e5706fd5d",
+  "run_id": "20260826T001404Z-term-notation-local-compatibility",
+  "schema": "dream-house/term-notation-local-roster-bindings/1"
+}
