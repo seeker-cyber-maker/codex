@@ -49,6 +49,13 @@ topology and envelope; any expansion (for example 64 to 128 members) needs a
 fresh fenced admission and append-only supersession or denial record | evidence:
 `../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_RACK_RESIZE.md`.
 
+BRANCH local-metal-measured-envelopes [MERGED]: normal admission uses a
+measured single-run footprint; unseen configurations require a conservative
+calibration receipt first, while an exact resource-profile fingerprint (not
+merely the same model) may reuse an observed precedent across experiments |
+evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_MEASURED_ENVELOPES.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
