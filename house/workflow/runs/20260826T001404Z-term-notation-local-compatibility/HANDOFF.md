@@ -75,6 +75,12 @@ pending shared-journal lifecycle, legacy compatibility, trusted classification,
 and enforcement reviews | evidence:
 `../20260826T015833Z-local-metal-admission-council-packet/PHASE1_REVISION_RECONCILIATION.md`.
 
+BRANCH local-metal-shared-journal [OPEN]: the next bounded source-only slice is
+an additive resource-envelope journal with deterministic lifecycle replay and
+read-only legacy ZeroGPU fixtures; do not reuse task admission leases or
+ZeroGPU multi-day quota semantics | plan:
+`../20260826T015833Z-local-metal-admission-council-packet/SHARED_RESOURCE_JOURNAL_PLAN.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
