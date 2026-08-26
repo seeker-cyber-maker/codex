@@ -24,6 +24,13 @@ BRANCH local-metal-incident [OPEN]: candidate 02 overlapped a separate local
 `INCIDENT_RECONCILIATION.md` | no further local model load until the shared
 admission policy passes its own review and acceptance gate.
 
+BRANCH local-metal-council-packet [MERGED]: a local-only, evidence-hash-bound
+review packet was prepared and sealed without provider contact, reviewer
+dispatch, or implementation authority | evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/` | reopen only on
+an explicit council-dispatch authorization that declares reviewer, privacy,
+and cost boundaries.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
