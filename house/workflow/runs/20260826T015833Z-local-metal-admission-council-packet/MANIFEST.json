@@ -1,0 +1,47 @@
+{
+  "schema": "dream-house/local-metal-admission-council-packet/1",
+  "council_id": "20260826T015833Z-local-metal-admission",
+  "status": "PREPARED_NO_DISPATCH",
+  "mode": "independent-design-review",
+  "question": "Should Dream House adopt the proposed shared local_metal admission boundary, and what minimum safety, authority, and recovery requirements must be satisfied before implementation?",
+  "deliverable": "Council synthesis that accepts, revises, rejects, or defers a source-only design; no live admission, scheduler, model, or provider action.",
+  "privacy": "local-only",
+  "cost_ceiling": "zero; packet preparation only",
+  "implementation_authority": "NOT_GRANTED",
+  "council_dispatch_authority": "NOT_GRANTED",
+  "planned_reviewer_roles": [
+    "evidence-auditor",
+    "constructive-theorist",
+    "adversarial-methodologist",
+    "local-systems-specialist"
+  ],
+  "primary_evidence": [
+    {
+      "path": "../20260826T001404Z-term-notation-local-compatibility/INCIDENT_RECONCILIATION.md",
+      "sha256": "db608e24ed9b695c16e5bb4e86ec8ce4a308cce327cfa1103888f89e11c4bd05"
+    },
+    {
+      "path": "../20260826T001404Z-term-notation-local-compatibility/ROSTER_BINDINGS.json",
+      "sha256": "b0c76257e1d2863ce968d88212c9b66de051f0fb6241e98a1faeb04e0a5518e4"
+    },
+    {
+      "path": "../20260826T001404Z-term-notation-local-compatibility/candidate-receipts/local-term-candidate-01.json",
+      "sha256": "6ead92caf9cb2a1ee06f8bf1e2d32321f657e2c4f2c58d319160218edd3fb99d"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/storage-inventory/model-classifier/runs/20260825-prometheus-layer8-expert-intervention-v1/manifest.json",
+      "sha256": "9c69a34ff98ef2774264ab009ba2398a5e1dd90009979b42b5d683b5fb76ac9b"
+    },
+    {
+      "path": "/Users/tiga/Documents/Codex_Projects/storage-inventory/model-classifier/runs/20260825-prometheus-layer8-expert-intervention-v1/INTERRUPTED.md",
+      "sha256": "8d572dd7ae1b11b1c45d16a01de00d826999d1259509c8f63d685a7dcc7355d7"
+    }
+  ],
+  "known_unknowns": [
+    "No instrumented MLX peak or final process-level error was retained for the interrupted 24B TERM run.",
+    "The host-level disappearance cause is not proven by the overlap evidence alone.",
+    "No proposed numerical reserve, pressure threshold, or preemption policy is accepted yet.",
+    "A lease record cannot prove that a process exited; a host observer must verify process identity before reclamation."
+  ],
+  "hold": "Do not dispatch reviewers, create a provider request, load a local model, modify a ledger, or modify admission policy from this packet."
+}
