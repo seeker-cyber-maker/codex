@@ -61,6 +61,13 @@ of any unseen rack profile runs as the only local-Metal rack; a measured receipt
 is required before rack co-residency is even considered | evidence:
 `../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_RACK_CALIBRATION_ISOLATION.md`.
 
+BRANCH local-metal-phase1-candidate [OPEN]: the separate source-only planner
+candidate `ceef0b36` passes its stated tests and is a useful base, but must not
+be merged until measured/provisional states, capacity-profile matching,
+variance margin, rack calibration/resize, and identity/swap revisions are
+implemented in a disposable revision | evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/PHASE1_CANDIDATE_RECONCILIATION.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
