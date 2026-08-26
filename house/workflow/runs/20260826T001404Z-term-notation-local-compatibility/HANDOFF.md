@@ -56,6 +56,11 @@ merely the same model) may reuse an observed precedent across experiments |
 evidence:
 `../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_MEASURED_ENVELOPES.md`.
 
+BRANCH local-metal-rack-calibration-isolation [MERGED]: the first calibration
+of any unseen rack profile runs as the only local-Metal rack; a measured receipt
+is required before rack co-residency is even considered | evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826_RACK_CALIBRATION_ISOLATION.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
