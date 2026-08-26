@@ -31,6 +31,13 @@ dispatch, or implementation authority | evidence:
 an explicit council-dispatch authorization that declares reviewer, privacy,
 and cost boundaries.
 
+BRANCH local-metal-operator-amendment [MERGED]: reuse ZeroGPU ledger
+accountability fields but make `local_metal` a just-in-time, short-lived runtime
+lease with no 36--48 hour planning window; every Dream House-managed local
+model launch, including Codex-originated work, needs a granted reservation
+before initialization | evidence:
+`../20260826T015833Z-local-metal-admission-council-packet/OPERATOR_AMENDMENT_20260826.md`.
+
 No provider, network, task, relay, authority, training, or promotion action
 occurred for this TERM run. One local model output receipt exists; a second
 attempt is an interrupted non-result.
