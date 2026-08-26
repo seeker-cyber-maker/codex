@@ -1,0 +1,48 @@
+{
+  "schema": "dream-house-run-manifest/1",
+  "run_id": "20260826T001404Z-term-notation-local-compatibility",
+  "starting_head": "319395d1cf3be89dfb91ecbf6708bc435f7c4694",
+  "profile": "core",
+  "case_type": "model_evaluation",
+  "model_advisory": {
+    "current_model_if_known": "unknown",
+    "current_effort_if_known": "unknown",
+    "recommended_model": "Terra",
+    "recommended_effort": "high",
+    "reason": "seal a deterministic semantic-syntax experiment without widening its claim ceiling",
+    "reassess": "before any worker-role or dialect-adoption decision",
+    "disposition": "advisory_only_no_client_switch_claimed"
+  },
+  "authority": "USER_AUTHORIZED_OFFLINE_LOCAL_OUTPUT_COLLECTION_ONLY",
+  "write_scope": [
+    "house/term_notation",
+    "house/workflow/runs/20260826T001404Z-term-notation-local-compatibility"
+  ],
+  "forbidden": [
+    "provider or network calls",
+    "task, ticket, relay, authority, or worker-dispatch effects",
+    "training or weight mutation",
+    "candidate promotion or routing",
+    "credential, secret, or Keychain access",
+    "dashboard, hook, or upstream-core modification"
+  ],
+  "roster": [
+    "local-term-candidate-01",
+    "local-term-candidate-02",
+    "local-term-candidate-03",
+    "local-term-candidate-04",
+    "local-term-candidate-05",
+    "local-term-candidate-06"
+  ],
+  "conditions": [
+    "ORDINARY_UNMARKED",
+    "ORDINARY_READABLE_REPAIR",
+    "TERM_MARKER_ONLY",
+    "TERM_FULL_FORM",
+    "OVERCOMPRESSED_CONTROL"
+  ],
+  "decoding": {"temperature": 0.0, "seed": 20260826, "max_tokens": 96, "retries": 0},
+  "budgets": {"candidate_runs": 6, "prompt_renders_per_candidate": 40, "wall_seconds_per_candidate": 300, "concurrency": 1, "finalization_replay_reserve": 1},
+  "status": "PLAN_SEALED_NO_OUTPUTS_COLLECTED",
+  "next_gate": "implementation of the sealed no-dispatch runner and independent replay verifier"
+}

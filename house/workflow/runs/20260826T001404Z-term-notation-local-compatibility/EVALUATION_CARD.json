@@ -1,0 +1,17 @@
+{
+  "schema": "project-evaluation-card/1",
+  "evaluation_id": "term-notation-local-compatibility-v1",
+  "claim_ids": ["TERM-SYNTAX-PRESERVATION-ONLY"],
+  "task_distribution": {"scope": "six opaque local variants over eight evaluator-only fixture families and five frozen prompt conditions", "temporal_cutoff": "2026-08-26T00:14:04Z", "new_vs_legacy_slices": ["all fixtures frozen before output collection"], "out_of_distribution_slices": ["worker tasks, dialogue continuity, compaction, provider routing, dialect adoption"]},
+  "fixtures": {"public": [], "private": ["eight evaluator-only TERM fixtures"], "adversarial": ["overcompressed control", "marker-only underspecification"], "known_answer": ["parser-valid record plus exact canonical field comparison"]},
+  "contamination": {"sources_checked": ["TERM fixture set", "TERM parser", "TERM dictionary", "local candidate artifacts"], "tool_access_restrictions": ["no network", "no provider", "no task or relay access", "no fixture writes by runner"], "history_or_solution_leakage_checked": true},
+  "observations": {"final_output": {"applicability": "required", "reason": "syntax and field-preservation claim", "gate": "PASS", "evidence_refs": []}, "execution_trace": {"applicability": "required", "reason": "local model-load and prompt budget", "gate": "PASS", "evidence_refs": []}, "side_effects": {"applicability": "required", "reason": "no-dispatch boundary", "gate": "PASS", "evidence_refs": []}, "cost": {"applicability": "required", "reason": "bounded local resource use", "gate": "PASS", "evidence_refs": []}, "latency": {"applicability": "required", "reason": "per-candidate wall-time cap", "gate": "PASS", "evidence_refs": []}, "recovery": {"applicability": "required", "reason": "one receipt per candidate plus replay", "gate": "PASS", "evidence_refs": []}, "long_horizon": {"applicability": "not_applicable", "reason": "no long-horizon claim", "gate": null, "evidence_refs": []}},
+  "oracles": ["house.term_notation.parser.parse_record", "exact fixture field comparison"],
+  "semantic_reviewers": [],
+  "metrics": ["parse_rate", "exact_field_preservation_rate", "per-condition rate", "wall_time_seconds"],
+  "thresholds": ["no promotion threshold", "all malformed outputs retained"],
+  "uncertainty_method": "report each condition and candidate separately; no aggregate capability claim",
+  "failure_taxonomy": ["static_load_rejected", "template_render_rejected", "output_malformed", "field_mismatch", "wall_cap", "runner_fault"],
+  "raw_evidence_retained": true,
+  "supersession_policy": "append a new evaluation revision"
+}
